@@ -1,0 +1,30 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758666393733,
+	"deleted":false,
+	"edges":[
+		
+	],
+	"id":"68d31e9916d1d84449f7675e",
+	"lastModifiedBy":175325,
+	"lcName":"changesetqa2grwmcrmtyack",
+	"modifiedTime":1758666393733,
+	"name":"changeSetQA2grWmcrmTYACk",
+	"nodes":[
+		
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
