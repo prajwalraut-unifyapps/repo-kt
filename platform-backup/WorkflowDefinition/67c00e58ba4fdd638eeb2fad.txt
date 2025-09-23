@@ -1,0 +1,489 @@
+{
+	"appsUsed":[
+		"jira"
+	],
+	"createdTime":1740639832962,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758646571785,
+		"deployedBy":0,
+		"deployedDefinitionId":"68d2d12bdb1a4411eeae833e",
+		"status":"DEPLOYED",
+		"version":28,
+		"workflowVersion":50
+	},
+	"edges":[
+		{
+			"fromNodeId":"N7s93",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"WlLL7",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"WlLL7",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"oSqwk",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"oSqwk",
+			"name":"success",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"HXQWP",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"HXQWP",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"nJ9xM",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"oSqwk",
+			"name":"error",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"QioNP",
+			"type":"error"
+		},
+		{
+			"fromNodeId":"nJ9xM",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"f1TTU",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"QioNP",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"f1TTU",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"67c00e58ba4fdd638eeb2fad",
+	"lastModifiedBy":0,
+	"lcName":"knowledge indexer | jira | index attachment (final)",
+	"modifiedTime":1758655394491,
+	"name":"Knowledge Indexer | JIRA | Index attachment (final)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":295,
+				"resourceName":"callables_from_interface"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"4wfLa-1",
+			"id":"N7s93",
+			"index":1,
+			"inputs":{
+				"result":{
+					"additionalProperties":false,
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
+					"type":"object",
+					"properties":{
+						"cursorObject":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"cursorObject"
+						},
+						"success":{
+							"type":"boolean",
+							"title":"Success"
+						},
+						"lastSyncTime":{
+							"type":"string",
+							"title":"Last Sync Time"
+						}
+					},
+					"required":[]
+				},
+				"callableInterfaceId":"674855d2634d220ea5dd2d71",
+				"setup":{
+					"additionalProperties":false,
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
+					"type":"object",
+					"properties":{
+						"knowledgeId":{
+							"type":"string",
+							"title":"knowledgeId"
+						},
+						"aiAgentId":{
+							"type":"string",
+							"title":"aiAgentId"
+						},
+						"knowledge":{
+							"type":"object",
+							"properties":{
+								"readVersion":{
+									"type":"integer",
+									"title":"readVersion"
+								},
+								"lastSyncTime":{
+									"type":"integer",
+									"title":"lastSyncTime"
+								},
+								"cursorObject":{
+									"type":"object",
+									"title":"cursorObject"
+								},
+								"applicationInfo":{
+									"type":"object",
+									"properties":{
+										"context":{
+											"type":"object",
+											"properties":{
+												"connectionId":{
+													"type":"string",
+													"title":"Connection Id"
+												}
+											},
+											"additionalProperties":false,
+											"title":"Context",
+											"required":[]
+										}
+									},
+									"additionalProperties":false,
+									"title":"Application Info",
+									"required":[]
+								}
+							},
+							"title":"knowledge",
+							"additionalProperties":false,
+							"required":[]
+						},
+						"inputs":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Inputs"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger interface",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":315,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"4wfLa-1",
+			"id":"WlLL7",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"mimeType":{
+							"type":"string",
+							"title":"Mime Type"
+						},
+						"sharedWithIds":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Shared With Ids"
+						},
+						"chunkMetadata":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Chunk Metadata"
+						},
+						"author":{
+							"type":"string",
+							"title":"Author"
+						},
+						"uniqueEntityID":{
+							"type":"string",
+							"title":"Unique Entity ID"
+						},
+						"attachmentId":{
+							"type":"string",
+							"title":"Attachment Id"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"sharedWithIds",
+						"chunkMetadata"
+					]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"inputs":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Inputs"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"inputs"
+					]
+				},
+				"compile_static":false,
+				"code":"if(!binding.hasVariable('inputs')){\n  return [:]\n}\nif(binding.hasVariable('inputs') && inputs.containsKey('chunkMetaData') && inputs.containsKey('mimeType')){\n  inputs.chunkMetaData << [\"fileExtension\": inputs.mimeType]\n}\nreturn inputs;",
+				"parameters":{
+					"inputs":"{{ N7s93.outputs.inputs }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"jira",
+				"resourceVersion":3673,
+				"connectionId":"67b5dcc5bb547d670033a242",
+				"resourceName":"jira_download_attachment",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"MANUAL",
+			"groupId":"4wfLa-1",
+			"id":"oSqwk",
+			"index":3,
+			"inputs":{
+				"attachmentId":"{{ WlLL7.outputs.result.attachmentId }}"
+			},
+			"options":{
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false
+				},
+				"logConfig":{
+					"enabled":false
+				},
+				"rateLimitConfig":{
+					"duration":"5",
+					"enabled":true,
+					"threshold":"400",
+					"unit":"MINUTES",
+					"waitForNextWindow":true
+				},
+				"retryConfig":{
+					"backOffFactor":2.0,
+					"captureRetries":false,
+					"count":3,
+					"enabled":true,
+					"initialDelay":180000,
+					"maxDelay":300000
+				},
+				"stepError":"MANUAL",
+				"telemetryConfig":{
+					"enableTelemetry":false
+				}
+			},
+			"skip":false,
+			"subTitle":"Jira",
+			"title":"Download attachment",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":85,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"oSqwk@4wfLa-1@success",
+			"id":"HXQWP",
+			"index":4,
+			"inputs":{
+				"automationId":"6708d0a1e5c64343ba9b24c8",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"sharedWithIds":{
+						"ua:type":"mappedArray",
+						"source":"{{ WlLL7.outputs.result.sharedWithIds }}",
+						"items":"{{ WlLL7.outputs.result.sharedWithIds[0] }}"
+					},
+					"fileDetails":"{{ oSqwk.outputs.file }}",
+					"knowledgeId":"{{ N7s93.outputs.knowledgeId }}",
+					"mimeType":"{{ WlLL7.outputs.result.mimeType }}",
+					"chunkMetadata":"{{ WlLL7.outputs.result.chunkMetadata }}",
+					"knowledgeVersion":"{{ N7s93.outputs.knowledge.readVersion }}",
+					"authorEmail":"{{ WlLL7.outputs.result.attachmentId }}",
+					"uniqueEntityId":"{{ WlLL7.outputs.result.uniqueEntityID }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"File chunker",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":88,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"oSqwk@4wfLa-1@success",
+			"id":"nJ9xM",
+			"index":5,
+			"inputs":{
+				"automationId":"66af3ff4cd79b321cb478a37",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"chunks":{
+						"source":"{{ HXQWP.outputs.chunks }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"data":"{{ HXQWP.outputs.chunks[0].text }}",
+							"sharedWithIds":{
+								"ua:type":"mappedArray",
+								"source":"{{ WlLL7.outputs.result.sharedWithIds }}",
+								"items":"{{ WlLL7.outputs.result.sharedWithIds[0] }}"
+							},
+							"chunkMetadata":"{{ WlLL7.outputs.result.chunkMetadata }}"
+						}
+					},
+					"knowledgeId":"{{ N7s93.outputs.knowledgeId }}",
+					"chunkMetadata":"{{ WlLL7.outputs.result.chunkMetadata }}",
+					"knowledgeVersion":"{{ N7s93.outputs.knowledge.readVersion }}",
+					"authorEmail":"{{ WlLL7.outputs.result.attachmentId }}",
+					"uniqueEntityId":"{{ WlLL7.outputs.result.uniqueEntityID }}",
+					"mimeType":"{{ WlLL7.outputs.result.mimeType }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Index attachment",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":351,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"oSqwk@4wfLa-1@error",
+			"id":"QioNP",
+			"index":6,
+			"inputs":{
+				"result":{
+					"success":false
+				}
+			},
+			"skip":false,
+			"subTitle":"Download not supported for server type connction",
+			"title":"Respond to automation",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":303,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"4wfLa-1",
+			"id":"f1TTU",
+			"index":7,
+			"inputs":{
+				"result":{
+					"success":"{{ nJ9xM.outputs.response }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":43523,
+	"runtimeConnectionAppNames":[
+		"jira"
+	],
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		
+	],
+	"version":51
+}
