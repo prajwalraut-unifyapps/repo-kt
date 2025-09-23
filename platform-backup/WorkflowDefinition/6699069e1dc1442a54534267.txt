@@ -1,0 +1,42 @@
+{
+	"appsUsed":[
+		"xero"
+	],
+	"createdTime":1721304734177,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"id":"6699069e1dc1442a54534267",
+	"lastModifiedBy":304,
+	"lcName":"untitled",
+	"modifiedTime":1721305065317,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"xero"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"OTHg0-1",
+			"id":"OTHg0",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":304,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
