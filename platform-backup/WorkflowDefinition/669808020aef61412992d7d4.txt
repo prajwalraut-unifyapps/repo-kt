@@ -1,0 +1,42 @@
+{
+	"appsUsed":[
+		"amazon_s3"
+	],
+	"createdTime":1721239554065,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"id":"669808020aef61412992d7d4",
+	"lastModifiedBy":287,
+	"lcName":"untitled",
+	"modifiedTime":1721239569180,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"amazon_s3"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"MMWfT-1",
+			"id":"MMWfT",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":287,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":2
+}
