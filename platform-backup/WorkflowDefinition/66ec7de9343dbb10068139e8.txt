@@ -1,0 +1,361 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1726774761923,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1757441830107,
+		"deployedBy":0,
+		"deployedDefinitionId":"68c06f2691dbf0016b768879",
+		"status":"DEPLOYED",
+		"version":74,
+		"workflowVersion":98
+	},
+	"edges":[
+		{
+			"fromNodeId":"yzZwd",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_lQMD6",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_lQMD6",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"8iqyU",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"8iqyU",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"vxOzR",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"66ec7de9343dbb10068139e8",
+	"lastModifiedBy":0,
+	"lcName":"api to trigger ai agent",
+	"modifiedTime":1758655338384,
+	"name":"API to Trigger AI Agent",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":77,
+				"resourceName":"callables_from_api"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"rPHaB-1",
+			"id":"yzZwd",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json",
+					"body":{
+						"type":"object",
+						"properties":{
+							"userQuery":{
+								"type":"string",
+								"title":"User Query"
+							},
+							"sessionId":{
+								"type":"string",
+								"title":"Session Id"
+							},
+							"userEmailAddress":{
+								"type":"string",
+								"title":"User Email Address"
+							},
+							"aiAgentId":{
+								"type":"string",
+								"title":"Ai Agent Id"
+							},
+							"externalKnowledgeSets":{
+								"type":"array",
+								"items":{
+									"type":"string"
+								},
+								"title":"External Knowledge Sets"
+							},
+							"citations":{
+								"type":"boolean",
+								"title":"Citations"
+							},
+							"attachments":{
+								"type":"array",
+								"items":{
+									"type":"string"
+								},
+								"title":"Attachments"
+							}
+						},
+						"additionalProperties":false,
+						"required":[]
+					}
+				},
+				"endpointType":"REST",
+				"response":[
+					{
+						"status":200,
+						"contentType":"application/json",
+						"body":{
+							"type":"object",
+							"properties":{
+								"agentResponse":{
+									"type":"array",
+									"items":{
+										"type":"string"
+									},
+									"title":"Agent Response"
+								},
+								"sessionId":{
+									"type":"string",
+									"title":"Session Id"
+								},
+								"citations":{
+									"type":"array",
+									"items":{
+										"type":"object",
+										"properties":{},
+										"additionalProperties":false
+									},
+									"title":"Citations"
+								},
+								"listAttachments":{
+									"type":"array",
+									"items":{
+										"type":"object",
+										"properties":{
+											"url":{
+												"type":"string",
+												"title":"Url"
+											}
+										},
+										"additionalProperties":false,
+										"required":[]
+									},
+									"title":"List Attachments"
+								}
+							},
+							"additionalProperties":false,
+							"required":[]
+						}
+					}
+				],
+				"streamingResponse":false
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger using API",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":134,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"rPHaB-1",
+			"id":"_lQMD6",
+			"index":0,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"fromCustomerUserId":{
+							"type":"string",
+							"title":"From Customer User Id"
+						},
+						"toCustomerUserId":{
+							"type":"string",
+							"title":"To Customer User Id"
+						},
+						"caseId":{
+							"type":"string",
+							"title":"Case Id"
+						},
+						"accountId":{
+							"type":"string",
+							"title":"Account Id"
+						},
+						"channelName":{
+							"type":"string",
+							"title":"Channel Name"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"accountId":"API_AI_AGENT",
+				"caseId":"{{ yzZwd.outputs.body.sessionId }}",
+				"fromCustomerUserId":"API_USER_{{ __RUN__.outputs.executionId }}",
+				"channelName":"API",
+				"toCustomerUserId":"AI_AGENT_{{ yzZwd.outputs.body.aiAgentId }}"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"fromCustomerUserId":{
+							"type":"string",
+							"title":"From Customer User Id"
+						},
+						"toCustomerUserId":{
+							"type":"string",
+							"title":"To Customer User Id"
+						},
+						"caseId":{
+							"type":"string",
+							"title":"Case Id"
+						},
+						"accountId":{
+							"type":"string",
+							"title":"Account Id"
+						},
+						"channelName":{
+							"type":"string",
+							"title":"Channel Name"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":228,
+				"resourceName":"callables_call_interface",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"rPHaB-1",
+			"id":"8iqyU",
+			"index":0,
+			"inputs":{
+				"callableInterfaceId":"__ua__invoke_ai_agent_by_unifyapps",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"triggerWorkflowWithRuntimeType":"DEFAULT",
+				"fallbackWorkflowId":"68050ca67df58855654804a0",
+				"parameters":{
+					"sessionId":"{{ yzZwd.outputs.body.sessionId }}",
+					"userQuery":"{{ yzZwd.outputs.body.userQuery }}",
+					"aiAgentId":"{{ yzZwd.outputs.body.aiAgentId }}",
+					"userEmailAddress":"{{ yzZwd.outputs.body.userEmailAddress }}",
+					"externalKnowledgeSets":{
+						"source":"{{ yzZwd.outputs.body.externalKnowledgeSets }}",
+						"ua:type":"mappedArray",
+						"items":"{{ yzZwd.outputs.body.externalKnowledgeSets[0] }}"
+					},
+					"citations":"{{ yzZwd.outputs.body.citations }}",
+					"attachments":{
+						"source":"{{ yzZwd.outputs.body.attachments }}",
+						"ua:type":"mappedArray",
+						"items":"{{ yzZwd.outputs.body.attachments[0] }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call interface",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":54,
+				"resourceName":"callables_return_response_to_api",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"rPHaB-1",
+			"id":"vxOzR",
+			"index":0,
+			"inputs":{
+				"streamingCompleted":true,
+				"responseName":"200_undefined",
+				"body":{
+					"sessionId":"{{ 8iqyU.outputs.sessionId }}",
+					"citations":{
+						"source":"{{ 8iqyU.outputs.citations }}",
+						"ua:type":"mappedArray",
+						"items":"{{ 8iqyU.outputs.citations[0] }}"
+					},
+					"agentResponse":{
+						"source":"{{ 8iqyU.outputs.agentResponse }}",
+						"ua:type":"mappedArray",
+						"items":"{{ 8iqyU.outputs.agentResponse[0] }}"
+					},
+					"listAttachments":{
+						"source":"{{ 8iqyU.outputs.listAttachments }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"url":"{{ 8iqyU.outputs.listAttachments[0].url }}"
+						}
+					}
+				},
+				"status":200
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to API request",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":1,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		
+	],
+	"version":109
+}
