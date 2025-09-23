@@ -1,0 +1,30 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758667159413,
+	"deleted":false,
+	"edges":[
+		
+	],
+	"id":"68d32197ce91012b188e7f1c",
+	"lastModifiedBy":175325,
+	"lcName":"changesetqa28p40ntexs55b",
+	"modifiedTime":1758667159413,
+	"name":"changeSetQA28p40NtEXS55b",
+	"nodes":[
+		
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
