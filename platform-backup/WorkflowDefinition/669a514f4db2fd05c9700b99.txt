@@ -1,0 +1,42 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1721389391501,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"id":"669a514f4db2fd05c9700b99",
+	"lastModifiedBy":520,
+	"lcName":"untitled",
+	"modifiedTime":1721389413943,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"storage_by_unifyapps"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"hy0Bi-1",
+			"id":"hy0Bi",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
