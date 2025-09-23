@@ -1,0 +1,653 @@
+{
+	"appsUsed":[
+		"storage_by_unifyapps"
+	],
+	"createdTime":1751469916314,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1757441855086,
+		"deployedBy":0,
+		"deployedDefinitionId":"68c06f3f6bc3be145d79415c",
+		"status":"DEPLOYED",
+		"version":37,
+		"workflowVersion":57
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_SgZeg",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_NDAAu",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_NDAAu",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_K33p5",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_K33p5",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_P93AM",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_P93AM",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_DlXvR",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_DlXvR",
+			"name":"error",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_hdS77",
+			"type":"error"
+		},
+		{
+			"fromNodeId":"n_hdS77",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_LpgxV",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_LpgxV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_WoSzU",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_WoSzU",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_QTQsn",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_hdS77",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_QTQsn",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_DlXvR",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_HLmOy",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_QTQsn",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_HLmOy",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_HLmOy",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Vhv41",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_Vhv41",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_xHwpp",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"68593c745c7a1473d6a4f195",
+	"lastModifiedBy":0,
+	"lcName":"schedule knowledge indexer",
+	"modifiedTime":1758655371580,
+	"name":"Schedule Knowledge Indexer",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":444,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_7uzFA-1",
+			"id":"n_SgZeg",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"success":{
+							"type":"boolean",
+							"title":"Success"
+						},
+						"processedCount":{
+							"type":"integer",
+							"title":"Processed Count"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"knowledgeId":{
+							"type":"string",
+							"title":"Knowledge Id"
+						},
+						"dataType":{
+							"type":"string",
+							"title":"Data Type"
+						},
+						"indexerAutomation":{
+							"type":"string",
+							"title":"Indexer Automation"
+						},
+						"errorCount":{
+							"type":"integer",
+							"title":"Error Count"
+						},
+						"indexingVersion":{
+							"type":"integer",
+							"title":"Indexing Version"
+						},
+						"batchSize":{
+							"type":"string",
+							"title":"Batch Size"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":445,
+				"resourceName":"variable_by_unifyapps_set_session_variable",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_7uzFA-1",
+			"id":"n_NDAAu",
+			"index":2,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"syncMode":{
+							"type":"string",
+							"title":"Sync Mode"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"syncMode":"{{ n_SgZeg.outputs.syncMode }}"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"syncMode":{
+							"type":"string",
+							"title":"Sync Mode"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"sync Mode",
+			"title":"Set Session Variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":450,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_7uzFA-1",
+			"id":"n_K33p5",
+			"index":3,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"scheduleFrequencyMins":{
+							"type":"integer",
+							"title":"Schedule Frequency Mins"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"scheduleFrequencyMins":{
+							"type":"integer",
+							"title":"Schedule Frequency Mins"
+						}
+					}
+				},
+				"code":"return [\n  \"scheduleFrequencyMins\" : binding.hasVariable(\"scheduleFrequencyMins\") ? scheduleFrequencyMins : 5\n]",
+				"compile_static":false,
+				"parameters":{
+					"scheduleFrequencyMins":"{{ __ENV__.outputs.KNOWLEDGE_INDEXER_SCHEDULING_FREQ_MINS }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"get Schedule Frequency",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":453,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_7uzFA-1",
+			"id":"n_P93AM",
+			"index":4,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"errorCount":{
+							"type":"integer",
+							"title":"Error Count"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"errorCount":"{{ n_SgZeg.outputs.errorCount }}"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"errorCount":{
+							"type":"integer",
+							"title":"Error Count"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variables",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":458,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"MANUAL",
+			"groupId":"_7uzFA-1",
+			"id":"n_DlXvR",
+			"index":5,
+			"inputs":{
+				"automationId":"68542c75651b6b3df907f38f",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"knowledgeId":"{{ n_SgZeg.outputs.knowledgeId }}",
+					"dataType":"{{ n_SgZeg.outputs.dataType }}",
+					"indexerAutomation":"{{ n_SgZeg.outputs.indexerAutomation }}",
+					"indexingVersion":"{{ n_SgZeg.outputs.indexingVersion }}",
+					"batchSize":"{{ n_SgZeg.outputs.batchSize }}"
+				}
+			},
+			"options":{
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false,
+					"slidingWindowType":"COUNT_BASED"
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"unit":"MINUTES",
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"MANUAL",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Knowledge Indexer",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":438,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_DlXvR@_7uzFA-1@error",
+			"id":"n_hdS77",
+			"index":6,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_SgZeg.outputs.errorCount }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"3"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"errorCount == 3",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":459,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_hdS77@n_DlXvR@_7uzFA-1@error@y",
+			"id":"n_LpgxV",
+			"index":7,
+			"inputs":{
+				"automationId":"68676a717693334d88bb539f",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"knowledgeId":"{{ n_SgZeg.outputs.knowledgeId }}",
+					"type":"indexer",
+					"parentEntityId":"{{ n_SgZeg.outputs.dataType }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Get or Create Cursor",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.updateFields.items.fieldName",
+					"root.updateFields.items.actionType"
+				]
+			},
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":438,
+				"resourceName":"storage_by_unifyapps_update_record_fields_by_id",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_hdS77@n_DlXvR@_7uzFA-1@error@y",
+			"id":"n_WoSzU",
+			"index":8,
+			"inputs":{
+				"recordId":"{{ n_LpgxV.outputs.id }}",
+				"writeThroughSessionVariables":false,
+				"object_type":"knowledge_state_cursor",
+				"skipPermissionCheck":false,
+				"updateFields":[
+					{
+						"fieldName":"properties.status",
+						"actionType":"SET",
+						"setValue":"FAILED"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Update cursor status",
+			"title":"Update an existing record's fields",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":446,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_DlXvR@_7uzFA-1@error",
+			"id":"n_QTQsn",
+			"index":9,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ n_P93AM.outputs.errorCount }}",
+						"value":"=({{ n_P93AM.outputs.errorCount }}+1)"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":459,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_7uzFA-1",
+			"id":"n_HLmOy",
+			"index":10,
+			"inputs":{
+				"automationId":"6867ed5ad467b02057cb4ac8",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"triggerWorkflowWithRuntimeType":"DEFAULT",
+				"version":"-1",
+				"parameters":{
+					"unit":"MINUTES",
+					"duration":"{{ n_K33p5.outputs.result.scheduleFrequencyMins }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Get nextFireTime",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":463,
+				"resourceName":"callables_schedule_a_callable",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_7uzFA-1",
+			"id":"_Vhv41",
+			"index":11,
+			"inputs":{
+				"automation_id":"68593c745c7a1473d6a4f195",
+				"start_time":"{{ n_HLmOy.outputs.nextFireTime }}",
+				"runtimeConnections":{},
+				"schedule_type":"ONE_TIME",
+				"cancel_existing":true,
+				"schedule_name":"knowledge_indexer_{{ n_SgZeg.outputs.knowledgeId }}_{{ n_SgZeg.outputs.indexingVersion }}_{{ n_SgZeg.outputs.dataType }}",
+				"version":"-1",
+				"parameters":{
+					"knowledgeId":"{{ n_SgZeg.outputs.knowledgeId }}",
+					"dataType":"{{ n_SgZeg.outputs.dataType }}",
+					"indexerAutomation":"{{ n_SgZeg.outputs.indexerAutomation }}",
+					"errorCount":"{{ n_P93AM.outputs.errorCount }}",
+					"indexingVersion":"{{ n_SgZeg.outputs.indexingVersion }}",
+					"batchSize":"{{ n_SgZeg.outputs.batchSize }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Schedule next call",
+			"title":"Schedule callable",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":454,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_7uzFA-1",
+			"id":"n_xHwpp",
+			"index":12,
+			"inputs":{
+				"result":{
+					"success":true,
+					"processedCount":"{{ n_DlXvR.outputs.processedCount }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":148386,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":false,
+		"enableRunLogging":true,
+		"enableVariableLogging":false,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		"knowledge_v2"
+	],
+	"version":66
+}
