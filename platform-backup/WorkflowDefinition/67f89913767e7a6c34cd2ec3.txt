@@ -1,0 +1,206 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1744346440387,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758646554042,
+		"deployedBy":0,
+		"deployedDefinitionId":"68d2d11adb1a4411eeae830b",
+		"status":"DEPLOYED",
+		"version":60,
+		"workflowVersion":76
+	},
+	"edges":[
+		{
+			"fromNodeId":"cJHNg",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"bRrOe",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"bRrOe",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"0Xx2k",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"67f89913767e7a6c34cd2ec3",
+	"lastModifiedBy":0,
+	"lcName":"publish ask connection block",
+	"modifiedTime":1758655375663,
+	"name":"Publish Ask Connection Block",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":187,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"jcnly-1",
+			"id":"cJHNg",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"success":{
+							"type":"boolean",
+							"title":"Success"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"connections":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"id":{
+										"type":"string",
+										"title":"id"
+									},
+									"name":{
+										"type":"string",
+										"title":"name"
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"connections"
+						},
+						"connectionName":{
+							"type":"string",
+							"title":"Connection Name"
+						},
+						"authType":{
+							"type":"string",
+							"title":"Auth Type"
+						},
+						"appIconUrl":{
+							"type":"string",
+							"title":"App Icon Url"
+						},
+						"caseId":{
+							"type":"string",
+							"title":"Case Id"
+						},
+						"appName":{
+							"type":"string",
+							"title":"App Name"
+						},
+						"appNameLabel":{
+							"type":"string",
+							"title":"App Name Label"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":202,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"jcnly-1",
+			"id":"bRrOe",
+			"index":0,
+			"inputs":{
+				"automationId":"671250dbc3a6281db1ab47af",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"waitForUserInput":"true",
+					"interfaceDetails":{
+						"pageInputs":"{{ cJHNg.outputs }}",
+						"pageId":"e_68371c6efd3700203116ad88",
+						"interfaceId":"ua-copilot-standard-interfaces",
+						"slug":"ua-runtime-auth"
+					},
+					"interfaceDescription":"Can you please provide the connectionId with which you want to execute this action?",
+					"caseId":"{{ cJHNg.outputs.caseId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":190,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"jcnly-1",
+			"id":"0Xx2k",
+			"index":0,
+			"inputs":{
+				"result":{
+					"success":true
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":1866,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		"AI Agent"
+	],
+	"version":77
+}
