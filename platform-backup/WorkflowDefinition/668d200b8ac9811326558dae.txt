@@ -1,0 +1,87 @@
+{
+	"appsUsed":[
+		"glaucusmaven",
+		"schedule"
+	],
+	"createdTime":1720524811555,
+	"deleted":true,
+	"deploymentState":{
+		"deployedAt":1721290883626,
+		"deployedBy":7,
+		"deployedDefinitionId":"6698d0830f211b799fff1a53",
+		"status":"PAUSED",
+		"version":1,
+		"workflowVersion":2
+	},
+	"description":"",
+	"edges":[
+		{
+			"fromNodeId":"smDQ7",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"7LR5w",
+			"type":"next"
+		}
+	],
+	"id":"668d200b8ac9811326558dae",
+	"lastModifiedBy":7,
+	"lcName":"test maven inventory snapshot",
+	"modifiedTime":1721290926755,
+	"name":"test maven inventory snapshot",
+	"nodes":[
+		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":33,
+				"resourceName":"schedule_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"smDQ7-1",
+			"id":"smDQ7",
+			"index":0,
+			"inputs":{
+				"cron":"INTERVAL",
+				"interval":1,
+				"frequency":"MINUTES"
+			},
+			"skip":false,
+			"title":"New recurring event",
+			"trigger":{
+				"type":"SCHEDULED"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"glaucusmaven",
+				"resourceVersion":7,
+				"connectionId":"6676b11bc8fd9430d2f719f4",
+				"resourceName":"glaucusmaven_get_inventory_snapshot",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"smDQ7-1",
+			"id":"7LR5w",
+			"index":0,
+			"inputs":{
+				"date":"2024-07-08"
+			},
+			"skip":false,
+			"subTitle":"Maven by Glaucus",
+			"title":"Get inventory snapshot",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":7,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":3
+}
