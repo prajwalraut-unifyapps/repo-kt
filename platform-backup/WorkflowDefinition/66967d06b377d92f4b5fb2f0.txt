@@ -1,0 +1,77 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1721138438082,
+	"deleted":true,
+	"description":"",
+	"edges":[
+		{
+			"fromNodeId":"YAsdx",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"jm5fC",
+			"type":"next"
+		}
+	],
+	"id":"66967d06b377d92f4b5fb2f0",
+	"lastModifiedBy":7,
+	"lcName":"afm",
+	"modifiedTime":1721199225185,
+	"name":"afm",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":53,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"YAsdx-1",
+			"id":"YAsdx",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"title":"Http Webhook",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":12,
+				"resourceName":"code_by_unifyapps_python",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"YAsdx-1",
+			"id":"jm5fC",
+			"index":0,
+			"inputs":{
+				"code":"result = {\n    \"name\" : \"anirudh\"\n} "
+			},
+			"skip":false,
+			"subTitle":"Code By UnifyApps",
+			"title":"Execute python script",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":4
+}
