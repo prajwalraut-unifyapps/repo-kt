@@ -1,0 +1,71 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1721383087905,
+	"deleted":true,
+	"description":"",
+	"edges":[
+		{
+			"fromNodeId":"ynClZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"T2DLn",
+			"type":"next"
+		}
+	],
+	"id":"669a38af4db2fd05c970030c",
+	"lastModifiedBy":520,
+	"lcName":"qwer13",
+	"modifiedTime":1721383189045,
+	"name":"qwer13",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ynClZ-1",
+			"id":"ynClZ",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":730,
+				"resourceName":"storage_by_unifyapps_export_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ynClZ-1",
+			"id":"T2DLn",
+			"index":0,
+			"inputs":{
+				"object_type":"nirav",
+				"fileType":"CSV"
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Export records",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":2
+}
