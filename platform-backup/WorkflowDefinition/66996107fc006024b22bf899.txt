@@ -1,0 +1,42 @@
+{
+	"appsUsed":[
+		"gcalendar"
+	],
+	"createdTime":1721327879577,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"id":"66996107fc006024b22bf899",
+	"lastModifiedBy":533,
+	"lcName":"untitled",
+	"modifiedTime":1721327897394,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"gcalendar"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"mGUkt-1",
+			"id":"mGUkt",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":533,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
