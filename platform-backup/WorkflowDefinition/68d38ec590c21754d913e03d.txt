@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758695109643,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_4k94m",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Nd2T0",
+			"type":"next"
+		}
+	],
+	"id":"68d38ec590c21754d913e03d",
+	"lastModifiedBy":148989,
+	"lcName":"new auto",
+	"modifiedTime":1758695109643,
+	"name":"New Auto",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_4k94m-1",
+			"id":"_4k94m",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_4k94m-1",
+			"id":"_Nd2T0",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":148989,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
