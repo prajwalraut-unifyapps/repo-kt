@@ -1,0 +1,47 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1721188705986,
+	"deleted":false,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"669741615407755be4b4207d",
+	"lastModifiedBy":-1,
+	"lcName":"untitled",
+	"modifiedTime":1721679258091,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"3Zppp-1",
+			"id":"3Zppp",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
