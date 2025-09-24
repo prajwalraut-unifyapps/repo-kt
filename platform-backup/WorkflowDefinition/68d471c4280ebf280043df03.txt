@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758753220165,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_ZSgqf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_8ncKj",
+			"type":"next"
+		}
+	],
+	"id":"68d471c4280ebf280043df03",
+	"lastModifiedBy":45768,
+	"lcName":"customclaude",
+	"modifiedTime":1758753220165,
+	"name":"CustomClaude",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_ZSgqf-1",
+			"id":"_ZSgqf",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_ZSgqf-1",
+			"id":"_8ncKj",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":45768,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
