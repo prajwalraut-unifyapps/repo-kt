@@ -926,7 +926,7 @@
 	"id":"68c6239b79f7e65c8a16452f",
 	"lastModifiedBy":33,
 	"lcName":"test table health copy",
-	"modifiedTime":1758717065120,
+	"modifiedTime":1758717086597,
 	"name":"Test table health copy",
 	"nodes":[
 		{
@@ -6914,7 +6914,7 @@
 						"outputs":"{{ _9xKNR.outputs.result.outputs }}"
 					},
 					"status":"CRITICAL",
-					"stepDescription":"Check whether each partition of a routine load is < {{ n_t5eD3.outputs.result.minimumBucketCount }} , which is too small",
+					"stepDescription":"Check whether each partition of a routine load is < {{ _auxBn.outputs.result.minimumBucketCount }} , which is too small",
 					"resolved":false
 				}
 			},
@@ -8690,5 +8690,5 @@
 		}
 	},
 	"standard":false,
-	"version":76
+	"version":77
 }
