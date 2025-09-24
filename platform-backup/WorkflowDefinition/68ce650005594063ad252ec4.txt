@@ -1,0 +1,918 @@
+{
+	"appsUsed":[
+		"gsheets",
+		"slack"
+	],
+	"createdTime":1758356736106,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758492531287,
+		"deployedBy":76193,
+		"deployedDefinitionId":"68d0777311ba60534e84e766",
+		"status":"PAUSED",
+		"version":3,
+		"workflowVersion":30
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_GPitO",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_lLoVz",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_lLoVz",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_DtoHr",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_DtoHr",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Xl2Ez",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Xl2Ez",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_22rQ5",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_22rQ5",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_VeHV0",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_VeHV0",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Oifbl",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_Oifbl",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_c2hZ2",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_c2hZ2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_NwLsP",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_NwLsP",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_FYLZZ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_FYLZZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Rbpu3",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Rbpu3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_5Z622",
+			"type":"next"
+		}
+	],
+	"id":"68ce650005594063ad252ec4",
+	"lastModifiedBy":76193,
+	"lcName":"virtusa | slack update [dnd]",
+	"modifiedTime":1758684268507,
+	"name":"Virtusa | Slack Update [DND]",
+	"nodes":[
+		{
+			"context":{
+				"appName":"slack",
+				"resourceVersion":6087,
+				"connectionId":"68ce6befb270492a099471fb",
+				"resourceName":"slack_on_new_message"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_GiVOu-1",
+			"id":"n_GPitO",
+			"index":1,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Slack",
+			"title":"On new message",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"gsheets",
+				"resourceVersion":6024,
+				"connectionId":"68ce657bb270492a09944d6c",
+				"resourceName":"gsheets_get_rows_batch",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_GiVOu-1",
+			"id":"n_lLoVz",
+			"index":2,
+			"inputs":{
+				"sheetName":"Tracker",
+				"valueRenderOption":"FORMATTED_VALUE",
+				"objectSourceResourceName":"gsheets_fetch_columns",
+				"range":"2:200",
+				"spreadsheetId":"1ipc0Vk8lQWP-8G8gQ1VaZ6hpQRNqlixXwB0EFcah-Vs__Virtusa | Tasks Tracker",
+				"googleDrive":"0AO8lpMZP6rz5Uk9PVA"
+			},
+			"skip":false,
+			"subTitle":"Google Sheets",
+			"title":"Get rows",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"utility_by_unifyapps_filter_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_GiVOu-1",
+			"id":"n_DtoHr",
+			"index":3,
+			"inputs":{
+				"filter":{
+					"filters":[
+						{
+							"property":"{{ n_lLoVz.outputs.rows[0].Category__3 }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"UI"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"listSource":"{{ n_lLoVz.outputs.rows }}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Filter List of Data",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				},
+				"visibleOptionalFields":[
+					"root.parameters.rows.items.Cust_ETA__Delivery_Date__1",
+					"root.parameters.rows.items.Item__2",
+					"root.parameters.rows.items.Item_Priority__4",
+					"root.parameters.rows.items.Current_Status__5",
+					"root.parameters.rows.items.Dev_Owner__6",
+					"root.parameters.rows.items.At_Risk___12",
+					"root.parameters.rows.items.Comments__if_any___14",
+					"root.parameters.rows.items.Monday_Ticket_with_Details__Optional___16",
+					"root.parameters.rows.source",
+					"root.parameters.rows.ua:type",
+					"root.parameters.rows.items.Cust_ETA__Delivery_Date__1",
+					"root.parameters.rows.items.Item__2",
+					"root.parameters.rows.items.Item_Priority__4",
+					"root.parameters.rows.items.Current_Status__5",
+					"root.parameters.rows.items.Dev_Owner__6",
+					"root.parameters.rows.items.At_Risk___12",
+					"root.parameters.rows.items.Comments__if_any___14",
+					"root.parameters.rows.items.Monday_Ticket_with_Details__Optional___16"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_GiVOu-1",
+			"id":"n_Xl2Ez",
+			"index":4,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"UI_slack_text":{
+							"type":"string",
+							"title":"UI Slack Text"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"rows":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"Cust_ETA__Delivery_Date__1":{
+										"type":"string",
+										"title":"Cust_ETA__Delivery_Date__1"
+									},
+									"Item__2":{
+										"type":"string",
+										"title":"Item__2"
+									},
+									"Item_Priority__4":{
+										"type":"string",
+										"title":"Item_Priority__4"
+									},
+									"Current_Status__5":{
+										"type":"string",
+										"title":"Current_Status__5"
+									},
+									"Dev_Owner__6":{
+										"type":"string",
+										"title":"Dev_Owner__6"
+									},
+									"At_Risk___12":{
+										"type":"string",
+										"title":"At_Risk___12"
+									},
+									"Comments__if_any___14":{
+										"type":"string",
+										"title":"Comments__if_any___14"
+									},
+									"Monday_Ticket_with_Details__Optional___16":{
+										"type":"string",
+										"title":"Monday_Ticket_with_Details__Optional___16"
+									},
+									"App":{
+										"type":"string",
+										"title":"App"
+									},
+									"addedOn":{
+										"type":"string",
+										"title":"Added On"
+									}
+								},
+								"additionalProperties":false,
+								"required":[
+									"App",
+									"addedOn"
+								]
+							},
+							"title":"rows"
+						}
+					}
+				},
+				"code":"def rowsVar = binding.variables[\"rows\"]   // Expecting List of row Maps OR a Map with key 'rows'\nif (!rowsVar) {\n    return [\"slack_text\": \"No rows found.\"]\n}\n\n// Normalize to rows list\nList rows\nif (rowsVar instanceof Map && rowsVar.containsKey(\"rows\")) {\n    rows = (rowsVar.rows ?: []) as List\n} else if (rowsVar instanceof List) {\n    rows = rowsVar as List\n} else {\n    rows = []\n}\nif (!rows || rows.isEmpty()) {\n    return [\"slack_text\": \"No rows found.\"]\n}\n\n// App label mapping + ordering\ndef appLabelMap = [\n    \"Commercial Meeting Tracker\": \"*App 1*\",\n    \"POC Application\"           : \"*App 2*\",\n    \"OTL Simplified\"            : \"*App 3*\",\n    \"Ratings Normalization\"     : \"*App 4*\",\n    \"All Apps\"                  : \"*All Apps*\",\n    \"Manager Clearance+GHRO+F&F\": \"*App 5*\"\n]\ndef appOrder = [\n    \"Commercial Meeting Tracker\",\n    \"POC Application\",\n    \"OTL Simplified\",\n    \"Ratings Normalization\",\n    \"Manager Clearance+GHRO+F&F\",\n    \"All Apps\"\n]\n\n// Helper: embed item text with Monday link if it looks like a URL\nString maybeEmbed(String text, String link) {\n    def t = (text ?: \"\").trim()\n    def u = (link ?: \"\").trim()\n    if (u && u.toLowerCase().startsWith(\"http\")) {\n        return \"<${u}|${t}>\"\n    }\n    return t\n}\n\n// Helper: format ETA like \"22 Sept\" from \"9/22/2025\"\nString formatEta(String s) {\n    def raw = (s ?: \"\").trim()\n    if (!raw || raw == \"-\") return \"\"\n    try {\n        def sdfIn = new java.text.SimpleDateFormat(\"M/d/yyyy\", java.util.Locale.ENGLISH)\n        sdfIn.setLenient(true)\n        Date d = sdfIn.parse(raw)\n        Calendar c = Calendar.getInstance(java.util.Locale.ENGLISH)\n        c.setTime(d)\n        int day = c.get(Calendar.DAY_OF_MONTH)\n        int mon = c.get(Calendar.MONTH) + 1\n        // Custom month short names (to get \"Sept\")\n        def monNames = [null, \"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sept\",\"Oct\",\"Nov\",\"Dec\"]\n        return \"${day} ${monNames[mon]}\"\n    } catch (ignored) {\n        return \"\"  // if unparseable, omit ETA\n    }\n}\n\n// Build simple numbered lines\ndef lines = []\nint idx = 1\n\nappOrder.each { appName ->\n    rows.findAll { (it.App ?: \"\").toString().trim() == appName }.each { r ->\n        def status = (r.Current_Status__5 ?: \"\").toString().trim()\n        if (status.equalsIgnoreCase(\"Done\")) return  // skip done\n\n        def alertPrefix = ((r.At_Risk___12 ?: \"\").toString().trim().equalsIgnoreCase(\"Yes\")) ? \":alert: \" : \"\"\n        def appLabel    = appLabelMap[appName] ?: appName\n\n        // NEW: addedOn right after app label, formatted like status\n        def addedOnStr  = formatEta((r.addedOn ?: \"\").toString())\n        def addedOnDisp = addedOnStr ? \"`Raised on ${addedOnStr}` \" : \"\"\n\n        def itemText    = maybeEmbed(r.Item__2, r.Monday_Ticket_with_Details__Optional___16)\n\n        // Highlight in red-like style: `[Status]` bold inside backticks\n        def statusDisp  = status ? \"`[$status]`\" : \"\"\n\n        // Make ETA italics\n        def eta = formatEta((r.Cust_ETA__Delivery_Date__1 ?: \"\").toString())\n        def etaDisp = eta ? \" Cust ETA: _${eta}_\" : \"\"\n\n        // Multiple owners -> @ for each (comma-separated)\n        def ownerRaw    = (r.Dev_Owner__6 ?: \"\").toString().trim()\n        def ownerDisp   = ownerRaw ? (\" \" + ownerRaw.split(\",\").collect { it.trim() }.findAll { it }.collect { \"@${it}\" }.join(\" \")) : \"\"\n\n        def comments    = (r.Comments__if_any___14 ?: \"\").toString().trim()\n        def commentsDisp= comments ? \" ${comments}\" : \"\"\n\n        lines << \"${idx}. ${alertPrefix}${appLabel}: ${addedOnDisp}${itemText} ${statusDisp}${etaDisp}${ownerDisp}${commentsDisp}\".trim()\n        idx++\n    }\n}\n\nif (lines.isEmpty()) {\n    return [\"UI_slack_text\": \"No actionable updates.\"]\n}\n\nreturn [\"UI_slack_text\": lines.join('\\n')]\n",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"rows":{
+						"ua:type":"mappedArray",
+						"items":{
+							"App":"{{ n_DtoHr.outputs.filteredList[0].Track__0 }}",
+							"Cust_ETA__Delivery_Date__1":"{{ n_DtoHr.outputs.filteredList[0].Cust_ETA__Delivery_Date__1 }}",
+							"Item__2":"{{ n_DtoHr.outputs.filteredList[0].Item__2 }}",
+							"Item_Priority__4":"{{ n_DtoHr.outputs.filteredList[0].Item_Priority__4 }}",
+							"Current_Status__5":"{{ n_DtoHr.outputs.filteredList[0].Current_Status__5 }}",
+							"Dev_Owner__6":"{{ n_DtoHr.outputs.filteredList[0].Dev_Owner__6 }}",
+							"At_Risk___12":"{{ n_DtoHr.outputs.filteredList[0].At_Risk___12 }}",
+							"Comments__if_any___14":"{{ n_DtoHr.outputs.filteredList[0].Comments__if_any___14 }}",
+							"addedOn":"{{ n_DtoHr.outputs.filteredList[0].Added_on__19 }}",
+							"Monday_Ticket_with_Details__Optional___16":"{{ n_DtoHr.outputs.filteredList[0].Monday_Ticket_with_Details__Optional___16 }}"
+						},
+						"source":"{{ n_DtoHr.outputs.filteredList }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"utility_by_unifyapps_filter_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_GiVOu-1",
+			"id":"_22rQ5",
+			"index":5,
+			"inputs":{
+				"filter":{
+					"filters":[
+						{
+							"property":"{{ n_lLoVz.outputs.rows[0].Category__3 }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"BE"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"listSource":"{{ n_lLoVz.outputs.rows }}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Filter List of Data",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				},
+				"visibleOptionalFields":[
+					"root.parameters.rows.items.Cust_ETA__Delivery_Date__1",
+					"root.parameters.rows.items.Item__2",
+					"root.parameters.rows.items.Item_Priority__4",
+					"root.parameters.rows.items.Current_Status__5",
+					"root.parameters.rows.items.Dev_Owner__6",
+					"root.parameters.rows.items.At_Risk___12",
+					"root.parameters.rows.items.Comments__if_any___14",
+					"root.parameters.rows.items.Monday_Ticket_with_Details__Optional___16",
+					"root.parameters.rows.source",
+					"root.parameters.rows.ua:type",
+					"root.parameters.rows.items.Cust_ETA__Delivery_Date__1",
+					"root.parameters.rows.items.Item__2",
+					"root.parameters.rows.items.Item_Priority__4",
+					"root.parameters.rows.items.Current_Status__5",
+					"root.parameters.rows.items.Dev_Owner__6",
+					"root.parameters.rows.items.At_Risk___12",
+					"root.parameters.rows.items.Comments__if_any___14",
+					"root.parameters.rows.items.Monday_Ticket_with_Details__Optional___16"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_GiVOu-1",
+			"id":"_VeHV0",
+			"index":6,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"BE_slack_text":{
+							"type":"string",
+							"title":"BE Slack Text"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"rows":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"Cust_ETA__Delivery_Date__1":{
+										"type":"string",
+										"title":"Cust_ETA__Delivery_Date__1"
+									},
+									"Item__2":{
+										"type":"string",
+										"title":"Item__2"
+									},
+									"Item_Priority__4":{
+										"type":"string",
+										"title":"Item_Priority__4"
+									},
+									"Current_Status__5":{
+										"type":"string",
+										"title":"Current_Status__5"
+									},
+									"Dev_Owner__6":{
+										"type":"string",
+										"title":"Dev_Owner__6"
+									},
+									"At_Risk___12":{
+										"type":"string",
+										"title":"At_Risk___12"
+									},
+									"Comments__if_any___14":{
+										"type":"string",
+										"title":"Comments__if_any___14"
+									},
+									"Monday_Ticket_with_Details__Optional___16":{
+										"type":"string",
+										"title":"Monday_Ticket_with_Details__Optional___16"
+									},
+									"App":{
+										"type":"string",
+										"title":"App"
+									},
+									"addedOn":{
+										"type":"string",
+										"title":"Added On"
+									}
+								},
+								"additionalProperties":false,
+								"required":[
+									"App",
+									"addedOn"
+								]
+							},
+							"title":"rows"
+						}
+					}
+				},
+				"code":"def rowsVar = binding.variables[\"rows\"]   // Expecting List of row Maps OR a Map with key 'rows'\nif (!rowsVar) {\n    return [\"slack_text\": \"No rows found.\"]\n}\n\n// Normalize to rows list\nList rows\nif (rowsVar instanceof Map && rowsVar.containsKey(\"rows\")) {\n    rows = (rowsVar.rows ?: []) as List\n} else if (rowsVar instanceof List) {\n    rows = rowsVar as List\n} else {\n    rows = []\n}\nif (!rows || rows.isEmpty()) {\n    return [\"slack_text\": \"No rows found.\"]\n}\n\n// App label mapping + ordering\ndef appLabelMap = [\n    \"Commercial Meeting Tracker\": \"*App 1*\",\n    \"POC Application\"           : \"*App 2*\",\n    \"OTL Simplified\"            : \"*App 3*\",\n    \"Ratings Normalization\"     : \"*App 4*\",\n    \"All Apps\"                  : \"*All Apps*\",\n    \"Manager Clearance+GHRO+F&F\": \"*App 5*\"\n]\ndef appOrder = [\n    \"Commercial Meeting Tracker\",\n    \"POC Application\",\n    \"OTL Simplified\",\n    \"Ratings Normalization\",\n    \"Manager Clearance+GHRO+F&F\",\n    \"All Apps\"\n]\n\n// Helper: embed item text with Monday link if it looks like a URL\nString maybeEmbed(String text, String link) {\n    def t = (text ?: \"\").trim()\n    def u = (link ?: \"\").trim()\n    if (u && u.toLowerCase().startsWith(\"http\")) {\n        return \"<${u}|${t}>\"\n    }\n    return t\n}\n\n// Helper: format ETA like \"22 Sept\" from \"9/22/2025\"\nString formatEta(String s) {\n    def raw = (s ?: \"\").trim()\n    if (!raw || raw == \"-\") return \"\"\n    try {\n        def sdfIn = new java.text.SimpleDateFormat(\"M/d/yyyy\", java.util.Locale.ENGLISH)\n        sdfIn.setLenient(true)\n        Date d = sdfIn.parse(raw)\n        Calendar c = Calendar.getInstance(java.util.Locale.ENGLISH)\n        c.setTime(d)\n        int day = c.get(Calendar.DAY_OF_MONTH)\n        int mon = c.get(Calendar.MONTH) + 1\n        // Custom month short names (to get \"Sept\")\n        def monNames = [null, \"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sept\",\"Oct\",\"Nov\",\"Dec\"]\n        return \"${day} ${monNames[mon]}\"\n    } catch (ignored) {\n        return \"\"  // if unparseable, omit ETA\n    }\n}\n\n// Build simple numbered lines\ndef lines = []\nint idx = 1\n\nappOrder.each { appName ->\n    rows.findAll { (it.App ?: \"\").toString().trim() == appName }.each { r ->\n        def status = (r.Current_Status__5 ?: \"\").toString().trim()\n        if (status.equalsIgnoreCase(\"Done\")) return  // skip done\n\n        def alertPrefix = ((r.At_Risk___12 ?: \"\").toString().trim().equalsIgnoreCase(\"Yes\")) ? \":alert: \" : \"\"\n        def appLabel    = appLabelMap[appName] ?: appName\n\n        // NEW: addedOn right after app label, formatted like status\n        def addedOnStr  = formatEta((r.addedOn ?: \"\").toString())\n        def addedOnDisp = addedOnStr ? \"`Raised on ${addedOnStr}` \" : \"\"\n\n        def itemText    = maybeEmbed(r.Item__2, r.Monday_Ticket_with_Details__Optional___16)\n\n        // Highlight in red-like style: `[Status]` bold inside backticks\n        def statusDisp  = status ? \"`[$status]`\" : \"\"\n\n        // Make ETA italics\n        def eta = formatEta((r.Cust_ETA__Delivery_Date__1 ?: \"\").toString())\n        def etaDisp = eta ? \" Cust ETA: _${eta}_\" : \"\"\n\n        // Multiple owners -> @ for each (comma-separated)\n        def ownerRaw    = (r.Dev_Owner__6 ?: \"\").toString().trim()\n        def ownerDisp   = ownerRaw ? (\" \" + ownerRaw.split(\",\").collect { it.trim() }.findAll { it }.collect { \"@${it}\" }.join(\" \")) : \"\"\n\n        def comments    = (r.Comments__if_any___14 ?: \"\").toString().trim()\n        def commentsDisp= comments ? \" ${comments}\" : \"\"\n\n        lines << \"${idx}. ${alertPrefix}${appLabel}: ${addedOnDisp}${itemText} ${statusDisp}${etaDisp}${ownerDisp}${commentsDisp}\".trim()\n        idx++\n    }\n}\n\nif (lines.isEmpty()) {\n    return [\"BE_slack_text\": \"NA.\"]\n}\n\nreturn [\"BE_slack_text\": lines.join('\\n')]\n",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"rows":{
+						"ua:type":"mappedArray",
+						"items":{
+							"App":"{{ _22rQ5.outputs.filteredList[0].Track__0 }}",
+							"Cust_ETA__Delivery_Date__1":"{{ _22rQ5.outputs.filteredList[0].Cust_ETA__Delivery_Date__1 }}",
+							"Item__2":"{{ _22rQ5.outputs.filteredList[0].Item__2 }}",
+							"Item_Priority__4":"{{ _22rQ5.outputs.filteredList[0].Item_Priority__4 }}",
+							"Current_Status__5":"{{ _22rQ5.outputs.filteredList[0].Current_Status__5 }}",
+							"Dev_Owner__6":"{{ _22rQ5.outputs.filteredList[0].Dev_Owner__6 }}",
+							"At_Risk___12":"{{ _22rQ5.outputs.filteredList[0].At_Risk___12 }}",
+							"Comments__if_any___14":"{{ _22rQ5.outputs.filteredList[0].Comments__if_any___14 }}",
+							"Monday_Ticket_with_Details__Optional___16":"{{ _22rQ5.outputs.filteredList[0].Monday_Ticket_with_Details__Optional___16 }}",
+							"addedOn":"{{ _22rQ5.outputs.filteredList[0].Added_on__19 }}"
+						},
+						"source":"{{ _22rQ5.outputs.filteredList }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"utility_by_unifyapps_filter_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_GiVOu-1",
+			"id":"_Oifbl",
+			"index":7,
+			"inputs":{
+				"filter":{
+					"filters":[
+						{
+							"property":"{{ n_lLoVz.outputs.rows[0].Category__3 }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"UI+BE"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"listSource":"{{ n_lLoVz.outputs.rows }}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Filter List of Data",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				},
+				"visibleOptionalFields":[
+					"root.parameters.rows.items.Cust_ETA__Delivery_Date__1",
+					"root.parameters.rows.items.Item__2",
+					"root.parameters.rows.items.Item_Priority__4",
+					"root.parameters.rows.items.Current_Status__5",
+					"root.parameters.rows.items.Dev_Owner__6",
+					"root.parameters.rows.items.At_Risk___12",
+					"root.parameters.rows.items.Comments__if_any___14",
+					"root.parameters.rows.items.Monday_Ticket_with_Details__Optional___16",
+					"root.parameters.rows.source",
+					"root.parameters.rows.ua:type",
+					"root.parameters.rows.items.Cust_ETA__Delivery_Date__1",
+					"root.parameters.rows.items.Item__2",
+					"root.parameters.rows.items.Item_Priority__4",
+					"root.parameters.rows.items.Current_Status__5",
+					"root.parameters.rows.items.Dev_Owner__6",
+					"root.parameters.rows.items.At_Risk___12",
+					"root.parameters.rows.items.Comments__if_any___14",
+					"root.parameters.rows.items.Monday_Ticket_with_Details__Optional___16"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_GiVOu-1",
+			"id":"_c2hZ2",
+			"index":8,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"UI_BE_slack_text":{
+							"type":"string",
+							"title":"UI BE Slack Text"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"rows":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"Cust_ETA__Delivery_Date__1":{
+										"type":"string",
+										"title":"Cust_ETA__Delivery_Date__1"
+									},
+									"Item__2":{
+										"type":"string",
+										"title":"Item__2"
+									},
+									"Item_Priority__4":{
+										"type":"string",
+										"title":"Item_Priority__4"
+									},
+									"Current_Status__5":{
+										"type":"string",
+										"title":"Current_Status__5"
+									},
+									"Dev_Owner__6":{
+										"type":"string",
+										"title":"Dev_Owner__6"
+									},
+									"At_Risk___12":{
+										"type":"string",
+										"title":"At_Risk___12"
+									},
+									"Comments__if_any___14":{
+										"type":"string",
+										"title":"Comments__if_any___14"
+									},
+									"Monday_Ticket_with_Details__Optional___16":{
+										"type":"string",
+										"title":"Monday_Ticket_with_Details__Optional___16"
+									},
+									"App":{
+										"type":"string",
+										"title":"App"
+									}
+								},
+								"additionalProperties":false,
+								"required":[
+									"App"
+								]
+							},
+							"title":"rows"
+						}
+					}
+				},
+				"code":"def rowsVar = binding.variables[\"rows\"]   // Expecting List of row Maps OR a Map with key 'rows'\nif (!rowsVar) {\n    return [\"slack_text\": \"No rows found.\"]\n}\n\n// Normalize to rows list\nList rows\nif (rowsVar instanceof Map && rowsVar.containsKey(\"rows\")) {\n    rows = (rowsVar.rows ?: []) as List\n} else if (rowsVar instanceof List) {\n    rows = rowsVar as List\n} else {\n    rows = []\n}\nif (!rows || rows.isEmpty()) {\n    return [\"slack_text\": \"No rows found.\"]\n}\n\n// App label mapping + ordering\ndef appLabelMap = [\n    \"Commercial Meeting Tracker\": \"*App 1*\",\n    \"POC Application\"           : \"*App 2*\",\n    \"OTL Simplified\"            : \"*App 3*\",\n    \"Ratings Normalization\"     : \"*App 4*\",\n    \"All Apps\"                  : \"*All Apps*\",\n    \"Manager Clearance+GHRO+F&F\": \"*App 5*\"\n]\ndef appOrder = [\n    \"Commercial Meeting Tracker\",\n    \"POC Application\",\n    \"OTL Simplified\",\n    \"Ratings Normalization\",\n    \"Manager Clearance+GHRO+F&F\",\n    \"All Apps\"\n]\n\n// Helper: embed item text with Monday link if it looks like a URL\nString maybeEmbed(String text, String link) {\n    def t = (text ?: \"\").trim()\n    def u = (link ?: \"\").trim()\n    if (u && u.toLowerCase().startsWith(\"http\")) {\n        return \"<${u}|${t}>\"\n    }\n    return t\n}\n\n// Helper: format ETA like \"22 Sept\" from \"9/22/2025\"\nString formatEta(String s) {\n    def raw = (s ?: \"\").trim()\n    if (!raw || raw == \"-\") return \"\"\n    try {\n        def sdfIn = new java.text.SimpleDateFormat(\"M/d/yyyy\", java.util.Locale.ENGLISH)\n        sdfIn.setLenient(true)\n        Date d = sdfIn.parse(raw)\n        Calendar c = Calendar.getInstance(java.util.Locale.ENGLISH)\n        c.setTime(d)\n        int day = c.get(Calendar.DAY_OF_MONTH)\n        int mon = c.get(Calendar.MONTH) + 1\n        // Custom month short names (to get \"Sept\")\n        def monNames = [null, \"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sept\",\"Oct\",\"Nov\",\"Dec\"]\n        return \"${day} ${monNames[mon]}\"\n    } catch (ignored) {\n        return \"\"  // if unparseable, omit ETA\n    }\n}\n\n// Build simple numbered lines\ndef lines = []\nint idx = 1\n\nappOrder.each { appName ->\n    rows.findAll { (it.App ?: \"\").toString().trim() == appName }.each { r ->\n        def status = (r.Current_Status__5 ?: \"\").toString().trim()\n        if (status.equalsIgnoreCase(\"Done\")) return  // skip done\n\n        def alertPrefix = ((r.At_Risk___12 ?: \"\").toString().trim().equalsIgnoreCase(\"Yes\")) ? \":alert: \" : \"\"\n        def appLabel    = appLabelMap[appName] ?: appName\n\n        // NEW: addedOn right after app label, formatted like status\n        def addedOnStr  = formatEta((r.addedOn ?: \"\").toString())\n        def addedOnDisp = addedOnStr ? \"`Raised on ${addedOnStr}` \" : \"\"\n\n        def itemText    = maybeEmbed(r.Item__2, r.Monday_Ticket_with_Details__Optional___16)\n\n        // Highlight in red-like style: `[Status]` bold inside backticks\n        def statusDisp  = status ? \"`[$status]`\" : \"\"\n\n        // Make ETA italics\n        def eta = formatEta((r.Cust_ETA__Delivery_Date__1 ?: \"\").toString())\n        def etaDisp = eta ? \" Cust ETA: _${eta}_\" : \"\"\n\n        // Multiple owners -> @ for each (comma-separated)\n        def ownerRaw    = (r.Dev_Owner__6 ?: \"\").toString().trim()\n        def ownerDisp   = ownerRaw ? (\" \" + ownerRaw.split(\",\").collect { it.trim() }.findAll { it }.collect { \"@${it}\" }.join(\" \")) : \"\"\n\n        def comments    = (r.Comments__if_any___14 ?: \"\").toString().trim()\n        def commentsDisp= comments ? \" ${comments}\" : \"\"\n\n        lines << \"${idx}. ${alertPrefix}${appLabel}: ${addedOnDisp}${itemText} ${statusDisp}${etaDisp}${ownerDisp}${commentsDisp}\".trim()\n        idx++\n    }\n}\n\nif (lines.isEmpty()) {\n    return [\"UI_BE_slack_text\": \"NA.\"]\n}\n\nreturn [\"UI_BE_slack_text\": lines.join('\\n')]\n",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"rows":{
+						"ua:type":"mappedArray",
+						"items":{
+							"App":"{{ _Oifbl.outputs.filteredList[0].Track__0 }}",
+							"Cust_ETA__Delivery_Date__1":"{{ _Oifbl.outputs.filteredList[0].Cust_ETA__Delivery_Date__1 }}",
+							"Item__2":"{{ _Oifbl.outputs.filteredList[0].Item__2 }}",
+							"Item_Priority__4":"{{ _Oifbl.outputs.filteredList[0].Item_Priority__4 }}",
+							"Current_Status__5":"{{ _Oifbl.outputs.filteredList[0].Current_Status__5 }}",
+							"Dev_Owner__6":"{{ _Oifbl.outputs.filteredList[0].Dev_Owner__6 }}",
+							"At_Risk___12":"{{ _Oifbl.outputs.filteredList[0].At_Risk___12 }}",
+							"Comments__if_any___14":"{{ _Oifbl.outputs.filteredList[0].Comments__if_any___14 }}",
+							"Monday_Ticket_with_Details__Optional___16":"{{ _Oifbl.outputs.filteredList[0].Monday_Ticket_with_Details__Optional___16 }}"
+						},
+						"source":"{{ _Oifbl.outputs.filteredList }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"utility_by_unifyapps_filter_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_GiVOu-1",
+			"id":"_NwLsP",
+			"index":9,
+			"inputs":{
+				"filter":{
+					"filters":[
+						{
+							"property":"{{ n_lLoVz.outputs.rows[0].Category__3 }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"Config"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"listSource":"{{ n_lLoVz.outputs.rows }}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Filter List of Data",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				},
+				"visibleOptionalFields":[
+					"root.parameters.rows.items.Cust_ETA__Delivery_Date__1",
+					"root.parameters.rows.items.Item__2",
+					"root.parameters.rows.items.Item_Priority__4",
+					"root.parameters.rows.items.Current_Status__5",
+					"root.parameters.rows.items.Dev_Owner__6",
+					"root.parameters.rows.items.At_Risk___12",
+					"root.parameters.rows.items.Comments__if_any___14",
+					"root.parameters.rows.items.Monday_Ticket_with_Details__Optional___16",
+					"root.parameters.rows.source",
+					"root.parameters.rows.ua:type",
+					"root.parameters.rows.items.Cust_ETA__Delivery_Date__1",
+					"root.parameters.rows.items.Item__2",
+					"root.parameters.rows.items.Item_Priority__4",
+					"root.parameters.rows.items.Current_Status__5",
+					"root.parameters.rows.items.Dev_Owner__6",
+					"root.parameters.rows.items.At_Risk___12",
+					"root.parameters.rows.items.Comments__if_any___14",
+					"root.parameters.rows.items.Monday_Ticket_with_Details__Optional___16"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_GiVOu-1",
+			"id":"_FYLZZ",
+			"index":10,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"Product_slack_text":{
+							"type":"string",
+							"title":"Product Slack Text"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"rows":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"Cust_ETA__Delivery_Date__1":{
+										"type":"string",
+										"title":"Cust_ETA__Delivery_Date__1"
+									},
+									"Item__2":{
+										"type":"string",
+										"title":"Item__2"
+									},
+									"Item_Priority__4":{
+										"type":"string",
+										"title":"Item_Priority__4"
+									},
+									"Current_Status__5":{
+										"type":"string",
+										"title":"Current_Status__5"
+									},
+									"Dev_Owner__6":{
+										"type":"string",
+										"title":"Dev_Owner__6"
+									},
+									"At_Risk___12":{
+										"type":"string",
+										"title":"At_Risk___12"
+									},
+									"Comments__if_any___14":{
+										"type":"string",
+										"title":"Comments__if_any___14"
+									},
+									"Monday_Ticket_with_Details__Optional___16":{
+										"type":"string",
+										"title":"Monday_Ticket_with_Details__Optional___16"
+									},
+									"App":{
+										"type":"string",
+										"title":"App"
+									}
+								},
+								"additionalProperties":false,
+								"required":[
+									"App"
+								]
+							},
+							"title":"rows"
+						}
+					}
+				},
+				"code":"def rowsVar = binding.variables[\"rows\"]   // Expecting List of row Maps OR a Map with key 'rows'\nif (!rowsVar) {\n    return [\"slack_text\": \"No rows found.\"]\n}\n\n// Normalize to rows list\nList rows\nif (rowsVar instanceof Map && rowsVar.containsKey(\"rows\")) {\n    rows = (rowsVar.rows ?: []) as List\n} else if (rowsVar instanceof List) {\n    rows = rowsVar as List\n} else {\n    rows = []\n}\nif (!rows || rows.isEmpty()) {\n    return [\"slack_text\": \"No rows found.\"]\n}\n\n// App label mapping + ordering\ndef appLabelMap = [\n    \"Commercial Meeting Tracker\": \"*App 1*\",\n    \"POC Application\"           : \"*App 2*\",\n    \"OTL Simplified\"            : \"*App 3*\",\n    \"Ratings Normalization\"     : \"*App 4*\",\n    \"All Apps\"                  : \"*All Apps*\",\n    \"Manager Clearance+GHRO+F&F\": \"*App 5*\"\n]\ndef appOrder = [\n    \"Commercial Meeting Tracker\",\n    \"POC Application\",\n    \"OTL Simplified\",\n    \"Ratings Normalization\",\n    \"Manager Clearance+GHRO+F&F\",\n    \"All Apps\"\n]\n\n// Helper: embed item text with Monday link if it looks like a URL\nString maybeEmbed(String text, String link) {\n    def t = (text ?: \"\").trim()\n    def u = (link ?: \"\").trim()\n    if (u && u.toLowerCase().startsWith(\"http\")) {\n        return \"<${u}|${t}>\"\n    }\n    return t\n}\n\n// Helper: format ETA like \"22 Sept\" from \"9/22/2025\"\nString formatEta(String s) {\n    def raw = (s ?: \"\").trim()\n    if (!raw || raw == \"-\") return \"\"\n    try {\n        def sdfIn = new java.text.SimpleDateFormat(\"M/d/yyyy\", java.util.Locale.ENGLISH)\n        sdfIn.setLenient(true)\n        Date d = sdfIn.parse(raw)\n        Calendar c = Calendar.getInstance(java.util.Locale.ENGLISH)\n        c.setTime(d)\n        int day = c.get(Calendar.DAY_OF_MONTH)\n        int mon = c.get(Calendar.MONTH) + 1\n        // Custom month short names (to get \"Sept\")\n        def monNames = [null, \"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sept\",\"Oct\",\"Nov\",\"Dec\"]\n        return \"${day} ${monNames[mon]}\"\n    } catch (ignored) {\n        return \"\"  // if unparseable, omit ETA\n    }\n}\n\n// Build simple numbered lines\ndef lines = []\nint idx = 1\n\nappOrder.each { appName ->\n    rows.findAll { (it.App ?: \"\").toString().trim() == appName }.each { r ->\n        def status = (r.Current_Status__5 ?: \"\").toString().trim()\n        if (status.equalsIgnoreCase(\"Done\")) return  // skip done\n\n        def alertPrefix = ((r.At_Risk___12 ?: \"\").toString().trim().equalsIgnoreCase(\"Yes\")) ? \":alert: \" : \"\"\n        def appLabel    = appLabelMap[appName] ?: appName\n\n        // NEW: addedOn right after app label, formatted like status\n        def addedOnStr  = formatEta((r.addedOn ?: \"\").toString())\n        def addedOnDisp = addedOnStr ? \"`Raised on ${addedOnStr}` \" : \"\"\n\n        def itemText    = maybeEmbed(r.Item__2, r.Monday_Ticket_with_Details__Optional___16)\n\n        // Highlight in red-like style: `[Status]` bold inside backticks\n        def statusDisp  = status ? \"`[$status]`\" : \"\"\n\n        // Make ETA italics\n        def eta = formatEta((r.Cust_ETA__Delivery_Date__1 ?: \"\").toString())\n        def etaDisp = eta ? \" ETA: _${eta}_\" : \"\"\n\n        // Multiple owners -> @ for each (comma-separated)\n        def ownerRaw    = (r.Dev_Owner__6 ?: \"\").toString().trim()\n        def ownerDisp   = ownerRaw ? (\" \" + ownerRaw.split(\",\").collect { it.trim() }.findAll { it }.collect { \"@${it}\" }.join(\" \")) : \"\"\n\n        def comments    = (r.Comments__if_any___14 ?: \"\").toString().trim()\n        def commentsDisp= comments ? \" ${comments}\" : \"\"\n\n        lines << \"${idx}. ${alertPrefix}${appLabel}: ${addedOnDisp}${itemText} ${statusDisp}${etaDisp}${ownerDisp}${commentsDisp}\".trim()\n        idx++\n    }\n}\n\nif (lines.isEmpty()) {\n    return [\"Product_slack_text\": \"NA.\"]\n}\n\nreturn [\"Product_slack_text\": lines.join('\\n')]\n",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"rows":{
+						"ua:type":"mappedArray",
+						"items":{
+							"App":"{{ _NwLsP.outputs.filteredList[0].Track__0 }}",
+							"Item__2":"{{ _NwLsP.outputs.filteredList[0].Item__2 }}",
+							"Item_Priority__4":"{{ _NwLsP.outputs.filteredList[0].Item_Priority__4 }}",
+							"Current_Status__5":"{{ _NwLsP.outputs.filteredList[0].Current_Status__5 }}",
+							"At_Risk___12":"{{ _NwLsP.outputs.filteredList[0].At_Risk___12 }}",
+							"Comments__if_any___14":"{{ _NwLsP.outputs.filteredList[0].Comments__if_any___14 }}",
+							"Monday_Ticket_with_Details__Optional___16":"{{ _NwLsP.outputs.filteredList[0].Monday_Ticket_with_Details__Optional___16 }}",
+							"Dev_Owner__6":"{{ _NwLsP.outputs.filteredList[0].Primary_PM_Owner__11 }}",
+							"Cust_ETA__Delivery_Date__1":"{{ _NwLsP.outputs.filteredList[0].ETA__7 }}"
+						},
+						"source":"{{ _NwLsP.outputs.filteredList }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":879,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_GiVOu-1",
+			"id":"n_Rbpu3",
+			"index":11,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"date":{
+							"type":"string",
+							"title":"Date"
+						}
+					},
+					"required":[
+						"date"
+					]
+				}
+			},
+			"inputs":{
+				"date":"=TEXT(TODAY(),\"DD MMMM\")"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"date":{
+							"type":"string",
+							"title":"Date"
+						}
+					},
+					"required":[
+						"date"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"slack",
+				"resourceVersion":6090,
+				"connectionId":"68ce6befb270492a099471fb",
+				"resourceName":"slack_post_message_in_channel",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_GiVOu-1",
+			"id":"n_5Z622",
+			"index":12,
+			"inputs":{
+				"link_names":true,
+				"messageType":"text",
+				"channel":"C08J2UC9P9R",
+				"text":"*Virtusa NoCode Apps Update {{ n_Rbpu3.outputs.date }}*\n*App 1:* In Virtusa In QA. Making changes based on business demo\n*App 2:* In product config. Tech Review ETA 3rd Oct\n*App 3:* In product config. In QA\n*App 4:* Support Virtusa in UAT\n*App 5*: In Discovery and design\n\n*UI*\n{{ n_Xl2Ez.outputs.result.UI_slack_text }}\n\n*BE*\n{{ _VeHV0.outputs.result.BE_slack_text }}\n\n*UI+BE*\n{{ _c2hZ2.outputs.result.UI_BE_slack_text }}\n\n*Product*\n{{ _FYLZZ.outputs.result.Product_slack_text }}\n\ncc: @Rachit Mittal sir @Abhishek Khurana sir @Kavish Manubolu sir @Abhinav Singi sir @Abhishek Singh sir @Shivam Satrawal sir",
+				"mrkdwn":true
+			},
+			"skip":false,
+			"subTitle":"Slack",
+			"title":"Post message",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":76193,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":37
+}
