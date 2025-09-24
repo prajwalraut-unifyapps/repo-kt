@@ -10,7 +10,7 @@
 	"id":"68d172c1f60e200ebc261330",
 	"lastModifiedBy":39713,
 	"lcName":"testglobalsearchtesting1234",
-	"modifiedTime":1758702338896,
+	"modifiedTime":1758713034693,
 	"name":"testGlobalSearchTesting1234",
 	"nodes":[
 		{
@@ -20,17 +20,49 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_myC40-1",
-			"id":"n_0ApLf",
+			"id":"n_hQqc0",
 			"index":1,
 			"inputs":{
 				"request":{
 					"contentType":"application/json",
-					"body":{
-						"$ref":"#/definitions/entity|e_code_snippet|e_68ca98e7597e8d742b39c28a",
-						"$comment":"testSave"
+					"queryParams":{
+						"type":"object",
+						"additionalProperties":false,
+						"required":[],
+						"properties":{
+							"user":{
+								"type":"string",
+								"title":"User"
+							}
+						}
+					},
+					"pathParams":{
+						"type":"object",
+						"additionalProperties":false,
+						"required":[],
+						"properties":{
+							"user":{
+								"type":"string",
+								"title":"User"
+							}
+						}
+					},
+					"headers":{
+						"type":"object",
+						"additionalProperties":false,
+						"required":[],
+						"properties":{
+							"user":{
+								"type":"array",
+								"items":{
+									"type":"string"
+								},
+								"title":"User"
+							}
+						}
 					}
 				}
 			},
@@ -60,5 +92,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":13
 }
