@@ -1,0 +1,45 @@
+{
+	"appsUsed":[
+		"copper"
+	],
+	"createdTime":1721480770088,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"id":"669bb6425abf9d3396fd9553",
+	"lastModifiedBy":174,
+	"lcName":"untitled",
+	"modifiedTime":1721480797745,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"copper",
+				"resourceVersion":948,
+				"resourceName":"copper_on_delete_activity"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"KtX46-1",
+			"id":"KtX46",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"title":"Delete activity",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":174,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":2
+}
