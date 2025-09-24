@@ -1,0 +1,162 @@
+{
+	"appsUsed":[
+		"schedule"
+	],
+	"createdTime":1721393641460,
+	"deleted":false,
+	"description":"",
+	"edges":[
+		{
+			"fromNodeId":"7r720",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"h4b6A",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"h4b6A",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"820Zn",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"669a61e94db2fd05c97011a0",
+	"lastModifiedBy":-1,
+	"lcName":"testing import",
+	"modifiedTime":1721679257823,
+	"name":"testing import",
+	"nodes":[
+		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":42,
+				"resourceName":"schedule_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"7r720-1",
+			"id":"7r720",
+			"index":0,
+			"inputs":{
+				"cron":"INTERVAL",
+				"interval":15,
+				"frequency":"MINUTES"
+			},
+			"skip":false,
+			"title":"New recurring event",
+			"trigger":{
+				"type":"SCHEDULED"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":774,
+				"resourceName":"storage_by_unifyapps_import_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"7r720-1",
+			"id":"h4b6A",
+			"index":0,
+			"inputs":{
+				"sheetIndex":1,
+				"sourceType":"EXTERNAL_URL",
+				"object_type":"excel_index_test",
+				"fieldMappings":[
+					{
+						"entityField":"properties_SystemSKUID",
+						"fileField":"System SKU ID"
+					},
+					{
+						"entityField":"properties_ClientSKUCode",
+						"fileField":"Client SKU Code"
+					},
+					{
+						"entityField":"properties_alternateCode",
+						"fileField":"Alternate Code"
+					},
+					{
+						"entityField":"properties_skuName",
+						"fileField":"SKU Name"
+					},
+					{
+						"entityField":"properties_mrp",
+						"fileField":"MRP"
+					},
+					{
+						"entityField":"properties_warehouseName",
+						"fileField":"Warehouse Name"
+					},
+					{
+						"entityField":"properties_available",
+						"fileField":"Available"
+					},
+					{
+						"entityField":"properties_allocated",
+						"fileField":"Allocated"
+					},
+					{
+						"entityField":"properties_notFound",
+						"fileField":"Not Found"
+					},
+					{
+						"fileField":"Blocked",
+						"entityField":"properties_blocked"
+					},
+					{
+						"entityField":"properties_stockInTransit",
+						"fileField":"Stock In Transit"
+					},
+					{
+						"entityField":"properties_total",
+						"fileField":"Total"
+					},
+					{
+						"entityField":"properties_grade",
+						"fileField":"Grade"
+					}
+				],
+				"source":"https://cdn.gscmaven.com/clientdata/98/export/inventory/Export_Inventory_19_07_2024_02_42_46.xls",
+				"fileType":"XLSX"
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Import records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"7r720-1",
+			"id":"820Zn",
+			"index":0,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":602,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":6
+}
