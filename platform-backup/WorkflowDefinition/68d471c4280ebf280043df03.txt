@@ -81,7 +81,7 @@
 	"id":"68d471c4280ebf280043df03",
 	"lastModifiedBy":45768,
 	"lcName":"customclaude",
-	"modifiedTime":1758753586586,
+	"modifiedTime":1758753594609,
 	"name":"CustomClaude",
 	"nodes":[
 		{
@@ -91,7 +91,7 @@
 				"resourceName":"callables_from_interface"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"kQqTJ-1",
 			"id":"CpGDp",
@@ -457,7 +457,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"kQqTJ-1",
 			"id":"hCOtX",
@@ -542,7 +542,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"kQqTJ-1",
 			"id":"_vhnyj",
@@ -687,7 +687,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"kQqTJ-1",
 			"id":"oefeP",
@@ -866,7 +866,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"kQqTJ-1",
 			"id":"WhBQ9",
@@ -925,7 +925,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"kQqTJ-1",
 			"id":"n_mRQ60",
@@ -1131,7 +1131,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"kQqTJ-1",
 			"id":"n_zFeM2",
@@ -1217,7 +1217,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"kQqTJ-1",
 			"id":"n_rQCtH",
@@ -1246,7 +1246,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_rQCtH@kQqTJ-1@y",
 			"id":"_f0PYm",
@@ -1267,7 +1267,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_rQCtH@kQqTJ-1@y",
 			"id":"_4qJxs",
@@ -1297,7 +1297,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_rQCtH@kQqTJ-1@n",
 			"id":"_SuppW",
@@ -1337,5 +1337,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
