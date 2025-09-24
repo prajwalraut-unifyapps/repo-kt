@@ -5,12 +5,12 @@
 	"createdTime":1753185858870,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646537712,
+		"deployedAt":1758655359793,
 		"deployedBy":0,
-		"deployedDefinitionId":"68d2d109bd00df618e363d01",
+		"deployedDefinitionId":"68d2f37f38757c179b1236a3",
 		"status":"DEPLOYED",
-		"version":21,
-		"workflowVersion":87
+		"version":22,
+		"workflowVersion":88
 	},
 	"description":"Takes in a single url and indexes it and also extracts the urls from the html.",
 	"edges":[
@@ -219,9 +219,9 @@
 		]
 	},
 	"id":"687643b16ccdd5ed9f163a8f",
-	"lastModifiedBy":0,
+	"lastModifiedBy":309,
 	"lcName":"website or file indexing | page indexer",
-	"modifiedTime":1758655359659,
+	"modifiedTime":1758702238851,
 	"name":"Website or File Indexing | Page Indexer",
 	"nodes":[
 		{
@@ -1002,7 +1002,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_AVSvb@n_JOyjL@_Yv0XF-1@y@l",
 			"id":"n_zSexL",
@@ -1011,7 +1011,7 @@
 				"automationId":"685d22faae119e75316ded7d",
 				"runtimeConnections":{},
 				"synchronous":true,
-				"distributeWorkflowLoad":true,
+				"distributeWorkflowLoad":false,
 				"parametersList":{
 					"source":"{{ _AVSvb.outputs.item }}",
 					"ua:type":"mappedArray",
@@ -1213,5 +1213,5 @@
 	"tags":[
 		
 	],
-	"version":88
+	"version":89
 }
