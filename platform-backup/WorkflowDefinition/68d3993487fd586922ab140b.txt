@@ -30,7 +30,7 @@
 	"id":"68d3993487fd586922ab140b",
 	"lastModifiedBy":45768,
 	"lcName":"textexcel",
-	"modifiedTime":1758698748561,
+	"modifiedTime":1758698782339,
 	"name":"TextExcel",
 	"nodes":[
 		{
@@ -136,7 +136,7 @@
 				"imports":[
 					"pandas",
 					"openpyxl",
-					"itertools"
+					"more-itertools"
 				],
 				"isAsync":false,
 				"python_version":"3.12",
@@ -191,5 +191,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
