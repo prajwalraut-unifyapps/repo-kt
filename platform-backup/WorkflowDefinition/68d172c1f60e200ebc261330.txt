@@ -10,7 +10,7 @@
 	"id":"68d172c1f60e200ebc261330",
 	"lastModifiedBy":39713,
 	"lcName":"testglobalsearchtesting1234",
-	"modifiedTime":1758713034693,
+	"modifiedTime":1758713056189,
 	"name":"testGlobalSearchTesting1234",
 	"nodes":[
 		{
@@ -63,6 +63,10 @@
 								"title":"User"
 							}
 						}
+					},
+					"body":{
+						"$ref":"#/definitions/entity|e_code_snippet|e_68ca98e7597e8d742b39c28a",
+						"$comment":"testSave"
 					}
 				}
 			},
@@ -92,5 +96,5 @@
 	"tags":[
 		
 	],
-	"version":13
+	"version":14
 }
