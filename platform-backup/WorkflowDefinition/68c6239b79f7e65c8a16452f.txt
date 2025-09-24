@@ -591,13 +591,6 @@
 			"fromNodeId":"_WBvio",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_zWwL6",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_zWwL6",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"_Ed4F0",
 			"type":"next"
 		},
@@ -933,7 +926,7 @@
 	"id":"68c6239b79f7e65c8a16452f",
 	"lastModifiedBy":33,
 	"lcName":"test table health copy",
-	"modifiedTime":1758703185314,
+	"modifiedTime":1758717065120,
 	"name":"Test table health copy",
 	"nodes":[
 		{
@@ -1140,18 +1133,30 @@
 						"customerId":{
 							"type":"string",
 							"title":"Customer Id"
+						},
+						"rootAutomationId":{
+							"type":"string",
+							"title":"Root Automation Id"
+						},
+						"rootExecutionId":{
+							"type":"string",
+							"title":"Root Execution Id"
 						}
 					},
 					"required":[
 						"currentPartitionThresholdGB",
 						"executionTime",
-						"customerId"
+						"customerId",
+						"rootAutomationId",
+						"rootExecutionId"
 					]
 				}
 			},
 			"inputs":{
 				"executionTime":"{{ n_LMBIr.outputs.scheduleTime }}",
 				"customerId":"{{ __RUN__.outputs.customerId }}",
+				"rootAutomationId":"{{ __RUN__.outputs.workflowId }}",
+				"rootExecutionId":"{{ __RUN__.outputs.rootExecutionId }}",
 				"currentPartitionThresholdGB":"{{ _auxBn.outputs.result.minimumStorageSizeGB }}"
 			},
 			"outputSchema":{
@@ -1171,12 +1176,22 @@
 						"customerId":{
 							"type":"string",
 							"title":"Customer Id"
+						},
+						"rootAutomationId":{
+							"type":"string",
+							"title":"Root Automation Id"
+						},
+						"rootExecutionId":{
+							"type":"string",
+							"title":"Root Execution Id"
 						}
 					},
 					"required":[
 						"currentPartitionThresholdGB",
 						"executionTime",
-						"customerId"
+						"customerId",
+						"rootAutomationId",
+						"rootExecutionId"
 					]
 				}
 			},
@@ -5741,7 +5756,7 @@
 				},
 				"connectionType":"DIRECT",
 				"sslVerify":false,
-				"path":"/internal/sql-report/runSQL/query/{{ __RUN__.outputs.customerId }}",
+				"path":"/internal/sql-report/runSQL/query/{{ n_A4kqi.outputs.customerId }}",
 				"responseSchema":{
 					"type":"object",
 					"additionalProperties":false,
@@ -5780,7 +5795,7 @@
 						}
 					}
 				},
-				"baseUrl":"{{ n_t5eD3.outputs.result.baseUrl }}",
+				"baseUrl":"{{ n_96ZBq.outputs.baseInternalUrl }}",
 				"httpVersion":"HTTP_2",
 				"bodySchema":{
 					"type":"object",
@@ -5992,7 +6007,7 @@
 				},
 				"connectionType":"DIRECT",
 				"sslVerify":false,
-				"path":"/internal/sql-report/runSQL/query/{{ __RUN__.outputs.customerId }}",
+				"path":"/internal/sql-report/runSQL/query/{{ n_A4kqi.outputs.customerId }}",
 				"responseSchema":{
 					"type":"object",
 					"additionalProperties":false,
@@ -6021,7 +6036,7 @@
 						}
 					}
 				},
-				"baseUrl":"{{ n_t5eD3.outputs.result.baseUrl }}",
+				"baseUrl":"{{ n_96ZBq.outputs.baseInternalUrl }}",
 				"httpVersion":"HTTP_2",
 				"bodySchema":{
 					"type":"object",
@@ -6232,7 +6247,7 @@
 				],
 				"operator":"AND"
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Condition",
 			"title":"Condition",
 			"type":"IF_ELSE"
@@ -6531,7 +6546,7 @@
 				}
 			},
 			"skip":false,
-			"subTitle":"Mismatch routine loads ouptut",
+			"subTitle":"Mismatch Table",
 			"title":"Execute Groovy code",
 			"type":"ACTION"
 		},
@@ -6590,8 +6605,8 @@
 				"skipIfBlank":false,
 				"record":{
 					"alertType":"starrocks_table_health",
-					"rootAutomationId":"{{ __RUN__.outputs.workflowId }}",
-					"rootExecutionId":"{{ __RUN__.outputs.rootExecutionId }}",
+					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
+					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
 					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
 					"alertCategory":"starrocks",
 					"alertSubType":"routine_load_columns_mismatch",
@@ -6613,32 +6628,6 @@
 		},
 		{
 			"context":{
-				"appName":"slack",
-				"resourceVersion":6076,
-				"connectionId":"67ebb703e145e219420dadfc",
-				"resourceName":"slack_post_message_in_channel",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_RG5N7@_jMFmS-1@y",
-			"id":"_zWwL6",
-			"index":62,
-			"inputs":{
-				"link_names":true,
-				"messageType":"text",
-				"channel":"C08LJ2NQ5C1",
-				"text":"For customer {{ __RUN__.outputs.customerId }}:\n{{ _aXMZM.outputs.result.message }}",
-				"mrkdwn":true
-			},
-			"skip":false,
-			"subTitle":"Slack",
-			"title":"Post message",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"callables",
 				"resourceVersion":3,
 				"resourceName":"callables_call_automation",
@@ -6649,21 +6638,21 @@
 			"fallbackMode":"STOP",
 			"groupId":"_RG5N7@_jMFmS-1@y",
 			"id":"_Ed4F0",
-			"index":63,
+			"index":62,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
-				"synchronous":true,
+				"synchronous":false,
 				"version":"-1",
 				"parameters":{
-					"env":"{{ n_t5eD3.outputs.result.env }}",
+					"env":"{{ n_96ZBq.outputs.env }}",
 					"alertCategory":"starrocks",
 					"alertType":"starrocks_table_health",
 					"alertTitle":"🚨 Table and Routine Load Mismatch Detected",
 					"alertDescription":"For customer {{ __RUN__.outputs.customerId }}, the following tables and routine loads have mismatched columns, and auto-fixer could not fix:\n{{ _aXMZM.outputs.result.message }}"
 				}
 			},
-			"skip":true,
+			"skip":false,
 			"subTitle":"Callable",
 			"title":"Call automation",
 			"type":"CALL_WORKFLOW"
@@ -6686,15 +6675,15 @@
 			"fallbackMode":"STOP",
 			"groupId":"_RG5N7@_jMFmS-1@n",
 			"id":"_EQKPq",
-			"index":64,
+			"index":63,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
 				"skipIfBlank":false,
 				"record":{
 					"alertType":"starrocks_table_health",
-					"rootAutomationId":"{{ __RUN__.outputs.workflowId }}",
-					"rootExecutionId":"{{ __RUN__.outputs.rootExecutionId }}",
+					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
+					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
 					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
 					"alertCategory":"starrocks",
 					"alertSubType":"routine_load_columns_mismatch",
@@ -6731,7 +6720,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_9xKNR",
-			"index":65,
+			"index":64,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -6836,7 +6825,7 @@
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
-					"minimumBucketCount":"{{ n_t5eD3.outputs.result.minimumBucketCount }}",
+					"minimumBucketCount":"{{ _auxBn.outputs.result.minimumBucketCount }}",
 					"criticalBuckets":{
 						"source":"{{ n_CWqg9.outputs.items }}",
 						"ua:type":"mappedArray",
@@ -6870,7 +6859,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_6H2OQ",
-			"index":66,
+			"index":65,
 			"inputs":{
 				"filters":[
 					{
@@ -6906,15 +6895,15 @@
 			"fallbackMode":"STOP",
 			"groupId":"_6H2OQ@_jMFmS-1@y",
 			"id":"_CeBOO",
-			"index":67,
+			"index":66,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
 				"skipIfBlank":false,
 				"record":{
 					"alertType":"starrocks_table_health",
-					"rootAutomationId":"{{ __RUN__.outputs.workflowId }}",
-					"rootExecutionId":"{{ __RUN__.outputs.rootExecutionId }}",
+					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
+					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
 					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
 					"alertCategory":"starrocks",
 					"alertSubType":"routine_load_partition_buckets",
@@ -6947,7 +6936,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_6H2OQ@_jMFmS-1@y",
 			"id":"_yeZtP",
-			"index":68,
+			"index":67,
 			"inputs":{
 				"link_names":true,
 				"messageType":"text",
@@ -6972,7 +6961,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_6H2OQ@_jMFmS-1@y",
 			"id":"_xe7MC",
-			"index":69,
+			"index":68,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -7009,7 +6998,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_6H2OQ@_jMFmS-1@n",
 			"id":"_ODwaO",
-			"index":70,
+			"index":69,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -7054,7 +7043,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_DKDTU",
-			"index":71,
+			"index":70,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -7193,7 +7182,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_PaFnz",
-			"index":72,
+			"index":71,
 			"inputs":{
 				"filters":[
 					{
@@ -7229,7 +7218,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_PaFnz@_jMFmS-1@y",
 			"id":"_zFyJ8",
-			"index":73,
+			"index":72,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -7270,7 +7259,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_PaFnz@_jMFmS-1@y",
 			"id":"_bme3Z",
-			"index":74,
+			"index":73,
 			"inputs":{
 				"link_names":true,
 				"messageType":"text",
@@ -7295,7 +7284,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_PaFnz@_jMFmS-1@y",
 			"id":"_ANDa3",
-			"index":75,
+			"index":74,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -7332,7 +7321,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_PaFnz@_jMFmS-1@n",
 			"id":"_izaqB",
-			"index":76,
+			"index":75,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -7377,7 +7366,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_3dH62",
-			"index":77,
+			"index":76,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -7510,7 +7499,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_wcAiW",
-			"index":78,
+			"index":77,
 			"inputs":{
 				"filters":[
 					{
@@ -7546,7 +7535,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_wcAiW@_jMFmS-1@y",
 			"id":"_7hrr3",
-			"index":79,
+			"index":78,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -7587,7 +7576,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_wcAiW@_jMFmS-1@y",
 			"id":"_4dprc",
-			"index":80,
+			"index":79,
 			"inputs":{
 				"link_names":true,
 				"messageType":"text",
@@ -7612,7 +7601,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_wcAiW@_jMFmS-1@y",
 			"id":"_TNCsd",
-			"index":81,
+			"index":80,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -7649,7 +7638,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_wcAiW@_jMFmS-1@n",
 			"id":"_7DI3g",
-			"index":82,
+			"index":81,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -7694,7 +7683,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_oSfM0",
-			"index":83,
+			"index":82,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -7833,7 +7822,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_sbw6Y",
-			"index":84,
+			"index":83,
 			"inputs":{
 				"filters":[
 					{
@@ -7869,7 +7858,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sbw6Y@_jMFmS-1@y",
 			"id":"_W50DB",
-			"index":85,
+			"index":84,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -7910,7 +7899,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sbw6Y@_jMFmS-1@y",
 			"id":"_PULYF",
-			"index":86,
+			"index":85,
 			"inputs":{
 				"link_names":true,
 				"messageType":"text",
@@ -7935,7 +7924,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sbw6Y@_jMFmS-1@y",
 			"id":"_axNoi",
-			"index":87,
+			"index":86,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -7972,7 +7961,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sbw6Y@_jMFmS-1@n",
 			"id":"_XAGCp",
-			"index":88,
+			"index":87,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -8017,7 +8006,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_mTnAB",
-			"index":89,
+			"index":88,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -8159,7 +8148,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_sd49N",
-			"index":90,
+			"index":89,
 			"inputs":{
 				"filters":[
 					{
@@ -8195,7 +8184,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sd49N@_jMFmS-1@y",
 			"id":"_jP4zx",
-			"index":91,
+			"index":90,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -8236,7 +8225,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sd49N@_jMFmS-1@y",
 			"id":"_y1ErV",
-			"index":92,
+			"index":91,
 			"inputs":{
 				"link_names":true,
 				"messageType":"text",
@@ -8261,7 +8250,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sd49N@_jMFmS-1@y",
 			"id":"_9P9Co",
-			"index":93,
+			"index":92,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -8298,7 +8287,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sd49N@_jMFmS-1@n",
 			"id":"_mK9Cz",
-			"index":94,
+			"index":93,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -8343,7 +8332,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_Xc40g",
-			"index":95,
+			"index":94,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -8473,7 +8462,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_3i0XI",
-			"index":96,
+			"index":95,
 			"inputs":{
 				"filters":[
 					{
@@ -8509,7 +8498,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_3i0XI@_jMFmS-1@y",
 			"id":"_wwCEw",
-			"index":97,
+			"index":96,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -8550,7 +8539,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_3i0XI@_jMFmS-1@y",
 			"id":"_TbzdC",
-			"index":98,
+			"index":97,
 			"inputs":{
 				"link_names":true,
 				"messageType":"text",
@@ -8575,7 +8564,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_3i0XI@_jMFmS-1@y",
 			"id":"_A4qEN",
-			"index":99,
+			"index":98,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -8612,7 +8601,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_3i0XI@_jMFmS-1@n",
 			"id":"_VKHcU",
-			"index":100,
+			"index":99,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -8652,7 +8641,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"n_uDcFp",
-			"index":101,
+			"index":100,
 			"inputs":{
 				"result":{
 					"result":{
@@ -8701,5 +8690,5 @@
 		}
 	},
 	"standard":false,
-	"version":69
+	"version":76
 }
