@@ -912,7 +912,7 @@
 	"id":"68c6239b79f7e65c8a16452f",
 	"lastModifiedBy":33,
 	"lcName":"test table health copy",
-	"modifiedTime":1758717409288,
+	"modifiedTime":1758717435916,
 	"name":"Test table health copy",
 	"nodes":[
 		{
@@ -7197,7 +7197,7 @@
 						"outputs":"{{ _DKDTU.outputs.result.outputs }}"
 					},
 					"status":"CRITICAL",
-					"stepDescription":"Check whether each partition of a routine load has < {{ n_t5eD3.outputs.result.minimumStorageSizeGB }}GB storage, which is too small",
+					"stepDescription":"Check whether each partition of a routine load has < {{ _auxBn.outputs.result.minimumStorageSizeGB }}GB storage, which is too small",
 					"resolved":false
 				}
 			},
@@ -7274,7 +7274,7 @@
 						"outputs":"{{ _DKDTU.outputs.result.outputs }}"
 					},
 					"status":"OK",
-					"stepDescription":"Check whether each partition of a routine load has < {{ n_t5eD3.outputs.result.minimumStorageSizeGB }}GB storage, which is too small",
+					"stepDescription":"Check whether each partition of a routine load has < {{ _auxBn.outputs.result.minimumStorageSizeGB }}GB storage, which is too small",
 					"resolved":true
 				}
 			},
@@ -8624,5 +8624,5 @@
 		}
 	},
 	"standard":false,
-	"version":81
+	"version":82
 }
