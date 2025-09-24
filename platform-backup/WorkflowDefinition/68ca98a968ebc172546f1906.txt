@@ -51,7 +51,7 @@
 	"id":"68ca98a968ebc172546f1906",
 	"lastModifiedBy":39713,
 	"lcName":"testglobalsearch",
-	"modifiedTime":1758713918865,
+	"modifiedTime":1758714123227,
 	"name":"testGlobalSearch",
 	"nodes":[
 		{
@@ -289,7 +289,11 @@
 		{
 			"additional":{
 				"xsdSchemaConfig":{
-					"root":{}
+					"root":{
+						"errorResponseSchemas":[
+							{}
+						]
+					}
 				}
 			},
 			"context":{
@@ -322,11 +326,7 @@
 				"responseContentType":"application/json",
 				"errorResponseSchemas":[
 					{
-						"status":400,
-						"body":{
-							"$ref":"#/definitions/entity|e_code_snippet|e_68ca98e7597e8d742b39c28a",
-							"$comment":"testSave"
-						}
+						"status":400
 					}
 				],
 				"authType":"CUSTOM",
@@ -435,5 +435,5 @@
 	"tags":[
 		
 	],
-	"version":51
+	"version":52
 }
