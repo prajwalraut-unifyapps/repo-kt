@@ -10,7 +10,7 @@
 	"id":"68d172c1f60e200ebc261330",
 	"lastModifiedBy":39713,
 	"lcName":"testglobalsearch",
-	"modifiedTime":1758699094975,
+	"modifiedTime":1758699268416,
 	"name":"testGlobalSearch",
 	"nodes":[
 		{
@@ -60,5 +60,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
