@@ -1,0 +1,47 @@
+{
+	"appsUsed":[
+		"amazon_sqs"
+	],
+	"createdTime":1721381137382,
+	"deleted":false,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"669a31114db2fd05c970014e",
+	"lastModifiedBy":-1,
+	"lcName":"untitled",
+	"modifiedTime":1721679258215,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"amazon_sqs"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"0f1H6-1",
+			"id":"0f1H6",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":13,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
