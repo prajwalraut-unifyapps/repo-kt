@@ -919,7 +919,7 @@
 	"id":"68c6239b79f7e65c8a16452f",
 	"lastModifiedBy":33,
 	"lcName":"test table health copy",
-	"modifiedTime":1758717197244,
+	"modifiedTime":1758717221819,
 	"name":"Test table health copy",
 	"nodes":[
 		{
@@ -6932,7 +6932,7 @@
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
-				"synchronous":true,
+				"synchronous":false,
 				"version":"-1",
 				"parameters":{
 					"env":"{{ n_t5eD3.outputs.result.env }}",
@@ -8657,5 +8657,5 @@
 		}
 	},
 	"standard":false,
-	"version":79
+	"version":80
 }
