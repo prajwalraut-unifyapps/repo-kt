@@ -95,7 +95,7 @@
 	"id":"68ce650005594063ad252ec4",
 	"lastModifiedBy":76193,
 	"lcName":"virtusa | slack update [dnd]",
-	"modifiedTime":1758684472239,
+	"modifiedTime":1758684506230,
 	"name":"Virtusa | Slack Update [DND]",
 	"nodes":[
 		{
@@ -801,10 +801,10 @@
 							"Item_Priority__4":"{{ _NwLsP.outputs.filteredList[0].Item_Priority__4 }}",
 							"Current_Status__5":"{{ _NwLsP.outputs.filteredList[0].Current_Status__5 }}",
 							"At_Risk___12":"{{ _NwLsP.outputs.filteredList[0].At_Risk___12 }}",
-							"Comments__if_any___14":"{{ _NwLsP.outputs.filteredList[0].Comments__if_any___14 }}",
 							"Monday_Ticket_with_Details__Optional___16":"{{ _NwLsP.outputs.filteredList[0].Monday_Ticket_with_Details__Optional___16 }}",
 							"Dev_Owner__6":"{{ _NwLsP.outputs.filteredList[0].Primary_PM_Owner__11 }}",
-							"Cust_ETA__Delivery_Date__1":"{{ _NwLsP.outputs.filteredList[0].ETA__7 }}"
+							"Cust_ETA__Delivery_Date__1":"{{ _NwLsP.outputs.filteredList[0].ETA__7 }}",
+							"Comments__if_any___14":"{{ _NwLsP.outputs.filteredList[0].Dependency_on_Client__if_Any___10 }}"
 						},
 						"source":"{{ _NwLsP.outputs.filteredList }}"
 					}
@@ -914,5 +914,5 @@
 	"tags":[
 		
 	],
-	"version":38
+	"version":39
 }
