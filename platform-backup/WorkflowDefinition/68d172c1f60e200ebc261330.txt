@@ -1,0 +1,64 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758556865633,
+	"deleted":false,
+	"edges":[
+		
+	],
+	"id":"68d172c1f60e200ebc261330",
+	"lastModifiedBy":39713,
+	"lcName":"testglobalsearch",
+	"modifiedTime":1758695866706,
+	"name":"testGlobalSearch",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":813,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_myC40-1",
+			"id":"n_0ApLf",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json",
+					"body":{
+						"$ref":"#/definitions/entity|e_code_snippet|e_68ca98e7597e8d742b39c28a",
+						"$comment":"testSave"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":39713,
+	"schemaReferences":[
+		"entity|e_code_snippet|e_68ca98e7597e8d742b39c28a"
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
