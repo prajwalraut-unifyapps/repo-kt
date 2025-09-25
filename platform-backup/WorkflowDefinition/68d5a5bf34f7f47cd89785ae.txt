@@ -4,13 +4,21 @@
 	],
 	"createdTime":1758832063138,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758832074332,
+		"deployedBy":161877,
+		"deployedDefinitionId":"68d5a5c9004a326d781e73a0",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		
 	],
 	"id":"68d5a5bf34f7f47cd89785ae",
 	"lastModifiedBy":161877,
 	"lcName":"test-settings-log-alert",
-	"modifiedTime":1758832069469,
+	"modifiedTime":1758832080460,
 	"name":"test-settings-log-alert",
 	"nodes":[
 		{
@@ -20,7 +28,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_F7h8S-1",
 			"id":"n_RWCXd",
@@ -45,10 +53,12 @@
 	],
 	"settings":{
 		"enableNodeLevelLogging":true,
-		"enableRunLogging":true,
+		"enableRunLogging":false,
 		"enableVariableLogging":true,
+		"nodeLogLevel":"WARN",
 		"route":{
 			"default":false,
+			"headerValueTierMap":{},
 			"tierName":"global"
 		}
 	},
@@ -56,5 +66,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
