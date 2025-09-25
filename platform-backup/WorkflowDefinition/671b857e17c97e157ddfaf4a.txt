@@ -43,7 +43,7 @@
 	"id":"671b857e17c97e157ddfaf4a",
 	"lastModifiedBy":46209,
 	"lcName":"event-streams-hs-test",
-	"modifiedTime":1758778333164,
+	"modifiedTime":1758778351371,
 	"name":"event-streams-hs-test",
 	"nodes":[
 		{
@@ -172,7 +172,7 @@
 					"dlqReason":"dlq reason",
 					"description":"description",
 					"event":"{{ n_vZMco.outputs.result }}",
-					"group":"{{ __RUN__.outputs.executionId }}",
+					"group":"group",
 					"child1":"child1",
 					"child2":"child2",
 					"parent":{
@@ -206,5 +206,5 @@
 	"tags":[
 		
 	],
-	"version":60
+	"version":61
 }
