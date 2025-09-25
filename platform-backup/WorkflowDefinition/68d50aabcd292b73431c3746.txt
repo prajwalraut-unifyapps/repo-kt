@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758792363710,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_Ftsru",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_OuerZ",
+			"type":"next"
+		}
+	],
+	"id":"68d50aabcd292b73431c3746",
+	"lastModifiedBy":124029,
+	"lcName":"test bill",
+	"modifiedTime":1758792363710,
+	"name":"test bill",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Ftsru-1",
+			"id":"_Ftsru",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Ftsru-1",
+			"id":"_OuerZ",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":124029,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
