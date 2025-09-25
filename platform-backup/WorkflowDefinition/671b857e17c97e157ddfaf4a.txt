@@ -43,7 +43,7 @@
 	"id":"671b857e17c97e157ddfaf4a",
 	"lastModifiedBy":46209,
 	"lcName":"event-streams-hs-test",
-	"modifiedTime":1758778351371,
+	"modifiedTime":1758778483924,
 	"name":"event-streams-hs-test",
 	"nodes":[
 		{
@@ -161,7 +161,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_vDuf2-1",
 			"id":"_7rOtf",
@@ -206,5 +206,5 @@
 	"tags":[
 		
 	],
-	"version":61
+	"version":62
 }
