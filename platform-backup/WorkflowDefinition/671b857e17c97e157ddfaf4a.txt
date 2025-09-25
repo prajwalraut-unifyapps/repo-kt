@@ -5,12 +5,12 @@
 	"createdTime":1729856894439,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758147639717,
+		"deployedAt":1758745953669,
 		"deployedBy":504,
-		"deployedDefinitionId":"68cb3437ea1f660e61935e8e",
+		"deployedDefinitionId":"68d45561ccf6c74b9692a942",
 		"status":"DEPLOYED",
-		"version":25,
-		"workflowVersion":47
+		"version":26,
+		"workflowVersion":58
 	},
 	"edges":[
 		{
@@ -41,9 +41,9 @@
 		]
 	},
 	"id":"671b857e17c97e157ddfaf4a",
-	"lastModifiedBy":504,
+	"lastModifiedBy":46209,
 	"lcName":"event-streams-hs-test",
-	"modifiedTime":1758745951205,
+	"modifiedTime":1758778310482,
 	"name":"event-streams-hs-test",
 	"nodes":[
 		{
@@ -53,7 +53,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_vDuf2-1",
 			"id":"n_EP1U8",
@@ -84,7 +84,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_vDuf2-1",
 			"id":"n_vZMco",
@@ -129,7 +129,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_vDuf2-1",
 			"id":"ORqSB",
@@ -172,7 +172,7 @@
 					"dlqReason":"dlq reason",
 					"description":"description",
 					"event":"{{ n_vZMco.outputs.result }}",
-					"group":"group",
+					"group":"{{ __RUN__.outputs.executionId }}",
 					"child1":"child1",
 					"child2":"child2",
 					"parent":{
@@ -206,5 +206,5 @@
 	"tags":[
 		
 	],
-	"version":58
+	"version":59
 }
