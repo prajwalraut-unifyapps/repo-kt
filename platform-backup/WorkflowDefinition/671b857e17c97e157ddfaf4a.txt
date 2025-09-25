@@ -43,7 +43,7 @@
 	"id":"671b857e17c97e157ddfaf4a",
 	"lastModifiedBy":46209,
 	"lcName":"event-streams-hs-test",
-	"modifiedTime":1758778310482,
+	"modifiedTime":1758778333164,
 	"name":"event-streams-hs-test",
 	"nodes":[
 		{
@@ -206,5 +206,5 @@
 	"tags":[
 		
 	],
-	"version":59
+	"version":60
 }
