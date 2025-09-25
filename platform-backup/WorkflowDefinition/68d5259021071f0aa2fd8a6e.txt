@@ -4,88 +4,31 @@
 	],
 	"createdTime":1758799248278,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758830627256,
+		"deployedBy":155341,
+		"deployedDefinitionId":"68d5a0238c11012d58747142",
+		"status":"DEPLOYED",
+		"version":7,
+		"workflowVersion":26
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_NNfvg",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_9AKeV",
+			"toNodeId":"_pcuC0",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_9AKeV",
+			"fromNodeId":"_pcuC0",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_fa14Z",
+			"toNodeId":"_eYsJE",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_fa14Z",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_K7gv9",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_K7gv9",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_xIL3r",
-			"type":"loop"
-		},
-		{
-			"fromNodeId":"_xIL3r",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_eSeKY",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_eSeKY",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_TrIc2",
-			"type":"loop"
-		},
-		{
-			"fromNodeId":"_TrIc2",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_b1IUQ",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_b1IUQ",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_K3qj6",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_K3qj6",
-			"name":"loopback",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_eSeKY",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_eSeKY",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_MEwjL",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_MEwjL",
-			"name":"loopback",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_K7gv9",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_K7gv9",
+			"fromNodeId":"_eYsJE",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_LMCf4",
@@ -95,7 +38,7 @@
 	"id":"68d5259021071f0aa2fd8a6e",
 	"lastModifiedBy":155341,
 	"lcName":"insights | failure percentage of all automations",
-	"modifiedTime":1758828537527,
+	"modifiedTime":1758831998995,
 	"name":"INSIGHTS | Failure percentage of all automations",
 	"nodes":[
 		{
@@ -105,7 +48,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_MdNb4-1",
 			"id":"n_NNfvg",
@@ -121,6 +64,17 @@
 							"title":"Success"
 						}
 					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"limit":{
+							"type":"integer",
+							"title":"Limit"
+						}
+					}
 				}
 			},
 			"skip":false,
@@ -133,77 +87,17 @@
 		},
 		{
 			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":921,
-				"resourceName":"variable_by_unifyapps_create_variables",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_MdNb4-1",
-			"id":"n_9AKeV",
-			"index":2,
-			"inputSchema":{
-				"type":"SCHEMA_AND_LAYOUT",
-				"dynamic":false,
-				"layout":{},
-				"schema":{
-					"additionalProperties":false,
-					"type":"object",
-					"properties":{
-						"offset":{
-							"type":"number",
-							"title":"Offset"
-						},
-						"hasMore":{
-							"type":"boolean",
-							"title":"Has More"
-						}
-					},
-					"required":[]
-				}
-			},
-			"inputs":{
-				"offset":0,
-				"hasMore":true
-			},
-			"outputSchema":{
-				"dynamic":false,
-				"schema":{
-					"additionalProperties":false,
-					"type":"object",
-					"properties":{
-						"offset":{
-							"type":"number",
-							"title":"Offset"
-						},
-						"hasMore":{
-							"type":"boolean",
-							"title":"Has More"
-						}
-					},
-					"required":[]
-				}
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Create variables",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"code_by_unifyapps",
 				"resourceVersion":860,
 				"resourceName":"code_by_unifyapps_groovy",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_MdNb4-1",
-			"id":"n_fa14Z",
-			"index":3,
+			"id":"_pcuC0",
+			"index":2,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -217,12 +111,35 @@
 						"endMillis":{
 							"type":"number",
 							"title":"End Millis"
+						},
+						"limit":{
+							"type":"integer",
+							"title":"Limit"
 						}
 					}
 				},
-				"code":"import java.time.*\nimport java.time.format.DateTimeFormatter\n\n// Define the IST timezone\ndef istZoneId = ZoneId.of(\"Asia/Kolkata\")\n\n// Get the current date in IST\ndef todayIST = LocalDate.now(istZoneId)\n\n// Calculate the start of the day in IST (midnight)\ndef startOfTodayIST = todayIST.atStartOfDay(istZoneId)\n\n// Calculate the end of the day in IST (the last millisecond)\ndef endOfTodayIST = startOfTodayIST.plusDays(1).minusNanos(1_000_000) // .minus(1, ChronoUnit.MILLIS)\n\n// Convert to milliseconds (epoch milli is always UTC-based)\ndef startMillis = startOfTodayIST.toInstant().toEpochMilli()\ndef endMillis = endOfTodayIST.toInstant().toEpochMilli()\n\n// Formatter for clear output including timezone offset\ndef formatter = DateTimeFormatter.ofPattern(\"yyyy-MM-dd'T'HH:mm:ss.SSSXXX\")\n\nreturn [\n    startMillis: startMillis,\n    endMillis: endMillis,\n    startIST: startOfTodayIST.format(formatter), // Will show: 2025-09-25T00:00:00.000+05:30\n    endIST: endOfTodayIST.format(formatter)      // Will show: 2025-09-25T23:59:59.999+05:30\n]\n",
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"limit":{
+							"type":"integer",
+							"title":"Limit"
+						},
+						"origin":{
+							"type":"string",
+							"title":"Origin"
+						}
+					}
+				},
+				"code":"import java.time.*\nimport java.time.format.DateTimeFormatter\n\n// Define the IST timezone\ndef istZoneId = ZoneId.of(\"Asia/Kolkata\")\n\n// Get the current date in IST\ndef todayIST = LocalDate.now(istZoneId)\n\n// Calculate the start of the day in IST (midnight)\ndef startOfTodayIST = todayIST.atStartOfDay(istZoneId)\n\n// Calculate the end of the day in IST (the last millisecond)\ndef endOfTodayIST = startOfTodayIST.plusDays(1).minusNanos(1_000_000) // .minus(1, ChronoUnit.MILLIS)\n\n// Convert to milliseconds (epoch milli is always UTC-based)\ndef startMillis = startOfTodayIST.toInstant().toEpochMilli()\ndef endMillis = endOfTodayIST.toInstant().toEpochMilli()\n\ndef limit = binding.hasVariable('limit') ? limit : 10\n\nreturn [\n    startMillis: startMillis,\n    endMillis: endMillis,\n    limit: limit,\n    origin: origin\n]\n",
 				"compile_static":false,
-				"captureStdOutput":false
+				"captureStdOutput":false,
+				"parameters":{
+					"limit":"{{ n_NNfvg.outputs.limit }}",
+					"origin":"{{ __RUN__.outputs.origin }}"
+				}
 			},
 			"skip":false,
 			"subTitle":"Code by UnifyApps",
@@ -231,319 +148,24 @@
 		},
 		{
 			"context":{
-				"appName":"loop",
-				"resourceVersion":857,
-				"resourceName":"loop_while",
+				"appName":"analytics_by_unifyapps",
+				"resourceVersion":790,
+				"resourceName":"analytics_by_unifyapps_execute_query",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_MdNb4-1",
-			"id":"n_K7gv9",
-			"index":4,
+			"id":"_eYsJE",
+			"index":3,
 			"inputs":{
-				"condition":{
-					"filters":[
-						{
-							"property":"{{ n_9AKeV.outputs.hasMore }}",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"false"
-							}
-						}
-					],
-					"operator":"AND"
-				},
-				"captureIterations":false
-			},
-			"skip":false,
-			"subTitle":"Loop",
-			"title":"While loop",
-			"type":"LOOP"
-		},
-		{
-			"context":{
-				"appName":"analytics_by_unifyapps",
-				"resourceVersion":866,
-				"resourceName":"analytics_by_unifyapps_query_reports",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_K7gv9@_MdNb4-1@l",
-			"id":"_xIL3r",
-			"index":5,
-			"inputs":{
-				"projections":[
-					{
-						"name":"WORKFLOW_ID",
-						"aggregationFunction":"GROUP",
-						"alias":"id",
-						"includePercentageChange":false
-					}
-				],
-				"entityType":"WORKFLOW_EXECUTION",
-				"page":{
-					"offset":"{{ n_9AKeV.outputs.offset }}",
-					"limit":100
-				},
-				"sorts":[],
-				"timeFilter":{
-					"timeField":"START_TIME",
-					"since":"{{ n_fa14Z.outputs.result.startMillis }}",
-					"until":"{{ n_fa14Z.outputs.result.endMillis }}"
-				},
-				"group":"PLATFORM",
-				"additionalProjections":[]
+				"query":"SELECT\n    workflowId,\n    COUNT(CASE WHEN status IN ('FAILED') THEN 1 END) AS failed_runs,\n    COUNT(*) AS total_runs,\n    CAST(COUNT(CASE WHEN status IN ('FAILED') THEN 1 END) AS FLOAT) / COUNT(*) AS failure_ratio\nFROM\n    WORKFLOW_EXECUTION\nWHERE\n    status IN ('COMPLETED', 'FAILED', 'CANCELLED')\n    AND startTime >= {{ _pcuC0.outputs.result.startMillis }}\n    AND startTime <= {{ _pcuC0.outputs.result.endMillis }}\nGROUP BY\n    workflowId\nORDER BY\n    failure_ratio DESC, failed_runs DESC\nLIMIT {{ _pcuC0.outputs.result.limit }};",
+				"group":"PLATFORM"
 			},
 			"skip":false,
 			"subTitle":"Analytics by UnifyApps",
-			"title":"Analytics Query",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"loop",
-				"resourceVersion":847,
-				"resourceName":"loop_for_each",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_K7gv9@_MdNb4-1@l",
-			"id":"n_eSeKY",
-			"index":6,
-			"inputs":{
-				"repeatMode":"SINGLE",
-				"listSource":"{{ _xIL3r.outputs.objects }}",
-				"captureIterations":false
-			},
-			"skip":false,
-			"subTitle":"Loop",
-			"title":"For each loop",
-			"type":"LOOP"
-		},
-		{
-			"context":{
-				"appName":"analytics_by_unifyapps",
-				"resourceVersion":866,
-				"resourceName":"analytics_by_unifyapps_query_reports",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_eSeKY@n_K7gv9@_MdNb4-1@l@l",
-			"id":"_TrIc2",
-			"index":7,
-			"inputs":{
-				"projections":[
-					{
-						"name":"WORKFLOW_ID",
-						"aggregationFunction":"COUNT",
-						"alias":"count",
-						"includePercentageChange":true
-					},
-					{
-						"name":"WORKFLOW_ID",
-						"aggregationFunction":"GROUP",
-						"alias":"id",
-						"includePercentageChange":false
-					}
-				],
-				"filter":{
-					"filters":[
-						{
-							"property":"WORKFLOW_ID",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"{{ n_eSeKY.outputs.item.columns.id }}"
-							}
-						}
-					],
-					"operator":"AND"
-				},
-				"entityType":"WORKFLOW_EXECUTION",
-				"page":{
-					"limit":10
-				},
-				"sorts":[],
-				"timeFilter":{
-					"since":"{{ n_fa14Z.outputs.result.startMillis }}",
-					"until":"{{ n_fa14Z.outputs.result.endMillis }}"
-				},
-				"group":"PLATFORM",
-				"additionalProjections":[]
-			},
-			"skip":false,
-			"subTitle":"Analytics by UnifyApps",
-			"title":"Analytics Query",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"analytics_by_unifyapps",
-				"resourceVersion":866,
-				"resourceName":"analytics_by_unifyapps_query_reports",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_eSeKY@n_K7gv9@_MdNb4-1@l@l",
-			"id":"_b1IUQ",
-			"index":8,
-			"inputs":{
-				"projections":[
-					{
-						"name":"WORKFLOW_ID",
-						"aggregationFunction":"COUNT",
-						"alias":"count",
-						"includePercentageChange":true
-					},
-					{
-						"name":"WORKFLOW_ID",
-						"aggregationFunction":"GROUP",
-						"alias":"id",
-						"includePercentageChange":false
-					}
-				],
-				"filter":{
-					"filters":[
-						{
-							"property":"STATUS",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"COMPLETED"
-							}
-						},
-						{
-							"property":"WORKFLOW_ID",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"{{ n_eSeKY.outputs.item.columns.id }}"
-							}
-						}
-					],
-					"operator":"AND"
-				},
-				"entityType":"WORKFLOW_EXECUTION",
-				"page":{
-					"limit":10
-				},
-				"sorts":[],
-				"timeFilter":{
-					"since":"{{ n_fa14Z.outputs.result.startMillis }}",
-					"until":"{{ n_fa14Z.outputs.result.endMillis }}"
-				},
-				"group":"PLATFORM",
-				"additionalProjections":[]
-			},
-			"skip":false,
-			"subTitle":"Analytics by UnifyApps",
-			"title":"Analytics Query",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"analytics_by_unifyapps",
-				"resourceVersion":866,
-				"resourceName":"analytics_by_unifyapps_query_reports",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_eSeKY@n_K7gv9@_MdNb4-1@l@l",
-			"id":"_K3qj6",
-			"index":9,
-			"inputs":{
-				"projections":[
-					{
-						"name":"WORKFLOW_ID",
-						"aggregationFunction":"COUNT",
-						"alias":"count",
-						"includePercentageChange":true
-					},
-					{
-						"name":"WORKFLOW_ID",
-						"aggregationFunction":"GROUP",
-						"alias":"id",
-						"includePercentageChange":false
-					}
-				],
-				"filter":{
-					"filters":[
-						{
-							"property":"STATUS",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"FAILED"
-							}
-						},
-						{
-							"property":"WORKFLOW_ID",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"{{ n_eSeKY.outputs.item.columns.id }}"
-							}
-						}
-					],
-					"operator":"AND"
-				},
-				"entityType":"WORKFLOW_EXECUTION",
-				"page":{
-					"offset":"{{ n_9AKeV.outputs.offset }}",
-					"limit":100
-				},
-				"sorts":[
-					{
-						"additionalSorts":""
-					}
-				],
-				"timeFilter":{
-					"since":"{{ n_fa14Z.outputs.result.startMillis }}",
-					"until":"{{ n_fa14Z.outputs.result.endMillis }}"
-				},
-				"group":"PLATFORM",
-				"additionalProjections":[]
-			},
-			"skip":false,
-			"subTitle":"Analytics by UnifyApps",
-			"title":"Analytics Query",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":848,
-				"resourceName":"variable_by_unifyapps_update_variables",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_K7gv9@_MdNb4-1@l",
-			"id":"n_MEwjL",
-			"index":10,
-			"inputs":{
-				"variables":[
-					{
-						"source":"{{ n_9AKeV.outputs.offset }}",
-						"value":"=SUM({{ n_9AKeV.outputs.offset }},100)"
-					},
-					{
-						"source":"{{ n_9AKeV.outputs.hasMore }}",
-						"value":"{{ _xIL3r.outputs.hasMore }}"
-					}
-				]
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Update variables",
+			"title":"Execute Analytics SQL Query",
 			"type":"ACTION"
 		},
 		{
@@ -554,11 +176,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_MdNb4-1",
 			"id":"n_LMCf4",
-			"index":11,
+			"index":4,
 			"inputs":{
 				"result":{
 					"success":"200"
@@ -587,5 +209,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":30
 }
