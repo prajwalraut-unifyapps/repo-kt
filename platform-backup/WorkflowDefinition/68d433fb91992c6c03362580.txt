@@ -100,7 +100,7 @@
 	"id":"68d433fb91992c6c03362580",
 	"lastModifiedBy":132116,
 	"lcName":"nestedloops_insideconditions (1)",
-	"modifiedTime":1758821298496,
+	"modifiedTime":1758821310914,
 	"name":"nestedloops_insideconditions (1)",
 	"nodes":[
 		{
@@ -147,7 +147,7 @@
 						"property":"1",
 						"filter":{
 							"operator":"EQUAL",
-							"value":"0"
+							"value":"1"
 						}
 					}
 				],
@@ -430,5 +430,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
