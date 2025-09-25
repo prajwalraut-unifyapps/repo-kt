@@ -6,7 +6,7 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_KQArD",
+			"fromNodeId":"n_v1MlB",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_PxVPV",
@@ -30,20 +30,32 @@
 	"id":"68d17b122b66d748bf4aacec",
 	"lastModifiedBy":155341,
 	"lcName":"tets",
-	"modifiedTime":1758778582246,
+	"modifiedTime":1758778591387,
 	"name":"tets",
 	"nodes":[
 		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":811,
+				"resourceName":"schedule_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_KQArD-1",
-			"id":"_KQArD",
+			"id":"n_v1MlB",
 			"index":1,
+			"inputs":{
+				"cron":"INTERVAL",
+				"sequential":false,
+				"interval":15,
+				"frequency":"MINUTES"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Schedule",
+			"title":"New recurring event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"SCHEDULED"
 			},
 			"type":"START"
 		},
@@ -139,5 +151,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
