@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758832063138,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_F7h8S",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_GvnBD",
+			"type":"next"
+		}
+	],
+	"id":"68d5a5bf34f7f47cd89785ae",
+	"lastModifiedBy":161877,
+	"lcName":"test-settings-log-alert",
+	"modifiedTime":1758832063138,
+	"name":"test-settings-log-alert",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_F7h8S-1",
+			"id":"_F7h8S",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_F7h8S-1",
+			"id":"_GvnBD",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":161877,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
