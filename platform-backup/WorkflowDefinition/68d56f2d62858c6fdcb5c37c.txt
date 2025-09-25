@@ -1,0 +1,74 @@
+{
+	"appsUsed":[
+		"quota_path"
+	],
+	"createdTime":1758818093088,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_VblNG",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_MzVM4",
+			"type":"next"
+		}
+	],
+	"id":"68d56f2d62858c6fdcb5c37c",
+	"lastModifiedBy":177799,
+	"lcName":"test",
+	"modifiedTime":1758821576656,
+	"name":"test",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_VblNG-1",
+			"id":"_VblNG",
+			"index":1,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"quota_path",
+				"resourceVersion":53,
+				"resourceName":"quota_path_create_deals_won",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_VblNG-1",
+			"id":"n_MzVM4",
+			"index":2,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Quotapath",
+			"title":"Create closed won and lost deals",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":124519,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
