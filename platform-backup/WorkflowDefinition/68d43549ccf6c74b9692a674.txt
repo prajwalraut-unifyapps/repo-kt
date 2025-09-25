@@ -129,7 +129,7 @@
 	"id":"68d43549ccf6c74b9692a674",
 	"lastModifiedBy":132116,
 	"lcName":"branches_inside_nestedloops  (1)",
-	"modifiedTime":1758821691763,
+	"modifiedTime":1758821721986,
 	"name":"branches_inside_nestedloops  (1)",
 	"nodes":[
 		{
@@ -307,7 +307,7 @@
 										"property":"{{ n_1tCQd.outputs.index }}",
 										"filter":{
 											"operator":"EQUAL",
-											"value":"4"
+											"value":"3"
 										}
 									},
 									{
@@ -371,7 +371,7 @@
 							"property":"{{ n_1tCQd.outputs.index }}",
 							"filter":{
 								"operator":"EQUAL",
-								"value":"4"
+								"value":"3"
 							}
 						},
 						{
@@ -500,5 +500,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
