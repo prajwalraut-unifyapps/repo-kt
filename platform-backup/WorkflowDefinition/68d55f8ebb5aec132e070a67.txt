@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758814094031,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_4FoDN",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_X0G44",
+			"type":"next"
+		}
+	],
+	"id":"68d55f8ebb5aec132e070a67",
+	"lastModifiedBy":602,
+	"lcName":"testencrypt",
+	"modifiedTime":1758814094031,
+	"name":"testEncrypt",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_4FoDN-1",
+			"id":"_4FoDN",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_4FoDN-1",
+			"id":"_X0G44",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":602,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
