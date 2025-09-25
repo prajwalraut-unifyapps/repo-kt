@@ -9,14 +9,14 @@
 			"fromNodeId":"_4FoDN",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_X0G44",
+			"toNodeId":"n_XJ0QH",
 			"type":"next"
 		}
 	],
 	"id":"68d55f8ebb5aec132e070a67",
 	"lastModifiedBy":602,
 	"lcName":"testencrypt",
-	"modifiedTime":1758814094031,
+	"modifiedTime":1758814142304,
 	"name":"testEncrypt",
 	"nodes":[
 		{
@@ -25,7 +25,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_4FoDN-1",
 			"id":"_4FoDN",
-			"index":0,
+			"index":1,
 			"skip":false,
 			"title":"Select a trigger event",
 			"trigger":{
@@ -34,18 +34,51 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":206,
+				"resourceName":"standard_entities_create_connection",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_4FoDN-1",
-			"id":"_X0G44",
-			"index":0,
+			"id":"n_XJ0QH",
+			"index":2,
+			"inputs":{
+				"inputSchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"access_token"
+					],
+					"properties":{
+						"access_token":{
+							"type":"string",
+							"title":"Access Token"
+						}
+					}
+				},
+				"appName":"gmail",
+				"inputs":{
+					"access_token":"abcdef"
+				},
+				"skipTestConnection":true,
+				"name":"gmail encrypt",
+				"inputType":"STATIC",
+				"authType":"OAUTH"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Create connection",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":602,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +92,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
