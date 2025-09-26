@@ -4,6 +4,14 @@
 	],
 	"createdTime":1758871916038,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758872138324,
+		"deployedBy":177779,
+		"deployedDefinitionId":"68d6424ae52cbd208bb53bd7",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_3ZYP5",
@@ -23,7 +31,7 @@
 	"id":"68d6416ce52cbd208bb5274e",
 	"lastModifiedBy":177779,
 	"lcName":"fetchsheetdata",
-	"modifiedTime":1758872135663,
+	"modifiedTime":1758872346407,
 	"name":"fetchsheetdata",
 	"nodes":[
 		{
@@ -65,7 +73,7 @@
 				"sheetName":"PivotTable1",
 				"valueRenderOption":"FORMATTED_VALUE",
 				"objectSourceResourceName":"gsheets_fetch_columns",
-				"range":"2:31",
+				"range":"2:9",
 				"spreadsheetId":"1kysILiHrP7Tun1QWIZEIolyaS8eXuqelaxYui_4gZHA__test1"
 			},
 			"skip":false,
@@ -112,5 +120,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
