@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758871916038,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_VqSLL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_ewuLg",
+			"type":"next"
+		}
+	],
+	"id":"68d6416ce52cbd208bb5274e",
+	"lastModifiedBy":177779,
+	"lcName":"fetchsheetdata",
+	"modifiedTime":1758871916038,
+	"name":"fetchsheetdata",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_VqSLL-1",
+			"id":"_VqSLL",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_VqSLL-1",
+			"id":"_ewuLg",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":177779,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
