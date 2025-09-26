@@ -66,7 +66,7 @@
 	"id":"68d5259021071f0aa2fd8a6e",
 	"lastModifiedBy":155341,
 	"lcName":"insights | failure percentage of all automations",
-	"modifiedTime":1758866706820,
+	"modifiedTime":1758866721742,
 	"name":"INSIGHTS | Failure percentage of all automations",
 	"nodes":[
 		{
@@ -247,7 +247,8 @@
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
-					"limit":"{{ n_NNfvg.outputs.limit }}"
+					"limit":"{{ n_NNfvg.outputs.limit }}",
+					"offset":"{{ n_NNfvg.outputs.offset }}"
 				}
 			},
 			"skip":false,
@@ -915,5 +916,5 @@
 	"tags":[
 		
 	],
-	"version":51
+	"version":52
 }
