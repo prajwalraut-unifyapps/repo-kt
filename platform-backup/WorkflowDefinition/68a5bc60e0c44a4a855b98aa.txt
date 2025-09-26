@@ -4,6 +4,14 @@
 	],
 	"createdTime":1758873877391,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758873877554,
+		"deployedBy":161877,
+		"deployedDefinitionId":"68d64915041c7212b98ad173",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":3
+	},
 	"description":"description",
 	"edges":[
 		{
@@ -46,7 +54,7 @@
 	"id":"68a5bc60e0c44a4a855b98aa",
 	"lastModifiedBy":161877,
 	"lcName":"newintegerwhileloopdoesnotcontaincondition_dnd",
-	"modifiedTime":1758873877391,
+	"modifiedTime":1758874194692,
 	"name":"NewIntegerWhileloopDoesNotContainCondition_DND",
 	"nodes":[
 		{
@@ -160,7 +168,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_KfZns-1",
 			"id":"n_nnTAw",
@@ -171,7 +179,7 @@
 						{
 							"property":"{{ n_0NXMn.outputs.input }}",
 							"filter":{
-								"operator":"NOT_CONTAINS",
+								"operator":"NOT_EQUAL",
 								"value":"{{ n_DQdIq.outputs.a }}"
 							}
 						}
@@ -249,5 +257,5 @@
 		}
 	},
 	"standard":false,
-	"version":3
+	"version":4
 }
