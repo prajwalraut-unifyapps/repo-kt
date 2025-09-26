@@ -66,7 +66,7 @@
 	"id":"68d5259021071f0aa2fd8a6e",
 	"lastModifiedBy":155341,
 	"lcName":"insights | failure percentage of all automations",
-	"modifiedTime":1758866030553,
+	"modifiedTime":1758866693056,
 	"name":"INSIGHTS | Failure percentage of all automations",
 	"nodes":[
 		{
@@ -106,6 +106,10 @@
 						"limit":{
 							"type":"integer",
 							"title":"Limit"
+						},
+						"offset":{
+							"type":"integer",
+							"title":"Offset"
 						}
 					}
 				}
@@ -232,10 +236,14 @@
 						"limit":{
 							"type":"integer",
 							"title":"Limit"
+						},
+						"offset":{
+							"type":"integer",
+							"title":"Offset"
 						}
 					}
 				},
-				"code":"import java.time.*\nimport java.time.format.DateTimeFormatter\n\n// Define the IST timezone\ndef istZoneId = ZoneId.of(\"Asia/Kolkata\")\n\n// Get the current date in IST\ndef todayIST = LocalDate.now(istZoneId)\n\n// Calculate the start of the day in IST (midnight)\ndef startOfTodayIST = todayIST.atStartOfDay(istZoneId)\n\n// Calculate the end of the day in IST (the last millisecond)\ndef endOfTodayIST = startOfTodayIST.plusDays(1).minusNanos(1_000_000) // .minus(1, ChronoUnit.MILLIS)\n\n// Convert to milliseconds (epoch milli is always UTC-based)\ndef startMillis = startOfTodayIST.toInstant().toEpochMilli()\ndef endMillis = endOfTodayIST.toInstant().toEpochMilli()\n\ndef limit = binding.hasVariable('limit') ? limit : 10\n\ndef query = \"\"\"\nSELECT\n    workflowId,\n    projectId,\n    COUNT(CASE WHEN status IN ('FAILED') THEN 1 END) AS failed_runs,\n    COUNT(CASE WHEN status IN ('COMPLETED') THEN 1 END) AS success_runs,\n    COUNT(*) AS total_runs,\n    CAST(COUNT(CASE WHEN status IN ('FAILED') THEN 1 END) AS FLOAT) / COUNT(*) AS failure_ratio\nFROM\n    WORKFLOW_EXECUTION\nWHERE\n    status IN ('COMPLETED', 'FAILED', 'CANCELLED', 'ACTIVE', 'WAIT', 'STOP_CONSEQUENT', 'SKIPPED')\n    AND startTime >= ${startMillis}\n    AND startTime <= ${endMillis}\nGROUP BY\n    workflowId, projectId\nORDER BY\n    failure_ratio DESC, failed_runs DESC\nLIMIT ${limit}\n\"\"\"\n\nreturn [\n    query: query.toString()\n]\n",
+				"code":"import java.time.*\nimport java.time.format.DateTimeFormatter\n\n// Define the IST timezone\ndef istZoneId = ZoneId.of(\"Asia/Kolkata\")\n\n// Get the current date in IST\ndef todayIST = LocalDate.now(istZoneId)\n\n// Calculate the start of the day in IST (midnight)\ndef startOfTodayIST = todayIST.atStartOfDay(istZoneId)\n\n// Calculate the end of the day in IST (the last millisecond)\ndef endOfTodayIST = startOfTodayIST.plusDays(1).minusNanos(1_000_000) // .minus(1, ChronoUnit.MILLIS)\n\n// Convert to milliseconds (epoch milli is always UTC-based)\ndef startMillis = startOfTodayIST.toInstant().toEpochMilli()\ndef endMillis = endOfTodayIST.toInstant().toEpochMilli()\n\ndef limit = binding.hasVariable('limit') ? limit : 10\n\ndef query = \"\"\"\nSELECT\n    workflowId,\n    projectId,\n    COUNT(CASE WHEN status IN ('FAILED') THEN 1 END) AS failed_runs,\n    COUNT(CASE WHEN status IN ('COMPLETED') THEN 1 END) AS success_runs,\n    COUNT(*) AS total_runs,\n    CAST(COUNT(CASE WHEN status IN ('FAILED') THEN 1 END) AS FLOAT) / COUNT(*) AS failure_ratio\nFROM\n    WORKFLOW_EXECUTION\nWHERE\n    status IN ('COMPLETED', 'FAILED', 'CANCELLED', 'ACTIVE', 'WAIT', 'STOP_CONSEQUENT', 'SKIPPED')\n    AND startTime >= ${startMillis}\n    AND startTime <= ${endMillis}\nGROUP BY\n    workflowId, projectId\nORDER BY\n    failure_ratio DESC, failed_runs DESC\nLIMIT ${limit} OFFSET ${offset}\n\"\"\"\n\nreturn [\n    query: query.toString()\n]\n",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
@@ -778,7 +786,8 @@
 		{
 			"additional":{
 				"visibleOptionalFields":[
-					"root.parameters.objects.items"
+					"root.parameters.objects.items",
+					"root.parameters.workflowDefinitions.items"
 				]
 			},
 			"context":{
@@ -827,22 +836,36 @@
 						"origin":{
 							"type":"string",
 							"title":"Origin"
+						},
+						"workflowDefinitions":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Workflow Definitions"
 						}
 					}
 				},
-				"code":"def objects = binding.hasVariable('objects') ? objects : []\ndef result = []\ndef origin = binding.hasVariable('origin') ? origin : ''\n\nobjects?.each { obj ->\n  def totalRuns = obj.columns.total_runs\n  def failedRuns = obj.columns.failed_runs\n  def failedRatio = 0.0 // Default to 0.0\n\n  // Check for totalRuns > 0 to prevent division by zero errors\n  if (totalRuns > 0) {\n    // Cast to double to ensure floating-point math for an accurate ratio\n    failedRatio = (double) failedRuns / totalRuns\n  }\n\n  result << [\n    \"successCount\": obj.columns.success_runs,\n    \"failedCount\": failedRuns,\n    \"failedRatio\": failedRatio * 100,\n    \"url\": \"${origin}/p/0/automations/${obj.columns.workflowId}\".toString()\n  ]\n}\n\nreturn [\"result\": result]",
+				"code":"def objects = binding.hasVariable('objects') ? objects : []\ndef workflowDefinitions = binding.hasVariable('result') ? result : []\ndef origin = binding.hasVariable('origin') ? origin : ''\n\ndef workflowMap = [:]\nworkflowDefinitions.each { wf ->\n    workflowMap[wf.id] = wf\n}\n\ndef finalResult = []\n\nobjects.each { obj ->\n    def workflowId = obj.workflowId\n    def workflowDef = workflowMap[workflowId]\n    \n    // Get projectId from workflow definition or default to 0\n    def projectId = workflowDef?.projectId ?: 0\n    \n    // Get workflow name from definition\n    def workflowName = workflowDef?.name ?: \"Unknown\"\n    \n    finalResult << [\n        \"workflowId\": workflowId,\n        \"workflowName\": workflowName,\n        \"successCount\": obj.success_runs,\n        \"failedCount\": obj.failed_runs,\n        \"failedRatio\": obj.failure_ratio * 100,\n        \"totalRuns\": obj.total_runs,\n        \"url\": \"${origin}/p/${projectId}/automations/${workflowId}\".toString()\n    ]\n}\n\nreturn [\"result\": finalResult]",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
 					"origin":"{{ __RUN__.outputs.origin }}",
-					"objects":{
-						"source":"{{ _eYsJE.outputs.objects }}",
+					"workflowDefinitions":{
+						"source":"{{ n_udMD7.outputs.result }}",
 						"ua:type":"mappedArray",
-						"items":"{{ _eYsJE.outputs.objects[0] }}"
+						"items":"{{ n_udMD7.outputs.result[0] }}"
+					},
+					"objects":{
+						"source":"{{ n_Tlb5h.outputs.result.objects }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_Tlb5h.outputs.result.objects[0] }}"
 					}
 				}
 			},
-			"skip":true,
+			"skip":false,
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Groovy code",
 			"type":"ACTION"
@@ -892,5 +915,5 @@
 	"tags":[
 		
 	],
-	"version":49
+	"version":50
 }
