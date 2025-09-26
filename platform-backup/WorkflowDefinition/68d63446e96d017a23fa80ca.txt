@@ -45,7 +45,7 @@
 	"id":"68d63446e96d017a23fa80ca",
 	"lastModifiedBy":20249,
 	"lcName":"rename_by_unifyapps",
-	"modifiedTime":1758868560653,
+	"modifiedTime":1758868764960,
 	"name":"Rename_by_Unifyapps",
 	"nodes":[
 		{
@@ -55,7 +55,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_x7LiG-1",
 			"id":"n_s4ukl",
@@ -81,7 +81,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_x7LiG-1",
 			"id":"UVA7K",
@@ -124,7 +124,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_x7LiG-1",
 			"id":"DBzsf",
@@ -154,19 +154,21 @@
 			"index":4,
 			"inputs":{
 				"recordId":"{{ DBzsf.outputs.item.id }}",
+				"writeThroughSessionVariables":false,
 				"object_type":"e_node_builder_record",
+				"skipIfBlank":false,
 				"record":{
 					"name":"{{ DBzsf.outputs.item.properties.name }}",
-					"displayName":"=SUBSTITUTE({{ DBzsf.outputs.item.properties.displayName }},\" by UnifyApps\", \"\")",
+					"displayName":"=SUBSTITUTE({{ DBzsf.outputs.item.properties.displayName }},\" by UnifyApps\", \"by Sirion\")",
 					"description":"{{ DBzsf.outputs.item.properties.description }}",
 					"iconUrl":"{{ DBzsf.outputs.item.properties.iconUrl }}",
+					"custom":"{{ DBzsf.outputs.item.properties.custom }}",
+					"needsAuthentication":"{{ DBzsf.outputs.item.properties.needsAuthentication }}",
 					"supportedResourceTypes":{
 						"source":"{{ DBzsf.outputs.item.properties.supportedResourceTypes }}",
 						"ua:type":"mappedArray",
 						"items":"{{ DBzsf.outputs.item.properties.supportedResourceTypes[0] }}"
-					},
-					"custom":"{{ DBzsf.outputs.item.properties.custom }}",
-					"needsAuthentication":"{{ DBzsf.outputs.item.properties.needsAuthentication }}"
+					}
 				},
 				"upsert":false
 			},
@@ -180,7 +182,7 @@
 				"appName":"stop"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_x7LiG-1",
 			"id":"yt4tS",
@@ -208,5 +210,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
