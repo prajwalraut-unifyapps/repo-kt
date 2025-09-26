@@ -24,7 +24,7 @@
 	"id":"68d6552a71be8d53fc028a75",
 	"lastModifiedBy":185583,
 	"lcName":"task_pm_delete",
-	"modifiedTime":1758884133992,
+	"modifiedTime":1758884458673,
 	"name":"task_pm_delete",
 	"nodes":[
 		{
@@ -97,18 +97,6 @@
 			"id":"n_VG1m1",
 			"index":2,
 			"inputs":{
-				"triggerInputCondition":{
-					"filters":[
-						{
-							"property":"id",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"*"
-							}
-						}
-					],
-					"operator":"AND"
-				},
 				"writeThroughSessionVariables":false,
 				"object_type":"data_mau",
 				"numberOfRecordsToDelete":"MULTIPLE",
@@ -163,5 +151,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
