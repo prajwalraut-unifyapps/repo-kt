@@ -23,7 +23,7 @@
 	"id":"68d6616471be8d53fc03baaf",
 	"lastModifiedBy":39713,
 	"lcName":"test-nullstr",
-	"modifiedTime":1758880466414,
+	"modifiedTime":1758880490381,
 	"name":"test-nullstr",
 	"nodes":[
 		{
@@ -59,7 +59,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_n1Giy-1",
 			"id":"n_tcNwu",
@@ -82,7 +82,9 @@
 					]
 				}
 			},
-			"inputs":{},
+			"inputs":{
+				"str":"scasca"
+			},
 			"outputSchema":{
 				"dynamic":false,
 				"schema":{
@@ -208,5 +210,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
