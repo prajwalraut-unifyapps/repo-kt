@@ -5,12 +5,12 @@
 	"createdTime":1758880100784,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758884942377,
-		"deployedBy":39713,
-		"deployedDefinitionId":"68d6744da609552951612798",
+		"deployedAt":1758888035352,
+		"deployedBy":49915,
+		"deployedDefinitionId":"68d68062a7128128da053479",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":11
+		"version":4,
+		"workflowVersion":17
 	},
 	"edges":[
 		{
@@ -24,14 +24,21 @@
 			"fromNodeId":"n_tcNwu",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_CMx6h",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_CMx6h",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_dmVtP",
 			"type":"next"
 		}
 	],
 	"id":"68d6616471be8d53fc03baaf",
-	"lastModifiedBy":39713,
+	"lastModifiedBy":49915,
 	"lcName":"test-nullstr",
-	"modifiedTime":1758884957630,
+	"modifiedTime":1758891463668,
 	"name":"test-nullstr",
 	"nodes":[
 		{
@@ -114,6 +121,28 @@
 		},
 		{
 			"context":{
+				"appName":"delay",
+				"resourceVersion":791,
+				"resourceName":"delay_for",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_n1Giy-1",
+			"id":"n_CMx6h",
+			"index":3,
+			"inputs":{
+				"duration":9,
+				"unit":"SECONDS"
+			},
+			"skip":true,
+			"subTitle":"Delay",
+			"title":"Set delay duration",
+			"type":"DELAY"
+		},
+		{
+			"context":{
 				"appName":"variable_by_unifyapps",
 				"resourceVersion":53,
 				"resourceName":"variable_by_unifyapps_update_variables",
@@ -124,7 +153,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_n1Giy-1",
 			"id":"n_dmVtP",
-			"index":3,
+			"index":4,
 			"inputs":{
 				"variables":[
 					{
@@ -216,5 +245,5 @@
 	"tags":[
 		
 	],
-	"version":12
+	"version":19
 }
