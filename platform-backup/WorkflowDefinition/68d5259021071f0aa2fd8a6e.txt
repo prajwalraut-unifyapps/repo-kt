@@ -38,6 +38,13 @@
 			"fromNodeId":"n_Tlb5h",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_BfQqv",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_BfQqv",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_udMD7",
 			"type":"next"
 		},
@@ -59,7 +66,7 @@
 	"id":"68d5259021071f0aa2fd8a6e",
 	"lastModifiedBy":155341,
 	"lcName":"insights | failure percentage of all automations",
-	"modifiedTime":1758863873838,
+	"modifiedTime":1758865494676,
 	"name":"INSIGHTS | Failure percentage of all automations",
 	"nodes":[
 		{
@@ -269,6 +276,68 @@
 				"connectionType":"DIRECT",
 				"sslVerify":true,
 				"path":"/sql-report/runSQL/query/{{ __RUN__.outputs.customerId }}",
+				"responseSchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"hasMore":{
+							"type":"boolean",
+							"title":"hasMore"
+						},
+						"objects":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"total_runs":{
+										"type":"integer",
+										"title":"total_runs"
+									},
+									"success_runs":{
+										"type":"integer",
+										"title":"success_runs"
+									},
+									"failure_ratio":{
+										"type":"integer",
+										"title":"failure_ratio"
+									},
+									"failed_runs":{
+										"type":"integer",
+										"title":"failed_runs"
+									},
+									"workflowId":{
+										"type":"string",
+										"title":"workflowId"
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"objects"
+						},
+						"rowMetadata":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"columnName":{
+										"type":"string",
+										"title":"columnName"
+									},
+									"dataType":{
+										"type":"string",
+										"title":"dataType"
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"rowMetadata"
+						},
+						"type":{
+							"type":"string",
+							"title":"type"
+						}
+					}
+				},
 				"baseUrl":"http://internal-global-svc:80/internal",
 				"httpVersion":"HTTP_2",
 				"bodySchema":{
@@ -300,6 +369,68 @@
 			"type":"ACTION"
 		},
 		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.parameters.objects.items"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":860,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_MdNb4-1",
+			"id":"n_BfQqv",
+			"index":5,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"workflowIdsCsv":{
+							"type":"string",
+							"title":"Workflow Ids Csv"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"objects":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Objects"
+						}
+					}
+				},
+				"code":"def joinedIds = objects?.collect { it.workflowId }.join(\",\")\n\nreturn [\"workflowIdsCsv\": joinedIds]",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"objects":{
+						"source":"{{ n_Tlb5h.outputs.result.objects }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_Tlb5h.outputs.result.objects[0] }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
 			"context":{
 				"appName":"custom_http_endpoint",
 				"resourceVersion":364,
@@ -311,7 +442,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_MdNb4-1",
 			"id":"n_udMD7",
-			"index":5,
+			"index":6,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -325,7 +456,7 @@
 				},
 				"connectionType":"DIRECT",
 				"sslVerify":false,
-				"path":"/internal/mongo-internal/find/{{ __RUN__.outputs.customerId }}",
+				"path":"/internal/workflow-definition/bulk-fetch",
 				"baseUrl":"{{ _icozG.outputs.baseInternalUrl }}",
 				"httpVersion":"HTTP_2",
 				"bodySchema":{
@@ -354,6 +485,16 @@
 						}
 					}
 				},
+				"queryParamsList":[
+					{
+						"key":"customerId",
+						"value":"{{ __RUN__.outputs.customerId }}"
+					},
+					{
+						"key":"workflowIdsCsv",
+						"value":"{{ n_BfQqv.outputs.result.workflowIdsCsv }}"
+					}
+				],
 				"responseContentType":"application/json",
 				"authType":"CUSTOM",
 				"requestContentType":"application/json",
@@ -382,7 +523,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_MdNb4-1",
 			"id":"n_IafbM",
-			"index":6,
+			"index":7,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -449,7 +590,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_MdNb4-1",
 			"id":"n_LMCf4",
-			"index":7,
+			"index":8,
 			"inputs":{
 				"result":{
 					"result":{
@@ -482,5 +623,5 @@
 	"tags":[
 		
 	],
-	"version":42
+	"version":43
 }
