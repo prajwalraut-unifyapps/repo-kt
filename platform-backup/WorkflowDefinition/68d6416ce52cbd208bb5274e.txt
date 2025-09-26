@@ -31,7 +31,7 @@
 	"id":"68d6416ce52cbd208bb5274e",
 	"lastModifiedBy":177779,
 	"lcName":"fetchsheetdata",
-	"modifiedTime":1758872346407,
+	"modifiedTime":1758881974594,
 	"name":"fetchsheetdata",
 	"nodes":[
 		{
@@ -46,7 +46,23 @@
 			"groupId":"_VqSLL-1",
 			"id":"n_3ZYP5",
 			"index":1,
-			"inputs":{},
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"a":{
+							"type":"string",
+							"title":"A"
+						},
+						"b":{
+							"type":"number",
+							"title":"B"
+						}
+					}
+				}
+			},
 			"skip":false,
 			"subTitle":"Callable",
 			"title":"Trigger via automation",
@@ -95,7 +111,10 @@
 			"id":"n_nKunm",
 			"index":3,
 			"inputs":{
-				"result":"{{ n_sL7EM.outputs.rows }}"
+				"result":{
+					"a":"{{ n_sL7EM.outputs.rows[0].Department__0 }}",
+					"b":"{{ n_sL7EM.outputs.rows[0].AVERAGE_of_Salary__INR___1 }}"
+				}
 			},
 			"skip":false,
 			"subTitle":"Callable",
@@ -120,5 +139,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
