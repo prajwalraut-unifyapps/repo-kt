@@ -87,9 +87,9 @@
 		}
 	],
 	"id":"68d540755b80e35573f6e71a",
-	"lastModifiedBy":132116,
+	"lastModifiedBy":308,
 	"lcName":"skipbranch",
-	"modifiedTime":1758872785497,
+	"modifiedTime":1758885814022,
 	"name":"skipBranch",
 	"nodes":[
 		{
@@ -204,7 +204,7 @@
 					"operator":"AND"
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"title":"",
 			"type":"BRANCH_CONDITION"
 		},
@@ -269,7 +269,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_ofoOq@_rX4O4-1@2",
 			"id":"n_ofoOq@2",
@@ -301,7 +301,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_ofoOq@_rX4O4-1@2",
 			"id":"n_q9fmk",
@@ -747,5 +747,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":12
 }
