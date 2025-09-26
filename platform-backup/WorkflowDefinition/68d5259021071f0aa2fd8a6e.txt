@@ -66,7 +66,7 @@
 	"id":"68d5259021071f0aa2fd8a6e",
 	"lastModifiedBy":155341,
 	"lcName":"insights | failure percentage of all automations",
-	"modifiedTime":1758865544517,
+	"modifiedTime":1758865647551,
 	"name":"INSIGHTS | Failure percentage of all automations",
 	"nodes":[
 		{
@@ -235,7 +235,7 @@
 						}
 					}
 				},
-				"code":"import java.time.*\nimport java.time.format.DateTimeFormatter\n\n// Define the IST timezone\ndef istZoneId = ZoneId.of(\"Asia/Kolkata\")\n\n// Get the current date in IST\ndef todayIST = LocalDate.now(istZoneId)\n\n// Calculate the start of the day in IST (midnight)\ndef startOfTodayIST = todayIST.atStartOfDay(istZoneId)\n\n// Calculate the end of the day in IST (the last millisecond)\ndef endOfTodayIST = startOfTodayIST.plusDays(1).minusNanos(1_000_000) // .minus(1, ChronoUnit.MILLIS)\n\n// Convert to milliseconds (epoch milli is always UTC-based)\ndef startMillis = startOfTodayIST.toInstant().toEpochMilli()\ndef endMillis = endOfTodayIST.toInstant().toEpochMilli()\n\ndef limit = binding.hasVariable('limit') ? limit : 10\n\ndef query = \"\"\"\nSELECT\n    workflowId,\n    COUNT(CASE WHEN status IN ('FAILED') THEN 1 END) AS failed_runs,\n    COUNT(CASE WHEN status IN ('COMPLETED') THEN 1 END) AS success_runs,\n    COUNT(*) AS total_runs,\n    CAST(COUNT(CASE WHEN status IN ('FAILED') THEN 1 END) AS FLOAT) / COUNT(*) AS failure_ratio\nFROM\n    WORKFLOW_EXECUTION\nWHERE\n    status IN ('COMPLETED', 'FAILED', 'CANCELLED', 'ACTIVE', 'WAIT', 'STOP_CONSEQUENT', 'SKIPPED')\n    AND startTime >= ${startMillis}\n    AND startTime <= ${endMillis}\nGROUP BY\n    workflowId\nORDER BY\n    failure_ratio DESC, failed_runs DESC\nLIMIT ${limit}\n\"\"\"\n\nreturn [\n    query: query.toString()\n]\n",
+				"code":"import java.time.*\nimport java.time.format.DateTimeFormatter\n\n// Define the IST timezone\ndef istZoneId = ZoneId.of(\"Asia/Kolkata\")\n\n// Get the current date in IST\ndef todayIST = LocalDate.now(istZoneId)\n\n// Calculate the start of the day in IST (midnight)\ndef startOfTodayIST = todayIST.atStartOfDay(istZoneId)\n\n// Calculate the end of the day in IST (the last millisecond)\ndef endOfTodayIST = startOfTodayIST.plusDays(1).minusNanos(1_000_000) // .minus(1, ChronoUnit.MILLIS)\n\n// Convert to milliseconds (epoch milli is always UTC-based)\ndef startMillis = startOfTodayIST.toInstant().toEpochMilli()\ndef endMillis = endOfTodayIST.toInstant().toEpochMilli()\n\ndef limit = binding.hasVariable('limit') ? limit : 10\n\ndef query = \"\"\"\nSELECT\n    workflowId,\n    projectId,\n    COUNT(CASE WHEN status IN ('FAILED') THEN 1 END) AS failed_runs,\n    COUNT(CASE WHEN status IN ('COMPLETED') THEN 1 END) AS success_runs,\n    COUNT(*) AS total_runs,\n    CAST(COUNT(CASE WHEN status IN ('FAILED') THEN 1 END) AS FLOAT) / COUNT(*) AS failure_ratio\nFROM\n    WORKFLOW_EXECUTION\nWHERE\n    status IN ('COMPLETED', 'FAILED', 'CANCELLED', 'ACTIVE', 'WAIT', 'STOP_CONSEQUENT', 'SKIPPED')\n    AND startTime >= ${startMillis}\n    AND startTime <= ${endMillis}\nGROUP BY\n    workflowId\nORDER BY\n    failure_ratio DESC, failed_runs DESC\nLIMIT ${limit}\n\"\"\"\n\nreturn [\n    query: query.toString()\n]\n",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
@@ -462,6 +462,296 @@
 				"connectionType":"DIRECT",
 				"sslVerify":false,
 				"path":"/internal/workflow-definition/bulk-fetch",
+				"responseSchema":{
+					"type":"array",
+					"items":{
+						"type":"object",
+						"properties":{
+							"appsUsed":{
+								"type":"array",
+								"title":"appsUsed"
+							},
+							"createdTime":{
+								"type":"integer",
+								"title":"createdTime"
+							},
+							"deleted":{
+								"type":"boolean",
+								"title":"deleted"
+							},
+							"deploymentState":{
+								"type":"object",
+								"properties":{
+									"deployedAt":{
+										"type":"integer",
+										"title":"deployedAt"
+									},
+									"deployedBy":{
+										"type":"integer",
+										"title":"deployedBy"
+									},
+									"deployedDefinitionId":{
+										"type":"string",
+										"title":"deployedDefinitionId"
+									},
+									"status":{
+										"type":"string",
+										"title":"status"
+									},
+									"version":{
+										"type":"integer",
+										"title":"version"
+									},
+									"workflowVersion":{
+										"type":"integer",
+										"title":"workflowVersion"
+									}
+								},
+								"title":"deploymentState",
+								"additionalProperties":false
+							},
+							"edges":{
+								"type":"array",
+								"items":{
+									"type":"object",
+									"properties":{
+										"fromNodeId":{
+											"type":"string",
+											"title":"fromNodeId"
+										},
+										"priority":{
+											"type":"integer",
+											"title":"priority"
+										},
+										"skip":{
+											"type":"boolean",
+											"title":"skip"
+										},
+										"toNodeId":{
+											"type":"string",
+											"title":"toNodeId"
+										},
+										"type":{
+											"type":"string",
+											"title":"type"
+										}
+									},
+									"additionalProperties":false
+								},
+								"title":"edges"
+							},
+							"id":{
+								"type":"string",
+								"title":"id"
+							},
+							"lastModifiedBy":{
+								"type":"integer",
+								"title":"lastModifiedBy"
+							},
+							"lcName":{
+								"type":"string",
+								"title":"lcName"
+							},
+							"modifiedTime":{
+								"type":"integer",
+								"title":"modifiedTime"
+							},
+							"name":{
+								"type":"string",
+								"title":"name"
+							},
+							"nodes":{
+								"type":"array",
+								"items":{
+									"type":"object",
+									"properties":{
+										"context":{
+											"type":"object",
+											"properties":{
+												"appName":{
+													"type":"string",
+													"title":"appName"
+												},
+												"resourceVersion":{
+													"type":"integer",
+													"title":"resourceVersion"
+												},
+												"resourceName":{
+													"type":"string",
+													"title":"resourceName"
+												},
+												"type":{
+													"type":"string",
+													"title":"type"
+												}
+											},
+											"title":"context",
+											"additionalProperties":false
+										},
+										"debug":{
+											"type":"boolean",
+											"title":"debug"
+										},
+										"dirty":{
+											"type":"boolean",
+											"title":"dirty"
+										},
+										"fallbackMode":{
+											"type":"string",
+											"title":"fallbackMode"
+										},
+										"groupId":{
+											"type":"string",
+											"title":"groupId"
+										},
+										"id":{
+											"type":"string",
+											"title":"id"
+										},
+										"index":{
+											"type":"integer",
+											"title":"index"
+										},
+										"inputs":{
+											"type":"object",
+											"properties":{
+												"cron":{
+													"type":"string",
+													"title":"cron"
+												},
+												"sequential":{
+													"type":"boolean",
+													"title":"sequential"
+												},
+												"interval":{
+													"type":"integer",
+													"title":"interval"
+												},
+												"frequency":{
+													"type":"string",
+													"title":"frequency"
+												},
+												"automationId":{
+													"type":"string",
+													"title":"automationId"
+												},
+												"runtimeConnections":{
+													"type":"object",
+													"title":"runtimeConnections"
+												},
+												"synchronous":{
+													"type":"boolean",
+													"title":"synchronous"
+												},
+												"version":{
+													"type":"string",
+													"title":"version"
+												},
+												"parameters":{
+													"type":"object",
+													"properties":{
+														"Text":{
+															"type":"string",
+															"title":"Text"
+														}
+													},
+													"title":"parameters",
+													"additionalProperties":false
+												}
+											},
+											"title":"inputs",
+											"additionalProperties":false
+										},
+										"skip":{
+											"type":"boolean",
+											"title":"skip"
+										},
+										"subTitle":{
+											"type":"string",
+											"title":"subTitle"
+										},
+										"title":{
+											"type":"string",
+											"title":"title"
+										},
+										"trigger":{
+											"type":"object",
+											"properties":{
+												"type":{
+													"type":"string",
+													"title":"type"
+												}
+											},
+											"title":"trigger",
+											"additionalProperties":false
+										},
+										"type":{
+											"type":"string",
+											"title":"type"
+										}
+									},
+									"additionalProperties":false
+								},
+								"title":"nodes"
+							},
+							"ownerUserId":{
+								"type":"integer",
+								"title":"ownerUserId"
+							},
+							"schemaReferences":{
+								"type":"array",
+								"title":"schemaReferences"
+							},
+							"settings":{
+								"type":"object",
+								"properties":{
+									"enableNodeLevelLogging":{
+										"type":"boolean",
+										"title":"enableNodeLevelLogging"
+									},
+									"enableRunLogging":{
+										"type":"boolean",
+										"title":"enableRunLogging"
+									},
+									"enableVariableLogging":{
+										"type":"boolean",
+										"title":"enableVariableLogging"
+									},
+									"route":{
+										"type":"object",
+										"properties":{
+											"default":{
+												"type":"boolean",
+												"title":"default"
+											},
+											"tierName":{
+												"type":"string",
+												"title":"tierName"
+											}
+										},
+										"title":"route",
+										"additionalProperties":false
+									}
+								},
+								"title":"settings",
+								"additionalProperties":false
+							},
+							"standard":{
+								"type":"boolean",
+								"title":"standard"
+							},
+							"tags":{
+								"type":"array",
+								"title":"tags"
+							},
+							"version":{
+								"type":"integer",
+								"title":"version"
+							}
+						},
+						"additionalProperties":false
+					}
+				},
 				"baseUrl":"{{ _icozG.outputs.baseInternalUrl }}",
 				"httpVersion":"HTTP_2",
 				"queryParamsList":[
@@ -552,7 +842,7 @@
 					}
 				}
 			},
-			"skip":true,
+			"skip":false,
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Groovy code",
 			"type":"ACTION"
@@ -602,5 +892,5 @@
 	"tags":[
 		
 	],
-	"version":45
+	"version":46
 }
