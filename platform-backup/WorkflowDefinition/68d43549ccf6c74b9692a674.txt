@@ -5,12 +5,12 @@
 	"createdTime":1758737737608,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758738217101,
+		"deployedAt":1758821839749,
 		"deployedBy":132116,
-		"deployedDefinitionId":"68d43726b3c0066ca31e5be7",
+		"deployedDefinitionId":"68d57dcf0c11f2283aa5f0fa",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":1
+		"version":2,
+		"workflowVersion":9
 	},
 	"edges":[
 		{
@@ -127,9 +127,9 @@
 		}
 	],
 	"id":"68d43549ccf6c74b9692a674",
-	"lastModifiedBy":132116,
+	"lastModifiedBy":39713,
 	"lcName":"branches_inside_nestedloops  (1)",
-	"modifiedTime":1758821721986,
+	"modifiedTime":1758866381817,
 	"name":"branches_inside_nestedloops  (1)",
 	"nodes":[
 		{
@@ -307,13 +307,6 @@
 										"property":"{{ n_1tCQd.outputs.index }}",
 										"filter":{
 											"operator":"EQUAL",
-											"value":"3"
-										}
-									},
-									{
-										"property":"{{ n_Olbk1.outputs.index }}",
-										"filter":{
-											"operator":"EQUAL",
 											"value":"4"
 										}
 									}
@@ -329,10 +322,10 @@
 							"conditions":{
 								"filters":[
 									{
-										"property":"0",
+										"property":"{{ n_Olbk1.outputs.index }}",
 										"filter":{
 											"operator":"EQUAL",
-											"value":"0"
+											"value":"1"
 										}
 									}
 								],
@@ -358,7 +351,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_asutQ@n_Olbk1@n_1tCQd@n_CQHT3@_wb2Vn-1@l@l@l@1",
 			"id":"n_asutQ@1",
@@ -369,13 +362,6 @@
 					"filters":[
 						{
 							"property":"{{ n_1tCQd.outputs.index }}",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"3"
-							}
-						},
-						{
-							"property":"{{ n_Olbk1.outputs.index }}",
 							"filter":{
 								"operator":"EQUAL",
 								"value":"4"
@@ -420,7 +406,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_asutQ@n_Olbk1@n_1tCQd@n_CQHT3@_wb2Vn-1@l@l@l@2",
 			"id":"n_asutQ@2",
@@ -430,10 +416,10 @@
 				"conditions":{
 					"filters":[
 						{
-							"property":"0",
+							"property":"{{ n_Olbk1.outputs.index }}",
 							"filter":{
 								"operator":"EQUAL",
-								"value":"0"
+								"value":"1"
 							}
 						}
 					],
@@ -500,5 +486,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":23
 }
