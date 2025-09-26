@@ -11,12 +11,19 @@
 			"skip":false,
 			"toNodeId":"_D3VLE",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"_D3VLE",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_OMFIq",
+			"type":"next"
 		}
 	],
 	"id":"68d6b243c956a51c08fd8505",
-	"lastModifiedBy":124519,
+	"lastModifiedBy":164544,
 	"lcName":"test",
-	"modifiedTime":1758900803504,
+	"modifiedTime":1758904571521,
 	"name":"test",
 	"nodes":[
 		{
@@ -25,7 +32,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_dbK9s-1",
 			"id":"_dbK9s",
-			"index":0,
+			"index":1,
 			"skip":false,
 			"title":"Select a trigger event",
 			"trigger":{
@@ -39,13 +46,39 @@
 			"fallbackMode":"STOP",
 			"groupId":"_dbK9s-1",
 			"id":"_D3VLE",
-			"index":0,
+			"index":2,
 			"skip":false,
 			"title":"Select an app and action",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":862,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_dbK9s-1",
+			"id":"n_OMFIq",
+			"index":3,
+			"inputs":{
+				"code":"assert Eval.me(\"2 + 3 * 4\") == 14",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":124519,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +92,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
