@@ -1,51 +1,73 @@
 {
 	"appsUsed":[
-		
+		"airtable"
 	],
 	"createdTime":1758891472705,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_yjf8p",
+			"fromNodeId":"n_LWva8",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_kVsPN",
+			"toNodeId":"n_4MumV",
 			"type":"next"
 		}
 	],
 	"id":"68d68dd01cd5bc264750b903",
 	"lastModifiedBy":15,
 	"lcName":"test",
-	"modifiedTime":1758891472705,
+	"modifiedTime":1758891495936,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_yjf8p-1",
-			"id":"_yjf8p",
-			"index":0,
+			"id":"n_LWva8",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"airtable",
+				"resourceVersion":4070,
+				"resourceName":"airtable_create_comment",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_yjf8p-1",
-			"id":"_kVsPN",
-			"index":0,
+			"id":"n_4MumV",
+			"index":2,
+			"inputs":{},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Airtable",
+			"title":"Create comment",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":15,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +81,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
