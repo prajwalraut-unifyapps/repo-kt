@@ -1,0 +1,3611 @@
+{
+	"appsUsed":[
+		"gdrive",
+		"gsheets"
+	],
+	"createdTime":1757931962485,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758012820439,
+		"deployedBy":177811,
+		"deployedDefinitionId":"68c92594411b6e0345d34c98",
+		"deploymentTag":"V4",
+		"status":"PAUSED",
+		"version":4,
+		"workflowVersion":23
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_LZNwk",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_on1BH",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_on1BH",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_a8Nc1",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_a8Nc1",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_lIE4x",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"_lIE4x",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_p9nQ3",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_p9nQ3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_sx1Gv",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_sx1Gv",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_WJj7C",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_WJj7C",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_dklKR",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_dklKR",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_PaCUh",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_PaCUh",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Obgn5",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Obgn5",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_AJOEq",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_AJOEq",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_cnrwL",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_cnrwL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_n72ee",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_n72ee",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_qvyI2",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_qvyI2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_f4bj9",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_f4bj9",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_7BgMI",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_7BgMI",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_HigTO",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_a8Nc1",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_BBTHr",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_BBTHr",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_QUNFP",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"_QUNFP",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_3tgOI",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_3tgOI",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_q5ecF",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_q5ecF",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_0p0TL",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_0p0TL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_i50oZ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_i50oZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_gl43j",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_gl43j",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Vxc7n",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_Vxc7n",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_guljK",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_guljK",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_A5mzk",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_A5mzk",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_A42WP",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_A42WP",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_phzoy",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_phzoy",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_134Tg",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_134Tg",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_ygvEz",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_ygvEz",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_6lNqL",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_6lNqL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_K1F80",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_K1F80",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_x0Vlg",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_x0Vlg",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_0qkDD",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_BBTHr",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_crWNg",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_crWNg",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_DFd6D",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"_DFd6D",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_DBegq",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_DBegq",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_IOTvo",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_IOTvo",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_rOFx6",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_rOFx6",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_i5Ko7",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_i5Ko7",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_uDu7L",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_uDu7L",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_xJZLS",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_xJZLS",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_vEjgq",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_vEjgq",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_5rsW2",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_5rsW2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_icTba",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_icTba",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_vTyMN",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_vTyMN",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_lHegd",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_lHegd",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_4JlJH",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_4JlJH",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_63IK7",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_63IK7",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_5RNF0",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_crWNg",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_2vOoG",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_2vOoG",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_xJLSM",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_xJLSM",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_MQiCf",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_MQiCf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_cuW9w",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_cuW9w",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_MqsSB",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_MqsSB",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_hVsof",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_hVsof",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_YaZOG",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_YaZOG",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_nqjce",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_nqjce",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_mG472",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_mG472",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Vz3kU",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_Vz3kU",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_AOPtW",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_AOPtW",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_aX1hR",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_aX1hR",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_St2Yj",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_St2Yj",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_DxtWK",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_DxtWK",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_WToBO",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_WToBO",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_1mYJH",
+			"type":"next"
+		}
+	],
+	"id":"68c7e9bafd20e912ddc278c4",
+	"lastModifiedBy":177811,
+	"lcName":"test form responses",
+	"modifiedTime":1758869504145,
+	"name":"Test form responses",
+	"nodes":[
+		{
+			"context":{
+				"appName":"gsheets",
+				"resourceVersion":3429,
+				"connectionId":"68ca578ffb0b5334b18f50f5",
+				"resourceName":"gsheet_on_new_row_polling"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_ZCQHK-1",
+			"id":"n_LZNwk",
+			"index":1,
+			"inputs":{
+				"sheetName":"Form Responses 1",
+				"objectSourceResourceName":"gsheets_fetch_columns",
+				"interval":1,
+				"spreadsheetId":"1AhqVUf3Pd9GPnXkGFxMQNJghaHOzn1-aOvQPLNYBbjI__Copy of Testing_Joining Form - Welcome to UnifyApps!! (Responses)",
+				"selectColumns":[
+					"Name__As_per_Aadhar_Card___1",
+					"Letter_of_Authorisation_for_Background_Verification__Form_attached_in_the_following_Link___https___drive_google_com_drive_folders_1Y1VGKaQn5Jo7gYTF0ediiImwGAc1Udgj_usp_drive_link_Please_download_the_document__sign_it__and_upload_the_signed_version_here____16",
+					"UAN_Screenshot__17",
+					"10th_standard_Pass_Certificate__18",
+					"12th_standard_Certificate__20",
+					"12th_standard_Marksheet__19",
+					"UG_Marksheet__21",
+					"UG_Degree_Certificate__22",
+					"Aadhar_Card__Both_Sides___25",
+					"Pan_Card__26",
+					"Passport_Size_Photo__27",
+					"In_case_of_Freshers__Internship_Completion_Certificate__28",
+					"In_case_you_have_prior_Experience_then_kindly_provide_the_following_documents___i__Last_3_months_Salary_Slips__ii__Ex_employer_Offer_Letter__Signed_and_accepted_copy___29",
+					"Upload_your_resume__PDF_only___30",
+					"PG_Marksheet__23",
+					"PG_Degree_Certificate__24"
+				]
+			},
+			"skip":false,
+			"subTitle":"Google Sheets",
+			"title":"New row created",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":6106,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_create_folder",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_ZCQHK-1",
+			"id":"n_on1BH",
+			"index":2,
+			"inputs":{
+				"folderName":"{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"folderId":"122LNVDTSk7tzr9d_wobem_x7wxdSP7sPhbuUCDkfhmSpfDr0AWRNmXStMlsEbF1enIKDl7jl"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Create folder",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":29,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_ZCQHK-1",
+			"id":"n_a8Nc1",
+			"index":3,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_LZNwk.outputs.columns.PG_Marksheet__23 }}",
+						"filter":{
+							"operator":"MISSING"
+						}
+					},
+					{
+						"property":"{{ n_LZNwk.outputs.columns.PG_Degree_Certificate__24 }}",
+						"filter":{
+							"operator":"MISSING"
+						}
+					},
+					{
+						"property":"{{ n_LZNwk.outputs.columns.In_case_of_Freshers__Internship_Completion_Certificate__28 }}",
+						"filter":{
+							"operator":"MISSING"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{}
+			},
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":104,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_a8Nc1@_ZCQHK-1@y",
+			"id":"_lIE4x",
+			"index":4,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"AadharLen":{
+							"type":"number",
+							"title":"Aadhar Len"
+						},
+						"LetofAuthLen":{
+							"type":"number",
+							"title":"Letof Auth Len"
+						},
+						"UANLen":{
+							"type":"number",
+							"title":"UAN Len"
+						},
+						"tenthCertifyLen":{
+							"type":"number",
+							"title":"Tenth Certify Len"
+						},
+						"mark12":{
+							"type":"number",
+							"title":"Mark 12"
+						},
+						"cert12th":{
+							"type":"number",
+							"title":"Cert 12 Th"
+						},
+						"ugmarks":{
+							"type":"number",
+							"title":"Ugmarks"
+						},
+						"UGdegree":{
+							"type":"number",
+							"title":"U Gdegree"
+						},
+						"PANLen":{
+							"type":"number",
+							"title":"PAN Len"
+						},
+						"PhotoLen":{
+							"type":"number",
+							"title":"Photo Len"
+						},
+						"SalaryslipLen":{
+							"type":"number",
+							"title":"Salaryslip Len"
+						},
+						"ResumeLen":{
+							"type":"number",
+							"title":"Resume Len"
+						}
+					},
+					"required":[
+						"LetofAuthLen",
+						"UANLen",
+						"tenthCertifyLen",
+						"mark12",
+						"cert12th",
+						"ugmarks",
+						"UGdegree",
+						"PANLen",
+						"PhotoLen",
+						"SalaryslipLen",
+						"ResumeLen"
+					]
+				}
+			},
+			"inputs":{
+				"mark12":"=LEN({{ n_LZNwk.outputs.columns.12th_standard_Marksheet__19 }})-33",
+				"cert12th":"=LEN({{ n_LZNwk.outputs.columns.12th_standard_Certificate__20 }})-33",
+				"PANLen":"=LEN({{ n_LZNwk.outputs.columns.Pan_Card__26 }})-33",
+				"AadharLen":"=LEN({{ n_LZNwk.outputs.columns.Aadhar_Card__Both_Sides___25 }})-33",
+				"PhotoLen":"=LEN({{ n_LZNwk.outputs.columns.Passport_Size_Photo__27 }})-33",
+				"UANLen":"=LEN({{ n_LZNwk.outputs.columns.UAN_Screenshot__17 }})-33",
+				"LetofAuthLen":"=LEN({{ n_LZNwk.outputs.columns.Letter_of_Authorisation_for_Background_Verification__Form_attached_in_the_following_Link___https___drive_google_com_drive_folders_1Y1VGKaQn5Jo7gYTF0ediiImwGAc1Udgj_usp_drive_link_Please_download_the_document__sign_it__and_upload_the_signed_version_here____16 }})-33",
+				"tenthCertifyLen":"=LEN({{ n_LZNwk.outputs.columns.10th_standard_Pass_Certificate__18 }})-33",
+				"ResumeLen":"=LEN({{ n_LZNwk.outputs.columns.Upload_your_resume__PDF_only___30 }})-33",
+				"UGdegree":"=LEN({{ n_LZNwk.outputs.columns.UG_Degree_Certificate__22 }})-33",
+				"ugmarks":"=LEN({{ n_LZNwk.outputs.columns.UG_Marksheet__21 }})-33",
+				"SalaryslipLen":"=LEN({{ n_LZNwk.outputs.columns.In_case_you_have_prior_Experience_then_kindly_provide_the_following_documents___i__Last_3_months_Salary_Slips__ii__Ex_employer_Offer_Letter__Signed_and_accepted_copy___29 }})-33"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"AadharLen":{
+							"type":"number",
+							"title":"Aadhar Len"
+						},
+						"LetofAuthLen":{
+							"type":"number",
+							"title":"Letof Auth Len"
+						},
+						"UANLen":{
+							"type":"number",
+							"title":"UAN Len"
+						},
+						"tenthCertifyLen":{
+							"type":"number",
+							"title":"Tenth Certify Len"
+						},
+						"mark12":{
+							"type":"number",
+							"title":"Mark 12"
+						},
+						"cert12th":{
+							"type":"number",
+							"title":"Cert 12 Th"
+						},
+						"ugmarks":{
+							"type":"number",
+							"title":"Ugmarks"
+						},
+						"UGdegree":{
+							"type":"number",
+							"title":"U Gdegree"
+						},
+						"PANLen":{
+							"type":"number",
+							"title":"PAN Len"
+						},
+						"PhotoLen":{
+							"type":"number",
+							"title":"Photo Len"
+						},
+						"SalaryslipLen":{
+							"type":"number",
+							"title":"Salaryslip Len"
+						},
+						"ResumeLen":{
+							"type":"number",
+							"title":"Resume Len"
+						}
+					},
+					"required":[
+						"LetofAuthLen",
+						"UANLen",
+						"tenthCertifyLen",
+						"mark12",
+						"cert12th",
+						"ugmarks",
+						"UGdegree",
+						"PANLen",
+						"PhotoLen",
+						"SalaryslipLen",
+						"ResumeLen"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{}
+			},
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":104,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_a8Nc1@_ZCQHK-1@y",
+			"id":"_p9nQ3",
+			"index":5,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"AadhaarID":{
+							"type":"number",
+							"title":"Aadhaar ID"
+						},
+						"LetofAuthID":{
+							"type":"number",
+							"title":"Letof Auth ID"
+						},
+						"UANID":{
+							"type":"number",
+							"title":"UANID"
+						},
+						"TenthCertID":{
+							"type":"number",
+							"title":"Tenth Cert ID"
+						},
+						"Mark12ID":{
+							"type":"number",
+							"title":"Mark 12 ID"
+						},
+						"Cert12ID":{
+							"type":"number",
+							"title":"Cert 12 ID"
+						},
+						"ugmarksID":{
+							"type":"number",
+							"title":"Ugmarks ID"
+						},
+						"UGdegreeID":{
+							"type":"number",
+							"title":"U Gdegree ID"
+						},
+						"PgmarkID":{
+							"type":"number",
+							"title":"Pgmark ID"
+						},
+						"PgDegreeID":{
+							"type":"number",
+							"title":"Pg Degree ID"
+						},
+						"PANID":{
+							"type":"number",
+							"title":"PANID"
+						},
+						"PhotoID":{
+							"type":"number",
+							"title":"Photo ID"
+						},
+						"InternID":{
+							"type":"number",
+							"title":"Intern ID"
+						},
+						"SalarySlipID":{
+							"type":"number",
+							"title":"Salary Slip ID"
+						},
+						"ResumeID":{
+							"type":"number",
+							"title":"Resume ID"
+						}
+					},
+					"required":[
+						"AadhaarID",
+						"LetofAuthID",
+						"UANID",
+						"TenthCertID",
+						"Mark12ID",
+						"Cert12ID",
+						"ugmarksID",
+						"UGdegreeID",
+						"PANID",
+						"PhotoID",
+						"SalarySlipID",
+						"ResumeID"
+					]
+				}
+			},
+			"inputs":{
+				"PhotoID":"=RIGHT({{ n_LZNwk.outputs.columns.Passport_Size_Photo__27 }},{{ _lIE4x.outputs.PhotoLen }})",
+				"UANID":"=RIGHT({{ n_LZNwk.outputs.columns.UAN_Screenshot__17 }},{{ _lIE4x.outputs.UANLen }})",
+				"SalarySlipID":"=RIGHT({{ n_LZNwk.outputs.columns.In_case_you_have_prior_Experience_then_kindly_provide_the_following_documents___i__Last_3_months_Salary_Slips__ii__Ex_employer_Offer_Letter__Signed_and_accepted_copy___29 }},{{ _lIE4x.outputs.SalaryslipLen }})",
+				"Mark12ID":"=RIGHT({{ n_LZNwk.outputs.columns.12th_standard_Marksheet__19 }},{{ _lIE4x.outputs.mark12 }})",
+				"LetofAuthID":"=RIGHT({{ n_LZNwk.outputs.columns.Letter_of_Authorisation_for_Background_Verification__Form_attached_in_the_following_Link___https___drive_google_com_drive_folders_1Y1VGKaQn5Jo7gYTF0ediiImwGAc1Udgj_usp_drive_link_Please_download_the_document__sign_it__and_upload_the_signed_version_here____16 }},{{ _lIE4x.outputs.LetofAuthLen }})",
+				"TenthCertID":"=RIGHT({{ n_LZNwk.outputs.columns.10th_standard_Pass_Certificate__18 }},{{ _lIE4x.outputs.tenthCertifyLen }})",
+				"Cert12ID":"=RIGHT({{ n_LZNwk.outputs.columns.12th_standard_Certificate__20 }},{{ _lIE4x.outputs.cert12th }})",
+				"AadhaarID":"=RIGHT({{ n_LZNwk.outputs.columns.Aadhar_Card__Both_Sides___25 }},{{ _lIE4x.outputs.AadharLen }})",
+				"UGdegreeID":"=RIGHT({{ n_LZNwk.outputs.columns.UG_Degree_Certificate__22 }},{{ _lIE4x.outputs.UGdegree }})",
+				"ugmarksID":"=RIGHT({{ n_LZNwk.outputs.columns.UG_Marksheet__21 }},{{ _lIE4x.outputs.ugmarks }})",
+				"PANID":"=RIGHT({{ n_LZNwk.outputs.columns.Pan_Card__26 }},{{ _lIE4x.outputs.PANLen }})",
+				"ResumeID":"=RIGHT({{ n_LZNwk.outputs.columns.Upload_your_resume__PDF_only___30 }},{{ _lIE4x.outputs.ResumeLen }})"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"AadhaarID":{
+							"type":"number",
+							"title":"Aadhaar ID"
+						},
+						"LetofAuthID":{
+							"type":"number",
+							"title":"Letof Auth ID"
+						},
+						"UANID":{
+							"type":"number",
+							"title":"UANID"
+						},
+						"TenthCertID":{
+							"type":"number",
+							"title":"Tenth Cert ID"
+						},
+						"Mark12ID":{
+							"type":"number",
+							"title":"Mark 12 ID"
+						},
+						"Cert12ID":{
+							"type":"number",
+							"title":"Cert 12 ID"
+						},
+						"ugmarksID":{
+							"type":"number",
+							"title":"Ugmarks ID"
+						},
+						"UGdegreeID":{
+							"type":"number",
+							"title":"U Gdegree ID"
+						},
+						"PgmarkID":{
+							"type":"number",
+							"title":"Pgmark ID"
+						},
+						"PgDegreeID":{
+							"type":"number",
+							"title":"Pg Degree ID"
+						},
+						"PANID":{
+							"type":"number",
+							"title":"PANID"
+						},
+						"PhotoID":{
+							"type":"number",
+							"title":"Photo ID"
+						},
+						"InternID":{
+							"type":"number",
+							"title":"Intern ID"
+						},
+						"SalarySlipID":{
+							"type":"number",
+							"title":"Salary Slip ID"
+						},
+						"ResumeID":{
+							"type":"number",
+							"title":"Resume ID"
+						}
+					},
+					"required":[
+						"AadhaarID",
+						"LetofAuthID",
+						"UANID",
+						"TenthCertID",
+						"Mark12ID",
+						"Cert12ID",
+						"ugmarksID",
+						"UGdegreeID",
+						"PANID",
+						"PhotoID",
+						"SalarySlipID",
+						"ResumeID"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":1094,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_a8Nc1@_ZCQHK-1@y",
+			"id":"_sx1Gv",
+			"index":6,
+			"inputs":{
+				"name":"Aadhaar-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _p9nQ3.outputs.AadhaarID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":1094,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_a8Nc1@_ZCQHK-1@y",
+			"id":"n_WJj7C",
+			"index":7,
+			"inputs":{
+				"name":"Letter of authorisation-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _p9nQ3.outputs.LetofAuthID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":1094,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_a8Nc1@_ZCQHK-1@y",
+			"id":"n_dklKR",
+			"index":8,
+			"inputs":{
+				"name":"UAN-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _p9nQ3.outputs.UANID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_a8Nc1@_ZCQHK-1@y",
+			"id":"n_PaCUh",
+			"index":9,
+			"inputs":{
+				"name":"Class 12 Certificate-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _p9nQ3.outputs.Cert12ID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":1094,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_a8Nc1@_ZCQHK-1@y",
+			"id":"n_Obgn5",
+			"index":10,
+			"inputs":{
+				"name":"Class 10th Certificate-  {{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _p9nQ3.outputs.TenthCertID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_a8Nc1@_ZCQHK-1@y",
+			"id":"n_AJOEq",
+			"index":11,
+			"inputs":{
+				"name":"UG Marksheet-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _p9nQ3.outputs.ugmarksID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_a8Nc1@_ZCQHK-1@y",
+			"id":"n_cnrwL",
+			"index":12,
+			"inputs":{
+				"name":"UG Degree-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _p9nQ3.outputs.UGdegreeID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_a8Nc1@_ZCQHK-1@y",
+			"id":"n_n72ee",
+			"index":13,
+			"inputs":{
+				"name":"PAN-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _p9nQ3.outputs.PANID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_a8Nc1@_ZCQHK-1@y",
+			"id":"n_qvyI2",
+			"index":14,
+			"inputs":{
+				"name":"Photo-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _p9nQ3.outputs.PhotoID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_a8Nc1@_ZCQHK-1@y",
+			"id":"n_f4bj9",
+			"index":15,
+			"inputs":{
+				"name":"Salary Slips-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _p9nQ3.outputs.SalarySlipID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_a8Nc1@_ZCQHK-1@y",
+			"id":"n_7BgMI",
+			"index":16,
+			"inputs":{
+				"name":"Class 12th Marksheet-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _p9nQ3.outputs.Mark12ID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_a8Nc1@_ZCQHK-1@y",
+			"id":"n_HigTO",
+			"index":17,
+			"inputs":{
+				"name":"Resume-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _p9nQ3.outputs.ResumeID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":29,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_a8Nc1@_ZCQHK-1@n",
+			"id":"n_BBTHr",
+			"index":18,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_LZNwk.outputs.columns.PG_Marksheet__23 }}",
+						"filter":{
+							"operator":"EXISTS"
+						}
+					},
+					{
+						"property":"{{ n_LZNwk.outputs.columns.PG_Degree_Certificate__24 }}",
+						"filter":{
+							"operator":"EXISTS"
+						}
+					},
+					{
+						"property":"{{ n_LZNwk.outputs.columns.In_case_of_Freshers__Internship_Completion_Certificate__28 }}",
+						"filter":{
+							"operator":"EXISTS"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{}
+			},
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":104,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_BBTHr@n_a8Nc1@_ZCQHK-1@n@y",
+			"id":"_QUNFP",
+			"index":19,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"AadharLen":{
+							"type":"number",
+							"title":"Aadhar Len"
+						},
+						"LetofAuthLen":{
+							"type":"number",
+							"title":"Letof Auth Len"
+						},
+						"UANLen":{
+							"type":"number",
+							"title":"UAN Len"
+						},
+						"tenthCertifyLen":{
+							"type":"number",
+							"title":"Tenth Certify Len"
+						},
+						"mark12":{
+							"type":"number",
+							"title":"Mark 12"
+						},
+						"cert12th":{
+							"type":"number",
+							"title":"Cert 12 Th"
+						},
+						"ugmarks":{
+							"type":"number",
+							"title":"Ugmarks"
+						},
+						"UGdegree":{
+							"type":"number",
+							"title":"U Gdegree"
+						},
+						"Pgmarks":{
+							"type":"number",
+							"title":"Pgmarks"
+						},
+						"Pgdegree":{
+							"type":"number",
+							"title":"Pgdegree"
+						},
+						"PANLen":{
+							"type":"number",
+							"title":"PAN Len"
+						},
+						"PhotoLen":{
+							"type":"number",
+							"title":"Photo Len"
+						},
+						"InternLen":{
+							"type":"number",
+							"title":"Intern Len"
+						},
+						"SalaryslipLen":{
+							"type":"number",
+							"title":"Salaryslip Len"
+						},
+						"ResumeLen":{
+							"type":"number",
+							"title":"Resume Len"
+						}
+					},
+					"required":[
+						"LetofAuthLen",
+						"UANLen",
+						"tenthCertifyLen",
+						"mark12",
+						"cert12th",
+						"ugmarks",
+						"UGdegree",
+						"PANLen",
+						"PhotoLen",
+						"SalaryslipLen",
+						"ResumeLen"
+					]
+				}
+			},
+			"inputs":{
+				"mark12":"=LEN({{ n_LZNwk.outputs.columns.12th_standard_Marksheet__19 }})-33",
+				"PANLen":"=LEN({{ n_LZNwk.outputs.columns.Pan_Card__26 }})-33",
+				"AadharLen":"=LEN({{ n_LZNwk.outputs.columns.Aadhar_Card__Both_Sides___25 }})-33",
+				"PhotoLen":"=LEN({{ n_LZNwk.outputs.columns.Passport_Size_Photo__27 }})-33",
+				"Pgdegree":"=LEN({{ n_LZNwk.outputs.columns.PG_Degree_Certificate__24 }})-33",
+				"LetofAuthLen":"=LEN({{ n_LZNwk.outputs.columns.Letter_of_Authorisation_for_Background_Verification__Form_attached_in_the_following_Link___https___drive_google_com_drive_folders_1Y1VGKaQn5Jo7gYTF0ediiImwGAc1Udgj_usp_drive_link_Please_download_the_document__sign_it__and_upload_the_signed_version_here____16 }})-33",
+				"InternLen":"=LEN({{ n_LZNwk.outputs.columns.In_case_of_Freshers__Internship_Completion_Certificate__28 }})-33",
+				"Pgmarks":"=LEN({{ n_LZNwk.outputs.columns.PG_Marksheet__23 }})-33",
+				"ResumeLen":"=LEN({{ n_LZNwk.outputs.columns.Upload_your_resume__PDF_only___30 }})-33",
+				"cert12th":"=LEN({{ n_LZNwk.outputs.columns.12th_standard_Certificate__20 }})-33",
+				"UANLen":"=LEN({{ n_LZNwk.outputs.columns.UAN_Screenshot__17 }})-33",
+				"tenthCertifyLen":"=LEN({{ n_LZNwk.outputs.columns.10th_standard_Pass_Certificate__18 }})-33",
+				"UGdegree":"=LEN({{ n_LZNwk.outputs.columns.UG_Degree_Certificate__22 }})-33",
+				"ugmarks":"=LEN({{ n_LZNwk.outputs.columns.UG_Marksheet__21 }})-33",
+				"SalaryslipLen":"=LEN({{ n_LZNwk.outputs.columns.In_case_you_have_prior_Experience_then_kindly_provide_the_following_documents___i__Last_3_months_Salary_Slips__ii__Ex_employer_Offer_Letter__Signed_and_accepted_copy___29 }})-33"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"AadharLen":{
+							"type":"number",
+							"title":"Aadhar Len"
+						},
+						"LetofAuthLen":{
+							"type":"number",
+							"title":"Letof Auth Len"
+						},
+						"UANLen":{
+							"type":"number",
+							"title":"UAN Len"
+						},
+						"tenthCertifyLen":{
+							"type":"number",
+							"title":"Tenth Certify Len"
+						},
+						"mark12":{
+							"type":"number",
+							"title":"Mark 12"
+						},
+						"cert12th":{
+							"type":"number",
+							"title":"Cert 12 Th"
+						},
+						"ugmarks":{
+							"type":"number",
+							"title":"Ugmarks"
+						},
+						"UGdegree":{
+							"type":"number",
+							"title":"U Gdegree"
+						},
+						"Pgmarks":{
+							"type":"number",
+							"title":"Pgmarks"
+						},
+						"Pgdegree":{
+							"type":"number",
+							"title":"Pgdegree"
+						},
+						"PANLen":{
+							"type":"number",
+							"title":"PAN Len"
+						},
+						"PhotoLen":{
+							"type":"number",
+							"title":"Photo Len"
+						},
+						"InternLen":{
+							"type":"number",
+							"title":"Intern Len"
+						},
+						"SalaryslipLen":{
+							"type":"number",
+							"title":"Salaryslip Len"
+						},
+						"ResumeLen":{
+							"type":"number",
+							"title":"Resume Len"
+						}
+					},
+					"required":[
+						"LetofAuthLen",
+						"UANLen",
+						"tenthCertifyLen",
+						"mark12",
+						"cert12th",
+						"ugmarks",
+						"UGdegree",
+						"PANLen",
+						"PhotoLen",
+						"SalaryslipLen",
+						"ResumeLen"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{}
+			},
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":104,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_BBTHr@n_a8Nc1@_ZCQHK-1@n@y",
+			"id":"_3tgOI",
+			"index":20,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"AadhaarID":{
+							"type":"number",
+							"title":"Aadhaar ID"
+						},
+						"LetofAuthID":{
+							"type":"number",
+							"title":"Letof Auth ID"
+						},
+						"UANID":{
+							"type":"number",
+							"title":"UANID"
+						},
+						"TenthCertID":{
+							"type":"number",
+							"title":"Tenth Cert ID"
+						},
+						"Mark12ID":{
+							"type":"number",
+							"title":"Mark 12 ID"
+						},
+						"Cert12ID":{
+							"type":"number",
+							"title":"Cert 12 ID"
+						},
+						"ugmarksID":{
+							"type":"number",
+							"title":"Ugmarks ID"
+						},
+						"UGdegreeID":{
+							"type":"number",
+							"title":"U Gdegree ID"
+						},
+						"PgmarkID":{
+							"type":"number",
+							"title":"Pgmark ID"
+						},
+						"PgDegreeID":{
+							"type":"number",
+							"title":"Pg Degree ID"
+						},
+						"PANID":{
+							"type":"number",
+							"title":"PANID"
+						},
+						"PhotoID":{
+							"type":"number",
+							"title":"Photo ID"
+						},
+						"InternID":{
+							"type":"number",
+							"title":"Intern ID"
+						},
+						"SalarySlipID":{
+							"type":"number",
+							"title":"Salary Slip ID"
+						},
+						"ResumeID":{
+							"type":"number",
+							"title":"Resume ID"
+						}
+					},
+					"required":[
+						"AadhaarID",
+						"LetofAuthID",
+						"UANID",
+						"TenthCertID",
+						"Mark12ID",
+						"Cert12ID",
+						"ugmarksID",
+						"UGdegreeID",
+						"PANID",
+						"PhotoID",
+						"SalarySlipID",
+						"ResumeID"
+					]
+				}
+			},
+			"inputs":{
+				"SalarySlipID":"=RIGHT({{ n_LZNwk.outputs.columns.In_case_you_have_prior_Experience_then_kindly_provide_the_following_documents___i__Last_3_months_Salary_Slips__ii__Ex_employer_Offer_Letter__Signed_and_accepted_copy___29 }},{{ _QUNFP.outputs.SalaryslipLen }})",
+				"LetofAuthID":"=RIGHT({{ n_LZNwk.outputs.columns.Letter_of_Authorisation_for_Background_Verification__Form_attached_in_the_following_Link___https___drive_google_com_drive_folders_1Y1VGKaQn5Jo7gYTF0ediiImwGAc1Udgj_usp_drive_link_Please_download_the_document__sign_it__and_upload_the_signed_version_here____16 }},{{ _QUNFP.outputs.LetofAuthLen }})",
+				"PgDegreeID":"=RIGHT({{ n_LZNwk.outputs.columns.PG_Degree_Certificate__24 }},{{ _QUNFP.outputs.Pgdegree }})",
+				"TenthCertID":"=RIGHT({{ n_LZNwk.outputs.columns.10th_standard_Pass_Certificate__18 }},{{ _QUNFP.outputs.tenthCertifyLen }})",
+				"Cert12ID":"=RIGHT({{ n_LZNwk.outputs.columns.12th_standard_Certificate__20 }},{{ _QUNFP.outputs.cert12th }})",
+				"ugmarksID":"=RIGHT({{ n_LZNwk.outputs.columns.UG_Marksheet__21 }},{{ _QUNFP.outputs.ugmarks }})",
+				"PhotoID":"=RIGHT({{ n_LZNwk.outputs.columns.Passport_Size_Photo__27 }},{{ _QUNFP.outputs.PhotoLen }})",
+				"UANID":"=RIGHT({{ n_LZNwk.outputs.columns.UAN_Screenshot__17 }},{{ _QUNFP.outputs.UANLen }})",
+				"Mark12ID":"=RIGHT({{ n_LZNwk.outputs.columns.12th_standard_Marksheet__19 }},{{ _QUNFP.outputs.mark12 }})",
+				"PgmarkID":"=RIGHT({{ n_LZNwk.outputs.columns.PG_Marksheet__23 }},{{ _QUNFP.outputs.Pgmarks }})",
+				"AadhaarID":"=RIGHT({{ n_LZNwk.outputs.columns.Aadhar_Card__Both_Sides___25 }},{{ _QUNFP.outputs.AadharLen }})",
+				"InternID":"=RIGHT({{ n_LZNwk.outputs.columns.In_case_of_Freshers__Internship_Completion_Certificate__28 }},{{ _QUNFP.outputs.InternLen }})",
+				"UGdegreeID":"=RIGHT({{ n_LZNwk.outputs.columns.UG_Degree_Certificate__22 }},{{ _QUNFP.outputs.UGdegree }})",
+				"PANID":"=RIGHT({{ n_LZNwk.outputs.columns.Pan_Card__26 }},{{ _QUNFP.outputs.PANLen }})",
+				"ResumeID":"=RIGHT({{ n_LZNwk.outputs.columns.Upload_your_resume__PDF_only___30 }},{{ _QUNFP.outputs.ResumeLen }})"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"AadhaarID":{
+							"type":"number",
+							"title":"Aadhaar ID"
+						},
+						"LetofAuthID":{
+							"type":"number",
+							"title":"Letof Auth ID"
+						},
+						"UANID":{
+							"type":"number",
+							"title":"UANID"
+						},
+						"TenthCertID":{
+							"type":"number",
+							"title":"Tenth Cert ID"
+						},
+						"Mark12ID":{
+							"type":"number",
+							"title":"Mark 12 ID"
+						},
+						"Cert12ID":{
+							"type":"number",
+							"title":"Cert 12 ID"
+						},
+						"ugmarksID":{
+							"type":"number",
+							"title":"Ugmarks ID"
+						},
+						"UGdegreeID":{
+							"type":"number",
+							"title":"U Gdegree ID"
+						},
+						"PgmarkID":{
+							"type":"number",
+							"title":"Pgmark ID"
+						},
+						"PgDegreeID":{
+							"type":"number",
+							"title":"Pg Degree ID"
+						},
+						"PANID":{
+							"type":"number",
+							"title":"PANID"
+						},
+						"PhotoID":{
+							"type":"number",
+							"title":"Photo ID"
+						},
+						"InternID":{
+							"type":"number",
+							"title":"Intern ID"
+						},
+						"SalarySlipID":{
+							"type":"number",
+							"title":"Salary Slip ID"
+						},
+						"ResumeID":{
+							"type":"number",
+							"title":"Resume ID"
+						}
+					},
+					"required":[
+						"AadhaarID",
+						"LetofAuthID",
+						"UANID",
+						"TenthCertID",
+						"Mark12ID",
+						"Cert12ID",
+						"ugmarksID",
+						"UGdegreeID",
+						"PANID",
+						"PhotoID",
+						"SalarySlipID",
+						"ResumeID"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_BBTHr@n_a8Nc1@_ZCQHK-1@n@y",
+			"id":"n_q5ecF",
+			"index":21,
+			"inputs":{
+				"name":"Internship Letter-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _3tgOI.outputs.InternID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_BBTHr@n_a8Nc1@_ZCQHK-1@n@y",
+			"id":"n_0p0TL",
+			"index":22,
+			"inputs":{
+				"name":"PG Marsheet-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _3tgOI.outputs.PgmarkID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_BBTHr@n_a8Nc1@_ZCQHK-1@n@y",
+			"id":"n_i50oZ",
+			"index":23,
+			"inputs":{
+				"name":"PG Degree-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _3tgOI.outputs.PgDegreeID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":1094,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_BBTHr@n_a8Nc1@_ZCQHK-1@n@y",
+			"id":"_gl43j",
+			"index":24,
+			"inputs":{
+				"name":"Aadhaar-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _3tgOI.outputs.AadhaarID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":1094,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_BBTHr@n_a8Nc1@_ZCQHK-1@n@y",
+			"id":"_Vxc7n",
+			"index":25,
+			"inputs":{
+				"name":"Letter of authorisation-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _3tgOI.outputs.LetofAuthID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":1094,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_BBTHr@n_a8Nc1@_ZCQHK-1@n@y",
+			"id":"_guljK",
+			"index":26,
+			"inputs":{
+				"name":"UAN-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _3tgOI.outputs.UANID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_BBTHr@n_a8Nc1@_ZCQHK-1@n@y",
+			"id":"_A5mzk",
+			"index":27,
+			"inputs":{
+				"name":"Class 12 Certificate-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _3tgOI.outputs.Cert12ID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":1094,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_BBTHr@n_a8Nc1@_ZCQHK-1@n@y",
+			"id":"_A42WP",
+			"index":28,
+			"inputs":{
+				"name":"Class 10th Certificate-  {{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _3tgOI.outputs.TenthCertID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_BBTHr@n_a8Nc1@_ZCQHK-1@n@y",
+			"id":"_phzoy",
+			"index":29,
+			"inputs":{
+				"name":"UG Marksheet-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _3tgOI.outputs.ugmarksID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_BBTHr@n_a8Nc1@_ZCQHK-1@n@y",
+			"id":"_134Tg",
+			"index":30,
+			"inputs":{
+				"name":"UG Degree-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _3tgOI.outputs.UGdegreeID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_BBTHr@n_a8Nc1@_ZCQHK-1@n@y",
+			"id":"_ygvEz",
+			"index":31,
+			"inputs":{
+				"name":"PAN-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _3tgOI.outputs.PANID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_BBTHr@n_a8Nc1@_ZCQHK-1@n@y",
+			"id":"_6lNqL",
+			"index":32,
+			"inputs":{
+				"name":"Photo-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _3tgOI.outputs.PhotoID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_BBTHr@n_a8Nc1@_ZCQHK-1@n@y",
+			"id":"_K1F80",
+			"index":33,
+			"inputs":{
+				"name":"Salary Slips-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _3tgOI.outputs.SalarySlipID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_BBTHr@n_a8Nc1@_ZCQHK-1@n@y",
+			"id":"_x0Vlg",
+			"index":34,
+			"inputs":{
+				"name":"Class 12th Marksheet-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _3tgOI.outputs.Mark12ID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_BBTHr@n_a8Nc1@_ZCQHK-1@n@y",
+			"id":"_0qkDD",
+			"index":35,
+			"inputs":{
+				"name":"Resume-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _3tgOI.outputs.ResumeID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":29,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n",
+			"id":"n_crWNg",
+			"index":36,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_LZNwk.outputs.columns.In_case_of_Freshers__Internship_Completion_Certificate__28 }}",
+						"filter":{
+							"operator":"EXISTS"
+						}
+					},
+					{
+						"filters":[
+							{
+								"property":"{{ n_LZNwk.outputs.columns.PG_Marksheet__23 }}",
+								"filter":{
+									"operator":"MISSING"
+								}
+							},
+							{
+								"property":"{{ n_LZNwk.outputs.columns.PG_Degree_Certificate__24 }}",
+								"filter":{
+									"operator":"MISSING"
+								}
+							}
+						],
+						"operator":"AND"
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{}
+			},
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":104,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@y",
+			"id":"_DFd6D",
+			"index":37,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"AadharLen":{
+							"type":"number",
+							"title":"Aadhar Len"
+						},
+						"LetofAuthLen":{
+							"type":"number",
+							"title":"Letof Auth Len"
+						},
+						"UANLen":{
+							"type":"number",
+							"title":"UAN Len"
+						},
+						"tenthCertifyLen":{
+							"type":"number",
+							"title":"Tenth Certify Len"
+						},
+						"mark12":{
+							"type":"number",
+							"title":"Mark 12"
+						},
+						"cert12th":{
+							"type":"number",
+							"title":"Cert 12 Th"
+						},
+						"ugmarks":{
+							"type":"number",
+							"title":"Ugmarks"
+						},
+						"UGdegree":{
+							"type":"number",
+							"title":"U Gdegree"
+						},
+						"Pgmarks":{
+							"type":"number",
+							"title":"Pgmarks"
+						},
+						"Pgdegree":{
+							"type":"number",
+							"title":"Pgdegree"
+						},
+						"PANLen":{
+							"type":"number",
+							"title":"PAN Len"
+						},
+						"PhotoLen":{
+							"type":"number",
+							"title":"Photo Len"
+						},
+						"InternLen":{
+							"type":"number",
+							"title":"Intern Len"
+						},
+						"SalaryslipLen":{
+							"type":"number",
+							"title":"Salaryslip Len"
+						},
+						"ResumeLen":{
+							"type":"number",
+							"title":"Resume Len"
+						}
+					},
+					"required":[
+						"LetofAuthLen",
+						"UANLen",
+						"tenthCertifyLen",
+						"mark12",
+						"cert12th",
+						"ugmarks",
+						"UGdegree",
+						"PANLen",
+						"PhotoLen",
+						"SalaryslipLen",
+						"ResumeLen"
+					]
+				}
+			},
+			"inputs":{
+				"mark12":"=LEN({{ n_LZNwk.outputs.columns.12th_standard_Marksheet__19 }})-33",
+				"PANLen":"=LEN({{ n_LZNwk.outputs.columns.Pan_Card__26 }})-33",
+				"AadharLen":"=LEN({{ n_LZNwk.outputs.columns.Aadhar_Card__Both_Sides___25 }})-33",
+				"PhotoLen":"=LEN({{ n_LZNwk.outputs.columns.Passport_Size_Photo__27 }})-33",
+				"Pgdegree":"=LEN({{ n_LZNwk.outputs.columns.PG_Degree_Certificate__24 }})-33",
+				"LetofAuthLen":"=LEN({{ n_LZNwk.outputs.columns.Letter_of_Authorisation_for_Background_Verification__Form_attached_in_the_following_Link___https___drive_google_com_drive_folders_1Y1VGKaQn5Jo7gYTF0ediiImwGAc1Udgj_usp_drive_link_Please_download_the_document__sign_it__and_upload_the_signed_version_here____16 }})-33",
+				"InternLen":"=LEN({{ n_LZNwk.outputs.columns.In_case_of_Freshers__Internship_Completion_Certificate__28 }})-33",
+				"Pgmarks":"=LEN({{ n_LZNwk.outputs.columns.PG_Marksheet__23 }})-33",
+				"ResumeLen":"=LEN({{ n_LZNwk.outputs.columns.Upload_your_resume__PDF_only___30 }})-33",
+				"cert12th":"=LEN({{ n_LZNwk.outputs.columns.12th_standard_Certificate__20 }})-33",
+				"UANLen":"=LEN({{ n_LZNwk.outputs.columns.UAN_Screenshot__17 }})-33",
+				"tenthCertifyLen":"=LEN({{ n_LZNwk.outputs.columns.10th_standard_Pass_Certificate__18 }})-33",
+				"UGdegree":"=LEN({{ n_LZNwk.outputs.columns.UG_Degree_Certificate__22 }})-33",
+				"ugmarks":"=LEN({{ n_LZNwk.outputs.columns.UG_Marksheet__21 }})-33",
+				"SalaryslipLen":"=LEN({{ n_LZNwk.outputs.columns.In_case_you_have_prior_Experience_then_kindly_provide_the_following_documents___i__Last_3_months_Salary_Slips__ii__Ex_employer_Offer_Letter__Signed_and_accepted_copy___29 }})-33"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"AadharLen":{
+							"type":"number",
+							"title":"Aadhar Len"
+						},
+						"LetofAuthLen":{
+							"type":"number",
+							"title":"Letof Auth Len"
+						},
+						"UANLen":{
+							"type":"number",
+							"title":"UAN Len"
+						},
+						"tenthCertifyLen":{
+							"type":"number",
+							"title":"Tenth Certify Len"
+						},
+						"mark12":{
+							"type":"number",
+							"title":"Mark 12"
+						},
+						"cert12th":{
+							"type":"number",
+							"title":"Cert 12 Th"
+						},
+						"ugmarks":{
+							"type":"number",
+							"title":"Ugmarks"
+						},
+						"UGdegree":{
+							"type":"number",
+							"title":"U Gdegree"
+						},
+						"Pgmarks":{
+							"type":"number",
+							"title":"Pgmarks"
+						},
+						"Pgdegree":{
+							"type":"number",
+							"title":"Pgdegree"
+						},
+						"PANLen":{
+							"type":"number",
+							"title":"PAN Len"
+						},
+						"PhotoLen":{
+							"type":"number",
+							"title":"Photo Len"
+						},
+						"InternLen":{
+							"type":"number",
+							"title":"Intern Len"
+						},
+						"SalaryslipLen":{
+							"type":"number",
+							"title":"Salaryslip Len"
+						},
+						"ResumeLen":{
+							"type":"number",
+							"title":"Resume Len"
+						}
+					},
+					"required":[
+						"LetofAuthLen",
+						"UANLen",
+						"tenthCertifyLen",
+						"mark12",
+						"cert12th",
+						"ugmarks",
+						"UGdegree",
+						"PANLen",
+						"PhotoLen",
+						"SalaryslipLen",
+						"ResumeLen"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{}
+			},
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":104,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@y",
+			"id":"_DBegq",
+			"index":38,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"AadhaarID":{
+							"type":"number",
+							"title":"Aadhaar ID"
+						},
+						"LetofAuthID":{
+							"type":"number",
+							"title":"Letof Auth ID"
+						},
+						"UANID":{
+							"type":"number",
+							"title":"UANID"
+						},
+						"TenthCertID":{
+							"type":"number",
+							"title":"Tenth Cert ID"
+						},
+						"Mark12ID":{
+							"type":"number",
+							"title":"Mark 12 ID"
+						},
+						"Cert12ID":{
+							"type":"number",
+							"title":"Cert 12 ID"
+						},
+						"ugmarksID":{
+							"type":"number",
+							"title":"Ugmarks ID"
+						},
+						"UGdegreeID":{
+							"type":"number",
+							"title":"U Gdegree ID"
+						},
+						"PgmarkID":{
+							"type":"number",
+							"title":"Pgmark ID"
+						},
+						"PgDegreeID":{
+							"type":"number",
+							"title":"Pg Degree ID"
+						},
+						"PANID":{
+							"type":"number",
+							"title":"PANID"
+						},
+						"PhotoID":{
+							"type":"number",
+							"title":"Photo ID"
+						},
+						"InternID":{
+							"type":"number",
+							"title":"Intern ID"
+						},
+						"SalarySlipID":{
+							"type":"number",
+							"title":"Salary Slip ID"
+						},
+						"ResumeID":{
+							"type":"number",
+							"title":"Resume ID"
+						}
+					},
+					"required":[
+						"AadhaarID",
+						"LetofAuthID",
+						"UANID",
+						"TenthCertID",
+						"Mark12ID",
+						"Cert12ID",
+						"ugmarksID",
+						"UGdegreeID",
+						"PANID",
+						"PhotoID",
+						"SalarySlipID",
+						"ResumeID"
+					]
+				}
+			},
+			"inputs":{
+				"SalarySlipID":"=RIGHT({{ n_LZNwk.outputs.columns.In_case_you_have_prior_Experience_then_kindly_provide_the_following_documents___i__Last_3_months_Salary_Slips__ii__Ex_employer_Offer_Letter__Signed_and_accepted_copy___29 }},{{ _DFd6D.outputs.SalaryslipLen }})",
+				"LetofAuthID":"=RIGHT({{ n_LZNwk.outputs.columns.Letter_of_Authorisation_for_Background_Verification__Form_attached_in_the_following_Link___https___drive_google_com_drive_folders_1Y1VGKaQn5Jo7gYTF0ediiImwGAc1Udgj_usp_drive_link_Please_download_the_document__sign_it__and_upload_the_signed_version_here____16 }},{{ _DFd6D.outputs.LetofAuthLen }})",
+				"TenthCertID":"=RIGHT({{ n_LZNwk.outputs.columns.10th_standard_Pass_Certificate__18 }},{{ _DFd6D.outputs.tenthCertifyLen }})",
+				"Cert12ID":"=RIGHT({{ n_LZNwk.outputs.columns.12th_standard_Certificate__20 }},{{ _DFd6D.outputs.cert12th }})",
+				"ugmarksID":"=RIGHT({{ n_LZNwk.outputs.columns.UG_Marksheet__21 }},{{ _DFd6D.outputs.ugmarks }})",
+				"PhotoID":"=RIGHT({{ n_LZNwk.outputs.columns.Passport_Size_Photo__27 }},{{ _DFd6D.outputs.PhotoLen }})",
+				"UANID":"=RIGHT({{ n_LZNwk.outputs.columns.UAN_Screenshot__17 }},{{ _DFd6D.outputs.UANLen }})",
+				"Mark12ID":"=RIGHT({{ n_LZNwk.outputs.columns.12th_standard_Marksheet__19 }},{{ _DFd6D.outputs.mark12 }})",
+				"AadhaarID":"=RIGHT({{ n_LZNwk.outputs.columns.Aadhar_Card__Both_Sides___25 }},{{ _DFd6D.outputs.AadharLen }})",
+				"InternID":"=RIGHT({{ n_LZNwk.outputs.columns.In_case_of_Freshers__Internship_Completion_Certificate__28 }},{{ _DFd6D.outputs.InternLen }})",
+				"UGdegreeID":"=RIGHT({{ n_LZNwk.outputs.columns.UG_Degree_Certificate__22 }},{{ _DFd6D.outputs.UGdegree }})",
+				"PANID":"=RIGHT({{ n_LZNwk.outputs.columns.Pan_Card__26 }},{{ _DFd6D.outputs.PANLen }})",
+				"ResumeID":"=RIGHT({{ n_LZNwk.outputs.columns.Upload_your_resume__PDF_only___30 }},{{ _DFd6D.outputs.ResumeLen }})"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"AadhaarID":{
+							"type":"number",
+							"title":"Aadhaar ID"
+						},
+						"LetofAuthID":{
+							"type":"number",
+							"title":"Letof Auth ID"
+						},
+						"UANID":{
+							"type":"number",
+							"title":"UANID"
+						},
+						"TenthCertID":{
+							"type":"number",
+							"title":"Tenth Cert ID"
+						},
+						"Mark12ID":{
+							"type":"number",
+							"title":"Mark 12 ID"
+						},
+						"Cert12ID":{
+							"type":"number",
+							"title":"Cert 12 ID"
+						},
+						"ugmarksID":{
+							"type":"number",
+							"title":"Ugmarks ID"
+						},
+						"UGdegreeID":{
+							"type":"number",
+							"title":"U Gdegree ID"
+						},
+						"PgmarkID":{
+							"type":"number",
+							"title":"Pgmark ID"
+						},
+						"PgDegreeID":{
+							"type":"number",
+							"title":"Pg Degree ID"
+						},
+						"PANID":{
+							"type":"number",
+							"title":"PANID"
+						},
+						"PhotoID":{
+							"type":"number",
+							"title":"Photo ID"
+						},
+						"InternID":{
+							"type":"number",
+							"title":"Intern ID"
+						},
+						"SalarySlipID":{
+							"type":"number",
+							"title":"Salary Slip ID"
+						},
+						"ResumeID":{
+							"type":"number",
+							"title":"Resume ID"
+						}
+					},
+					"required":[
+						"AadhaarID",
+						"LetofAuthID",
+						"UANID",
+						"TenthCertID",
+						"Mark12ID",
+						"Cert12ID",
+						"ugmarksID",
+						"UGdegreeID",
+						"PANID",
+						"PhotoID",
+						"SalarySlipID",
+						"ResumeID"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@y",
+			"id":"_IOTvo",
+			"index":39,
+			"inputs":{
+				"name":"Internship Letter-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _DBegq.outputs.InternID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":1094,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@y",
+			"id":"_rOFx6",
+			"index":40,
+			"inputs":{
+				"name":"Aadhaar-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _DBegq.outputs.AadhaarID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":1094,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@y",
+			"id":"_i5Ko7",
+			"index":41,
+			"inputs":{
+				"name":"Letter of authorisation-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _DBegq.outputs.LetofAuthID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":1094,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@y",
+			"id":"_uDu7L",
+			"index":42,
+			"inputs":{
+				"name":"UAN-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _DBegq.outputs.UANID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@y",
+			"id":"_xJZLS",
+			"index":43,
+			"inputs":{
+				"name":"Class 12 Certificate-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _DBegq.outputs.Cert12ID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":1094,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@y",
+			"id":"_vEjgq",
+			"index":44,
+			"inputs":{
+				"name":"Class 10th Certificate-  {{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _DBegq.outputs.TenthCertID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@y",
+			"id":"_5rsW2",
+			"index":45,
+			"inputs":{
+				"name":"UG Marksheet-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _DBegq.outputs.ugmarksID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@y",
+			"id":"_icTba",
+			"index":46,
+			"inputs":{
+				"name":"UG Degree-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _DBegq.outputs.UGdegreeID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@y",
+			"id":"_vTyMN",
+			"index":47,
+			"inputs":{
+				"name":"PAN-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _DBegq.outputs.PANID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@y",
+			"id":"_lHegd",
+			"index":48,
+			"inputs":{
+				"name":"Photo-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _DBegq.outputs.PhotoID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@y",
+			"id":"_4JlJH",
+			"index":49,
+			"inputs":{
+				"name":"Salary Slips-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _DBegq.outputs.SalarySlipID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@y",
+			"id":"_63IK7",
+			"index":50,
+			"inputs":{
+				"name":"Class 12th Marksheet-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _DBegq.outputs.Mark12ID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@y",
+			"id":"_5RNF0",
+			"index":51,
+			"inputs":{
+				"name":"Resume-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _DBegq.outputs.ResumeID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{}
+			},
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":104,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@n",
+			"id":"_2vOoG",
+			"index":52,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"AadharLen":{
+							"type":"number",
+							"title":"Aadhar Len"
+						},
+						"LetofAuthLen":{
+							"type":"number",
+							"title":"Letof Auth Len"
+						},
+						"UANLen":{
+							"type":"number",
+							"title":"UAN Len"
+						},
+						"tenthCertifyLen":{
+							"type":"number",
+							"title":"Tenth Certify Len"
+						},
+						"mark12":{
+							"type":"number",
+							"title":"Mark 12"
+						},
+						"cert12th":{
+							"type":"number",
+							"title":"Cert 12 Th"
+						},
+						"ugmarks":{
+							"type":"number",
+							"title":"Ugmarks"
+						},
+						"UGdegree":{
+							"type":"number",
+							"title":"U Gdegree"
+						},
+						"Pgmarks":{
+							"type":"number",
+							"title":"Pgmarks"
+						},
+						"Pgdegree":{
+							"type":"number",
+							"title":"Pgdegree"
+						},
+						"PANLen":{
+							"type":"number",
+							"title":"PAN Len"
+						},
+						"PhotoLen":{
+							"type":"number",
+							"title":"Photo Len"
+						},
+						"InternLen":{
+							"type":"number",
+							"title":"Intern Len"
+						},
+						"SalaryslipLen":{
+							"type":"number",
+							"title":"Salaryslip Len"
+						},
+						"ResumeLen":{
+							"type":"number",
+							"title":"Resume Len"
+						}
+					},
+					"required":[
+						"LetofAuthLen",
+						"UANLen",
+						"tenthCertifyLen",
+						"mark12",
+						"cert12th",
+						"ugmarks",
+						"UGdegree",
+						"PANLen",
+						"PhotoLen",
+						"SalaryslipLen",
+						"ResumeLen"
+					]
+				}
+			},
+			"inputs":{
+				"mark12":"=LEN({{ n_LZNwk.outputs.columns.12th_standard_Marksheet__19 }})-33",
+				"PANLen":"=LEN({{ n_LZNwk.outputs.columns.Pan_Card__26 }})-33",
+				"AadharLen":"=LEN({{ n_LZNwk.outputs.columns.Aadhar_Card__Both_Sides___25 }})-33",
+				"PhotoLen":"=LEN({{ n_LZNwk.outputs.columns.Passport_Size_Photo__27 }})-33",
+				"Pgdegree":"=LEN({{ n_LZNwk.outputs.columns.PG_Degree_Certificate__24 }})-33",
+				"LetofAuthLen":"=LEN({{ n_LZNwk.outputs.columns.Letter_of_Authorisation_for_Background_Verification__Form_attached_in_the_following_Link___https___drive_google_com_drive_folders_1Y1VGKaQn5Jo7gYTF0ediiImwGAc1Udgj_usp_drive_link_Please_download_the_document__sign_it__and_upload_the_signed_version_here____16 }})-33",
+				"InternLen":"=LEN({{ n_LZNwk.outputs.columns.In_case_of_Freshers__Internship_Completion_Certificate__28 }})-33",
+				"Pgmarks":"=LEN({{ n_LZNwk.outputs.columns.PG_Marksheet__23 }})-33",
+				"ResumeLen":"=LEN({{ n_LZNwk.outputs.columns.Upload_your_resume__PDF_only___30 }})-33",
+				"cert12th":"=LEN({{ n_LZNwk.outputs.columns.12th_standard_Certificate__20 }})-33",
+				"UANLen":"=LEN({{ n_LZNwk.outputs.columns.UAN_Screenshot__17 }})-33",
+				"tenthCertifyLen":"=LEN({{ n_LZNwk.outputs.columns.10th_standard_Pass_Certificate__18 }})-33",
+				"UGdegree":"=LEN({{ n_LZNwk.outputs.columns.UG_Degree_Certificate__22 }})-33",
+				"ugmarks":"=LEN({{ n_LZNwk.outputs.columns.UG_Marksheet__21 }})-33",
+				"SalaryslipLen":"=LEN({{ n_LZNwk.outputs.columns.In_case_you_have_prior_Experience_then_kindly_provide_the_following_documents___i__Last_3_months_Salary_Slips__ii__Ex_employer_Offer_Letter__Signed_and_accepted_copy___29 }})-33"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"AadharLen":{
+							"type":"number",
+							"title":"Aadhar Len"
+						},
+						"LetofAuthLen":{
+							"type":"number",
+							"title":"Letof Auth Len"
+						},
+						"UANLen":{
+							"type":"number",
+							"title":"UAN Len"
+						},
+						"tenthCertifyLen":{
+							"type":"number",
+							"title":"Tenth Certify Len"
+						},
+						"mark12":{
+							"type":"number",
+							"title":"Mark 12"
+						},
+						"cert12th":{
+							"type":"number",
+							"title":"Cert 12 Th"
+						},
+						"ugmarks":{
+							"type":"number",
+							"title":"Ugmarks"
+						},
+						"UGdegree":{
+							"type":"number",
+							"title":"U Gdegree"
+						},
+						"Pgmarks":{
+							"type":"number",
+							"title":"Pgmarks"
+						},
+						"Pgdegree":{
+							"type":"number",
+							"title":"Pgdegree"
+						},
+						"PANLen":{
+							"type":"number",
+							"title":"PAN Len"
+						},
+						"PhotoLen":{
+							"type":"number",
+							"title":"Photo Len"
+						},
+						"InternLen":{
+							"type":"number",
+							"title":"Intern Len"
+						},
+						"SalaryslipLen":{
+							"type":"number",
+							"title":"Salaryslip Len"
+						},
+						"ResumeLen":{
+							"type":"number",
+							"title":"Resume Len"
+						}
+					},
+					"required":[
+						"LetofAuthLen",
+						"UANLen",
+						"tenthCertifyLen",
+						"mark12",
+						"cert12th",
+						"ugmarks",
+						"UGdegree",
+						"PANLen",
+						"PhotoLen",
+						"SalaryslipLen",
+						"ResumeLen"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{}
+			},
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":104,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@n",
+			"id":"_xJLSM",
+			"index":53,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"AadhaarID":{
+							"type":"number",
+							"title":"Aadhaar ID"
+						},
+						"LetofAuthID":{
+							"type":"number",
+							"title":"Letof Auth ID"
+						},
+						"UANID":{
+							"type":"number",
+							"title":"UANID"
+						},
+						"TenthCertID":{
+							"type":"number",
+							"title":"Tenth Cert ID"
+						},
+						"Mark12ID":{
+							"type":"number",
+							"title":"Mark 12 ID"
+						},
+						"Cert12ID":{
+							"type":"number",
+							"title":"Cert 12 ID"
+						},
+						"ugmarksID":{
+							"type":"number",
+							"title":"Ugmarks ID"
+						},
+						"UGdegreeID":{
+							"type":"number",
+							"title":"U Gdegree ID"
+						},
+						"PgmarkID":{
+							"type":"number",
+							"title":"Pgmark ID"
+						},
+						"PgDegreeID":{
+							"type":"number",
+							"title":"Pg Degree ID"
+						},
+						"PANID":{
+							"type":"number",
+							"title":"PANID"
+						},
+						"PhotoID":{
+							"type":"number",
+							"title":"Photo ID"
+						},
+						"InternID":{
+							"type":"number",
+							"title":"Intern ID"
+						},
+						"SalarySlipID":{
+							"type":"number",
+							"title":"Salary Slip ID"
+						},
+						"ResumeID":{
+							"type":"number",
+							"title":"Resume ID"
+						}
+					},
+					"required":[
+						"AadhaarID",
+						"LetofAuthID",
+						"UANID",
+						"TenthCertID",
+						"Mark12ID",
+						"Cert12ID",
+						"ugmarksID",
+						"UGdegreeID",
+						"PANID",
+						"PhotoID",
+						"SalarySlipID",
+						"ResumeID"
+					]
+				}
+			},
+			"inputs":{
+				"SalarySlipID":"=RIGHT({{ n_LZNwk.outputs.columns.In_case_you_have_prior_Experience_then_kindly_provide_the_following_documents___i__Last_3_months_Salary_Slips__ii__Ex_employer_Offer_Letter__Signed_and_accepted_copy___29 }},{{ _2vOoG.outputs.SalaryslipLen }})",
+				"LetofAuthID":"=RIGHT({{ n_LZNwk.outputs.columns.Letter_of_Authorisation_for_Background_Verification__Form_attached_in_the_following_Link___https___drive_google_com_drive_folders_1Y1VGKaQn5Jo7gYTF0ediiImwGAc1Udgj_usp_drive_link_Please_download_the_document__sign_it__and_upload_the_signed_version_here____16 }},{{ _2vOoG.outputs.LetofAuthLen }})",
+				"PgDegreeID":"=RIGHT({{ n_LZNwk.outputs.columns.PG_Degree_Certificate__24 }},{{ _2vOoG.outputs.Pgdegree }})",
+				"TenthCertID":"=RIGHT({{ n_LZNwk.outputs.columns.10th_standard_Pass_Certificate__18 }},{{ _2vOoG.outputs.tenthCertifyLen }})",
+				"Cert12ID":"=RIGHT({{ n_LZNwk.outputs.columns.12th_standard_Certificate__20 }},{{ _2vOoG.outputs.cert12th }})",
+				"ugmarksID":"=RIGHT({{ n_LZNwk.outputs.columns.UG_Marksheet__21 }},{{ _2vOoG.outputs.ugmarks }})",
+				"PhotoID":"=RIGHT({{ n_LZNwk.outputs.columns.Passport_Size_Photo__27 }},{{ _2vOoG.outputs.PhotoLen }})",
+				"UANID":"=RIGHT({{ n_LZNwk.outputs.columns.UAN_Screenshot__17 }},{{ _2vOoG.outputs.UANLen }})",
+				"Mark12ID":"=RIGHT({{ n_LZNwk.outputs.columns.12th_standard_Marksheet__19 }},{{ _2vOoG.outputs.mark12 }})",
+				"PgmarkID":"=RIGHT({{ n_LZNwk.outputs.columns.PG_Marksheet__23 }},{{ _2vOoG.outputs.Pgmarks }})",
+				"AadhaarID":"=RIGHT({{ n_LZNwk.outputs.columns.Aadhar_Card__Both_Sides___25 }},{{ _2vOoG.outputs.AadharLen }})",
+				"UGdegreeID":"=RIGHT({{ n_LZNwk.outputs.columns.UG_Degree_Certificate__22 }},{{ _2vOoG.outputs.UGdegree }})",
+				"PANID":"=RIGHT({{ n_LZNwk.outputs.columns.Pan_Card__26 }},{{ _2vOoG.outputs.PANLen }})",
+				"ResumeID":"=RIGHT({{ n_LZNwk.outputs.columns.Upload_your_resume__PDF_only___30 }},{{ _2vOoG.outputs.ResumeLen }})"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"AadhaarID":{
+							"type":"number",
+							"title":"Aadhaar ID"
+						},
+						"LetofAuthID":{
+							"type":"number",
+							"title":"Letof Auth ID"
+						},
+						"UANID":{
+							"type":"number",
+							"title":"UANID"
+						},
+						"TenthCertID":{
+							"type":"number",
+							"title":"Tenth Cert ID"
+						},
+						"Mark12ID":{
+							"type":"number",
+							"title":"Mark 12 ID"
+						},
+						"Cert12ID":{
+							"type":"number",
+							"title":"Cert 12 ID"
+						},
+						"ugmarksID":{
+							"type":"number",
+							"title":"Ugmarks ID"
+						},
+						"UGdegreeID":{
+							"type":"number",
+							"title":"U Gdegree ID"
+						},
+						"PgmarkID":{
+							"type":"number",
+							"title":"Pgmark ID"
+						},
+						"PgDegreeID":{
+							"type":"number",
+							"title":"Pg Degree ID"
+						},
+						"PANID":{
+							"type":"number",
+							"title":"PANID"
+						},
+						"PhotoID":{
+							"type":"number",
+							"title":"Photo ID"
+						},
+						"InternID":{
+							"type":"number",
+							"title":"Intern ID"
+						},
+						"SalarySlipID":{
+							"type":"number",
+							"title":"Salary Slip ID"
+						},
+						"ResumeID":{
+							"type":"number",
+							"title":"Resume ID"
+						}
+					},
+					"required":[
+						"AadhaarID",
+						"LetofAuthID",
+						"UANID",
+						"TenthCertID",
+						"Mark12ID",
+						"Cert12ID",
+						"ugmarksID",
+						"UGdegreeID",
+						"PANID",
+						"PhotoID",
+						"SalarySlipID",
+						"ResumeID"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@n",
+			"id":"_MQiCf",
+			"index":54,
+			"inputs":{
+				"name":"PG Marsheet-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _xJLSM.outputs.PgmarkID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@n",
+			"id":"_cuW9w",
+			"index":55,
+			"inputs":{
+				"name":"PG Degree-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _xJLSM.outputs.PgDegreeID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":1094,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@n",
+			"id":"_MqsSB",
+			"index":56,
+			"inputs":{
+				"name":"Aadhaar-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _xJLSM.outputs.AadhaarID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":1094,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@n",
+			"id":"_hVsof",
+			"index":57,
+			"inputs":{
+				"name":"Letter of authorisation-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _xJLSM.outputs.LetofAuthID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":1094,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@n",
+			"id":"_YaZOG",
+			"index":58,
+			"inputs":{
+				"name":"UAN-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _xJLSM.outputs.UANID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@n",
+			"id":"_nqjce",
+			"index":59,
+			"inputs":{
+				"name":"Class 12 Certificate-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _xJLSM.outputs.Cert12ID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":1094,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@n",
+			"id":"_mG472",
+			"index":60,
+			"inputs":{
+				"name":"Class 10th Certificate-  {{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _xJLSM.outputs.TenthCertID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@n",
+			"id":"_Vz3kU",
+			"index":61,
+			"inputs":{
+				"name":"UG Marksheet-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _xJLSM.outputs.ugmarksID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@n",
+			"id":"_AOPtW",
+			"index":62,
+			"inputs":{
+				"name":"UG Degree-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _xJLSM.outputs.UGdegreeID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@n",
+			"id":"_aX1hR",
+			"index":63,
+			"inputs":{
+				"name":"PAN-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _xJLSM.outputs.PANID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@n",
+			"id":"_St2Yj",
+			"index":64,
+			"inputs":{
+				"name":"Photo-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _xJLSM.outputs.PhotoID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@n",
+			"id":"_DxtWK",
+			"index":65,
+			"inputs":{
+				"name":"Salary Slips-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _xJLSM.outputs.SalarySlipID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@n",
+			"id":"_WToBO",
+			"index":66,
+			"inputs":{
+				"name":"Class 12th Marksheet-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _xJLSM.outputs.Mark12ID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":375,
+				"connectionId":"68ca57b25f4c703d4a370a3b",
+				"resourceName":"gdrive_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_crWNg@n_BBTHr@n_a8Nc1@_ZCQHK-1@n@n@n",
+			"id":"_1mYJH",
+			"index":67,
+			"inputs":{
+				"name":"Resume-{{ n_LZNwk.outputs.columns.Name__As_per_Aadhar_Card___1 }}",
+				"destination_folder":"{{ n_on1BH.outputs.id }}",
+				"fileId":"{{ _xJLSM.outputs.ResumeID }}"
+			},
+			"skip":false,
+			"subTitle":"Google Drive",
+			"title":"Copy a file",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":177811,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":24
+}
