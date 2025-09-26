@@ -17,18 +17,18 @@
 			"fromNodeId":"n_NNfvg",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"_icozG",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_icozG",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"_pcuC0",
 			"type":"next"
 		},
 		{
 			"fromNodeId":"_pcuC0",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_eYsJE",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_eYsJE",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_Tlb5h",
@@ -38,11 +38,11 @@
 			"fromNodeId":"n_Tlb5h",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_U2lhK",
+			"toNodeId":"n_Hu8vY",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_U2lhK",
+			"fromNodeId":"n_Hu8vY",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_udMD7",
@@ -66,7 +66,7 @@
 	"id":"68d5259021071f0aa2fd8a6e",
 	"lastModifiedBy":155341,
 	"lcName":"insights | failure percentage of all automations",
-	"modifiedTime":1758863220067,
+	"modifiedTime":1758863739072,
 	"name":"INSIGHTS | Failure percentage of all automations",
 	"nodes":[
 		{
@@ -120,143 +120,6 @@
 		},
 		{
 			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":860,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_MdNb4-1",
-			"id":"_pcuC0",
-			"index":2,
-			"inputs":{
-				"output":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[],
-					"properties":{
-						"startMillis":{
-							"type":"number",
-							"title":"Start Millis"
-						},
-						"endMillis":{
-							"type":"number",
-							"title":"End Millis"
-						},
-						"limit":{
-							"type":"integer",
-							"title":"Limit"
-						}
-					}
-				},
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[],
-					"properties":{
-						"limit":{
-							"type":"integer",
-							"title":"Limit"
-						}
-					}
-				},
-				"code":"import java.time.*\nimport java.time.format.DateTimeFormatter\n\n// Define the IST timezone\ndef istZoneId = ZoneId.of(\"Asia/Kolkata\")\n\n// Get the current date in IST\ndef todayIST = LocalDate.now(istZoneId)\n\n// Calculate the start of the day in IST (midnight)\ndef startOfTodayIST = todayIST.atStartOfDay(istZoneId)\n\n// Calculate the end of the day in IST (the last millisecond)\ndef endOfTodayIST = startOfTodayIST.plusDays(1).minusNanos(1_000_000) // .minus(1, ChronoUnit.MILLIS)\n\n// Convert to milliseconds (epoch milli is always UTC-based)\ndef startMillis = startOfTodayIST.toInstant().toEpochMilli()\ndef endMillis = endOfTodayIST.toInstant().toEpochMilli()\n\ndef limit = binding.hasVariable('limit') ? limit : 10\n\nreturn [\n    startMillis: startMillis,\n    endMillis: endMillis,\n    limit: limit\n]\n",
-				"compile_static":false,
-				"captureStdOutput":false,
-				"parameters":{
-					"limit":"{{ n_NNfvg.outputs.limit }}"
-				}
-			},
-			"skip":false,
-			"subTitle":"Code by UnifyApps",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"analytics_by_unifyapps",
-				"resourceVersion":790,
-				"resourceName":"analytics_by_unifyapps_execute_query",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_MdNb4-1",
-			"id":"_eYsJE",
-			"index":3,
-			"inputs":{
-				"query":"SELECT\n    workflowId,\n    COUNT(CASE WHEN status IN ('FAILED') THEN 1 END) AS failed_runs,\n    COUNT(CASE WHEN status IN ('COMPLETED') THEN 1 END) AS success_runs,\n    COUNT(*) AS total_runs,\n    CAST(COUNT(CASE WHEN status IN ('FAILED') THEN 1 END) AS FLOAT) / COUNT(*) AS failure_ratio\nFROM\n    WORKFLOW_EXECUTION\nWHERE\n    status IN ('COMPLETED', 'FAILED', 'CANCELLED', 'ACTIVE', 'WAIT', 'STOP_CONSEQUENT', 'SKIPPED')\n    AND startTime >= {{ _pcuC0.outputs.result.startMillis }}\n    AND startTime <= {{ _pcuC0.outputs.result.endMillis }}\nGROUP BY\n    workflowId\nORDER BY\n    failure_ratio DESC, failed_runs DESC\nLIMIT {{ _pcuC0.outputs.result.limit }};",
-				"group":"PLATFORM"
-			},
-			"skip":false,
-			"subTitle":"Analytics by UnifyApps",
-			"title":"Execute Analytics SQL Query",
-			"type":"ACTION"
-		},
-		{
-			"additional":{
-				"xsdSchemaConfig":{
-					"root":{}
-				}
-			},
-			"context":{
-				"appName":"custom_http_endpoint",
-				"resourceVersion":869,
-				"resourceName":"custom_http_endpoint_execute",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_MdNb4-1",
-			"id":"n_Tlb5h",
-			"index":4,
-			"inputs":{
-				"isAsync":false,
-				"enableProxy":false,
-				"requestTimeoutInSecs":-1,
-				"httpMethod":"POST",
-				"body":{
-					"sql":"{{ n_lEZw0.outputs.statement.sql }}"
-				},
-				"connectionType":"DIRECT",
-				"sslVerify":true,
-				"path":"/sql-report/runSQL/query/{{ n_lEZw0.outputs.customerId }}",
-				"baseUrl":"http://internal-global-svc:80/internal",
-				"httpVersion":"HTTP_2",
-				"bodySchema":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[],
-					"properties":{
-						"sql":{
-							"type":"string",
-							"title":"Sql"
-						}
-					}
-				},
-				"queryParamsList":[
-					{
-						"key":"sqlResourceType",
-						"value":"{{ n_lEZw0.outputs.resourceType }}"
-					}
-				],
-				"responseContentType":"application/json",
-				"authType":"CUSTOM",
-				"requestContentType":"application/json",
-				"ignoreTrailingSlashes":false,
-				"certificateType":"CERT_STRING"
-			},
-			"skip":false,
-			"subTitle":"Custom HTTP Endpoint",
-			"title":"Execute REST request",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"callables",
 				"resourceVersion":123,
 				"resourceName":"callables_call_automation",
@@ -266,8 +129,8 @@
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_MdNb4-1",
-			"id":"n_U2lhK",
-			"index":5,
+			"id":"_icozG",
+			"index":2,
 			"inputs":{
 				"automationId":"68b932d26607f33c4d7f0988",
 				"runtimeConnections":{},
@@ -330,6 +193,140 @@
 			"subTitle":"Callable",
 			"title":"Call automation",
 			"type":"CALL_WORKFLOW"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":860,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_MdNb4-1",
+			"id":"_pcuC0",
+			"index":3,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"query":{
+							"type":"string",
+							"title":"Query"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"limit":{
+							"type":"integer",
+							"title":"Limit"
+						}
+					}
+				},
+				"code":"import java.time.*\nimport java.time.format.DateTimeFormatter\n\n// Define the IST timezone\ndef istZoneId = ZoneId.of(\"Asia/Kolkata\")\n\n// Get the current date in IST\ndef todayIST = LocalDate.now(istZoneId)\n\n// Calculate the start of the day in IST (midnight)\ndef startOfTodayIST = todayIST.atStartOfDay(istZoneId)\n\n// Calculate the end of the day in IST (the last millisecond)\ndef endOfTodayIST = startOfTodayIST.plusDays(1).minusNanos(1_000_000) // .minus(1, ChronoUnit.MILLIS)\n\n// Convert to milliseconds (epoch milli is always UTC-based)\ndef startMillis = startOfTodayIST.toInstant().toEpochMilli()\ndef endMillis = endOfTodayIST.toInstant().toEpochMilli()\n\ndef limit = binding.hasVariable('limit') ? limit : 10\n\ndef query = \"\"\"\nSELECT\n    workflowId,\n    COUNT(CASE WHEN status IN ('FAILED') THEN 1 END) AS failed_runs,\n    COUNT(CASE WHEN status IN ('COMPLETED') THEN 1 END) AS success_runs,\n    COUNT(*) AS total_runs,\n    CAST(COUNT(CASE WHEN status IN ('FAILED') THEN 1 END) AS FLOAT) / COUNT(*) AS failure_ratio\nFROM\n    WORKFLOW_EXECUTION\nWHERE\n    status IN ('COMPLETED', 'FAILED', 'CANCELLED', 'ACTIVE', 'WAIT', 'STOP_CONSEQUENT', 'SKIPPED')\n    AND startTime >= ${startMillis}\n    AND startTime <= ${endMillis}\nGROUP BY\n    workflowId\nORDER BY\n    failure_ratio DESC, failed_runs DESC\nLIMIT ${limit}\n\"\"\"\n\nreturn [\n    query: query\n]\n",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"limit":"{{ n_NNfvg.outputs.limit }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"custom_http_endpoint",
+				"resourceVersion":869,
+				"resourceName":"custom_http_endpoint_execute",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_MdNb4-1",
+			"id":"n_Tlb5h",
+			"index":4,
+			"inputs":{
+				"isAsync":false,
+				"enableProxy":false,
+				"requestTimeoutInSecs":-1,
+				"httpMethod":"POST",
+				"body":{
+					"sql":"{{ _pcuC0.outputs.result.query }}"
+				},
+				"connectionType":"DIRECT",
+				"sslVerify":true,
+				"path":"/sql-report/runSQL/query/{{ __RUN__.outputs.customerId }}",
+				"baseUrl":"http://internal-global-svc:80/internal",
+				"httpVersion":"HTTP_2",
+				"bodySchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"sql":{
+							"type":"string",
+							"title":"Sql"
+						}
+					}
+				},
+				"queryParamsList":[
+					{
+						"key":"sqlResourceType",
+						"value":"WORKFLOW_EXECUTION"
+					}
+				],
+				"responseContentType":"application/json",
+				"authType":"CUSTOM",
+				"requestContentType":"application/json",
+				"ignoreTrailingSlashes":false,
+				"certificateType":"CERT_STRING"
+			},
+			"skip":false,
+			"subTitle":"Custom HTTP Endpoint",
+			"title":"Execute REST request",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":860,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_MdNb4-1",
+			"id":"n_Hu8vY",
+			"index":5,
+			"inputs":{
+				"compile_static":false,
+				"captureStdOutput":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
 		},
 		{
 			"context":{
@@ -514,5 +511,5 @@
 	"tags":[
 		
 	],
-	"version":38
+	"version":39
 }
