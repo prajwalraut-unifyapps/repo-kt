@@ -1,51 +1,79 @@
 {
 	"appsUsed":[
-		
+		"microsoft_teams"
 	],
 	"createdTime":1758907100907,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_6pe8m",
+			"fromNodeId":"n_iQWJq",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_D8zNJ",
+			"toNodeId":"n_3OQPv",
 			"type":"next"
 		}
 	],
 	"id":"68d6cadc8f6b3c2db83f1961",
 	"lastModifiedBy":15,
 	"lcName":"test",
-	"modifiedTime":1758907100907,
+	"modifiedTime":1758907541214,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_6pe8m-1",
-			"id":"_6pe8m",
-			"index":0,
+			"id":"n_iQWJq",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"microsoft_teams",
+				"resourceVersion":5931,
+				"connectionId":"68d059283cf76074377ed322",
+				"resourceName":"microsoft_teams_create_channel",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_6pe8m-1",
-			"id":"_D8zNJ",
-			"index":0,
+			"id":"n_3OQPv",
+			"index":2,
+			"inputs":{
+				"membershipType":"standard",
+				"displayName":"new1234qa12",
+				"team_id":"b1a051ec-6871-4b8d-9eb5-3375cde8d35e",
+				"isFavoriteByDefault":false
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Microsoft Teams",
+			"title":"Create channel",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":15,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +87,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
