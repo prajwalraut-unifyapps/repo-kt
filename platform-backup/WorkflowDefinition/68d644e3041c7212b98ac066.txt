@@ -91,7 +91,7 @@
 	"id":"68d644e3041c7212b98ac066",
 	"lastModifiedBy":132116,
 	"lcName":"skip_branch",
-	"modifiedTime":1758872879354,
+	"modifiedTime":1758872914796,
 	"name":"skip_branch",
 	"nodes":[
 		{
@@ -285,7 +285,7 @@
 					"operator":"AND"
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"title":"",
 			"type":"BRANCH_CONDITION"
 		},
@@ -390,5 +390,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
