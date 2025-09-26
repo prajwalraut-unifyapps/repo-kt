@@ -23,7 +23,7 @@
 	"id":"68d65fed590de345483256f6",
 	"lastModifiedBy":39715,
 	"lcName":"test null",
-	"modifiedTime":1758892092622,
+	"modifiedTime":1758892299714,
 	"name":"test null",
 	"nodes":[
 		{
@@ -128,7 +128,7 @@
 				"skipInputValidation":false,
 				"event":{
 					"tesaitn":"{{ n_MkQPk.outputs.body }}",
-					"tesigng":"hello"
+					"tesigng":"{{ n_JkIiV.outputs.randome }}"
 				}
 			},
 			"skip":false,
@@ -154,5 +154,5 @@
 	"tags":[
 		
 	],
-	"version":12
+	"version":13
 }
