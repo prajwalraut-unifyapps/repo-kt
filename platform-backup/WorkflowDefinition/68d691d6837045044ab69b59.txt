@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758892502772,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_nD3XE",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_xPBHw",
+			"type":"next"
+		}
+	],
+	"id":"68d691d6837045044ab69b59",
+	"lastModifiedBy":132116,
+	"lcName":"gobal_testing",
+	"modifiedTime":1758892502772,
+	"name":"gobal_testing",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_nD3XE-1",
+			"id":"_nD3XE",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_nD3XE-1",
+			"id":"_xPBHw",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":132116,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
