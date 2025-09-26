@@ -1,51 +1,102 @@
 {
 	"appsUsed":[
-		
+		"gsheets"
 	],
 	"createdTime":1758871916038,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_VqSLL",
+			"fromNodeId":"n_3ZYP5",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_ewuLg",
+			"toNodeId":"n_sL7EM",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_sL7EM",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_nKunm",
 			"type":"next"
 		}
 	],
 	"id":"68d6416ce52cbd208bb5274e",
 	"lastModifiedBy":177779,
 	"lcName":"fetchsheetdata",
-	"modifiedTime":1758871916038,
+	"modifiedTime":1758872123829,
 	"name":"fetchsheetdata",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":875,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_VqSLL-1",
-			"id":"_VqSLL",
-			"index":0,
+			"id":"n_3ZYP5",
+			"index":1,
+			"inputs":{},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"gsheets",
+				"resourceVersion":6070,
+				"connectionId":"68d641cb1d613d1d0b355854",
+				"resourceName":"gsheets_get_rows_batch",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_VqSLL-1",
-			"id":"_ewuLg",
-			"index":0,
+			"id":"n_sL7EM",
+			"index":2,
+			"inputs":{
+				"sheetName":"PivotTable1",
+				"valueRenderOption":"FORMATTED_VALUE",
+				"objectSourceResourceName":"gsheets_fetch_columns",
+				"range":"2:31",
+				"spreadsheetId":"1kysILiHrP7Tun1QWIZEIolyaS8eXuqelaxYui_4gZHA__test1"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Google Sheets",
+			"title":"Get rows",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":892,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_VqSLL-1",
+			"id":"n_nKunm",
+			"index":3,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":177779,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +110,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
