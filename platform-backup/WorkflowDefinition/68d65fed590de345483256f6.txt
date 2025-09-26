@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		
+		"storage_by_unifyapps"
 	],
 	"createdTime":1758879725107,
 	"deleted":false,
@@ -18,12 +18,19 @@
 			"skip":false,
 			"toNodeId":"n_UA0Cz",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_UA0Cz",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_dpKPY",
+			"type":"next"
 		}
 	],
 	"id":"68d65fed590de345483256f6",
 	"lastModifiedBy":49915,
 	"lcName":"test null",
-	"modifiedTime":1758899029035,
+	"modifiedTime":1758899105304,
 	"name":"test null",
 	"nodes":[
 		{
@@ -135,6 +142,33 @@
 			"subTitle":"Streams by UnifyApps",
 			"title":"Publish event to stream",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":4327,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_TUpm0-1",
+			"id":"n_dpKPY",
+			"index":4,
+			"inputs":{
+				"writeThroughSessionVariables":false,
+				"object_type":"dhrupal_test_obect",
+				"skipIfBlank":false,
+				"record":{
+					"field1":"{{ n_JkIiV.outputs.random }}",
+					"field2":"hello"
+				}
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create record",
+			"type":"ACTION"
 		}
 	],
 	"ownerUserId":49915,
@@ -154,5 +188,5 @@
 	"tags":[
 		
 	],
-	"version":16
+	"version":17
 }
