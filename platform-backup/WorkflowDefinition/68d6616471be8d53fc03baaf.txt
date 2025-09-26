@@ -37,7 +37,7 @@
 	"id":"68d6616471be8d53fc03baaf",
 	"lastModifiedBy":39713,
 	"lcName":"test-nullstr",
-	"modifiedTime":1758880633241,
+	"modifiedTime":1758880646096,
 	"name":"test-nullstr",
 	"nodes":[
 		{
@@ -96,9 +96,7 @@
 					]
 				}
 			},
-			"inputs":{
-				"str":"scasca"
-			},
+			"inputs":{},
 			"outputSchema":{
 				"dynamic":false,
 				"schema":{
@@ -326,5 +324,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
