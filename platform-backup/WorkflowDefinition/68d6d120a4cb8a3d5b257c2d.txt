@@ -23,7 +23,7 @@
 	"id":"68d6d120a4cb8a3d5b257c2d",
 	"lastModifiedBy":124029,
 	"lcName":"na",
-	"modifiedTime":1758908764214,
+	"modifiedTime":1758908789577,
 	"name":"na",
 	"nodes":[
 		{
@@ -132,7 +132,7 @@
 				}
 			},
 			"inputs":{
-				"name":"{{ n_IIhwY.outputs.age }}_kos"
+				"name":"\"{{ n_IIhwY.outputs.age }}\"_kos"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -171,5 +171,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
