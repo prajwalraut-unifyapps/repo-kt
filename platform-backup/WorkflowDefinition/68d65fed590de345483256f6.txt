@@ -23,7 +23,7 @@
 	"id":"68d65fed590de345483256f6",
 	"lastModifiedBy":39715,
 	"lcName":"test null",
-	"modifiedTime":1758891836042,
+	"modifiedTime":1758891865061,
 	"name":"test null",
 	"nodes":[
 		{
@@ -125,7 +125,7 @@
 			"index":3,
 			"inputs":{
 				"streamId":"e_68d66079793bfd127f1b3372",
-				"skipInputValidation":true,
+				"skipInputValidation":false,
 				"event":{
 					"tesaitn":"{{ n_MkQPk.outputs.body }}",
 					"tesigng":"hello"
@@ -154,5 +154,5 @@
 	"tags":[
 		
 	],
-	"version":10
+	"version":11
 }
