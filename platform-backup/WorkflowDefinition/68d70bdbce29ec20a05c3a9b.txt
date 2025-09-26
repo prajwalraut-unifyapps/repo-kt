@@ -5,12 +5,12 @@
 	"createdTime":1758923774995,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758923818441,
+		"deployedAt":1758923818341,
 		"deployedBy":175325,
-		"deployedDefinitionId":"68d70c2a8f6b3c2db83fbc4a",
+		"deployedDefinitionId":"68d70c2a8f6b3c2db83fbc49",
 		"status":"DEPLOYED",
-		"version":5,
-		"workflowVersion":6
+		"version":4,
+		"workflowVersion":5
 	},
 	"edges":[
 		{
@@ -24,7 +24,7 @@
 	"id":"68d70bdbce29ec20a05c3a9b",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa258arpgpc5bgc",
-	"modifiedTime":1758923818455,
+	"modifiedTime":1758923818357,
 	"name":"changeSetQA258ArPgpC5bgC",
 	"nodes":[
 		{
@@ -95,7 +95,7 @@
 			"index":0,
 			"inputs":{
 				"result":{
-					"c":"= MIN({{ 7pKsG.outputs.a }},{{ 7pKsG.outputs.b }})"
+					"c":"=PRODUCT({{ 7pKsG.outputs.a }},{{ 7pKsG.outputs.b }})"
 				}
 			},
 			"skip":false,
@@ -121,5 +121,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":6
 }
