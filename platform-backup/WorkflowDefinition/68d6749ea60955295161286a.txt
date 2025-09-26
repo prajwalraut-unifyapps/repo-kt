@@ -1,12 +1,12 @@
 {
 	"appsUsed":[
-		
+		"bill"
 	],
 	"createdTime":1758885022364,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_6c492",
+			"fromNodeId":"n_dWb4C",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"_eJYAA",
@@ -16,18 +16,30 @@
 	"id":"68d6749ea60955295161286a",
 	"lastModifiedBy":2621,
 	"lcName":"test",
-	"modifiedTime":1758885022364,
+	"modifiedTime":1758885048465,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"bill",
+				"resourceVersion":296,
+				"connectionId":"68d3d2f83b40ca75987490bc",
+				"resourceName":"bill_on_new_approved_bill_polling"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_6c492-1",
-			"id":"_6c492",
-			"index":0,
+			"id":"n_dWb4C",
+			"index":1,
+			"inputs":{
+				"fromDate":"2025-09-22T11:10:00.000Z",
+				"interval":1,
+				"batchSize":5
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Bill",
+			"title":"New approved bill",
 			"trigger":{
 				"type":"EVENT"
 			},
@@ -39,13 +51,16 @@
 			"fallbackMode":"STOP",
 			"groupId":"_6c492-1",
 			"id":"_eJYAA",
-			"index":0,
+			"index":2,
 			"skip":false,
 			"title":"Select an app and action",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":2621,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +74,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
