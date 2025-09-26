@@ -6,46 +6,103 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_9y5no",
+			"fromNodeId":"n_SXiIP",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_Eo2Zn",
+			"toNodeId":"n_foVli",
 			"type":"next"
 		}
 	],
 	"id":"68d637a23ede64799c4ca55a",
-	"lastModifiedBy":2721,
+	"lastModifiedBy":39713,
 	"lcName":"test",
-	"modifiedTime":1758869410079,
+	"modifiedTime":1758873966324,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_9y5no-1",
-			"id":"_9y5no",
-			"index":0,
+			"id":"n_SXiIP",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"analytics_by_unifyapps",
+				"resourceVersion":866,
+				"resourceName":"analytics_by_unifyapps_query_reports",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_9y5no-1",
-			"id":"_Eo2Zn",
-			"index":0,
+			"id":"n_foVli",
+			"index":2,
+			"inputs":{
+				"projections":[
+					{
+						"name":"NODE_ID",
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false
+					},
+					{
+						"name":"LOOP_CONTEXT",
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false
+					},
+					{
+						"name":"ID",
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false
+					}
+				],
+				"filter":{
+					"filters":[
+						{
+							"property":"NODE_ID",
+							"filter":{
+								"operator":"EQUAL"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"entityType":"WORKFLOW_ITERATION_VARIABLE",
+				"page":{
+					"offset":0,
+					"limit":1000
+				},
+				"group":"PLATFORM"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Analytics by UnifyApps",
+			"title":"Analytics Query",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":2721,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +116,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
