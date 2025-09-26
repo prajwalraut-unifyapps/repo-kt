@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758884655839,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_KRODA",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_goWKJ",
+			"type":"next"
+		}
+	],
+	"id":"68d6732fa609552951612303",
+	"lastModifiedBy":175325,
+	"lcName":"codebyunifyappslocalinpcgrokce",
+	"modifiedTime":1758884655839,
+	"name":"CodeByUnifyAppsLocalInpcgrOKce",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_KRODA-1",
+			"id":"_KRODA",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_KRODA-1",
+			"id":"_goWKJ",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
