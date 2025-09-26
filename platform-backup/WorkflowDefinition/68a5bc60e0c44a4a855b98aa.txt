@@ -54,7 +54,7 @@
 	"id":"68a5bc60e0c44a4a855b98aa",
 	"lastModifiedBy":161877,
 	"lcName":"newintegerwhileloopdoesnotcontaincondition_dnd",
-	"modifiedTime":1758874194692,
+	"modifiedTime":1758874847194,
 	"name":"NewIntegerWhileloopDoesNotContainCondition_DND",
 	"nodes":[
 		{
@@ -113,7 +113,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_KfZns-1",
 			"id":"n_DQdIq",
@@ -137,7 +137,7 @@
 				}
 			},
 			"inputs":{
-				"a":8
+				"a":5
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -179,7 +179,7 @@
 						{
 							"property":"{{ n_0NXMn.outputs.input }}",
 							"filter":{
-								"operator":"NOT_EQUAL",
+								"operator":"CONTAINS",
 								"value":"{{ n_DQdIq.outputs.a }}"
 							}
 						}
@@ -257,5 +257,5 @@
 		}
 	},
 	"standard":false,
-	"version":4
+	"version":5
 }
