@@ -4,6 +4,14 @@
 	],
 	"createdTime":1758806133557,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758885879711,
+		"deployedBy":308,
+		"deployedDefinitionId":"68d677f62ac8195da659cba6",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":12
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_OkoW1",
@@ -89,7 +97,7 @@
 	"id":"68d540755b80e35573f6e71a",
 	"lastModifiedBy":308,
 	"lcName":"skipbranch",
-	"modifiedTime":1758885814022,
+	"modifiedTime":1758886070076,
 	"name":"skipBranch",
 	"nodes":[
 		{
@@ -204,7 +212,7 @@
 					"operator":"AND"
 				}
 			},
-			"skip":true,
+			"skip":false,
 			"title":"",
 			"type":"BRANCH_CONDITION"
 		},
@@ -216,7 +224,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_ofoOq@_rX4O4-1@1",
 			"id":"n_Yf4gq",
@@ -256,7 +264,7 @@
 					]
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Variable by UnifyApps",
 			"title":"Create variables",
 			"type":"ACTION"
@@ -747,5 +755,5 @@
 	"tags":[
 		
 	],
-	"version":12
+	"version":13
 }
