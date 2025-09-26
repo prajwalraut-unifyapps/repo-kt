@@ -89,7 +89,7 @@
 	"id":"68d540755b80e35573f6e71a",
 	"lastModifiedBy":132116,
 	"lcName":"skipbranch",
-	"modifiedTime":1758872746413,
+	"modifiedTime":1758872757508,
 	"name":"skipBranch",
 	"nodes":[
 		{
@@ -184,7 +184,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_ofoOq@_rX4O4-1@1",
 			"id":"n_ofoOq@1",
@@ -204,7 +204,7 @@
 					"operator":"AND"
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"title":"",
 			"type":"BRANCH_CONDITION"
 		},
@@ -747,5 +747,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
