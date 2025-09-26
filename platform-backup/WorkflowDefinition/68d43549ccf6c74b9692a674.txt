@@ -127,9 +127,9 @@
 		}
 	],
 	"id":"68d43549ccf6c74b9692a674",
-	"lastModifiedBy":132116,
+	"lastModifiedBy":39713,
 	"lcName":"branches_inside_nestedloops  (1)",
-	"modifiedTime":1758868659406,
+	"modifiedTime":1758868844601,
 	"name":"branches_inside_nestedloops  (1)",
 	"nodes":[
 		{
@@ -322,7 +322,7 @@
 							"conditions":{
 								"filters":[
 									{
-										"property":"1",
+										"property":"{{ n_Olbk1.outputs.index }}",
 										"filter":{
 											"operator":"EQUAL",
 											"value":"1"
@@ -416,7 +416,7 @@
 				"conditions":{
 					"filters":[
 						{
-							"property":"1",
+							"property":"{{ n_Olbk1.outputs.index }}",
 							"filter":{
 								"operator":"EQUAL",
 								"value":"1"
@@ -479,5 +479,5 @@
 		"enableVariableLogging":true
 	},
 	"standard":false,
-	"version":30
+	"version":31
 }
