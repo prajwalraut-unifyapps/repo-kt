@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758871214102,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_2gdGV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_oo1OR",
+			"type":"next"
+		}
+	],
+	"id":"68d63eaefad2330b7f775b2f",
+	"lastModifiedBy":45010,
+	"lcName":"wefd",
+	"modifiedTime":1758871214102,
+	"name":"wefd",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_2gdGV-1",
+			"id":"_2gdGV",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_2gdGV-1",
+			"id":"_oo1OR",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":45010,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
