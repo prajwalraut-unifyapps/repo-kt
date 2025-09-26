@@ -31,6 +31,13 @@
 			"fromNodeId":"_eYsJE",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_Tlb5h",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Tlb5h",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_U2lhK",
 			"type":"next"
 		},
@@ -59,7 +66,7 @@
 	"id":"68d5259021071f0aa2fd8a6e",
 	"lastModifiedBy":155341,
 	"lcName":"insights | failure percentage of all automations",
-	"modifiedTime":1758861671051,
+	"modifiedTime":1758863214791,
 	"name":"INSIGHTS | Failure percentage of all automations",
 	"nodes":[
 		{
@@ -190,6 +197,65 @@
 			"type":"ACTION"
 		},
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"custom_http_endpoint",
+				"resourceVersion":869,
+				"resourceName":"custom_http_endpoint_execute",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_MdNb4-1",
+			"id":"n_Tlb5h",
+			"index":4,
+			"inputs":{
+				"isAsync":false,
+				"enableProxy":false,
+				"requestTimeoutInSecs":-1,
+				"httpMethod":"POST",
+				"body":{
+					"sql":"{{ n_lEZw0.outputs.statement.sql }}"
+				},
+				"connectionType":"DIRECT",
+				"sslVerify":true,
+				"path":"/sql-report/runSQL/query/{{ n_lEZw0.outputs.customerId }}",
+				"baseUrl":"http://internal-global-svc:80/internal",
+				"httpVersion":"HTTP_2",
+				"bodySchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"sql":{
+							"type":"string",
+							"title":"Sql"
+						}
+					}
+				},
+				"queryParamsList":[
+					{
+						"key":"sqlResourceType",
+						"value":"{{ n_lEZw0.outputs.resourceType }}"
+					}
+				],
+				"responseContentType":"application/json",
+				"authType":"CUSTOM",
+				"requestContentType":"application/json",
+				"ignoreTrailingSlashes":false,
+				"certificateType":"CERT_STRING"
+			},
+			"skip":false,
+			"subTitle":"Custom HTTP Endpoint",
+			"title":"Execute REST request",
+			"type":"ACTION"
+		},
+		{
 			"context":{
 				"appName":"callables",
 				"resourceVersion":123,
@@ -201,7 +267,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_MdNb4-1",
 			"id":"n_U2lhK",
-			"index":4,
+			"index":5,
 			"inputs":{
 				"automationId":"68b932d26607f33c4d7f0988",
 				"runtimeConnections":{},
@@ -277,7 +343,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_MdNb4-1",
 			"id":"n_udMD7",
-			"index":5,
+			"index":6,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -348,7 +414,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_MdNb4-1",
 			"id":"n_IafbM",
-			"index":6,
+			"index":7,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -415,7 +481,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_MdNb4-1",
 			"id":"n_LMCf4",
-			"index":7,
+			"index":8,
 			"inputs":{
 				"result":{
 					"result":{
@@ -448,5 +514,5 @@
 	"tags":[
 		
 	],
-	"version":36
+	"version":37
 }
