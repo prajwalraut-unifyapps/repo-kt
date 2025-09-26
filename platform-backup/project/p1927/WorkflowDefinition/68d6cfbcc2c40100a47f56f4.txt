@@ -1,0 +1,64 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758908348635,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_RcjTs",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Vn4ty",
+			"type":"next"
+		}
+	],
+	"id":"68d6cfbcc2c40100a47f56f4",
+	"lastModifiedBy":39715,
+	"lcName":"[azure-function]detect-changes",
+	"modifiedTime":1758908348635,
+	"name":"[Azure-function]Detect-Changes",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_RcjTs-1",
+			"id":"_RcjTs",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_RcjTs-1",
+			"id":"_Vn4ty",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":39715,
+	"projectId":1927,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
