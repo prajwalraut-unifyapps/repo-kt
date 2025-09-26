@@ -5,12 +5,12 @@
 	"createdTime":1758871916038,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758872138324,
+		"deployedAt":1758882168291,
 		"deployedBy":177779,
-		"deployedDefinitionId":"68d6424ae52cbd208bb53bd7",
+		"deployedDefinitionId":"68d66977cb275854d9fa9583",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":2
+		"version":2,
+		"workflowVersion":6
 	},
 	"edges":[
 		{
@@ -31,7 +31,7 @@
 	"id":"68d6416ce52cbd208bb5274e",
 	"lastModifiedBy":177779,
 	"lcName":"fetchsheetdata",
-	"modifiedTime":1758882164328,
+	"modifiedTime":1758883009584,
 	"name":"fetchsheetdata",
 	"nodes":[
 		{
@@ -52,13 +52,34 @@
 					"additionalProperties":false,
 					"required":[],
 					"properties":{
-						"a":{
+						"data":{
+							"type":"object",
+							"properties":{
+								"a":{
+									"type":"string",
+									"title":"A"
+								},
+								"b":{
+									"type":"number",
+									"title":"B"
+								}
+							},
+							"additionalProperties":false,
+							"title":"data",
+							"required":[]
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"key"
+					],
+					"properties":{
+						"key":{
 							"type":"string",
-							"title":"A"
-						},
-						"b":{
-							"type":"number",
-							"title":"B"
+							"title":"Key"
 						}
 					}
 				}
@@ -112,8 +133,10 @@
 			"index":3,
 			"inputs":{
 				"result":{
-					"a":"{{ n_sL7EM.outputs.rows[0].Department__0 }}",
-					"b":"{{ n_sL7EM.outputs.rows[0].AVERAGE_of_Salary__INR___1 }}"
+					"data":{
+						"a":"{{ n_sL7EM.outputs.rows[0].Department__0 }}",
+						"b":"{{ n_sL7EM.outputs.rows[0].AVERAGE_of_Salary__INR___1 }}"
+					}
 				}
 			},
 			"skip":false,
@@ -139,5 +162,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
