@@ -119,7 +119,7 @@
 	"id":"687de888751a16fc60317674",
 	"lastModifiedBy":161877,
 	"lcName":"newiterateintegervaluesusingwhileloop_dnd",
-	"modifiedTime":1758879860064,
+	"modifiedTime":1758880051786,
 	"name":"NewIterateIntegerValuesUsingWhileLoop_DND",
 	"nodes":[
 		{
@@ -490,7 +490,7 @@
 							"maskedFields":[
 								
 							],
-							"message":"fgh",
+							"message":"loop : {{ n_u5NuJ.outputs.index }}",
 							"onlyOnFailure":false
 						}
 					]
@@ -613,5 +613,5 @@
 	"tags":[
 		
 	],
-	"version":17
+	"version":18
 }
