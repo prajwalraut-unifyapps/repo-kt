@@ -16,36 +16,6 @@
 			"fromNodeId":"n_tcNwu",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_Zy6vf",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_Zy6vf",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_zrYbb",
-			"type":"if"
-		},
-		{
-			"fromNodeId":"n_Zy6vf",
-			"name":"no",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_5ypWP",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_zrYbb",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_ZVR2n",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_5ypWP",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_ZVR2n",
 			"type":"next"
 		},
@@ -67,7 +37,7 @@
 	"id":"68d6616471be8d53fc03baaf",
 	"lastModifiedBy":39713,
 	"lcName":"test-nullstr",
-	"modifiedTime":1758881897243,
+	"modifiedTime":1758881902998,
 	"name":"test-nullstr",
 	"nodes":[
 		{
@@ -150,47 +120,6 @@
 		},
 		{
 			"context":{
-				"appName":"if_else",
-				"resourceVersion":773,
-				"resourceName":"if_else_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_n1Giy-1",
-			"id":"n_Zy6vf",
-			"index":3,
-			"inputs":{},
-			"skip":false,
-			"subTitle":"Condition",
-			"title":"Condition",
-			"type":"IF_ELSE"
-		},
-		{
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"n_Zy6vf@_n1Giy-1@y",
-			"id":"n_zrYbb",
-			"index":4,
-			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
-		},
-		{
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"n_Zy6vf@_n1Giy-1@n",
-			"id":"n_5ypWP",
-			"index":5,
-			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"variable_by_unifyapps",
 				"resourceVersion":921,
 				"resourceName":"variable_by_unifyapps_create_variables",
@@ -201,7 +130,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_n1Giy-1",
 			"id":"n_ZVR2n",
-			"index":6,
+			"index":3,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -252,7 +181,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_n1Giy-1",
 			"id":"n_dmVtP",
-			"index":7,
+			"index":4,
 			"inputs":{
 				"variables":[
 					{
@@ -338,7 +267,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_n1Giy-1",
 			"id":"n_DpHSL",
-			"index":8,
+			"index":5,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -395,5 +324,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
