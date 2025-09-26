@@ -30,7 +30,7 @@
 	"id":"68d65fed590de345483256f6",
 	"lastModifiedBy":49915,
 	"lcName":"test null",
-	"modifiedTime":1758902919240,
+	"modifiedTime":1758903001602,
 	"name":"test null",
 	"nodes":[
 		{
@@ -66,7 +66,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_TUpm0-1",
 			"id":"n_JkIiV",
@@ -102,7 +102,7 @@
 					"required":[]
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Variable by UnifyApps",
 			"title":"Create variables",
 			"type":"ACTION"
@@ -125,7 +125,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_TUpm0-1",
 			"id":"n_UA0Cz",
@@ -138,7 +138,7 @@
 					"tesigng":"hello"
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Streams by UnifyApps",
 			"title":"Publish event to stream",
 			"type":"ACTION"
@@ -165,7 +165,7 @@
 					"field2":"hello"
 				}
 			},
-			"skip":true,
+			"skip":false,
 			"subTitle":"Storage by UnifyApps",
 			"title":"Create record",
 			"type":"ACTION"
@@ -188,5 +188,5 @@
 	"tags":[
 		
 	],
-	"version":18
+	"version":19
 }
