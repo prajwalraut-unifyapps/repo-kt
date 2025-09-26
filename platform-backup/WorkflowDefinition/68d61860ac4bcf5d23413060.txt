@@ -1,7 +1,6 @@
 {
 	"appsUsed":[
-		"gcalendar",
-		"gmeet"
+		"gcalendar"
 	],
 	"createdTime":1758861408264,
 	"deleted":false,
@@ -10,21 +9,21 @@
 			"fromNodeId":"n_VYC32",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_VsV6c",
+			"toNodeId":"n_i1WaO",
 			"type":"next"
 		}
 	],
 	"id":"68d61860ac4bcf5d23413060",
 	"lastModifiedBy":177799,
 	"lcName":"test_rishabh",
-	"modifiedTime":1758866676877,
+	"modifiedTime":1758866888927,
 	"name":"test_rishabh",
 	"nodes":[
 		{
 			"context":{
 				"appName":"gcalendar",
 				"resourceVersion":5694,
-				"connectionId":"687a25eab9557b7d3b47346a",
+				"connectionId":"68d62d3c39e5ff5d92dc0453",
 				"resourceName":"gcalendar_on_event_changes"
 			},
 			"debug":false,
@@ -33,7 +32,9 @@
 			"groupId":"_mzkHe-1",
 			"id":"n_VYC32",
 			"index":1,
-			"inputs":{},
+			"inputs":{
+				"calendarId":"primary"
+			},
 			"skip":false,
 			"subTitle":"Google Calendar",
 			"title":"Event changed (Google Calendar)",
@@ -44,19 +45,18 @@
 		},
 		{
 			"context":{
-				"appName":"gmeet",
-				"type":"APPLICATION"
+				"appName":"stop"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_mzkHe-1",
-			"id":"n_VsV6c",
+			"id":"n_i1WaO",
 			"index":2,
 			"skip":false,
-			"subTitle":"Google Meet",
-			"title":"Select an action",
-			"type":"ACTION"
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":177799,
@@ -76,5 +76,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
