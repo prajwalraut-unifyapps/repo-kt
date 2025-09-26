@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758883741102,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_PilfI",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_CYSRR",
+			"type":"next"
+		}
+	],
+	"id":"68d66f9dcb275854d9fbe394",
+	"lastModifiedBy":124029,
+	"lcName":"bill rms test",
+	"modifiedTime":1758883741102,
+	"name":"bill rms test",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_PilfI-1",
+			"id":"_PilfI",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_PilfI-1",
+			"id":"_CYSRR",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":124029,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
