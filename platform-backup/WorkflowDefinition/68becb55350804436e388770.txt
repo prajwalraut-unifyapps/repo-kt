@@ -5,12 +5,12 @@
 	"createdTime":1757334357097,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1757397447446,
+		"deployedAt":1758872296667,
 		"deployedBy":177779,
-		"deployedDefinitionId":"68bfc1c79f5fdc082f0715bd",
+		"deployedDefinitionId":"68d642e8e52cbd208bb561f7",
 		"status":"DEPLOYED",
-		"version":5,
-		"workflowVersion":11
+		"version":6,
+		"workflowVersion":13
 	},
 	"edges":[
 		{
@@ -31,7 +31,7 @@
 	"id":"68becb55350804436e388770",
 	"lastModifiedBy":177779,
 	"lcName":"test_automation",
-	"modifiedTime":1758872294319,
+	"modifiedTime":1758883988855,
 	"name":"test_automation",
 	"nodes":[
 		{
@@ -129,7 +129,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_o6tTY-1",
 			"id":"n_OpY9s",
@@ -137,7 +137,7 @@
 			"inputs":{
 				"result":{
 					"answer":{
-						"source":"{{ n_hC2PI.outputs.rows }}",
+						"source":"{{ n_hC2PI.outputs.rows[0] }}",
 						"ua:type":"mappedArray",
 						"items":{
 							"c1":"{{ n_hC2PI.outputs.rows[0].Department__0 }}",
@@ -169,5 +169,5 @@
 	"tags":[
 		
 	],
-	"version":13
+	"version":14
 }
