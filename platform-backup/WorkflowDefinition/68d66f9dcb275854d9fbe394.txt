@@ -5,25 +5,19 @@
 	"createdTime":1758883741102,
 	"deleted":false,
 	"edges":[
-		{
-			"fromNodeId":"n_I75Mv",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_CYSRR",
-			"type":"next"
-		}
+		
 	],
 	"id":"68d66f9dcb275854d9fbe394",
 	"lastModifiedBy":124029,
 	"lcName":"bill rms test",
-	"modifiedTime":1758883769507,
+	"modifiedTime":1758883784808,
 	"name":"bill rms test",
 	"nodes":[
 		{
 			"context":{
 				"appName":"bill",
 				"resourceVersion":296,
-				"connectionId":"68d3d005cb5b8a32dcc3e105",
+				"connectionId":"68d3d2f83b40ca75987490bc",
 				"resourceName":"bill_on_new_approved_bill_polling"
 			},
 			"debug":false,
@@ -43,17 +37,6 @@
 				"type":"EVENT"
 			},
 			"type":"START"
-		},
-		{
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_PilfI-1",
-			"id":"_CYSRR",
-			"index":2,
-			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
 		}
 	],
 	"ownerUserId":124029,
@@ -73,5 +56,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
