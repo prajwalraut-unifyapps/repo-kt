@@ -5,12 +5,12 @@
 	"createdTime":1758737737608,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758821839749,
-		"deployedBy":132116,
-		"deployedDefinitionId":"68d57dcf0c11f2283aa5f0fa",
+		"deployedAt":1758867910556,
+		"deployedBy":39713,
+		"deployedDefinitionId":"68d631c5ac4bcf5d23436864",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":9
+		"version":3,
+		"workflowVersion":25
 	},
 	"edges":[
 		{
@@ -127,9 +127,9 @@
 		}
 	],
 	"id":"68d43549ccf6c74b9692a674",
-	"lastModifiedBy":39713,
+	"lastModifiedBy":132116,
 	"lcName":"branches_inside_nestedloops  (1)",
-	"modifiedTime":1758867372238,
+	"modifiedTime":1758868095823,
 	"name":"branches_inside_nestedloops  (1)",
 	"nodes":[
 		{
@@ -322,7 +322,7 @@
 							"conditions":{
 								"filters":[
 									{
-										"property":"{{ n_Olbk1.outputs.index }}",
+										"property":"1",
 										"filter":{
 											"operator":"EQUAL",
 											"value":"1"
@@ -416,7 +416,7 @@
 				"conditions":{
 					"filters":[
 						{
-							"property":"{{ n_Olbk1.outputs.index }}",
+							"property":"1",
 							"filter":{
 								"operator":"EQUAL",
 								"value":"1"
@@ -486,5 +486,5 @@
 	"tags":[
 		
 	],
-	"version":25
+	"version":26
 }
