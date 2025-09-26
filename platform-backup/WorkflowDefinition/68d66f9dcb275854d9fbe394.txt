@@ -1,12 +1,12 @@
 {
 	"appsUsed":[
-		
+		"bill"
 	],
 	"createdTime":1758883741102,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_PilfI",
+			"fromNodeId":"n_I75Mv",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"_CYSRR",
@@ -16,18 +16,29 @@
 	"id":"68d66f9dcb275854d9fbe394",
 	"lastModifiedBy":124029,
 	"lcName":"bill rms test",
-	"modifiedTime":1758883741102,
+	"modifiedTime":1758883769507,
 	"name":"bill rms test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"bill",
+				"resourceVersion":296,
+				"connectionId":"68d3d005cb5b8a32dcc3e105",
+				"resourceName":"bill_on_new_approved_bill_polling"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_PilfI-1",
-			"id":"_PilfI",
-			"index":0,
+			"id":"n_I75Mv",
+			"index":1,
+			"inputs":{
+				"interval":1,
+				"batchSize":100
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Bill",
+			"title":"New approved bill",
 			"trigger":{
 				"type":"EVENT"
 			},
@@ -39,13 +50,16 @@
 			"fallbackMode":"STOP",
 			"groupId":"_PilfI-1",
 			"id":"_CYSRR",
-			"index":0,
+			"index":2,
 			"skip":false,
 			"title":"Select an app and action",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":124029,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +73,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
