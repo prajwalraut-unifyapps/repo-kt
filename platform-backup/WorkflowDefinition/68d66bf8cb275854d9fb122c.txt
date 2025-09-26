@@ -5,25 +5,19 @@
 	"createdTime":1758882808507,
 	"deleted":false,
 	"edges":[
-		{
-			"fromNodeId":"n_5J0Mh",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_RT4LW",
-			"type":"next"
-		}
+		
 	],
 	"id":"68d66bf8cb275854d9fb122c",
 	"lastModifiedBy":124029,
 	"lcName":"bill test 2",
-	"modifiedTime":1758882840051,
+	"modifiedTime":1758882859880,
 	"name":"bill test 2",
 	"nodes":[
 		{
 			"context":{
 				"appName":"bill",
 				"resourceVersion":296,
-				"connectionId":"68d3d2f83b40ca75987490bc",
+				"connectionId":"68d3d005cb5b8a32dcc3e105",
 				"resourceName":"bill_on_new_approved_bill_polling"
 			},
 			"debug":false,
@@ -44,17 +38,6 @@
 				"type":"EVENT"
 			},
 			"type":"START"
-		},
-		{
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_fxgyz-1",
-			"id":"_RT4LW",
-			"index":2,
-			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
 		}
 	],
 	"ownerUserId":124029,
@@ -74,5 +57,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
