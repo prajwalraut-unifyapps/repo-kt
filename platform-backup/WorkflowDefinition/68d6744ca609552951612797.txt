@@ -10,7 +10,7 @@
 	"id":"68d6744ca609552951612797",
 	"lastModifiedBy":124029,
 	"lcName":"bill test batch",
-	"modifiedTime":1758884974806,
+	"modifiedTime":1758884987700,
 	"name":"bill test batch",
 	"nodes":[
 		{
@@ -29,7 +29,7 @@
 			"inputs":{
 				"fromDate":"2025-09-23T11:09:00.000Z",
 				"interval":1,
-				"batchSize":100
+				"batchSize":15
 			},
 			"skip":false,
 			"subTitle":"Bill",
@@ -57,5 +57,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
