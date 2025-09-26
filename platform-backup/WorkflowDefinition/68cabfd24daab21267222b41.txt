@@ -5,12 +5,12 @@
 	"createdTime":1758117842838,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758120534815,
+		"deployedAt":1758870131969,
 		"deployedBy":46030,
-		"deployedDefinitionId":"68caca5665f6493657ec08fb",
+		"deployedDefinitionId":"68d63a73c156f5666b056a12",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":7
+		"version":3,
+		"workflowVersion":8
 	},
 	"edges":[
 		{
@@ -88,7 +88,7 @@
 	"id":"68cabfd24daab21267222b41",
 	"lastModifiedBy":46030,
 	"lcName":"match string | get workflows [do not touch]",
-	"modifiedTime":1758870131556,
+	"modifiedTime":1758870347123,
 	"name":"Match String | Get Workflows [DO NOT TOUCH]",
 	"nodes":[
 		{
@@ -690,8 +690,7 @@
 		{
 			"additional":{
 				"visibleOptionalFields":[
-					"root.parameters.matchedDatasources.items",
-					"root.parameters.datasources.items"
+					"root.parameters.workflows.items"
 				]
 			},
 			"context":{
@@ -701,7 +700,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_4vBtN@_9b6Im-1@l",
 			"id":"n_JwEjH",
@@ -745,11 +744,16 @@
 						}
 					}
 				},
-				"compile_static":false,
 				"code":"def count = 0;\ndef matched = [];\n\nworkflows.each{ workflow -> \n  if (workflow?.toString()?.contains(matchString)) {\n    count++;\n    matched.add(workflow._id)\n  }\n}\n\nreturn [matchCount: count, matchedPages: matched];",
+				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
-					"matchString":"{{ n_o1ueN.outputs.matchString }}"
+					"matchString":"{{ n_o1ueN.outputs.matchString }}",
+					"workflows":{
+						"source":"{{ _ey7jJ.outputs.result }}",
+						"ua:type":"mappedArray",
+						"items":"{{ _ey7jJ.outputs.result }}"
+					}
 				}
 			},
 			"skip":false,
@@ -862,5 +866,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
