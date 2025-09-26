@@ -62,7 +62,7 @@
 			"fromNodeId":"n_ofoOq@3",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_NLDyx",
+			"toNodeId":"n_yUU0a",
 			"type":"next"
 		},
 		{
@@ -80,7 +80,7 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_NLDyx",
+			"fromNodeId":"n_yUU0a",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_JC65o",
@@ -119,7 +119,7 @@
 	"id":"68d540755b80e35573f6e71a",
 	"lastModifiedBy":308,
 	"lcName":"skipbranch",
-	"modifiedTime":1758886161998,
+	"modifiedTime":1758886179922,
 	"name":"skipBranch",
 	"nodes":[
 		{
@@ -427,14 +427,58 @@
 			"type":"BRANCH_CONDITION"
 		},
 		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":921,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_ofoOq@_rX4O4-1@3",
-			"id":"n_NLDyx",
+			"id":"n_yUU0a",
 			"index":8,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"asdf":{
+							"type":"string",
+							"title":"Asdf"
+						}
+					},
+					"required":[
+						"asdf"
+					]
+				}
+			},
+			"inputs":{
+				"asdf":"sd"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"asdf":{
+							"type":"string",
+							"title":"Asdf"
+						}
+					},
+					"required":[
+						"asdf"
+					]
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
 			"type":"ACTION"
 		},
 		{
@@ -838,5 +882,5 @@
 	"tags":[
 		
 	],
-	"version":15
+	"version":16
 }
