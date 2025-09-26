@@ -66,7 +66,7 @@
 	"id":"68d5259021071f0aa2fd8a6e",
 	"lastModifiedBy":155341,
 	"lcName":"insights | failure percentage of all automations",
-	"modifiedTime":1758863214791,
+	"modifiedTime":1758863220067,
 	"name":"INSIGHTS | Failure percentage of all automations",
 	"nodes":[
 		{
@@ -514,5 +514,5 @@
 	"tags":[
 		
 	],
-	"version":37
+	"version":38
 }
