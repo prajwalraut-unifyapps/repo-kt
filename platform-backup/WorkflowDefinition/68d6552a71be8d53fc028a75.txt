@@ -24,7 +24,7 @@
 	"id":"68d6552a71be8d53fc028a75",
 	"lastModifiedBy":185583,
 	"lcName":"task_pm_delete",
-	"modifiedTime":1758884516525,
+	"modifiedTime":1758884567558,
 	"name":"task_pm_delete",
 	"nodes":[
 		{
@@ -101,7 +101,7 @@
 				"object_type":"data_mau",
 				"numberOfRecordsToDelete":"MULTIPLE",
 				"page":{
-					"limit":1000,
+					"limit":100,
 					"offset":100
 				}
 			},
@@ -151,5 +151,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
