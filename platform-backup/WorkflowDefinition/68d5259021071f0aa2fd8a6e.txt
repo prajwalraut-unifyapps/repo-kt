@@ -66,7 +66,7 @@
 	"id":"68d5259021071f0aa2fd8a6e",
 	"lastModifiedBy":155341,
 	"lcName":"insights | failure percentage of all automations",
-	"modifiedTime":1758866693056,
+	"modifiedTime":1758866706820,
 	"name":"INSIGHTS | Failure percentage of all automations",
 	"nodes":[
 		{
@@ -848,7 +848,7 @@
 						}
 					}
 				},
-				"code":"def objects = binding.hasVariable('objects') ? objects : []\ndef workflowDefinitions = binding.hasVariable('result') ? result : []\ndef origin = binding.hasVariable('origin') ? origin : ''\n\ndef workflowMap = [:]\nworkflowDefinitions.each { wf ->\n    workflowMap[wf.id] = wf\n}\n\ndef finalResult = []\n\nobjects.each { obj ->\n    def workflowId = obj.workflowId\n    def workflowDef = workflowMap[workflowId]\n    \n    // Get projectId from workflow definition or default to 0\n    def projectId = workflowDef?.projectId ?: 0\n    \n    // Get workflow name from definition\n    def workflowName = workflowDef?.name ?: \"Unknown\"\n    \n    finalResult << [\n        \"workflowId\": workflowId,\n        \"workflowName\": workflowName,\n        \"successCount\": obj.success_runs,\n        \"failedCount\": obj.failed_runs,\n        \"failedRatio\": obj.failure_ratio * 100,\n        \"totalRuns\": obj.total_runs,\n        \"url\": \"${origin}/p/${projectId}/automations/${workflowId}\".toString()\n    ]\n}\n\nreturn [\"result\": finalResult]",
+				"code":"def objects = binding.hasVariable('objects') ? objects : []\ndef workflowDefinitions = binding.hasVariable('workflowDefinitions') ? workflowDefinitions : []\ndef origin = binding.hasVariable('origin') ? origin : ''\n\ndef workflowMap = [:]\nworkflowDefinitions.each { wf ->\n    workflowMap[wf.id] = wf\n}\n\ndef finalResult = []\n\nobjects.each { obj ->\n    def workflowId = obj.workflowId\n    def workflowDef = workflowMap[workflowId]\n    \n    // Get projectId from workflow definition or default to 0\n    def projectId = workflowDef?.projectId ?: 0\n    \n    // Get workflow name from definition\n    def workflowName = workflowDef?.name ?: \"Unknown\"\n    \n    finalResult << [\n        \"workflowId\": workflowId,\n        \"workflowName\": workflowName,\n        \"successCount\": obj.success_runs,\n        \"failedCount\": obj.failed_runs,\n        \"failedRatio\": obj.failure_ratio * 100,\n        \"totalRuns\": obj.total_runs,\n        \"url\": \"${origin}/p/${projectId}/automations/${workflowId}\".toString()\n    ]\n}\n\nreturn [\"result\": finalResult]",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
@@ -915,5 +915,5 @@
 	"tags":[
 		
 	],
-	"version":50
+	"version":51
 }
