@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758884391884,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_5zm8E",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_410kn",
+			"type":"next"
+		}
+	],
+	"id":"68d67227a609552951611daa",
+	"lastModifiedBy":175325,
+	"lcName":"codebyunifyappslocalkoaufgtiln",
+	"modifiedTime":1758884391884,
+	"name":"CodeByUnifyAppsLocalkOAuFgTiLn",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_5zm8E-1",
+			"id":"_5zm8E",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_5zm8E-1",
+			"id":"_410kn",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
