@@ -66,7 +66,7 @@
 	"id":"68d5259021071f0aa2fd8a6e",
 	"lastModifiedBy":155341,
 	"lcName":"insights | failure percentage of all automations",
-	"modifiedTime":1758865651546,
+	"modifiedTime":1758865681682,
 	"name":"INSIGHTS | Failure percentage of all automations",
 	"nodes":[
 		{
@@ -235,7 +235,7 @@
 						}
 					}
 				},
-				"code":"import java.time.*\nimport java.time.format.DateTimeFormatter\n\n// Define the IST timezone\ndef istZoneId = ZoneId.of(\"Asia/Kolkata\")\n\n// Get the current date in IST\ndef todayIST = LocalDate.now(istZoneId)\n\n// Calculate the start of the day in IST (midnight)\ndef startOfTodayIST = todayIST.atStartOfDay(istZoneId)\n\n// Calculate the end of the day in IST (the last millisecond)\ndef endOfTodayIST = startOfTodayIST.plusDays(1).minusNanos(1_000_000) // .minus(1, ChronoUnit.MILLIS)\n\n// Convert to milliseconds (epoch milli is always UTC-based)\ndef startMillis = startOfTodayIST.toInstant().toEpochMilli()\ndef endMillis = endOfTodayIST.toInstant().toEpochMilli()\n\ndef limit = binding.hasVariable('limit') ? limit : 10\n\ndef query = \"\"\"\nSELECT\n    workflowId,\n    projectId,\n    COUNT(CASE WHEN status IN ('FAILED') THEN 1 END) AS failed_runs,\n    COUNT(CASE WHEN status IN ('COMPLETED') THEN 1 END) AS success_runs,\n    COUNT(*) AS total_runs,\n    CAST(COUNT(CASE WHEN status IN ('FAILED') THEN 1 END) AS FLOAT) / COUNT(*) AS failure_ratio\nFROM\n    WORKFLOW_EXECUTION\nWHERE\n    status IN ('COMPLETED', 'FAILED', 'CANCELLED', 'ACTIVE', 'WAIT', 'STOP_CONSEQUENT', 'SKIPPED')\n    AND startTime >= ${startMillis}\n    AND startTime <= ${endMillis}\nGROUP BY\n    workflowId\nORDER BY\n    failure_ratio DESC, failed_runs DESC\nLIMIT ${limit}\n\"\"\"\n\nreturn [\n    query: query.toString()\n]\n",
+				"code":"import java.time.*\nimport java.time.format.DateTimeFormatter\n\n// Define the IST timezone\ndef istZoneId = ZoneId.of(\"Asia/Kolkata\")\n\n// Get the current date in IST\ndef todayIST = LocalDate.now(istZoneId)\n\n// Calculate the start of the day in IST (midnight)\ndef startOfTodayIST = todayIST.atStartOfDay(istZoneId)\n\n// Calculate the end of the day in IST (the last millisecond)\ndef endOfTodayIST = startOfTodayIST.plusDays(1).minusNanos(1_000_000) // .minus(1, ChronoUnit.MILLIS)\n\n// Convert to milliseconds (epoch milli is always UTC-based)\ndef startMillis = startOfTodayIST.toInstant().toEpochMilli()\ndef endMillis = endOfTodayIST.toInstant().toEpochMilli()\n\ndef limit = binding.hasVariable('limit') ? limit : 10\n\ndef query = \"\"\"\nSELECT\n    workflowId,\n    COUNT(CASE WHEN status IN ('FAILED') THEN 1 END) AS failed_runs,\n    COUNT(CASE WHEN status IN ('COMPLETED') THEN 1 END) AS success_runs,\n    COUNT(*) AS total_runs,\n    CAST(COUNT(CASE WHEN status IN ('FAILED') THEN 1 END) AS FLOAT) / COUNT(*) AS failure_ratio\nFROM\n    WORKFLOW_EXECUTION\nWHERE\n    status IN ('COMPLETED', 'FAILED', 'CANCELLED', 'ACTIVE', 'WAIT', 'STOP_CONSEQUENT', 'SKIPPED')\n    AND startTime >= ${startMillis}\n    AND startTime <= ${endMillis}\nGROUP BY\n    workflowId\nORDER BY\n    failure_ratio DESC, failed_runs DESC\nLIMIT ${limit}\n\"\"\"\n\nreturn [\n    query: query.toString()\n]\n",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
@@ -892,5 +892,5 @@
 	"tags":[
 		
 	],
-	"version":47
+	"version":48
 }
