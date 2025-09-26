@@ -1,51 +1,81 @@
 {
 	"appsUsed":[
-		
+		"storage_by_unifyapps"
 	],
 	"createdTime":1758870212743,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_8u6wK",
+			"fromNodeId":"n_kziLj",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_3nkam",
+			"toNodeId":"n_mwLMe",
 			"type":"next"
 		}
 	],
 	"id":"68d63ac4c156f5666b056ab9",
-	"lastModifiedBy":124519,
+	"lastModifiedBy":45771,
 	"lcName":"test",
-	"modifiedTime":1758870212743,
+	"modifiedTime":1758873593052,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_8u6wK-1",
-			"id":"_8u6wK",
-			"index":0,
+			"id":"n_kziLj",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":4348,
+				"resourceName":"storage_by_unifyapps_export_records",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_8u6wK-1",
-			"id":"_3nkam",
-			"index":0,
+			"id":"n_mwLMe",
+			"index":2,
+			"inputs":{
+				"maxRowsPerFile":1048576,
+				"object_type":"currency",
+				"format":"MM/dd/yyyy",
+				"recordsBatchSize":100,
+				"writeToMultipleFilesIfOverflow":false,
+				"keepExactFileName":true,
+				"fileType":"CSV"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Storage by UnifyApps",
+			"title":"Export records",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":124519,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +89,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
