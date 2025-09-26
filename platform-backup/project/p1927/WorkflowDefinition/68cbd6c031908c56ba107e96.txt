@@ -4,6 +4,14 @@
 	],
 	"createdTime":1758189248372,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758785430864,
+		"deployedBy":103171,
+		"deployedDefinitionId":"68d4ef96125eb61e310c6c0b",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":8
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_g1jzk",
@@ -22,9 +30,9 @@
 	],
 	"id":"68cbd6c031908c56ba107e96",
 	"lastModifiedBy":103171,
-	"lcName":"contract_support_data_prep",
-	"modifiedTime":1758785429186,
-	"name":"Contract_support_data_prep",
+	"lcName":"[virtu-rpa-contractuploadfn] contract_support_data_prep",
+	"modifiedTime":1758891421563,
+	"name":"[virtu-rpa-contractuploadfn] Contract_support_data_prep",
 	"nodes":[
 		{
 			"context":{
@@ -166,5 +174,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
