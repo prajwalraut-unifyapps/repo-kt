@@ -18,19 +18,12 @@
 			"skip":false,
 			"toNodeId":"n_UA0Cz",
 			"type":"next"
-		},
-		{
-			"fromNodeId":"n_UA0Cz",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_KeTeI",
-			"type":"next"
 		}
 	],
 	"id":"68d65fed590de345483256f6",
 	"lastModifiedBy":49915,
 	"lcName":"test null",
-	"modifiedTime":1758879879036,
+	"modifiedTime":1758879893070,
 	"name":"test null",
 	"nodes":[
 		{
@@ -131,47 +124,11 @@
 			"id":"n_UA0Cz",
 			"index":3,
 			"inputs":{
-				"streamId":"e_687f3487c30a93f7d8417e99",
+				"streamId":"e_68d66079793bfd127f1b3372",
 				"skipInputValidation":true,
 				"event":{
-					"dateValue":"{{ n_JkIiV.outputs.randome }}",
-					"stringValue":"hello"
-				}
-			},
-			"skip":false,
-			"subTitle":"Streams by UnifyApps",
-			"title":"Publish event to stream",
-			"type":"ACTION"
-		},
-		{
-			"additional":{
-				"visibleOptionalFields":[
-					"root.event.fileValue.url",
-					"root.event.multiSelectDropdown.items",
-					"root.event.objectValue.field1",
-					"root.event.objectValue.field2",
-					"root.event.arrayValue.items.name",
-					"root.event.arrayValue.items.id"
-				]
-			},
-			"context":{
-				"appName":"streams_by_unifyapps",
-				"resourceVersion":1552,
-				"resourceName":"streams_by_unifyapps_publish_event",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_TUpm0-1",
-			"id":"_KeTeI",
-			"index":4,
-			"inputs":{
-				"streamId":"e_687f3487c30a93f7d8417e99",
-				"skipInputValidation":false,
-				"event":{
-					"dateValue":"{{ n_JkIiV.outputs.randome }}",
-					"stringValue":"hello"
+					"tesaitn":"{{ n_JkIiV.outputs.randome }}",
+					"tesigng":"hello"
 				}
 			},
 			"skip":false,
@@ -197,5 +154,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
