@@ -1,51 +1,200 @@
 {
 	"appsUsed":[
-		
+		"storage_by_unifyapps"
 	],
 	"createdTime":1758868550929,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_x7LiG",
+			"fromNodeId":"n_s4ukl",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_MHOub",
+			"toNodeId":"UVA7K",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"UVA7K",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"DBzsf",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"DBzsf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"VOHHE",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"VOHHE",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"DBzsf",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"DBzsf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"yt4tS",
 			"type":"next"
 		}
 	],
 	"id":"68d63446e96d017a23fa80ca",
 	"lastModifiedBy":20249,
 	"lcName":"rename_by_unifyapps",
-	"modifiedTime":1758868550929,
+	"modifiedTime":1758868560653,
 	"name":"Rename_by_Unifyapps",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_x7LiG-1",
-			"id":"_x7LiG",
-			"index":0,
+			"id":"n_s4ukl",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":4,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_x7LiG-1",
-			"id":"_MHOub",
-			"index":0,
+			"id":"UVA7K",
+			"index":2,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"properties_name",
+							"filter":{
+								"operator":"CONTAINS",
+								"value":"by_unifyapps"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"e_node_builder_record",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"translationsOption":"DEFAULT",
+				"page":{
+					"paginateBy":"OFFSET",
+					"limit":100
+				},
+				"numberOfRecordsToFetch":"MULTIPLE",
+				"readThroughSessionVariables":false,
+				"includeTotalCount":false
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Storage",
+			"title":"Fetch records",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":4,
+				"resourceName":"loop_for_each",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_x7LiG-1",
+			"id":"DBzsf",
+			"index":3,
+			"inputs":{
+				"repeatMode":"SINGLE",
+				"listSource":"{{ UVA7K.outputs.objects }}",
+				"captureIterations":false
+			},
+			"skip":false,
+			"subTitle":"Loop",
+			"title":"For loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":4,
+				"resourceName":"storage_by_unifyapps_update_record_by_id",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"DBzsf@_x7LiG-1@l",
+			"id":"VOHHE",
+			"index":4,
+			"inputs":{
+				"recordId":"{{ DBzsf.outputs.item.id }}",
+				"object_type":"e_node_builder_record",
+				"record":{
+					"name":"{{ DBzsf.outputs.item.properties.name }}",
+					"displayName":"=SUBSTITUTE({{ DBzsf.outputs.item.properties.displayName }},\" by UnifyApps\", \"\")",
+					"description":"{{ DBzsf.outputs.item.properties.description }}",
+					"iconUrl":"{{ DBzsf.outputs.item.properties.iconUrl }}",
+					"supportedResourceTypes":{
+						"source":"{{ DBzsf.outputs.item.properties.supportedResourceTypes }}",
+						"ua:type":"mappedArray",
+						"items":"{{ DBzsf.outputs.item.properties.supportedResourceTypes[0] }}"
+					},
+					"custom":"{{ DBzsf.outputs.item.properties.custom }}",
+					"needsAuthentication":"{{ DBzsf.outputs.item.properties.needsAuthentication }}"
+				},
+				"upsert":false
+			},
+			"skip":false,
+			"subTitle":"Storage",
+			"title":"Update an existing record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_x7LiG-1",
+			"id":"yt4tS",
+			"index":5,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":20249,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +208,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
