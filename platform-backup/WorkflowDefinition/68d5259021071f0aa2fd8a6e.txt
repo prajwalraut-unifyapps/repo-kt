@@ -66,7 +66,7 @@
 	"id":"68d5259021071f0aa2fd8a6e",
 	"lastModifiedBy":155341,
 	"lcName":"insights | failure percentage of all automations",
-	"modifiedTime":1758865494676,
+	"modifiedTime":1758865513305,
 	"name":"INSIGHTS | Failure percentage of all automations",
 	"nodes":[
 		{
@@ -431,6 +431,11 @@
 			"type":"ACTION"
 		},
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
 			"context":{
 				"appName":"custom_http_endpoint",
 				"resourceVersion":364,
@@ -459,32 +464,6 @@
 				"path":"/internal/workflow-definition/bulk-fetch",
 				"baseUrl":"{{ _icozG.outputs.baseInternalUrl }}",
 				"httpVersion":"HTTP_2",
-				"bodySchema":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"resourceType",
-						"collectionName"
-					],
-					"properties":{
-						"resourceType":{
-							"type":"string",
-							"title":"Resource Type"
-						},
-						"collectionName":{
-							"type":"string",
-							"title":"Collection Name"
-						},
-						"limit":{
-							"type":"integer",
-							"title":"Limit"
-						},
-						"skip":{
-							"type":"integer",
-							"title":"Skip"
-						}
-					}
-				},
 				"queryParamsList":[
 					{
 						"key":"customerId",
@@ -623,5 +602,5 @@
 	"tags":[
 		
 	],
-	"version":43
+	"version":44
 }
