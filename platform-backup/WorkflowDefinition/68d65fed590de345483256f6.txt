@@ -18,12 +18,19 @@
 			"skip":false,
 			"toNodeId":"n_UA0Cz",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_UA0Cz",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_KeTeI",
+			"type":"next"
 		}
 	],
 	"id":"68d65fed590de345483256f6",
 	"lastModifiedBy":49915,
 	"lcName":"test null",
-	"modifiedTime":1758879872741,
+	"modifiedTime":1758879879036,
 	"name":"test null",
 	"nodes":[
 		{
@@ -135,6 +142,42 @@
 			"subTitle":"Streams by UnifyApps",
 			"title":"Publish event to stream",
 			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.event.fileValue.url",
+					"root.event.multiSelectDropdown.items",
+					"root.event.objectValue.field1",
+					"root.event.objectValue.field2",
+					"root.event.arrayValue.items.name",
+					"root.event.arrayValue.items.id"
+				]
+			},
+			"context":{
+				"appName":"streams_by_unifyapps",
+				"resourceVersion":1552,
+				"resourceName":"streams_by_unifyapps_publish_event",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_TUpm0-1",
+			"id":"_KeTeI",
+			"index":4,
+			"inputs":{
+				"streamId":"e_687f3487c30a93f7d8417e99",
+				"skipInputValidation":false,
+				"event":{
+					"dateValue":"{{ n_JkIiV.outputs.randome }}",
+					"stringValue":"hello"
+				}
+			},
+			"skip":false,
+			"subTitle":"Streams by UnifyApps",
+			"title":"Publish event to stream",
+			"type":"ACTION"
 		}
 	],
 	"ownerUserId":49915,
@@ -154,5 +197,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
