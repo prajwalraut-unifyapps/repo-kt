@@ -59,7 +59,7 @@
 	"id":"68d5259021071f0aa2fd8a6e",
 	"lastModifiedBy":155341,
 	"lcName":"insights | failure percentage of all automations",
-	"modifiedTime":1758863779474,
+	"modifiedTime":1758863873838,
 	"name":"INSIGHTS | Failure percentage of all automations",
 	"nodes":[
 		{
@@ -285,7 +285,7 @@
 				"queryParamsList":[
 					{
 						"key":"sqlResourceType",
-						"value":"WORKFLOW_EXECUTION"
+						"value":"PLATFORM"
 					}
 				],
 				"responseContentType":"application/json",
@@ -482,5 +482,5 @@
 	"tags":[
 		
 	],
-	"version":41
+	"version":42
 }
