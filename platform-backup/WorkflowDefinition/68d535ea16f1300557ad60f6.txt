@@ -6,7 +6,7 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_vHKoQ",
+			"fromNodeId":"n_MyreN",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_LtO1I",
@@ -16,24 +16,58 @@
 	"id":"68d535ea16f1300557ad60f6",
 	"lastModifiedBy":67744,
 	"lcName":"test-variables",
-	"modifiedTime":1758884821995,
+	"modifiedTime":1758896590330,
 	"name":"test-variables",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":961,
+				"resourceName":"callables_from_api"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_vHKoQ-1",
-			"id":"_vHKoQ",
-			"index":0,
+			"id":"n_MyreN",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"multipart/form-data",
+					"multipartBody":{
+						"type":"object",
+						"properties":{
+							"test1":{
+								"type":"string",
+								"title":"Test 1"
+							},
+							"test2":{
+								"type":"string",
+								"title":"Test 2"
+							}
+						},
+						"additionalProperties":false,
+						"required":[
+							"test1",
+							"test2"
+						]
+					}
+				},
+				"endpointType":"REST",
+				"streamingResponse":false
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via API",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"additional":{
+				"xsdSchemaConfig":{}
+			},
 			"context":{
 				"appName":"variable_by_unifyapps",
 				"resourceVersion":921,
@@ -45,7 +79,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_vHKoQ-1",
 			"id":"n_LtO1I",
-			"index":0,
+			"index":2,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -54,48 +88,18 @@
 					"additionalProperties":false,
 					"type":"object",
 					"properties":{
-						"djffd":{
-							"type":"array",
-							"items":{
-								"type":"string",
-								"oneOf":[
-									{
-										"const":"wrrs",
-										"title":"wrrs"
-									},
-									{
-										"const":"erwr",
-										"title":"erwr"
-									},
-									{
-										"const":"fsfsfsf",
-										"title":"fsfsfsf"
-									},
-									{
-										"const":"fsdfs",
-										"title":"fsdfs"
-									},
-									{
-										"const":"dffs",
-										"title":"dffs"
-									}
-								]
-							},
-							"format":"multi-select",
-							"title":"Djffd",
-							"minItems":1
+						"checking_variable":{
+							"type":"string",
+							"title":"Checking Variable"
 						}
 					},
 					"required":[
-						"djffd"
+						"checking_variable"
 					]
 				}
 			},
 			"inputs":{
-				"djffd":[
-					"wrrs",
-					"fsfsfsf"
-				]
+				"checking_variable":"{{ n_MyreN.outputs.body }}{{ n_MyreN.outputs.files[0].name }}"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -103,40 +107,13 @@
 					"additionalProperties":false,
 					"type":"object",
 					"properties":{
-						"djffd":{
-							"type":"array",
-							"items":{
-								"type":"string",
-								"oneOf":[
-									{
-										"const":"wrrs",
-										"title":"wrrs"
-									},
-									{
-										"const":"erwr",
-										"title":"erwr"
-									},
-									{
-										"const":"fsfsfsf",
-										"title":"fsfsfsf"
-									},
-									{
-										"const":"fsdfs",
-										"title":"fsdfs"
-									},
-									{
-										"const":"dffs",
-										"title":"dffs"
-									}
-								]
-							},
-							"format":"multi-select",
-							"title":"Djffd",
-							"minItems":1
+						"checking_variable":{
+							"type":"string",
+							"title":"Checking Variable"
 						}
 					},
 					"required":[
-						"djffd"
+						"checking_variable"
 					]
 				}
 			},
@@ -163,5 +140,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
