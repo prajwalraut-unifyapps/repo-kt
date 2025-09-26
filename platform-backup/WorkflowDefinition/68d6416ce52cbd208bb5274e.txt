@@ -5,12 +5,12 @@
 	"createdTime":1758871916038,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758883012081,
+		"deployedAt":1758883068645,
 		"deployedBy":177779,
-		"deployedDefinitionId":"68d66cc3a60955295161059c",
+		"deployedDefinitionId":"68d66cfc99f59b2f82cb49b0",
 		"status":"DEPLOYED",
-		"version":3,
-		"workflowVersion":7
+		"version":4,
+		"workflowVersion":8
 	},
 	"edges":[
 		{
@@ -31,7 +31,7 @@
 	"id":"68d6416ce52cbd208bb5274e",
 	"lastModifiedBy":177779,
 	"lcName":"fetchsheetdata",
-	"modifiedTime":1758883065922,
+	"modifiedTime":1758883668847,
 	"name":"fetchsheetdata",
 	"nodes":[
 		{
@@ -53,20 +53,23 @@
 					"required":[],
 					"properties":{
 						"data":{
-							"type":"object",
-							"properties":{
-								"a":{
-									"type":"string",
-									"title":"A"
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"a":{
+										"type":"string",
+										"title":"A"
+									},
+									"b":{
+										"type":"number",
+										"title":"B"
+									}
 								},
-								"b":{
-									"type":"number",
-									"title":"B"
-								}
+								"additionalProperties":false,
+								"required":[]
 							},
-							"additionalProperties":false,
-							"title":"data",
-							"required":[]
+							"title":"data"
 						}
 					}
 				},
@@ -113,6 +116,56 @@
 				"range":"2:9",
 				"spreadsheetId":"1kysILiHrP7Tun1QWIZEIolyaS8eXuqelaxYui_4gZHA__test1"
 			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"global":false
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"STOP",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
+			},
 			"skip":false,
 			"subTitle":"Google Sheets",
 			"title":"Get rows",
@@ -134,8 +187,12 @@
 			"inputs":{
 				"result":{
 					"data":{
-						"a":"{{ n_sL7EM.outputs.rows[0].Department__0 }}",
-						"b":"{{ n_sL7EM.outputs.rows[0].AVERAGE_of_Salary__INR___1 }}"
+						"source":"{{ n_sL7EM.outputs.rows }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"a":"{{ n_sL7EM.outputs.rows[0].Department__0 }}",
+							"b":"{{ n_sL7EM.outputs.rows[0].AVERAGE_of_Salary__INR___1 }}"
+						}
 					}
 				}
 			},
@@ -162,5 +219,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
