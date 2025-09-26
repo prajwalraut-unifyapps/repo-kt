@@ -23,7 +23,7 @@
 	"id":"68d65fed590de345483256f6",
 	"lastModifiedBy":39715,
 	"lcName":"test null",
-	"modifiedTime":1758891766213,
+	"modifiedTime":1758891789859,
 	"name":"test null",
 	"nodes":[
 		{
@@ -118,14 +118,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_TUpm0-1",
 			"id":"n_UA0Cz",
 			"index":3,
 			"inputs":{
 				"streamId":"e_68d66079793bfd127f1b3372",
-				"skipInputValidation":false,
+				"skipInputValidation":true,
 				"event":{
 					"tesaitn":"{{ n_JkIiV.outputs.randome }}",
 					"tesigng":"hello"
@@ -154,5 +154,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
