@@ -23,7 +23,7 @@
 	"id":"68d6416ce52cbd208bb5274e",
 	"lastModifiedBy":177779,
 	"lcName":"fetchsheetdata",
-	"modifiedTime":1758872123829,
+	"modifiedTime":1758872135663,
 	"name":"fetchsheetdata",
 	"nodes":[
 		{
@@ -86,7 +86,9 @@
 			"groupId":"_VqSLL-1",
 			"id":"n_nKunm",
 			"index":3,
-			"inputs":{},
+			"inputs":{
+				"result":"{{ n_sL7EM.outputs.rows }}"
+			},
 			"skip":false,
 			"subTitle":"Callable",
 			"title":"Respond to automation",
@@ -110,5 +112,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
