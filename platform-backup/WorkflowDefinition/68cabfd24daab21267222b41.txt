@@ -88,7 +88,7 @@
 	"id":"68cabfd24daab21267222b41",
 	"lastModifiedBy":46030,
 	"lcName":"match string | get workflows [do not touch]",
-	"modifiedTime":1758870347123,
+	"modifiedTime":1758870356732,
 	"name":"Match String | Get Workflows [DO NOT TOUCH]",
 	"nodes":[
 		{
@@ -700,7 +700,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_4vBtN@_9b6Im-1@l",
 			"id":"n_JwEjH",
@@ -866,5 +866,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
