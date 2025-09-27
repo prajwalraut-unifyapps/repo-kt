@@ -6,46 +6,138 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_oFlx6",
+			"fromNodeId":"n_b7Crw",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_IdjaA",
+			"toNodeId":"n_f0LJJ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_f0LJJ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_3xDw2",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_3xDw2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_NceCw",
 			"type":"next"
 		}
 	],
 	"id":"68d7b96ae9cf522c4e9812e1",
 	"lastModifiedBy":45771,
 	"lcName":"testutility",
-	"modifiedTime":1758968170234,
+	"modifiedTime":1758968252098,
 	"name":"testUtility",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":876,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_oFlx6-1",
-			"id":"_oFlx6",
-			"index":0,
+			"id":"n_b7Crw",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"result":{
+							"type":"boolean",
+							"title":"Result"
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":155,
+				"resourceName":"utility_by_unifyapps_epoch_to_date",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_oFlx6-1",
-			"id":"_IdjaA",
-			"index":0,
+			"id":"n_f0LJJ",
+			"index":2,
+			"inputs":{
+				"epochUnit":"milliseconds",
+				"epoch":1758968210
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Utility by UnifyApps",
+			"title":"Epoch to Date",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":155,
+				"resourceName":"utility_by_unifyapps_epoch_to_date",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_oFlx6-1",
+			"id":"n_3xDw2",
+			"index":3,
+			"inputs":{
+				"epochUnit":"milliseconds",
+				"epoch":"{{ n_f0LJJ.outputs.date }}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Epoch to Date",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":893,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_oFlx6-1",
+			"id":"n_NceCw",
+			"index":4,
+			"inputs":{
+				"result":{
+					"result":true
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":45771,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +151,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
