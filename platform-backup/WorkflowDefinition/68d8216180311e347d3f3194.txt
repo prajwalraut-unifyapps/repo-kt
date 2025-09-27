@@ -1,51 +1,97 @@
 {
 	"appsUsed":[
-		
+		"microsoft_onedrive"
 	],
 	"createdTime":1758994785848,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_QYfi4",
+			"fromNodeId":"n_e2VLh",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_BIXor",
+			"toNodeId":"n_jbbDF",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_jbbDF",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_sadUJ",
 			"type":"next"
 		}
 	],
 	"id":"68d8216180311e347d3f3194",
 	"lastModifiedBy":1234,
 	"lcName":"onedrive test search file",
-	"modifiedTime":1758994785848,
+	"modifiedTime":1758994868705,
 	"name":"onedrive test search file",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_QYfi4-1",
-			"id":"_QYfi4",
-			"index":0,
+			"id":"n_e2VLh",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"microsoft_onedrive",
+				"resourceVersion":2887,
+				"resourceName":"microsoft_onedrive_get_files",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_QYfi4-1",
-			"id":"_BIXor",
-			"index":0,
+			"id":"n_jbbDF",
+			"index":2,
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Microsoft OneDrive",
+			"title":"Search files",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"microsoft_onedrive",
+				"resourceVersion":5617,
+				"resourceName":"microsoft_onedrive_download_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_QYfi4-1",
+			"id":"n_sadUJ",
+			"index":3,
+			"skip":false,
+			"subTitle":"Microsoft OneDrive",
+			"title":"Download file",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":1234,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +105,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
