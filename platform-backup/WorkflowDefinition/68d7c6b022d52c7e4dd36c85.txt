@@ -5,12 +5,12 @@
 	"createdTime":1758971568419,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758975695610,
+		"deployedAt":1758977231266,
 		"deployedBy":182775,
-		"deployedDefinitionId":"68d7d6cf5a6a676b2ee229f4",
+		"deployedDefinitionId":"68d7dccf5a6a676b2ee22f7a",
 		"status":"DEPLOYED",
-		"version":5,
-		"workflowVersion":8
+		"version":6,
+		"workflowVersion":9
 	},
 	"edges":[
 		{
@@ -98,7 +98,7 @@
 	"id":"68d7c6b022d52c7e4dd36c85",
 	"lastModifiedBy":182775,
 	"lcName":"sub-streamconcurrencytest (copy)",
-	"modifiedTime":1758977229157,
+	"modifiedTime":1758978516934,
 	"name":"sub-streamConcurrencyTest (copy)",
 	"nodes":[
 		{
@@ -208,7 +208,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_HwF2P-1",
 			"id":"n_bDuCw",
@@ -216,7 +216,10 @@
 			"inputs":{
 				"streamId":"e_68d7be8759ac503c2940703e",
 				"repeatMode":"BATCH",
-				"batchSize":1
+				"batchSize":1,
+				"consumerGroup":"Test",
+				"offsetReset":"earliest",
+				"commitOption":"COMMIT_AFTER_READ"
 			},
 			"skip":false,
 			"subTitle":"Streams by UnifyApps",
@@ -231,7 +234,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_bDuCw@_HwF2P-1@l",
 			"id":"n_IVNcf",
@@ -400,5 +403,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
