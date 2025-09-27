@@ -1,0 +1,295 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1752783384494,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1753795859322,
+		"deployedBy":308,
+		"deployedDefinitionId":"6888cd139432e5cdafbbc6d5",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":11
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_rBFTw",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_sORTc",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_sORTc",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Oqm5g",
+			"type":"next"
+		}
+	],
+	"id":"68795a181d11809b87f16937",
+	"lastModifiedBy":103171,
+	"lcName":"[virtu-support-checkin-bot-fn]getcheckinprojecttask-endpoint",
+	"modifiedTime":1759004337590,
+	"name":"[virtu-support-checkin-bot-fn]GetCheckinProjectTask-endpoint",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":865,
+				"resourceName":"callables_from_api"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_m0eoS-1",
+			"id":"n_rBFTw",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json",
+					"queryParams":{
+						"type":"object",
+						"properties":{
+							"projectid":{
+								"type":"string",
+								"title":"Project ID"
+							},
+							"startDate":{
+								"type":"string",
+								"title":"Start Date"
+							},
+							"endDate":{
+								"type":"string",
+								"title":"End Date"
+							},
+							"userName":{
+								"type":"string",
+								"title":"User Name"
+							}
+						},
+						"additionalProperties":false,
+						"required":[]
+					}
+				},
+				"endpointType":"REST",
+				"response":[
+					{
+						"status":200,
+						"contentType":"application/json",
+						"textBody":{
+							"type":"string"
+						},
+						"body":{
+							"type":"object",
+							"properties":{
+								"response":{
+									"type":"string",
+									"title":"Response"
+								}
+							},
+							"additionalProperties":false,
+							"required":[
+								"response"
+							]
+						}
+					}
+				],
+				"streamingResponse":false
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via API",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":803,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_m0eoS-1",
+			"id":"n_sORTc",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"checkinProjectTaskList":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Checkin Project Task List"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"checkinProjectTaskList"
+					]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"projectId":{
+							"type":"string",
+							"title":"Project ID"
+						},
+						"startDate":{
+							"type":"string",
+							"title":"Start Date"
+						},
+						"endDate":{
+							"type":"string",
+							"title":"End Date"
+						},
+						"userName":{
+							"type":"string",
+							"title":"User Name"
+						},
+						"APIMServerUrl":{
+							"type":"string",
+							"title":"APIM Server Url"
+						},
+						"KeyVaultName":{
+							"type":"string",
+							"title":"Key Vault Name"
+						},
+						"TokenAPIURLPath":{
+							"type":"string",
+							"title":"Token APIURL Path"
+						},
+						"CheckinProjectAPIPath":{
+							"type":"string",
+							"title":"Checkin Project API Path"
+						},
+						"ProjectAPIURLPath":{
+							"type":"string",
+							"title":"Project APIURL Path"
+						},
+						"EmployeeMinimalUrl":{
+							"type":"string",
+							"title":"Employee Minimal Url"
+						},
+						"secureToken":{
+							"type":"string",
+							"title":"Secure Token"
+						},
+						"checkinSkillBotAppID":{
+							"type":"string",
+							"title":"Checkin Skill Bot App ID"
+						},
+						"virtusaBusinessPublicSubkey":{
+							"type":"string",
+							"title":"Virtusa Business Public Subkey"
+						},
+						"CheckinProjectTaskAPIPath":{
+							"type":"string",
+							"title":"Checkin Project Task API Path"
+						},
+						"virtusaPeopleSubkey":{
+							"type":"string",
+							"title":"Virtusa People Subkey"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"projectId",
+						"startDate",
+						"endDate",
+						"userName",
+						"APIMServerUrl",
+						"KeyVaultName",
+						"TokenAPIURLPath",
+						"CheckinProjectAPIPath",
+						"ProjectAPIURLPath",
+						"EmployeeMinimalUrl",
+						"secureToken",
+						"checkinSkillBotAppID",
+						"virtusaBusinessPublicSubkey",
+						"CheckinProjectTaskAPIPath",
+						"virtusaPeopleSubkey"
+					]
+				},
+				"compile_static":false,
+				"code":"import java.net.HttpURLConnection\nimport java.net.URL\nimport java.nio.charset.StandardCharsets\nimport java.io.BufferedReader\nimport java.io.InputStreamReader\nimport java.util.stream.Collectors\n\nimport org.json.JSONObject\nimport java.net.HttpURLConnection\nimport java.net.URL\nimport java.net.URLEncoder\nimport java.nio.charset.StandardCharsets\nimport java.io.BufferedReader\nimport java.io.InputStreamReader\nimport java.util.stream.Collectors\n\nimport org.json.JSONObject\nimport java.net.HttpURLConnection\nimport java.net.URL\nimport java.nio.charset.StandardCharsets\nimport java.io.BufferedReader\nimport java.io.InputStreamReader\nimport java.time.LocalDate\nimport java.util.stream.Collectors\n\nimport java.util.List\nimport java.util.Map\nimport java.time.LocalDate\nimport java.time.format.DateTimeFormatter\nimport java.time.temporal.WeekFields\nimport java.util.Locale\nimport org.json.JSONArray\nimport org.json.JSONObject\n\ndef httpPost(String urlString, String body, Map headers) {\n    try {\n        URL url = new URL(urlString)\n        HttpURLConnection conn = (HttpURLConnection) url.openConnection()\n        conn.setRequestMethod(\"POST\")\n        conn.setDoOutput(true)\n        headers.each { key, value -> conn.setRequestProperty(key, value) }\n        conn.getOutputStream().withWriter(StandardCharsets.UTF_8.toString()) { writer -> writer.write(body) }\n\n        int responseCode = conn.getResponseCode()\n        if (responseCode >= 200 && responseCode < 300) {\n            BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8))\n            String responseBody = reader.lines().collect(Collectors.joining(\"\\n\"))\n            reader.close()\n            return [success: true, body: responseBody]\n        } else {\n            String errorBody = \"\"\n            if (conn.getErrorStream() != null) {\n                BufferedReader errorReader = new BufferedReader(new InputStreamReader(conn.getErrorStream(), StandardCharsets.UTF_8))\n                errorBody = errorReader.lines().collect(Collectors.joining(\"\\n\"))\n                errorReader.close()\n            }\n            println \"HTTP POST Failed with code ${responseCode}: ${errorBody}\"\n            return [success: false, code: responseCode]\n        }\n    } catch (Exception e) {\n        println \"HTTP POST Exception: \" + e.getMessage()\n        return [success: false, error: e.getMessage()]\n    }\n}\n\ndef httpGetRequest(String urlString, Map headers) {\n    try {\n        URL url = new URL(urlString)\n        HttpURLConnection conn = (HttpURLConnection) url.openConnection()\n        conn.setRequestMethod(\"GET\")\n        headers.each { key, value -> conn.setRequestProperty(key, value) }\n        int responseCode = conn.getResponseCode()\n        if (responseCode >= 200 && responseCode < 300) {\n            BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8))\n            String responseBody = reader.lines().collect(Collectors.joining(\"\\n\"))\n            reader.close()\n            return [success: true, body: responseBody]\n        } else {\n            String errorBody = \"\"\n            if (conn.getErrorStream() != null) {\n                BufferedReader errorReader = new BufferedReader(new InputStreamReader(conn.getErrorStream(), StandardCharsets.UTF_8))\n                errorBody = errorReader.lines().collect(Collectors.joining(\"\\n\"))\n                errorReader.close()\n            }\n            println \"HTTP GET Failed with code ${responseCode}: ${errorBody}\"\n            return [success: false, code: responseCode]\n        }\n    } catch (Exception e) {\n        println \"HTTP GET Exception: \" + e.getMessage()\n        return [success: false, error: e.getMessage()]\n    }\n}\n\ndef getToken() {\n    String tokenRquestBody = \"client_id=\" + checkinSkillBotAppID + \"&grant_type=client_credentials&client_secret=\" + secureToken + \"&resource=fb37e32e-cf16-434b-93e6-3420f7bc11f9\"\n    String TokenAPI = APIMServerUrl.replace(\"http://\", \"https://\") + TokenAPIURLPath\n    def clientHeaders = [\n        \"Accept\": \"application/x-www-form-urlencoded\",\n        \"Ocp-Apim-Subscription-Key\": virtusaBusinessPublicSubkey\n    ]\n    def response = httpPost(TokenAPI, tokenRquestBody, clientHeaders)\n    \n    if (response.success && response.body) {\n        def tokenResponse = new JSONObject(response.body)\n        return tokenResponse.getString(\"access_token\")\n    }\n    return \"\"\n}\n\nString aadToken = getToken()\nList checkinProjectTaskList = []\nString checkinProjectTaskAPIURL = APIMServerUrl + CheckinProjectTaskAPIPath\nString[] projectArray = projectId.split(\",\")\n\nfor (String projId in projectArray) {\n    if (projId == null || projId.trim().isEmpty()) {\n        continue\n    }\n    \n    def headers = [\n        \"Ocp-Apim-Subscription-Key\": virtusaPeopleSubkey,\n        \"Authorization\": \"Bearer \" + aadToken\n    ]\n    String urlParameters = \"?FromDate=\" + startDate + \"&ToDate=\" + endDate + \"&Timestamp=0&Employee=\" + userName + \"&Project=\" + projId.trim()\n    \n    def response = httpGetRequest(checkinProjectTaskAPIURL + urlParameters, headers)\n    \n    String checkinProjectTaskResponsestr = \"\"\n    if (response.success) {\n        checkinProjectTaskResponsestr = response.body\n    }\n    \n    def checkinProjectTaskResponse = checkinProjectTaskResponsestr ? new JSONObject(checkinProjectTaskResponsestr) : null\n\n    if (checkinProjectTaskResponse == null || !checkinProjectTaskResponse.has(\"TaskAssignment\")) {\n        continue\n    }\n\n    def taskAssignment = checkinProjectTaskResponse.getJSONObject(\"TaskAssignment\")\n\n    if (taskAssignment.has(\"ADD\")) {\n        taskAssignment.getJSONArray(\"ADD\").each { item ->\n            def checkinProjectTastObj = [:]\n            checkinProjectTastObj.assignmentid = item.opt(\"assignmentid\")\n            checkinProjectTastObj.taskname = item.optString(\"taskname\")\n            checkinProjectTastObj.projectid = item.opt(\"projectid\")\n            checkinProjectTastObj.AssignmentStartDate = LocalDate.parse(item.getString(\"AssignmentStartDate\"))\n            checkinProjectTastObj.AssignmentEndDate = LocalDate.parse(item.getString(\"AssignmentEndDate\"))\n            checkinProjectTaskList.add(checkinProjectTastObj)\n        }\n    }\n\n    if (taskAssignment.has(\"UPDATE\")) {\n        taskAssignment.getJSONArray(\"UPDATE\").each { item ->\n            def checkinProjectTastObj = [:]\n            checkinProjectTastObj.assignmentid = item.opt(\"assignmentid\")\n            checkinProjectTastObj.taskname = item.optString(\"taskname\")\n            checkinProjectTastObj.projectid = item.opt(\"projectid\")\n            checkinProjectTastObj.AssignmentStartDate = LocalDate.parse(item.getString(\"AssignmentStartDate\"))\n            checkinProjectTastObj.AssignmentEndDate = LocalDate.parse(item.getString(\"AssignmentEndDate\"))\n            checkinProjectTaskList.add(checkinProjectTastObj)\n        }\n    }\n}\n\nSystem.out.println(checkinProjectTaskList)\nreturn checkinProjectTaskList",
+				"parameters":{
+					"projectId":"{{ n_rBFTw.outputs.queryParams.projectid }}",
+					"startDate":"{{ n_rBFTw.outputs.queryParams.startDate }}",
+					"endDate":"{{ n_rBFTw.outputs.queryParams.endDate }}",
+					"userName":"{{ n_rBFTw.outputs.queryParams.userName }}",
+					"APIMServerUrl":"{{ __ENV__.outputs.APIMServerUrl }}",
+					"KeyVaultName":"{{ __ENV__.outputs.KeyVaultName }}",
+					"TokenAPIURLPath":"{{ __ENV__.outputs.TokenAPIURLPath }}",
+					"CheckinProjectAPIPath":"{{ __ENV__.outputs.CheckinProjectAPIPath }}`",
+					"ProjectAPIURLPath":"{{ __ENV__.outputs.ProjectAPIURLPath }}",
+					"EmployeeMinimalUrl":"{{ __ENV__.outputs.EmployeeMinimalUrl }}",
+					"secureToken":"{{ __ENV__.outputs.secureToken }}",
+					"checkinSkillBotAppID":"{{ __ENV__.outputs.checkinSkillBotAppID }}",
+					"virtusaBusinessPublicSubkey":"{{ __ENV__.outputs.virtusaBusinessPublicSubkey }}",
+					"CheckinProjectTaskAPIPath":"{{ __ENV__.outputs.CheckinProjectTaskAPIPath }}",
+					"virtusaPeopleSubkey":"{{ __ENV__.outputs.Virtusa-People-Subscription-Key }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":818,
+				"resourceName":"callables_return_response_to_api",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_m0eoS-1",
+			"id":"n_Oqm5g",
+			"index":3,
+			"inputs":{
+				"streamingCompleted":true,
+				"responseName":"200_undefined",
+				"body":{
+					"response":"{{ n_sORTc.outputs.result.checkinProjectTaskList }}"
+				},
+				"status":200
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to API request",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":308,
+	"projectId":1927,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":19
+}
