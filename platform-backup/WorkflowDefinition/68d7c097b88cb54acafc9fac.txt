@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758970007712,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_HwF2P",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_5LQVo",
+			"type":"next"
+		}
+	],
+	"id":"68d7c097b88cb54acafc9fac",
+	"lastModifiedBy":182775,
+	"lcName":"sub-streamconcurrencytest",
+	"modifiedTime":1758970007712,
+	"name":"sub-streamConcurrencyTest",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_HwF2P-1",
+			"id":"_HwF2P",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_HwF2P-1",
+			"id":"_5LQVo",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":182775,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
