@@ -23,7 +23,7 @@
 	"id":"68d8164febde61057fb727f0",
 	"lastModifiedBy":31268,
 	"lcName":"testing",
-	"modifiedTime":1758992139467,
+	"modifiedTime":1758993035659,
 	"name":"testing",
 	"nodes":[
 		{
@@ -140,14 +140,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Vxw6f-1",
 			"id":"n_o4RQh",
 			"index":3,
 			"inputs":{
 				"streamId":"e_68d7be8759ac503c2940703e",
-				"skipInputValidation":false,
+				"skipInputValidation":true,
 				"event":{
 					"EMP_NAME":"{{ n_gb9lK.outputs.body.testing }}",
 					"EMP_ID":"{{ n_gb9lK.outputs.body.testing }}"
@@ -176,5 +176,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
