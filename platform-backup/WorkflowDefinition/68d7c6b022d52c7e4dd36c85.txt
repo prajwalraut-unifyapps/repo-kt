@@ -55,7 +55,7 @@
 			"name":"no",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_SmWws",
+			"toNodeId":"n_uqRkk",
 			"type":"next"
 		},
 		{
@@ -66,7 +66,7 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_SmWws",
+			"fromNodeId":"n_uqRkk",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_GTMo4",
@@ -76,7 +76,7 @@
 	"id":"68d7c6b022d52c7e4dd36c85",
 	"lastModifiedBy":182775,
 	"lcName":"sub-streamconcurrencytest (copy)",
-	"modifiedTime":1758973368123,
+	"modifiedTime":1758973600266,
 	"name":"sub-streamConcurrencyTest (copy)",
 	"nodes":[
 		{
@@ -183,7 +183,18 @@
 			"groupId":"_HwF2P-1",
 			"id":"n_np8YP",
 			"index":3,
-			"inputs":{},
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_ebIy6.outputs.event.SALARY }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"45000"
+						}
+					}
+				],
+				"operator":"AND"
+			},
 			"skip":false,
 			"subTitle":"Condition",
 			"title":"Condition",
@@ -208,7 +219,8 @@
 						{
 							"property":"{{ n_Bwk21.outputs.count }}",
 							"filter":{
-								"operator":"EQUAL"
+								"operator":"GT",
+								"value":"-1"
 							}
 						}
 					],
@@ -243,20 +255,31 @@
 				]
 			},
 			"skip":false,
-			"subTitle":"Variable by UnifyApps",
+			"subTitle":"Count Update",
 			"title":"Update variables",
 			"type":"ACTION"
 		},
 		{
+			"context":{
+				"appName":"delay",
+				"resourceVersion":791,
+				"resourceName":"delay_for",
+				"type":"APPLICATION"
+			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_np8YP@_HwF2P-1@n",
-			"id":"n_SmWws",
+			"id":"n_uqRkk",
 			"index":6,
+			"inputs":{
+				"duration":0,
+				"unit":"SECONDS"
+			},
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"Delay",
+			"title":"Set delay duration",
+			"type":"DELAY"
 		},
 		{
 			"context":{
@@ -298,5 +321,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":4
 }
