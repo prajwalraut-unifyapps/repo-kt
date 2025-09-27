@@ -5,12 +5,12 @@
 	"createdTime":1755341340292,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758976330296,
+		"deployedAt":1758976379557,
 		"deployedBy":44096,
-		"deployedDefinitionId":"68d7d94a88d6e673246bf4dc",
+		"deployedDefinitionId":"68d7d97be95f7900d654cda6",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":6
+		"version":3,
+		"workflowVersion":7
 	},
 	"edges":[
 		{
@@ -45,7 +45,7 @@
 	"id":"68a0621ce2145a693b0a5877",
 	"lastModifiedBy":44096,
 	"lcName":"testlookup",
-	"modifiedTime":1758976377841,
+	"modifiedTime":1759005182950,
 	"name":"testLookup",
 	"nodes":[
 		{
@@ -89,7 +89,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_lUik9-1",
 			"id":"n_uNvzq",
@@ -97,6 +97,8 @@
 			"inputs":{
 				"output":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"options":{
 							"type":"object",
@@ -104,12 +106,11 @@
 							"additionalProperties":false,
 							"title":"Options"
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				},
+				"code":"return [\"options\":[\"workflowId\":\"68d7933d7ceaf455c79a4dbf\",\"runtimeType\":\"DEFAULT\"]]",
 				"compile_static":false,
-				"code":"return [\"options\":[\"workflowId\":\"68a06346e2145a693b0a5e77\",\"runtimeType\":\"DEFAULT\"]]"
+				"captureStdOutput":false
 			},
 			"skip":false,
 			"subTitle":"Code by UnifyApps",
@@ -157,7 +158,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_lUik9-1",
 			"id":"_JlTkZ",
@@ -223,5 +224,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
