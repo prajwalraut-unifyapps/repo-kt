@@ -33,12 +33,19 @@
 			"skip":false,
 			"toNodeId":"n_MHpPn",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_MHpPn",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_twg6U",
+			"type":"next"
 		}
 	],
 	"id":"68d7c07ee9cf522c4e98c154",
 	"lastModifiedBy":182775,
 	"lcName":"pub-streamconcurrencytest",
-	"modifiedTime":1758970230549,
+	"modifiedTime":1758970266089,
 	"name":"pub-streamConcurrencyTest",
 	"nodes":[
 		{
@@ -191,6 +198,21 @@
 			"subTitle":"Streams by UnifyApps",
 			"title":"Publish event to stream",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_gCChJ-1",
+			"id":"n_twg6U",
+			"index":5,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":182775,
@@ -210,5 +232,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
