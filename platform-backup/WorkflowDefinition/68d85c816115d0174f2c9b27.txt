@@ -16,7 +16,7 @@
 	"id":"68d85c816115d0174f2c9b27",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa21759009921033cferbosmna",
-	"modifiedTime":1759010001554,
+	"modifiedTime":1759010088099,
 	"name":"changeSetQA21759009921033cFeRbosmnA",
 	"nodes":[
 		{
@@ -87,7 +87,7 @@
 			"index":0,
 			"inputs":{
 				"result":{
-					"c":"=SUM({{ xF4b9.outputs.a }},{{ xF4b9.outputs.b }})"
+					"c":"=PRODUCT({{ xF4b9.outputs.a }},{{ xF4b9.outputs.b }})"
 				}
 			},
 			"skip":false,
@@ -113,5 +113,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
