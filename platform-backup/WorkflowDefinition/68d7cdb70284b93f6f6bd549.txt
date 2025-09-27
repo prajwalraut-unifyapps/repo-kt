@@ -38,7 +38,7 @@
 	"id":"68d7cdb70284b93f6f6bd549",
 	"lastModifiedBy":44109,
 	"lcName":"weeeew",
-	"modifiedTime":1758973448814,
+	"modifiedTime":1758973454062,
 	"name":"weeeew",
 	"nodes":[
 		{
@@ -301,20 +301,19 @@
 									"title":"List Item Source"
 								},
 								"items":{
-									"additionalProperties":false,
-									"type":[
-										"object",
-										"string",
-										"number",
-										"boolean",
-										"integer"
-									],
-									"properties":{}
+									"type":"object"
 								}
 							}
 						}
 					}
 				}
+			},
+			"inputs":{
+				"createList":{
+					"ua:type":"mappedArray"
+				},
+				"ua:title":"List",
+				"ua:list_type":"OBJECT"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -371,5 +370,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
