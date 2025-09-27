@@ -6,46 +6,88 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_Vxw6f",
+			"fromNodeId":"n_gb9lK",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_ujG7y",
+			"toNodeId":"n_o4RQh",
 			"type":"next"
 		}
 	],
 	"id":"68d8164febde61057fb727f0",
 	"lastModifiedBy":31268,
 	"lcName":"testing",
-	"modifiedTime":1758991951799,
+	"modifiedTime":1758992018112,
 	"name":"testing",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Vxw6f-1",
-			"id":"_Vxw6f",
-			"index":0,
+			"id":"n_gb9lK",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json",
+					"body":{
+						"type":"object",
+						"properties":{
+							"testing":{
+								"type":"string",
+								"title":"Testing"
+							}
+						},
+						"additionalProperties":false,
+						"required":[
+							"testing"
+						]
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"streams_by_unifyapps",
+				"resourceVersion":1555,
+				"resourceName":"streams_by_unifyapps_publish_event",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Vxw6f-1",
-			"id":"_ujG7y",
-			"index":0,
+			"id":"n_o4RQh",
+			"index":2,
+			"inputs":{
+				"streamId":"e_68d7be8759ac503c2940703e",
+				"skipInputValidation":true,
+				"event":{
+					"EMP_NAME":"{{ n_gb9lK.outputs.body.testing }}",
+					"EMP_ID":"{{ n_gb9lK.outputs.body.testing }}"
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Streams by UnifyApps",
+			"title":"Publish event to stream",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":31268,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +101,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
