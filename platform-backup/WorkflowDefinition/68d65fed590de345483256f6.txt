@@ -38,7 +38,7 @@
 	"id":"68d65fed590de345483256f6",
 	"lastModifiedBy":39715,
 	"lcName":"test null",
-	"modifiedTime":1758994916338,
+	"modifiedTime":1758996876451,
 	"name":"test null",
 	"nodes":[
 		{
@@ -81,11 +81,11 @@
 			"index":2,
 			"inputs":{
 				"writeThroughSessionVariables":false,
-				"object_type":"testing_null_checker_123",
+				"object_type":"testing_null_check_1",
 				"skipIfBlank":false,
 				"record":{
-					"key1":"{{ n_MkQPk.outputs.body }}",
-					"key2":"3ewsd"
+					"kedc":"{{ n_MkQPk.outputs.body }}",
+					"dcsf":"swacd"
 				}
 			},
 			"skip":false,
@@ -196,5 +196,5 @@
 	"tags":[
 		
 	],
-	"version":25
+	"version":26
 }
