@@ -1,0 +1,194 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1751960533689,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1756462805451,
+		"deployedBy":39715,
+		"deployedDefinitionId":"68b17ed5d5bff1642a497681",
+		"status":"DEPLOYED",
+		"version":2,
+		"workflowVersion":30
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_dd9Bn",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_a4ECo",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_a4ECo",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_klGVM",
+			"type":"next"
+		}
+	],
+	"id":"686ccbd52e7b4a18a9df93d8",
+	"lastModifiedBy":103171,
+	"lcName":"[virtu-fusion-jwt-token-create-fn] jwt_token_for_fusion",
+	"modifiedTime":1759005396494,
+	"name":"[virtu-fusion-jwt-token-create-fn] jwt_token_for_fusion",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":786,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_WEZLy-1",
+			"id":"n_dd9Bn",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"jwt":{
+							"type":"string",
+							"title":"Jwt"
+						},
+						"errorMessage":{
+							"type":"string",
+							"title":"Error Message"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"jwt",
+						"errorMessage"
+					]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"AADToken":{
+							"type":"string",
+							"title":"AAD Token"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"AADToken"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":765,
+				"resourceName":"code_by_unifyapps_python",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_WEZLy-1",
+			"id":"n_a4ECo",
+			"index":2,
+			"inputs":{
+				"configurationMode":"MANUAL",
+				"input":{
+					"type":"object",
+					"properties":{
+						"private_key_val":{
+							"type":"string",
+							"title":"Private Key Value"
+						},
+						"fingerprint_of_cert":{
+							"type":"string",
+							"title":"Fingerprint Of Certificate"
+						},
+						"public_key_issuer":{
+							"type":"string",
+							"title":"Public Key Issuer"
+						},
+						"aad_token":{
+							"type":"string",
+							"title":"Aad Token"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"private_key_val",
+						"fingerprint_of_cert",
+						"public_key_issuer",
+						"aad_token"
+					]
+				},
+				"imports":[
+					"requests",
+					"python-jose",
+					"cryptography",
+					"pyjwt"
+				],
+				"code":"import base64\nimport requests\nimport jwt\nimport datetime\nfrom datetime import UTC\nfrom urllib.parse import quote\nfrom cryptography.hazmat.primitives import serialization\nfrom cryptography.hazmat.backends import default_backend\nfrom urllib.parse import urlencode\n\n\n\n# private_key_val =  \"MIICXgIBAAKBgQCv4PFGSYCWixLZqzm7yMPfcibclCyFFynxk1ps59th2EAQ64N72tIvT97tVFbxMG2jQbx9rsbq3oBNXGeErPxqNFjaAd7Kgz9AsaUSP4Lu9dH0cfLkZcDHF7FzbMlLOm3dqvCVdEjuSmXFae22d/A0yJo+U3hqXhgsyduWs3o3lwIDAQABAoGAGCqTXHILDiRr4abKVwgeCdzYhCSD/YGSTNRPb3loRoh9PRXvShxmFwQlgHy/OYLK/cyxhp92S51pCbgxrSRLxl2L3GsaIbqQjyvF2tBGVzZXAGVWNWHzN8CnX4NunGC26eBKir6uTy45Knz8nPr0KLyQfdEmfuLLHrKqt42gfHECQQDmIDA3SSOBIylYzVoporzQgBranmLRLN2BoTbOLNiaNW8RR/8i4kAoEroZ9GzVQuBG7UvV56hi+BJnoM//cGvpAkEAw6dWRN52hID2rE716gGHYksI272daFNjSvrTRL6f2LpyqOJo98rd4QrX90YEexm1fApLy4lO806vA8cfRvTXfwJBAJKx+Cp1/CUI9gV+ujgKXlSHJRcxmgp/kCBfVWFuoxECeO/KNnDVS1KARZPgBTSZMgDkqdAMoYGdY5YdpBnQX2kCQQC0IfJpQbA4WkvBZIlAQtwUgSTMuwybKnr2Y2vzlNWyQiaimqEt0lbphIRFou8pLwhKBWi3IdnQZJb5kXCYcX+dAkEAm4r5wSbnjeXcaasO1X11FO3oRwgin459ODArpdJKVPZzKCjtffjRzCAw40z/GyPg9Hf7AL6gh12TWsXq32OK3g==\"\n# fingerprint_of_cert =  \"2GUBJFWrAl8qiu/UkKhAlkzGDY0=\"\n# public_key_issuer =  \"www.mycompany.com\"\n# aad_token= \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6IkpZaEFjVFBNWl9MWDZEQmxPV1E3SG4wTmVYRSIsImtpZCI6IkpZaEFjVFBNWl9MWDZEQmxPV1E3SG4wTmVYRSJ9.eyJhdWQiOiJodHRwczovL3NlcnZpY2UuZmxvdy5taWNyb3NvZnQuY29tLyIsImlzcyI6Imh0dHBzOi8vc3RzLndpbmRvd3MubmV0LzBkODUxNjBjLTU4OTktNDRjYS1hY2M4LWRiMTUwMWI5OTNiNi8iLCJpYXQiOjE3NTY0NjIxMDIsIm5iZiI6MTc1NjQ2MjEwMiwiZXhwIjoxNzU2NDY3NTk4LCJhY2N0IjowLCJhY3IiOiIxIiwiYWlvIjoiQVhRQWkvOFpBQUFBL0pOVnZIUmdJSzhIQnB1NHU3NXRiUzhRdDVnenpTTWV2R2JRNGdzbHh4QWEwU1plQUlCaGN3OUhrdUhwdTdEblRiUWFSVlpPSGpmNEFVNDU3N0wyOHNFcjhWWEJHVndzQnFmR1JRbkx2RVBiL0ZrRURvQjZCeDFDNTVGRHhndEFIdUZzOHYvT1VMMDJPaElwejhqQi9nPT0iLCJhbXIiOlsicHdkIiwicnNhIiwibWZhIl0sImFwcGlkIjoiMDhlMTg4NzYtNjE3Ny00ODdlLWI4YjUtY2Y5NTBjMWU1OThjIiwiYXBwaWRhY3IiOiIwIiwiZGV2aWNlaWQiOiJhMzk4ZjJlNC03NTBjLTQwZWEtYWRmNC04ZjgwMTVhYzZlM2IiLCJmYW1pbHlfbmFtZSI6IkFtYXJhdGh1bmdhIiwiZ2l2ZW5fbmFtZSI6IkNoYXRodXJhIFByYXNhZCIsImlkdHlwIjoidXNlciIsImlwYWRkciI6IjEzNi4yMjYuMjUzLjk2IiwibmFtZSI6IkNoYXRodXJhIFByYXNhZCBBbWFyYXRodW5nYSIsIm9pZCI6IjFjMTAyZjYxLTQ4OTYtNDMwMi05MDQ2LWZkYzZmMzQ5YTNiMyIsIm9ucHJlbV9zaWQiOiJTLTEtNS0yMS0xOTM1NjU1Njk3LTIxMzk4NzE5OTUtNjgyMDAzMzMwLTExNDY4OSIsInB1aWQiOiIxMDAzMDAwMDg1RUYwMkQ1IiwicmgiOiIxLkFRb0FEQmFGRFpsWXlrU3N5TnNWQWJtVHRpV2g4SDItMDVaTXFsUlpINFBfVkJ3S0FIQUtBQS4iLCJzY3AiOiJBcHByb3ZhbHMuTWFuYWdlLkFsbCBBcHByb3ZhbHMuUmVhZC5BbGwiLCJzaWQiOiIwMDMxNzgyOS1jMWMwLWIyZDktNDBjOC1iNTkxNWM4NmRhY2MiLCJzaWduaW5fc3RhdGUiOlsiZHZjX21uZ2QiLCJkdmNfY21wIiwiZHZjX2RtamQiLCJrbXNpIl0sInN1YiI6Ik13Zm10U01sN1RlVnFsQy1ZS29NNkg1MmFjaE5ZeTdBdXN2Zng3VzhVaHciLCJ0ZW5hbnRfcmVnaW9uX3Njb3BlIjoiQVMiLCJ0aWQiOiIwZDg1MTYwYy01ODk5LTQ0Y2EtYWNjOC1kYjE1MDFiOTkzYjYiLCJ1bmlxdWVfbmFtZSI6ImNhbWFyYXRodW5nYUBWaXJ0dXNhLmNvbSIsInVwbiI6ImNhbWFyYXRodW5nYUBWaXJ0dXNhLmNvbSIsInV0aSI6Ik5hMW13SHFCelVXNFdIM25ldTRzQUEiLCJ2ZXIiOiIxLjAiLCJ4bXNfZnRkIjoiZloybWtRTFJ3RWRKMWpoWWYxUHFoLUZUZExQb3dQMk5JSEpwWXJ6MHBOVUJhMjl5WldGemIzVjBhQzFrYzIxeiIsInhtc19pZHJlbCI6IjE4IDEifQ.MGGCp1oQPRjDEFPUIl93VFyuHW3iDGyBylWzVhjTDq15nSTS2Ejio1GT7acybS9iv8kLQY6rMcVeXfc4P3aS7viTiwpJ5mUYwJ9uYoVwl_NTL4xruJJO_TGt3FlgTZXk7aPscYRnxrRV1bexJsge8Ypaj-MMRieGhZKRcqh9BSnFt5um2R9NkadQh1taTvRm-n_lYOEYuBi_zbzh_EGQyL5rOFSOnjB4o6GQNVcjQjLqCrnofJ32vllvKM6ZEKA_4qtCio21cF5R3kkiqNr8YWCWM9NDg5dGD_LVq9z9jhWNTNEVeXJdSJ0oIGf45NFYZNhf4YaTLQX3hIls1da44g\"\n\n\n\ndef get_person_number_from_email(email, aad_token):\n    filter_value = f\"(upper(emails.EmailAddress)='{email.upper()}') and (emails.EmailType='W1')\"\n    encoded_filter = quote(filter_value)\n    base_url = \"https://virtueagintegrationsapim-dev2.azure-api.net/v5-workers-api/v1/workers\"\n    query_param = f\"?q={encoded_filter}&expand=emails&onlyData=true\"\n    full_url = base_url + query_param\n    headers = {\n        \"Ocp-Apim-Subscription-Key\": \"964bfe179cbb4aeb8fa4e7ae80461974\",\n        \"REST-Framework-Version\": \"4\",\n        \"Authorization\": f\"Bearer {aad_token}\"\n    }\n\n    response = requests.get(full_url, headers=headers)\n    if response.status_code == 200:\n        data = response.json()\n        items = data.get(\"items\", [])\n        if items:\n            return items[0].get(\"PersonNumber\")\n    else:\n        return {\"API Error\": response.text}\n\n    return {\"error\" : \"api error\"}\n\n\ndef get_person_number_from_token_email(jwt_token):\n    try:\n        decoded_token = jwt.decode(jwt_token, options={\"verify_signature\": False})\n        upn = decoded_token.get(\"upn\")\n        if not upn:\n            print(\"error\", \"not get upn\")\n            return None\n        return get_person_number_from_email(upn, jwt_token)\n    except Exception as e:\n        return None\n\ndef generate_jwt_token_for_fusion(private_key_val, fingerprint_cert_base64, issuer, aad_token):\n    person_number = get_person_number_from_token_email(aad_token)\n    if not person_number or isinstance(person_number, dict):\n        print(\"Person number not found or error:\", person_number)\n        return None\n\n    try:\n        # If the private key is in DER base64 format\n        private_key_bytes = base64.b64decode(private_key_val)\n        private_key = serialization.load_der_private_key(\n            private_key_bytes, password=None, backend=default_backend())\n\n        # now = datetime.datetime.utcnow()\n        now = datetime.datetime.now(UTC)\n        payload = {\n            \"iss\": issuer,\n            \"prn\": person_number,\n            \"iat\": int(now.timestamp()),  \n            \"exp\": int((now + datetime.timedelta(hours=1)).timestamp())\n        }\n\n        headers = {\n            \"typ\": \"JWT\",\n            \"alg\": \"RS256\",\n            \"x5t\": fingerprint_of_cert  # Use raw if already base64url encoded\n        }\n\n        token = jwt.encode(\n            payload,\n            private_key,\n            algorithm=\"RS256\",\n            headers=headers\n        )\n\n        return token\n\n    except Exception as e:\n        print(\"Error generating JWT:\", e)\n        return None\n\nresult = generate_jwt_token_for_fusion(private_key_val, fingerprint_of_cert, public_key_issuer, aad_token)\nprint(result)\n\n\n",
+				"isAsync":false,
+				"python_version":"3.12",
+				"parameters":{
+					"aad_token":"{{ n_dd9Bn.outputs.AADToken }}",
+					"private_key_val":"MIICXgIBAAKBgQCv4PFGSYCWixLZqzm7yMPfcibclCyFFynxk1ps59th2EAQ64N72tIvT97tVFbxMG2jQbx9rsbq3oBNXGeErPxqNFjaAd7Kgz9AsaUSP4Lu9dH0cfLkZcDHF7FzbMlLOm3dqvCVdEjuSmXFae22d/A0yJo+U3hqXhgsyduWs3o3lwIDAQABAoGAGCqTXHILDiRr4abKVwgeCdzYhCSD/YGSTNRPb3loRoh9PRXvShxmFwQlgHy/OYLK/cyxhp92S51pCbgxrSRLxl2L3GsaIbqQjyvF2tBGVzZXAGVWNWHzN8CnX4NunGC26eBKir6uTy45Knz8nPr0KLyQfdEmfuLLHrKqt42gfHECQQDmIDA3SSOBIylYzVoporzQgBranmLRLN2BoTbOLNiaNW8RR/8i4kAoEroZ9GzVQuBG7UvV56hi+BJnoM//cGvpAkEAw6dWRN52hID2rE716gGHYksI272daFNjSvrTRL6f2LpyqOJo98rd4QrX90YEexm1fApLy4lO806vA8cfRvTXfwJBAJKx+Cp1/CUI9gV+ujgKXlSHJRcxmgp/kCBfVWFuoxECeO/KNnDVS1KARZPgBTSZMgDkqdAMoYGdY5YdpBnQX2kCQQC0IfJpQbA4WkvBZIlAQtwUgSTMuwybKnr2Y2vzlNWyQiaimqEt0lbphIRFou8pLwhKBWi3IdnQZJb5kXCYcX+dAkEAm4r5wSbnjeXcaasO1X11FO3oRwgin459ODArpdJKVPZzKCjtffjRzCAw40z/GyPg9Hf7AL6gh12TWsXq32OK3g==",
+					"fingerprint_of_cert":"2GUBJFWrAl8qiu/UkKhAlkzGDY0=",
+					"public_key_issuer":"www.mycompany.com"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code",
+			"title":"Execute Python script",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":797,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_WEZLy-1",
+			"id":"n_klGVM",
+			"index":3,
+			"inputs":{
+				"result":{
+					"jwt":"{{ n_1qRjW.outputs.result.jwt }}",
+					"errorMessage":"{{ n_1qRjW.outputs.result.errorMessage }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":142214,
+	"projectId":1927,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":31
+}
