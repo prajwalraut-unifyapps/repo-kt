@@ -1,0 +1,261 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1751957963008,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1751961930410,
+		"deployedBy":39715,
+		"deployedDefinitionId":"686cd14a2e7b4a18a9dfdb4b",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_WGj3D",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_cKfJs",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_cKfJs",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_ZyvAZ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_ZyvAZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_XPhA6",
+			"type":"next"
+		}
+	],
+	"id":"686cc1cbb604af74d317cb33",
+	"lastModifiedBy":103171,
+	"lcName":"[vrtu-sn-ticket-classify-v2-fn] classify",
+	"modifiedTime":1759007028206,
+	"name":"[vrtu-sn-ticket-classify-v2-fn] classify",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":865,
+				"resourceName":"callables_from_api"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_eQ7xX-1",
+			"id":"n_WGj3D",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json",
+					"body":{
+						"type":"object",
+						"properties":{
+							"ticketDescription":{
+								"type":"string",
+								"title":"Ticket Description"
+							}
+						},
+						"additionalProperties":false,
+						"required":[
+							"ticketDescription"
+						]
+					}
+				},
+				"endpointType":"REST",
+				"response":[
+					{
+						"status":200,
+						"contentType":"application/json",
+						"textBody":{
+							"type":"string"
+						},
+						"name":"ok",
+						"body":{
+							"type":"object",
+							"properties":{
+								"result":{
+									"type":"string",
+									"title":"Result"
+								}
+							},
+							"additionalProperties":false,
+							"required":[
+								"result"
+							]
+						}
+					}
+				],
+				"streamingResponse":false
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via API",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":803,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_eQ7xX-1",
+			"id":"n_cKfJs",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"packagesToImport":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Packages To Import"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"packagesToImport"
+					]
+				},
+				"compile_static":false,
+				"code":"def packagesToImport = []\npackagesToImport.add(\"requests\")\nreturn [\"packagesToImport\":packagesToImport]"
+			},
+			"skip":false,
+			"subTitle":"Code",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":754,
+				"resourceName":"code_by_unifyapps_python",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_eQ7xX-1",
+			"id":"n_ZyvAZ",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"result":{
+							"type":"string",
+							"title":"Result"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"result"
+					]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"SnowTicketClassification_MLEndpoint":{
+							"type":"string",
+							"title":"Snow Ticket Classification ML Endpoint"
+						},
+						"MLEndPointAPIKey":{
+							"type":"string",
+							"title":"ML End Point API Key"
+						},
+						"MLModel":{
+							"type":"string",
+							"title":"ML Model"
+						},
+						"ticketDesc":{
+							"type":"string",
+							"title":"Ticket Desc"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"SnowTicketClassification_MLEndpoint",
+						"MLEndPointAPIKey",
+						"MLModel",
+						"ticketDesc"
+					]
+				},
+				"code":"import logging\nimport os\nimport json\nimport requests\n\nurl = SnowTicketClassification_MLEndpoint\ndata ={\n    \"input_data\": {\n        \"columns\": [\n            \"Column1\",\n            \"text\"\n        ],\n        \"data\": [\n            [\n                0,\n                ticketDesc\n            ]\n        ]\n    }\n} \njson_data = json.dumps(data)\nheaders = {\n    'Content-Type': 'application/json',\n    'Authorization':'Bearer '+ MLEndPointAPIKey,\n    'azureml-model-deployment': MLModel\n}\n\ntry:\n    response = requests.post(url,data=json_data,headers=headers)\n    response.raise_for_status\n    responseData =str(json.loads(response.text)[0])    \n    category =responseData.split(\":\")[0]\n    subCategory=responseData.split(\":\")[1]\n    jsonOutPut={\n                'category': category,\n                'subCategory': subCategory\n               }\n    result = json.dumps(jsonOutPut)\nexcept requests.exceptions.RequestException as e:\n    result = \"error\"",
+				"imports":{
+					"source":"{{ n_cKfJs.outputs.result.packagesToImport }}",
+					"ua:type":"mappedArray",
+					"items":"{{ n_cKfJs.outputs.result.packagesToImport[0] }}"
+				},
+				"isAsync":false,
+				"parameters":{
+					"SnowTicketClassification_MLEndpoint":"{{ __ENV__.outputs.SNOW_TICKET_CLASSIFICATION_ML_ENDPOINT }}",
+					"MLEndPointAPIKey":"{{ __ENV__.outputs.ML_ENDPINT_API_KEY }}",
+					"MLModel":"{{ __ENV__.outputs.ML_MODEL_NAME }}",
+					"ticketDesc":"{{ n_WGj3D.outputs.body.ticketDescription }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code",
+			"title":"Execute Python script",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":818,
+				"resourceName":"callables_return_response_to_api",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_eQ7xX-1",
+			"id":"n_XPhA6",
+			"index":0,
+			"inputs":{
+				"streamingCompleted":true,
+				"responseName":"200_ok",
+				"body":{
+					"result":"{{ n_ZyvAZ.outputs.result.result }}"
+				},
+				"status":200
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to API request",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":39715,
+	"projectId":1927,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":5
+}
