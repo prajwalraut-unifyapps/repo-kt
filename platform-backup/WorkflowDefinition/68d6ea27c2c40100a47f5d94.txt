@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		"airtable"
+		"microsoft_sharepoint"
 	],
 	"createdTime":1758915111352,
 	"deleted":false,
@@ -9,14 +9,14 @@
 			"fromNodeId":"n_Xfjko",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_6irfD",
+			"toNodeId":"n_XWUVu",
 			"type":"next"
 		}
 	],
 	"id":"68d6ea27c2c40100a47f5d94",
 	"lastModifiedBy":15,
 	"lcName":"test",
-	"modifiedTime":1758958089846,
+	"modifiedTime":1758958406463,
 	"name":"test",
 	"nodes":[
 		{
@@ -26,7 +26,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_pCrEI-1",
 			"id":"n_Xfjko",
@@ -46,24 +46,20 @@
 		},
 		{
 			"context":{
-				"appName":"airtable",
-				"resourceVersion":5388,
-				"connectionId":"68d238a70bd80472be44718f",
-				"resourceName":"airtable_create_record",
+				"appName":"microsoft_sharepoint",
+				"resourceVersion":2316,
+				"resourceName":"microsoft_sharepoint_create_list_item",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_pCrEI-1",
-			"id":"n_6irfD",
+			"id":"n_XWUVu",
 			"index":2,
-			"inputs":{
-				"typecast":false
-			},
 			"skip":false,
-			"subTitle":"Airtable",
-			"title":"Create record",
+			"subTitle":"Microsoft SharePoint",
+			"title":"Create list item",
 			"type":"ACTION"
 		}
 	],
@@ -84,5 +80,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
