@@ -1,0 +1,209 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1753447458879,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1755601265749,
+		"deployedBy":39713,
+		"deployedDefinitionId":"68a459717e5ae96a3664c744",
+		"status":"DEPLOYED",
+		"version":3,
+		"workflowVersion":8
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_Pw2yd",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_WXtel",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_WXtel",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_HmPs7",
+			"type":"next"
+		}
+	],
+	"id":"68837c22f94d63a12c66384a",
+	"lastModifiedBy":103171,
+	"lcName":"[virtu-employee-update-fn] virtu-employee-elemententryvalues-fn",
+	"modifiedTime":1759004835552,
+	"name":"[virtu-Employee-Update-fn] virtu-Employee-ElementEntryValues-fn",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":865,
+				"resourceName":"callables_from_api"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_6z0Fj-1",
+			"id":"n_Pw2yd",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json",
+					"headers":{
+						"type":"object",
+						"properties":{
+							"accessToken":{
+								"type":"string",
+								"title":"Access Token"
+							}
+						},
+						"additionalProperties":false,
+						"required":[]
+					}
+				},
+				"endpointType":"REST",
+				"response":[
+					{
+						"status":200,
+						"contentType":"application/json",
+						"textBody":{
+							"type":"string"
+						},
+						"name":"200",
+						"body":{
+							"type":"object",
+							"properties":{
+								"result":{
+									"type":"object",
+									"properties":{},
+									"additionalProperties":false,
+									"title":"Result"
+								}
+							},
+							"additionalProperties":false,
+							"required":[]
+						}
+					}
+				],
+				"streamingResponse":false
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via API",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":747,
+				"resourceName":"code_by_unifyapps_java",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_6z0Fj-1",
+			"id":"n_WXtel",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"result":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Result"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"accessToken":{
+							"type":"string",
+							"title":"Access Token"
+						},
+						"requestBody":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Request Body"
+						},
+						"VirtuBusinessInternalSubKey":{
+							"type":"string",
+							"title":"Virtu Business Internal Sub Key"
+						},
+						"apimUrl":{
+							"type":"string",
+							"title":"Apim Url"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"code":"import org.json.JSONArray;\nimport org.json.JSONException;\nimport org.json.JSONObject;\n\nimport java.io.IOException;\nimport java.net.URI;\nimport java.net.URISyntaxException;\nimport java.net.URLEncoder;\nimport java.net.http.HttpClient;\nimport java.net.http.HttpHeaders;       // FIX: Added required import\nimport java.net.http.HttpRequest;\nimport java.net.http.HttpResponse;\nimport java.net.http.HttpClient.Version;  // FIX: Added required import\nimport java.nio.charset.StandardCharsets;\nimport java.util.ArrayList;\nimport java.util.HashMap;\nimport java.util.List;\nimport java.util.Map;\n\n      \n        System.out.println(\"🚨 NOTE: This program makes a REAL API call.\");\n        System.out.println(\"Please ensure the following environment variables are set:\");\n        System.out.println(\"1. APIM_URL (e.g., https://api.example.com/employees)\");\n        System.out.println(\"2. VIRTU_BUSINESS_INTERNAL_SUB_KEY (your API subscription key)\");\n        System.out.println(\"------------------------------------------------------------------\");\n\n        String sampleRequestBody = \"{\\n\" +\n            \"  \\\"Employee\\\": {\\n\" +\n            \"    \\\"PersonNumber\\\": \\\"1001\\\",\\n\" +\n            \"    \\\"ElementEntry\\\": [\\n\" +\n            \"      {\\n\" +\n            \"        \\\"ElementType\\\": \\\"Standard Bonus\\\",\\n\" +\n            \"        \\\"ElementTypeId\\\": \\\"8451\\\",\\n\" +\n            \"        \\\"LegislationCode\\\": \\\"US\\\",\\n\" +\n            \"        \\\"EventType\\\": \\\"ADD\\\",\\n\" +\n            \"        \\\"EffectiveStartDate\\\": \\\"2025-08-01T00:00:00.000Z\\\",\\n\" +\n            \"        \\\"EffectiveEndDate\\\": \\\"\\\",\\n\" +\n            \"        \\\"Items\\\": [\\n\" +\n            \"          {\\n\" +\n            \"            \\\"InputValueName\\\": \\\"Amount\\\",\\n\" +\n            \"            \\\"ScreenEntryValue\\\": \\\"5000\\\"\\n\" +\n            \"          },\\n\" +\n            \"          {\\n\" +\n            \"            \\\"InputValueName\\\": \\\"Periodicity\\\",\\n\" +\n            \"            \\\"ScreenEntryValue\\\": \\\"Annually\\\"\\n\" +\n            \"          }\\n\" +\n            \"        ]\\n\" +\n            \"      }\\n\" +\n            \"    ]\\n\" +\n            \"  }\\n\" +\n            \"}\";\n\n        String accessToken = \"Bearer <YOUR_ACCESS_TOKEN>\";\n\n        Map<String, Object> result = processEmployeeRequest(sampleRequestBody, accessToken);\n\n        // Print the result as a pretty-printed JSON for readability\n        JSONObject jsonResult = new JSONObject(result);\n        System.out.println(\"\\n--- Final Result ---\");\n        System.out.println(jsonResult.toString(4));\n        return Map.of(\"result\",jsonResult);\n    \n\n\n    /**\n     * Mock for the external GetAllElementry class, as its source was not provided.\n     * This simulates its behavior based on the Python script's logic.\n     */\n     class GetAllElementry {\n        public Map<String, Object> getElementry(\n            JSONObject item,\n            String personId,\n            String effectiveStartDate,\n            String effectiveEndDate,\n            String legislationCode,\n            String eventType) {\n\n            System.out.printf(\"--> Processing Item: %s for PersonId: %s%n\", item.getString(\"InputValueName\"), personId);\n            // Simulate a successful outcome for demonstration\n            Map<String, Object> result = new HashMap<>();\n            result.put(\"true\", \"Successfully processed Input: \" + item.getString(\"InputValueName\"));\n            return result;\n        }\n    }\n\n    /**\n     * Makes a REAL API call to get the employee's PersonId.\n     *\n     * @return The full HttpResponse object to check status code and body.\n     */\n     HttpResponse<String> getEmployeeIdApiCall(String personNumber, String accessToken) throws IOException, InterruptedException, URISyntaxException {\n        String apiUrl = apimUrl;\n        String subscriptionKey = VirtuBusinessInternalSubKey;\n        HttpClient httpClient = HttpClient.newHttpClient();\n\n        // FIX: Replaced incorrect mock with an exception for cleaner error handling.\n        if (apiUrl == null || apiUrl.isBlank() || subscriptionKey == null || subscriptionKey.isBlank()) {\n            throw new IllegalStateException(\"FATAL: Environment variables APIM_URL and VIRTU_BUSINESS_INTERNAL_SUB_KEY must be set.\");\n        }\n\n        String qParam = \"PersonNumber=\" + personNumber;\n        String query = \"q=\" + URLEncoder.encode(qParam, StandardCharsets.UTF_8) +\n                       \"&fields=PersonId&onlyData=true\";\n\n        URI uri = new URI(apiUrl + \"?\" + query);\n\n        HttpRequest request = HttpRequest.newBuilder()\n                .uri(uri)\n                .header(\"Authorization\", accessToken)\n                .header(\"Ocp-Apim-Subscription-Key\", subscriptionKey)\n                .header(\"REST-Framework-Version\", \"4\")\n                .GET()\n                .build();\n\n        System.out.println(\"Making API call to: \" + uri);\n        return httpClient.send(request, HttpResponse.BodyHandlers.ofString());\n    }\n\n    /**\n     * Main processing logic for the employee element entry payload.\n     */\n     Map<String, Object> processEmployeeRequest(String requestBody, String accessToken) {\n        try {\n            // --- 1. Validation using Guard Clauses (cleaner than nested ifs) ---\n            JSONObject requestJson = new JSONObject(requestBody);\n            if (!requestJson.has(\"Employee\")) return buildErrorResponse(\"Payload Error\");\n\n            JSONObject employee = requestJson.getJSONObject(\"Employee\");\n            if (!employee.has(\"PersonNumber\") || employee.getString(\"PersonNumber\").isEmpty())\n                return buildErrorResponse(\"Payload Error : Person Number is missing\");\n\n            JSONArray elementEntries = employee.getJSONArray(\"ElementEntry\");\n            if (elementEntries.isEmpty())\n                return buildErrorResponse(\"Payload Error: ElementEntry array is missing or empty.\");\n\n            JSONObject elementEntry = elementEntries.getJSONObject(0);\n            if (!elementEntry.has(\"ElementType\") || elementEntry.getString(\"ElementType\").isEmpty())\n                return buildErrorResponse(\"Payload Error : ElementType is missing\");\n            if (!elementEntry.has(\"LegislationCode\") || elementEntry.getString(\"LegislationCode\").isEmpty())\n                return buildErrorResponse(\"Payload Error : LegislationCode is missing\");\n            if (!elementEntry.has(\"EffectiveStartDate\") || elementEntry.getString(\"EffectiveStartDate\").isEmpty())\n                return buildErrorResponse(\"Payload Error : EffectiveStartDate is missing\");\n\n            JSONArray items = elementEntry.getJSONArray(\"Items\");\n            if (items.isEmpty()) return buildErrorResponse(\"Payload Error : Empty array found for Items\");\n\n            // --- 2. Data Extraction ---\n            String personNumber = employee.getString(\"PersonNumber\");\n            String legislationCode = elementEntry.getString(\"LegislationCode\");\n            String effectiveStartDate = elementEntry.getString(\"EffectiveStartDate\");\n            String eventType = elementEntry.getString(\"EventType\").toLowerCase();\n            String effectiveEndDate = elementEntry.optString(\"EffectiveEndDate\", \"4712-12-31\"); // Use default if missing\n\n            // --- 3. API Call to get PersonId ---\n            HttpResponse<String> apiResponse = getEmployeeIdApiCall(personNumber, accessToken);\n\n            if (apiResponse.statusCode() == 401) return buildErrorResponse(\"Access Token missing or invalid\");\n\n            JSONObject getEmployeeIdResp = new JSONObject(apiResponse.body());\n            if (getEmployeeIdResp.getInt(\"count\") == 0) return buildErrorResponse(\"Payload Error : Invalid PersonNumber\");\n\n            String personId = getEmployeeIdResp.getJSONArray(\"items\").getJSONObject(0).getString(\"PersonId\");\n\n            // --- 4. Loop and Process Items ---\n            List<Object> responseCollection = new ArrayList<>();\n            List<String> responseCollectionIncorrect = new ArrayList<>();\n            GetAllElementry processor = new GetAllElementry();\n\n            for (int i = 0; i < items.length(); i++) {\n                JSONObject item = items.getJSONObject(i);\n                if (!item.has(\"InputValueName\") || item.getString(\"InputValueName\").isEmpty()) {\n                    responseCollectionIncorrect.add(\"Payload Error : InputValueName is missing in item \" + (i + 1));\n                    continue;\n                }\n\n                Map<String, Object> competencyRes = processor.getElementry(item, personId, effectiveStartDate, effectiveEndDate, legislationCode, eventType);\n\n                if (competencyRes.containsKey(\"true\")) {\n                    responseCollection.add(competencyRes.get(\"true\"));\n                } else if (competencyRes.containsKey(\"false\")) {\n                    responseCollectionIncorrect.add(competencyRes.get(\"false\").toString());\n                } else if (competencyRes.containsKey(\"error\")) {\n                    // Critical error that stops all processing, as per Python script\n                    return buildErrorResponse(competencyRes.get(\"error\") + \"||\" + personNumber);\n                }\n            }\n\n            // --- 5. Build Final Response ---\n            return buildFinalResponse(responseCollection, responseCollectionIncorrect);\n\n        } catch (JSONException e) {\n            return buildErrorResponse(\"Payload Error: Invalid JSON Type. \" + e.getMessage());\n        // FIX: Catch the new exception for a more robust failure message.\n        } catch (IOException | InterruptedException | URISyntaxException | IllegalStateException e) {\n            return buildErrorResponse(\"API Call Failed: \" + e.getMessage());\n        }\n    }\n\n    // --- Helper methods to build the final response Map ---\n\n    Map<String, Object> buildErrorResponse(String errorMessage) {\n        Map<String, Object> resBody = new HashMap<>();\n        resBody.put(\"success\", \"false\");\n        resBody.put(\"statusCode\", \"400\");\n        List<Map<String, String>> errorList = new ArrayList<>();\n        Map<String, String> errorMap = new HashMap<>();\n        errorMap.put(\"errorMessage\", errorMessage);\n        errorList.add(errorMap);\n        resBody.put(\"error\", errorList);\n\n        List<Map<String, Object>> outerList = new ArrayList<>();\n        outerList.add(resBody);\n\n        Map<String, Object> finalMap = new HashMap<>();\n        finalMap.put(\"response\", outerList);\n        return finalMap;\n    }\n\n     Map<String, Object> buildFinalResponse(List<Object> success, List<String> incorrect) {\n        Map<String, Object> responseData = new HashMap<>();\n        responseData.put(\"ElementryID\", success);\n\n        if (!incorrect.isEmpty()) {\n            responseData.put(\"success\", \"false\");\n            responseData.put(\"statusCode\", \"400\");\n        } else {\n            responseData.put(\"success\", \"true\");\n            responseData.put(\"statusCode\", \"200\");\n        }\n\n        Map<String, Object> errorMap = new HashMap<>();\n        errorMap.put(\"errorMessage\", incorrect);\n        List<Map<String, Object>> errorList = new ArrayList<>();\n        errorList.add(errorMap);\n        responseData.put(\"error\", errorList);\n\n        List<Map<String, Object>> outerList = new ArrayList<>();\n        outerList.add(responseData);\n\n        Map<String, Object> finalMap = new HashMap<>();\n        finalMap.put(\"response\", outerList);\n        return finalMap;\n    }\n",
+				"parameters":{
+					"accessToken":"{{ n_Pw2yd.outputs.headers.accessToken }}",
+					"requestBody":"{{ n_Pw2yd.outputs.body }}",
+					"VirtuBusinessInternalSubKey":"{{ __ENV__.outputs.VirtuBusinessInternalSubKey }}",
+					"apimUrl":"{{ __ENV__.outputs.apimUrl }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code",
+			"title":"Execute Java code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":818,
+				"resourceName":"callables_return_response_to_api",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_6z0Fj-1",
+			"id":"n_HmPs7",
+			"index":3,
+			"inputs":{
+				"streamingCompleted":true,
+				"responseName":"200_200",
+				"body":{
+					"result":"{{ n_WXtel.outputs.result.result }}"
+				},
+				"status":200
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to API request",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":39713,
+	"projectId":1927,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":9
+}
