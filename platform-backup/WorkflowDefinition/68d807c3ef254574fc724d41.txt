@@ -4,6 +4,14 @@
 	],
 	"createdTime":1758988227618,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758988316175,
+		"deployedBy":161875,
+		"deployedDefinitionId":"68d8081aef254574fc724da8",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_VnBiR",
@@ -16,7 +24,7 @@
 	"id":"68d807c3ef254574fc724d41",
 	"lastModifiedBy":161875,
 	"lcName":"test connection",
-	"modifiedTime":1758988312358,
+	"modifiedTime":1758988324511,
 	"name":"Test Connection",
 	"nodes":[
 		{
@@ -59,7 +67,8 @@
 			"id":"n_GMiDE",
 			"index":2,
 			"inputs":{
-				"include_locale":false
+				"include_locale":false,
+				"user":"U098W9DGUPL"
 			},
 			"skip":false,
 			"subTitle":"Slack",
@@ -84,5 +93,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
