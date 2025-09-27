@@ -154,7 +154,7 @@
 	"id":"68d117de852fdd034c42ed99",
 	"lastModifiedBy":187421,
 	"lcName":"meeting assistant | join meet",
-	"modifiedTime":1758968790791,
+	"modifiedTime":1758970224513,
 	"name":"Meeting Assistant | Join meet",
 	"nodes":[
 		{
@@ -202,7 +202,7 @@
 				"timeMax":"2025-09-25T08:09:00.000Z",
 				"timeMin":"2025-09-24T08:09:18.155Z"
 			},
-			"skip":true,
+			"skip":false,
 			"subTitle":"Google Calendar",
 			"title":"Search events",
 			"type":"ACTION"
@@ -226,7 +226,7 @@
 				"model":"gpt-4o",
 				"message":"Extract only the meeting link (Microsoft Teams, Google Meet, or Zoom) from the event description: {{ n_n4wKZ.outputs.description }}\nIf multiple links are present, return only the main meeting link.\nOutput must be the exact URL only — no additional text."
 			},
-			"skip":true,
+			"skip":false,
 			"subTitle":"OpenAI",
 			"title":"Send message to OpenAI models",
 			"type":"ACTION"
@@ -249,10 +249,10 @@
 				"runtimeConnections":{},
 				"schedule_type":"ONE_TIME",
 				"cancel_existing":true,
-				"version":"-1",
-				"schedule_name":"Meeting bot time"
+				"schedule_name":"Meeting bot time",
+				"version":"-1"
 			},
-			"skip":true,
+			"skip":false,
 			"subTitle":"Callable",
 			"title":"Schedule callable",
 			"type":"ACTION"
@@ -274,7 +274,7 @@
 				"botName":"UnifyApps Meeting Assistant",
 				"meetingUrl":"{{ n_GsNXV.outputs.choices[0].message.content }}"
 			},
-			"skip":true,
+			"skip":false,
 			"subTitle":"Meeting bot by UnifyApps",
 			"title":"Join meeting",
 			"type":"ACTION"
@@ -1020,7 +1020,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_JgjY1",
@@ -1035,7 +1035,7 @@
 				},
 				"message":"Hello Team,\nHere’s a summary of today’s meeting:\nPurpose: {{ n_JkuXa.outputs.result.purpose }}\n\nKey Takeaways: {{ n_JkuXa.outputs.result.key_takeaways[0] }}\n\nTopics Discussed: {{ n_JkuXa.outputs.result.topics_discussed[0] }}\n\nNext Steps: {{ n_JkuXa.outputs.result.next_steps[0] }}\n\nAction Items:\nOwner: {{ n_JkuXa.outputs.result.action_items[0].owner }}\nAction Item: {{ n_JkuXa.outputs.result.action_items[0].action_item }}\nDeadline: {{ n_JkuXa.outputs.result.action_items[0].deadline }}\n\nVerbatim Transcript Highlights:\nSpeaker: {{ n_JkuXa.outputs.result.verbatim_transcript[0].speaker }}\nContent: {{ n_JkuXa.outputs.result.verbatim_transcript[0].transcript }}\nTime: {{ n_JkuXa.outputs.result.verbatim_transcript[0].start_time }} - {{ n_JkuXa.outputs.result.verbatim_transcript[0].end_time }}\n\nThank you for your participation.\nBest regards,\nUnifyApps Meeting Assistant"
 			},
-			"skip":true,
+			"skip":false,
 			"subTitle":"Gmail",
 			"title":"Send email",
 			"type":"ACTION"
@@ -1070,5 +1070,5 @@
 		}
 	},
 	"standard":false,
-	"version":65
+	"version":70
 }
