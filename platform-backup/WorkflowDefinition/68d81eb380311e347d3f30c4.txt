@@ -6,46 +6,159 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_hfDvf",
+			"fromNodeId":"n_O67u5",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_SKpV0",
+			"toNodeId":"n_aUDAk",
 			"type":"next"
 		}
 	],
 	"id":"68d81eb380311e347d3f30c4",
-	"lastModifiedBy":15,
+	"lastModifiedBy":44108,
 	"lcName":"test",
-	"modifiedTime":1758994099068,
+	"modifiedTime":1759002716138,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":878,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_hfDvf-1",
-			"id":"_hfDvf",
-			"index":0,
+			"id":"n_O67u5",
+			"index":1,
+			"inputs":{
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"arrayOfListOfChunks":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Array Of List Of Chunks"
+						},
+						"userQueries":{
+							"type":"string",
+							"title":"User Queries"
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				},
+				"visibleOptionalFields":[
+					"root.parameters.arrayOfListOfChunks.items",
+					"root.parameters.userQueries.items"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":23,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_hfDvf-1",
-			"id":"_SKpV0",
-			"index":0,
+			"id":"n_aUDAk",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"content_arr":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"userQuery":{
+										"type":"string",
+										"title":"User Query"
+									},
+									"relevantContent":{
+										"type":"string",
+										"title":"Relevant Content"
+									}
+								},
+								"additionalProperties":false,
+								"required":[]
+							},
+							"title":"Content Arr"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"arrayOfListOfChunks":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Array Of List Of Chunks"
+						},
+						"userQueries":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"User Queries"
+						}
+					}
+				},
+				"code":"def arr=[]\r\nfor(int i=0;i<arrayOfListOfChunks.size();i++){\r\n\r\n  def ListofChunks = arrayOfListOfChunks[i].relevantContent;\r\n  def content = \"\"\r\n  for(j in ListofChunks){\r\n    content+=j.content.split(\"Content\")[1];\r\n  }\r\n  arr.add([\"userQuery\":userQueries[i],\"relevantContent\":content]);\r\n}\r\n\r\nreturn [\"content_arr\":arr]",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"arrayOfListOfChunks":{
+						"source":"{{ n_SvQHQ.outputs.result }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_SvQHQ.outputs.result[0] }}"
+					},
+					"userQueries":{
+						"source":"{{ n_V3hB5.outputs.result.search_questions }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_V3hB5.outputs.result.search_questions[0] }}"
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":15,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +172,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
