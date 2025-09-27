@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758985423798,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_ySqFw",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_196Hp",
+			"type":"next"
+		}
+	],
+	"id":"68d7fccfe6f95861c0a804f5",
+	"lastModifiedBy":155543,
+	"lcName":"desgdfwea",
+	"modifiedTime":1758985423798,
+	"name":"desgdfwea",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_ySqFw-1",
+			"id":"_ySqFw",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_ySqFw-1",
+			"id":"_196Hp",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":155543,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
