@@ -16,7 +16,7 @@
 	"id":"68d6ea27c2c40100a47f5d94",
 	"lastModifiedBy":15,
 	"lcName":"test",
-	"modifiedTime":1758958406463,
+	"modifiedTime":1758958409590,
 	"name":"test",
 	"nodes":[
 		{
@@ -48,6 +48,7 @@
 			"context":{
 				"appName":"microsoft_sharepoint",
 				"resourceVersion":2316,
+				"connectionId":"68d3cf9c50f89c3a5139beee",
 				"resourceName":"microsoft_sharepoint_create_list_item",
 				"type":"APPLICATION"
 			},
@@ -57,6 +58,10 @@
 			"groupId":"_pCrEI-1",
 			"id":"n_XWUVu",
 			"index":2,
+			"inputs":{
+				"site_name":"",
+				"objectSourceResourceName":"microsoft_sharepoint_fetch_list_fields"
+			},
 			"skip":false,
 			"subTitle":"Microsoft SharePoint",
 			"title":"Create list item",
@@ -80,5 +85,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
