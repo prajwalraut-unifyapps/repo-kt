@@ -17,6 +17,13 @@
 			"fromNodeId":"n_MkQPk",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_ZkNAh",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_ZkNAh",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_JkIiV",
 			"type":"next"
 		},
@@ -36,9 +43,9 @@
 		}
 	],
 	"id":"68d65fed590de345483256f6",
-	"lastModifiedBy":49915,
+	"lastModifiedBy":39715,
 	"lcName":"test null",
-	"modifiedTime":1758905849926,
+	"modifiedTime":1758994907480,
 	"name":"test null",
 	"nodes":[
 		{
@@ -68,6 +75,33 @@
 		},
 		{
 			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":4330,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_TUpm0-1",
+			"id":"n_ZkNAh",
+			"index":2,
+			"inputs":{
+				"writeThroughSessionVariables":false,
+				"object_type":"testing_null_checker_123",
+				"skipIfBlank":false,
+				"record":{
+					"key1":"{{ n_MkQPk.outputs.body }}",
+					"key2":"3ewsd"
+				}
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"variable_by_unifyapps",
 				"resourceVersion":921,
 				"resourceName":"variable_by_unifyapps_create_variables",
@@ -78,7 +112,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_TUpm0-1",
 			"id":"n_JkIiV",
-			"index":2,
+			"index":3,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -133,11 +167,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_TUpm0-1",
 			"id":"n_UA0Cz",
-			"index":3,
+			"index":4,
 			"inputs":{
 				"streamId":"e_68d66079793bfd127f1b3372",
 				"skipInputValidation":false,
@@ -163,7 +197,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_TUpm0-1",
 			"id":"n_dpKPY",
-			"index":4,
+			"index":5,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"dhrupal_test_obect",
@@ -196,5 +230,5 @@
 	"tags":[
 		
 	],
-	"version":23
+	"version":24
 }
