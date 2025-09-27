@@ -6,46 +6,127 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_fiFzL",
+			"fromNodeId":"n_ZdRBB",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_sGBE1",
+			"toNodeId":"n_JyYBd",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_JyYBd",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_4lrOE",
 			"type":"next"
 		}
 	],
 	"id":"68d7e491ef254574fc71d185",
 	"lastModifiedBy":894,
 	"lcName":"createjpgurl",
-	"modifiedTime":1758979217652,
+	"modifiedTime":1758979277069,
 	"name":"CreateJPGURL",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":878,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_fiFzL-1",
-			"id":"_fiFzL",
-			"index":0,
+			"id":"n_ZdRBB",
+			"index":1,
+			"inputs":{
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"file":{
+							"type":"object",
+							"properties":{
+								"fileName":{
+									"type":"string",
+									"title":"File Name"
+								},
+								"fileType":{
+									"type":"string",
+									"title":"File Type"
+								},
+								"source":{
+									"type":"string",
+									"title":"Source"
+								},
+								"sourceType":{
+									"type":"string",
+									"title":"Source Type"
+								}
+							},
+							"additionalProperties":false,
+							"title":"File",
+							"required":[]
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":832,
+				"resourceName":"utility_by_unifyapps_generate_public_url",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_fiFzL-1",
-			"id":"_sGBE1",
-			"index":0,
+			"id":"n_JyYBd",
+			"index":2,
+			"inputs":{
+				"file":"{{ n_ZdRBB.outputs.file }}",
+				"expiryTime":1
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Utility by UnifyApps",
+			"title":"Generate public file URL",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":895,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_fiFzL-1",
+			"id":"n_4lrOE",
+			"index":3,
+			"inputs":{
+				"result":"200"
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":894,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +140,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
