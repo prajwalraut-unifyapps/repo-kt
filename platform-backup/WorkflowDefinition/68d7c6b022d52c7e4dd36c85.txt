@@ -76,7 +76,7 @@
 	"id":"68d7c6b022d52c7e4dd36c85",
 	"lastModifiedBy":182775,
 	"lcName":"sub-streamconcurrencytest (copy)",
-	"modifiedTime":1758973413656,
+	"modifiedTime":1758973368123,
 	"name":"sub-streamConcurrencyTest (copy)",
 	"nodes":[
 		{
@@ -183,18 +183,7 @@
 			"groupId":"_HwF2P-1",
 			"id":"n_np8YP",
 			"index":3,
-			"inputs":{
-				"filters":[
-					{
-						"property":"{{ n_ebIy6.outputs.event.SALARY }}",
-						"filter":{
-							"operator":"EQUAL",
-							"value":"45000"
-						}
-					}
-				],
-				"operator":"AND"
-			},
+			"inputs":{},
 			"skip":false,
 			"subTitle":"Condition",
 			"title":"Condition",
@@ -309,5 +298,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":2
 }
