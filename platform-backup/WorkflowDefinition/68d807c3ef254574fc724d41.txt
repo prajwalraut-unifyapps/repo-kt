@@ -1,51 +1,76 @@
 {
 	"appsUsed":[
-		
+		"slack"
 	],
 	"createdTime":1758988227618,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_5hfi7",
+			"fromNodeId":"n_VnBiR",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_5wSzl",
+			"toNodeId":"n_GMiDE",
 			"type":"next"
 		}
 	],
 	"id":"68d807c3ef254574fc724d41",
 	"lastModifiedBy":161875,
 	"lcName":"test connection",
-	"modifiedTime":1758988227618,
+	"modifiedTime":1758988312358,
 	"name":"Test Connection",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_5hfi7-1",
-			"id":"_5hfi7",
-			"index":0,
+			"id":"n_VnBiR",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"slack",
+				"resourceVersion":5494,
+				"connectionId":"68d807ef889cd036ae9c3292",
+				"resourceName":"slack_get_user_info_by_id",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_5hfi7-1",
-			"id":"_5wSzl",
-			"index":0,
+			"id":"n_GMiDE",
+			"index":2,
+			"inputs":{
+				"include_locale":false
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Slack",
+			"title":"Get user info by ID",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":161875,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +84,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
