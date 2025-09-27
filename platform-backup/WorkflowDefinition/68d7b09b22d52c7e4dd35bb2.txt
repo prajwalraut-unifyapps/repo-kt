@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758965915108,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_BKtlZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_2WqBK",
+			"type":"next"
+		}
+	],
+	"id":"68d7b09b22d52c7e4dd35bb2",
+	"lastModifiedBy":124519,
+	"lcName":"test",
+	"modifiedTime":1758965915108,
+	"name":"test",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_BKtlZ-1",
+			"id":"_BKtlZ",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_BKtlZ-1",
+			"id":"_2WqBK",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":124519,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
