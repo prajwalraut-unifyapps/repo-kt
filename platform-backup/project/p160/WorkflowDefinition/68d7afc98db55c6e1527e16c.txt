@@ -1,0 +1,64 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758965705218,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_wrHm8",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_qTlGf",
+			"type":"next"
+		}
+	],
+	"id":"68d7afc98db55c6e1527e16c",
+	"lastModifiedBy":2621,
+	"lcName":"gmeet conference trigger",
+	"modifiedTime":1758965705218,
+	"name":"Gmeet conference trigger",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_wrHm8-1",
+			"id":"_wrHm8",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_wrHm8-1",
+			"id":"_qTlGf",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":2621,
+	"projectId":160,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
