@@ -8,12 +8,12 @@
 	"createdTime":1758968790791,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758802053040,
-		"deployedBy":66361,
-		"deployedDefinitionId":"68d5308469b0f178cdaea3b2",
-		"status":"PAUSED",
-		"version":20,
-		"workflowVersion":64
+		"deployedAt":1758970230032,
+		"deployedBy":187421,
+		"deployedDefinitionId":"68d7c1748db55c6e1527efe6",
+		"status":"DEPLOYED",
+		"version":21,
+		"workflowVersion":70
 	},
 	"edges":[
 		{
@@ -154,7 +154,7 @@
 	"id":"68d117de852fdd034c42ed99",
 	"lastModifiedBy":187421,
 	"lcName":"meeting assistant | join meet",
-	"modifiedTime":1758970205942,
+	"modifiedTime":1758970730593,
 	"name":"Meeting Assistant | Join meet",
 	"nodes":[
 		{
@@ -190,7 +190,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_AzCAS",
@@ -199,8 +199,8 @@
 				"q":"Meeting",
 				"singleEvents":true,
 				"calendarId":"primary",
-				"timeMax":"2025-09-25T08:09:00.000Z",
-				"timeMin":"2025-09-24T08:09:18.155Z"
+				"timeMax":"2025-09-28T08:09:00.000Z",
+				"timeMin":"2025-09-27T08:09:00.000Z"
 			},
 			"skip":false,
 			"subTitle":"Google Calendar",
@@ -1035,7 +1035,7 @@
 				},
 				"message":"Hello Team,\nHere’s a summary of today’s meeting:\nPurpose: {{ n_JkuXa.outputs.result.purpose }}\n\nKey Takeaways: {{ n_JkuXa.outputs.result.key_takeaways[0] }}\n\nTopics Discussed: {{ n_JkuXa.outputs.result.topics_discussed[0] }}\n\nNext Steps: {{ n_JkuXa.outputs.result.next_steps[0] }}\n\nAction Items:\nOwner: {{ n_JkuXa.outputs.result.action_items[0].owner }}\nAction Item: {{ n_JkuXa.outputs.result.action_items[0].action_item }}\nDeadline: {{ n_JkuXa.outputs.result.action_items[0].deadline }}\n\nVerbatim Transcript Highlights:\nSpeaker: {{ n_JkuXa.outputs.result.verbatim_transcript[0].speaker }}\nContent: {{ n_JkuXa.outputs.result.verbatim_transcript[0].transcript }}\nTime: {{ n_JkuXa.outputs.result.verbatim_transcript[0].start_time }} - {{ n_JkuXa.outputs.result.verbatim_transcript[0].end_time }}\n\nThank you for your participation.\nBest regards,\nUnifyApps Meeting Assistant"
 			},
-			"skip":true,
+			"skip":false,
 			"subTitle":"Gmail",
 			"title":"Send email",
 			"type":"ACTION"
@@ -1070,5 +1070,5 @@
 		}
 	},
 	"standard":false,
-	"version":69
+	"version":71
 }
