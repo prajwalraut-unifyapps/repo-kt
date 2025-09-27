@@ -5,12 +5,12 @@
 	"createdTime":1755341340292,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1757141148422,
+		"deployedAt":1758976330296,
 		"deployedBy":44096,
-		"deployedDefinitionId":"68bbd89ce877e764a6ec1c69",
+		"deployedDefinitionId":"68d7d94a88d6e673246bf4dc",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":5
+		"version":2,
+		"workflowVersion":6
 	},
 	"edges":[
 		{
@@ -31,6 +31,13 @@
 			"fromNodeId":"n_7xTUy",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"_JlTkZ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_JlTkZ",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_aDcNX",
 			"type":"next"
 		}
@@ -38,7 +45,7 @@
 	"id":"68a0621ce2145a693b0a5877",
 	"lastModifiedBy":44096,
 	"lcName":"testlookup",
-	"modifiedTime":1758976328587,
+	"modifiedTime":1758976377841,
 	"name":"testLookup",
 	"nodes":[
 		{
@@ -144,6 +151,39 @@
 		},
 		{
 			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":0,
+				"resourceName":"standard_entities_lookup_entities",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_lUik9-1",
+			"id":"_JlTkZ",
+			"index":4,
+			"inputs":{
+				"keys":[
+					"key1"
+				],
+				"options":"{{ n_uNvzq.outputs.result.options }}",
+				"lookupType":"CUSTOM_WORKFLOW_LOOKUP",
+				"page":{
+					"limit":20,
+					"offset":0
+				},
+				"type":"ByQuery",
+				"fields":[
+					"fields1"
+				]
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Lookup Request",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"callables",
 				"resourceVersion":800,
 				"resourceName":"callables_return_to_automation",
@@ -154,7 +194,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_lUik9-1",
 			"id":"n_aDcNX",
-			"index":4,
+			"index":5,
 			"inputs":{
 				"result":{
 					"res":true
@@ -183,5 +223,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
