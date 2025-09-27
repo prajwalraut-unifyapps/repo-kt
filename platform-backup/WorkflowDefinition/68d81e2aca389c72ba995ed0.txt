@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758993962581,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_7SVoS",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_e0in4",
+			"type":"next"
+		}
+	],
+	"id":"68d81e2aca389c72ba995ed0",
+	"lastModifiedBy":175131,
+	"lcName":"api sheet",
+	"modifiedTime":1758993962581,
+	"name":"API Sheet",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_7SVoS-1",
+			"id":"_7SVoS",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_7SVoS-1",
+			"id":"_e0in4",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175131,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
