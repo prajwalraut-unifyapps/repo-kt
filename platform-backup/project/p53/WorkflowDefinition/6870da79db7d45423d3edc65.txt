@@ -16,7 +16,7 @@
 	"id":"6870da79db7d45423d3edc65",
 	"lastModifiedBy":161908,
 	"lcName":"test",
-	"modifiedTime":1758985692856,
+	"modifiedTime":1758985732158,
 	"name":"test",
 	"nodes":[
 		{
@@ -62,10 +62,9 @@
 				"triggerInputCondition":{
 					"filters":[
 						{
-							"property":"properties_APPLICATION_NAME",
+							"property":"cTm",
 							"filter":{
-								"operator":"EQUAL",
-								"value":"KeyValut_URI_PROD"
+								"operator":"EXISTS"
 							}
 						}
 					],
@@ -79,7 +78,7 @@
 					"paginateBy":"OFFSET",
 					"limit":20
 				},
-				"numberOfRecordsToFetch":"SINGLE",
+				"numberOfRecordsToFetch":"MULTIPLE",
 				"readThroughSessionVariables":false,
 				"includeTotalCount":false
 			},
@@ -107,5 +106,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
