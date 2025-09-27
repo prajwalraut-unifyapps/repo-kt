@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759010001316,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759010001416,
+		"deployedBy":175325,
+		"deployedDefinitionId":"68d85cd12c81b33fcef5559d",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"7pKsG",
@@ -16,7 +24,7 @@
 	"id":"68d85c806115d0174f2c9b1d",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa22e810qmtgis2",
-	"modifiedTime":1759010001316,
+	"modifiedTime":1759010087665,
 	"name":"changeSetQA22E810QmtgIS2",
 	"nodes":[
 		{
@@ -87,7 +95,7 @@
 			"index":0,
 			"inputs":{
 				"result":{
-					"c":"=SUM({{ 7pKsG.outputs.a }},{{ 7pKsG.outputs.b }})"
+					"c":"=PRODUCT({{ 7pKsG.outputs.a }},{{ 7pKsG.outputs.b }})"
 				}
 			},
 			"skip":false,
@@ -113,5 +121,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
