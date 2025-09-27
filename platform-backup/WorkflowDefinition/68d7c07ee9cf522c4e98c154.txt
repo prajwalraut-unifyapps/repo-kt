@@ -5,12 +5,12 @@
 	"createdTime":1758969982598,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758970297664,
+		"deployedAt":1758971084172,
 		"deployedBy":182775,
-		"deployedDefinitionId":"68d7c1b722d52c7e4dd36aa3",
+		"deployedDefinitionId":"68d7c4cbb88cb54acafd4acd",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":3
+		"version":2,
+		"workflowVersion":4
 	},
 	"edges":[
 		{
@@ -22,6 +22,13 @@
 		},
 		{
 			"fromNodeId":"n_LrNiY",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_huIJQ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_huIJQ",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_MHpPn",
@@ -53,7 +60,7 @@
 	"id":"68d7c07ee9cf522c4e98c154",
 	"lastModifiedBy":182775,
 	"lcName":"pub-streamconcurrencytest",
-	"modifiedTime":1758971082365,
+	"modifiedTime":1758971265899,
 	"name":"pub-streamConcurrencyTest",
 	"nodes":[
 		{
@@ -63,7 +70,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_gCChJ-1",
 			"id":"n_BN5YM",
@@ -146,11 +153,30 @@
 							"title":"IS_ACTIVE"
 						}
 					}
-				}
+				},
+				"jsonString":"{ \"EMP_NAME\": \"Test User\", \"EMP_ID\": 101, \"JOIN_DATE\": \"2025-09-25T12:00:00Z\", \"SALARY\": 50000, \"QUERY_DESC\": \"Concurrency test payload\", \"SKILLS\": [\"Automation\", \"Testing\"], \"ADDRESS\": { \"city\": \"Delhi\", \"pincode\": \"110001\" }, \"IS_ACTIVE\": true }"
 			},
 			"skip":false,
 			"subTitle":"Utility by UnifyApps",
 			"title":"Deserialise string to JSON object",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":924,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_gCChJ-1",
+			"id":"n_huIJQ",
+			"index":3,
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
 			"type":"ACTION"
 		},
 		{
@@ -161,11 +187,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_gCChJ-1",
 			"id":"n_MHpPn",
-			"index":3,
+			"index":4,
 			"inputs":{
 				"start":1,
 				"limit":10,
@@ -185,11 +211,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_MHpPn@_gCChJ-1@l",
 			"id":"n_FOjZN",
-			"index":4,
+			"index":5,
 			"inputs":{
 				"streamId":"e_68d7be8759ac503c2940703e",
 				"skipInputValidation":true,
@@ -212,11 +238,11 @@
 				"appName":"stop"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_gCChJ-1",
 			"id":"n_twg6U",
-			"index":5,
+			"index":6,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -240,5 +266,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
