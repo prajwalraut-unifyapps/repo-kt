@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758994785848,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_QYfi4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_BIXor",
+			"type":"next"
+		}
+	],
+	"id":"68d8216180311e347d3f3194",
+	"lastModifiedBy":1234,
+	"lcName":"onedrive test search file",
+	"modifiedTime":1758994785848,
+	"name":"onedrive test search file",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_QYfi4-1",
+			"id":"_QYfi4",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_QYfi4-1",
+			"id":"_BIXor",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":1234,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
