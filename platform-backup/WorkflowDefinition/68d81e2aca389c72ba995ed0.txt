@@ -18,12 +18,19 @@
 			"skip":false,
 			"toNodeId":"n_xZUpC",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_xZUpC",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Cm0Vb",
+			"type":"next"
 		}
 	],
 	"id":"68d81e2aca389c72ba995ed0",
 	"lastModifiedBy":175131,
 	"lcName":"api sheet",
-	"modifiedTime":1758994838962,
+	"modifiedTime":1758994909685,
 	"name":"API Sheet",
 	"nodes":[
 		{
@@ -124,6 +131,27 @@
 			"subTitle":"Utility by UnifyApps",
 			"title":"Decode base64 text",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":838,
+				"resourceName":"utility_by_unifyapps_to_json_object",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_7SVoS-1",
+			"id":"n_Cm0Vb",
+			"index":4,
+			"inputs":{
+				"jsonString":"{{ n_xZUpC.outputs.decodedText }}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Deserialise string to JSON object",
+			"type":"ACTION"
 		}
 	],
 	"ownerUserId":175131,
@@ -143,5 +171,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
