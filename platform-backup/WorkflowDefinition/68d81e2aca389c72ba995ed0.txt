@@ -6,46 +6,130 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_7SVoS",
+			"fromNodeId":"n_BzaA8",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_e0in4",
+			"toNodeId":"n_jQtM9",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_jQtM9",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_xZUpC",
 			"type":"next"
 		}
 	],
 	"id":"68d81e2aca389c72ba995ed0",
 	"lastModifiedBy":175131,
 	"lcName":"api sheet",
-	"modifiedTime":1758993962581,
+	"modifiedTime":1758994049642,
 	"name":"API Sheet",
 	"nodes":[
 		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":814,
+				"resourceName":"schedule_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7SVoS-1",
-			"id":"_7SVoS",
-			"index":0,
+			"id":"n_BzaA8",
+			"index":1,
+			"inputs":{
+				"cron":"INTERVAL",
+				"sequential":false,
+				"interval":15,
+				"frequency":"MINUTES"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Schedule",
+			"title":"New recurring event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"SCHEDULED"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":924,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7SVoS-1",
-			"id":"_e0in4",
-			"index":0,
+			"id":"n_jQtM9",
+			"index":2,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"Base64Content":{
+							"type":"string",
+							"title":"Base 64 Content"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"Base64Content":"W3siY29sdW1ucyI6eyJuYW1lIjoiRGVmYXVsdCBBdXRvbWF0aW9uIFdlYi1ob29rcyIsImlkIjoiNjg3YTQ1OGJhNjM5YjY2NjUxMDZjNWY4In19LHsiY29sdW1ucyI6eyJuYW1lIjoiQVRDIEFQSSBSZXN0cmljdGVkIiwiaWQiOiI2ODY3Y2RlNWNiMjFhNjNmYTYzM2YwM2EifX0seyJjb2x1bW5zIjp7Im5hbWUiOiJEZXNpZ25hdGlvbnMgQVBJIFJlc3RyaWN0ZWQiLCJpZCI6IjY4Njc4ZjY5Y2IyMWE2M2ZhNjMzZWZkOCJ9fSx7ImNvbHVtbnMiOnsibmFtZSI6IkNpdHkgQVBJIFJlc3RyaWN0ZWQiLCJpZCI6IjY4NjdlMGRjNDZkNTM5NGIzYWUyNGUyNyJ9fSx7ImNvbHVtbnMiOnsibmFtZSI6IkFUQyBBUEkiLCJpZCI6IjY4NTkyNDMzYmUyZWY0MjQ0NzY1ZjVhYiJ9fSx7ImNvbHVtbnMiOnsibmFtZSI6IkN1c3RvbWVyIEFQSSIsImlkIjoiNjg1OTA1ODhiZTJlZjQyNDQ3NjVmNTgwIn19LHsiY29sdW1ucyI6eyJuYW1lIjoiQ29tcGV0ZW5jeSBBUEkiLCJpZCI6IjY4NTkzZGNjYmUyZWY0MjQ0NzY1ZjYyNiJ9fSx7ImNvbHVtbnMiOnsibmFtZSI6IkRlc2lnbmF0aW9uIEFQSSBQcml2YXRlIiwiaWQiOiI2ODg2NTAxZjlmMDZhNDVhOWZkMzgwOGMifX0seyJjb2x1bW5zIjp7Im5hbWUiOiJDb21wZXRlbmN5IEFQSSBSZXN0cmljdGVkIiwiaWQiOiI2ODY2NjllYTYyYjJjZDZkNjcxYTQ1NjQifX0seyJjb2x1bW5zIjp7Im5hbWUiOiJEZXNpZ25hdGlvbiBMaXN0IEFQSSBQcml2YXRlIiwiaWQiOiI2ODg2NTBjNTlmMDZhNDVhOWZkMzgwOGYifX0seyJjb2x1bW5zIjp7Im5hbWUiOiJDaXR5IEFQSSIsImlkIjoiNjg2Nzg4ODBjYjIxYTYzZmE2MzNlZmQ1In19LHsiY29sdW1ucyI6eyJuYW1lIjoiRGVwYXJ0bWVudCBBUEkiLCJpZCI6IjY4NTkwYTBiNDA1NjI4N2IxYzU0MmVjYiJ9fSx7ImNvbHVtbnMiOnsibmFtZSI6IkRlcGFydG1lbnQgQVBJIFJlc3RyaWN0ZWQiLCJpZCI6IjY4NjY2ZmQzNjJiMmNkNmQ2NzFhNDU2ZCJ9fSx7ImNvbHVtbnMiOnsibmFtZSI6IkRlc2lnbmF0aW9uIExpc3QgQVBJIFJlc3RyaWN0ZWQiLCJpZCI6IjY4NjY3MjZkNjJiMmNkNmQ2NzFhNDU3MSJ9fSx7ImNvbHVtbnMiOnsibmFtZSI6IkN1c3RvbWVyIEFQSSBSZXN0cmljdGVkIiwiaWQiOiI2ODY2NmJmNTYyYjJjZDZkNjcxYTQ1NmEifX0seyJjb2x1bW5zIjp7Im5hbWUiOiJQcm9qZWN0IFJvbGUgQVBJIFJlc3RyaWN0ZWQiLCJpZCI6IjY4Njc5ZTA0NDZkNTM5NGIzYWUyNGRkZiJ9fSx7ImNvbHVtbnMiOnsibmFtZSI6IlByb2plY3QgVGVhbSBNZW1iZXIgQVBJIFJlc3RyaWN0ZWQiLCJpZCI6IjY4Njc5ZWQ1NDZkNTM5NGIzYWUyNGRlMiJ9fSx7ImNvbHVtbnMiOnsibmFtZSI6IkxvY2F0aW9uIEFQSSBQcml2YXRlIiwiaWQiOiI2ODg2NTE5MjlmMDZhNDVhOWZkMzgwOTIifX0seyJjb2x1bW5zIjp7Im5hbWUiOiJQcm9qZWN0IFJvbGUgQVBJIiwiaWQiOiI2ODU5NTc2ZWJlMmVmNDI0NDc2NWY2NTgifX0seyJjb2x1bW5zIjp7Im5hbWUiOiJMZWdhbCBFbnRpdGllcyBSZXN0cmljdGVkIGFwaSIsImlkIjoiNjg1OTQwMTNiZTJlZjQyNDQ3NjVmNjMzIn19XQ=="
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"Base64Content":{
+							"type":"string",
+							"title":"Base 64 Content"
+						}
+					},
+					"required":[]
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"utility_by_unifyapps_decode_base64_text",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_7SVoS-1",
+			"id":"n_xZUpC",
+			"index":3,
+			"inputs":{
+				"charset":"UTF-8",
+				"encodedText":"{{ n_jQtM9.outputs.Base64Content }}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Decode base64 text",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":175131,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +143,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
