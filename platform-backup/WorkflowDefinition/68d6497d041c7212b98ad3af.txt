@@ -107,7 +107,7 @@
 	"id":"68d6497d041c7212b98ad3af",
 	"lastModifiedBy":39713,
 	"lcName":"test",
-	"modifiedTime":1758965268504,
+	"modifiedTime":1758965291401,
 	"name":"test",
 	"nodes":[
 		{
@@ -143,7 +143,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_994SS-1",
 			"id":"n_V6jVI",
@@ -167,7 +167,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_V6jVI@_994SS-1@l",
 			"id":"n_qcNZk",
@@ -189,7 +189,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_qcNZk@n_V6jVI@_994SS-1@l@l",
 			"id":"n_0e8pv",
@@ -224,7 +224,7 @@
 										"property":"0",
 										"filter":{
 											"operator":"EQUAL",
-											"value":"0"
+											"value":"1"
 										}
 									}
 								],
@@ -250,7 +250,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_0e8pv@n_qcNZk@n_V6jVI@_994SS-1@l@l@1",
 			"id":"n_0e8pv@1",
@@ -282,7 +282,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_0e8pv@n_qcNZk@n_V6jVI@_994SS-1@l@l@1",
 			"id":"n_dqVlO",
@@ -313,7 +313,7 @@
 							"property":"0",
 							"filter":{
 								"operator":"EQUAL",
-								"value":"0"
+								"value":"1"
 							}
 						}
 					],
@@ -332,7 +332,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_0e8pv@n_qcNZk@n_V6jVI@_994SS-1@l@l@2",
 			"id":"n_qmtzv",
@@ -375,5 +375,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
