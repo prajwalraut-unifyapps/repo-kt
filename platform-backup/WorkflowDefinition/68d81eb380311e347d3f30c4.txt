@@ -11,12 +11,19 @@
 			"skip":false,
 			"toNodeId":"n_aUDAk",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_aUDAk",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_twFQC",
+			"type":"next"
 		}
 	],
 	"id":"68d81eb380311e347d3f30c4",
 	"lastModifiedBy":44108,
 	"lcName":"test",
-	"modifiedTime":1759002716138,
+	"modifiedTime":1759002728784,
 	"name":"test",
 	"nodes":[
 		{
@@ -153,6 +160,27 @@
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Groovy code",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":895,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_hfDvf-1",
+			"id":"n_twFQC",
+			"index":3,
+			"inputs":{
+				"result":"{{ n_aUDAk.outputs.result }}"
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":15,
@@ -172,5 +200,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
