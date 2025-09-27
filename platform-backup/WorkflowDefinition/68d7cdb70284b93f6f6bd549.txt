@@ -46,7 +46,7 @@
 	"id":"68d7cdb70284b93f6f6bd549",
 	"lastModifiedBy":44109,
 	"lcName":"weeeew",
-	"modifiedTime":1758973607005,
+	"modifiedTime":1758973692003,
 	"name":"weeeew",
 	"nodes":[
 		{
@@ -89,7 +89,7 @@
 			"index":2,
 			"inputs":{
 				"instructions":"a",
-				"modelId":"e_68c1d372b253e8115d419203"
+				"modelId":"e_ai_agent_openai_gpt_4.1_mini"
 			},
 			"skip":false,
 			"subTitle":"Browser Use by UnifyApps",
@@ -378,5 +378,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
