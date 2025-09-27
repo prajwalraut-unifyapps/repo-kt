@@ -4,6 +4,14 @@
 	],
 	"createdTime":1758973367137,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758973458474,
+		"deployedBy":44109,
+		"deployedDefinitionId":"68d7ce100284b93f6f6bedb3",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":3
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_npzrm",
@@ -38,7 +46,7 @@
 	"id":"68d7cdb70284b93f6f6bd549",
 	"lastModifiedBy":44109,
 	"lcName":"weeeew",
-	"modifiedTime":1758973454062,
+	"modifiedTime":1758973607005,
 	"name":"weeeew",
 	"nodes":[
 		{
@@ -48,7 +56,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Tgqqx-1",
 			"id":"n_npzrm",
@@ -81,7 +89,7 @@
 			"index":2,
 			"inputs":{
 				"instructions":"a",
-				"modelId":"e_agent_model_gpt_5"
+				"modelId":"e_68c1d372b253e8115d419203"
 			},
 			"skip":false,
 			"subTitle":"Browser Use by UnifyApps",
@@ -96,7 +104,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_gtVpB@_Tgqqx-1@l",
 			"id":"n_ipHl4",
@@ -342,7 +350,7 @@
 				"appName":"stop"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Tgqqx-1",
 			"id":"n_NgL3D",
@@ -370,5 +378,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
