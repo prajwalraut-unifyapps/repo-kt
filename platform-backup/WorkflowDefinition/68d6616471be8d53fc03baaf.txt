@@ -80,7 +80,7 @@
 	"id":"68d6616471be8d53fc03baaf",
 	"lastModifiedBy":39713,
 	"lcName":"test-nullstr",
-	"modifiedTime":1758956451577,
+	"modifiedTime":1758957432734,
 	"name":"test-nullstr",
 	"nodes":[
 		{
@@ -462,7 +462,9 @@
 					"required":[]
 				}
 			},
-			"inputs":{},
+			"inputs":{
+				"d":"\"\""
+			},
 			"outputSchema":{
 				"dynamic":false,
 				"schema":{
@@ -526,5 +528,5 @@
 	"tags":[
 		
 	],
-	"version":28
+	"version":29
 }
