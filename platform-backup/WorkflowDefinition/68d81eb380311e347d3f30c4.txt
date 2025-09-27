@@ -5,23 +5,38 @@
 	"createdTime":1758994099068,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759003506376,
+		"deployedAt":1759003656274,
 		"deployedBy":44108,
-		"deployedDefinitionId":"68d84372c9ef4e524e794eae",
+		"deployedDefinitionId":"68d84408e759d501c7f538bc",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":5
+		"version":2,
+		"workflowVersion":6
 	},
 	"edges":[
 		{
 			"fromNodeId":"n_O67u5",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_aUDAk",
+			"toNodeId":"n_VGIYA",
 			"type":"next"
 		},
 		{
+			"fromNodeId":"n_VGIYA",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_aUDAk",
+			"type":"loop"
+		},
+		{
 			"fromNodeId":"n_aUDAk",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_VGIYA",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_VGIYA",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_twFQC",
@@ -31,7 +46,7 @@
 	"id":"68d81eb380311e347d3f30c4",
 	"lastModifiedBy":44108,
 	"lcName":"test",
-	"modifiedTime":1759003649423,
+	"modifiedTime":1759003916643,
 	"name":"test",
 	"nodes":[
 		{
@@ -80,6 +95,27 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":847,
+				"resourceName":"loop_for_each",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_hfDvf-1",
+			"id":"n_VGIYA",
+			"index":2,
+			"inputs":{
+				"captureIterations":false
+			},
+			"skip":false,
+			"subTitle":"Loop",
+			"title":"For each loop",
+			"type":"LOOP"
+		},
+		{
 			"additional":{
 				"xsdSchemaConfig":{
 					"root":{}
@@ -98,9 +134,9 @@
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
-			"groupId":"_hfDvf-1",
+			"groupId":"n_VGIYA@_hfDvf-1@l",
 			"id":"n_aUDAk",
-			"index":2,
+			"index":3,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -184,7 +220,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_hfDvf-1",
 			"id":"n_twFQC",
-			"index":3,
+			"index":4,
 			"inputs":{
 				"result":"{{ n_aUDAk.outputs.result }}"
 			},
@@ -211,5 +247,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
