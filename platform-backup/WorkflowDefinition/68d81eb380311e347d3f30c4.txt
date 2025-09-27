@@ -5,12 +5,12 @@
 	"createdTime":1758994099068,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759003926889,
+		"deployedAt":1759003936007,
 		"deployedBy":44108,
-		"deployedDefinitionId":"68d84516c9ef4e524e794f10",
+		"deployedDefinitionId":"68d8451e5379786c049706da",
 		"status":"DEPLOYED",
-		"version":3,
-		"workflowVersion":8
+		"version":4,
+		"workflowVersion":9
 	},
 	"edges":[
 		{
@@ -46,7 +46,7 @@
 	"id":"68d81eb380311e347d3f30c4",
 	"lastModifiedBy":44108,
 	"lcName":"test",
-	"modifiedTime":1759003930028,
+	"modifiedTime":1759004150834,
 	"name":"test",
 	"nodes":[
 		{
@@ -109,7 +109,7 @@
 			"index":2,
 			"inputs":{
 				"repeatMode":"SINGLE",
-				"listSource":"{{ n_aUDAk.outputs.result.content_arr }}",
+				"listSource":"{{ n_O67u5.outputs.userQueries }}",
 				"captureIterations":false
 			},
 			"skip":false,
@@ -134,7 +134,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_VGIYA@_hfDvf-1@l",
 			"id":"n_aUDAk",
@@ -249,5 +249,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
