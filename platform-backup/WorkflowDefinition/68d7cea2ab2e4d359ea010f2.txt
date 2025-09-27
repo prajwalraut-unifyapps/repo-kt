@@ -6,46 +6,183 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_cqcX4",
+			"fromNodeId":"n_7oFDA",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_APMX2",
+			"toNodeId":"n_lTg8X",
 			"type":"next"
 		}
 	],
 	"id":"68d7cea2ab2e4d359ea010f2",
 	"lastModifiedBy":43523,
 	"lcName":"playwright test",
-	"modifiedTime":1758973602957,
+	"modifiedTime":1758973609945,
 	"name":"playwright test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_cqcX4-1",
-			"id":"_cqcX4",
-			"index":0,
+			"id":"n_7oFDA",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":105,
+				"resourceName":"code_by_unifyapps_python",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_cqcX4-1",
-			"id":"_APMX2",
-			"index":0,
+			"id":"n_lTg8X",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"contents":{
+							"type":"object",
+							"properties":{
+								"url":{
+									"type":"string",
+									"title":"url"
+								},
+								"timestamp":{
+									"type":"string",
+									"title":"timestamp"
+								},
+								"success":{
+									"type":"boolean",
+									"title":"success"
+								},
+								"extracted_data":{
+									"type":"object",
+									"properties":{
+										"issue_date":{
+											"type":"string",
+											"title":"issue_date"
+										},
+										"expiry_date":{
+											"type":"string",
+											"title":"expiry_date"
+										},
+										"license_number":{
+											"type":"string",
+											"title":"license_number"
+										},
+										"real_estate_number":{
+											"type":"string",
+											"title":"real_estate_number"
+										},
+										"screenshot":{
+											"type":"string",
+											"title":"screenshot"
+										}
+									},
+									"title":"extracted_data",
+									"additionalProperties":false,
+									"required":[]
+								},
+								"raw_data":{
+									"type":"object",
+									"properties":{
+										"title":{
+											"type":"string",
+											"title":"title"
+										},
+										"body_text":{
+											"type":"string",
+											"title":"body_text"
+										},
+										"html_content":{
+											"type":"string",
+											"title":"html_content"
+										},
+										"text_length":{
+											"type":"integer",
+											"title":"text_length"
+										}
+									},
+									"title":"raw_data",
+									"additionalProperties":false
+								},
+								"extraction_methods":{
+									"type":"array",
+									"items":{
+										"type":"string"
+									},
+									"title":"extraction_methods"
+								},
+								"fields_found":{
+									"type":"integer",
+									"title":"fields_found"
+								}
+							},
+							"title":"contents",
+							"additionalProperties":false
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"url":{
+							"type":"string",
+							"title":"Url"
+						}
+					}
+				},
+				"configurationMode":"MANUAL",
+				"code":"import asyncio\nimport json\nimport re\nfrom playwright.async_api import async_playwright\nfrom datetime import datetime\nfrom typing import Dict, Optional, Any\nimport base64\n\n\nclass LicenseDataExtractor:\n    \"\"\"Extracts specific license and real estate information\"\"\"\n    \n    def __init__(self):\n        self.target_fields = {\n            'issue_date': ['Issue Date', 'Issued Date', 'Date Issued', 'تاريخ الإصدار'],\n            'expiry_date': ['Expiry Date', 'Expiration Date', 'Valid Until', 'تاريخ انتهاء الصلاحية'],\n            'license_number': ['LicenseNumber', 'License No', 'License #', 'رقم الرخصة'],\n            'real_estate_number': ['Real Estate #', 'Real Estate Number', 'Property #', 'رقم العقار']\n        }\n    \n    def extract_field_by_patterns(self, text: str, field_name: str) -> Optional[str]:\n        \"\"\"Extract field value using multiple pattern matching strategies\"\"\"\n        \n        field_labels = self.target_fields.get(field_name, [])\n        \n        for label in field_labels:\n            # Pattern 1: Label followed by colon and value\n            pattern1 = rf'{re.escape(label)}\\s*:?\\s*([^\\n\\r,]+)'\n            match = re.search(pattern1, text, re.IGNORECASE | re.MULTILINE)\n            if match:\n                return match.group(1).strip()\n            \n            # Pattern 2: Label in same line with value\n            pattern2 = rf'{re.escape(label)}[:\\s]+([A-Za-z0-9\\-\\/\\s]+)'\n            match = re.search(pattern2, text, re.IGNORECASE)\n            if match:\n                return match.group(1).strip()\n        \n        return None\n    \n    def extract_dates(self, text: str) -> Dict[str, Optional[str]]:\n        \"\"\"Extract dates using date patterns\"\"\"\n        dates_found = {}\n        \n        # Common date patterns\n        date_patterns = [\n            r'\\d{1,2}[\\/\\-]\\d{1,2}[\\/\\-]\\d{2,4}',  # DD/MM/YYYY or DD-MM-YYYY\n            r'\\d{2,4}[\\/\\-]\\d{1,2}[\\/\\-]\\d{1,2}',  # YYYY/MM/DD\n            r'\\d{1,2}\\s+[A-Za-z]{3,9}\\s+\\d{2,4}',  # DD Month YYYY\n            r'[A-Za-z]{3,9}\\s+\\d{1,2},?\\s+\\d{2,4}' # Month DD, YYYY\n        ]\n        \n        all_dates = []\n        for pattern in date_patterns:\n            matches = re.findall(pattern, text)\n            all_dates.extend(matches)\n        \n        # Try to assign dates to issue/expiry based on context\n        for date in all_dates:\n            # Look for context around the date\n            date_context = self._get_date_context(text, date)\n            \n            if any(word in date_context.lower() for word in ['issue', 'issued', 'start']):\n                dates_found['issue_date'] = date\n            elif any(word in date_context.lower() for word in ['expiry', 'expire', 'end', 'valid']):\n                dates_found['expiry_date'] = date\n        \n        return dates_found\n    \n    def _get_date_context(self, text: str, date: str) -> str:\n        \"\"\"Get text context around a date for better classification\"\"\"\n        date_index = text.find(date)\n        if date_index == -1:\n            return \"\"\n        \n        start = max(0, date_index - 50)\n        end = min(len(text), date_index + len(date) + 50)\n        return text[start:end]\n    \n    def extract_numbers(self, text: str) -> Dict[str, Optional[str]]:\n        \"\"\"Extract license and real estate numbers\"\"\"\n        numbers_found = {}\n        \n        # License number patterns\n        license_patterns = [\n            r'[Ll]icense\\s*[#:]?\\s*([A-Za-z0-9\\-\\/]+)',\n            r'[Ll]ic\\s*[#:]?\\s*([A-Za-z0-9\\-\\/]+)',\n            r'رقم الرخصة\\s*:?\\s*([A-Za-z0-9\\-\\/]+)'\n        ]\n        \n        for pattern in license_patterns:\n            match = re.search(pattern, text)\n            if match:\n                numbers_found['license_number'] = match.group(1).strip()\n                break\n        \n        # Real estate number patterns\n        real_estate_patterns = [\n            r'[Rr]eal\\s+[Ee]state\\s*[#:]?\\s*([A-Za-z0-9\\-\\/]+)',\n            r'[Pp]roperty\\s*[#:]?\\s*([A-Za-z0-9\\-\\/]+)',\n            r'رقم العقار\\s*:?\\s*([A-Za-z0-9\\-\\/]+)'\n        ]\n        \n        for pattern in real_estate_patterns:\n            match = re.search(pattern, text)\n            if match:\n                numbers_found['real_estate_number'] = match.group(1).strip()\n                break\n        \n        return numbers_found\n    \n    async def extract_from_table(self, page) -> Dict[str, Optional[str]]:\n        \"\"\"Extract data from HTML table structures\"\"\"\n        extracted = {}\n        \n        try:\n            # Look for table rows with label-value pairs\n            rows = await page.query_selector_all('tr, .row, .field-row')\n            \n            for row in rows:\n                row_text = row.inner_text()\n                \n                # Check if this row contains any of our target fields\n                for field_key, field_labels in self.target_fields.items():\n                    for label in field_labels:\n                        if label.lower() in row_text.lower():\n                            # Try to extract the value from this row\n                            value = self._extract_value_from_row(row_text, label)\n                            if value and field_key not in extracted:\n                                extracted[field_key] = value\n                                break\n        except:\n            pass\n        \n        return extracted\n    \n    def _extract_value_from_row(self, row_text: str, label: str) -> Optional[str]:\n        \"\"\"Extract value from a table row\"\"\"\n        # Split by common separators\n        for separator in [':', '\\t', '  ', ' - ']:\n            if separator in row_text:\n                parts = row_text.split(separator, 1)\n                if len(parts) == 2 and label.lower() in parts[0].lower():\n                    return parts[1].strip()\n        \n        return None\n\n\nasync def scrape_license_data(url: str) -> Dict[str, Any]:\n    \"\"\"\n    Scrape license and real estate data from the Dubai government page\n    \n    Args:\n        url (str): The URL to scrape\n        \n    Returns:\n        dict: Extracted license data\n    \"\"\"\n    \n    extractor = LicenseDataExtractor()\n    \n    async with async_playwright() as p:\n        # Launch browser with enhanced settings for government sites\n        browser = await p.chromium.launch(\n            headless=True,\n            args=[\n                '--disable-blink-features=AutomationControlled',\n                '--no-first-run',\n                '--disable-web-security',\n                '--no-sandbox'\n            ]\n        )\n        \n        # Create context with Dubai-specific settings\n        context = await browser.new_context(\n            viewport={'width': 1366, 'height': 768},\n            user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',\n            locale='en-AE',\n            timezone_id='Asia/Dubai'\n        )\n        \n        page = await context.new_page()\n        \n        result = {\n            'url': url,\n            'timestamp': datetime.now().isoformat(),\n            'success': False,\n            'extracted_data': {\n                'issue_date': None,\n                'expiry_date': None,\n                'license_number': None,\n                'real_estate_number': None,\n                'screenshot': None\n            },\n            'raw_data': {},\n            'extraction_methods': []\n        }\n        \n        try:\n            print(f\"🌐 Loading: {url}\")\n            \n            # Navigate to page\n            await page.goto(url, wait_until='domcontentloaded', timeout=30000)\n            await page.wait_for_timeout(5000)  # Wait for dynamic content\n            \n            # Get page content\n            title = await page.title()\n            body_text = await page.inner_text('body')\n            html_content = await page.content()\n            \n            result['raw_data'] = {\n                'title': title,\n                'body_text': body_text,\n                'html_content': html_content,\n                'text_length': len(body_text)\n            }\n            \n            print(f\"📝 Extracted {len(body_text)} characters of text\")\n            \n            # Check if page loaded successfully\n            if len(body_text) < 50 or 'access denied' in body_text.lower():\n                print(\"⚠️  Page appears to be blocked or has minimal content\")\n                result['status'] = 'blocked'\n                result['extracted_data']['raw_content'] = body_text\n                return result\n            \n            print(\"✅ Page loaded successfully, extracting license data...\")\n            \n            # Method 1: Pattern-based extraction from text\n            print(\"🔍 Method 1: Text pattern matching\")\n            for field_name in result['extracted_data'].keys():\n                value = extractor.extract_field_by_patterns(body_text, field_name)\n                if value:\n                    result['extracted_data'][field_name] = value\n                    result['extraction_methods'].append(f'{field_name}: text_pattern')\n                    print(f\"   Found {field_name}: {value}\")\n            \n            # Method 2: Date extraction\n            print(\"🔍 Method 2: Date pattern matching\")\n            dates = extractor.extract_dates(body_text)\n            for date_type, date_value in dates.items():\n                if not result['extracted_data'][date_type]:\n                    result['extracted_data'][date_type] = date_value\n                    result['extraction_methods'].append(f'{date_type}: date_pattern')\n                    print(f\"   Found {date_type}: {date_value}\")\n            \n            # Method 3: Number extraction\n            print(\"🔍 Method 3: Number pattern matching\")\n            numbers = extractor.extract_numbers(body_text)\n            for num_type, num_value in numbers.items():\n                if not result['extracted_data'][num_type]:\n                    result['extracted_data'][num_type] = num_value\n                    result['extraction_methods'].append(f'{num_type}: number_pattern')\n                    print(f\"   Found {num_type}: {num_value}\")\n            \n            # Method 4: Table-based extraction\n            print(\"🔍 Method 4: Table structure extraction\")\n            try:\n                table_data = await extractor.extract_from_table(page)\n                for field, value in table_data.items():\n                    if not result['extracted_data'][field]:\n                        result['extracted_data'][field] = value\n                        result['extraction_methods'].append(f'{field}: table_extraction')\n                        print(f\"   Found {field}: {value}\")\n            except Exception as e:\n                print(f\"   Table extraction failed: {e}\")\n            \n            # Method 5: Form field extraction\n            print(\"🔍 Method 5: Form field extraction\")\n            try:\n                inputs = await page.query_selector_all('input[value], select option[selected]')\n                for inp in inputs:\n                    name = await inp.get_attribute('name')\n                    value = await inp.get_attribute('value')\n                    if name and value:\n                        # Check if this field matches our targets\n                        for field_key, field_labels in extractor.target_fields.items():\n                            if any(label.lower().replace(' ', '').replace('#', '') in name.lower() \n                                   for label in field_labels):\n                                if not result['extracted_data'][field_key]:\n                                    result['extracted_data'][field_key] = value\n                                    result['extraction_methods'].append(f'{field_key}: form_field')\n                                    print(f\"   Found {field_key}: {value}\")\n                                break\n            except Exception as e:\n                print(f\"   Form extraction failed: {e}\")\n            \n            # Determine success\n            found_fields = [k for k, v in result['extracted_data'].items() if v is not None]\n            result['success'] = len(found_fields) > 0\n            result['fields_found'] = len(found_fields)\n            \n            if result['success']:\n                print(f\"✅ Successfully extracted {len(found_fields)} fields\")\n            else:\n                print(\"❌ No target fields found\")\n\n            screenshot_name = 'screenshot.png'\n            await page.screenshot(path=screenshot_name)\n            with open(screenshot_name, \"rb\") as f:\n                encoded_image = base64.b64encode(f.read()).decode(\"utf-8\")\n                result['extracted_data']['screenshot'] = encoded_image\n            \n        except Exception as e:\n            print(f\"❌ Error during extraction: {e}\")\n            result['error'] = str(e)\n        \n        finally:\n            await browser.close()\n        \n        return result\n\n\ndef print_extraction_results(result: Dict[str, Any]):\n    \"\"\"Print detailed extraction results\"\"\"\n    \n    print(\"\\n\" + \"=\"*60)\n    print(\"📊 LICENSE DATA EXTRACTION RESULTS\")\n    print(\"=\"*60)\n    \n    if result.get('error'):\n        print(f\"❌ Error: {result['error']}\")\n        return\n    \n    print(f\"✅ Success: {result['success']}\")\n    print(f\"🎯 Fields Found: {result.get('fields_found', 0)}/4\")\n    print(f\"📝 Content Length: {result['raw_data']['text_length']} characters\")\n    \n    print(f\"\\n🔍 EXTRACTED VALUES:\")\n    print(\"-\" * 40)\n    \n    extracted = result['extracted_data']\n    field_names = {\n        'issue_date': '📅 Issue Date',\n        'expiry_date': '⏰ Expiry Date', \n        'license_number': '🆔 License Number',\n        'real_estate_number': '🏢 Real Estate #'\n    }\n    \n    for field_key, display_name in field_names.items():\n        value = extracted.get(field_key)\n        status = \"✅\" if value else \"❌\"\n        print(f\"{status} {display_name}: {value or 'Not found'}\")\n    \n    if result.get('extraction_methods'):\n        print(f\"\\n🔧 Extraction Methods Used:\")\n        for method in result['extraction_methods']:\n            print(f\"   • {method}\")\n    \n    # Show raw content preview if blocked\n    if not result['success'] and extracted.get('raw_content'):\n        print(f\"\\n📋 Raw Content (blocked page):\")\n        print(\"-\" * 30)\n        print(extracted['raw_content'])\n        print(\"-\" * 30)\n\n\nasync def getLicenseDetails(url):\n    \"\"\"Main execution function\"\"\"\n    \n    # url = \"https://trakheesi.dubailand.gov.ae/rev/m3xctf5b5h/f9zb41pjrb?cegaakad6n=NTI0Njc%3d\"\n    \n    print(\"🚀 Dubai License Data Scraper\")\n    print(f\"🎯 Target: {url}\")\n    print(\"🔍 Looking for: Issue Date, Expiry Date, License Number, Real Estate #\")\n    print(\"-\" * 80)\n    \n    # Extract license data\n    result = await scrape_license_data(url)\n    \n    # Save results\n    output_file = 'license_data_results.json'\n    with open(output_file, 'w', encoding='utf-8') as f:\n        json.dump(result, f, indent=2, ensure_ascii=False)\n    \n    print(f\"💾 Results saved to: {output_file}\")\n    \n    # Print summary\n    print_extraction_results(result)\n    \n    return result\n\n\nimport subprocess\nimport sys\nsubprocess.check_call([sys.executable, \"-m\", \"playwright\", \"install\", \"chromium\"])\n\n# Run the scraper\nresult = {\n    \"contents\": asyncio.run(getLicenseDetails(url))\n}\n",
+				"imports":[
+					"playwright"
+				],
+				"isAsync":false,
+				"python_version":"3.12",
+				"captureStdOutput":false,
+				"parameters":{
+					"url":"{{ n_wiANn.outputs.result.results[0].qr_links[0] }}"
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Python script",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":43523,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +196,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
