@@ -5,12 +5,12 @@
 	"createdTime":1758969982598,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758971084172,
+		"deployedAt":1758971270270,
 		"deployedBy":182775,
-		"deployedDefinitionId":"68d7c4cbb88cb54acafd4acd",
+		"deployedDefinitionId":"68d7c5848db55c6e1527f226",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":4
+		"version":3,
+		"workflowVersion":5
 	},
 	"edges":[
 		{
@@ -60,7 +60,7 @@
 	"id":"68d7c07ee9cf522c4e98c154",
 	"lastModifiedBy":182775,
 	"lcName":"pub-streamconcurrencytest",
-	"modifiedTime":1758971265899,
+	"modifiedTime":1758971366351,
 	"name":"pub-streamConcurrencyTest",
 	"nodes":[
 		{
@@ -204,6 +204,13 @@
 			"type":"LOOP"
 		},
 		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.event.SKILLS.items",
+					"root.event.ADDRESS.city",
+					"root.event.ADDRESS.pincode"
+				]
+			},
 			"context":{
 				"appName":"streams_by_unifyapps",
 				"resourceVersion":1555,
@@ -211,7 +218,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_MHpPn@_gCChJ-1@l",
 			"id":"n_FOjZN",
@@ -224,8 +231,16 @@
 					"EMP_ID":"{{ n_LrNiY.outputs.result.EMP_ID }}",
 					"SALARY":"{{ n_LrNiY.outputs.result.SALARY }}",
 					"QUERY_DESC":"{{ n_LrNiY.outputs.result.QUERY_DESC }}",
+					"ADDRESS":{
+						"city":"{{ n_LrNiY.outputs.result.ADDRESS.city }}",
+						"pincode":"{{ n_LrNiY.outputs.result.ADDRESS.pincode }}"
+					},
 					"IS_ACTIVE":"{{ n_LrNiY.outputs.result.IS_ACTIVE }}",
-					"JOIN_DATE":"{{ n_LrNiY.outputs.result.JOIN_DATE }}"
+					"JOIN_DATE":"{{ n_LrNiY.outputs.result.JOIN_DATE }}",
+					"SKILLS":{
+						"source":"{{ n_LrNiY.outputs.result.SKILLS }}",
+						"ua:type":"mappedArray"
+					}
 				}
 			},
 			"skip":false,
@@ -266,5 +281,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
