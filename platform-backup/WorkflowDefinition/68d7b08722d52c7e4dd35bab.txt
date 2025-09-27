@@ -1,12 +1,12 @@
 {
 	"appsUsed":[
-		
+		"gmeet"
 	],
 	"createdTime":1758965895168,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_89px3",
+			"fromNodeId":"n_YXYk8",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"_UDNgO",
@@ -16,18 +16,30 @@
 	"id":"68d7b08722d52c7e4dd35bab",
 	"lastModifiedBy":2621,
 	"lcName":"test",
-	"modifiedTime":1758965895168,
+	"modifiedTime":1758965917918,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"gmeet",
+				"resourceVersion":6,
+				"connectionId":"66a8f17d8884121e190ca9b5",
+				"resourceName":"gmeet_on_new_conference"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_89px3-1",
-			"id":"_89px3",
-			"index":0,
+			"id":"n_YXYk8",
+			"index":1,
+			"inputs":{
+				"interval":1,
+				"from":"2025-09-01T09:38:00Z",
+				"batchSize":100
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Google Meet",
+			"title":"On new conference created",
 			"trigger":{
 				"type":"EVENT"
 			},
@@ -39,13 +51,16 @@
 			"fallbackMode":"STOP",
 			"groupId":"_89px3-1",
 			"id":"_UDNgO",
-			"index":0,
+			"index":2,
 			"skip":false,
 			"title":"Select an app and action",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":2621,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +74,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
