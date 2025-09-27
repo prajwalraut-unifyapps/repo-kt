@@ -47,12 +47,26 @@
 			"skip":false,
 			"toNodeId":"n_HUD88",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_HUD88",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_U4ekX",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_U4ekX",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_JNlq0",
+			"type":"next"
 		}
 	],
 	"id":"68d6616471be8d53fc03baaf",
 	"lastModifiedBy":39713,
 	"lcName":"test-nullstr",
-	"modifiedTime":1758955234763,
+	"modifiedTime":1758955869873,
 	"name":"test-nullstr",
 	"nodes":[
 		{
@@ -329,6 +343,81 @@
 			"subTitle":"Variable by UnifyApps",
 			"title":"Update variables",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":921,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_n1Giy-1",
+			"id":"n_U4ekX",
+			"index":7,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"c":{
+							"type":"string",
+							"title":"C"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"c":{
+							"type":"string",
+							"title":"C"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":848,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_n1Giy-1",
+			"id":"n_JNlq0",
+			"index":8,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ n_U4ekX.outputs.c }}",
+						"value":"=LEN({{ n_U4ekX.outputs.c }})"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
 		}
 	],
 	"ownerUserId":161877,
@@ -348,5 +437,5 @@
 	"tags":[
 		
 	],
-	"version":24
+	"version":25
 }
