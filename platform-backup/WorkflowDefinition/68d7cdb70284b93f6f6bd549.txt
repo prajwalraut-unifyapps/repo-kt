@@ -6,46 +6,124 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_Tgqqx",
+			"fromNodeId":"n_npzrm",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_mAcMj",
+			"toNodeId":"n_gtVpB",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_gtVpB",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_ipHl4",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_ipHl4",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_gtVpB",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_gtVpB",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_NgL3D",
 			"type":"next"
 		}
 	],
 	"id":"68d7cdb70284b93f6f6bd549",
 	"lastModifiedBy":44109,
 	"lcName":"weeeew",
-	"modifiedTime":1758973367137,
+	"modifiedTime":1758973444763,
 	"name":"weeeew",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Tgqqx-1",
-			"id":"_Tgqqx",
-			"index":0,
+			"id":"n_npzrm",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"browser_use_by_unifyapps",
+				"resourceVersion":511,
+				"resourceName":"browser_use_by_unifyapps_execute_instructions",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Tgqqx-1",
-			"id":"_mAcMj",
-			"index":0,
+			"id":"n_gtVpB",
+			"index":2,
+			"inputs":{
+				"instructions":"a",
+				"modelId":"e_agent_model_gpt_5"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Browser Use by UnifyApps",
+			"title":"Execute Instructions",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_gtVpB@_Tgqqx-1@l",
+			"id":"n_ipHl4",
+			"index":3,
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Select an action",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Tgqqx-1",
+			"id":"n_NgL3D",
+			"index":4,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":44109,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +137,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
