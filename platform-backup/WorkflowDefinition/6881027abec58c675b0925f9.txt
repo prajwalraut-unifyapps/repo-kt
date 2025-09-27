@@ -1,0 +1,1710 @@
+{
+	"appsUsed":[
+		"storage_by_unifyapps"
+	],
+	"createdTime":1753888962706,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1753888962769,
+		"deployedBy":89323,
+		"deployedDefinitionId":"688a38c2e81f724f111c2783",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":37
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_ADAUn",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_MJP6q",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_MJP6q",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Lrzlk",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Lrzlk",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_p8Qa4",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_Lrzlk",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_QI1iU",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_p8Qa4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_IcTBL",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_QI1iU",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_IcTBL",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_IcTBL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_LgJ1A",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_LgJ1A",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_QB4mY",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_QB4mY",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_NKFK2",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_NKFK2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_9GOsN",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_9GOsN",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_PUU9c",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_PUU9c",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_G5Zf1",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_G5Zf1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_6YHcS",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_6YHcS",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_EPTmR",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_EPTmR",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_X56XY",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_X56XY",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_U4nZG",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_U4nZG",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_9fpUO",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_9fpUO",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_l5vdQ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_l5vdQ",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"H8qgI",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_l5vdQ",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_BlwZy",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_BlwZy",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_3cZXf",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_3cZXf",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_PvocP",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_3cZXf",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_enBgF",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_PvocP",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"3hBo6",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_enBgF",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"3hBo6",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_BlwZy",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"3hBo6",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"H8qgI",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_3G464",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"3hBo6",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_3G464",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_3G464",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_X56XY",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_X56XY",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_KAJ9O",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_KAJ9O",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"OOBfE",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_KAJ9O",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"AEScn",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"OOBfE",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_55je7",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"AEScn",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_55je7",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_55je7",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_PUU9c",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_PUU9c",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_QB4mY",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_QB4mY",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_hjFdA",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_hjFdA",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_0Jh9D",
+			"type":"next"
+		}
+	],
+	"id":"6881027abec58c675b0925f9",
+	"lastModifiedBy":43523,
+	"lcName":"belcorp | conversation counter | scheduler implementation",
+	"modifiedTime":1758972445749,
+	"name":"Belcorp | Conversation counter | Scheduler implementation",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":201,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_UZHi2-1",
+			"id":"n_ADAUn",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"success":{
+							"type":"boolean",
+							"title":"Success"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"scheduleTime":{
+							"type":"string",
+							"title":"Schedule Time"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":200,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_UZHi2-1",
+			"id":"n_MJP6q",
+			"index":2,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"id",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"default"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"conversation_counter_last_processed_time",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"page":{
+					"paginateBy":"OFFSET",
+					"limit":20
+				},
+				"numberOfRecordsToFetch":"SINGLE",
+				"readThroughSessionVariables":false,
+				"includeTotalCount":false
+			},
+			"skip":false,
+			"subTitle":"Fetch last processing time",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":200,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_UZHi2-1",
+			"id":"n_Lrzlk",
+			"index":3,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_MJP6q.outputs.properties.isProcessing }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"true"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"isProcessing?",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":201,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_Lrzlk@_UZHi2-1@y",
+			"id":"n_p8Qa4",
+			"index":4,
+			"inputs":{
+				"result":{
+					"success":true
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":201,
+				"resourceName":"storage_by_unifyapps_update_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_Lrzlk@_UZHi2-1@n",
+			"id":"_QI1iU",
+			"index":5,
+			"inputs":{
+				"numberOfRecordsToUpdate":"SINGLE",
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"id",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"default"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"conversation_counter_last_processed_time",
+				"updateFields":[
+					{
+						"fieldName":"properties.isProcessing",
+						"actionType":"SET",
+						"setValue":"true"
+					}
+				],
+				"skipIfEmpty":false,
+				"page":{
+					"offset":0,
+					"limit":20
+				}
+			},
+			"skip":false,
+			"subTitle":"isProcessing:true",
+			"title":"Update records by query",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":201,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_UZHi2-1",
+			"id":"n_IcTBL",
+			"index":6,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"currentTime":{
+							"type":"integer",
+							"title":"Current Time"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"scheduleTime":{
+							"type":"string",
+							"title":"Schedule Time"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"compile_static":false,
+				"code":"import java.time.*\nimport java.time.format.DateTimeFormatter\n\n// Input date-time string in UTC\ndef scheduleTime = scheduleTime\ndef formatter = DateTimeFormatter.ofPattern(\"yyyy-MM-dd HH:mm\")\n\n// Parse the time in UTC\ndef utcTime = LocalDateTime.parse(scheduleTime, formatter)\ndef utcZoned = utcTime.atZone(ZoneId.of(\"UTC\"))\n\n// Convert UTC to IST\ndef istZoned = utcZoned.withZoneSameInstant(ZoneId.of(\"Asia/Kolkata\"))\n\n// Subtract 2 minutes from the IST time\ndef istMinusTwo = istZoned.minusMinutes(2)\n\n// Convert to epoch millis\ndef epochMillis = istMinusTwo.toInstant().toEpochMilli()\n\n// Print results\nreturn [\"currentTime\": epochMillis]",
+				"parameters":{
+					"scheduleTime":"{{ n_ADAUn.outputs.scheduleTime }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":200,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_UZHi2-1",
+			"id":"n_LgJ1A",
+			"index":7,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"lastProcessedTime":{
+							"type":"integer",
+							"title":"Last Processed Time"
+						},
+						"currentTime":{
+							"type":"integer",
+							"title":"Current Time"
+						},
+						"hasMore":{
+							"type":"boolean",
+							"title":"Has More"
+						},
+						"limit":{
+							"type":"integer",
+							"title":"Limit"
+						},
+						"cursor":{
+							"type":"string",
+							"title":"Cursor"
+						},
+						"offset":{
+							"type":"integer",
+							"title":"Offset"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"currentTime":"{{ n_IcTBL.outputs.result.currentTime }}",
+				"offset":0,
+				"lastProcessedTime":"{{ n_MJP6q.outputs.properties.lastProcessedTime }}",
+				"hasMore":true,
+				"limit":100
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"lastProcessedTime":{
+							"type":"integer",
+							"title":"Last Processed Time"
+						},
+						"currentTime":{
+							"type":"integer",
+							"title":"Current Time"
+						},
+						"hasMore":{
+							"type":"boolean",
+							"title":"Has More"
+						},
+						"limit":{
+							"type":"integer",
+							"title":"Limit"
+						},
+						"cursor":{
+							"type":"string",
+							"title":"Cursor"
+						},
+						"offset":{
+							"type":"integer",
+							"title":"Offset"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":201,
+				"resourceName":"loop_while",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_UZHi2-1",
+			"id":"n_QB4mY",
+			"index":8,
+			"inputs":{
+				"condition":{
+					"filters":[
+						{
+							"property":"{{ n_LgJ1A.outputs.hasMore }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"true"
+							}
+						},
+						{
+							"property":"{{ n_LgJ1A.outputs.offset }}",
+							"filter":{
+								"operator":"LT",
+								"value":"20000"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"captureIterations":false
+			},
+			"skip":false,
+			"subTitle":"Loop on cases",
+			"title":"While loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":200,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_QB4mY@_UZHi2-1@l",
+			"id":"n_NKFK2",
+			"index":9,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"mTm",
+							"filter":{
+								"operator":"GTE",
+								"value":"{{ n_LgJ1A.outputs.lastProcessedTime }}"
+							}
+						},
+						{
+							"property":"mTm",
+							"filter":{
+								"operator":"LTE",
+								"value":"{{ n_LgJ1A.outputs.currentTime }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"service_hub_case",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"sortBy":[
+					{
+						"field":"cTm",
+						"order":"ASC"
+					}
+				],
+				"page":{
+					"paginateBy":"CURSOR",
+					"limit":"{{ n_LgJ1A.outputs.limit }}",
+					"cursor":"{{ n_LgJ1A.outputs.cursor }}"
+				},
+				"numberOfRecordsToFetch":"MULTIPLE",
+				"readThroughSessionVariables":false,
+				"includeTotalCount":false
+			},
+			"skip":false,
+			"subTitle":"Fetch cases since last processing time",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":201,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_QB4mY@_UZHi2-1@l",
+			"id":"n_9GOsN",
+			"index":10,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ n_LgJ1A.outputs.hasMore }}",
+						"value":"{{ n_NKFK2.outputs.hasMore }}"
+					},
+					{
+						"source":"{{ n_LgJ1A.outputs.cursor }}",
+						"value":"{{ n_NKFK2.outputs.cursor.next }}"
+					},
+					{
+						"source":"{{ n_LgJ1A.outputs.offset }}",
+						"value":"=({{ n_LgJ1A.outputs.offset }}+{{ n_LgJ1A.outputs.limit }})"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Update cursor",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":200,
+				"resourceName":"loop_for_each",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_QB4mY@_UZHi2-1@l",
+			"id":"n_PUU9c",
+			"index":11,
+			"inputs":{
+				"repeatMode":"SINGLE",
+				"listSource":"{{ n_NKFK2.outputs.objects }}",
+				"captureIterations":false
+			},
+			"skip":false,
+			"subTitle":"Loop on cases",
+			"title":"For loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":200,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_PUU9c@n_QB4mY@_UZHi2-1@l@l",
+			"id":"n_G5Zf1",
+			"index":12,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"properties_case_id",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ n_PUU9c.outputs.item.id }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"snowflake_case_level_2",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"page":{
+					"paginateBy":"OFFSET",
+					"limit":20
+				},
+				"numberOfRecordsToFetch":"SINGLE",
+				"readThroughSessionVariables":false,
+				"includeTotalCount":false
+			},
+			"skip":false,
+			"subTitle":"snowflake_case_level_data",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":200,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_PUU9c@n_QB4mY@_UZHi2-1@l@l",
+			"id":"n_6YHcS",
+			"index":13,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"convCounter":{
+							"type":"integer",
+							"title":"Conv Counter"
+						},
+						"messageIndex":{
+							"type":"integer",
+							"title":"Message Index"
+						},
+						"lastProcessedMessageCreationTime":{
+							"type":"integer",
+							"title":"Last Processed Message Creation Time"
+						},
+						"lastProcessedMessageId":{
+							"type":"string",
+							"title":"Last Processed Message Id"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"convCounter":"=IF(ISBLANK({{ n_G5Zf1.outputs.properties.conversation_counter }}), 1, {{ n_G5Zf1.outputs.properties.conversation_counter }})",
+				"lastProcessedMessageCreationTime":"=IF(ISBLANK({{ n_G5Zf1.outputs.properties.lastProcessedMessageCreationTime }}),0,{{ n_G5Zf1.outputs.properties.lastProcessedMessageCreationTime }})",
+				"messageIndex":"=IF(ISBLANK({{ n_G5Zf1.outputs.properties.globalMessageIndex }}), 1, {{ n_G5Zf1.outputs.properties.globalMessageIndex }})",
+				"lastProcessedMessageId":"{{ n_G5Zf1.outputs.properties.lastProcessedMessageId }}"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"convCounter":{
+							"type":"integer",
+							"title":"Conv Counter"
+						},
+						"messageIndex":{
+							"type":"integer",
+							"title":"Message Index"
+						},
+						"lastProcessedMessageCreationTime":{
+							"type":"integer",
+							"title":"Last Processed Message Creation Time"
+						},
+						"lastProcessedMessageId":{
+							"type":"string",
+							"title":"Last Processed Message Id"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":200,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_PUU9c@n_QB4mY@_UZHi2-1@l@l",
+			"id":"n_EPTmR",
+			"index":14,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"mTm",
+							"filter":{
+								"operator":"GTE",
+								"value":"{{ n_6YHcS.outputs.lastProcessedMessageCreationTime }}"
+							}
+						},
+						{
+							"property":"properties_caseId",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ n_PUU9c.outputs.item.id }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"service_hub_message",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"sortBy":[
+					{
+						"field":"cTm",
+						"order":"ASC"
+					},
+					{
+						"field":"id",
+						"order":"ASC"
+					}
+				],
+				"page":{
+					"paginateBy":"OFFSET",
+					"limit":2000
+				},
+				"numberOfRecordsToFetch":"MULTIPLE",
+				"readThroughSessionVariables":false,
+				"includeTotalCount":false
+			},
+			"skip":false,
+			"subTitle":"ServiceHub_Message",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":200,
+				"resourceName":"loop_for_each",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_PUU9c@n_QB4mY@_UZHi2-1@l@l",
+			"id":"n_X56XY",
+			"index":15,
+			"inputs":{
+				"repeatMode":"SINGLE",
+				"listSource":"{{ n_EPTmR.outputs.objects }}",
+				"captureIterations":false
+			},
+			"skip":false,
+			"subTitle":"Loop on messages",
+			"title":"For loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"continue",
+				"resourceVersion":210,
+				"resourceName":"continue",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_X56XY@n_PUU9c@n_QB4mY@_UZHi2-1@l@l@l",
+			"id":"n_U4nZG",
+			"index":16,
+			"inputs":{
+				"loop":"n_X56XY",
+				"conditions":{
+					"filters":[
+						{
+							"property":"{{ n_X56XY.outputs.item.properties.customProperties.slotInstructionMessage }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"true"
+							}
+						},
+						{
+							"property":"{{ n_X56XY.outputs.item.properties.additional.temporaryMessage }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"true"
+							}
+						},
+						{
+							"property":"{{ n_X56XY.outputs.item.properties.additional.internalMessageType }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"AGENT_INTERNAL_RESPONSE"
+							}
+						}
+					],
+					"operator":"OR"
+				}
+			},
+			"skip":false,
+			"subTitle":"Skip slot instruction message",
+			"title":"Continue",
+			"type":"CONTINUE"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":200,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_X56XY@n_PUU9c@n_QB4mY@_UZHi2-1@l@l@l",
+			"id":"n_9fpUO",
+			"index":17,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"properties_message_id",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ n_X56XY.outputs.item.properties.messageId }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"snowflake_message_level_data",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"sortBy":[
+					{
+						"field":"cTm",
+						"order":"ASC"
+					}
+				],
+				"page":{
+					"paginateBy":"OFFSET",
+					"limit":20
+				},
+				"numberOfRecordsToFetch":"SINGLE",
+				"readThroughSessionVariables":false,
+				"includeTotalCount":false
+			},
+			"skip":false,
+			"subTitle":"Snowflake_message_level_data",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":199,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_X56XY@n_PUU9c@n_QB4mY@_UZHi2-1@l@l@l",
+			"id":"n_l5vdQ",
+			"index":18,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_9fpUO.outputs.id }}",
+						"filter":{
+							"operator":"EXISTS"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"snowflake record is present?",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":23,
+				"resourceName":"storage_by_unifyapps_update_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_l5vdQ@n_X56XY@n_PUU9c@n_QB4mY@_UZHi2-1@l@l@l@y",
+			"id":"H8qgI",
+			"index":19,
+			"inputs":{
+				"numberOfRecordsToUpdate":"SINGLE",
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"properties_message_id",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ n_X56XY.outputs.item.properties.messageId }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"snowflake_message_level_data",
+				"updateFields":[
+					{
+						"fieldName":"properties.status",
+						"setValue":"{{ n_X56XY.outputs.item.properties.customProperties.status }}",
+						"actionType":"SET"
+					},
+					{
+						"fieldName":"properties.genesys_interaction_id",
+						"actionType":"SET",
+						"setValue":"{{ n_X56XY.outputs.item.properties.customProperties.genesys_interaction_id }}"
+					},
+					{
+						"fieldName":"properties.genesys_survey_solved_issue",
+						"actionType":"SET",
+						"setValue":"{{ n_X56XY.outputs.item.properties.customProperties.genesys_survey_solved_issue }}"
+					},
+					{
+						"fieldName":"properties.satisfaction_survey_value",
+						"actionType":"SET",
+						"setValue":"{{ n_X56XY.outputs.item.properties.customProperties.satisfaction_survey_value }}"
+					},
+					{
+						"fieldName":"properties.satisfaction_survey_comment",
+						"actionType":"SET",
+						"setValue":"{{ n_X56XY.outputs.item.properties.customProperties.satisfaction_survey_comment }}"
+					},
+					{
+						"fieldName":"properties.genesys_survey_attitude",
+						"actionType":"SET",
+						"setValue":"{{ n_X56XY.outputs.item.properties.customProperties.genesys_survey_attitude }}"
+					},
+					{
+						"fieldName":"properties.genesys_survey_comment",
+						"setValue":"{{ n_X56XY.outputs.item.properties.customProperties.genesys_survey_comment }}",
+						"actionType":"SET"
+					},
+					{
+						"fieldName":"properties.uneteweb_survey_solved_issue",
+						"actionType":"SET",
+						"setValue":"{{ n_X56XY.outputs.item.properties.customProperties.uneteweb_survey_solved_issue }}"
+					},
+					{
+						"fieldName":"properties.uneteweb_survey_comment",
+						"actionType":"SET",
+						"setValue":"{{ n_X56XY.outputs.item.properties.customProperties.uneteweb_survey_comment }}"
+					},
+					{
+						"fieldName":"properties.conversation_status",
+						"actionType":"SET",
+						"setValue":"{{ n_X56XY.outputs.item.properties.customProperties.status }}"
+					}
+				],
+				"skipIfEmpty":false,
+				"page":{
+					"offset":0,
+					"limit":20
+				}
+			},
+			"skip":false,
+			"subTitle":"Change to handle servicehub custom properties",
+			"title":"Update records by query",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":200,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_l5vdQ@n_X56XY@n_PUU9c@n_QB4mY@_UZHi2-1@l@l@l@n",
+			"id":"n_BlwZy",
+			"index":20,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_6YHcS.outputs.lastProcessedMessageCreationTime }}",
+						"filter":{
+							"operator":"EXISTS"
+						}
+					},
+					{
+						"property":"{{ n_6YHcS.outputs.lastProcessedMessageCreationTime }}",
+						"filter":{
+							"operator":"GT",
+							"value":"0"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":199,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_BlwZy@n_l5vdQ@n_X56XY@n_PUU9c@n_QB4mY@_UZHi2-1@l@l@l@n@y",
+			"id":"n_3cZXf",
+			"index":21,
+			"inputs":{
+				"filters":[
+					{
+						"property":"={{ n_X56XY.outputs.item.createdTime }}-{{ n_6YHcS.outputs.lastProcessedMessageCreationTime }}",
+						"filter":{
+							"operator":"GT",
+							"value":"7200000"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"greater than 2 hrs?",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":200,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_3cZXf@n_BlwZy@n_l5vdQ@n_X56XY@n_PUU9c@n_QB4mY@_UZHi2-1@l@l@l@n@y@y",
+			"id":"n_PvocP",
+			"index":22,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ n_6YHcS.outputs.convCounter }}",
+						"value":"={{ n_6YHcS.outputs.convCounter }}+1"
+					},
+					{
+						"source":"{{ n_6YHcS.outputs.messageIndex }}",
+						"value":1
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":200,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_3cZXf@n_BlwZy@n_l5vdQ@n_X56XY@n_PUU9c@n_QB4mY@_UZHi2-1@l@l@l@n@y@n",
+			"id":"n_enBgF",
+			"index":23,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ n_6YHcS.outputs.convCounter }}",
+						"value":"={{ n_6YHcS.outputs.convCounter }}"
+					},
+					{
+						"source":"{{ n_6YHcS.outputs.messageIndex }}",
+						"value":"={{ n_6YHcS.outputs.messageIndex }}+1"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":88,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_l5vdQ@n_X56XY@n_PUU9c@n_QB4mY@_UZHi2-1@l@l@l@n",
+			"id":"3hBo6",
+			"index":24,
+			"inputs":{
+				"writeThroughSessionVariables":false,
+				"object_type":"snowflake_message_level_data",
+				"record":{
+					"conversation_counter":"={{ n_6YHcS.outputs.convCounter }}",
+					"message_id":"{{ n_X56XY.outputs.item.properties.messageId }}",
+					"message_type":"{{ n_X56XY.outputs.item.properties.type }}",
+					"message":"{{ n_X56XY.outputs.item.properties.content.text }}",
+					"sent_by":"{{ n_X56XY.outputs.item.properties.toCustomerUserId }}",
+					"case_id":"{{ n_X56XY.outputs.item.properties.caseId }}",
+					"status":"{{ n_X56XY.outputs.item.properties.customProperties.status }}",
+					"conversation_status":"{{ n_X56XY.outputs.item.properties.customProperties.status }}",
+					"timestamp":"{{ n_X56XY.outputs.item.createdTime }}",
+					"agent_id":"Belcorp Agent",
+					"channel":"{{ n_PUU9c.outputs.item.properties.customProperties.channelName }}",
+					"type":"{{ n_X56XY.outputs.item.properties.type }}",
+					"automation":"{{ n_X56XY.outputs.item.properties.subject }}",
+					"user_id":"=TEXT({{ __RUN__.outputs.userId }}, \"0\")",
+					"globalMessageIndex":"={{ n_6YHcS.outputs.messageIndex }}",
+					"website":"{{ n_G5Zf1.outputs.properties.website }}",
+					"genesys_interaction_id":"{{ n_X56XY.outputs.item.properties.customProperties.genesys_interaction_id }}",
+					"genesys_survey_solved_issue":"{{ n_X56XY.outputs.item.properties.customProperties.genesys_survey_solved_issue }}",
+					"satisfaction_survey_value":"{{ n_X56XY.outputs.item.properties.customProperties.satisfaction_survey_value }}",
+					"satisfaction_survey_comment":"{{ n_X56XY.outputs.item.properties.customProperties.satisfaction_survey_comment }}",
+					"genesys_survey_attitude":"{{ n_X56XY.outputs.item.properties.customProperties.genesys_survey_attitude }}",
+					"genesys_survey_comment":"{{ n_X56XY.outputs.item.properties.customProperties.genesys_survey_comment }}",
+					"uneteweb_survey_solved_issue":"{{ n_X56XY.outputs.item.properties.customProperties.uneteweb_survey_solved_issue }}",
+					"uneteweb_survey_comment":"{{ n_X56XY.outputs.item.properties.customProperties.uneteweb_survey_comment }}",
+					"error_message":"{{ n_X56XY.outputs.item.properties.customProperties.error_message }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Snowflake",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":200,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_X56XY@n_PUU9c@n_QB4mY@_UZHi2-1@l@l@l",
+			"id":"_3G464",
+			"index":25,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ n_6YHcS.outputs.lastProcessedMessageCreationTime }}",
+						"value":"{{ n_X56XY.outputs.item.createdTime }}"
+					},
+					{
+						"source":"{{ n_6YHcS.outputs.lastProcessedMessageId }}",
+						"value":"{{ n_X56XY.outputs.item.id }}"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":199,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_PUU9c@n_QB4mY@_UZHi2-1@l@l",
+			"id":"n_KAJ9O",
+			"index":26,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_G5Zf1.outputs.id }}",
+						"filter":{
+							"operator":"EXISTS"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Case is present?",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":88,
+				"resourceName":"storage_by_unifyapps_update_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_KAJ9O@n_PUU9c@n_QB4mY@_UZHi2-1@l@l@y",
+			"id":"OOBfE",
+			"index":27,
+			"inputs":{
+				"numberOfRecordsToUpdate":"SINGLE",
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"properties_case_id",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ n_G5Zf1.outputs.properties.case_id }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"snowflake_case_level_2",
+				"updateFields":[
+					{
+						"fieldName":"properties.conversation_counter",
+						"actionType":"SET",
+						"setValue":"{{ n_6YHcS.outputs.convCounter }}"
+					},
+					{
+						"fieldName":"properties.postulant_id",
+						"actionType":"SET",
+						"setValue":"{{ __USER__.outputs.customProperties.solicitudpostulanteid }}"
+					},
+					{
+						"fieldName":"properties.case_status",
+						"actionType":"SET",
+						"setValue":"{{ n_PUU9c.outputs.item.properties.status }}"
+					},
+					{
+						"fieldName":"properties.agent_id",
+						"actionType":"SET",
+						"setValue":"Belcorp Agent"
+					},
+					{
+						"fieldName":"properties.channel",
+						"actionType":"SET",
+						"setValue":"{{ n_PUU9c.outputs.item.properties.customProperties.channelName }}"
+					},
+					{
+						"fieldName":"properties.case_type",
+						"actionType":"SET",
+						"setValue":"Interactive"
+					},
+					{
+						"fieldName":"properties.start_time",
+						"actionType":"SET",
+						"setValue":"{{ n_G5Zf1.outputs.properties.lastProcessedMessageCreationTime }}"
+					},
+					{
+						"fieldName":"properties.inactivity_timeout",
+						"actionType":"SET",
+						"setValue":"120 Minutes"
+					},
+					{
+						"fieldName":"properties.globalMessageIndex",
+						"actionType":"SET",
+						"setValue":"{{ n_6YHcS.outputs.messageIndex }}"
+					},
+					{
+						"fieldName":"properties.lastProcessedMessageCreationTime",
+						"actionType":"SET",
+						"setValue":"{{ n_6YHcS.outputs.lastProcessedMessageCreationTime }}"
+					},
+					{
+						"fieldName":"properties.lastProcessedMessageId",
+						"actionType":"SET",
+						"setValue":"{{ n_6YHcS.outputs.lastProcessedMessageId }}"
+					}
+				],
+				"skipIfEmpty":false,
+				"page":{
+					"offset":0,
+					"limit":20
+				}
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Update records by query",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":88,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_KAJ9O@n_PUU9c@n_QB4mY@_UZHi2-1@l@l@n",
+			"id":"AEScn",
+			"index":28,
+			"inputs":{
+				"writeThroughSessionVariables":false,
+				"object_type":"snowflake_case_level_2",
+				"record":{
+					"conversation_counter":"{{ n_6YHcS.outputs.convCounter }}",
+					"globalMessageIndex":"{{ n_6YHcS.outputs.messageIndex }}",
+					"case_id":"{{ n_PUU9c.outputs.item.id }}",
+					"unete_step":"{{ __USER__.outputs.customProperties.step }}",
+					"consultant_id":"{{ __USER__.outputs.customProperties.consultoraId }}",
+					"country_code":"{{ __USER__.outputs.customProperties.country }}",
+					"user_id":"{{ __USER__.outputs.id }}",
+					"device":"{{ __USER__.outputs.customProperties.device }}",
+					"ga_session_id":"{{ __USER__.outputs.customProperties.gaSessionID }}",
+					"survey_sent":false,
+					"agent_id":"Belcorp Agent",
+					"channel":"{{ n_PUU9c.outputs.item.properties.customProperties.channelName }}",
+					"case_type":"Interactive",
+					"case_status":"{{ n_PUU9c.outputs.item.properties.status }}",
+					"inactivity_timeout":"120 Minutes",
+					"start_time":"{{ n_G5Zf1.outputs.properties.lastProcessedMessageCreationTime }}",
+					"lastProcessedMessageCreationTime":"{{ n_6YHcS.outputs.lastProcessedMessageCreationTime }}",
+					"lastProcessedMessageId":"{{ n_6YHcS.outputs.lastProcessedMessageId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Snowflake",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":200,
+				"resourceName":"storage_by_unifyapps_update_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_PUU9c@n_QB4mY@_UZHi2-1@l@l",
+			"id":"n_55je7",
+			"index":29,
+			"inputs":{
+				"numberOfRecordsToUpdate":"SINGLE",
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"id",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"default"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"conversation_counter_last_processed_time",
+				"updateFields":[
+					{
+						"fieldName":"properties.lastProcessedTime",
+						"actionType":"SET",
+						"setValue":"{{ n_PUU9c.outputs.item.modifiedTime }}"
+					},
+					{
+						"fieldName":"properties.lastProcessedCaseId",
+						"actionType":"SET",
+						"setValue":"{{ n_PUU9c.outputs.item.id }}"
+					}
+				],
+				"skipIfEmpty":false,
+				"page":{
+					"offset":0,
+					"limit":20
+				}
+			},
+			"skip":false,
+			"subTitle":"Update last processed time",
+			"title":"Update records by query",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":201,
+				"resourceName":"storage_by_unifyapps_update_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_UZHi2-1",
+			"id":"n_hjFdA",
+			"index":30,
+			"inputs":{
+				"numberOfRecordsToUpdate":"SINGLE",
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"id",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"default"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"conversation_counter_last_processed_time",
+				"updateFields":[
+					{
+						"fieldName":"properties.isProcessing",
+						"actionType":"SET",
+						"setValue":"false"
+					}
+				],
+				"skipIfEmpty":false,
+				"page":{
+					"offset":0,
+					"limit":20
+				}
+			},
+			"skip":false,
+			"subTitle":"Set is processing to false",
+			"title":"Update records by query",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":201,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_UZHi2-1",
+			"id":"n_0Jh9D",
+			"index":31,
+			"inputs":{
+				"result":{
+					"success":true
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":89323,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":38
+}
