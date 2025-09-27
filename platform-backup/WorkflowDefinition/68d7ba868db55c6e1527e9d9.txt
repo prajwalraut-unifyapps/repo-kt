@@ -1,78 +1,51 @@
 {
 	"appsUsed":[
-		"gmeet"
+		
 	],
 	"createdTime":1758968454518,
 	"deleted":false,
-	"deploymentState":{
-		"deployedAt":1758968553955,
-		"deployedBy":2621,
-		"deployedDefinitionId":"68d7bae922d52c7e4dd36424",
-		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":4
-	},
 	"edges":[
 		{
-			"fromNodeId":"n_9yoYJ",
+			"fromNodeId":"_Pt9mi",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_HNGyw",
+			"toNodeId":"_fG2sN",
 			"type":"next"
 		}
 	],
 	"id":"68d7ba868db55c6e1527e9d9",
 	"lastModifiedBy":2621,
 	"lcName":"test",
-	"modifiedTime":1758968562001,
+	"modifiedTime":1758968454518,
 	"name":"test",
 	"nodes":[
 		{
-			"context":{
-				"appName":"gmeet",
-				"resourceVersion":9,
-				"connectionId":"66a8f17d8884121e190ca9b5",
-				"resourceName":"gmeet_on_new_conference"
-			},
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Pt9mi-1",
-			"id":"n_9yoYJ",
-			"index":1,
-			"inputs":{
-				"interval":1,
-				"from":"2025-09-01T10:21:00Z",
-				"batchSize":10
-			},
+			"id":"_Pt9mi",
+			"index":0,
 			"skip":false,
-			"subTitle":"Google Meet",
-			"title":"On new conference created",
+			"title":"Select a trigger event",
 			"trigger":{
 				"type":"EVENT"
 			},
 			"type":"START"
 		},
 		{
-			"context":{
-				"appName":"stop"
-			},
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Pt9mi-1",
-			"id":"n_HNGyw",
-			"index":2,
+			"id":"_fG2sN",
+			"index":0,
 			"skip":false,
-			"subTitle":"Stop",
-			"title":"Stop",
-			"type":"STOP"
+			"title":"Select an app and action",
+			"type":"ACTION"
 		}
 	],
 	"ownerUserId":2621,
-	"schemaReferences":[
-		
-	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -86,5 +59,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":0
 }
