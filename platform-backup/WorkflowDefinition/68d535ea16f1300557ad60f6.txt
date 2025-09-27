@@ -16,7 +16,7 @@
 	"id":"68d535ea16f1300557ad60f6",
 	"lastModifiedBy":67744,
 	"lcName":"test-variables",
-	"modifiedTime":1758959868827,
+	"modifiedTime":1758960272756,
 	"name":"test-variables",
 	"nodes":[
 		{
@@ -99,7 +99,7 @@
 				}
 			},
 			"inputs":{
-				"checking_variable":"{{ n_MyreN.outputs.files[0].fileType }}{{ n_MyreN.outputs.files[0].sourceType }}"
+				"checking_variable":"{{ n_MyreN.outputs.files[0].fileType }}{{ n_MyreN.outputs.files[0].sourceType }}{{ n_MyreN.outputs.body }}"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -140,5 +140,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
