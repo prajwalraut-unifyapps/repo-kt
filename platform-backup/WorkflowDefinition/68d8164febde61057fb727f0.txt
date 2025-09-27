@@ -1,12 +1,19 @@
 {
 	"appsUsed":[
-		
+		"storage_by_unifyapps"
 	],
 	"createdTime":1758991951799,
 	"deleted":false,
 	"edges":[
 		{
 			"fromNodeId":"n_gb9lK",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Fx6PA",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Fx6PA",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_o4RQh",
@@ -16,7 +23,7 @@
 	"id":"68d8164febde61057fb727f0",
 	"lastModifiedBy":31268,
 	"lcName":"testing",
-	"modifiedTime":1758992030293,
+	"modifiedTime":1758992139467,
 	"name":"testing",
 	"nodes":[
 		{
@@ -26,7 +33,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Vxw6f-1",
 			"id":"n_gb9lK",
@@ -58,6 +65,74 @@
 			"type":"START"
 		},
 		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.record.productDetails.items.contractDetailsList3_final.items.contractNameList3_final",
+					"root.record.productDetails.items.contractDetailsList3_final.items.contractStartDateList3_final",
+					"root.record.productDetails.items.contractDetailsList3_final.items.contractIdList3_final",
+					"root.record.productDetails.items.contractDetailsList3_final.items.contractCurrentSubscriptionList3_final",
+					"root.record.productDetails.items.contractDetailsList3_final.items.contractRenewalStageList3_final",
+					"root.record.productDetails.items.contractDetailsList3_final.items.contractEndDateList3_final",
+					"root.record.productDetails.items.productSubfamilyList3_final",
+					"root.record.productDetails.items.productNameList3_final",
+					"root.record.productDetails.items.totalContractsProduct3_final",
+					"root.record.productDetails.items.totalSusbcriptionsProduct3_final",
+					"root.record.productDetails.items.hasproducts",
+					"root.record.productDetails.items.productFamilyList3_final",
+					"root.record.productDetails.items.productLicencesList3_final",
+					"root.record.productDetails.items.childProductdetails.items.childproductIDList3_final",
+					"root.record.productDetails.items.childProductdetails.items.childproductFamilyList3_final",
+					"root.record.productDetails.items.childProductdetails.items.childproductSubfamilyList3_final",
+					"root.record.productDetails.items.childProductdetails.items.childproductLicencesList3_final",
+					"root.record.productDetails.items.childProductdetails.items.childtotalContractsProduct3_final",
+					"root.record.productDetails.items.childProductdetails.items.childtotalSusbcriptionsProduct3_final",
+					"root.record.productDetails.items.childProductdetails.items.childproductNameList3_final",
+					"root.record.productDetails.items.childProductdetails.items.childcontractDetailsList3_final.items.childcontractNameList3_final",
+					"root.record.productDetails.items.childProductdetails.items.childcontractDetailsList3_final.items.childcontractIdList3_final",
+					"root.record.productDetails.items.childProductdetails.items.childcontractDetailsList3_final.items.childcontractStartDateList3_final",
+					"root.record.productDetails.items.childProductdetails.items.childcontractDetailsList3_final.items.childcontractCurrentSubscriptionList3_final",
+					"root.record.productDetails.items.childProductdetails.items.childcontractDetailsList3_final.items.childcontractEndDateList3_final",
+					"root.record.productDetails.items.childProductdetails.items.childcontractDetailsList3_final.items.childcontractRenewalStageList3_final",
+					"root.record.productDetails.items.productIDList3_final"
+				]
+			},
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":4330,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Vxw6f-1",
+			"id":"n_Fx6PA",
+			"index":2,
+			"inputs":{
+				"writeThroughSessionVariables":false,
+				"object_type":"productaccount",
+				"skipIfBlank":false,
+				"record":{
+					"productDetails":{
+						"items":{
+							"contractDetailsList3_final":{
+								"items":{
+									"contractNameList3_final":"{{ n_gb9lK.outputs.body.testing }}",
+									"contractStartDateList3_final":"{{ n_gb9lK.outputs.body.testing }}"
+								},
+								"ua:type":"mappedArray"
+							}
+						},
+						"ua:type":"mappedArray"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
 			"context":{
 				"appName":"streams_by_unifyapps",
 				"resourceVersion":1555,
@@ -65,11 +140,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Vxw6f-1",
 			"id":"n_o4RQh",
-			"index":2,
+			"index":3,
 			"inputs":{
 				"streamId":"e_68d7be8759ac503c2940703e",
 				"skipInputValidation":false,
@@ -101,5 +176,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
