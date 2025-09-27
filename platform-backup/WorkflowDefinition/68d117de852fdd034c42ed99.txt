@@ -154,7 +154,7 @@
 	"id":"68d117de852fdd034c42ed99",
 	"lastModifiedBy":187421,
 	"lcName":"meeting assistant | join meet",
-	"modifiedTime":1758969984352,
+	"modifiedTime":1758969995204,
 	"name":"Meeting Assistant | Join meet",
 	"nodes":[
 		{
@@ -216,7 +216,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_GsNXV",
@@ -226,7 +226,7 @@
 				"model":"gpt-4o",
 				"message":"Extract only the meeting link (Microsoft Teams, Google Meet, or Zoom) from the event description: {{ n_n4wKZ.outputs.description }}\nIf multiple links are present, return only the main meeting link.\nOutput must be the exact URL only — no additional text."
 			},
-			"skip":true,
+			"skip":false,
 			"subTitle":"OpenAI",
 			"title":"Send message to OpenAI models",
 			"type":"ACTION"
@@ -1070,5 +1070,5 @@
 		}
 	},
 	"standard":false,
-	"version":66
+	"version":67
 }
