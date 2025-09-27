@@ -5,12 +5,12 @@
 	"createdTime":1758973367137,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758974460369,
+		"deployedAt":1758974868941,
 		"deployedBy":44109,
-		"deployedDefinitionId":"68d7d1f9ab2e4d359ea04d4e",
+		"deployedDefinitionId":"68d7d393f1a8bd727045d6ca",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":7
+		"version":3,
+		"workflowVersion":8
 	},
 	"edges":[
 		{
@@ -46,7 +46,7 @@
 	"id":"68d7cdb70284b93f6f6bd549",
 	"lastModifiedBy":44109,
 	"lcName":"weeeew",
-	"modifiedTime":1758974865370,
+	"modifiedTime":1758984237413,
 	"name":"weeeew",
 	"nodes":[
 		{
@@ -89,7 +89,7 @@
 			"index":2,
 			"inputs":{
 				"instructions":"a",
-				"modelId":"e_68c1d372b253e8115d419203"
+				"modelId":"e_ai_agent_openai_gpt_4.1_mini"
 			},
 			"skip":false,
 			"subTitle":"Browser Use by UnifyApps",
@@ -378,5 +378,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
