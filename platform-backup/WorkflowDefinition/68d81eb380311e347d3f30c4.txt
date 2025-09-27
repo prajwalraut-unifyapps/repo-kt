@@ -4,6 +4,14 @@
 	],
 	"createdTime":1758994099068,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759003506376,
+		"deployedBy":44108,
+		"deployedDefinitionId":"68d84372c9ef4e524e794eae",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":5
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_O67u5",
@@ -23,7 +31,7 @@
 	"id":"68d81eb380311e347d3f30c4",
 	"lastModifiedBy":44108,
 	"lcName":"test",
-	"modifiedTime":1759003504752,
+	"modifiedTime":1759003649423,
 	"name":"test",
 	"nodes":[
 		{
@@ -143,7 +151,7 @@
 						}
 					}
 				},
-				"code":"def arr=[]\r\nfor(int i=0;i<arrayOfListOfChunks.size();i++){\r\n\r\n  def ListofChunks = arrayOfListOfChunks[i].relevantContent;\r\n  def content = \"\"\r\n  for(j in ListofChunks){\r\n    if (j?.content && j.content.contains(\"Content\")) {\r\n    content += j.content.split(\"Content\")[1]\r\n  }\r\n  }\r\n  arr.add([\"userQuery\":userQueries[i],\"relevantContent\":content]);\r\n}\r\n\r\nreturn [\"content_arr\":arr]",
+				"code":"def arr=[]\r\nfor(int i=0;i<arrayOfListOfChunks.size();i++){\r\n\r\n  def ListofChunks = arrayOfListOfChunks[i].relevantContent;\r\n  def content = \"\"\r\n  for(j in ListofChunks){\r\n    // if (j?.content && j.content.contains(\"Content\")) {\r\n    content += j.content.split(\"Content\")[1]\r\n  // }\r\n  }\r\n  arr.add([\"userQuery\":userQueries[i],\"relevantContent\":content]);\r\n}\r\n\r\nreturn [\"content_arr\":arr]",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
@@ -203,5 +211,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
