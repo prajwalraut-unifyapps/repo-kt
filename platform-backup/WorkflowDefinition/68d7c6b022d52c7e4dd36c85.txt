@@ -5,12 +5,12 @@
 	"createdTime":1758971568419,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758977231266,
+		"deployedAt":1758978519050,
 		"deployedBy":182775,
-		"deployedDefinitionId":"68d7dccf5a6a676b2ee22f7a",
+		"deployedDefinitionId":"68d7e1d65a6a676b2ee23632",
 		"status":"DEPLOYED",
-		"version":6,
-		"workflowVersion":9
+		"version":7,
+		"workflowVersion":10
 	},
 	"edges":[
 		{
@@ -22,6 +22,13 @@
 		},
 		{
 			"fromNodeId":"n_Bwk21",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_116oY",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_116oY",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_bDuCw",
@@ -98,7 +105,7 @@
 	"id":"68d7c6b022d52c7e4dd36c85",
 	"lastModifiedBy":182775,
 	"lcName":"sub-streamconcurrencytest (copy)",
-	"modifiedTime":1758978516934,
+	"modifiedTime":1758980081103,
 	"name":"sub-streamConcurrencyTest (copy)",
 	"nodes":[
 		{
@@ -202,17 +209,51 @@
 		},
 		{
 			"context":{
-				"appName":"streams_by_unifyapps",
-				"resourceVersion":855,
-				"resourceName":"streams_by_unifyapps_poll_events",
+				"appName":"custom_http_endpoint",
+				"resourceVersion":937,
+				"resourceName":"custom_http_endpoint_execute",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_HwF2P-1",
-			"id":"n_bDuCw",
+			"id":"n_116oY",
 			"index":3,
+			"inputs":{
+				"isAsync":false,
+				"enableProxy":false,
+				"requestTimeoutInSecs":-1,
+				"httpMethod":"GET",
+				"connectionType":"DIRECT",
+				"sslVerify":false,
+				"path":"/status/200",
+				"baseUrl":"https://postman-echo.com",
+				"httpVersion":"HTTP_2",
+				"responseContentType":"application/json",
+				"authType":"CUSTOM",
+				"requestContentType":"application/json",
+				"ignoreTrailingSlashes":false,
+				"certificateType":"CERT_STRING"
+			},
+			"skip":false,
+			"subTitle":"Custom HTTP Endpoint",
+			"title":"Execute REST request",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"streams_by_unifyapps",
+				"resourceVersion":855,
+				"resourceName":"streams_by_unifyapps_poll_events",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_HwF2P-1",
+			"id":"n_bDuCw",
+			"index":4,
 			"inputs":{
 				"streamId":"e_68d7be8759ac503c2940703e",
 				"repeatMode":"BATCH",
@@ -238,7 +279,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_bDuCw@_HwF2P-1@l",
 			"id":"n_IVNcf",
-			"index":4,
+			"index":5,
 			"inputs":{
 				"variables":[
 					{
@@ -264,7 +305,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_HwF2P-1",
 			"id":"n_np8YP",
-			"index":5,
+			"index":6,
 			"inputs":{
 				"filters":[
 					{
@@ -294,7 +335,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_np8YP@_HwF2P-1@y",
 			"id":"n_rKiDU",
-			"index":6,
+			"index":7,
 			"inputs":{
 				"condition":{
 					"filters":[
@@ -327,7 +368,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_rKiDU@n_np8YP@_HwF2P-1@y@l",
 			"id":"n_1jcOQ",
-			"index":7,
+			"index":8,
 			"inputs":{
 				"variables":[
 					{
@@ -353,7 +394,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_np8YP@_HwF2P-1@n",
 			"id":"n_uqRkk",
-			"index":8,
+			"index":9,
 			"inputs":{
 				"duration":-1,
 				"unit":"SECONDS"
@@ -375,7 +416,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_HwF2P-1",
 			"id":"n_GTMo4",
-			"index":9,
+			"index":10,
 			"inputs":{
 				"duration":10,
 				"unit":"SECONDS"
@@ -403,5 +444,5 @@
 	"tags":[
 		
 	],
-	"version":10
+	"version":11
 }
