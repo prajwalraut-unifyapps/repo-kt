@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758979217652,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_fiFzL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_sGBE1",
+			"type":"next"
+		}
+	],
+	"id":"68d7e491ef254574fc71d185",
+	"lastModifiedBy":894,
+	"lcName":"createjpgurl",
+	"modifiedTime":1758979217652,
+	"name":"CreateJPGURL",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_fiFzL-1",
+			"id":"_fiFzL",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_fiFzL-1",
+			"id":"_sGBE1",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":894,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
