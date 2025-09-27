@@ -1,51 +1,72 @@
 {
 	"appsUsed":[
-		
+		"gmeet"
 	],
 	"createdTime":1758960710742,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_bjHrB",
+			"fromNodeId":"n_zbck7",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_BpmUs",
+			"toNodeId":"n_XaJJc",
 			"type":"next"
 		}
 	],
 	"id":"68d79c460d85840002b1a08b",
 	"lastModifiedBy":2621,
 	"lcName":"test",
-	"modifiedTime":1758960710742,
+	"modifiedTime":1758960905834,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_bjHrB-1",
-			"id":"_bjHrB",
-			"index":0,
+			"id":"n_zbck7",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"gmeet",
+				"resourceVersion":4972,
+				"resourceName":"gmeet_get_conference_record_by_id",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_bjHrB-1",
-			"id":"_BpmUs",
-			"index":0,
+			"id":"n_XaJJc",
+			"index":2,
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Google Meet",
+			"title":"Get conference record",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":2621,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +80,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
