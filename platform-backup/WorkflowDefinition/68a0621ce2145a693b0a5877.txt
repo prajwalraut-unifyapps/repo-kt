@@ -45,7 +45,7 @@
 	"id":"68a0621ce2145a693b0a5877",
 	"lastModifiedBy":44096,
 	"lcName":"testlookup",
-	"modifiedTime":1759005182950,
+	"modifiedTime":1759006884842,
 	"name":"testLookup",
 	"nodes":[
 		{
@@ -108,7 +108,7 @@
 						}
 					}
 				},
-				"code":"return [\"options\":[\"workflowId\":\"68d7933d7ceaf455c79a4dbf\",\"runtimeType\":\"DEFAULT\"]]",
+				"code":"return [\"options\":[\"workflowId\":\"68d7933d7ceaf455c79a4dbf\",\"runtimeType\":\"DEFAULT\",\"resolvePath\":\"objects\"]]",
 				"compile_static":false,
 				"captureStdOutput":false
 			},
@@ -224,5 +224,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
