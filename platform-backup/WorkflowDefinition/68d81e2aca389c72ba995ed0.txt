@@ -37,7 +37,7 @@
 	"id":"68d81e2aca389c72ba995ed0",
 	"lastModifiedBy":175131,
 	"lcName":"api sheet",
-	"modifiedTime":1758996897370,
+	"modifiedTime":1758997005258,
 	"name":"API Sheet",
 	"nodes":[
 		{
@@ -47,7 +47,7 @@
 				"resourceName":"schedule_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7SVoS-1",
 			"id":"n_BzaA8",
@@ -125,7 +125,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7SVoS-1",
 			"id":"n_xZUpC",
@@ -140,6 +140,11 @@
 			"type":"ACTION"
 		},
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
 			"context":{
 				"appName":"utility_by_unifyapps",
 				"resourceVersion":838,
@@ -147,7 +152,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7SVoS-1",
 			"id":"n_Cm0Vb",
@@ -161,21 +166,13 @@
 							"columns":{
 								"type":"object",
 								"properties":{
-									"endpointUrl":{
+									"endpointId":{
 										"type":"string",
-										"title":"endpointUrl"
+										"title":"endpointId"
 									},
-									"name":{
-										"type":"string",
-										"title":"name"
-									},
-									"id":{
-										"type":"string",
-										"title":"id"
-									},
-									"collectionId":{
-										"type":"string",
-										"title":"collectionId"
+									"count(*)":{
+										"type":"integer",
+										"title":"count(*)"
 									}
 								},
 								"title":"columns",
@@ -210,20 +207,12 @@
 				"delimiter":",",
 				"staticHeaders":[
 					{
-						"key":"Endpoint Name",
-						"value":"{{ n_Cm0Vb.outputs.result[0].columns.name }}"
-					},
-					{
 						"key":"Endpoint ID",
-						"value":"{{ n_Cm0Vb.outputs.result[0].columns.id }}"
+						"value":"{{ n_Cm0Vb.outputs.result[0].columns.endpointId }}"
 					},
 					{
-						"key":"Collection ID",
-						"value":"{{ n_Cm0Vb.outputs.result[0].columns.collectionId }}"
-					},
-					{
-						"key":"Endpoint URL",
-						"value":"{{ n_Cm0Vb.outputs.result[0].columns.endpointUrl }}"
+						"key":"Count",
+						"value":"{{ n_Cm0Vb.outputs.result[0].columns.count(*) }}"
 					}
 				],
 				"skipHeaderRow":false,
@@ -233,7 +222,7 @@
 				"dataSource":"{{ n_Cm0Vb.outputs.result }}",
 				"fileType":"csv"
 			},
-			"skip":true,
+			"skip":false,
 			"subTitle":"CSV by UnifyApps",
 			"title":"Write data to CSV file",
 			"type":"ACTION"
@@ -256,5 +245,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
