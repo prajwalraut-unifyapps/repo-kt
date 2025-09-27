@@ -46,7 +46,7 @@
 	"id":"68d81eb380311e347d3f30c4",
 	"lastModifiedBy":44108,
 	"lcName":"test",
-	"modifiedTime":1759003916643,
+	"modifiedTime":1759003925254,
 	"name":"test",
 	"nodes":[
 		{
@@ -108,6 +108,7 @@
 			"id":"n_VGIYA",
 			"index":2,
 			"inputs":{
+				"listSource":"{{ n_aUDAk.outputs.result.content_arr }}",
 				"captureIterations":false
 			},
 			"skip":false,
@@ -247,5 +248,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
