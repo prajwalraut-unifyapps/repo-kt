@@ -1,51 +1,76 @@
 {
 	"appsUsed":[
-		
+		"microsoft_onedrive"
 	],
 	"createdTime":1758985423798,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_ySqFw",
+			"fromNodeId":"n_X6wgG",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_196Hp",
+			"toNodeId":"n_fRkvU",
 			"type":"next"
 		}
 	],
 	"id":"68d7fccfe6f95861c0a804f5",
-	"lastModifiedBy":155543,
+	"lastModifiedBy":1234,
 	"lcName":"desgdfwea",
-	"modifiedTime":1758985423798,
+	"modifiedTime":1758986457888,
 	"name":"desgdfwea",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ySqFw-1",
-			"id":"_ySqFw",
-			"index":0,
+			"id":"n_X6wgG",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"microsoft_onedrive",
+				"resourceVersion":1744,
+				"connectionId":"68d512ee38030f55181bc8ef",
+				"resourceName":"microsoft_onedrive_search_file_folder",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ySqFw-1",
-			"id":"_196Hp",
-			"index":0,
+			"id":"n_fRkvU",
+			"index":2,
+			"inputs":{
+				"queryString":"Book.xlsx"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Microsoft OneDrive",
+			"title":"Search drive items",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":155543,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +84,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
