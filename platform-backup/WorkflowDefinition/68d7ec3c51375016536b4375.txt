@@ -1,51 +1,75 @@
 {
 	"appsUsed":[
-		
+		"mongo"
 	],
 	"createdTime":1758981180940,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_0Rm1c",
+			"fromNodeId":"n_0kb9o",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_wX1Ki",
+			"toNodeId":"n_HjE0y",
 			"type":"next"
 		}
 	],
 	"id":"68d7ec3c51375016536b4375",
 	"lastModifiedBy":47811,
 	"lcName":"query",
-	"modifiedTime":1758981180940,
+	"modifiedTime":1758983251159,
 	"name":"query",
 	"nodes":[
 		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":814,
+				"resourceName":"schedule_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_0Rm1c-1",
-			"id":"_0Rm1c",
-			"index":0,
+			"id":"n_0kb9o",
+			"index":1,
+			"inputs":{
+				"cron":"INTERVAL",
+				"sequential":false,
+				"interval":15,
+				"frequency":"MINUTES"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Schedule",
+			"title":"New recurring event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"SCHEDULED"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"mongo",
+				"resourceVersion":4646,
+				"connectionId":"6836eb59e6e88d3d049c1ab4",
+				"resourceName":"mongodb_count_records",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_0Rm1c-1",
-			"id":"_wX1Ki",
-			"index":0,
+			"id":"n_HjE0y",
+			"index":2,
+			"inputs":{},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"MongoDB",
+			"title":"Count records",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":47811,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +83,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
