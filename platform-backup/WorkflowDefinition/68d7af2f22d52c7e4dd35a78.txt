@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758965551820,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_8WSe4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_3kU15",
+			"type":"next"
+		}
+	],
+	"id":"68d7af2f22d52c7e4dd35a78",
+	"lastModifiedBy":161861,
+	"lcName":"dummy_hdfc[dnd]",
+	"modifiedTime":1758965551820,
+	"name":"dummy_hdfc[dnd]",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_8WSe4-1",
+			"id":"_8WSe4",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_8WSe4-1",
+			"id":"_3kU15",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":161861,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
