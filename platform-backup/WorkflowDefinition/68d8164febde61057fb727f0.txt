@@ -23,7 +23,7 @@
 	"id":"68d8164febde61057fb727f0",
 	"lastModifiedBy":31268,
 	"lcName":"testing",
-	"modifiedTime":1758993221950,
+	"modifiedTime":1758994336440,
 	"name":"testing",
 	"nodes":[
 		{
@@ -110,21 +110,11 @@
 			"index":2,
 			"inputs":{
 				"writeThroughSessionVariables":false,
-				"object_type":"productaccount",
+				"object_type":"null_checker",
 				"skipIfBlank":false,
 				"record":{
-					"productDetails":{
-						"items":{
-							"contractDetailsList3_final":{
-								"items":{
-									"contractNameList3_final":"{{ n_gb9lK.outputs.body.testing }}",
-									"contractStartDateList3_final":"{{ n_gb9lK.outputs.body.testing }}"
-								},
-								"ua:type":"mappedArray"
-							}
-						},
-						"ua:type":"mappedArray"
-					}
+					"field1":"{{ n_gb9lK.outputs.body.testing }}",
+					"field2":"sda"
 				}
 			},
 			"skip":false,
@@ -140,7 +130,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Vxw6f-1",
 			"id":"n_o4RQh",
@@ -176,5 +166,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
