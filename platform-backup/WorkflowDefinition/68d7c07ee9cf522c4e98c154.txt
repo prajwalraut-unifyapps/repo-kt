@@ -23,11 +23,11 @@
 			"fromNodeId":"n_MHpPn",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_X3tMq",
+			"toNodeId":"n_FOjZN",
 			"type":"loop"
 		},
 		{
-			"fromNodeId":"n_X3tMq",
+			"fromNodeId":"n_FOjZN",
 			"name":"loopback",
 			"priority":0,
 			"skip":false,
@@ -38,7 +38,7 @@
 	"id":"68d7c07ee9cf522c4e98c154",
 	"lastModifiedBy":182775,
 	"lcName":"pub-streamconcurrencytest",
-	"modifiedTime":1758970154996,
+	"modifiedTime":1758970230549,
 	"name":"pub-streamConcurrencyTest",
 	"nodes":[
 		{
@@ -163,14 +163,33 @@
 			"type":"LOOP"
 		},
 		{
+			"context":{
+				"appName":"streams_by_unifyapps",
+				"resourceVersion":1555,
+				"resourceName":"streams_by_unifyapps_publish_event",
+				"type":"APPLICATION"
+			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_MHpPn@_gCChJ-1@l",
-			"id":"n_X3tMq",
+			"id":"n_FOjZN",
 			"index":4,
+			"inputs":{
+				"streamId":"e_68d7be8759ac503c2940703e",
+				"skipInputValidation":true,
+				"event":{
+					"EMP_NAME":"{{ n_LrNiY.outputs.result.EMP_NAME }}",
+					"EMP_ID":"{{ n_LrNiY.outputs.result.EMP_ID }}",
+					"SALARY":"{{ n_LrNiY.outputs.result.SALARY }}",
+					"QUERY_DESC":"{{ n_LrNiY.outputs.result.QUERY_DESC }}",
+					"IS_ACTIVE":"{{ n_LrNiY.outputs.result.IS_ACTIVE }}",
+					"JOIN_DATE":"{{ n_LrNiY.outputs.result.JOIN_DATE }}"
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Streams by UnifyApps",
+			"title":"Publish event to stream",
 			"type":"ACTION"
 		}
 	],
@@ -191,5 +210,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
