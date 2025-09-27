@@ -5,12 +5,12 @@
 	"createdTime":1758973367137,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758973458474,
+		"deployedAt":1758974460369,
 		"deployedBy":44109,
-		"deployedDefinitionId":"68d7ce100284b93f6f6bedb3",
+		"deployedDefinitionId":"68d7d1f9ab2e4d359ea04d4e",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":3
+		"version":2,
+		"workflowVersion":7
 	},
 	"edges":[
 		{
@@ -46,7 +46,7 @@
 	"id":"68d7cdb70284b93f6f6bd549",
 	"lastModifiedBy":44109,
 	"lcName":"weeeew",
-	"modifiedTime":1758974456214,
+	"modifiedTime":1758974865370,
 	"name":"weeeew",
 	"nodes":[
 		{
@@ -82,14 +82,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Tgqqx-1",
 			"id":"n_gtVpB",
 			"index":2,
 			"inputs":{
 				"instructions":"a",
-				"modelId":"674a9f75c5aa130d6a86f914"
+				"modelId":"e_68c1d372b253e8115d419203"
 			},
 			"skip":false,
 			"subTitle":"Browser Use by UnifyApps",
@@ -378,5 +378,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
