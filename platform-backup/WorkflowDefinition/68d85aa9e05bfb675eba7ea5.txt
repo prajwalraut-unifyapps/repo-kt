@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759009486745,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759009486830,
+		"deployedBy":175325,
+		"deployedDefinitionId":"68d85ace027f8744c98f4c88",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"7pKsG",
@@ -16,7 +24,7 @@
 	"id":"68d85aa9e05bfb675eba7ea5",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa2wmx90lh1mcwg",
-	"modifiedTime":1759009486745,
+	"modifiedTime":1759009522524,
 	"name":"changeSetQA2WMx90LH1MCwg",
 	"nodes":[
 		{
@@ -113,5 +121,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
