@@ -9,14 +9,14 @@
 			"fromNodeId":"_7mj9J",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_wzHqI",
+			"toNodeId":"n_edGcH",
 			"type":"next"
 		}
 	],
 	"id":"68d7db79e95f7900d654cf71",
-	"lastModifiedBy":2721,
+	"lastModifiedBy":44096,
 	"lcName":"test",
-	"modifiedTime":1758976889904,
+	"modifiedTime":1758977935136,
 	"name":"test",
 	"nodes":[
 		{
@@ -25,7 +25,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_7mj9J-1",
 			"id":"_7mj9J",
-			"index":0,
+			"index":1,
 			"skip":false,
 			"title":"Select a trigger event",
 			"trigger":{
@@ -34,18 +34,54 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"custom_http_endpoint",
+				"resourceVersion":937,
+				"resourceName":"custom_http_endpoint_execute",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7mj9J-1",
-			"id":"_wzHqI",
-			"index":0,
+			"id":"n_edGcH",
+			"index":2,
+			"inputs":{
+				"isAsync":false,
+				"enableProxy":false,
+				"requestTimeoutInSecs":300,
+				"httpMethod":"GET",
+				"connectionType":"DIRECT",
+				"sslVerify":false,
+				"path":"/internal/platform-feature/1/importFeatureEntities",
+				"baseUrl":"http://internal-global-svc.unifyapps.svc.cluster.local:80",
+				"httpVersion":"HTTP_2",
+				"queryParamsList":[
+					{
+						"key":"artifactUrl",
+						"value":"https%3A%2F%2Fs3.ap-south-1.amazonaws.com%2Fqa.unifyapps.com.cloudstorage.148%2Fchange-set-export%2F148%2F68d7ddceeeb0de6f9a55f4e3%3Fresponse-content-disposition%3Dattachment%253Bfilename%253D%2522resources.zip%2522%26X-Amz-Security-Token%3DIQoJb3JpZ2luX2VjEBwaCmFwLXNvdXRoLTEiRzBFAiEAmJOX2g7oDJlVKB3T8Thz1n0LO6Yku7OUTuj%252Fswdcff4CIH40iOjFkRZYcUzX0c13UP5959ajKyn9R5b3ZMTsYcRMKsgFCKb%252F%252F%252F%252F%252F%252F%252F%252F%252F%252FwEQABoMNTQ2OTE4MTA2MjgzIgzGcNtHggC4SV3%252FmToqnAUWBrb3V9P0XJjiOGGFrYtSZ0v2zCVGuK1xCQDWDaBMqFOi9nIEMKu3cTw7W5AucbuXdxVd5ppTRvYD6Y%252BBFGrjYg8oymB6BJOysG4uDKGxs3w3Zbm5LdwWgToGVHCTWq7VweOg82wi85tgcOD536ThwQPMkSQ4wffgjPHIBDeoxnxXBqBHh84c9VAJbx62CWacM8F2ec8Sxug1XmN7Auezr1RkU2v9vvtBO7CZ6kPGJ3efW4ONCcszBYVw%252F0cgUxqJ5i5pORF%252FeRUh9WV47eY2qqStc%252FgY7jNPnAkv8YG1Bddc8RLk%252BZT4YLdJaJGzLBorhDuAGT%252FTJ%252F2XhyKCp6hX%252BwtBtJx04FiPqSvIJ6hUt6cOvffV5B8R0lGMWSz6bFkf43y9dESe6b1rwwhAn5PZ0fpNmbYmvO05mPRcV4sxVLQZk9TovBuRXPZny171WvgLw%252B5frWlYdIjKKNfmFC%252F6cgCG%252FvTI1ajWDvczjEZY5%252BASobBkV0HiBlt8aDjdO8MQ9b4xyZOew1fLsZRO9sTMDEMqIhyMsriRzh2%252FWsK0VNiV3q0PVhEknQeXSGDZ%252ByVYldB1yeGyaWxuazau99lIPuhob36vuzxVkOm8ax5TAo1Vj1huSS%252BbHBfeSGAkLVxo1vgqzC69vlkmiakTKt9Lni8Ho1aiHKjehqusYpn8M3RRA%252Fz96MK6HbwJLNlm3PN9RWwHekoKqMrgRmw4a0vPnuCeMed5%252Fz4vGXr%252FdfAofzss0EoxeYEk16EQTMrzTpJWO9p0ndKLNb0ly5ST6%252BPSzKFbGx%252BFWqgRfeR%252FA0IEl44%252BLvQSHoEjDPAZsuFOZDIwEObA99099mL%252Bp%252BDadaXfRPmXF0eYpO%252FqpWBCqykajGDCxtOsan8yhUv%252BQDDysN%252FGBjqxAaVY7on0xIGNMVGpqUH2IAXJN1SUbAzqN71eiCEKqk2P31AtLxuRtHrYkze%252FSyjToXffuu7Y6f7j0xnBDnn9WaHekV3sHm%252B4GwvlHyRIpSQJEInWGhqWoEbeCCPeT%252FpVxbFlY1WQgi6tkD1rNLivGncfWwkdx0MB%252FDF6Fc3Zc3%252FiItQmp1JqjaelOmb9oX2lQqffaZAwsviH6YK3Ddm287T8oqsznUFukwTNogCcaaj%252Bqg%253D%253D%26X-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Date%3D20250927T125127Z%26X-Amz-SignedHeaders%3Dhost%26X-Amz-Credential%3DASIAX6VW4ASVQ5HC3SIT%252F20250927%252Fap-south-1%252Fs3%252Faws4_request%26X-Amz-Expires%3D3600%26X-Amz-Signature%3D59b01c6da36df38c096ec976641df2ecb4c30200f175b9d99c1ee12606fb4732"
+					},
+					{
+						"key":"forceSync",
+						"value":"true"
+					}
+				],
+				"responseContentType":"application/json",
+				"authType":"CUSTOM",
+				"requestContentType":"application/json",
+				"ignoreTrailingSlashes":false,
+				"certificateType":"CERT_STRING"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Custom HTTP Endpoint",
+			"title":"Execute REST request",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":2721,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +95,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
