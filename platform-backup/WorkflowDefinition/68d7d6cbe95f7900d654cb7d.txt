@@ -6,46 +6,150 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_s5HK4",
+			"fromNodeId":"n_0CMAG",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_ZaRj4",
+			"toNodeId":"n_8SzAX",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_8SzAX",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_7N5Qm",
 			"type":"next"
 		}
 	],
 	"id":"68d7d6cbe95f7900d654cb7d",
 	"lastModifiedBy":175325,
 	"lcName":"codebyunifyappslocalpzfmnuabkv",
-	"modifiedTime":1758975691357,
+	"modifiedTime":1758975709771,
 	"name":"CodeByUnifyAppsLocalpzfMnUAbKv",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":878,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_s5HK4-1",
-			"id":"_s5HK4",
-			"index":0,
+			"id":"n_0CMAG",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"r":{
+							"type":"string",
+							"title":"r"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"a":{
+							"type":"integer",
+							"title":"a"
+						},
+						"b":{
+							"type":"integer",
+							"title":"b"
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":809,
+				"resourceName":"code_by_unifyapps_java",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_s5HK4-1",
-			"id":"_ZaRj4",
-			"index":0,
+			"id":"n_8SzAX",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"r":{
+							"type":"string",
+							"title":"r"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"a":{
+							"type":"integer",
+							"title":"a"
+						},
+						"b":{
+							"type":"integer",
+							"title":"b"
+						}
+					}
+				},
+				"code":"try {\n  String str = null;\n  System.out.println(str.length());  // NullPointerException\n  } catch (ArithmeticException e) {\n                        System.out.println(\"Arithmetic error!\");\n                                                    } catch (NullPointerException e) {\n                                                                                    System.out.println(\"Null pointer error!\");\n                                                                                                                } catch (Exception e) {\n                                                                                                                                                System.out.println(\"Some other error: \" + e);\n                                                                                                                                                                            }\n                                                                                                                                                                            \n}",
+				"captureStdOutput":false,
+				"parameters":{
+					"a":"{{ n_0CMAG.outputs.a }}",
+					"b":"{{ n_0CMAG.outputs.b }}"
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Java code",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":895,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_s5HK4-1",
+			"id":"n_7N5Qm",
+			"index":3,
+			"inputs":{
+				"result":{
+					"r":"{{ n_8SzAX.outputs.result }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":175325,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +163,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
