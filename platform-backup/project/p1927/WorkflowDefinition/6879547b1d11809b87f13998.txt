@@ -1,0 +1,288 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1752781947642,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1754524201893,
+		"deployedBy":308,
+		"deployedDefinitionId":"6893ea29f7519d8c5feeed5f",
+		"status":"DEPLOYED",
+		"version":3,
+		"workflowVersion":31
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_DBl12",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_QXkn8",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_QXkn8",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_4jR9z",
+			"type":"next"
+		}
+	],
+	"id":"6879547b1d11809b87f13998",
+	"lastModifiedBy":103171,
+	"lcName":"[virtu-support-checkin-bot-fn]getprojectdetails-endpoint",
+	"modifiedTime":1759004375383,
+	"name":"[virtu-support-checkin-bot-fn]GetProjectDetails-endpoint",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":865,
+				"resourceName":"callables_from_api"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_lLMef-1",
+			"id":"n_DBl12",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json",
+					"queryParams":{
+						"type":"object",
+						"properties":{
+							"userName":{
+								"type":"string",
+								"title":"User Name"
+							},
+							"startDate":{
+								"type":"string",
+								"title":"Start Date"
+							},
+							"endDate":{
+								"type":"string",
+								"title":"End Date"
+							}
+						},
+						"additionalProperties":false,
+						"required":[]
+					}
+				},
+				"endpointType":"REST",
+				"response":[
+					{
+						"status":200,
+						"contentType":"application/json",
+						"textBody":{
+							"type":"string"
+						},
+						"body":{
+							"type":"object",
+							"properties":{
+								"result":{
+									"type":"array",
+									"items":{
+										"type":"object",
+										"properties":{},
+										"additionalProperties":false
+									},
+									"title":"Result"
+								}
+							},
+							"additionalProperties":false,
+							"required":[
+								"result"
+							]
+						}
+					}
+				],
+				"streamingResponse":false
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via API",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":803,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_lLMef-1",
+			"id":"n_QXkn8",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"result":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Result"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"result"
+					]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"virtusaBusinessPublicSubkey":{
+							"type":"string",
+							"title":"Virtusa Business Public Subkey"
+						},
+						"virtusaBusinessInternalSubkey":{
+							"type":"string",
+							"title":"Virtusa Business Internal Subkey"
+						},
+						"checkinSkillBotAppID":{
+							"type":"string",
+							"title":"Checkin Skill Bot App ID"
+						},
+						"secureToken":{
+							"type":"string",
+							"title":"Secure Token"
+						},
+						"TokenAPIURLPath":{
+							"type":"string",
+							"title":"Token APIURL Path"
+						},
+						"APIMServerUrl":{
+							"type":"string",
+							"title":"APIM Server Url"
+						},
+						"EmployeeMinimalUrl":{
+							"type":"string",
+							"title":"Employee Minimal Url"
+						},
+						"KeyVaultName":{
+							"type":"string",
+							"title":"Key Vault Name"
+						},
+						"userName":{
+							"type":"string",
+							"title":"User Name"
+						},
+						"startDate":{
+							"type":"string",
+							"title":"Start Date"
+						},
+						"endDate":{
+							"type":"string",
+							"title":"End Date"
+						},
+						"ProjectAPIURLPath":{
+							"type":"string",
+							"title":"Project APIURL Path"
+						},
+						"CheckinProjectAPIPath":{
+							"type":"string",
+							"title":"Checkin Project API Path"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"virtusaBusinessPublicSubkey",
+						"virtusaBusinessInternalSubkey",
+						"checkinSkillBotAppID",
+						"secureToken",
+						"TokenAPIURLPath",
+						"APIMServerUrl",
+						"EmployeeMinimalUrl",
+						"KeyVaultName",
+						"userName",
+						"startDate",
+						"endDate",
+						"ProjectAPIURLPath",
+						"CheckinProjectAPIPath"
+					]
+				},
+				"compile_static":false,
+				"code":"import java.util.List\nimport java.util.Map\nimport java.time.LocalDate\nimport java.time.format.DateTimeFormatter\nimport org.json.JSONObject\nimport org.json.JSONArray\nimport java.nio.charset.StandardCharsets\n\ndef httpPost(String urlString, String body, Map headers) {\n    try {\n        URL url = new URL(urlString)\n        HttpURLConnection conn = (HttpURLConnection) url.openConnection()\n        conn.setRequestMethod(\"POST\")\n        conn.setDoOutput(true)\n        headers.each { key, value -> conn.setRequestProperty(key, value) }\n\n        conn.getOutputStream().withWriter(StandardCharsets.UTF_8.toString()) { writer ->\n            writer.write(body)\n        }\n\n        int responseCode = conn.getResponseCode()\n        if (responseCode >= 200 && responseCode < 300) {\n            String responseBody = conn.getInputStream().getText('UTF-8')\n            return [IsSuccessStatusCode: true, Content: [ReadAsStringAsync: { -> [Result: responseBody] }]]\n        } else {\n            String errorBody = conn.getErrorStream()?.getText('UTF-8') ?: \"\"\n            println \"HTTP POST Failed with code ${responseCode}: ${errorBody}\"\n            return [IsSuccessStatusCode: false, StatusCode: responseCode]\n        }\n    } catch (Exception e) {\n        println \"HTTP POST Exception: \" + e.getMessage()\n        return [IsSuccessStatusCode: false, Error: e.getMessage()]\n    }\n}\n\ndef httpGetRequest(String urlString, Map headers) {\n    try {\n        URL url = new URL(urlString)\n        HttpURLConnection conn = (HttpURLConnection) url.openConnection()\n        conn.setRequestMethod(\"GET\")\n        headers.each { key, value -> conn.setRequestProperty(key, value) }\n\n        int responseCode = conn.getResponseCode()\n        if (responseCode >= 200 && responseCode < 300) {\n            String responseBody = conn.getInputStream().getText('UTF-8')\n            return [IsSuccessStatusCode: true, Content: [ReadAsStringAsync: { -> [Result: responseBody] }]]\n        } else {\n            String errorBody = conn.getErrorStream()?.getText('UTF-8') ?: \"\"\n            println \"HTTP GET Failed with code ${responseCode}: ${errorBody}\"\n            return [IsSuccessStatusCode: false, StatusCode: responseCode]\n        }\n    } catch (Exception e) {\n        println \"HTTP GET Exception: \" + e.getMessage()\n        return [IsSuccessStatusCode: false, Error: e.getMessage()]\n    }\n}\n\ndef getToken() {\n    String tokenRquestBody = \"client_id=\" + checkinSkillBotAppID + \"&grant_type=client_credentials&client_secret=\" + secureToken + \"&resource=fb37e32e-cf16-434b-93e6-3420f7bc11f9\"\n    String TokenAPI = APIMServerUrl.replace(\"http://\", \"https://\") + TokenAPIURLPath\n    String responseString = \"\"\n    String BearerToken = \"\"\n    def clientHeaders = [\n        \"Content-Type\": \"application/x-www-form-urlencoded\",\n        \"Accept\": \"application/json\",\n        \"Ocp-Apim-Subscription-Key\": virtusaBusinessPublicSubkey\n    ]\n    def response = httpPost(TokenAPI, tokenRquestBody, clientHeaders)\n\n    if (response.IsSuccessStatusCode) {\n        responseString = response.Content.ReadAsStringAsync().Result\n    }\n    if (responseString) {\n        def tokenResponse = new JSONObject(responseString)\n        BearerToken = tokenResponse.getString(\"access_token\")\n    }\n    return BearerToken\n}\n\ndef getEmployeeList(String personNumList, String subscriptionKey, String accessToken) {\n    def employeeMinimalRoot = null\n    String employeeMinimalRes = \"\"\n    String employeeMinimalAPIBaseURL = APIMServerUrl + EmployeeMinimalUrl\n    def headers = [\n        \"Ocp-Apim-Subscription-Key\": subscriptionKey,\n        \"Authorization\": \"Bearer \" + accessToken,\n        \"REST-Framework-Version\": \"2\"\n    ]\n    String urlParameters = \"?q=PersonNumber in (\" + personNumList + \")\"\n    def response = httpGetRequest(employeeMinimalAPIBaseURL + urlParameters, headers)\n\n    if (response.IsSuccessStatusCode) {\n        employeeMinimalRes = response.Content.ReadAsStringAsync().Result\n    }\n\n    if (employeeMinimalRes) {\n        employeeMinimalRoot = new JSONObject(employeeMinimalRes)\n    }\n    if (employeeMinimalRoot == null) {\n        return [items: []]\n    } else {\n        return employeeMinimalRoot\n    }\n}\n\nString BearerToken = getToken()\nString checkinProjectAPIURL = APIMServerUrl + CheckinProjectAPIPath\nString responseString = \"\"\nJSONObject checkinProjectResponse\n\ndef headers1 = [\n    \"Ocp-Apim-Subscription-Key\": virtusaBusinessInternalSubkey,\n    \"Authorization\": \"Bearer \" + BearerToken\n]\nString urlParameters1 = \"?P_FROM_DATE=\" + startDate + \"&P_TO_DATE=\" + endDate + \"&P_IN_TIME_STAMP=0&p_emp_login_id=\" + userName\ndef response1 = httpGetRequest(checkinProjectAPIURL + urlParameters1, headers1)\n\nif (response1.IsSuccessStatusCode) {\n    responseString = response1.Content.ReadAsStringAsync().Result\n    println \"Checkin Project Data Received\"\n} else {\n    println \"error on getting Project: \" + responseString\n}\n\nif(responseString) {\n    checkinProjectResponse = new JSONObject(responseString)\n} else {\n    checkinProjectResponse = new JSONObject('{\"items\":[]}')\n}\n\nString veloicyProjectNumberList = \"\"\nif (checkinProjectResponse?.has(\"items\")) {\n    JSONArray itemsArray = checkinProjectResponse.getJSONArray(\"items\")\n    List<String> projectNumbers = []\n    for (int i = 0; i < itemsArray.length(); i++) {\n        JSONObject item = itemsArray.getJSONObject(i)\n        projectNumbers.add(item.getString(\"veloprojectnumber\"))\n    }\n    veloicyProjectNumberList = projectNumbers.join(',')\n}\n\nList<JSONObject> v5Project = []\nString v5ProjectResoponse = \"\"\nString velocityProjectAPIBaseURL = APIMServerUrl + ProjectAPIURLPath\n\ndef headers2 = [\n    \"Ocp-Apim-Subscription-Key\": virtusaBusinessPublicSubkey,\n    \"Authorization\": \"Bearer \" + BearerToken\n]\nString urlParameters2 = \"?projectNumber=\" + veloicyProjectNumberList\ndef response2 = httpGetRequest(velocityProjectAPIBaseURL + urlParameters2, headers2)\n\nif (response2.IsSuccessStatusCode) {\n    v5ProjectResoponse = response2.Content.ReadAsStringAsync().Result\n    println \"V5 project Data Received\"\n} else {\n    println \"error on getting V5 Project: \" + v5ProjectResoponse\n}\n\nif (v5ProjectResoponse) {\n    JSONArray v5Array = new JSONArray(v5ProjectResoponse)\n    for (int i = 0; i < v5Array.length(); i++) {\n        v5Project.add(v5Array.getJSONObject(i))\n    }\n}\nprintln \"project Length: \" + v5Project.size()\n\ndef PMPersonNumnerList = new StringBuilder()\ndef first = true\nv5Project.findAll { it.has(\"projectManagerPersonNumber\") && !it.isNull(\"projectManagerPersonNumber\") }.each { v5ProjectItem ->\n    if (first) {\n        PMPersonNumnerList.append(v5ProjectItem.getString(\"projectManagerPersonNumber\"))\n        first = false\n    } else {\n        PMPersonNumnerList.append(\",\" + v5ProjectItem.getString(\"projectManagerPersonNumber\"))\n    }\n}\n\nJSONObject empMinimalRootObj = getEmployeeList(PMPersonNumnerList.toString(), virtusaBusinessPublicSubkey, BearerToken)\n\nList v5ProjectDetailswithCheckinDataList = []\ndef fromDate = LocalDate.parse(startDate)\ndef toDate = LocalDate.parse(endDate)\n\nList<JSONObject> filteredCheckinProjectList = []\nif (checkinProjectResponse?.has(\"items\")) {\n    JSONArray checkinItemsArray = checkinProjectResponse.getJSONArray(\"items\")\n    for (int i = 0; i < checkinItemsArray.length(); i++) {\n        JSONObject item = checkinItemsArray.getJSONObject(i)\n        LocalDate startAllocation = LocalDate.parse(item.getString(\"userallocationstartdate\"))\n        LocalDate endAllocation = LocalDate.parse(item.getString(\"userallocationenddate\"))\n        \n        if (startAllocation <= toDate && endAllocation >= fromDate) {\n            filteredCheckinProjectList.add(item)\n        }\n    }\n}\n\nfilteredCheckinProjectList.each { item ->\n    def v5ProjObj = v5Project.find { p -> p.getString(\"projectNumber\") == item.getString(\"veloprojectnumber\") }\n\n    if (v5ProjObj != null) {\n        def v5ProjObjN = [:]\n        v5ProjObjN.checkinProjectId = item.get(\"projectid\")\n        v5ProjObjN.projectID = v5ProjObj.get(\"projectID\")\n        v5ProjObjN.projectName = item.get(\"projectname\")\n        v5ProjObjN.projectNumber = v5ProjObj.get(\"projectNumber\")\n        v5ProjObjN.projectStartDate = v5ProjObj.get(\"projectStartDate\")\n        v5ProjObjN.projectCompletionDate = v5ProjObj.get(\"projectCompletionDate\")\n        v5ProjObjN.projectClosedDate = v5ProjObj.opt(\"projectClosedDate\")\n        v5ProjObjN.projectStatusCode = v5ProjObj.get(\"projectStatusCode\")\n        v5ProjObjN.projectStatusName = v5ProjObj.get(\"projectStatusName\")\n        v5ProjObjN.customerNumber = v5ProjObj.get(\"customerNumber\")\n        v5ProjObjN.customerName = v5ProjObj.get(\"customerName\")\n        v5ProjObjN.projectManagerPersonNumber = v5ProjObj.get(\"projectManagerPersonNumber\")\n        v5ProjObjN.projectManagerEmailAddress = v5ProjObj.get(\"projectManagerEmailAddress\")\n        v5ProjObjN.projectCode = v5ProjObj.get(\"projectCode\")\n        v5ProjObjN.typeDescription = v5ProjObj.get(\"typeDescription\")\n        v5ProjObjN.projectTypeID = v5ProjObj.get(\"projectTypeID\")\n        v5ProjObjN.scheduledStartDate = v5ProjObj.get(\"scheduledStartDate\")\n        v5ProjObjN.scheduledFinishDate = v5ProjObj.get(\"scheduledFinishDate\")\n        v5ProjObjN.targetStartDate = v5ProjObj.opt(\"targetStartDate\")\n        v5ProjObjN.targetFinishDate = v5ProjObj.opt(\"targetFinishDate\")\n        v5ProjObjN.organizationName = v5ProjObj.get(\"organizationName\")\n\n        // append PM name\n        if (empMinimalRootObj.has(\"items\")) {\n            JSONArray empArray = empMinimalRootObj.getJSONArray(\"items\")\n            for (int i = 0; i < empArray.length(); i++) {\n                JSONObject empItem = empArray.getJSONObject(i)\n                if (empItem.getString(\"PersonNumber\") == v5ProjObjN.projectManagerPersonNumber.toString()) {\n                    v5ProjObjN.projectManagerName = empItem.getString(\"DisplayName\")\n                    break\n                }\n            }\n        }\n        \n        v5ProjectDetailswithCheckinDataList.add(v5ProjObjN)\n    }\n}\n\nreturn [\"result\":v5ProjectDetailswithCheckinDataList]",
+				"parameters":{
+					"virtusaBusinessPublicSubkey":"{{ __ENV__.outputs.virtusaBusinessPublicSubkey }}",
+					"virtusaBusinessInternalSubkey":"{{ __ENV__.outputs.Virtu-Business-Internal-sub-key }}",
+					"checkinSkillBotAppID":"{{ __ENV__.outputs.checkinSkillBotAppID }}",
+					"secureToken":"{{ __ENV__.outputs.secureToken }}",
+					"TokenAPIURLPath":"{{ __ENV__.outputs.TokenAPIURLPath }}",
+					"APIMServerUrl":"{{ __ENV__.outputs.APIMServerUrl }}",
+					"EmployeeMinimalUrl":"{{ __ENV__.outputs.EmployeeMinimalUrl }}",
+					"KeyVaultName":"{{ __ENV__.outputs.KeyVaultName }}",
+					"userName":"{{ n_DBl12.outputs.queryParams.userName }}",
+					"startDate":"{{ n_DBl12.outputs.queryParams.startDate }}",
+					"endDate":"{{ n_DBl12.outputs.queryParams.endDate }}",
+					"ProjectAPIURLPath":"{{ __ENV__.outputs.ProjectAPIURLPath }}",
+					"CheckinProjectAPIPath":"{{ __ENV__.outputs.CheckinProjectAPIPath }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":818,
+				"resourceName":"callables_return_response_to_api",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_lLMef-1",
+			"id":"n_4jR9z",
+			"index":3,
+			"inputs":{
+				"streamingCompleted":true,
+				"responseName":"200_undefined",
+				"body":{
+					"result":{
+						"source":"{{ n_QXkn8.outputs.result.result }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_QXkn8.outputs.result.result[0] }}"
+					}
+				},
+				"status":200
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to API request",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":308,
+	"projectId":1927,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":32
+}
