@@ -11,7 +11,7 @@
 		"deployedAt":1758970230032,
 		"deployedBy":187421,
 		"deployedDefinitionId":"68d7c1748db55c6e1527efe6",
-		"status":"DEPLOYED",
+		"status":"PAUSED",
 		"version":21,
 		"workflowVersion":70
 	},
@@ -154,7 +154,7 @@
 	"id":"68d117de852fdd034c42ed99",
 	"lastModifiedBy":187421,
 	"lcName":"meeting assistant | join meet",
-	"modifiedTime":1758970730593,
+	"modifiedTime":1758971095298,
 	"name":"Meeting Assistant | Join meet",
 	"nodes":[
 		{
@@ -1070,5 +1070,5 @@
 		}
 	},
 	"standard":false,
-	"version":71
+	"version":72
 }
