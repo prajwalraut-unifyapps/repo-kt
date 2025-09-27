@@ -23,7 +23,7 @@
 	"id":"68d81eb380311e347d3f30c4",
 	"lastModifiedBy":44108,
 	"lcName":"test",
-	"modifiedTime":1759002728784,
+	"modifiedTime":1759002757048,
 	"name":"test",
 	"nodes":[
 		{
@@ -54,7 +54,10 @@
 							"title":"Array Of List Of Chunks"
 						},
 						"userQueries":{
-							"type":"string",
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
 							"title":"User Queries"
 						}
 					}
@@ -145,14 +148,14 @@
 				"captureStdOutput":false,
 				"parameters":{
 					"arrayOfListOfChunks":{
-						"source":"{{ n_SvQHQ.outputs.result }}",
+						"source":"{{ n_O67u5.outputs.arrayOfListOfChunks }}",
 						"ua:type":"mappedArray",
-						"items":"{{ n_SvQHQ.outputs.result[0] }}"
+						"items":"{{ n_O67u5.outputs.arrayOfListOfChunks[0] }}"
 					},
 					"userQueries":{
-						"source":"{{ n_V3hB5.outputs.result.search_questions }}",
+						"source":"{{ n_O67u5.outputs.userQueries }}",
 						"ua:type":"mappedArray",
-						"items":"{{ n_V3hB5.outputs.result.search_questions[0] }}"
+						"items":"{{ n_O67u5.outputs.userQueries[0] }}"
 					}
 				}
 			},
@@ -200,5 +203,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
