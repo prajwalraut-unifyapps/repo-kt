@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759096475608,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759096477614,
+		"deployedBy":175325,
+		"deployedDefinitionId":"68d9ae9badaf0562b42e20c5",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"KGcta",
@@ -16,7 +24,7 @@
 	"id":"68d9ae216115d0174f2f11a5",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa2xbmahaovv08m",
-	"modifiedTime":1759096475608,
+	"modifiedTime":1759096586012,
 	"name":"changeSetQA2xBMAhAovV08m",
 	"nodes":[
 		{
@@ -39,11 +47,11 @@
 						"properties":{
 							"b":{
 								"type":"integer",
-								"title":"b"
+								"title":"B"
 							},
 							"a":{
 								"type":"integer",
-								"title":"a"
+								"title":"A"
 							}
 						},
 						"additionalProperties":false,
@@ -85,14 +93,14 @@
 					"properties":{
 						"c":{
 							"type":"integer",
-							"title":"c"
+							"title":"C"
 						}
 					},
 					"required":[]
 				}
 			},
 			"inputs":{
-				"c":"=SUM({{ KGcta.outputs.body.a }},{{ KGcta.outputs.body.b }})"
+				"c":"=PRODUCT({{ KGcta.outputs.body.a }},{{ KGcta.outputs.body.b }})"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -102,7 +110,7 @@
 					"properties":{
 						"c":{
 							"type":"integer",
-							"title":"c"
+							"title":"C"
 						}
 					},
 					"required":[]
@@ -131,5 +139,5 @@
 	"tags":[
 		"CHANGE_SET_AUTO_DND"
 	],
-	"version":1
+	"version":2
 }
