@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759076886091,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759078622855,
+		"deployedBy":161908,
+		"deployedDefinitionId":"68d968defbe96550e65f164a",
+		"status":"PAUSED",
+		"version":1,
+		"workflowVersion":20
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_6tpzP",
@@ -88,7 +96,7 @@
 	"id":"68d96216fbe96550e65f147b",
 	"lastModifiedBy":161908,
 	"lcName":"againtest",
-	"modifiedTime":1759078619051,
+	"modifiedTime":1759079022776,
 	"name":"againtest",
 	"nodes":[
 		{
@@ -98,7 +106,7 @@
 				"resourceName":"schedule_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_9dqah-1",
 			"id":"n_6tpzP",
@@ -268,7 +276,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_kqvzd@_9dqah-1@l",
 			"id":"_Qjeus",
@@ -405,5 +413,5 @@
 	"tags":[
 		
 	],
-	"version":20
+	"version":21
 }
