@@ -16,7 +16,7 @@
 	"id":"68d8eedcca64ec6587099dfd",
 	"lastModifiedBy":161908,
 	"lcName":"scsc",
-	"modifiedTime":1759047488463,
+	"modifiedTime":1759047657427,
 	"name":"scsc",
 	"nodes":[
 		{
@@ -26,7 +26,7 @@
 				"resourceName":"schedule_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_li6QU-1",
 			"id":"n_7ziHb",
@@ -59,18 +59,7 @@
 			"id":"n_a2JhB",
 			"index":2,
 			"inputs":{
-				"triggerInputCondition":{
-					"filters":[
-						{
-							"property":"properties_name",
-							"filter":{
-								"operator":"EXISTS"
-							}
-						}
-					],
-					"operator":"AND"
-				},
-				"object_type":"testttingsdad",
+				"object_type":"workspace_28th",
 				"includeRoleMappings":false,
 				"includeCurrentUserPermissions":false,
 				"translationsOption":"DEFAULT",
@@ -106,5 +95,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
