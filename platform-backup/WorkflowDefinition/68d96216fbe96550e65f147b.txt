@@ -30,11 +30,11 @@
 			"fromNodeId":"n_Q9koA",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_f1bCK",
+			"toNodeId":"n_FbUlO",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_f1bCK",
+			"fromNodeId":"n_FbUlO",
 			"name":"loopback",
 			"priority":0,
 			"skip":false,
@@ -52,7 +52,7 @@
 	"id":"68d96216fbe96550e65f147b",
 	"lastModifiedBy":161908,
 	"lcName":"againtest",
-	"modifiedTime":1759078059879,
+	"modifiedTime":1759078095425,
 	"name":"againtest",
 	"nodes":[
 		{
@@ -203,21 +203,13 @@
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_68Ewx@_9dqah-1@l",
-			"id":"n_f1bCK",
+			"id":"n_FbUlO",
 			"index":5,
 			"inputs":{
 				"variables":[
 					{
-						"source":"{{ n_zaBZE.outputs.index }}",
-						"value":"=({{ n_zaBZE.outputs.index }}+1)"
-					},
-					{
 						"source":"{{ n_MRBjg.outputs.loopcount }}",
 						"value":"=({{ n_MRBjg.outputs.loopcount }}-1)"
-					},
-					{
-						"source":"",
-						"value":"=(-1)"
 					}
 				]
 			},
@@ -259,5 +251,5 @@
 	"tags":[
 		
 	],
-	"version":15
+	"version":16
 }
