@@ -52,7 +52,7 @@
 	"id":"68d96216fbe96550e65f147b",
 	"lastModifiedBy":161908,
 	"lcName":"againtest",
-	"modifiedTime":1759077238455,
+	"modifiedTime":1759077304784,
 	"name":"againtest",
 	"nodes":[
 		{
@@ -89,7 +89,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_9dqah-1",
 			"id":"n_zaBZE",
@@ -115,7 +115,7 @@
 				}
 			},
 			"inputs":{
-				"loopcount":15,
+				"loopcount":0,
 				"index":1
 			},
 			"outputSchema":{
@@ -264,5 +264,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
