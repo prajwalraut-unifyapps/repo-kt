@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759096131790,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759096136106,
+		"deployedBy":175325,
+		"deployedDefinitionId":"68d9ad45fbe96550e6614311",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_1GOIj",
@@ -16,7 +24,7 @@
 	"id":"68d9ace06115d0174f2f0fc7",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa2gqkvwwgqhq",
-	"modifiedTime":1759096131790,
+	"modifiedTime":1759096225255,
 	"name":"changeSetQA2GQKvwwgQhQ",
 	"nodes":[
 		{
@@ -48,7 +56,7 @@
 			"context":{
 				"appName":"slack",
 				"resourceVersion":165,
-				"connectionId":"68d9acde4278ce19584a7153",
+				"connectionId":"68d9ad9d4278ce19584a724d",
 				"resourceName":"slack_list_conversations",
 				"type":"APPLICATION"
 			},
@@ -84,5 +92,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
