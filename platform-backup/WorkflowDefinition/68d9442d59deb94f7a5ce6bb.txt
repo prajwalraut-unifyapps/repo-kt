@@ -6,46 +6,77 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_1u7B3",
+			"fromNodeId":"n_pwgCy",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_f6LM7",
+			"toNodeId":"n_9Voia",
 			"type":"next"
 		}
 	],
 	"id":"68d9442d59deb94f7a5ce6bb",
 	"lastModifiedBy":161908,
 	"lcName":"event stream testing",
-	"modifiedTime":1759069229940,
+	"modifiedTime":1759069326979,
 	"name":"event stream testing",
 	"nodes":[
 		{
+			"context":{
+				"appName":"streams_by_unifyapps",
+				"resourceVersion":1573,
+				"resourceName":"streams_by_unifyapps_on_event"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_1u7B3-1",
-			"id":"_1u7B3",
-			"index":0,
+			"id":"n_pwgCy",
+			"index":1,
+			"inputs":{
+				"triggerAfterCompletion":false,
+				"messageLimit":1,
+				"streamId":"e_68d9433d399ffe32b492ac3d"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Streams by UnifyApps",
+			"title":"Triggers on new event from stream",
 			"trigger":{
 				"type":"EVENT"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"streams_by_unifyapps",
+				"resourceVersion":1555,
+				"resourceName":"streams_by_unifyapps_publish_event",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_1u7B3-1",
-			"id":"_f6LM7",
-			"index":0,
+			"id":"n_9Voia",
+			"index":2,
+			"inputs":{
+				"streamId":"e_68d9433d399ffe32b492ac3d",
+				"skipInputValidation":true,
+				"event":{
+					"dlqReason":"Parse json error",
+					"event":"{{ n_pwgCy.outputs.event }}",
+					"group":"{{ n_pwgCy.outputs.group }}"
+				},
+				"key":"{{ n_pwgCy.outputs.key }}"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Streams by UnifyApps",
+			"title":"Publish event to stream",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":161908,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +90,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
