@@ -59,7 +59,7 @@
 	"id":"68d96216fbe96550e65f147b",
 	"lastModifiedBy":161908,
 	"lcName":"againtest",
-	"modifiedTime":1759077629614,
+	"modifiedTime":1759077750485,
 	"name":"againtest",
 	"nodes":[
 		{
@@ -163,13 +163,18 @@
 						"loopcount":{
 							"type":"integer",
 							"title":"Loopcount"
+						},
+						"eufwjsa":{
+							"type":"integer",
+							"title":"Eufwjsa"
 						}
 					},
 					"required":[]
 				}
 			},
 			"inputs":{
-				"loopcount":1000
+				"loopcount":1000,
+				"eufwjsa":10
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -180,6 +185,10 @@
 						"loopcount":{
 							"type":"integer",
 							"title":"Loopcount"
+						},
+						"eufwjsa":{
+							"type":"integer",
+							"title":"Eufwjsa"
 						}
 					},
 					"required":[]
@@ -207,7 +216,7 @@
 				"condition":{
 					"filters":[
 						{
-							"property":"{{ n_MRBjg.outputs.loopcount }}",
+							"property":"{{ n_MRBjg.outputs.eufwjsa }}",
 							"filter":{
 								"operator":"GT",
 								"value":"1"
@@ -272,6 +281,10 @@
 					{
 						"source":"{{ n_MRBjg.outputs.loopcount }}",
 						"value":"=({{ n_MRBjg.outputs.loopcount }}-1)"
+					},
+					{
+						"source":"{{ n_MRBjg.outputs.eufwjsa }}",
+						"value":"=({{ n_MRBjg.outputs.eufwjsa }}-1)"
 					}
 				]
 			},
@@ -313,5 +326,5 @@
 	"tags":[
 		
 	],
-	"version":10
+	"version":11
 }
