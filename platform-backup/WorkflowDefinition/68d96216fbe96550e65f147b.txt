@@ -88,7 +88,7 @@
 	"id":"68d96216fbe96550e65f147b",
 	"lastModifiedBy":161908,
 	"lcName":"againtest",
-	"modifiedTime":1759078433611,
+	"modifiedTime":1759078513761,
 	"name":"againtest",
 	"nodes":[
 		{
@@ -176,7 +176,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_9dqah-1",
 			"id":"n_TXykG",
@@ -241,7 +241,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_kqvzd@_9dqah-1@l",
 			"id":"_tCS6P",
@@ -268,7 +268,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_kqvzd@_9dqah-1@l",
 			"id":"_Qjeus",
@@ -277,7 +277,7 @@
 				"variables":[
 					{
 						"source":"{{ n_MRBjg.outputs.loopcount }}",
-						"value":"=({{ n_MRBjg.outputs.loopcount }}-1)"
+						"value":"=({{ n_MRBjg.outputs.loopcount }}+1)"
 					}
 				]
 			},
@@ -405,5 +405,5 @@
 	"tags":[
 		
 	],
-	"version":18
+	"version":19
 }
