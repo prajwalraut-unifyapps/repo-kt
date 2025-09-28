@@ -16,6 +16,13 @@
 			"fromNodeId":"n_zaBZE",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_MRBjg",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_MRBjg",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_68Ewx",
 			"type":"next"
 		},
@@ -52,7 +59,7 @@
 	"id":"68d96216fbe96550e65f147b",
 	"lastModifiedBy":161908,
 	"lcName":"againtest",
-	"modifiedTime":1759077389778,
+	"modifiedTime":1759077446683,
 	"name":"againtest",
 	"nodes":[
 		{
@@ -134,6 +141,57 @@
 		},
 		{
 			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":924,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_9dqah-1",
+			"id":"n_MRBjg",
+			"index":3,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"loopcount":{
+							"type":"integer",
+							"title":"Loopcount"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"loopcount":20
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"loopcount":{
+							"type":"integer",
+							"title":"Loopcount"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"loop",
 				"resourceVersion":857,
 				"resourceName":"loop_while",
@@ -144,12 +202,12 @@
 			"fallbackMode":"STOP",
 			"groupId":"_9dqah-1",
 			"id":"n_68Ewx",
-			"index":3,
+			"index":4,
 			"inputs":{
 				"condition":{
 					"filters":[
 						{
-							"property":"",
+							"property":"{{ n_MRBjg.outputs.loopcount }}",
 							"filter":{
 								"operator":"GT",
 								"value":"0"
@@ -177,7 +235,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_68Ewx@_9dqah-1@l",
 			"id":"n_Q9koA",
-			"index":4,
+			"index":5,
 			"inputs":{
 				"streamId":"e_68d961ea399ffe32b492acf8",
 				"skipInputValidation":true,
@@ -204,7 +262,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_68Ewx@_9dqah-1@l",
 			"id":"n_f1bCK",
-			"index":5,
+			"index":6,
 			"inputs":{
 				"variables":[
 					{
@@ -212,8 +270,8 @@
 						"value":"=({{ n_zaBZE.outputs.index }}+1)"
 					},
 					{
-						"source":"",
-						"value":"=(-1)"
+						"source":"{{ n_MRBjg.outputs.loopcount }}",
+						"value":"=({{ n_MRBjg.outputs.loopcount }}-1)"
 					}
 				]
 			},
@@ -231,7 +289,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_9dqah-1",
 			"id":"n_FZNG8",
-			"index":6,
+			"index":7,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -255,5 +313,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
