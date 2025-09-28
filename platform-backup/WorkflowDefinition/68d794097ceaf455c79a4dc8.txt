@@ -4,6 +4,14 @@
 	],
 	"createdTime":1758977331611,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758977399643,
+		"deployedBy":23949,
+		"deployedDefinitionId":"68d7dd77f1a8bd727046ed27",
+		"status":"DEPLOYED",
+		"version":2,
+		"workflowVersion":15
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_U5Ovv",
@@ -55,10 +63,34 @@
 			"type":"next"
 		}
 	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"EXPORT_AS_TEMPLATE",
+					"A",
+					"C",
+					"S",
+					"VI",
+					"D",
+					"TEST",
+					"VIEW_RUNS",
+					"E",
+					"V",
+					"VS",
+					"DEP"
+				],
+				"principalIds":[
+					"67a1a7856d555959c8608546"
+				],
+				"principalType":"USER_GROUPS"
+			}
+		]
+	},
 	"id":"68d794097ceaf455c79a4dc8",
 	"lastModifiedBy":23949,
 	"lcName":"publish lookup form test",
-	"modifiedTime":1758977331611,
+	"modifiedTime":1759056176669,
 	"name":"Publish lookup form test",
 	"nodes":[
 		{
@@ -68,7 +100,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_j6UZQ-1",
 			"id":"n_U5Ovv",
@@ -102,7 +134,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_j6UZQ-1",
 			"id":"n_7LPwF",
@@ -167,7 +199,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_j6UZQ-1",
 			"id":"n_uNvzq",
@@ -203,7 +235,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_j6UZQ-1",
 			"id":"n_7xTUy",
@@ -236,7 +268,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_j6UZQ-1",
 			"id":"n_HpttH",
@@ -261,7 +293,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_j6UZQ-1",
 			"id":"n_Gc29u",
@@ -299,6 +331,14 @@
 											"additionalProperties":false,
 											"title":"Inputs",
 											"required":[]
+										},
+										"runtimeType":{
+											"type":"string",
+											"title":"Runtime Type"
+										},
+										"resolvePath":{
+											"type":"string",
+											"title":"Resolve Path"
 										}
 									},
 									"additionalProperties":false,
@@ -321,7 +361,9 @@
 						"workflowId":"68d7933d7ceaf455c79a4dbf",
 						"inputs":{
 							"key":"cf_protectionPeriodInYears"
-						}
+						},
+						"runtimeType":"IN_MEMORY",
+						"resolvePath":"objects"
 					}
 				}
 			},
@@ -356,6 +398,14 @@
 											"additionalProperties":false,
 											"title":"Inputs",
 											"required":[]
+										},
+										"runtimeType":{
+											"type":"string",
+											"title":"Runtime Type"
+										},
+										"resolvePath":{
+											"type":"string",
+											"title":"Resolve Path"
 										}
 									},
 									"additionalProperties":false,
@@ -384,7 +434,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_j6UZQ-1",
 			"id":"n_bUtSk",
@@ -424,7 +474,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_j6UZQ-1",
 			"id":"n_UWJrg",
@@ -457,5 +507,5 @@
 	"tags":[
 		
 	],
-	"version":14
+	"version":16
 }
