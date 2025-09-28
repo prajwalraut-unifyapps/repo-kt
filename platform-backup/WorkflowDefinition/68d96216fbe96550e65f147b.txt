@@ -59,7 +59,7 @@
 	"id":"68d96216fbe96550e65f147b",
 	"lastModifiedBy":161908,
 	"lcName":"againtest",
-	"modifiedTime":1759077621154,
+	"modifiedTime":1759077629614,
 	"name":"againtest",
 	"nodes":[
 		{
@@ -210,7 +210,7 @@
 							"property":"{{ n_MRBjg.outputs.loopcount }}",
 							"filter":{
 								"operator":"GT",
-								"value":"0"
+								"value":"1"
 							}
 						}
 					],
@@ -313,5 +313,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
