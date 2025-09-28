@@ -1,0 +1,64 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759047279521,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_43TXA",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_uETSh",
+			"type":"next"
+		}
+	],
+	"id":"68d8ee6fca64ec6587099de8",
+	"lastModifiedBy":687,
+	"lcName":"faere",
+	"modifiedTime":1759047279521,
+	"name":"faere",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_43TXA-1",
+			"id":"_43TXA",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_43TXA-1",
+			"id":"_uETSh",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":687,
+	"projectId":1995,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
