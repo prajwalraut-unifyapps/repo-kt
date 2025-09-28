@@ -29,9 +29,9 @@
 		}
 	],
 	"id":"68b19285dfcc8c7d3763a3b2",
-	"lastModifiedBy":103171,
+	"lastModifiedBy":39713,
 	"lcName":"[virtu-rpa-billparameteruploadfn]bp_validate",
-	"modifiedTime":1759003403596,
+	"modifiedTime":1759019151302,
 	"name":"[virtu-rpa-billparameteruploadfn]bp_validate",
 	"nodes":[
 		{
@@ -123,7 +123,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_D9Igq-1",
 			"id":"n_rNYY6",
@@ -131,6 +131,8 @@
 			"inputs":{
 				"output":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"result":{
 							"type":"object",
@@ -138,13 +140,12 @@
 							"additionalProperties":false,
 							"title":"Result"
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				},
-				"configurationMode":"MANUAL",
 				"input":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"BP_data":{
 							"type":"object",
@@ -170,13 +171,17 @@
 							"additionalProperties":false,
 							"title":"BP Env Details"
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				},
+				"configurationMode":"MANUAL",
 				"code":"import logging\nimport requests\nimport json\nimport pandas as pd\nimport datetime\n\n\n\n\nlogging.info('Python HTTP trigger function processed a request.')\n# data = req.get_json();\n# BP_data = data['BPData']\n# BP_crossValidate = data['crossValidate']  \n# BP_header = data['HeaderUOM']  \n# BP_envDetails = data['EnvDetails']\nBP_data_df = pd.DataFrame(BP_data)\nBP_crossValidate_df = pd.DataFrame(BP_crossValidate)    \n#Fetch currency master list\nurl = BP_envDetails['apimCurrencyList']\nheaders = {\n            'Ocp-Apim-Subscription-Key': BP_envDetails['subKey'],\n            'Authorization': \"Bearer \" + BP_envDetails['authToken']\n          }\nresponse = requests.get(url, headers=headers)\nBP_currencyResponse = json.loads(response.content)    \n\nList1 = []\nlst_strng = ''        \nif BP_data_df['Index'].nunique() != len(BP_data_df.index):\n    out_string = '{\"Overall Status\":\"Fail\",\"error_lines\":\"Non Unique Index\"}'  \nelse:  \n    for line in BP_data:\n        errormessage = ''\n        if line['Billing Role'] == '':\n            errormessage = errormessage + '|Billing Role is Mandatory'\n        if line['Rate Start date'] == '':\n            errormessage = errormessage + '|Rate Start date is Mandatory'\n        if line['Rate End date'] == '':\n            errormessage = errormessage + '|Rate End date is Mandatory'\n        if line['Currency'] == '':\n            errormessage = errormessage + '|Currency is Mandatory'\n        if line['UOM'] == '':\n            errormessage = errormessage + '|UOM is Mandatory'\n        if line['Bill Rate'] == '':\n            errormessage = errormessage + '|Bill Rate is Mandatory'\n        if line['Min Hours'] == '':\n            errormessage = errormessage + '|Min Hours is Mandatory'\n        if line['Max Hours'] == '':\n            errormessage = errormessage + '|Max Hours is Mandatory'\n        #DateValidation\n        if line['Rate Start date'] > line['Rate End date']:\n            errormessage = errormessage + '|Rate End date is before Rate Start Date'\n        if line['Allocation Start Date'] > line['Rate Start date']:\n            errormessage = errormessage + '|Rate Start date is before Allocation Start Date'\n        if line['Allocation End Date'] < line['Rate End date']:\n            errormessage = errormessage + '|Rate End date is after Allocation End Date'\n        #MetaDataValidation\n        if float(line['Bill Rate']) < 0:\n            errormessage = errormessage + '|Bill Rate can not be negative'            \n        if line['UOM'] != '':\n            if line['UOM'] != 'HOURLY' and line['UOM'] != 'MONTHLY' and line['UOM'] != 'DAILY' and line['UOM'] != 'WEEKLY':\n                errormessage = errormessage + '|Invalid UOM value'  \n            if float(line['Min Hours']) < 0:\n                errormessage = errormessage + '|Invalid Min hours'\n            if float(line['Min Hours']) > 24:\n                errormessage = errormessage + '|Invalid Min hours'\n            if float(line['Max Hours']) < 0:\n                errormessage = errormessage + '|Invalid Max hours'\n            if float(line['Max Hours']) > 24:\n                errormessage = errormessage + '|Invalid Max hours'    \n            if float(line['Max Hours']) < float(line['Min Hours']):\n                errormessage = errormessage + '|Max hours is less than Min hours'\n        if len(line['Billing Role']) > 80:\n            errormessage = errormessage + '|Exceeds character length of Billing Role (Expected : 80)' \n        #validateCurrencyCode\n        for cur in BP_currencyResponse['items']:\n            if cur['CurrencyCode'] == line['Currency']:\n                i=0\n                break\n        else:\n            errormessage = errormessage + '|Invalid Currency Code'                 \n        #HeaderLevelLineLevelValidation\n        if BP_header == 'HOURLY' and line['UOM'] == 'MONTHLY':\n            errormessage = errormessage + '|Line UOM cannot be MONTHLY if header UOM is HOURLY'\n        if BP_header == 'HOURLY' and line['UOM'] == 'WEEKLY':\n            errormessage = errormessage + '|Line UOM cannot be WEEKLY if header UOM is HOURLY'\n        if BP_header == 'DAILY' and line['UOM'] == 'MONTHLY':\n            errormessage = errormessage + '|Line UOM cannot be MONTHLY if header UOM is DAILY'\n        if BP_header == 'DAILY' and line['UOM'] == 'WEEKLY':\n            errormessage = errormessage + '|Line UOM cannot be WEEKLY if header UOM is DAILY'                \n        if BP_header == 'WEEKLY' and line['UOM'] == 'MONTHLY':\n            errormessage = errormessage + '|Line UOM cannot be MONTHLY if header UOM is WEEKLY'\n        if BP_header == 'MONTHLY' and line['UOM'] == 'WEEKLY':\n            errormessage = errormessage + '|Line UOM cannot be WEEKLY if header UOM is MONTHLY'              \n        \n        #DateFormatValidation\n        try:\n            date_obj = datetime.datetime.strptime(line['Rate Start date'], '%Y-%m-%d')\n        except ValueError:\n            errormessage = errormessage + '|Invalid date : Rate Start date'\n        try:\n            date_obj = datetime.datetime.strptime(line['Rate End date'], '%Y-%m-%d')\n        except ValueError:\n            errormessage = errormessage + '|Invalid date : Rate End date'\n        try:\n            date_obj = datetime.datetime.strptime(line['Allocation Start Date'], '%Y-%m-%d')\n        except ValueError:\n            errormessage = errormessage + '|Invalid date : Allocation Start Date'\n        try:\n            date_obj = datetime.datetime.strptime(line['Allocation End Date'], '%Y-%m-%d')\n        except ValueError:\n            errormessage = errormessage + '|Invalid date : Allocation End Date'                                                        \n        \n        #DuplicateRecordValidation\n        for val in BP_crossValidate:\n            if line['Operation'] == 'Update':                \n                if int(line['Allocation ID']) != -1:\n                    if int(line['Allocation ID']) == val['assignmentId'] and line['Rate Start date'] >= val['startDate'] \\\n                            and line['Rate End date'] <= val['endDate']\\\n                            and int(line['Bill Rate Key']) != val['billRateEntryId'] and int(line['Bill Rate Key']) != int(line['Bill Rate Key']):\n                        errormessage = errormessage + '|Bill rate overlaps with an existing record'\n                if int(line['Allocation ID']) == -1:\n                    if int(line['Project Role ID']) == val['projectRoleId'] and line['Rate Start date'] >= val['startDate'] \\\n                            and line['Rate End date'] <= val['endDate']\\\n                            and int(line['Bill Rate Key']) != val['billRateEntryId']:\n                        errormessage = errormessage + '|Bill rate overlaps with an existing record' \n                       \n        for dup in BP_data:\n            if int(dup['Allocation ID']) != -1:\n                if int(dup['Allocation ID']) == int(line['Allocation ID']) and int(dup['Index']) != int(line['Index'])\\\n                        and dup['Rate Start date'] >= line['Rate Start date'] \\\n                        and dup['Rate Start date'] <= line['Rate End date']:\n                    errormessage = errormessage + '|Duplicate bill parameter records in the same sheet'\n                if int(dup['Allocation ID']) == int(line['Allocation ID']) and int(dup['Index']) != int(line['Index'])\\\n                        and dup['Rate End date'] >= line['Rate Start date'] \\\n                        and dup['Rate End date'] <= line['Rate End date']:\n                    errormessage = errormessage + '|Duplicate bill parameter records in the same sheet'\n            if dup['Operation'] == 'Add':\n                if int(dup['Allocation ID']) != -1:\n                    if int(dup['Allocation ID']) == int(line['Allocation ID'])\\\n                            and dup['Rate Start date'] >= line['Rate Start date'] \\\n                            and dup['Rate Start date'] <= line['Rate End date']\\\n                            and int(dup['Index']) != int(line['Index'])\\\n                            and line['Operation'] != 'Add':\n                        errormessage = errormessage + '|Bill rate overlaps with an existing record'\n                    if int(dup['Allocation ID']) == int(line['Allocation ID']) \\\n                            and dup['Rate Start date'] >= line['Rate Start date'] \\\n                            and dup['Rate Start date'] <= line['Rate End date'] \\\n                            and int(dup['Index']) != int(line['Index'])\\\n                            and line['Operation'] == 'Add':\n                        errormessage = errormessage + '|Bill rate overlaps with an existing record'                                                                              \n        if errormessage != '':\n            lst_strng = '{\"Index\" : \"' + line['Index'] + '\", \"Message\" : \"' + errormessage + '\"}'\n            List1.append(lst_strng)\n    error_lines = ''\n    out_string = ''\n    if not List1:\n        out_string = '{\"Overall Status\":\"Success\"}'\n    else:\n        for item in List1:\n            error_lines = error_lines + item + ','\n        error_lines = error_lines[0:len(error_lines) - 1]\n        out_string = '{\"Overall Status\":\"Fail\",\"error_lines\": [' + error_lines + ']}'\n\nresult=out_string",
+				"imports":[
+					"requests",
+					"pandas"
+				],
 				"isAsync":false,
 				"python_version":"3.12",
+				"captureStdOutput":false,
 				"parameters":{
 					"BP_data":"{{ n_7XfUY.outputs.body.BPData }}",
 					"BP_crossValidate":"{{ n_7XfUY.outputs.body.crossValidate }}",
@@ -234,5 +239,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
