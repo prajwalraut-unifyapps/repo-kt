@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759101434082,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759101436817,
+		"deployedBy":175325,
+		"deployedDefinitionId":"68d9c1fa3b65366c18585fc0",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
 	"edges":[
 		{
 			"fromNodeId":"7pKsG",
@@ -16,7 +24,7 @@
 	"id":"68d9c1d59eadc6014906bea8",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa2ccp2caswamim",
-	"modifiedTime":1759101434082,
+	"modifiedTime":1759101489256,
 	"name":"changeSetQA2CCP2caSwAmim",
 	"nodes":[
 		{
@@ -113,5 +121,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
