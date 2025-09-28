@@ -1,0 +1,30 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759098156737,
+	"deleted":false,
+	"edges":[
+		
+	],
+	"id":"68d9b52cfbe96550e661686e",
+	"lastModifiedBy":175325,
+	"lcName":"changesetqa2tojzyparpv4x",
+	"modifiedTime":1759098156737,
+	"name":"changeSetQA2tojzyParpV4x",
+	"nodes":[
+		
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
