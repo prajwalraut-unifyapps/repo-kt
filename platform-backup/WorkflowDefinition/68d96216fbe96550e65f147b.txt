@@ -59,7 +59,7 @@
 	"id":"68d96216fbe96550e65f147b",
 	"lastModifiedBy":161908,
 	"lcName":"againtest",
-	"modifiedTime":1759077803343,
+	"modifiedTime":1759077967584,
 	"name":"againtest",
 	"nodes":[
 		{
@@ -174,7 +174,7 @@
 			},
 			"inputs":{
 				"loopcount":1000,
-				"eufwjsa":0
+				"eufwjsa":10
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -218,8 +218,8 @@
 						{
 							"property":"{{ n_MRBjg.outputs.eufwjsa }}",
 							"filter":{
-								"operator":"LT",
-								"value":"10"
+								"operator":"GT",
+								"value":"0"
 							}
 						}
 					],
@@ -284,7 +284,7 @@
 					},
 					{
 						"source":"{{ n_MRBjg.outputs.eufwjsa }}",
-						"value":"=({{ n_MRBjg.outputs.eufwjsa }}+1)"
+						"value":"=({{ n_MRBjg.outputs.eufwjsa }}-1)"
 					}
 				]
 			},
@@ -326,5 +326,5 @@
 	"tags":[
 		
 	],
-	"version":12
+	"version":13
 }
