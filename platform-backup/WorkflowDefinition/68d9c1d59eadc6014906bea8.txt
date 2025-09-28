@@ -1,5 +1,5 @@
 {
-	"createdTime":1759101615817,
+	"createdTime":1759101671216,
 	"deleted":false,
 	"edges":[
 		{
@@ -13,7 +13,7 @@
 	"id":"68d9c1d59eadc6014906bea8",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa2ccp2caswamim",
-	"modifiedTime":1759101615817,
+	"modifiedTime":1759101671216,
 	"name":"changeSetQA2CCP2caSwAmim",
 	"nodes":[
 		{
@@ -84,7 +84,7 @@
 			"index":0,
 			"inputs":{
 				"result":{
-					"c":"=PRODUCT({{ 7pKsG.outputs.a }},{{ 7pKsG.outputs.b }})"
+					"c":"=SUM({{ 7pKsG.outputs.a }},{{ 7pKsG.outputs.b }})"
 				}
 			},
 			"skip":false,
@@ -110,5 +110,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":11
 }
