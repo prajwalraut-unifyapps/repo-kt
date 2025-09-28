@@ -4,6 +4,14 @@
 	],
 	"createdTime":1758668857673,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758672213473,
+		"deployedBy":508,
+		"deployedDefinitionId":"68d33555c49067299b2ae7ee",
+		"status":"DEPLOYED",
+		"version":3,
+		"workflowVersion":3
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_r7KJI",
@@ -11,19 +19,12 @@
 			"skip":false,
 			"toNodeId":"n_DK5cp",
 			"type":"next"
-		},
-		{
-			"fromNodeId":"n_DK5cp",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_LxEbh",
-			"type":"next"
 		}
 	],
 	"id":"68d3283938757c179b135d6c",
-	"lastModifiedBy":508,
+	"lastModifiedBy":45011,
 	"lcName":"stream-test",
-	"modifiedTime":1758669986063,
+	"modifiedTime":1759058515735,
 	"name":"stream-test",
 	"nodes":[
 		{
@@ -33,7 +34,7 @@
 				"resourceName":"streams_by_unifyapps_on_event"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_UvMbI-1",
 			"id":"n_r7KJI",
@@ -59,7 +60,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_UvMbI-1",
 			"id":"n_DK5cp",
@@ -72,21 +73,6 @@
 			"subTitle":"Delay",
 			"title":"Set delay duration",
 			"type":"DELAY"
-		},
-		{
-			"context":{
-				"appName":"stop"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_UvMbI-1",
-			"id":"n_LxEbh",
-			"index":3,
-			"skip":false,
-			"subTitle":"Stop",
-			"title":"Stop",
-			"type":"STOP"
 		}
 	],
 	"ownerUserId":508,
@@ -106,5 +92,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":4
 }
