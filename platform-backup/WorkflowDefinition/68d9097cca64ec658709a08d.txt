@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759054204748,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_Dawva",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_NSX3W",
+			"type":"next"
+		}
+	],
+	"id":"68d9097cca64ec658709a08d",
+	"lastModifiedBy":33167,
+	"lcName":"nbv",
+	"modifiedTime":1759054204748,
+	"name":"nbv",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Dawva-1",
+			"id":"_Dawva",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Dawva-1",
+			"id":"_NSX3W",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":33167,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
