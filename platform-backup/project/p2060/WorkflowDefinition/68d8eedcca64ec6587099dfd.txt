@@ -1,52 +1,98 @@
 {
 	"appsUsed":[
-		
+		"storage_by_unifyapps"
 	],
 	"createdTime":1759047388186,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_li6QU",
+			"fromNodeId":"n_7ziHb",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_wAbdl",
+			"toNodeId":"n_a2JhB",
 			"type":"next"
 		}
 	],
 	"id":"68d8eedcca64ec6587099dfd",
 	"lastModifiedBy":161908,
 	"lcName":"scsc",
-	"modifiedTime":1759047388186,
+	"modifiedTime":1759047422979,
 	"name":"scsc",
 	"nodes":[
 		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":814,
+				"resourceName":"schedule_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_li6QU-1",
-			"id":"_li6QU",
-			"index":0,
+			"id":"n_7ziHb",
+			"index":1,
+			"inputs":{
+				"cron":"INTERVAL",
+				"sequential":false,
+				"interval":15,
+				"frequency":"MINUTES"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Schedule",
+			"title":"New recurring event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"SCHEDULED"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":4338,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_li6QU-1",
-			"id":"_wAbdl",
-			"index":0,
+			"id":"n_a2JhB",
+			"index":2,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"properties_name",
+							"filter":{
+								"operator":"EXISTS"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"testttingsdad",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"translationsOption":"DEFAULT",
+				"page":{
+					"paginateBy":"OFFSET",
+					"limit":20
+				},
+				"numberOfRecordsToFetch":"MULTIPLE",
+				"readThroughSessionVariables":false,
+				"includeTotalCount":false
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Storage by UnifyApps",
+			"title":"Fetch records",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":161908,
 	"projectId":2060,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -60,5 +106,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
