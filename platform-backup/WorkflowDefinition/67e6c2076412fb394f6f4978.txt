@@ -356,7 +356,7 @@
 	"id":"67e6c2076412fb394f6f4978",
 	"lastModifiedBy":33661,
 	"lcName":"pipelinestuckalerts",
-	"modifiedTime":1759039745524,
+	"modifiedTime":1759039758592,
 	"name":"PipelineStuckAlerts",
 	"nodes":[
 		{
@@ -2426,7 +2426,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"CONTINUE",
 			"groupId":"bxSp6@Sdcoa-1@y",
 			"id":"SAi2N",
@@ -2473,7 +2473,7 @@
 					"enableTelemetry":false
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Microsoft Outlook",
 			"title":"Send email",
 			"type":"ACTION"
@@ -2521,5 +2521,5 @@
 	"tags":[
 		"Pipeline Alerts"
 	],
-	"version":54
+	"version":55
 }
