@@ -1,0 +1,30 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759098050219,
+	"deleted":false,
+	"edges":[
+		
+	],
+	"id":"68d9b4c2fbe96550e66166a9",
+	"lastModifiedBy":175325,
+	"lcName":"changesetqa2autovspekupjsi",
+	"modifiedTime":1759098050219,
+	"name":"changeSetQA2autovSpekUpJSI",
+	"nodes":[
+		
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
