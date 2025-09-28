@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759039353891,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_NyDEN",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_f86bo",
+			"type":"next"
+		}
+	],
+	"id":"68d8cf793214e162697ea152",
+	"lastModifiedBy":132116,
+	"lcName":"copilot_sanity",
+	"modifiedTime":1759039353891,
+	"name":"copilot_sanity",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_NyDEN-1",
+			"id":"_NyDEN",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_NyDEN-1",
+			"id":"_f86bo",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":132116,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
