@@ -88,7 +88,7 @@
 	"id":"68d96216fbe96550e65f147b",
 	"lastModifiedBy":161908,
 	"lcName":"againtest",
-	"modifiedTime":1759078513761,
+	"modifiedTime":1759078619051,
 	"name":"againtest",
 	"nodes":[
 		{
@@ -98,7 +98,7 @@
 				"resourceName":"schedule_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_9dqah-1",
 			"id":"n_6tpzP",
@@ -107,7 +107,7 @@
 				"cron":"INTERVAL",
 				"sequential":false,
 				"interval":15,
-				"frequency":"MINUTES"
+				"frequency":"SECONDS"
 			},
 			"skip":false,
 			"subTitle":"Schedule",
@@ -405,5 +405,5 @@
 	"tags":[
 		
 	],
-	"version":19
+	"version":20
 }
