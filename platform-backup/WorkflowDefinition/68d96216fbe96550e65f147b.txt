@@ -59,7 +59,7 @@
 	"id":"68d96216fbe96550e65f147b",
 	"lastModifiedBy":161908,
 	"lcName":"againtest",
-	"modifiedTime":1759077750485,
+	"modifiedTime":1759077803343,
 	"name":"againtest",
 	"nodes":[
 		{
@@ -174,7 +174,7 @@
 			},
 			"inputs":{
 				"loopcount":1000,
-				"eufwjsa":10
+				"eufwjsa":0
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -218,8 +218,8 @@
 						{
 							"property":"{{ n_MRBjg.outputs.eufwjsa }}",
 							"filter":{
-								"operator":"GT",
-								"value":"1"
+								"operator":"LT",
+								"value":"10"
 							}
 						}
 					],
@@ -280,11 +280,11 @@
 					},
 					{
 						"source":"{{ n_MRBjg.outputs.loopcount }}",
-						"value":"=({{ n_MRBjg.outputs.loopcount }}-1)"
+						"value":"=({{ n_MRBjg.outputs.loopcount }}+1)"
 					},
 					{
 						"source":"{{ n_MRBjg.outputs.eufwjsa }}",
-						"value":"=({{ n_MRBjg.outputs.eufwjsa }}-1)"
+						"value":"=({{ n_MRBjg.outputs.eufwjsa }}+1)"
 					}
 				]
 			},
@@ -326,5 +326,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":12
 }
