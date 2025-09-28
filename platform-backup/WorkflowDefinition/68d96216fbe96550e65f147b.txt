@@ -88,7 +88,7 @@
 	"id":"68d96216fbe96550e65f147b",
 	"lastModifiedBy":161908,
 	"lcName":"againtest",
-	"modifiedTime":1759078291862,
+	"modifiedTime":1759078433611,
 	"name":"againtest",
 	"nodes":[
 		{
@@ -98,7 +98,7 @@
 				"resourceName":"schedule_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_9dqah-1",
 			"id":"n_6tpzP",
@@ -125,7 +125,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_9dqah-1",
 			"id":"n_MRBjg",
@@ -218,7 +218,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_9dqah-1",
 			"id":"n_kqvzd",
@@ -252,7 +252,7 @@
 				"event":{
 					"name":"hy",
 					"value":"hy",
-					"index":7
+					"index":"{{ n_MRBjg.outputs.loopcount }}"
 				}
 			},
 			"skip":false,
@@ -268,7 +268,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_kqvzd@_9dqah-1@l",
 			"id":"_Qjeus",
@@ -294,7 +294,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_9dqah-1",
 			"id":"n_68Ewx",
@@ -327,7 +327,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_68Ewx@_9dqah-1@l",
 			"id":"n_Q9koA",
@@ -354,7 +354,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_68Ewx@_9dqah-1@l",
 			"id":"n_FbUlO",
@@ -405,5 +405,5 @@
 	"tags":[
 		
 	],
-	"version":17
+	"version":18
 }
