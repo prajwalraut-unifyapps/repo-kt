@@ -1,0 +1,64 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759047388186,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_li6QU",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_wAbdl",
+			"type":"next"
+		}
+	],
+	"id":"68d8eedcca64ec6587099dfd",
+	"lastModifiedBy":161908,
+	"lcName":"scsc",
+	"modifiedTime":1759047388186,
+	"name":"scsc",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_li6QU-1",
+			"id":"_li6QU",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_li6QU-1",
+			"id":"_wAbdl",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":161908,
+	"projectId":2060,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
