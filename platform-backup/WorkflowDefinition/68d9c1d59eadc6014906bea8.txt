@@ -5,12 +5,12 @@
 	"createdTime":1759101434082,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759101436817,
+		"deployedAt":1759101489403,
 		"deployedBy":175325,
-		"deployedDefinitionId":"68d9c1fa3b65366c18585fc0",
+		"deployedDefinitionId":"68d9c2316456704be96970a8",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":2
+		"version":2,
+		"workflowVersion":3
 	},
 	"edges":[
 		{
@@ -24,7 +24,7 @@
 	"id":"68d9c1d59eadc6014906bea8",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa2ccp2caswamim",
-	"modifiedTime":1759101489256,
+	"modifiedTime":1759101540372,
 	"name":"changeSetQA2CCP2caSwAmim",
 	"nodes":[
 		{
@@ -95,7 +95,7 @@
 			"index":0,
 			"inputs":{
 				"result":{
-					"c":"=PRODUCT({{ 7pKsG.outputs.a }},{{ 7pKsG.outputs.b }})"
+					"c":"=SUM({{ 7pKsG.outputs.a }},{{ 7pKsG.outputs.b }})"
 				}
 			},
 			"skip":false,
@@ -121,5 +121,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
