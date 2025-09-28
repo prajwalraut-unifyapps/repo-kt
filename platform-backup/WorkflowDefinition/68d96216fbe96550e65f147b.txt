@@ -52,7 +52,7 @@
 	"id":"68d96216fbe96550e65f147b",
 	"lastModifiedBy":161908,
 	"lcName":"againtest",
-	"modifiedTime":1759077318555,
+	"modifiedTime":1759077373088,
 	"name":"againtest",
 	"nodes":[
 		{
@@ -115,7 +115,7 @@
 				}
 			},
 			"inputs":{
-				"loopcount":1,
+				"loopcount":100,
 				"index":1
 			},
 			"outputSchema":{
@@ -264,5 +264,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
