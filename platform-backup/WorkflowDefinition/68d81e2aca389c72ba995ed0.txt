@@ -37,7 +37,7 @@
 	"id":"68d81e2aca389c72ba995ed0",
 	"lastModifiedBy":175131,
 	"lcName":"api sheet",
-	"modifiedTime":1759130932692,
+	"modifiedTime":1759131047049,
 	"name":"API Sheet",
 	"nodes":[
 		{
@@ -166,18 +166,17 @@
 							"columns":{
 								"type":"object",
 								"properties":{
+									"total":{
+										"type":"integer",
+										"title":"total"
+									},
 									"endpointId":{
 										"type":"string",
 										"title":"endpointId"
-									},
-									"count":{
-										"type":"string",
-										"title":"count"
 									}
 								},
 								"title":"columns",
-								"additionalProperties":false,
-								"required":[]
+								"additionalProperties":false
 							}
 						},
 						"additionalProperties":false
@@ -212,8 +211,8 @@
 						"value":"{{ n_Cm0Vb.outputs.result[0].columns.endpointId }}"
 					},
 					{
-						"key":"Count",
-						"value":"{{ n_Cm0Vb.outputs.result[0].columns.count }}"
+						"key":"total",
+						"value":"{{ n_Cm0Vb.outputs.result[0].columns.total }}"
 					}
 				],
 				"skipHeaderRow":false,
@@ -246,5 +245,5 @@
 	"tags":[
 		
 	],
-	"version":17
+	"version":18
 }
