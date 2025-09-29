@@ -1,25 +1,34 @@
 {
-	"appsUsed":[],
+	"appsUsed":[
+		
+	],
 	"createdTime":1758714694174,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759138820672,
+		"deployedAt":1759153511212,
 		"deployedBy":46209,
-		"deployedDefinitionId":"68da54049c7bf3537c3e96d3",
+		"deployedDefinitionId":"68da8d60ae1e0543707994be",
 		"status":"DEPLOYED",
-		"version":10,
-		"workflowVersion":23
+		"version":11,
+		"workflowVersion":28
 	},
 	"edges":[
 		{
 			"fromNodeId":"n_CoKRX",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_0aTNj",
+			"toNodeId":"n_pn90g",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_0aTNj",
+			"fromNodeId":"n_pn90g",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_sNGcB",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_sNGcB",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_n3mc9",
@@ -29,16 +38,14 @@
 	"id":"68d3db461dc5d95a2963efa3",
 	"lastModifiedBy":46209,
 	"lcName":"tesgsd",
-	"modifiedTime":1759153502288,
+	"modifiedTime":1759162968268,
 	"name":"tesgsd",
 	"nodes":[
 		{
 			"additional":{
 				"xsdSchemaConfig":{
 					"root":{
-						"request":{
-							
-						}
+						"request":{}
 					}
 				}
 			},
@@ -48,7 +55,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_f8tNU-1",
 			"id":"n_CoKRX",
@@ -68,262 +75,66 @@
 		},
 		{
 			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":911,
-				"resourceName":"variable_by_unifyapps_create_list",
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_f8tNU-1",
-			"id":"n_0aTNj",
+			"id":"n_pn90g",
 			"index":2,
-			"inputSchema":{
-				"type":"SCHEMA_AND_LAYOUT",
-				"dynamic":false,
-				"layout":{
-					"createList":{
-						"ui:title":"",
-						"ua:type":{
-							"ui:widget":"hidden"
-						},
-						"items":{
-							"ui:title":"Initial list items",
-							"ui:description":"Set the initial values of the list (defaults to empty)"
-						},
-						"ui:order":[
-							"*",
-							"items"
-						]
-					},
-					"ua:title":{
-						"ui:widget":"hidden"
-					},
-					"ua:list_type":{
-						"ui:widget":"hidden"
-					}
-				},
-				"schema":{
-					"allOf":[
-						{
-							"if":{
-								"properties":{
-									"ua:list_type":{
-										"const":"OBJECT"
-									}
-								}
-							},
-							"then":{
-								"properties":{
-									"createList":{
-										"type":"object",
-										"properties":{
-											"items":{
-												"type":"object",
-												"properties":{
-													
-												}
-											}
-										}
-									}
-								}
-							}
-						},
-						{
-							"if":{
-								"properties":{
-									"ua:list_type":{
-										"const":"STRING"
-									}
-								}
-							},
-							"then":{
-								"properties":{
-									"createList":{
-										"type":"object",
-										"properties":{
-											"source":{
-												"type":"string",
-												"format":"ua:source",
-												"title":"List of String"
-											},
-											"items":{
-												"type":"string"
-											}
-										}
-									}
-								}
-							}
-						},
-						{
-							"if":{
-								"properties":{
-									"ua:list_type":{
-										"const":"INTEGER"
-									}
-								}
-							},
-							"then":{
-								"properties":{
-									"createList":{
-										"type":"object",
-										"properties":{
-											"source":{
-												"type":"string",
-												"format":"ua:source",
-												"title":"List of Integers"
-											},
-											"items":{
-												"type":"integer"
-											}
-										}
-									}
-								}
-							}
-						},
-						{
-							"if":{
-								"properties":{
-									"ua:list_type":{
-										"const":"NUMBER"
-									}
-								}
-							},
-							"then":{
-								"properties":{
-									"createList":{
-										"type":"object",
-										"properties":{
-											"source":{
-												"type":"string",
-												"format":"ua:source",
-												"title":"List of Numbers"
-											},
-											"items":{
-												"type":"number"
-											}
-										}
-									}
-								}
-							}
-						},
-						{
-							"if":{
-								"properties":{
-									"ua:list_type":{
-										"const":"BOOLEAN"
-									}
-								}
-							},
-							"then":{
-								"properties":{
-									"createList":{
-										"type":"object",
-										"properties":{
-											"source":{
-												"type":"string",
-												"format":"ua:source",
-												"title":"List of Booleans"
-											},
-											"items":{
-												"type":"boolean"
-											}
-										}
-									}
-								}
-							}
-						}
-					],
-					"format":"ua:list",
-					"type":"object",
-					"properties":{
-						"ua:title":{
-							"type":"string"
-						},
-						"ua:list_type":{
-							"type":"string",
-							"title":"List Type",
-							"oneOf":[
-								{
-									"const":"OBJECT",
-									"title":"Object"
-								},
-								{
-									"const":"STRING",
-									"title":"String"
-								},
-								{
-									"const":"NUMBER",
-									"title":"Number"
-								},
-								{
-									"const":"INTEGER",
-									"title":"Integer"
-								},
-								{
-									"const":"BOOLEAN",
-									"title":"Boolean"
-								}
-							],
-							"default":"OBJECT"
-						},
-						"createList":{
-							"type":"object",
-							"properties":{
-								"ua:type":{
-									"type":"string",
-									"default":"mappedArray"
-								},
-								"source":{
-									"type":"string",
-									"format":"ua:source",
-									"title":"List Item Source"
-								},
-								"items":{
-									"additionalProperties":false,
-									"type":[
-										"object",
-										"string",
-										"number",
-										"boolean",
-										"integer"
-									],
-									"properties":{
-										
-									}
-								}
-							}
-						}
-					}
-				}
-			},
 			"inputs":{
-				"createList":{
-					"ua:type":"mappedArray"
-				},
-				"ua:title":"ListString",
-				"ua:list_type":"STRING"
-			},
-			"outputSchema":{
-				"dynamic":false,
-				"schema":{
+				"output":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
-						"items":{
-							"type":"array",
-							"title":"ListString",
-							"disableActions":true,
-							"items":{
-								"type":"string"
-							}
+						"context":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Context"
+						},
+						"input":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Input"
 						}
 					}
-				}
+				},
+				"code":"\ndef context = new HashMap<>()\n\ncontext[\"appName\"] = \"callables\",\ncontext[\"resourceName\"] = \"callables_call_automation\"\n\ndef input = new HashMap<>()\n    \ninput[\"automationId\"] = \"68dab0713106eb2b3d248139\"\n\ndef parameters = new HashMap<>()\nparameters[\"name\"] = \"applicationTest\"\ninput[\"parameters\"] = parameters\ninput[\"runtimeConnections\"] = new HashMap<>()\ninput[\"synchronous\"] = true,\ninput[\"timeoutInMillis\"] = 120000,\ninput[\"version\"] = \"-1\"\n\nreturn [\n  \"context\" : context,\n  \"input\" : input\n]",
+				"compile_static":false,
+				"captureStdOutput":false
 			},
 			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Create list",
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"custom_application",
+				"resourceVersion":772,
+				"resourceName":"custom_application_execute",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_f8tNU-1",
+			"id":"n_sNGcB",
+			"index":3,
+			"inputs":{
+				"input":"{{ n_pn90g.outputs.result.input }}",
+				"context":"{{ n_pn90g.outputs.result.context }}"
+			},
+			"skip":false,
+			"subTitle":"Custom Application",
+			"title":"Execute Custom Application Request",
 			"type":"ACTION"
 		},
 		{
@@ -335,7 +146,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_f8tNU-1",
 			"id":"n_n3mc9",
-			"index":3,
+			"index":4,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -343,7 +154,9 @@
 		}
 	],
 	"ownerUserId":46209,
-	"schemaReferences":[],
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -354,6 +167,8 @@
 		}
 	},
 	"standard":false,
-	"tags":[],
-	"version":28
+	"tags":[
+		
+	],
+	"version":30
 }
