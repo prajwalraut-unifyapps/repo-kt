@@ -46,7 +46,7 @@
 	"id":"68d3db461dc5d95a2963efa3",
 	"lastModifiedBy":46209,
 	"lcName":"tesgsd",
-	"modifiedTime":1759136044775,
+	"modifiedTime":1759136068641,
 	"name":"tesgsd",
 	"nodes":[
 		{
@@ -189,7 +189,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_f8tNU-1",
 			"id":"n_0aTNj",
@@ -402,12 +402,27 @@
 										"boolean",
 										"integer"
 									],
-									"properties":{}
+									"properties":{
+										"name":{
+											"type":"string",
+											"title":"Name"
+										}
+									},
+									"required":[
+										"name"
+									]
 								}
 							}
 						}
 					}
 				}
+			},
+			"inputs":{
+				"createList":{
+					"ua:type":"mappedArray"
+				},
+				"ua:title":"List",
+				"ua:list_type":"OBJECT"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -420,7 +435,15 @@
 							"disableActions":true,
 							"items":{
 								"type":"object",
-								"properties":{}
+								"properties":{
+									"name":{
+										"type":"string",
+										"title":"Name"
+									}
+								},
+								"required":[
+									"name"
+								]
 							}
 						}
 					}
@@ -495,5 +518,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
