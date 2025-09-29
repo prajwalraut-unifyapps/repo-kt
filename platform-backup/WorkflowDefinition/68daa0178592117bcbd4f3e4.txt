@@ -66,7 +66,7 @@
 	"id":"68daa0178592117bcbd4f3e4",
 	"lastModifiedBy":569,
 	"lcName":"test-loop",
-	"modifiedTime":1759158561082,
+	"modifiedTime":1759158591791,
 	"name":"test-loop",
 	"nodes":[
 		{
@@ -462,7 +462,7 @@
 					],
 					"operator":"AND"
 				},
-				"captureIterations":false
+				"captureIterations":true
 			},
 			"skip":false,
 			"subTitle":"Loop",
@@ -576,5 +576,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
