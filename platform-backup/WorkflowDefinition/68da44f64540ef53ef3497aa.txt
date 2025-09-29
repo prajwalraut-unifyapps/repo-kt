@@ -37,7 +37,7 @@
 	"id":"68da44f64540ef53ef3497aa",
 	"lastModifiedBy":155543,
 	"lcName":"wadesfgwafe",
-	"modifiedTime":1759136112406,
+	"modifiedTime":1759137373574,
 	"name":"wadesfgwafe",
 	"nodes":[
 		{
@@ -47,7 +47,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_MGUsS-1",
 			"id":"n_35XWK",
@@ -73,7 +73,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_MGUsS-1",
 			"id":"n_Co7t5",
@@ -120,7 +120,7 @@
 						}
 					}
 				},
-				"code":"return [\n  res : [\n    [\n      name : \"testindex\",\n      indexKeyDefinition : [\n        field : \"testField\",\n        type : 1\n      ]\n    ]\n  ]\n]",
+				"code":"return [\n  res : [\n    [\n      name : \"index_1\",\n      keys : [\n        field : \"testField\",\n        type : 1\n      ]\n    ]\n  ]\n]",
 				"compile_static":false,
 				"captureStdOutput":false
 			},
@@ -137,7 +137,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_MGUsS-1",
 			"id":"_KOdra",
@@ -207,7 +207,7 @@
 				"appName":"stop"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_MGUsS-1",
 			"id":"n_hDqQH",
@@ -235,5 +235,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
