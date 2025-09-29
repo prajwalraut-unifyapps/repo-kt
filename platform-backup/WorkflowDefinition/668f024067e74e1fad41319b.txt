@@ -1,7 +1,5 @@
 {
-	"appsUsed":[
-		
-	],
+	"appsUsed":[],
 	"createdTime":1720648256106,
 	"deleted":false,
 	"edges":[
