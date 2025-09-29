@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759133520833,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_Ep50D",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_CNZut",
+			"type":"next"
+		}
+	],
+	"id":"68da3f500d4c077d43dd7bf8",
+	"lastModifiedBy":175510,
+	"lcName":"bettermode",
+	"modifiedTime":1759133520833,
+	"name":"bettermode",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Ep50D-1",
+			"id":"_Ep50D",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Ep50D-1",
+			"id":"_CNZut",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175510,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
