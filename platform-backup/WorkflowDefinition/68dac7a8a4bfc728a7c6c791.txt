@@ -52,7 +52,7 @@
 	"id":"68dac7a8a4bfc728a7c6c791",
 	"lastModifiedBy":161908,
 	"lcName":"rish",
-	"modifiedTime":1759168609337,
+	"modifiedTime":1759168632344,
 	"name":"rish",
 	"nodes":[
 		{
@@ -62,7 +62,7 @@
 				"resourceName":"schedule_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_0ulp8-1",
 			"id":"n_pJbce",
@@ -89,7 +89,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_0ulp8-1",
 			"id":"n_Kv9Rs",
@@ -167,7 +167,7 @@
 					],
 					"operator":"AND"
 				},
-				"captureIterations":false
+				"captureIterations":true
 			},
 			"skip":false,
 			"subTitle":"Loop",
@@ -182,7 +182,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_x6dmc@_0ulp8-1@l",
 			"id":"n_7OzTh",
@@ -209,7 +209,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_x6dmc@_0ulp8-1@l",
 			"id":"n_wP0DC",
@@ -236,7 +236,7 @@
 				"appName":"stop"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_0ulp8-1",
 			"id":"n_gcxKX",
@@ -264,5 +264,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
