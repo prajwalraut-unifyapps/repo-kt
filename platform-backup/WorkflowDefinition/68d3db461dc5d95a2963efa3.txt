@@ -5,12 +5,12 @@
 	"createdTime":1758714694174,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759133563702,
+		"deployedAt":1759136398536,
 		"deployedBy":46209,
-		"deployedDefinitionId":"68da3f790d4c077d43dd7c7e",
+		"deployedDefinitionId":"68da4a8bd9b42a279b7236e5",
 		"status":"DEPLOYED",
-		"version":5,
-		"workflowVersion":6
+		"version":6,
+		"workflowVersion":19
 	},
 	"edges":[
 		{
@@ -53,7 +53,7 @@
 	"id":"68d3db461dc5d95a2963efa3",
 	"lastModifiedBy":46209,
 	"lcName":"tesgsd",
-	"modifiedTime":1759136389972,
+	"modifiedTime":1759136437326,
 	"name":"tesgsd",
 	"nodes":[
 		{
@@ -196,7 +196,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_f8tNU-1",
 			"id":"n_0aTNj",
@@ -418,8 +418,7 @@
 			},
 			"inputs":{
 				"createList":{
-					"ua:type":"mappedArray",
-					"items":"h7h7"
+					"ua:type":"mappedArray"
 				},
 				"ua:title":"List",
 				"ua:list_type":"STRING"
@@ -524,5 +523,5 @@
 	"tags":[
 		
 	],
-	"version":19
+	"version":20
 }
