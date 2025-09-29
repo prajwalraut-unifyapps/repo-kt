@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759127436665,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759128031134,
+		"deployedBy":44109,
+		"deployedDefinitionId":"68da29dc0d4c077d43dd4b98",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":4
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_JCiaZ",
@@ -45,7 +53,7 @@
 	"id":"68da278c0d4c077d43dd4404",
 	"lastModifiedBy":44109,
 	"lcName":"test",
-	"modifiedTime":1759128023091,
+	"modifiedTime":1759134765904,
 	"name":"test",
 	"nodes":[
 		{
@@ -55,7 +63,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Dyr39-1",
 			"id":"n_JCiaZ",
@@ -81,7 +89,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Dyr39-1",
 			"id":"n_7bSWf",
@@ -336,7 +344,8 @@
 			"id":"n_u8DUp",
 			"index":3,
 			"inputs":{
-				"instructions":"Give me details about ai"
+				"instructions":"Give me details about ai",
+				"modelId":"e_68c27af892726a27dae332f4"
 			},
 			"skip":false,
 			"subTitle":"Browser Use by UnifyApps",
@@ -351,7 +360,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_u8DUp@_Dyr39-1@l",
 			"id":"n_eAlNQ",
@@ -375,7 +384,7 @@
 				"appName":"stop"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Dyr39-1",
 			"id":"n_NXCNE",
@@ -403,5 +412,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
