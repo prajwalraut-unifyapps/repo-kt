@@ -1,5 +1,7 @@
 {
-	"appsUsed":["salesforce"],
+	"appsUsed":[
+		"salesforce"
+	],
 	"createdTime":1721395893144,
 	"deleted":false,
 	"description":"",
@@ -120,9 +122,7 @@
 							"title":"Counter"
 						}
 					},
-					"required":[
-						
-					]
+					"required":[]
 				}
 			},
 			"inputs":{
@@ -140,9 +140,7 @@
 							"title":"Counter"
 						}
 					},
-					"required":[
-						
-					]
+					"required":[]
 				}
 			},
 			"skip":false,
