@@ -1,7 +1,5 @@
 {
-	"appsUsed":[
-		"amazon_sqs"
-	],
+	"appsUsed":["amazon_sqs"],
 	"createdTime":1721381137382,
 	"deleted":false,
 	"edges":[
