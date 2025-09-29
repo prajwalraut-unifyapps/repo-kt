@@ -23,7 +23,7 @@
 	"id":"68da1942adaf0562b42e3340",
 	"lastModifiedBy":185911,
 	"lcName":"dlp practice test",
-	"modifiedTime":1759134345738,
+	"modifiedTime":1759136156354,
 	"name":"DLP Practice test",
 	"nodes":[
 		{
@@ -59,6 +59,24 @@
 								"additionalProperties":false
 							},
 							"title":"Dlpout"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"dlpin"
+					],
+					"properties":{
+						"dlpin":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Dlpin"
 						}
 					}
 				}
@@ -165,7 +183,7 @@
 					"dlpout":{
 						"ua:type":"mappedArray",
 						"items":"{{ n_BN78c.outputs.rows[0].MAU__1 }}{{ n_BN78c.outputs.rows[0].Month__0 }}{{ n_BN78c.outputs.rows[0].Plan_Usage____2 }}",
-						"source":"{{ n_BN78c.outputs }}"
+						"source":"{{ n_BN78c.outputs.rows }}"
 					}
 				}
 			},
@@ -192,5 +210,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
