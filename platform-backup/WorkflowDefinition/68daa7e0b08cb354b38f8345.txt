@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759160288450,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_7n4yE",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_K483h",
+			"type":"next"
+		}
+	],
+	"id":"68daa7e0b08cb354b38f8345",
+	"lastModifiedBy":3952,
+	"lcName":"async failures",
+	"modifiedTime":1759160288450,
+	"name":"Async failures",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_7n4yE-1",
+			"id":"_7n4yE",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_7n4yE-1",
+			"id":"_K483h",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":3952,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
