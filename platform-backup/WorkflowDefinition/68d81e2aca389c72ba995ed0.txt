@@ -37,7 +37,7 @@
 	"id":"68d81e2aca389c72ba995ed0",
 	"lastModifiedBy":175131,
 	"lcName":"api sheet",
-	"modifiedTime":1759131439306,
+	"modifiedTime":1759131488302,
 	"name":"API Sheet",
 	"nodes":[
 		{
@@ -158,6 +158,30 @@
 			"id":"n_Cm0Vb",
 			"index":4,
 			"inputs":{
+				"jsonSchema":{
+					"type":"array",
+					"items":{
+						"type":"object",
+						"properties":{
+							"columns":{
+								"type":"object",
+								"properties":{
+									"total":{
+										"type":"integer",
+										"title":"total"
+									},
+									"endpointId":{
+										"type":"string",
+										"title":"endpointId"
+									}
+								},
+								"title":"columns",
+								"additionalProperties":false
+							}
+						},
+						"additionalProperties":false
+					}
+				},
 				"jsonString":"{{ n_xZUpC.outputs.decodedText }}"
 			},
 			"skip":false,
@@ -179,7 +203,7 @@
 			"id":"n_DW84L",
 			"index":5,
 			"inputs":{
-				"fileName":"Total",
+				"fileName":"TotalFailure",
 				"delimiter":",",
 				"staticHeaders":[
 					{
@@ -198,7 +222,7 @@
 				"dataSource":"{{ n_Cm0Vb.outputs.result }}",
 				"fileType":"csv"
 			},
-			"skip":true,
+			"skip":false,
 			"subTitle":"CSV by UnifyApps",
 			"title":"Write data to CSV file",
 			"type":"ACTION"
@@ -221,5 +245,5 @@
 	"tags":[
 		
 	],
-	"version":21
+	"version":22
 }
