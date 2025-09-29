@@ -23,7 +23,7 @@
 	"id":"68d6cfbcc2c40100a47f56f4",
 	"lastModifiedBy":39715,
 	"lcName":"[azure-function]detect-changes",
-	"modifiedTime":1759131033751,
+	"modifiedTime":1759131173149,
 	"name":"[Azure-function]Detect-Changes",
 	"nodes":[
 		{
@@ -51,7 +51,20 @@
 							}
 						}
 					},
-					"contentType":"application/json"
+					"contentType":"application/json",
+					"body":{
+						"type":"object",
+						"properties":{
+							"body":{
+								"type":"string",
+								"title":"Body"
+							}
+						},
+						"additionalProperties":false,
+						"required":[
+							"body"
+						]
+					}
 				},
 				"endpointType":"REST",
 				"response":[
@@ -136,7 +149,7 @@
 				"isAsync":false,
 				"parameters":{
 					"name":"{{ n_wj7jz.outputs.queryParams.name }}",
-					"requestBody":"{{ n_wj7jz.outputs.body }}"
+					"requestBody":"{{ n_wj7jz.outputs.body.body }}"
 				}
 			},
 			"skip":false,
@@ -189,5 +202,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
