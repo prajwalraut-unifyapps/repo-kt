@@ -6,7 +6,7 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_la7zw",
+			"fromNodeId":"n_8vj6j",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_kzHA9",
@@ -16,20 +16,31 @@
 	"id":"68da22a00d4c077d43dd3bb8",
 	"lastModifiedBy":124029,
 	"lcName":"netsuite 3",
-	"modifiedTime":1759127065172,
+	"modifiedTime":1759127958184,
 	"name":"netsuite 3",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_la7zw-1",
-			"id":"_la7zw",
+			"id":"n_8vj6j",
 			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
@@ -42,7 +53,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_la7zw-1",
 			"id":"n_kzHA9",
@@ -71,5 +82,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
