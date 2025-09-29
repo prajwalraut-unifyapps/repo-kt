@@ -23,7 +23,7 @@
 	"id":"68da1942adaf0562b42e3340",
 	"lastModifiedBy":185911,
 	"lcName":"dlp practice test",
-	"modifiedTime":1759133976069,
+	"modifiedTime":1759134345738,
 	"name":"DLP Practice test",
 	"nodes":[
 		{
@@ -43,7 +43,26 @@
 			"groupId":"_7aqEn-1",
 			"id":"n_rfQp3",
 			"index":1,
-			"inputs":{},
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"dlpout"
+					],
+					"properties":{
+						"dlpout":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Dlpout"
+						}
+					}
+				}
+			},
 			"skip":false,
 			"subTitle":"Callable",
 			"title":"Trigger via automation",
@@ -61,7 +80,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_7aqEn-1",
 			"id":"n_BN78c",
@@ -143,7 +162,11 @@
 			"index":3,
 			"inputs":{
 				"result":{
-					"dlpout":"{{ n_BN78c.outputs.rows[0].MAU__1 }}{{ n_BN78c.outputs.rows[0].Month__0 }}{{ n_BN78c.outputs.rows[0].Plan_Usage____2 }}"
+					"dlpout":{
+						"ua:type":"mappedArray",
+						"items":"{{ n_BN78c.outputs.rows[0].MAU__1 }}{{ n_BN78c.outputs.rows[0].Month__0 }}{{ n_BN78c.outputs.rows[0].Plan_Usage____2 }}",
+						"source":"{{ n_BN78c.outputs }}"
+					}
 				}
 			},
 			"skip":false,
@@ -169,5 +192,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
