@@ -1,12 +1,12 @@
 {
 	"appsUsed":[
-		"gmeet"
+		"hubspot"
 	],
 	"createdTime":1759043704658,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"n_J4dIX",
+			"fromNodeId":"n_gx4bk",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_BgWkV",
@@ -16,30 +16,26 @@
 	"id":"68d8e078dc4c2d2c0e981f48",
 	"lastModifiedBy":177799,
 	"lcName":"google meet trigger testing rishabh",
-	"modifiedTime":1759154759101,
+	"modifiedTime":1759154777405,
 	"name":"google meet trigger testing rishabh",
 	"nodes":[
 		{
 			"context":{
-				"appName":"gmeet",
-				"resourceVersion":13,
-				"connectionId":"68da921d7c4eaf6df8215940",
-				"resourceName":"gmeet_on_new_conference"
+				"appName":"hubspot",
+				"resourceVersion":6730,
+				"connectionId":"68d1537db21c1317594a7fc1",
+				"resourceName":"hubspot_on_event"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_dq3Nw-1",
-			"id":"n_J4dIX",
+			"id":"n_gx4bk",
 			"index":1,
-			"inputs":{
-				"interval":1,
-				"from":"2025-09-28T14:05:00Z",
-				"batchSize":100
-			},
+			"inputs":{},
 			"skip":false,
-			"subTitle":"Google Meet",
-			"title":"On new conference created",
+			"subTitle":"HubSpot",
+			"title":"New event",
 			"trigger":{
 				"type":"EVENT"
 			},
@@ -78,5 +74,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
