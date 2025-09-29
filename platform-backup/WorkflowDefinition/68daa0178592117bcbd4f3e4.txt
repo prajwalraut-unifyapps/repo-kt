@@ -66,7 +66,7 @@
 	"id":"68daa0178592117bcbd4f3e4",
 	"lastModifiedBy":569,
 	"lcName":"test-loop",
-	"modifiedTime":1759158733634,
+	"modifiedTime":1759158739432,
 	"name":"test-loop",
 	"nodes":[
 		{
@@ -534,7 +534,7 @@
 				"variables":[
 					{
 						"source":"{{ n_H5n1G.outputs.length }}",
-						"value":"={{ n_H5n1G.outputs.length }}-1"
+						"value":"={{ n_H5n1G.outputs.length }}+1"
 					}
 				]
 			},
@@ -576,5 +576,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
