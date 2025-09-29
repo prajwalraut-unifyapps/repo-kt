@@ -52,7 +52,7 @@
 	"id":"68dac7a8a4bfc728a7c6c791",
 	"lastModifiedBy":161908,
 	"lcName":"rish",
-	"modifiedTime":1759168632344,
+	"modifiedTime":1759168636253,
 	"name":"rish",
 	"nodes":[
 		{
@@ -62,7 +62,7 @@
 				"resourceName":"schedule_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_0ulp8-1",
 			"id":"n_pJbce",
@@ -71,7 +71,7 @@
 				"cron":"INTERVAL",
 				"sequential":false,
 				"interval":15,
-				"frequency":"MINUTES"
+				"frequency":"SECONDS"
 			},
 			"skip":false,
 			"subTitle":"Schedule",
@@ -264,5 +264,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
