@@ -1,7 +1,5 @@
 {
-	"appsUsed":[
-		"zendesk"
-	],
+	"appsUsed":["zendesk"],
 	"createdTime":1721381896697,
 	"deleted":false,
 	"edges":[
@@ -30,7 +28,9 @@
 			"groupId":"UW9zA-1",
 			"id":"UW9zA",
 			"index":0,
-			"inputs":{},
+			"inputs":{
+				
+			},
 			"skip":false,
 			"title":"Change of agent status",
 			"trigger":{
