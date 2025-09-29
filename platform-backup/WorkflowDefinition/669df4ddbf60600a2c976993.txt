@@ -1,5 +1,7 @@
 {
-	"appsUsed":["asana"],
+	"appsUsed":[
+		"asana"
+	],
 	"createdTime":1721627869888,
 	"deleted":false,
 	"edges":[
