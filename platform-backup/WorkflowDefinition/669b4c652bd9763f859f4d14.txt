@@ -1,7 +1,5 @@
 {
-	"appsUsed":[
-		"google_admob"
-	],
+	"appsUsed":["google_admob"],
 	"createdTime":1721453669237,
 	"deleted":false,
 	"description":"",
