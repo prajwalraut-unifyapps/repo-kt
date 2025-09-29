@@ -16,7 +16,7 @@
 	"id":"68da90f2ae1e05437079a367",
 	"lastModifiedBy":44105,
 	"lcName":"testtt",
-	"modifiedTime":1759154438584,
+	"modifiedTime":1759154454677,
 	"name":"testtt",
 	"nodes":[
 		{
@@ -58,6 +58,7 @@
 			"id":"n_sN5qv",
 			"index":2,
 			"inputs":{
+				"code":"using System;\nusing System.Threading.Tasks;\nusing Newtonsoft.Json;\nusing Newtonsoft.Json.Linq;\n\npublic static class RaveScheduler\n{\n    public static async Task<string> DetectChanges(string name, string requestBody)\n    {\n        Console.WriteLine(\"DetectChanges function executed.\");\n        JObject data = null;\n        if (!string.IsNullOrWhiteSpace(requestBody))\n        {\n            data = JObject.Parse(requestBody);\n        }\n        name = data?[\"name\"]?.ToString();\n\n        string responseMessage = string.IsNullOrEmpty(name)\n                ? \"This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.\"\n                : $\"Hello, {name}. This HTTP triggered function executed successfully.\";\n\n        return responseMessage;\n    }\n}\n\nvar result = await RaveScheduler.DetectChanges(name, requestBody);\nresult",
 				"isAsync":false
 			},
 			"skip":false,
@@ -83,5 +84,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
