@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759078953484,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759079074532,
+		"deployedBy":161908,
+		"deployedDefinitionId":"68d96aa2fbe96550e65f16d9",
+		"status":"PAUSED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_YDKnR",
@@ -16,7 +24,7 @@
 	"id":"68d96a29fbe96550e65f16aa",
 	"lastModifiedBy":161908,
 	"lcName":"subscriber",
-	"modifiedTime":1759079072317,
+	"modifiedTime":1759168797119,
 	"name":"subscriber",
 	"nodes":[
 		{
@@ -26,7 +34,7 @@
 				"resourceName":"streams_by_unifyapps_on_event"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_MVQW0-1",
 			"id":"n_YDKnR",
@@ -52,7 +60,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_MVQW0-1",
 			"id":"n_OFQ6F",
@@ -113,5 +121,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
