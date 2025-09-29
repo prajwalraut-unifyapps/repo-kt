@@ -16,7 +16,7 @@
 	"id":"68d535ea16f1300557ad60f6",
 	"lastModifiedBy":67744,
 	"lcName":"test-variables",
-	"modifiedTime":1759132116044,
+	"modifiedTime":1759132149811,
 	"name":"test-variables",
 	"nodes":[
 		{
@@ -72,11 +72,16 @@
 							"wdwde":{
 								"type":"string",
 								"title":"Wdwde"
+							},
+							"dfdg":{
+								"type":"string",
+								"title":"Dfdg"
 							}
 						},
 						"additionalProperties":false,
 						"required":[
-							"wdwde"
+							"wdwde",
+							"dfdg"
 						]
 					}
 				},
@@ -167,5 +172,5 @@
 	"tags":[
 		
 	],
-	"version":14
+	"version":15
 }
