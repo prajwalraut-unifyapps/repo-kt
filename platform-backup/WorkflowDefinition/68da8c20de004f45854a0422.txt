@@ -23,7 +23,7 @@
 	"id":"68da8c20de004f45854a0422",
 	"lastModifiedBy":15,
 	"lcName":"test",
-	"modifiedTime":1759156042366,
+	"modifiedTime":1759157756037,
 	"name":"test",
 	"nodes":[
 		{
@@ -97,9 +97,10 @@
 				"site_name":"",
 				"objectSourceResourceName":"microsoft_sharepoint_fetch_list_fields",
 				"record":{
+					"FileLeafRef":"dhfh",
 					"IdForTerm":"jjdjcd"
 				},
-				"list":"TaxonomyHiddenList",
+				"list":"Theme Gallery",
 				"siteType":""
 			},
 			"skip":false,
@@ -125,5 +126,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
