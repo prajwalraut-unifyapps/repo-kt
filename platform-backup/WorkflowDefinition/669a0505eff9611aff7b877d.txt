@@ -1,5 +1,7 @@
 {
-	"appsUsed":["custom_http_endpoint"],
+	"appsUsed":[
+		"custom_http_endpoint"
+	],
 	"createdTime":1721369861166,
 	"deleted":true,
 	"description":"",
@@ -646,13 +648,9 @@
 								"properties":{
 									"data":{
 										"type":"object",
-										"properties":{
-											
-										},
+										"properties":{},
 										"title":"data",
-										"required":[
-											
-										]
+										"required":[]
 									},
 									"blockType":{
 										"type":"string",
@@ -661,9 +659,7 @@
 								}
 							},
 							"title":"results",
-							"required":[
-								
-							]
+							"required":[]
 						},
 						"additional":{
 							"type":"object",
@@ -679,19 +675,13 @@
 							},
 							"additionalProperties":false,
 							"title":"Additional",
-							"required":[
-								
-							]
+							"required":[]
 						}
 					},
-					"required":[
-						
-					]
+					"required":[]
 				},
 				"triggerInputCondition":{
-					"filters":[
-						
-					],
+					"filters":[],
 					"operator":"AND"
 				},
 				"setup":{
@@ -711,14 +701,10 @@
 													"type":"array",
 													"items":{
 														"type":"object",
-														"properties":{
-															
-														}
+														"properties":{}
 													},
 													"title":"Blocks",
-													"required":[
-														
-													]
+													"required":[]
 												},
 												"role":{
 													"type":"string",
@@ -742,22 +728,16 @@
 											}
 										},
 										"title":"Messages",
-										"required":[
-											
-										]
+										"required":[]
 									}
 								}
 							},
 							"title":"Payloads",
-							"required":[
-								
-							]
+							"required":[]
 						}
 					},
 					"additionalProperties":false,
-					"required":[
-						
-					]
+					"required":[]
 				}
 			},
 			"skip":false,
@@ -801,9 +781,7 @@
 								"additionalProperties":false
 							},
 							"title":"messageHistory",
-							"required":[
-								
-							]
+							"required":[]
 						},
 						"userQuery":{
 							"type":"string",
@@ -822,16 +800,12 @@
 							"type":"array",
 							"items":{
 								"type":"object",
-								"properties":{
-									
-								}
+								"properties":{}
 							},
 							"title":"Payloads"
 						}
 					},
-					"required":[
-						
-					]
+					"required":[]
 				},
 				"code":"def messageBatch = []\n\n// Iterate through each payload\npayloads.each { payload ->\n    // Iterate through each message in the payload\n    payload.messages.each { message ->\n        // Check if the message role is either 'user' or 'assistant'\n        if (message.role in ['user', 'assistant']) {\n            def role = message.role\n            def content = \"\"\n            \n            // Check if the message has an additional field with an SQL query\n            if (message.additional?.containsKey(\"sql_query\")) {\n                content += \"Rephrased Query: ${message.additional.rephrased_query}\\nSQL Query: ${message.additional.sql_query}\"\n                messageBatch << [\"role\": role, \"content\": content]\n                return // Continue to the next message\n            }\n\n            // Iterate through each block in the message\n            message.blocks?.each { block ->\n                switch (block.blockType) {\n                    case \"text\":\n                    case \"Typography\":\n                        // Check if the block contains text data\n                        if (block.data.containsKey(\"text\")) {\n                            content += \"${block.data.text}\"\n                        }\n                        // Check if the block contains Typography data\n                        if (block.data.containsKey(\"Typography\")) {\n                            content += \"${block.data.Typography}\"\n                        }\n                        break\n                }\n            }\n            // Add the processed message to the messageBatch\n            messageBatch << [\"role\": role, \"content\": content]\n        }\n    }\n}\n\n// Prepare the message history and user query\ndef messageHistory = messageBatch\ndef userQuery = messageHistory ? messageHistory[-1]?.content : \"Hi, there\"\n\n// Return the result\nreturn([\"messageHistory\": messageHistory.size() > 1 ? messageHistory[0..-2] : [], \"userQuery\": userQuery])",
 				"parameters":{
@@ -902,9 +876,7 @@
 										"properties":{
 											"items":{
 												"type":"object",
-												"properties":{
-													
-												}
+												"properties":{}
 											}
 										}
 									}
@@ -1220,9 +1192,7 @@
 										"properties":{
 											"items":{
 												"type":"object",
-												"properties":{
-													
-												}
+												"properties":{}
 											}
 										}
 									}
@@ -1644,9 +1614,7 @@
 						}
 					},
 					"additionalProperties":false,
-					"required":[
-						
-					]
+					"required":[]
 				},
 				"type":"REST",
 				"authType":"CUSTOM",
@@ -2124,9 +2092,7 @@
 			"id":"9B9MK",
 			"index":0,
 			"inputs":{
-				"itemToAdd":{
-					
-				},
+				"itemToAdd":{},
 				"insertLocation":"END",
 				"listName":"{{ L7EZT.outputs.items[0] }}"
 			},
@@ -2283,9 +2249,7 @@
 										"properties":{
 											"items":{
 												"type":"object",
-												"properties":{
-													
-												}
+												"properties":{}
 											}
 										}
 									}
@@ -2622,6 +2586,7 @@
 					"waitForNextWindow":false
 				},
 				"retryConfig":{
+					"backOffFactor":null,
 					"captureRetries":false,
 					"enabled":false
 				},
@@ -2719,9 +2684,7 @@
 							"type":"array",
 							"items":{
 								"type":"object",
-								"properties":{
-									
-								},
+								"properties":{},
 								"additionalProperties":false
 							},
 							"title":"Sql Output"
@@ -2730,9 +2693,7 @@
 							"type":"array",
 							"items":{
 								"type":"object",
-								"properties":{
-									
-								},
+								"properties":{},
 								"additionalProperties":false
 							},
 							"title":"Sql Output Ui"
@@ -2754,9 +2715,7 @@
 					"properties":{
 						"sql_data":{
 							"type":"object",
-							"properties":{
-								
-							},
+							"properties":{},
 							"additionalProperties":false,
 							"title":"Sql Data"
 						}
@@ -2861,9 +2820,7 @@
 										"properties":{
 											"items":{
 												"type":"object",
-												"properties":{
-													
-												}
+												"properties":{}
 											}
 										}
 									}
@@ -3254,9 +3211,7 @@
 										"properties":{
 											"items":{
 												"type":"object",
-												"properties":{
-													
-												}
+												"properties":{}
 											}
 										}
 									}
@@ -3418,14 +3373,10 @@
 									"properties":{
 										"data":{
 											"type":"object",
-											"properties":{
-												
-											},
+											"properties":{},
 											"title":"data",
 											"additionalProperties":false,
-											"required":[
-												
-											]
+											"required":[]
 										},
 										"blockType":{
 											"type":"string",
@@ -3461,14 +3412,10 @@
 								"properties":{
 									"data":{
 										"type":"object",
-										"properties":{
-											
-										},
+										"properties":{},
 										"title":"data",
 										"additionalProperties":false,
-										"required":[
-											
-										]
+										"required":[]
 									},
 									"blockType":{
 										"type":"string",
@@ -3581,9 +3528,7 @@
 							"type":"array",
 							"items":{
 								"type":"object",
-								"properties":{
-									
-								},
+								"properties":{},
 								"additionalProperties":false
 							},
 							"title":"Sql Output"
@@ -3779,9 +3724,7 @@
 										"properties":{
 											"items":{
 												"type":"object",
-												"properties":{
-													
-												}
+												"properties":{}
 											}
 										}
 									}
@@ -4481,9 +4424,7 @@
 										"properties":{
 											"items":{
 												"type":"object",
-												"properties":{
-													
-												}
+												"properties":{}
 											}
 										}
 									}
@@ -4890,9 +4831,7 @@
 							"type":"array",
 							"items":{
 								"type":"object",
-								"properties":{
-									
-								},
+								"properties":{},
 								"additionalProperties":false
 							},
 							"title":"Sql Output"
@@ -5210,9 +5149,7 @@
 							"type":"array",
 							"items":{
 								"type":"object",
-								"properties":{
-									
-								},
+								"properties":{},
 								"additionalProperties":false
 							},
 							"title":"Sql Output"
@@ -5350,9 +5287,7 @@
 							"type":"array",
 							"items":{
 								"type":"object",
-								"properties":{
-									
-								},
+								"properties":{},
 								"additionalProperties":false
 							},
 							"title":"Sql Output"
@@ -5513,18 +5448,14 @@
 							"type":"array",
 							"items":{
 								"type":"object",
-								"properties":{
-									
-								},
+								"properties":{},
 								"additionalProperties":false
 							},
 							"title":"Sql Output"
 						}
 					},
 					"additionalProperties":false,
-					"required":[
-						
-					]
+					"required":[]
 				},
 				"code":"// TODO: validate sql_output\nreturn [\"blockType\": blockType, \"data\": [\"chartType\": chartType, \"xAxisValue\": xAxisValue, \"series\": series, \"chartData\": sql_output]]",
 				"parameters":{
