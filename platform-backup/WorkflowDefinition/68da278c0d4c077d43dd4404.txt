@@ -9,6 +9,13 @@
 			"fromNodeId":"n_JCiaZ",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_7bSWf",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_7bSWf",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_u8DUp",
 			"type":"next"
 		},
@@ -38,7 +45,7 @@
 	"id":"68da278c0d4c077d43dd4404",
 	"lastModifiedBy":44109,
 	"lcName":"test",
-	"modifiedTime":1759127692994,
+	"modifiedTime":1759127872411,
 	"name":"test",
 	"nodes":[
 		{
@@ -68,6 +75,259 @@
 		},
 		{
 			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":911,
+				"resourceName":"variable_by_unifyapps_create_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Dyr39-1",
+			"id":"n_7bSWf",
+			"index":2,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{
+					"createList":{
+						"ui:title":"",
+						"ua:type":{
+							"ui:widget":"hidden"
+						},
+						"items":{
+							"ui:title":"Initial list items",
+							"ui:description":"Set the initial values of the list (defaults to empty)"
+						},
+						"ui:order":[
+							"*",
+							"items"
+						]
+					},
+					"ua:title":{
+						"ui:widget":"hidden"
+					},
+					"ua:list_type":{
+						"ui:widget":"hidden"
+					}
+				},
+				"schema":{
+					"allOf":[
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"OBJECT"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"items":{
+												"type":"object",
+												"properties":{}
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"STRING"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of String"
+											},
+											"items":{
+												"type":"string"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"INTEGER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Integers"
+											},
+											"items":{
+												"type":"integer"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"NUMBER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Numbers"
+											},
+											"items":{
+												"type":"number"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"BOOLEAN"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Booleans"
+											},
+											"items":{
+												"type":"boolean"
+											}
+										}
+									}
+								}
+							}
+						}
+					],
+					"format":"ua:list",
+					"type":"object",
+					"properties":{
+						"ua:title":{
+							"type":"string"
+						},
+						"ua:list_type":{
+							"type":"string",
+							"title":"List Type",
+							"oneOf":[
+								{
+									"const":"OBJECT",
+									"title":"Object"
+								},
+								{
+									"const":"STRING",
+									"title":"String"
+								},
+								{
+									"const":"NUMBER",
+									"title":"Number"
+								},
+								{
+									"const":"INTEGER",
+									"title":"Integer"
+								},
+								{
+									"const":"BOOLEAN",
+									"title":"Boolean"
+								}
+							],
+							"default":"OBJECT"
+						},
+						"createList":{
+							"type":"object",
+							"properties":{
+								"ua:type":{
+									"type":"string",
+									"default":"mappedArray"
+								},
+								"source":{
+									"type":"string",
+									"format":"ua:source",
+									"title":"List Item Source"
+								},
+								"items":{
+									"additionalProperties":false,
+									"type":[
+										"object",
+										"string",
+										"number",
+										"boolean",
+										"integer"
+									],
+									"properties":{}
+								}
+							}
+						}
+					}
+				}
+			},
+			"inputs":{
+				"ua:title":"response"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"type":"object",
+					"properties":{
+						"items":{
+							"type":"array",
+							"title":"response",
+							"disableActions":true,
+							"items":{
+								"type":"object",
+								"properties":{}
+							}
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"browser_use_by_unifyapps",
 				"resourceVersion":516,
 				"resourceName":"browser_use_by_unifyapps_execute_instructions",
@@ -78,7 +338,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_Dyr39-1",
 			"id":"n_u8DUp",
-			"index":2,
+			"index":3,
 			"inputs":{
 				"instructions":"a"
 			},
@@ -90,8 +350,8 @@
 		{
 			"context":{
 				"appName":"variable_by_unifyapps",
-				"resourceVersion":925,
-				"resourceName":"variable_by_unifyapps_create_variables",
+				"resourceVersion":834,
+				"resourceName":"variable_by_unifyapps_add_items_to_list",
 				"type":"APPLICATION"
 			},
 			"debug":false,
@@ -99,21 +359,19 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_u8DUp@_Dyr39-1@l",
 			"id":"n_eAlNQ",
-			"index":3,
-			"inputSchema":{
-				"type":"SCHEMA_AND_LAYOUT",
-				"dynamic":false,
-				"layout":{},
-				"schema":{}
-			},
-			"inputs":{},
-			"outputSchema":{
-				"dynamic":false,
-				"schema":{}
+			"index":4,
+			"inputs":{
+				"insertLocation":"END",
+				"itemsToAdd":{
+					"ua:type":"mappedArray",
+					"source":"{{ n_u8DUp.outputs.item }}",
+					"items":"{{ n_u8DUp.outputs.item[0] }}"
+				},
+				"listName":"{{ n_7bSWf.outputs.items[0] }}"
 			},
 			"skip":false,
 			"subTitle":"Variable by UnifyApps",
-			"title":"Create variables",
+			"title":"Add items to list",
 			"type":"ACTION"
 		},
 		{
@@ -125,7 +383,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_Dyr39-1",
 			"id":"n_NXCNE",
-			"index":4,
+			"index":5,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -149,5 +407,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
