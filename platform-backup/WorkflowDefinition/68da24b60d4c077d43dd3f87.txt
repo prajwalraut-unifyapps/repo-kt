@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759126710894,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_OEOhD",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_TYDMJ",
+			"type":"next"
+		}
+	],
+	"id":"68da24b60d4c077d43dd3f87",
+	"lastModifiedBy":45010,
+	"lcName":"cdsw",
+	"modifiedTime":1759126710894,
+	"name":"cdsw",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_OEOhD-1",
+			"id":"_OEOhD",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_OEOhD-1",
+			"id":"_TYDMJ",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":45010,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
