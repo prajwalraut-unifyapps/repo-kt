@@ -23,7 +23,7 @@
 	"id":"68da30f10d4c077d43dd5c3e",
 	"lastModifiedBy":44567,
 	"lcName":"getattendancesummaryhttptrigger",
-	"modifiedTime":1759157157396,
+	"modifiedTime":1759157183239,
 	"name":"getAttendanceSummaryHttpTrigger",
 	"nodes":[
 		{
@@ -185,5 +185,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
