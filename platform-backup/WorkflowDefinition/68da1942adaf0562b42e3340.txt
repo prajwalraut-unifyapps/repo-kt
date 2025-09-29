@@ -23,7 +23,7 @@
 	"id":"68da1942adaf0562b42e3340",
 	"lastModifiedBy":185911,
 	"lcName":"dlp practice test",
-	"modifiedTime":1759132065563,
+	"modifiedTime":1759133949123,
 	"name":"DLP Practice test",
 	"nodes":[
 		{
@@ -43,39 +43,7 @@
 			"groupId":"_7aqEn-1",
 			"id":"n_rfQp3",
 			"index":1,
-			"inputs":{
-				"result":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"dlpout"
-					],
-					"properties":{
-						"dlpout":{
-							"type":"string",
-							"title":"Dlpout"
-						}
-					}
-				},
-				"setup":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"dlp"
-					],
-					"properties":{
-						"dlp":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{},
-								"additionalProperties":false
-							},
-							"title":"Dlp"
-						}
-					}
-				}
-			},
+			"inputs":{},
 			"skip":false,
 			"subTitle":"Callable",
 			"title":"Trigger via automation",
@@ -201,5 +169,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
