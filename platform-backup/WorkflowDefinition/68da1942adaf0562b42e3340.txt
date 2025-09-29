@@ -16,21 +16,21 @@
 			"fromNodeId":"n_BN78c",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_mGdOF",
+			"toNodeId":"n_SyvQn",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_mGdOF",
+			"fromNodeId":"n_SyvQn",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_i0YnO",
+			"toNodeId":"n_LAYGO",
 			"type":"next"
 		}
 	],
 	"id":"68da1942adaf0562b42e3340",
 	"lastModifiedBy":185911,
 	"lcName":"dlp practice test",
-	"modifiedTime":1759158558766,
+	"modifiedTime":1759159827161,
 	"name":"DLP Practice test",
 	"nodes":[
 		{
@@ -50,7 +50,26 @@
 			"groupId":"_7aqEn-1",
 			"id":"n_rfQp3",
 			"index":1,
-			"inputs":{},
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"dlpout"
+					],
+					"properties":{
+						"dlpout":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Dlpout"
+						}
+					}
+				}
+			},
 			"skip":false,
 			"subTitle":"Callable",
 			"title":"Trigger via automation",
@@ -146,7 +165,7 @@
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7aqEn-1",
-			"id":"n_mGdOF",
+			"id":"n_SyvQn",
 			"index":3,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
@@ -358,17 +377,17 @@
 													"MAU__1":{
 														"type":"string",
 														"title":"MAU",
-														"$id":"urn:vertxschemas:6b37c98f-202b-43d2-98ff-56b4f327afc1"
+														"$id":"urn:vertxschemas:2a993a4f-5807-4a0e-bfb3-67c420800bb5"
 													},
 													"Month__0":{
 														"type":"string",
 														"title":"Month",
-														"$id":"urn:vertxschemas:a7ec5a43-8ced-45f8-993d-636ba038384f"
+														"$id":"urn:vertxschemas:e60079c1-418e-4daf-899a-a8f48345dc09"
 													},
 													"Plan_Usage____2":{
 														"type":"string",
 														"title":"Plan Usage %",
-														"$id":"urn:vertxschemas:8170a9b0-a3d1-4bb8-9d89-96ecb505284e"
+														"$id":"urn:vertxschemas:66ad17b6-516c-469c-8055-d23410d9dfb4"
 													}
 												}
 											}
@@ -417,17 +436,17 @@
 												"MAU__1":{
 													"type":"string",
 													"title":"MAU",
-													"$id":"urn:vertxschemas:6b37c98f-202b-43d2-98ff-56b4f327afc1"
+													"$id":"urn:vertxschemas:2a993a4f-5807-4a0e-bfb3-67c420800bb5"
 												},
 												"Month__0":{
 													"type":"string",
 													"title":"Month",
-													"$id":"urn:vertxschemas:a7ec5a43-8ced-45f8-993d-636ba038384f"
+													"$id":"urn:vertxschemas:e60079c1-418e-4daf-899a-a8f48345dc09"
 												},
 												"Plan_Usage____2":{
 													"type":"string",
 													"title":"Plan Usage %",
-													"$id":"urn:vertxschemas:8170a9b0-a3d1-4bb8-9d89-96ecb505284e"
+													"$id":"urn:vertxschemas:66ad17b6-516c-469c-8055-d23410d9dfb4"
 												}
 											}
 										}
@@ -463,10 +482,15 @@
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7aqEn-1",
-			"id":"n_i0YnO",
+			"id":"n_LAYGO",
 			"index":4,
 			"inputs":{
-				"result":"{{ n_mGdOF.outputs }}"
+				"result":{
+					"dlpout":{
+						"source":"{{ n_SyvQn.outputs.items }}",
+						"ua:type":"mappedArray"
+					}
+				}
 			},
 			"skip":false,
 			"subTitle":"Callable",
@@ -491,5 +515,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
