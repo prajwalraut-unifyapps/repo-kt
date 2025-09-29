@@ -4,6 +4,15 @@
 	],
 	"createdTime":1759135924467,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759135924772,
+		"deployedBy":43499,
+		"deployedDefinitionId":"68da48b4d9b42a279b723152",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":0
+	},
+	"description":"",
 	"edges":[
 		{
 			"fromNodeId":"n_8Hx1E",
@@ -16,7 +25,7 @@
 	"id":"68da48b4d9b42a279b723151",
 	"lastModifiedBy":43499,
 	"lcName":"aa",
-	"modifiedTime":1759135924467,
+	"modifiedTime":1759135927575,
 	"name":"aa",
 	"nodes":[
 		{
@@ -63,15 +72,11 @@
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
-		"enableVariableLogging":true,
-		"route":{
-			"default":false,
-			"tierName":"global"
-		}
+		"enableVariableLogging":true
 	},
 	"standard":false,
 	"tags":[
 		"Workflow Agent"
 	],
-	"version":0
+	"version":1
 }
