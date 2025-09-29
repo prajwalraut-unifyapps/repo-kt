@@ -1,51 +1,82 @@
 {
 	"appsUsed":[
-		
+		"microsoft_sharepoint"
 	],
 	"createdTime":1759153184255,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_91CtH",
+			"fromNodeId":"n_9JRJi",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_y96j9",
+			"toNodeId":"n_oMsmp",
 			"type":"next"
 		}
 	],
 	"id":"68da8c20de004f45854a0422",
 	"lastModifiedBy":15,
 	"lcName":"test",
-	"modifiedTime":1759153184255,
+	"modifiedTime":1759155966159,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_91CtH-1",
-			"id":"_91CtH",
-			"index":0,
+			"id":"n_9JRJi",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"microsoft_sharepoint",
+				"resourceVersion":2395,
+				"connectionId":"68c90bcc2e17d80327e5d966",
+				"resourceName":"microsoft_sharepoint_create_list_item",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_91CtH-1",
-			"id":"_y96j9",
-			"index":0,
+			"id":"n_oMsmp",
+			"index":2,
+			"inputs":{
+				"site_name":"",
+				"objectSourceResourceName":"microsoft_sharepoint_fetch_list_fields",
+				"record":{
+					"FileLeafRef":"ddd"
+				},
+				"list":"tasklist",
+				"siteType":""
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Microsoft SharePoint",
+			"title":"Create list item",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":15,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +90,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
