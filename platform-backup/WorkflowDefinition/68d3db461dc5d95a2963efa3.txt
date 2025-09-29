@@ -46,7 +46,7 @@
 	"id":"68d3db461dc5d95a2963efa3",
 	"lastModifiedBy":46209,
 	"lcName":"tesgsd",
-	"modifiedTime":1759136068641,
+	"modifiedTime":1759136082386,
 	"name":"tesgsd",
 	"nodes":[
 		{
@@ -408,9 +408,7 @@
 											"title":"Name"
 										}
 									},
-									"required":[
-										"name"
-									]
+									"required":[]
 								}
 							}
 						}
@@ -441,9 +439,7 @@
 										"title":"Name"
 									}
 								},
-								"required":[
-									"name"
-								]
+								"required":[]
 							}
 						}
 					}
@@ -518,5 +514,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
