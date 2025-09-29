@@ -5,18 +5,12 @@
 	"createdTime":1759154418210,
 	"deleted":false,
 	"edges":[
-		{
-			"fromNodeId":"n_APAw2",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_sN5qv",
-			"type":"next"
-		}
+		
 	],
 	"id":"68da90f2ae1e05437079a367",
 	"lastModifiedBy":44105,
 	"lcName":"testtt",
-	"modifiedTime":1759154454677,
+	"modifiedTime":1759154468185,
 	"name":"testtt",
 	"nodes":[
 		{
@@ -43,28 +37,6 @@
 				"type":"WEBHOOK"
 			},
 			"type":"START"
-		},
-		{
-			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":39,
-				"resourceName":"code_by_unifyapps_csharp",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_4m4jc-1",
-			"id":"n_sN5qv",
-			"index":2,
-			"inputs":{
-				"code":"using System;\nusing System.Threading.Tasks;\nusing Newtonsoft.Json;\nusing Newtonsoft.Json.Linq;\n\npublic static class RaveScheduler\n{\n    public static async Task<string> DetectChanges(string name, string requestBody)\n    {\n        Console.WriteLine(\"DetectChanges function executed.\");\n        JObject data = null;\n        if (!string.IsNullOrWhiteSpace(requestBody))\n        {\n            data = JObject.Parse(requestBody);\n        }\n        name = data?[\"name\"]?.ToString();\n\n        string responseMessage = string.IsNullOrEmpty(name)\n                ? \"This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.\"\n                : $\"Hello, {name}. This HTTP triggered function executed successfully.\";\n\n        return responseMessage;\n    }\n}\n\nvar result = await RaveScheduler.DetectChanges(name, requestBody);\nresult",
-				"isAsync":false
-			},
-			"skip":false,
-			"subTitle":"Code by UnifyApps",
-			"title":"Execute CSharp script",
-			"type":"ACTION"
 		}
 	],
 	"ownerUserId":44105,
@@ -84,5 +56,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
