@@ -5,12 +5,12 @@
 	"createdTime":1758714694174,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758714810112,
+		"deployedAt":1759130245796,
 		"deployedBy":46209,
-		"deployedDefinitionId":"68d3dbb9d46eec059f423883",
+		"deployedDefinitionId":"68da32830d4c077d43dd5fd0",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":2
+		"version":3,
+		"workflowVersion":4
 	},
 	"edges":[
 		{
@@ -31,7 +31,7 @@
 	"id":"68d3db461dc5d95a2963efa3",
 	"lastModifiedBy":46209,
 	"lcName":"tesgsd",
-	"modifiedTime":1758879703198,
+	"modifiedTime":1759131522394,
 	"name":"tesgsd",
 	"nodes":[
 		{
@@ -280,5 +280,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":5
 }
