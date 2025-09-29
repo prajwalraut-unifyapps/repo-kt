@@ -59,7 +59,7 @@
 	"id":"68daa0178592117bcbd4f3e4",
 	"lastModifiedBy":569,
 	"lcName":"test-loop",
-	"modifiedTime":1759158498346,
+	"modifiedTime":1759158528252,
 	"name":"test-loop",
 	"nodes":[
 		{
@@ -478,7 +478,7 @@
 			"inputs":{
 				"positionFrom":"START",
 				"listSource":"{{ n_389Rc.outputs.body.array }}",
-				"elementPosition":"{{ n_uzkh3.outputs.index }}"
+				"elementPosition":"={{ n_uzkh3.outputs.index }}+1"
 			},
 			"skip":false,
 			"subTitle":"Utility by UnifyApps",
@@ -543,5 +543,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
