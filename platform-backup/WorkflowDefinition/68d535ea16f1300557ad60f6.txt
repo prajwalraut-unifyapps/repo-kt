@@ -16,7 +16,7 @@
 	"id":"68d535ea16f1300557ad60f6",
 	"lastModifiedBy":67744,
 	"lcName":"test-variables",
-	"modifiedTime":1759131419834,
+	"modifiedTime":1759132116044,
 	"name":"test-variables",
 	"nodes":[
 		{
@@ -126,7 +126,7 @@
 				}
 			},
 			"inputs":{
-				"checking_variable":"{{ n_MyreN.outputs.body }}"
+				"checking_variable":"{{ n_MyreN.outputs.multipartBody }}"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -167,5 +167,5 @@
 	"tags":[
 		
 	],
-	"version":13
+	"version":14
 }
