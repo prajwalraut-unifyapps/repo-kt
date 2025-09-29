@@ -1,7 +1,5 @@
 {
-	"appsUsed":[
-		"airtable"
-	],
+	"appsUsed":["airtable"],
 	"createdTime":1721533737408,
 	"deleted":false,
 	"edges":[
