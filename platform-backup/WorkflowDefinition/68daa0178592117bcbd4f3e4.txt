@@ -42,6 +42,13 @@
 		},
 		{
 			"fromNodeId":"n_2VKRZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_bcxma",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_bcxma",
 			"name":"loopback",
 			"priority":0,
 			"skip":false,
@@ -59,7 +66,7 @@
 	"id":"68daa0178592117bcbd4f3e4",
 	"lastModifiedBy":569,
 	"lcName":"test-loop",
-	"modifiedTime":1759158528252,
+	"modifiedTime":1759158561082,
 	"name":"test-loop",
 	"nodes":[
 		{
@@ -168,7 +175,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_tazd1-1",
 			"id":"n_k3mxL",
@@ -512,6 +519,32 @@
 		},
 		{
 			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":852,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_uzkh3@_tazd1-1@l",
+			"id":"n_bcxma",
+			"index":7,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ n_H5n1G.outputs.length }}",
+						"value":"={{ n_H5n1G.outputs.length }}-1"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"stop"
 			},
 			"debug":false,
@@ -519,7 +552,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_tazd1-1",
 			"id":"n_ErN5r",
-			"index":7,
+			"index":8,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -543,5 +576,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
