@@ -5,12 +5,12 @@
 	"createdTime":1758714694174,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759137973317,
+		"deployedAt":1759138057618,
 		"deployedBy":46209,
-		"deployedDefinitionId":"68da50b39c7bf3537c3e92da",
+		"deployedDefinitionId":"68da51079c7bf3537c3e932c",
 		"status":"DEPLOYED",
-		"version":8,
-		"workflowVersion":21
+		"version":9,
+		"workflowVersion":22
 	},
 	"edges":[
 		{
@@ -82,131 +82,31 @@
 	"id":"68d3db461dc5d95a2963efa3",
 	"lastModifiedBy":46209,
 	"lcName":"tesgsd",
-	"modifiedTime":1759138053787,
+	"modifiedTime":1759138818827,
 	"name":"tesgsd",
 	"nodes":[
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{
+						"request":{}
+					}
+				}
+			},
 			"context":{
 				"appName":"webhooks",
 				"resourceVersion":813,
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_f8tNU-1",
 			"id":"n_CoKRX",
 			"index":1,
 			"inputs":{
 				"request":{
-					"contentType":"application/json",
-					"body":{
-						"type":"object",
-						"properties":{
-							"eventStreamId":{
-								"type":"string",
-								"title":"eventStreamId"
-							},
-							"payload":{
-								"type":"object",
-								"properties":{
-									"event":{
-										"type":"object",
-										"properties":{
-											"arrayValue":{
-												"type":"array",
-												"items":{
-													"type":"object",
-													"properties":{
-														"id":{
-															"type":"integer",
-															"title":"id"
-														},
-														"name":{
-															"type":"string",
-															"title":"name"
-														}
-													},
-													"additionalProperties":false
-												},
-												"title":"arrayValue"
-											},
-											"booleanValue":{
-												"type":"boolean",
-												"title":"booleanValue"
-											},
-											"dateTimeValue":{
-												"type":"string",
-												"title":"dateTimeValue"
-											},
-											"dateValue":{
-												"type":"string",
-												"title":"dateValue"
-											},
-											"fileValue":{
-												"type":"object",
-												"properties":{
-													"url":{
-														"type":"string",
-														"title":"url"
-													}
-												},
-												"title":"fileValue",
-												"additionalProperties":false
-											},
-											"integerValue":{
-												"type":"integer",
-												"title":"integerValue"
-											},
-											"multiSelectDropdown":{
-												"type":"array",
-												"items":{
-													"type":"string"
-												},
-												"title":"multiSelectDropdown"
-											},
-											"numberValue":{
-												"type":"number",
-												"title":"numberValue"
-											},
-											"objectValue":{
-												"type":"object",
-												"properties":{
-													"field1":{
-														"type":"string",
-														"title":"field1"
-													},
-													"field2":{
-														"type":"integer",
-														"title":"field2"
-													}
-												},
-												"title":"objectValue",
-												"additionalProperties":false
-											},
-											"singleSelectDropdown":{
-												"type":"string",
-												"title":"singleSelectDropdown"
-											},
-											"stringValue":{
-												"type":"string",
-												"title":"stringValue"
-											}
-										},
-										"title":"event",
-										"additionalProperties":false
-									},
-									"streamId":{
-										"type":"string",
-										"title":"streamId"
-									}
-								},
-								"title":"payload",
-								"additionalProperties":false
-							}
-						},
-						"additionalProperties":false
-					}
+					"contentType":"application/json"
 				}
 			},
 			"skip":false,
@@ -225,7 +125,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_f8tNU-1",
 			"id":"n_0aTNj",
@@ -481,7 +381,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_f8tNU-1",
 			"id":"n_Mm8dG",
@@ -514,7 +414,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_Mm8dG@_f8tNU-1@l",
 			"id":"n_1Zwuz",
@@ -570,7 +470,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_f8tNU-1",
 			"id":"n_tFH3l",
@@ -593,7 +493,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_tFH3l@_f8tNU-1@l",
 			"id":"n_o0AJ8",
@@ -641,5 +541,5 @@
 	"tags":[
 		
 	],
-	"version":22
+	"version":23
 }
