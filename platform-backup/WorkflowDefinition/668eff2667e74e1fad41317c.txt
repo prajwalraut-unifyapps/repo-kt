@@ -1,5 +1,7 @@
 {
-	"appsUsed":["amazon_s3"],
+	"appsUsed":[
+		"amazon_s3"
+	],
 	"createdTime":1720647462612,
 	"deleted":false,
 	"deploymentState":{
