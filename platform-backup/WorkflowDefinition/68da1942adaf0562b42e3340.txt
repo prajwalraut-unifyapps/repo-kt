@@ -16,13 +16,6 @@
 			"fromNodeId":"n_BN78c",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_SyvQn",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_SyvQn",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_LAYGO",
 			"type":"next"
 		}
@@ -30,7 +23,7 @@
 	"id":"68da1942adaf0562b42e3340",
 	"lastModifiedBy":185911,
 	"lcName":"dlp practice test",
-	"modifiedTime":1759159900570,
+	"modifiedTime":1759160121347,
 	"name":"DLP Practice test",
 	"nodes":[
 		{
@@ -45,7 +38,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_7aqEn-1",
 			"id":"n_rfQp3",
@@ -87,7 +80,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_7aqEn-1",
 			"id":"n_BN78c",
@@ -156,323 +149,6 @@
 		},
 		{
 			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":911,
-				"resourceName":"variable_by_unifyapps_create_list",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_7aqEn-1",
-			"id":"n_SyvQn",
-			"index":3,
-			"inputSchema":{
-				"type":"SCHEMA_AND_LAYOUT",
-				"dynamic":false,
-				"layout":{
-					"createList":{
-						"ui:title":"",
-						"ua:type":{
-							"ui:widget":"hidden"
-						},
-						"items":{
-							"ui:title":"Initial list items",
-							"ui:description":"Set the initial values of the list (defaults to empty)"
-						},
-						"ui:order":[
-							"*",
-							"items"
-						]
-					},
-					"ua:title":{
-						"ui:widget":"hidden"
-					},
-					"ua:list_type":{
-						"ui:widget":"hidden"
-					}
-				},
-				"schema":{
-					"allOf":[
-						{
-							"if":{
-								"properties":{
-									"ua:list_type":{
-										"const":"OBJECT"
-									}
-								}
-							},
-							"then":{
-								"properties":{
-									"createList":{
-										"type":"object",
-										"properties":{
-											"items":{
-												"type":"object",
-												"properties":{}
-											}
-										}
-									}
-								}
-							}
-						},
-						{
-							"if":{
-								"properties":{
-									"ua:list_type":{
-										"const":"STRING"
-									}
-								}
-							},
-							"then":{
-								"properties":{
-									"createList":{
-										"type":"object",
-										"properties":{
-											"source":{
-												"type":"string",
-												"format":"ua:source",
-												"title":"List of String"
-											},
-											"items":{
-												"type":"string"
-											}
-										}
-									}
-								}
-							}
-						},
-						{
-							"if":{
-								"properties":{
-									"ua:list_type":{
-										"const":"INTEGER"
-									}
-								}
-							},
-							"then":{
-								"properties":{
-									"createList":{
-										"type":"object",
-										"properties":{
-											"source":{
-												"type":"string",
-												"format":"ua:source",
-												"title":"List of Integers"
-											},
-											"items":{
-												"type":"integer"
-											}
-										}
-									}
-								}
-							}
-						},
-						{
-							"if":{
-								"properties":{
-									"ua:list_type":{
-										"const":"NUMBER"
-									}
-								}
-							},
-							"then":{
-								"properties":{
-									"createList":{
-										"type":"object",
-										"properties":{
-											"source":{
-												"type":"string",
-												"format":"ua:source",
-												"title":"List of Numbers"
-											},
-											"items":{
-												"type":"number"
-											}
-										}
-									}
-								}
-							}
-						},
-						{
-							"if":{
-								"properties":{
-									"ua:list_type":{
-										"const":"BOOLEAN"
-									}
-								}
-							},
-							"then":{
-								"properties":{
-									"createList":{
-										"type":"object",
-										"properties":{
-											"source":{
-												"type":"string",
-												"format":"ua:source",
-												"title":"List of Booleans"
-											},
-											"items":{
-												"type":"boolean"
-											}
-										}
-									}
-								}
-							}
-						}
-					],
-					"format":"ua:list",
-					"type":"object",
-					"properties":{
-						"ua:title":{
-							"type":"string"
-						},
-						"ua:list_type":{
-							"type":"string",
-							"title":"List Type",
-							"oneOf":[
-								{
-									"const":"OBJECT",
-									"title":"Object"
-								},
-								{
-									"const":"STRING",
-									"title":"String"
-								},
-								{
-									"const":"NUMBER",
-									"title":"Number"
-								},
-								{
-									"const":"INTEGER",
-									"title":"Integer"
-								},
-								{
-									"const":"BOOLEAN",
-									"title":"Boolean"
-								}
-							],
-							"default":"OBJECT"
-						},
-						"createList":{
-							"type":"object",
-							"properties":{
-								"ua:type":{
-									"type":"string",
-									"default":"mappedArray"
-								},
-								"source":{
-									"type":"string",
-									"format":"ua:source",
-									"title":"List Item Source"
-								},
-								"items":{
-									"type":"object",
-									"properties":{
-										"rows":{
-											"type":"array",
-											"items":{
-												"type":"object",
-												"properties":{
-													"MAU__1":{
-														"type":"string",
-														"title":"MAU",
-														"$id":"urn:vertxschemas:2a993a4f-5807-4a0e-bfb3-67c420800bb5"
-													},
-													"Month__0":{
-														"type":"string",
-														"title":"Month",
-														"$id":"urn:vertxschemas:e60079c1-418e-4daf-899a-a8f48345dc09"
-													},
-													"Plan_Usage____2":{
-														"type":"string",
-														"title":"Plan Usage %",
-														"$id":"urn:vertxschemas:66ad17b6-516c-469c-8055-d23410d9dfb4"
-													}
-												}
-											}
-										},
-										"spreadsheetId":{
-											"type":"string"
-										},
-										"sheetName":{
-											"type":"string"
-										},
-										"spreadsheetName":{
-											"type":"string"
-										}
-									},
-									"ua:__linkedVariable__":"n_BN78c.outputs"
-								}
-							}
-						}
-					}
-				}
-			},
-			"inputs":{
-				"createList":{
-					"ua:type":"mappedArray"
-				},
-				"ua:title":"List",
-				"ua:list_type":"OBJECT"
-			},
-			"outputSchema":{
-				"dynamic":false,
-				"schema":{
-					"type":"object",
-					"properties":{
-						"items":{
-							"type":"array",
-							"title":"List",
-							"disableActions":true,
-							"items":{
-								"type":"object",
-								"properties":{
-									"rows":{
-										"type":"array",
-										"items":{
-											"type":"object",
-											"properties":{
-												"MAU__1":{
-													"type":"string",
-													"title":"MAU",
-													"$id":"urn:vertxschemas:2a993a4f-5807-4a0e-bfb3-67c420800bb5"
-												},
-												"Month__0":{
-													"type":"string",
-													"title":"Month",
-													"$id":"urn:vertxschemas:e60079c1-418e-4daf-899a-a8f48345dc09"
-												},
-												"Plan_Usage____2":{
-													"type":"string",
-													"title":"Plan Usage %",
-													"$id":"urn:vertxschemas:66ad17b6-516c-469c-8055-d23410d9dfb4"
-												}
-											}
-										}
-									},
-									"spreadsheetId":{
-										"type":"string"
-									},
-									"sheetName":{
-										"type":"string"
-									},
-									"spreadsheetName":{
-										"type":"string"
-									}
-								}
-							}
-						}
-					}
-				}
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Create list",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"callables",
 				"resourceVersion":896,
 				"resourceName":"callables_return_to_automation",
@@ -483,11 +159,11 @@
 			"fallbackMode":"STOP",
 			"groupId":"_7aqEn-1",
 			"id":"n_LAYGO",
-			"index":4,
+			"index":3,
 			"inputs":{
 				"result":{
 					"dlpout":{
-						"source":"{{ n_SyvQn.outputs.items }}",
+						"source":"{{ n_BN78c.outputs.rows[0].MAU__1 }}{{ n_BN78c.outputs.rows[0].Month__0 }}{{ n_BN78c.outputs.rows[0].Plan_Usage____2 }}",
 						"ua:type":"mappedArray"
 					}
 				}
@@ -515,5 +191,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":12
 }
