@@ -37,7 +37,7 @@
 	"id":"68d81e2aca389c72ba995ed0",
 	"lastModifiedBy":175131,
 	"lcName":"api sheet",
-	"modifiedTime":1759130764655,
+	"modifiedTime":1759130932692,
 	"name":"API Sheet",
 	"nodes":[
 		{
@@ -47,7 +47,7 @@
 				"resourceName":"schedule_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7SVoS-1",
 			"id":"n_BzaA8",
@@ -74,7 +74,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7SVoS-1",
 			"id":"n_jQtM9",
@@ -125,7 +125,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7SVoS-1",
 			"id":"n_xZUpC",
@@ -152,7 +152,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7SVoS-1",
 			"id":"n_Cm0Vb",
@@ -170,13 +170,14 @@
 										"type":"string",
 										"title":"endpointId"
 									},
-									"count(*)":{
-										"type":"integer",
-										"title":"count(*)"
+									"count":{
+										"type":"string",
+										"title":"count"
 									}
 								},
 								"title":"columns",
-								"additionalProperties":false
+								"additionalProperties":false,
+								"required":[]
 							}
 						},
 						"additionalProperties":false
@@ -212,7 +213,7 @@
 					},
 					{
 						"key":"Count",
-						"value":"=TEXT({{ n_Cm0Vb.outputs.result[0].columns.count(*) }})"
+						"value":"{{ n_Cm0Vb.outputs.result[0].columns.count }}"
 					}
 				],
 				"skipHeaderRow":false,
@@ -245,5 +246,5 @@
 	"tags":[
 		
 	],
-	"version":16
+	"version":17
 }
