@@ -45,7 +45,7 @@
 	"id":"68da278c0d4c077d43dd4404",
 	"lastModifiedBy":44109,
 	"lcName":"test",
-	"modifiedTime":1759127878631,
+	"modifiedTime":1759128023091,
 	"name":"test",
 	"nodes":[
 		{
@@ -336,7 +336,7 @@
 			"id":"n_u8DUp",
 			"index":3,
 			"inputs":{
-				"instructions":"a"
+				"instructions":"Give me details about ai"
 			},
 			"skip":false,
 			"subTitle":"Browser Use by UnifyApps",
@@ -403,5 +403,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
