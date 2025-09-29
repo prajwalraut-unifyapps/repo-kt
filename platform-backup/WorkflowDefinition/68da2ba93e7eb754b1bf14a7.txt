@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759133645542,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759133645755,
+		"deployedBy":39713,
+		"deployedDefinitionId":"68da3fcd0d4c077d43dd7d3b",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":49
+	},
 	"edges":[
 		{
 			"fromNodeId":"c9q2d",
@@ -150,10 +158,34 @@
 			"type":"next"
 		}
 	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"VIEW_RUNS",
+					"V"
+				],
+				"principalIds":[
+					"39713"
+				],
+				"principalType":"USER"
+			},
+			{
+				"permissions":[
+					"VIEW_RUNS",
+					"V"
+				],
+				"principalIds":[
+					"44567"
+				],
+				"principalType":"USER"
+			}
+		]
+	},
 	"id":"68da2ba93e7eb754b1bf14a7",
 	"lastModifiedBy":39713,
 	"lcName":"callabltest",
-	"modifiedTime":1759133645542,
+	"modifiedTime":1759133701682,
 	"name":"CallablTest",
 	"nodes":[
 		{
@@ -917,5 +949,5 @@
 	"tags":[
 		
 	],
-	"version":49
+	"version":51
 }
