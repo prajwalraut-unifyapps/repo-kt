@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759175497528,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_lCYvN",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Fb2pt",
+			"type":"next"
+		}
+	],
+	"id":"68dae3494698d0705fd57f6c",
+	"lastModifiedBy":175325,
+	"lcName":"excelformulaslocalpcwjsuemtu",
+	"modifiedTime":1759175497528,
+	"name":"ExcelFormulasLocalpcWJSUEMTu",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_lCYvN-1",
+			"id":"_lCYvN",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_lCYvN-1",
+			"id":"_Fb2pt",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
