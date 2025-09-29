@@ -1,0 +1,75 @@
+{
+	"appsUsed":[
+		"68da20604278ce19584a8ecd"
+	],
+	"createdTime":1759126176491,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_la7zw",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_kzHA9",
+			"type":"next"
+		}
+	],
+	"id":"68da22a00d4c077d43dd3bb8",
+	"lastModifiedBy":124029,
+	"lcName":"netsuite 3",
+	"modifiedTime":1759127065172,
+	"name":"netsuite 3",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_la7zw-1",
+			"id":"_la7zw",
+			"index":1,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"68da20604278ce19584a8ecd",
+				"resourceVersion":1,
+				"connectionId":"68da2275f6d30d674226d6d2",
+				"resourceName":"68da20604278ce19584a8ecd:68da233cf6d30d674226d720",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_la7zw-1",
+			"id":"n_kzHA9",
+			"index":2,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Netsuite 3",
+			"title":"Attach file to sales order",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":124029,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
