@@ -37,7 +37,7 @@
 	"id":"68da44f64540ef53ef3497aa",
 	"lastModifiedBy":155543,
 	"lcName":"wadesfgwafe",
-	"modifiedTime":1759137373574,
+	"modifiedTime":1759137497631,
 	"name":"wadesfgwafe",
 	"nodes":[
 		{
@@ -137,7 +137,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_MGUsS-1",
 			"id":"_KOdra",
@@ -148,7 +148,7 @@
 				"requestTimeoutInSecs":-1,
 				"httpMethod":"POST",
 				"body":{
-					"resourceType":"Entity",
+					"resourceType":"ENTITY",
 					"collectionName":"testindexess",
 					"indexDefinitions":{
 						"source":"{{ n_vHRPy.outputs.result.res }}",
@@ -235,5 +235,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
