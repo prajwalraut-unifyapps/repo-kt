@@ -23,7 +23,7 @@
 	"id":"68da30f10d4c077d43dd5c3e",
 	"lastModifiedBy":44567,
 	"lcName":"getattendancesummaryhttptrigger",
-	"modifiedTime":1759156879095,
+	"modifiedTime":1759157157396,
 	"name":"getAttendanceSummaryHttpTrigger",
 	"nodes":[
 		{
@@ -40,6 +40,17 @@
 			"index":1,
 			"inputs":{
 				"request":{
+					"headers":{
+						"type":"object",
+						"additionalProperties":false,
+						"required":[],
+						"properties":{
+							"Authorization":{
+								"type":"string",
+								"title":"Authorization"
+							}
+						}
+					},
 					"queryParams":{
 						"type":"object",
 						"additionalProperties":false,
@@ -98,6 +109,7 @@
 				"input":{
 					"type":"object",
 					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"employeeNumber":{
 							"type":"string",
@@ -110,15 +122,20 @@
 						"endDate":{
 							"type":"string",
 							"title":"endDate"
+						},
+						"Authorization":{
+							"type":"string",
+							"title":"Authorization"
 						}
 					}
 				},
-				"code":"namespace attendanceAPI\n{ \n    using Microsoft.AspNetCore.Http;\n    using Microsoft.AspNetCore.Mvc;\n    using Microsoft.Azure.WebJobs;\n    using Microsoft.Azure.WebJobs.Extensions.Http;\n    using Microsoft.Extensions.Logging;\n    using System;\n    using System.Text.Json;\n    using System.Threading.Tasks;\n    using System.Net.Http;\n    using System.Web.Http;\n    using attendanceAPI.ApplicationCore.Interfaces;\n    using attendanceAPI.ApplicationCore.Services;\n    using System.Security.Claims;\n    using System.Linq;\n\n    public class GetAttendanceSummeryHttpTrigger\n    {\n        private readonly IAttendanceSummaryService _attendanceSummaryService;\n        private readonly IAuthService _authService;\n\n        public GetAttendanceSummeryHttpTrigger(IAttendanceSummaryService attendanceSummaryService, IAuthService authService)\n        {\n            _attendanceSummaryService = attendanceSummaryService;\n            _authService = authService;\n        }\n\n        private static readonly HttpClient httpClient = new HttpClient(); // Static HttpClient for better performance\n\n        [FunctionName(\"GetAttendanceSummeryHttpTrigger\")]\n        public async Task<IActionResult> Run(\n            [HttpTrigger(AuthorizationLevel.Function, \"get\", \"post\", Route = null)] HttpRequest req, ILogger log,ExecutionContext context, ClaimsPrincipal principal)\n        {\n            try\n            {\n                //reportie validation -> need to call worker API with AD token user (RM giving to api) and get reportie list and check that with\n                //\"employeeNumber\" from query parameter to confirm he or she is a reportie\n\n                log.LogInformation(\"Start processing the request\");\n\n                string employeeId = req.Query[\"employeeNumber\"];\n                string startDate = req.Query[\"startDate\"];\n                string endDate = req.Query[\"endDate\"];\n\n     \n                if (string.IsNullOrEmpty(employeeId))\n                {\n                    return new BadRequestObjectResult(\"Invalid employeeNumber\");\n                }\n\n                if (string.IsNullOrEmpty(startDate))\n                {\n                    return new BadRequestObjectResult(\"Invalid startDate\");\n                }\n\n                if (string.IsNullOrEmpty(endDate))\n                {\n                    return new BadRequestObjectResult(\"Invalid endDate\");\n                }\n\n                string apiToken = req.Headers[\"Authorization\"];\n\n                if (string.IsNullOrEmpty(apiToken) && apiToken.StartsWith(\"Bearer \", StringComparison.OrdinalIgnoreCase))\n                {\n                    return new UnauthorizedObjectResult($\"Unauthorized. Access token is missing or invalid.\");\n                }\n\n                if (!(await _authService.IsUserReportsToTokenUser(\"\", employeeId, context, req)))\n                {\n                    return new UnauthorizedObjectResult($\"Unauthorized. Access Denied for Requested User.!\");\n                }\n\n                HttpResponseMessage response = await _attendanceSummaryService.GetEmployeeAttendanceSummaryData(apiToken, employeeId, startDate, endDate, context, req);\n\n                if (response.IsSuccessStatusCode)\n                {\n                    string responseBody = await response.Content.ReadAsStringAsync();\n                    // Parse the response if needed\n                    //var attendanceData = JsonSerializer.Deserialize<object>(responseBody); \n\n                    return new OkObjectResult(responseBody); // Return the raw JSON or a parsed object\n                }\n                else\n                {\n                    log.LogError($\"API call failed with status code: {response.StatusCode}\");\n                    return new BadRequestObjectResult($\"API call failed with status code: {response.StatusCode}\");\n                }\n            }\n            catch (JsonException e)\n            {\n                log.LogError(e, $\"Error message: {e.Message}\");\n                return new BadRequestObjectResult(\"Invalid inputs\");\n            }\n            catch (Exception e)\n            {\n                log.LogError(e, $\"Error message: {e.Message}\");\n                return new InternalServerErrorResult();\n            }\n        }\n    }\n}",
+				"code":"namespace attendanceAPI\n{ \n    using Microsoft.AspNetCore.Http;\n    using Microsoft.AspNetCore.Mvc;\n    using Microsoft.Azure.WebJobs;\n    using Microsoft.Azure.WebJobs.Extensions.Http;\n    using Microsoft.Extensions.Logging;\n    using System;\n    using System.Text.Json;\n    using System.Threading.Tasks;\n    using System.Net.Http;\n    using System.Web.Http;\n    using attendanceAPI.ApplicationCore.Interfaces;\n    using attendanceAPI.ApplicationCore.Services;\n    using System.Security.Claims;\n    using System.Linq;\n\n    public static class GetAttendanceSummeryHttpTrigger\n    {\n        private readonly IAttendanceSummaryService _attendanceSummaryService;\n        private readonly IAuthService _authService;\n\n        public GetAttendanceSummeryHttpTrigger(IAttendanceSummaryService attendanceSummaryService, IAuthService authService)\n        {\n            _attendanceSummaryService = attendanceSummaryService;\n            _authService = authService;\n        }\n\n        private static readonly HttpClient httpClient = new HttpClient(); // Static HttpClient for better performance\n\n        [FunctionName(\"GetAttendanceSummeryHttpTrigger\")]\n        public async Task<IActionResult> Run(\n            [HttpTrigger(AuthorizationLevel.Function, \"get\", \"post\", Route = null)] HttpRequest req, ILogger log,ExecutionContext context, ClaimsPrincipal principal)\n        {\n            try\n            {\n                //reportie validation -> need to call worker API with AD token user (RM giving to api) and get reportie list and check that with\n                //\"employeeNumber\" from query parameter to confirm he or she is a reportie\n\n                log.LogInformation(\"Start processing the request\");\n\n                string employeeId = employeeNumber;\n                string startDate = startDate;\n                string endDate = endDate;\n\n     \n                if (string.IsNullOrEmpty(employeeId))\n                {\n                    return new BadRequestObjectResult(\"Invalid employeeNumber\");\n                }\n\n                if (string.IsNullOrEmpty(startDate))\n                {\n                    return new BadRequestObjectResult(\"Invalid startDate\");\n                }\n\n                if (string.IsNullOrEmpty(endDate))\n                {\n                    return new BadRequestObjectResult(\"Invalid endDate\");\n                }\n\n                string apiToken = Authorization;\n\n                if (string.IsNullOrEmpty(apiToken) && apiToken.StartsWith(\"Bearer \", StringComparison.OrdinalIgnoreCase))\n                {\n                    return new UnauthorizedObjectResult($\"Unauthorized. Access token is missing or invalid.\");\n                }\n\n                if (!(await _authService.IsUserReportsToTokenUser(\"\", employeeId, context, req)))\n                {\n                    return new UnauthorizedObjectResult($\"Unauthorized. Access Denied for Requested User.!\");\n                }\n\n                HttpResponseMessage response = await _attendanceSummaryService.GetEmployeeAttendanceSummaryData(apiToken, employeeId, startDate, endDate, context, req);\n\n                if (response.IsSuccessStatusCode)\n                {\n                    string responseBody = await response.Content.ReadAsStringAsync();\n                    // Parse the response if needed\n                    //var attendanceData = JsonSerializer.Deserialize<object>(responseBody); \n\n                    return new OkObjectResult(responseBody); // Return the raw JSON or a parsed object\n                }\n                else\n                {\n                    log.LogError($\"API call failed with status code: {response.StatusCode}\");\n                    return new BadRequestObjectResult($\"API call failed with status code: {response.StatusCode}\");\n                }\n            }\n            catch (JsonException e)\n            {\n                log.LogError(e, $\"Error message: {e.Message}\");\n                return new BadRequestObjectResult(\"Invalid inputs\");\n            }\n            catch (Exception e)\n            {\n                log.LogError(e, $\"Error message: {e.Message}\");\n                return new InternalServerErrorResult();\n            }\n        }\n    }\n}\n\nGetAttendanceSummeryHttpTrigger.Run();",
 				"isAsync":false,
 				"parameters":{
 					"employeeNumber":"{{ n_WmBtH.outputs.queryParams.employeeNumber }}",
 					"startDate":"{{ n_WmBtH.outputs.queryParams.startDate }}",
-					"endDate":"{{ n_WmBtH.outputs.queryParams.endDate }}"
+					"endDate":"{{ n_WmBtH.outputs.queryParams.endDate }}",
+					"Authorization":"{{ n_WmBtH.outputs.headers.Authorization }}"
 				}
 			},
 			"skip":false,
@@ -168,5 +185,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
