@@ -52,7 +52,7 @@
 	"id":"68dac7a8a4bfc728a7c6c791",
 	"lastModifiedBy":161908,
 	"lcName":"rish",
-	"modifiedTime":1759168591658,
+	"modifiedTime":1759168609337,
 	"name":"rish",
 	"nodes":[
 		{
@@ -115,7 +115,8 @@
 				}
 			},
 			"inputs":{
-				"loopcount":0
+				"loopcount":0,
+				"index":0
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -217,7 +218,7 @@
 				"variables":[
 					{
 						"source":"{{ n_Kv9Rs.outputs.loopcount }}",
-						"value":"=({{ n_Kv9Rs.outputs.loopcount }}-1)"
+						"value":"=({{ n_Kv9Rs.outputs.loopcount }}+1)"
 					},
 					{
 						"source":"{{ n_Kv9Rs.outputs.index }}",
@@ -263,5 +264,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
