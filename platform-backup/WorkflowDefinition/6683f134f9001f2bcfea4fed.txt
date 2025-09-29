@@ -1,5 +1,7 @@
 {
-	"appsUsed":["toggl"],
+	"appsUsed":[
+		"toggl"
+	],
 	"createdTime":1719922996612,
 	"deleted":true,
 	"deploymentState":{
@@ -81,18 +83,57 @@
 	"grants":{
 		"configs":[
 			{
-				"permissions":["EXPORT_AS_TEMPLATE","A","C","S","D","TEST","VIEW_RUNS","E","V","DEP"],
-				"principalIds":["34"],
+				"permissions":[
+					"EXPORT_AS_TEMPLATE",
+					"A",
+					"C",
+					"S",
+					"D",
+					"TEST",
+					"VIEW_RUNS",
+					"E",
+					"V",
+					"DEP"
+				],
+				"principalIds":[
+					"34"
+				],
 				"principalType":"USER"
 			},
 			{
-				"permissions":["EXPORT_AS_TEMPLATE","A","C","S","D","TEST","VIEW_RUNS","E","V","DEP"],
-				"principalIds":["66681c602261d6426d663042"],
+				"permissions":[
+					"EXPORT_AS_TEMPLATE",
+					"A",
+					"C",
+					"S",
+					"D",
+					"TEST",
+					"VIEW_RUNS",
+					"E",
+					"V",
+					"DEP"
+				],
+				"principalIds":[
+					"66681c602261d6426d663042"
+				],
 				"principalType":"USER_GROUPS"
 			},
 			{
-				"permissions":["EXPORT_AS_TEMPLATE","A","C","S","D","TEST","VIEW_RUNS","E","V","DEP"],
-				"principalIds":["668c3e5876485170dc2ae99d"],
+				"permissions":[
+					"EXPORT_AS_TEMPLATE",
+					"A",
+					"C",
+					"S",
+					"D",
+					"TEST",
+					"VIEW_RUNS",
+					"E",
+					"V",
+					"DEP"
+				],
+				"principalIds":[
+					"668c3e5876485170dc2ae99d"
+				],
 				"principalType":"USER_GROUPS"
 			}
 		]
@@ -125,9 +166,7 @@
 						}
 					},
 					"additionalProperties":false,
-					"required":[
-						
-					]
+					"required":[]
 				},
 				"triggerInputCondition":{
 					"filters":[
@@ -158,9 +197,7 @@
 						}
 					},
 					"additionalProperties":false,
-					"required":[
-						
-					]
+					"required":[]
 				}
 			},
 			"skip":false,
@@ -200,14 +237,10 @@
 							"title":"validation"
 						}
 					},
-					"required":[
-						
-					]
+					"required":[]
 				}
 			},
-			"inputs":{
-				
-			},
+			"inputs":{},
 			"outputSchema":{
 				"type":"SCHEMA",
 				"dynamic":false,
@@ -220,9 +253,7 @@
 							"title":"validation"
 						}
 					},
-					"required":[
-						
-					]
+					"required":[]
 				}
 			},
 			"skip":false,
