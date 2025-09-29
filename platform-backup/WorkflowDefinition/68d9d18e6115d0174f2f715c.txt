@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759105483263,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759105483365,
+		"deployedBy":175325,
+		"deployedDefinitionId":"68d9d1cbadaf0562b42e21ce",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"YfJoI",
@@ -23,7 +31,7 @@
 	"id":"68d9d18e6115d0174f2f715c",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa2sdk4022883805",
-	"modifiedTime":1759105483263,
+	"modifiedTime":1759105547641,
 	"name":"changeSetQA2sdk4022883805",
 	"nodes":[
 		{
@@ -140,5 +148,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
