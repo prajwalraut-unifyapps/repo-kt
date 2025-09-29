@@ -16,7 +16,7 @@
 	"id":"68dac5c8a4bfc728a7c6c4cf",
 	"lastModifiedBy":33,
 	"lcName":"test",
-	"modifiedTime":1759177270487,
+	"modifiedTime":1759178202076,
 	"name":"test",
 	"nodes":[
 		{
@@ -26,7 +26,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_c09H3-1",
 			"id":"n_30ndR",
@@ -47,7 +47,7 @@
 		{
 			"context":{
 				"appName":"isa",
-				"resourceVersion":75,
+				"resourceVersion":77,
 				"connectionId":"68da956b7c4eaf6df8216150",
 				"resourceName":"isa_list_passenger_soap",
 				"type":"APPLICATION"
@@ -58,7 +58,13 @@
 			"groupId":"_c09H3-1",
 			"id":"n_Sy4d8",
 			"index":2,
-			"inputs":{},
+			"inputs":{
+				"flightInfo":{
+					"marketingCarrier":"G9",
+					"flightNumber":"542",
+					"departureDate":"20250826"
+				}
+			},
 			"skip":false,
 			"subTitle":"ISA",
 			"title":"Get passenger list",
@@ -82,5 +88,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
