@@ -22,57 +22,6 @@
 			"fromNodeId":"n_0aTNj",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_Mm8dG",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_Mm8dG",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_1Zwuz",
-			"type":"loop"
-		},
-		{
-			"fromNodeId":"n_1Zwuz",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_HUBWs",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_HUBWs",
-			"name":"loopback",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_Mm8dG",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_Mm8dG",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_tFH3l",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_tFH3l",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_o0AJ8",
-			"type":"loop"
-		},
-		{
-			"fromNodeId":"n_o0AJ8",
-			"name":"loopback",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_tFH3l",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_tFH3l",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_n3mc9",
 			"type":"next"
 		}
@@ -80,7 +29,7 @@
 	"id":"68d3db461dc5d95a2963efa3",
 	"lastModifiedBy":46209,
 	"lcName":"tesgsd",
-	"modifiedTime":1759153493876,
+	"modifiedTime":1759153501709,
 	"name":"tesgsd",
 	"nodes":[
 		{
@@ -379,141 +328,6 @@
 		},
 		{
 			"context":{
-				"appName":"loop",
-				"resourceVersion":857,
-				"resourceName":"loop_while",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_f8tNU-1",
-			"id":"n_Mm8dG",
-			"index":3,
-			"inputs":{
-				"condition":{
-					"filters":[
-						{
-							"property":"1",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"1"
-							}
-						}
-					],
-					"operator":"AND"
-				},
-				"captureIterations":false
-			},
-			"skip":false,
-			"subTitle":"Loop",
-			"title":"While loop",
-			"type":"LOOP"
-		},
-		{
-			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":864,
-				"resourceName":"variable_by_unifyapps_add_item_to_list",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_Mm8dG@_f8tNU-1@l",
-			"id":"n_1Zwuz",
-			"index":4,
-			"inputs":{
-				"itemToAdd":"add",
-				"insertLocation":"END",
-				"listName":"{{ n_0aTNj.outputs.items[0] }}"
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Add item to list",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"break",
-				"resourceVersion":801,
-				"resourceName":"break",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_Mm8dG@_f8tNU-1@l",
-			"id":"n_HUBWs",
-			"index":5,
-			"inputs":{
-				"loop":"n_Mm8dG",
-				"conditions":{
-					"filters":[
-						{
-							"property":"=LEN({{ n_0aTNj.outputs.items }})",
-							"filter":{
-								"operator":"GT",
-								"value":"5"
-							}
-						}
-					],
-					"operator":"AND"
-				}
-			},
-			"skip":false,
-			"subTitle":"Break",
-			"title":"Break",
-			"type":"BREAK"
-		},
-		{
-			"context":{
-				"appName":"loop",
-				"resourceVersion":847,
-				"resourceName":"loop_for_each",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_f8tNU-1",
-			"id":"n_tFH3l",
-			"index":6,
-			"inputs":{
-				"repeatMode":"SINGLE",
-				"listSource":"{{ n_0aTNj.outputs.items }}",
-				"captureIterations":false
-			},
-			"skip":false,
-			"subTitle":"Loop",
-			"title":"For each loop",
-			"type":"LOOP"
-		},
-		{
-			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":866,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_tFH3l@_f8tNU-1@l",
-			"id":"n_o0AJ8",
-			"index":7,
-			"inputs":{
-				"code":"return [\"success\": true]",
-				"compile_static":false,
-				"captureStdOutput":false
-			},
-			"skip":false,
-			"subTitle":"Code by UnifyApps",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"stop"
 			},
 			"debug":false,
@@ -521,7 +335,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_f8tNU-1",
 			"id":"n_n3mc9",
-			"index":8,
+			"index":3,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -541,5 +355,5 @@
 	},
 	"standard":false,
 	"tags":[],
-	"version":26
+	"version":27
 }
