@@ -1,5 +1,7 @@
 {
-	"appsUsed":["custom_http_endpoint"],
+	"appsUsed":[
+		"custom_http_endpoint"
+	],
 	"createdTime":1721273234030,
 	"deleted":false,
 	"deploymentState":{
