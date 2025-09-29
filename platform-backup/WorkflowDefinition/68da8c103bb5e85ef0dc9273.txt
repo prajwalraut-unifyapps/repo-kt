@@ -1,51 +1,84 @@
 {
 	"appsUsed":[
-		
+		"isa"
 	],
 	"createdTime":1759153168888,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_2JCDq",
+			"fromNodeId":"n_Uh7uf",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_DFzwi",
+			"toNodeId":"n_aw6CC",
 			"type":"next"
 		}
 	],
 	"id":"68da8c103bb5e85ef0dc9273",
 	"lastModifiedBy":33,
 	"lcName":"test ",
-	"modifiedTime":1759153168888,
+	"modifiedTime":1759155770131,
 	"name":"test ",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_2JCDq-1",
-			"id":"_2JCDq",
-			"index":0,
+			"id":"n_Uh7uf",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"isa",
+				"resourceVersion":67,
+				"connectionId":"68da956b7c4eaf6df8216150",
+				"resourceName":"isa_list_passenger_soap",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_2JCDq-1",
-			"id":"_DFzwi",
-			"index":0,
+			"id":"n_aw6CC",
+			"index":2,
+			"inputs":{
+				"flightInfo":{
+					"marketingCarrier":"G9",
+					"flightNumber":"542",
+					"departureDate":20250826,
+					"boardPoint":"SHJ"
+				},
+				"filters":{
+					"attributeType":"TAG"
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"ISA",
+			"title":"Get passenger list",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":33,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +92,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
