@@ -20,13 +20,6 @@
 			"fromNodeId":"n_n4wKZ",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_AzCAS",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_AzCAS",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_GsNXV",
 			"type":"next"
 		},
@@ -154,7 +147,7 @@
 	"id":"68d117de852fdd034c42ed99",
 	"lastModifiedBy":187421,
 	"lcName":"meeting assistant | join meet",
-	"modifiedTime":1758971619292,
+	"modifiedTime":1759131059229,
 	"name":"Meeting Assistant | Join meet",
 	"nodes":[
 		{
@@ -183,32 +176,6 @@
 		},
 		{
 			"context":{
-				"appName":"gcalendar",
-				"resourceVersion":1021,
-				"connectionId":"68d3a3bff5127209905f7738",
-				"resourceName":"gcalendar_search_events",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_UxBP5-1",
-			"id":"n_AzCAS",
-			"index":2,
-			"inputs":{
-				"q":"Meeting",
-				"singleEvents":true,
-				"calendarId":"primary",
-				"timeMax":"2025-09-28T08:09:00.000Z",
-				"timeMin":"2025-09-27T08:09:00.000Z"
-			},
-			"skip":false,
-			"subTitle":"Google Calendar",
-			"title":"Search events",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"openai",
 				"resourceVersion":1087,
 				"connectionId":"687c9f1f5ef2a3b9730448d1",
@@ -220,11 +187,11 @@
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_GsNXV",
-			"index":3,
+			"index":2,
 			"inputs":{
 				"response_format":"json_object",
-				"model":"gpt-4o",
-				"message":"Extract only the meeting link (Microsoft Teams, Google Meet, or Zoom) from the event description: \n\n{{ n_AzCAS.outputs.summary }}{{ n_AzCAS.outputs.description }}{{ n_AzCAS.outputs.items[0].htmlLink }}{{ n_AzCAS.outputs.items[0].summary }}{{ n_AzCAS.outputs.items[0].description }}\n\nIf multiple links are present, return only the main meeting link.\nOutput must be the exact URL only — no additional text."
+				"model":"gpt-3.5-turbo",
+				"message":"Extract only the meeting link (Microsoft Teams, Google Meet, or Zoom) from the event description: \n\n\"{{ n_n4wKZ.outputs.htmlLink }}, {{ n_n4wKZ.outputs.summary }}, {{ n_n4wKZ.outputs.description }}, {{ n_n4wKZ.outputs.hangoutLink }}\"\n\nIf multiple links are present, return only the main meeting link which will led me to join the meet.\nOutput must be the exact meeting URL only — no additional text."
 			},
 			"skip":false,
 			"subTitle":"OpenAI",
@@ -239,13 +206,13 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_RtX4l",
-			"index":4,
+			"index":3,
 			"inputs":{
-				"start_time":"{{ n_AzCAS.outputs.items[0].start.dateTime }}",
+				"start_time":"{{ n_n4wKZ.outputs.originalStartTime.dateTime }}",
 				"runtimeConnections":{},
 				"schedule_type":"ONE_TIME",
 				"cancel_existing":true,
@@ -265,16 +232,16 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_5BYIx",
-			"index":5,
+			"index":4,
 			"inputs":{
 				"botName":"UnifyApps Meeting Assistant",
 				"meetingUrl":"{{ n_GsNXV.outputs.choices[0].message.content }}"
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Meeting bot by UnifyApps",
 			"title":"Join meeting",
 			"type":"ACTION"
@@ -287,14 +254,16 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_G5pMv",
-			"index":6,
+			"index":5,
 			"inputs":{
 				"output":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"files":{
 							"type":"array",
@@ -306,12 +275,11 @@
 							},
 							"title":"Files"
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				},
+				"code":"return [\"files\": [\n   [\n     \"name\": \"9272e41f-2cbe-45bc-a123-0ad9cce82803teams_meeting_bot_async_c_147_u_66361_seg_20250919_120446_0001.webm\",\n     \"size\": 0,\n     \"source\": \"meeting-recordings/local_file/9272e41f-2cbe-45bc-a123-0ad9cce82803teams_meeting_bot_async_c_147_u_66361_seg_20250919_120446_0001.webm\",\n     \"sourceType\": \"CLOUD_STORAGE\",\n     \"ua:type\": \"FILE\",\n     \"link\": \"https://orbit.uat.unifyapps.com/api/file/download/__UNIFY_ENCR_AWS__V0__AQICAHj7fNra7CINOgG9eTjejy3PBrVJye7rSj0iXl5U48AE3wHNY0qzSq3V1YnjJpiJb0viAAAA6DCB5QYJKoZIhvcNAQcGoIHXMIHUAgEAMIHOBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDPR6RkcqyMYyzoRb2AIBEICBoJgPFiY7PcNAZf0nB69v%2FDL6u4uV1UeWEBFqJnNjank1s9L9Ugw%2FyDSmt%2Fyap%2FV36QKhCnUlsgNH%2FB7ZfNWhGN1lyqhWIOwAbRV%2FlkY5nUluDF29PL1sgcCFEkvfqt5%2FQqbGeksyxxopnSnkA9r3auowuyhJhpBK3ryHGqC1aPCYVLHzO6uAh5oLfz%2BDxixgacPZFK95%2Brmm4qq7yz9v0u8%3D\"\n   ],\n   [\n     \"name\": \"6a179028-2559-45de-b7a5-eb10dbb0b8deteams_meeting_bot_async_c_147_u_66361_seg_20250919_120446_0002.webm\",\n     \"size\": 0,\n     \"source\": \"meeting-recordings/local_file/6a179028-2559-45de-b7a5-eb10dbb0b8deteams_meeting_bot_async_c_147_u_66361_seg_20250919_120446_0002.webm\",\n     \"sourceType\": \"CLOUD_STORAGE\",\n     \"ua:type\": \"FILE\",\n     \"link\": \"https://orbit.uat.unifyapps.com/api/file/download/__UNIFY_ENCR_AWS__V0__AQICAHj7fNra7CINOgG9eTjejy3PBrVJye7rSj0iXl5U48AE3wGxUNujxnPQQ0SpI25gh01SAAAA6DCB5QYJKoZIhvcNAQcGoIHXMIHUAgEAMIHOBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDKNU7xMCXdH21TjGZgIBEICBoBBy%2BlpB%2BqZEKU%2BtYJqu9zu82qNldDN1x4BnMFfJxEQQMhSK5kI678md4s9pZ33xczs1v863RuxnbIQtKAqFUl0gVTny7hA6TQd4%2F6ugCs4eFH7FeV8FOeTn4puUoSLM7aVTfhDFO5w2FxzY%2F0JOAON2llkBoDprw05pgAPS06HTPydaFWYwdJRc7o3bQ1SB%2FzALQVwiioX6X2dEjM7u%2BCs%3D\"\n   ]\n ]\n\n\n]",
 				"compile_static":false,
-				"code":"return [\"files\": [\n   [\n     \"name\": \"9272e41f-2cbe-45bc-a123-0ad9cce82803teams_meeting_bot_async_c_147_u_66361_seg_20250919_120446_0001.webm\",\n     \"size\": 0,\n     \"source\": \"meeting-recordings/local_file/9272e41f-2cbe-45bc-a123-0ad9cce82803teams_meeting_bot_async_c_147_u_66361_seg_20250919_120446_0001.webm\",\n     \"sourceType\": \"CLOUD_STORAGE\",\n     \"ua:type\": \"FILE\",\n     \"link\": \"https://orbit.uat.unifyapps.com/api/file/download/__UNIFY_ENCR_AWS__V0__AQICAHj7fNra7CINOgG9eTjejy3PBrVJye7rSj0iXl5U48AE3wHNY0qzSq3V1YnjJpiJb0viAAAA6DCB5QYJKoZIhvcNAQcGoIHXMIHUAgEAMIHOBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDPR6RkcqyMYyzoRb2AIBEICBoJgPFiY7PcNAZf0nB69v%2FDL6u4uV1UeWEBFqJnNjank1s9L9Ugw%2FyDSmt%2Fyap%2FV36QKhCnUlsgNH%2FB7ZfNWhGN1lyqhWIOwAbRV%2FlkY5nUluDF29PL1sgcCFEkvfqt5%2FQqbGeksyxxopnSnkA9r3auowuyhJhpBK3ryHGqC1aPCYVLHzO6uAh5oLfz%2BDxixgacPZFK95%2Brmm4qq7yz9v0u8%3D\"\n   ],\n   [\n     \"name\": \"6a179028-2559-45de-b7a5-eb10dbb0b8deteams_meeting_bot_async_c_147_u_66361_seg_20250919_120446_0002.webm\",\n     \"size\": 0,\n     \"source\": \"meeting-recordings/local_file/6a179028-2559-45de-b7a5-eb10dbb0b8deteams_meeting_bot_async_c_147_u_66361_seg_20250919_120446_0002.webm\",\n     \"sourceType\": \"CLOUD_STORAGE\",\n     \"ua:type\": \"FILE\",\n     \"link\": \"https://orbit.uat.unifyapps.com/api/file/download/__UNIFY_ENCR_AWS__V0__AQICAHj7fNra7CINOgG9eTjejy3PBrVJye7rSj0iXl5U48AE3wGxUNujxnPQQ0SpI25gh01SAAAA6DCB5QYJKoZIhvcNAQcGoIHXMIHUAgEAMIHOBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDKNU7xMCXdH21TjGZgIBEICBoBBy%2BlpB%2BqZEKU%2BtYJqu9zu82qNldDN1x4BnMFfJxEQQMhSK5kI678md4s9pZ33xczs1v863RuxnbIQtKAqFUl0gVTny7hA6TQd4%2F6ugCs4eFH7FeV8FOeTn4puUoSLM7aVTfhDFO5w2FxzY%2F0JOAON2llkBoDprw05pgAPS06HTPydaFWYwdJRc7o3bQ1SB%2FzALQVwiioX6X2dEjM7u%2BCs%3D\"\n   ]\n ]\n\n\n]"
+				"captureStdOutput":false
 			},
 			"skip":false,
 			"subTitle":"Code by UnifyApps",
@@ -326,11 +294,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_ZE48j",
-			"index":7,
+			"index":6,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -582,11 +550,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_E2a99",
-			"index":8,
+			"index":7,
 			"inputs":{
 				"repeatMode":"SINGLE",
 				"listSource":"{{ n_G5pMv.outputs.result.files }}",
@@ -605,11 +573,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_E2a99@_UxBP5-1@l",
 			"id":"n_of6WK",
-			"index":9,
+			"index":8,
 			"inputs":{
 				"automationId":"68b962c8e4492b2af300db51",
 				"runtimeConnections":{},
@@ -642,7 +610,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_E2a99@_UxBP5-1@l",
 			"id":"n_Ohr4G",
-			"index":10,
+			"index":9,
 			"inputs":{
 				"itemToAdd":"{{ n_of6WK.outputs.result[0].text }}",
 				"insertLocation":"END",
@@ -666,25 +634,27 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_FSSYU",
-			"index":11,
+			"index":10,
 			"inputs":{
 				"output":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"transcriptString":{
 							"type":"string",
 							"title":"Transcript String"
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				},
 				"input":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"transcripts":{
 							"type":"array",
@@ -693,12 +663,11 @@
 							},
 							"title":"Transcripts"
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				},
-				"compile_static":false,
 				"code":"def transcripts = binding.hasVariable('transcripts') ? transcripts : []\nreturn [\"transcriptString\" : transcripts.join(' ')];",
+				"compile_static":false,
+				"captureStdOutput":false,
 				"parameters":{
 					"transcripts":{
 						"source":"{{ n_ZE48j.outputs.items }}",
@@ -725,7 +694,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_aYiZT",
-			"index":12,
+			"index":11,
 			"inputs":{
 				"source_text":"{{ n_FSSYU.outputs.result.transcriptString }}",
 				"instruction":"You are a highly precise and effective AI meeting assistant. Given the full transcript text of a meeting recorded by an AI bot, perform the following tasks with absolute fidelity to the source material. Do NOT add, interpret, or omit content beyond what is present.\n\n1. Summary:\n- Provide a clear and concise summary of the meeting in 4 to 6 sentences.\n- Focus on what was discussed, decided, or accomplished.\n\n2. Purpose:\n- State the primary purpose or objective of the meeting in 1 to 2 sentences.\n\n3. Key Takeaways:\n- List the critical insights, decisions, or conclusions from the meeting as bullet points.\n\n4. Topics Discussed:\n- Enumerate all major topics or agenda items addressed in the meeting as a bulleted list.\n\n5. Next Steps:\n- List the next steps identified during the meeting as bullet points.\n- These are the general tasks or follow-up activities discussed that may or may not have specific ownership assigned.\n\n6. Action Items with Person Tagging:\n- Extract all specific actionable tasks assigned during the meeting.\n- For each action item, state:\n   - The responsible person’s proper name (no generic labels).\n   - The exact task assigned or next set of actions that person must take.\n   - Any deadlines or due dates mentioned.\n- If no specific action items or tasks are assigned to individuals, explicitly state: \"No specific actionable tasks or assignments were made during this meeting.\"\n- Present this as a Markdown table with columns: Owner | Action Item | Deadline.\n\n7. Exact Verbatim Transcript:\n- Provide the complete verbatim transcript of the meeting.\n- Include speaker names as identified via diarisation.\n- Include accurate start and end timestamps for each speaker segment in \"HH:MM:SS\" format.\n- Present this transcript as a JSON array of objects with fields: \"speaker\", \"transcript\", \"start_time\", and \"end_time\".\n\nImportant Instructions:\n- Do NOT add any subjective commentary, tone analysis, or assumptions.\n- Use only speaker names identified in the transcript; avoid generic naming.\n- Return all outputs clearly and distinctly labeled, in the order specified above.\n- Ensure that every section is precise, fact-based, and fully supported by the transcript.\n\n",
@@ -744,36 +713,37 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_R0yZO",
-			"index":13,
+			"index":12,
 			"inputs":{
 				"output":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"prompt":{
 							"type":"string",
 							"title":"Prompt"
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				},
 				"input":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"transcript":{
 							"type":"string",
 							"title":"Transcript"
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				},
-				"compile_static":false,
 				"code":"def transcript = transcript\n\ndef content = \"\"\"You are a highly precise and effective AI meeting assistant. Given the full transcript text of a meeting recorded by an AI bot, perform the following tasks with absolute fidelity to the source material. Do NOT add, interpret, or omit content beyond what is present.\n\n1. Summary:\n- Provide a clear and concise summary of the meeting in 4 to 6 sentences.\n- Focus on what was discussed, decided, or accomplished.\n\n2. Purpose:\n- State the primary purpose or objective of the meeting in 1 to 2 sentences.\n\n3. Key Takeaways:\n- List the critical insights, decisions, or conclusions from the meeting as bullet points.\n\n4. Topics Discussed:\n- Enumerate all major topics or agenda items addressed in the meeting as a bulleted list.\n\n5. Next Steps:\n- List the next steps identified during the meeting as bullet points.\n- These are the general tasks or follow-up activities discussed that may or may not have specific ownership assigned.\n\n6. Action Items with Person Tagging:\n- Extract all specific actionable tasks assigned during the meeting.\n- For each action item, state:\n   - The responsible person’s proper name (no generic labels).\n   - The exact task assigned or next set of actions that person must take.\n   - Any deadlines or due dates mentioned.\n- If no specific action items or tasks are assigned to individuals, explicitly state: \"No specific actionable tasks or assignments were made during this meeting.\"\n- Present this as a Markdown table with columns: Owner | Action Item | Deadline.\n\n7. Exact Verbatim Transcript:\n- Provide the complete verbatim transcript of the meeting.\n- Include speaker names as identified via diarisation.\n- Include accurate start and end timestamps for each speaker segment in \"HH:MM:SS\" format.\n- Present this transcript as a JSON array of objects with fields: \"speaker\", \"transcript\", \"start_time\", and \"end_time\".\n\nImportant Instructions:\n- Do NOT add any subjective commentary, tone analysis, or assumptions.\n- Use only speaker names identified in the transcript; avoid generic naming.\n- Return all outputs clearly and distinctly labeled, in the order specified above.\n- Ensure that every section is precise, fact-based, and fully supported by the transcript.\n\n\nReturn the output in the following json format:\n{\n  \"summary\": \"Concise summary here...\",\n  \"purpose\": \"Primary objective here...\",\n  \"key_takeaways\": [\n    \"Takeaway 1\",\n    \"Takeaway 2\"\n  ],\n  \"topics_discussed\": [\n    \"Topic 1\",\n    \"Topic 2\"\n  ],\n  \"next_steps\": [\n    \"Next step 1\",\n    \"Next step 2\"\n  ],\n  \"action_items\": [\n    {\n      \"owner\": \"John Doe\",\n      \"action_item\": \"Prepare project report\",\n      \"deadline\": \"2025-10-01\"\n    },\n    {\n      \"owner\": \"No specific actionable tasks or assignments were made during this meeting.\",\n      \"action_item\": \"\",\n      \"deadline\": \"\"\n    }\n  ],\n  \"verbatim_transcript\": [\n    {\n      \"speaker\": \"Alice\",\n      \"transcript\": \"Hello, everyone.\",\n      \"start_time\": \"00:00:00\",\n      \"end_time\": \"00:00:03\"\n    }\n  ]\n}\n\n\"\"\" + transcript \n\nreturn [\"prompt\" : content]",
+				"compile_static":false,
+				"captureStdOutput":false,
 				"parameters":{
 					"transcript":"{{ n_FSSYU.outputs.result.transcriptString }}"
 				}
@@ -795,7 +765,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_n2mOW",
-			"index":14,
+			"index":13,
 			"inputs":{
 				"automationId":"66dfd76eb70dad256986b784",
 				"runtimeConnections":{},
@@ -824,7 +794,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_JkuXa",
-			"index":15,
+			"index":14,
 			"inputs":{
 				"jsonSchema":{
 					"type":"object",
@@ -942,7 +912,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"_tr7Yk",
-			"index":16,
+			"index":15,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"meeting_bot_data",
@@ -1000,7 +970,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_SzED4",
-			"index":17,
+			"index":16,
 			"inputs":{
 				"source_text":"{{ n_n2mOW.outputs.llmResponse }}",
 				"instruction":"Prompt:\n\nYou are an expert at writing professional, concise, and highly readable business emails. Use the following meeting transcript or notes to generate a short email. Follow these instructions carefully:\n\nSubject Line:\nCreate a direct and relevant subject line that clearly reflects the meeting’s main topic.\n\nSummary Section:\n\nWrite a brief 4–5 line overview of the meeting.\n\nInclude only essential points: key discussions, decisions, and context needed for action.\n\nUse short, simple sentences.\n\nKeep each point on a separate line to enhance skimmability.\n\nAction Items Section:\n\nList each task in a bullet point.\n\nFor each action item, clearly include:\n\nTask: What needs to be done\n\nOwner: Person responsible\n\nDeadline: Date or event\n\nDependencies/Links: If relevant\n\nUse separate lines for each piece of information.\n\nMake it easy to scan at a glance.\n\nFormatting & Style:\n\nUse clear headers: \"Summary\" and \"Action Items.\"\n\nSpace out sections with line breaks for readability.\n\nAvoid jargon, filler, or long paragraphs.\n\nKeep it ultra-minimal: only include necessary details.\n\nAvoid numbered lists, footers, or unrelated commentary.\n\nSignature:\nClose with a simple professional sign-off:\n\nExample: \"Best regards,\" followed by Name and Title\n\nOutput Example:\n\nSubject: [Meeting Title/Topic]\n\nSummary:\n[Key point 1]\n[Key point 2]\n[Key point 3]\n[Key point 4]\n\nAction Items:\n\n[Task 1]\nOwner: [Name]\nDeadline: [Date]\n\n[Task 2]\nOwner: [Name]\nDeadline: [Date]\n\nBest regards,\n[Your Name]\n[Your Title]\n\nGoal: Make the email extremely readable, scannable, and actionable. Every detail should be clear at a glance with zero clutter.",
@@ -1020,18 +990,17 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_JgjY1",
-			"index":18,
+			"index":17,
 			"inputs":{
 				"email_type":"text",
 				"subject":"Meeting Summary | UnifyApps",
 				"to":{
-					"source":"{{ n_n4wKZ.outputs.attendees }}",
-					"ua:type":"mappedArray",
-					"items":"{{ n_n4wKZ.outputs.attendees[0].email }}"
+					"source":"hitesh.rao@unifyapps.com",
+					"ua:type":"mappedArray"
 				},
 				"message":"Hello Team,\nHere’s a summary of today’s meeting:\nPurpose: {{ n_JkuXa.outputs.result.purpose }}\n\nKey Takeaways: {{ n_JkuXa.outputs.result.key_takeaways[0] }}\n\nTopics Discussed: {{ n_JkuXa.outputs.result.topics_discussed[0] }}\n\nNext Steps: {{ n_JkuXa.outputs.result.next_steps[0] }}\n\nAction Items:\nOwner: {{ n_JkuXa.outputs.result.action_items[0].owner }}\nAction Item: {{ n_JkuXa.outputs.result.action_items[0].action_item }}\nDeadline: {{ n_JkuXa.outputs.result.action_items[0].deadline }}\n\nVerbatim Transcript Highlights:\nSpeaker: {{ n_JkuXa.outputs.result.verbatim_transcript[0].speaker }}\nContent: {{ n_JkuXa.outputs.result.verbatim_transcript[0].transcript }}\nTime: {{ n_JkuXa.outputs.result.verbatim_transcript[0].start_time }} - {{ n_JkuXa.outputs.result.verbatim_transcript[0].end_time }}\n\nThank you for your participation.\nBest regards,\nUnifyApps Meeting Assistant"
 			},
@@ -1049,7 +1018,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_46RcJ",
-			"index":19,
+			"index":18,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -1070,5 +1039,5 @@
 		}
 	},
 	"standard":false,
-	"version":74
+	"version":75
 }
