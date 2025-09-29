@@ -37,7 +37,7 @@
 	"id":"68da44f64540ef53ef3497aa",
 	"lastModifiedBy":155543,
 	"lcName":"wadesfgwafe",
-	"modifiedTime":1759136106079,
+	"modifiedTime":1759136112406,
 	"name":"wadesfgwafe",
 	"nodes":[
 		{
@@ -158,7 +158,7 @@
 				"connectionType":"DIRECT",
 				"sslVerify":false,
 				"path":"/internal/mongo-internal/create-indexes-for-collection",
-				"baseUrl":"{{ n_Co7t5.outputs.result[0].baseInternalUrl }}",
+				"baseUrl":"{{ n_Co7t5.outputs.baseInternalUrl }}",
 				"httpVersion":"HTTP_2",
 				"bodySchema":{
 					"type":"object",
@@ -235,5 +235,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
