@@ -11,12 +11,19 @@
 			"skip":false,
 			"toNodeId":"n_oMsmp",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_oMsmp",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_tP6YE",
+			"type":"next"
 		}
 	],
 	"id":"68da8c20de004f45854a0422",
 	"lastModifiedBy":15,
 	"lcName":"test",
-	"modifiedTime":1759155966159,
+	"modifiedTime":1759156042366,
 	"name":"test",
 	"nodes":[
 		{
@@ -26,7 +33,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_91CtH-1",
 			"id":"n_9JRJi",
@@ -53,7 +60,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_91CtH-1",
 			"id":"n_oMsmp",
@@ -65,6 +72,34 @@
 					"FileLeafRef":"ddd"
 				},
 				"list":"tasklist",
+				"siteType":""
+			},
+			"skip":false,
+			"subTitle":"Microsoft SharePoint",
+			"title":"Create list item",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"microsoft_sharepoint",
+				"resourceVersion":2395,
+				"connectionId":"68c90bcc2e17d80327e5d966",
+				"resourceName":"microsoft_sharepoint_create_list_item",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_91CtH-1",
+			"id":"n_tP6YE",
+			"index":3,
+			"inputs":{
+				"site_name":"",
+				"objectSourceResourceName":"microsoft_sharepoint_fetch_list_fields",
+				"record":{
+					"IdForTerm":"jjdjcd"
+				},
+				"list":"TaxonomyHiddenList",
 				"siteType":""
 			},
 			"skip":false,
@@ -90,5 +125,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
