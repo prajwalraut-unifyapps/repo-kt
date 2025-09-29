@@ -45,7 +45,7 @@
 	"id":"68da278c0d4c077d43dd4404",
 	"lastModifiedBy":44109,
 	"lcName":"test",
-	"modifiedTime":1759127872411,
+	"modifiedTime":1759127878631,
 	"name":"test",
 	"nodes":[
 		{
@@ -286,15 +286,7 @@
 									"title":"List Item Source"
 								},
 								"items":{
-									"additionalProperties":false,
-									"type":[
-										"object",
-										"string",
-										"number",
-										"boolean",
-										"integer"
-									],
-									"properties":{}
+									"type":"object"
 								}
 							}
 						}
@@ -302,7 +294,11 @@
 				}
 			},
 			"inputs":{
-				"ua:title":"response"
+				"createList":{
+					"ua:type":"mappedArray"
+				},
+				"ua:title":"response",
+				"ua:list_type":"OBJECT"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -407,5 +403,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
