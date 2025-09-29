@@ -1,5 +1,7 @@
 {
-	"appsUsed":["whatsapp"],
+	"appsUsed":[
+		"whatsapp"
+	],
 	"createdTime":1721374317351,
 	"deleted":false,
 	"description":"",
