@@ -6,7 +6,7 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"n_389Rc",
+			"fromNodeId":"n_gssW0",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_H5n1G",
@@ -59,6 +59,13 @@
 			"fromNodeId":"n_uzkh3",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_UFuMx",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_UFuMx",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_ErN5r",
 			"type":"next"
 		}
@@ -66,53 +73,72 @@
 	"id":"68daa0178592117bcbd4f3e4",
 	"lastModifiedBy":569,
 	"lcName":"test-loop",
-	"modifiedTime":1759158763474,
+	"modifiedTime":1759158988759,
 	"name":"test-loop",
 	"nodes":[
 		{
 			"context":{
-				"appName":"webhooks",
-				"resourceVersion":816,
-				"resourceName":"webhooks_default"
+				"appName":"callables",
+				"resourceVersion":879,
+				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_tazd1-1",
-			"id":"n_389Rc",
+			"id":"n_gssW0",
 			"index":1,
 			"inputs":{
-				"request":{
-					"contentType":"application/json",
-					"body":{
-						"type":"object",
-						"properties":{
-							"array":{
-								"type":"array",
-								"items":{
-									"type":"object",
-									"properties":{
-										"field1":{
-											"type":"string",
-											"title":"Field 1"
-										}
-									},
-									"additionalProperties":false,
-									"required":[]
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"array":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"field2":{
+										"type":"string",
+										"title":"Field 2"
+									}
 								},
-								"title":"Array"
-							}
-						},
-						"additionalProperties":false,
-						"required":[]
+								"additionalProperties":false,
+								"required":[]
+							},
+							"title":"Array"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"array":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"field1":{
+										"type":"string",
+										"title":"Field 1"
+									}
+								},
+								"additionalProperties":false,
+								"required":[]
+							},
+							"title":"Array"
+						}
 					}
 				}
 			},
 			"skip":false,
-			"subTitle":"Webhook",
-			"title":"New event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"WEBHOOK"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
@@ -175,7 +201,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_tazd1-1",
 			"id":"n_k3mxL",
@@ -456,7 +482,7 @@
 							"property":"{{ n_H5n1G.outputs.length }}",
 							"filter":{
 								"operator":"NOT_EQUAL",
-								"value":"=LEN({{ n_389Rc.outputs.body.array }})"
+								"value":"=LEN({{ n_gssW0.outputs.array }})"
 							}
 						}
 					],
@@ -484,7 +510,7 @@
 			"index":5,
 			"inputs":{
 				"positionFrom":"START",
-				"listSource":"{{ n_389Rc.outputs.body.array }}",
+				"listSource":"{{ n_gssW0.outputs.array }}",
 				"elementPosition":"={{ n_uzkh3.outputs.index }}+1"
 			},
 			"skip":false,
@@ -545,6 +571,35 @@
 		},
 		{
 			"context":{
+				"appName":"callables",
+				"resourceVersion":896,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_tazd1-1",
+			"id":"n_UFuMx",
+			"index":8,
+			"inputs":{
+				"result":{
+					"array":{
+						"source":"{{ n_k3mxL.outputs.items }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"field2":"{{ n_k3mxL.outputs.items[0].test1 }}"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		},
+		{
+			"context":{
 				"appName":"stop"
 			},
 			"debug":false,
@@ -552,7 +607,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_tazd1-1",
 			"id":"n_ErN5r",
-			"index":8,
+			"index":9,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -576,5 +631,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
