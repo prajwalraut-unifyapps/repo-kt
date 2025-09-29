@@ -6,46 +6,222 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_MGUsS",
+			"fromNodeId":"n_35XWK",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_YUyAI",
+			"toNodeId":"n_Co7t5",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Co7t5",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_vHRPy",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_vHRPy",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_KOdra",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_KOdra",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_hDqQH",
 			"type":"next"
 		}
 	],
 	"id":"68da44f64540ef53ef3497aa",
 	"lastModifiedBy":155543,
 	"lcName":"wadesfgwafe",
-	"modifiedTime":1759134966180,
+	"modifiedTime":1759136106079,
 	"name":"wadesfgwafe",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_MGUsS-1",
-			"id":"_MGUsS",
-			"index":0,
+			"id":"n_35XWK",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":917,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_MGUsS-1",
-			"id":"_YUyAI",
-			"index":0,
+			"id":"n_Co7t5",
+			"index":2,
+			"inputs":{
+				"automationId":"68b932d26607f33c4d7f0988",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_MGUsS-1",
+			"id":"n_vHRPy",
+			"index":3,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"res":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Res"
+						}
+					}
+				},
+				"code":"return [\n  res : [\n    [\n      name : \"testindex\",\n      indexKeyDefinition : [\n        field : \"testField\",\n        type : 1\n      ]\n    ]\n  ]\n]",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"custom_http_endpoint",
+				"resourceVersion":888,
+				"resourceName":"custom_http_endpoint_execute",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_MGUsS-1",
+			"id":"_KOdra",
+			"index":4,
+			"inputs":{
+				"isAsync":false,
+				"enableProxy":false,
+				"requestTimeoutInSecs":-1,
+				"httpMethod":"POST",
+				"body":{
+					"resourceType":"Entity",
+					"collectionName":"testindexess",
+					"indexDefinitions":{
+						"source":"{{ n_vHRPy.outputs.result.res }}",
+						"ua:type":"mappedArray"
+					}
+				},
+				"connectionType":"DIRECT",
+				"sslVerify":false,
+				"path":"/internal/mongo-internal/create-indexes-for-collection",
+				"baseUrl":"{{ n_Co7t5.outputs.result[0].baseInternalUrl }}",
+				"httpVersion":"HTTP_2",
+				"bodySchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"resourceType":{
+							"type":"string",
+							"title":"Resource Type"
+						},
+						"collectionName":{
+							"type":"string",
+							"title":"Collection Name"
+						},
+						"indexDefinitions":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false,
+								"required":[]
+							},
+							"title":"Index Definitions"
+						}
+					}
+				},
+				"queryParamsList":[
+					{
+						"key":"customerIdCSV",
+						"value":"1"
+					}
+				],
+				"responseContentType":"application/json",
+				"authType":"CUSTOM",
+				"requestContentType":"application/json",
+				"ignoreTrailingSlashes":false,
+				"certificateType":"CERT_STRING"
+			},
+			"skip":false,
+			"subTitle":"Custom HTTP Endpoint",
+			"title":"Execute REST request",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_MGUsS-1",
+			"id":"n_hDqQH",
+			"index":5,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":155543,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +235,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
