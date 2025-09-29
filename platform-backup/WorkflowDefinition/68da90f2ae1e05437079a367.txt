@@ -1,49 +1,75 @@
 {
-	"appsUsed":[],
+	"appsUsed":[
+		
+	],
 	"createdTime":1759154418210,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_4m4jc",
+			"fromNodeId":"n_APAw2",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_Mv72Q",
+			"toNodeId":"n_sN5qv",
 			"type":"next"
 		}
 	],
 	"id":"68da90f2ae1e05437079a367",
 	"lastModifiedBy":44105,
 	"lcName":"testtt",
-	"modifiedTime":1759154418210,
+	"modifiedTime":1759154438584,
 	"name":"testtt",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_4m4jc-1",
-			"id":"_4m4jc",
-			"index":0,
+			"id":"n_APAw2",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":39,
+				"resourceName":"code_by_unifyapps_csharp",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_4m4jc-1",
-			"id":"_Mv72Q",
-			"index":0,
+			"id":"n_sN5qv",
+			"index":2,
+			"inputs":{
+				"isAsync":false
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute CSharp script",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":44105,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -54,6 +80,8 @@
 		}
 	},
 	"standard":false,
-	"tags":[],
-	"version":0
+	"tags":[
+		
+	],
+	"version":1
 }
