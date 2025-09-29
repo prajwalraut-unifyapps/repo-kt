@@ -6,46 +6,107 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_7n4yE",
+			"fromNodeId":"n_pXezB",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_K483h",
+			"toNodeId":"n_RYNUq",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_RYNUq",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_EdGIl",
 			"type":"next"
 		}
 	],
 	"id":"68daa7e0b08cb354b38f8345",
 	"lastModifiedBy":3952,
 	"lcName":"async failures",
-	"modifiedTime":1759160288450,
+	"modifiedTime":1759160322235,
 	"name":"Async failures",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7n4yE-1",
-			"id":"_7n4yE",
-			"index":0,
+			"id":"n_pXezB",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"files_by_unifyapps",
+				"resourceVersion":831,
+				"resourceName":"files_by_unifyapps_create_temp_file",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7n4yE-1",
-			"id":"_K483h",
-			"index":0,
+			"id":"n_RYNUq",
+			"index":2,
+			"inputs":{
+				"isTmp":true,
+				"initialContentType":"plainText",
+				"type":"SINGLE",
+				"fileType":"txt"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Files by UnifyApps",
+			"title":"Create a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":416,
+				"resourceName":"utility_by_unifyapps_run_sql_query_on_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_7n4yE-1",
+			"id":"n_EdGIl",
+			"index":3,
+			"inputs":{
+				"ignore_errors":false,
+				"file":"{{ n_RYNUq.outputs.fileDetails }}",
+				"all_varchar":false,
+				"sqlQuery":"SELEC * FROM FILE;",
+				"number_of_files":"SINGLE_FILE",
+				"hasLargeFiles":true,
+				"fileType":"csv"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Run SQL query on file",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":3952,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +120,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
