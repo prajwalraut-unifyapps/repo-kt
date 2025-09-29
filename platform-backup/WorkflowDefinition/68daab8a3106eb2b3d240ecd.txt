@@ -16,7 +16,7 @@
 	"id":"68daab8a3106eb2b3d240ecd",
 	"lastModifiedBy":2621,
 	"lcName":"test sisense",
-	"modifiedTime":1759161353585,
+	"modifiedTime":1759161368980,
 	"name":"test sisense",
 	"nodes":[
 		{
@@ -59,6 +59,7 @@
 			"id":"n_rI4Xd",
 			"index":2,
 			"inputs":{
+				"datasource":"Sample Lead Generation",
 				"query":"SELECT COUNT(*) as total_records FROM [Lead Generation]"
 			},
 			"skip":false,
@@ -84,5 +85,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
