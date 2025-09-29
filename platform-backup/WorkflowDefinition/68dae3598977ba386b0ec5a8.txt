@@ -6,46 +6,89 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_u2Ap7",
+			"fromNodeId":"n_Iee4G",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_9MpX1",
+			"toNodeId":"n_UkJfb",
 			"type":"next"
 		}
 	],
 	"id":"68dae3598977ba386b0ec5a8",
 	"lastModifiedBy":175325,
 	"lcName":"excelformulaslocaldquhlqtnjc",
-	"modifiedTime":1759175513604,
+	"modifiedTime":1759175525547,
 	"name":"ExcelFormulasLocaldQuhlqTnJc",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":879,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_u2Ap7-1",
-			"id":"_u2Ap7",
-			"index":0,
+			"id":"n_Iee4G",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"r":{
+							"type":"string",
+							"title":"r"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"a":{
+							"type":"string",
+							"title":"a"
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":896,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_u2Ap7-1",
-			"id":"_9MpX1",
-			"index":0,
+			"id":"n_UkJfb",
+			"index":2,
+			"inputs":{
+				"result":{
+					"r":"=DMAX({\"Type\",\"Value\";\"A\",2;\"B\",4;\"A\",6}, 2, {\"Type\";\"A\"})"
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":175325,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +102,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
