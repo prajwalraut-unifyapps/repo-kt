@@ -66,7 +66,7 @@
 	"id":"68daa0178592117bcbd4f3e4",
 	"lastModifiedBy":569,
 	"lcName":"test-loop",
-	"modifiedTime":1759158591791,
+	"modifiedTime":1759158650447,
 	"name":"test-loop",
 	"nodes":[
 		{
@@ -138,7 +138,7 @@
 					"type":"object",
 					"properties":{
 						"length":{
-							"type":"string",
+							"type":"integer",
 							"title":"Length"
 						}
 					},
@@ -155,7 +155,7 @@
 					"type":"object",
 					"properties":{
 						"length":{
-							"type":"string",
+							"type":"integer",
 							"title":"Length"
 						}
 					},
@@ -175,7 +175,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_tazd1-1",
 			"id":"n_k3mxL",
@@ -576,5 +576,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
