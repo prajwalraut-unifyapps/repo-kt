@@ -1,0 +1,84 @@
+{
+	"appsUsed":[
+		"power_bi"
+	],
+	"createdTime":1759130147869,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_gt1jw",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_YOWLG",
+			"type":"next"
+		}
+	],
+	"id":"68da32230d4c077d43dd5f0a",
+	"lastModifiedBy":1234,
+	"lcName":"tetscc",
+	"modifiedTime":1759131398377,
+	"name":"tetscc",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_gt1jw-1",
+			"id":"_gt1jw",
+			"index":1,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.objects.items.table",
+					"root.objects.items.partition"
+				]
+			},
+			"context":{
+				"appName":"power_bi",
+				"resourceVersion":6,
+				"connectionId":"68da36cff6d30d674226dc67",
+				"resourceName":"power_bi_refresh_dataset",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_gt1jw-1",
+			"id":"n_YOWLG",
+			"index":2,
+			"inputs":{
+				"dataset_id":"44ecfa06-6415-4e47-846f-9396d7cc49b7",
+				"notifyOption":"MailOnCompletion"
+			},
+			"skip":false,
+			"subTitle":"Power BI",
+			"title":"Refresh dataset",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175510,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
