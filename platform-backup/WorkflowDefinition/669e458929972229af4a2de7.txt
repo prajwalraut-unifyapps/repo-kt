@@ -1,5 +1,7 @@
 {
-	"appsUsed":["slack"],
+	"appsUsed":[
+		"slack"
+	],
 	"createdTime":1721648521710,
 	"deleted":true,
 	"edges":[
