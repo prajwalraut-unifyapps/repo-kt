@@ -16,7 +16,7 @@
 	"id":"68d535ea16f1300557ad60f6",
 	"lastModifiedBy":67744,
 	"lcName":"test-variables",
-	"modifiedTime":1759130528989,
+	"modifiedTime":1759130627130,
 	"name":"test-variables",
 	"nodes":[
 		{
@@ -52,20 +52,7 @@
 							}
 						}
 					},
-					"contentType":"multipart/form-data",
-					"multipartBody":{
-						"type":"object",
-						"properties":{
-							"test":{
-								"type":"string",
-								"title":"Test"
-							}
-						},
-						"additionalProperties":false,
-						"required":[
-							"test"
-						]
-					}
+					"contentType":"multipart/form-data"
 				},
 				"endpointType":"REST",
 				"streamingResponse":false
@@ -154,5 +141,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
