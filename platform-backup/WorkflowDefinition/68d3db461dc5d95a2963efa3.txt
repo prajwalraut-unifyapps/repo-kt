@@ -5,12 +5,12 @@
 	"createdTime":1758714694174,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759136398536,
+		"deployedAt":1759136439071,
 		"deployedBy":46209,
-		"deployedDefinitionId":"68da4a8bd9b42a279b7236e5",
+		"deployedDefinitionId":"68da4ab6d9b42a279b723782",
 		"status":"DEPLOYED",
-		"version":6,
-		"workflowVersion":19
+		"version":7,
+		"workflowVersion":20
 	},
 	"edges":[
 		{
@@ -22,6 +22,28 @@
 		},
 		{
 			"fromNodeId":"n_0aTNj",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Mm8dG",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Mm8dG",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_1Zwuz",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_1Zwuz",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Mm8dG",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Mm8dG",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_tFH3l",
@@ -53,7 +75,7 @@
 	"id":"68d3db461dc5d95a2963efa3",
 	"lastModifiedBy":46209,
 	"lcName":"tesgsd",
-	"modifiedTime":1759136437326,
+	"modifiedTime":1759137969683,
 	"name":"tesgsd",
 	"nodes":[
 		{
@@ -420,7 +442,7 @@
 				"createList":{
 					"ua:type":"mappedArray"
 				},
-				"ua:title":"List",
+				"ua:title":"ListString",
 				"ua:list_type":"STRING"
 			},
 			"outputSchema":{
@@ -430,7 +452,7 @@
 					"properties":{
 						"items":{
 							"type":"array",
-							"title":"List",
+							"title":"ListString",
 							"disableActions":true,
 							"items":{
 								"type":"string"
@@ -447,6 +469,62 @@
 		{
 			"context":{
 				"appName":"loop",
+				"resourceVersion":857,
+				"resourceName":"loop_while",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_f8tNU-1",
+			"id":"n_Mm8dG",
+			"index":3,
+			"inputs":{
+				"condition":{
+					"filters":[
+						{
+							"property":"1",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"1"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"captureIterations":false
+			},
+			"skip":false,
+			"subTitle":"Loop",
+			"title":"While loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":864,
+				"resourceName":"variable_by_unifyapps_add_item_to_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_Mm8dG@_f8tNU-1@l",
+			"id":"n_1Zwuz",
+			"index":4,
+			"inputs":{
+				"itemToAdd":"add",
+				"insertLocation":"END",
+				"listName":"{{ n_0aTNj.outputs.items[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Add item to list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"loop",
 				"resourceVersion":847,
 				"resourceName":"loop_for_each",
 				"type":"APPLICATION"
@@ -456,7 +534,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_f8tNU-1",
 			"id":"n_tFH3l",
-			"index":3,
+			"index":5,
 			"inputs":{
 				"repeatMode":"SINGLE",
 				"listSource":"{{ n_0aTNj.outputs.items }}",
@@ -479,7 +557,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_tFH3l@_f8tNU-1@l",
 			"id":"n_o0AJ8",
-			"index":4,
+			"index":6,
 			"inputs":{
 				"code":"return [\"success\": true]",
 				"compile_static":false,
@@ -499,7 +577,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_f8tNU-1",
 			"id":"n_n3mc9",
-			"index":5,
+			"index":7,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -523,5 +601,5 @@
 	"tags":[
 		
 	],
-	"version":20
+	"version":21
 }
