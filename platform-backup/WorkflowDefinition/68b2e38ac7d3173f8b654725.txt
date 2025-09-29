@@ -1,6 +1,5 @@
 {
 	"appsUsed":[
-		"slack",
 		"typeform"
 	],
 	"createdTime":1756554122600,
@@ -14,18 +13,12 @@
 		"workflowVersion":3
 	},
 	"edges":[
-		{
-			"fromNodeId":"n_PAmgQ",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_jWd4q",
-			"type":"next"
-		}
+		
 	],
 	"id":"68b2e38ac7d3173f8b654725",
 	"lastModifiedBy":15080,
 	"lcName":"typeform",
-	"modifiedTime":1759155005317,
+	"modifiedTime":1759155019804,
 	"name":"typeform",
 	"nodes":[
 		{
@@ -36,13 +29,14 @@
 				"resourceName":"typeform_on_form_response"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_2lwho-1",
 			"id":"n_PAmgQ",
 			"index":1,
 			"inputs":{
-				"form_id":"zR3pMLJa"
+				"form_id":"zR3pMLJa",
+				"tag":"UEQQdqN9"
 			},
 			"skip":false,
 			"subTitle":"Typeform",
@@ -51,32 +45,6 @@
 				"type":"EVENT"
 			},
 			"type":"START"
-		},
-		{
-			"context":{
-				"appName":"slack",
-				"resourceVersion":6153,
-				"connectionId":"68da93197c4eaf6df8215a99",
-				"resourceName":"slack_post_message_in_channel",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_2lwho-1",
-			"id":"n_jWd4q",
-			"index":2,
-			"inputs":{
-				"link_names":true,
-				"messageType":"text",
-				"channel":"C07LVJZ4KQV",
-				"text":"{{ n_PAmgQ.outputs.form_response }}",
-				"mrkdwn":true
-			},
-			"skip":false,
-			"subTitle":"Slack",
-			"title":"Post message",
-			"type":"ACTION"
 		}
 	],
 	"ownerUserId":15080,
@@ -96,5 +64,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
