@@ -24,29 +24,29 @@
 			"fromNodeId":"n_0aTNj",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_811u1",
+			"toNodeId":"n_ikqqq",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_811u1",
+			"fromNodeId":"n_ikqqq",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_CpW4J",
+			"toNodeId":"n_zHoI4",
 			"type":"loop"
 		},
 		{
-			"fromNodeId":"n_CpW4J",
+			"fromNodeId":"n_zHoI4",
 			"name":"loopback",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_811u1",
+			"toNodeId":"n_ikqqq",
 			"type":"next"
 		}
 	],
 	"id":"68d3db461dc5d95a2963efa3",
 	"lastModifiedBy":46209,
 	"lcName":"tesgsd",
-	"modifiedTime":1759136260586,
+	"modifiedTime":1759136296526,
 	"name":"tesgsd",
 	"nodes":[
 		{
@@ -446,10 +446,10 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_f8tNU-1",
-			"id":"n_811u1",
+			"id":"n_ikqqq",
 			"index":3,
 			"inputs":{
 				"repeatMode":"SINGLE",
@@ -462,26 +462,14 @@
 			"type":"LOOP"
 		},
 		{
-			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":866,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
-			"groupId":"n_811u1@_f8tNU-1@l",
-			"id":"n_CpW4J",
+			"groupId":"n_ikqqq@_f8tNU-1@l",
+			"id":"n_zHoI4",
 			"index":4,
-			"inputs":{
-				"code":"return [\n  \"success\": true\n]",
-				"compile_static":false,
-				"captureStdOutput":false
-			},
 			"skip":false,
-			"subTitle":"Code by UnifyApps",
-			"title":"Execute Groovy code",
+			"title":"Select an app and action",
 			"type":"ACTION"
 		}
 	],
@@ -502,5 +490,5 @@
 	"tags":[
 		
 	],
-	"version":13
+	"version":14
 }
