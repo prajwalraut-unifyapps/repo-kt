@@ -46,7 +46,7 @@
 	"id":"68d3db461dc5d95a2963efa3",
 	"lastModifiedBy":46209,
 	"lcName":"tesgsd",
-	"modifiedTime":1759136082386,
+	"modifiedTime":1759136226653,
 	"name":"tesgsd",
 	"nodes":[
 		{
@@ -417,7 +417,10 @@
 			},
 			"inputs":{
 				"createList":{
-					"ua:type":"mappedArray"
+					"ua:type":"mappedArray",
+					"items":{
+						"name":"dbdfnd"
+					}
 				},
 				"ua:title":"List",
 				"ua:list_type":"OBJECT"
@@ -514,5 +517,5 @@
 	"tags":[
 		
 	],
-	"version":10
+	"version":11
 }
