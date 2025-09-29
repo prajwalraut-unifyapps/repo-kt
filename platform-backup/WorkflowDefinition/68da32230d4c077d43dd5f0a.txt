@@ -6,7 +6,7 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_gt1jw",
+			"fromNodeId":"n_Hzony",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_YOWLG",
@@ -16,20 +16,31 @@
 	"id":"68da32230d4c077d43dd5f0a",
 	"lastModifiedBy":1234,
 	"lcName":"tetscc",
-	"modifiedTime":1759131398377,
+	"modifiedTime":1759131402350,
 	"name":"tetscc",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_gt1jw-1",
-			"id":"_gt1jw",
+			"id":"n_Hzony",
 			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
@@ -80,5 +91,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
