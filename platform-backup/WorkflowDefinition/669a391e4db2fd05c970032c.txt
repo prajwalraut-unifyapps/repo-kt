@@ -1,7 +1,5 @@
 {
-	"appsUsed":[
-		"schedule"
-	],
+	"appsUsed":["schedule"],
 	"createdTime":1721383198855,
 	"deleted":true,
 	"description":"",
