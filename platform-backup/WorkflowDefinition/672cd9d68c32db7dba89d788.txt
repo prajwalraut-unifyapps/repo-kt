@@ -24,14 +24,36 @@
 			"fromNodeId":"_D8TzG",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_5SbQu",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_5SbQu",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_2q3ab",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_2q3ab",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"_DTiJO",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"_DTiJO",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_2q3ab",
 			"type":"next"
 		}
 	],
 	"id":"672cd9d68c32db7dba89d788",
 	"lastModifiedBy":34,
 	"lcName":"textract test",
-	"modifiedTime":1759124411573,
+	"modifiedTime":1759124551767,
 	"name":"textract test",
 	"nodes":[
 		{
@@ -85,6 +107,92 @@
 		},
 		{
 			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":925,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_4lvFV-1",
+			"id":"n_5SbQu",
+			"index":3,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"status":{
+							"type":"string",
+							"title":"Status"
+						}
+					},
+					"required":[
+						"status"
+					]
+				}
+			},
+			"inputs":{},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"status":{
+							"type":"string",
+							"title":"Status"
+						}
+					},
+					"required":[
+						"status"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":0,
+				"resourceName":"loop_while",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_4lvFV-1",
+			"id":"n_2q3ab",
+			"index":4,
+			"inputs":{
+				"condition":{
+					"filters":[
+						{
+							"property":"{{ _DTiJO.outputs.status }}",
+							"filter":{
+								"operator":"NOT_EQUAL",
+								"value":"running"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"captureIterations":false
+			},
+			"skip":false,
+			"subTitle":"Loop",
+			"title":"While loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
 				"appName":"azure_document_intelligence",
 				"resourceVersion":2,
 				"connectionId":"672da7623f5a1563509254cf",
@@ -92,11 +200,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
-			"groupId":"_4lvFV-1",
+			"groupId":"n_2q3ab@_4lvFV-1@l",
 			"id":"_DTiJO",
-			"index":3,
+			"index":5,
 			"inputs":{
 				"apiVersion":"2024-07-31-preview",
 				"modelId":"prebuilt-idDocument",
@@ -153,5 +261,5 @@
 	"tags":[
 		
 	],
-	"version":16
+	"version":17
 }
