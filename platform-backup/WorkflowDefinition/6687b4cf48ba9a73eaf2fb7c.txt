@@ -1,5 +1,8 @@
 {
-	"appsUsed":["schedule","slack"],
+	"appsUsed":[
+		"schedule",
+		"slack"
+	],
 	"createdTime":1720169679544,
 	"deleted":true,
 	"deploymentState":{
@@ -75,8 +78,21 @@
 	"grants":{
 		"configs":[
 			{
-				"permissions":["EXPORT_AS_TEMPLATE","A","C","S","D","TEST","VIEW_RUNS","E","V","DEP"],
-				"principalIds":["66681c602261d6426d663042"],
+				"permissions":[
+					"EXPORT_AS_TEMPLATE",
+					"A",
+					"C",
+					"S",
+					"D",
+					"TEST",
+					"VIEW_RUNS",
+					"E",
+					"V",
+					"DEP"
+				],
+				"principalIds":[
+					"66681c602261d6426d663042"
+				],
 				"principalType":"USER_GROUPS"
 			}
 		]
@@ -143,14 +159,10 @@
 							"title":"Sdfg"
 						}
 					},
-					"required":[
-						
-					]
+					"required":[]
 				}
 			},
-			"inputs":{
-				
-			},
+			"inputs":{},
 			"outputSchema":{
 				"type":"SCHEMA",
 				"dynamic":false,
@@ -163,9 +175,7 @@
 							"title":"Sdfg"
 						}
 					},
-					"required":[
-						
-					]
+					"required":[]
 				}
 			},
 			"skip":false,
