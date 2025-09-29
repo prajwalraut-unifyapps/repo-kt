@@ -5,12 +5,12 @@
 	"createdTime":1758714694174,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759136439071,
+		"deployedAt":1759137973317,
 		"deployedBy":46209,
-		"deployedDefinitionId":"68da4ab6d9b42a279b723782",
+		"deployedDefinitionId":"68da50b39c7bf3537c3e92da",
 		"status":"DEPLOYED",
-		"version":7,
-		"workflowVersion":20
+		"version":8,
+		"workflowVersion":21
 	},
 	"edges":[
 		{
@@ -36,6 +36,13 @@
 		},
 		{
 			"fromNodeId":"n_1Zwuz",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_HUBWs",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_HUBWs",
 			"name":"loopback",
 			"priority":0,
 			"skip":false,
@@ -75,7 +82,7 @@
 	"id":"68d3db461dc5d95a2963efa3",
 	"lastModifiedBy":46209,
 	"lcName":"tesgsd",
-	"modifiedTime":1759137969683,
+	"modifiedTime":1759138053787,
 	"name":"tesgsd",
 	"nodes":[
 		{
@@ -218,7 +225,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_f8tNU-1",
 			"id":"n_0aTNj",
@@ -474,7 +481,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_f8tNU-1",
 			"id":"n_Mm8dG",
@@ -507,7 +514,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_Mm8dG@_f8tNU-1@l",
 			"id":"n_1Zwuz",
@@ -524,6 +531,39 @@
 		},
 		{
 			"context":{
+				"appName":"break",
+				"resourceVersion":801,
+				"resourceName":"break",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_Mm8dG@_f8tNU-1@l",
+			"id":"n_HUBWs",
+			"index":5,
+			"inputs":{
+				"loop":"n_Mm8dG",
+				"conditions":{
+					"filters":[
+						{
+							"property":"=LEN({{ n_0aTNj.outputs.items }})",
+							"filter":{
+								"operator":"GT",
+								"value":"5"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"subTitle":"Break",
+			"title":"Break",
+			"type":"BREAK"
+		},
+		{
+			"context":{
 				"appName":"loop",
 				"resourceVersion":847,
 				"resourceName":"loop_for_each",
@@ -534,7 +574,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_f8tNU-1",
 			"id":"n_tFH3l",
-			"index":5,
+			"index":6,
 			"inputs":{
 				"repeatMode":"SINGLE",
 				"listSource":"{{ n_0aTNj.outputs.items }}",
@@ -557,7 +597,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_tFH3l@_f8tNU-1@l",
 			"id":"n_o0AJ8",
-			"index":6,
+			"index":7,
 			"inputs":{
 				"code":"return [\"success\": true]",
 				"compile_static":false,
@@ -573,11 +613,11 @@
 				"appName":"stop"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_f8tNU-1",
 			"id":"n_n3mc9",
-			"index":7,
+			"index":8,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -601,5 +641,5 @@
 	"tags":[
 		
 	],
-	"version":21
+	"version":22
 }
