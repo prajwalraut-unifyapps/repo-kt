@@ -1,16 +1,14 @@
 {
-	"appsUsed":[
-		
-	],
+	"appsUsed":[],
 	"createdTime":1758908348635,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759132800616,
+		"deployedAt":1759134588384,
 		"deployedBy":39715,
-		"deployedDefinitionId":"68da3c800d4c077d43dd74f3",
+		"deployedDefinitionId":"68da437c4540ef53ef3492f5",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":10
+		"version":2,
+		"workflowVersion":11
 	},
 	"edges":[
 		{
@@ -29,16 +27,18 @@
 		}
 	],
 	"id":"68d6cfbcc2c40100a47f56f4",
-	"lastModifiedBy":39715,
+	"lastModifiedBy":44105,
 	"lcName":"[azure-function]detect-changes",
-	"modifiedTime":1759134574757,
+	"modifiedTime":1759154236048,
 	"name":"[Azure-function]Detect-Changes",
 	"nodes":[
 		{
 			"additional":{
 				"xsdSchemaConfig":{
 					"root":{
-						"request":{}
+						"request":{
+							
+						}
 					}
 				}
 			},
@@ -58,7 +58,9 @@
 					"queryParams":{
 						"type":"object",
 						"additionalProperties":false,
-						"required":[],
+						"required":[
+							
+						],
 						"properties":{
 							"name":{
 								"type":"string",
@@ -110,7 +112,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_RcjTs-1",
 			"id":"n_nMUz0",
@@ -188,9 +190,7 @@
 	],
 	"ownerUserId":39715,
 	"projectId":1927,
-	"schemaReferences":[
-		
-	],
+	"schemaReferences":[],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -201,8 +201,6 @@
 		}
 	},
 	"standard":false,
-	"tags":[
-		
-	],
-	"version":11
+	"tags":[],
+	"version":12
 }
