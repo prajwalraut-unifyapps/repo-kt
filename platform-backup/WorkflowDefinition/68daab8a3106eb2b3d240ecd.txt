@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759161226959,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_JquJv",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_GCLob",
+			"type":"next"
+		}
+	],
+	"id":"68daab8a3106eb2b3d240ecd",
+	"lastModifiedBy":2621,
+	"lcName":"test sisense",
+	"modifiedTime":1759161226959,
+	"name":"test sisense",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_JquJv-1",
+			"id":"_JquJv",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_JquJv-1",
+			"id":"_GCLob",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":2621,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
