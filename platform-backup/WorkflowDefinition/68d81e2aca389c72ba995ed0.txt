@@ -37,7 +37,7 @@
 	"id":"68d81e2aca389c72ba995ed0",
 	"lastModifiedBy":175131,
 	"lcName":"api sheet",
-	"modifiedTime":1759131432261,
+	"modifiedTime":1759131439306,
 	"name":"API Sheet",
 	"nodes":[
 		{
@@ -198,7 +198,7 @@
 				"dataSource":"{{ n_Cm0Vb.outputs.result }}",
 				"fileType":"csv"
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"CSV by UnifyApps",
 			"title":"Write data to CSV file",
 			"type":"ACTION"
@@ -221,5 +221,5 @@
 	"tags":[
 		
 	],
-	"version":20
+	"version":21
 }
