@@ -1,51 +1,179 @@
 {
 	"appsUsed":[
-		
+		"gsheets"
 	],
 	"createdTime":1759123778234,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_7aqEn",
+			"fromNodeId":"n_rfQp3",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_x8rV7",
+			"toNodeId":"n_BN78c",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_BN78c",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_KR2xh",
 			"type":"next"
 		}
 	],
 	"id":"68da1942adaf0562b42e3340",
 	"lastModifiedBy":185911,
 	"lcName":"dlp practice test",
-	"modifiedTime":1759123778234,
+	"modifiedTime":1759130778221,
 	"name":"DLP Practice test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":879,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7aqEn-1",
-			"id":"_7aqEn",
-			"index":0,
+			"id":"n_rfQp3",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"dlpoutput"
+					],
+					"properties":{
+						"dlpoutput":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Dlpoutput"
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"gsheets",
+				"resourceVersion":6074,
+				"connectionId":"68da318df6d30d674226dad4",
+				"resourceName":"gsheets_get_rows_batch",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7aqEn-1",
-			"id":"_x8rV7",
-			"index":0,
+			"id":"n_BN78c",
+			"index":2,
+			"inputs":{
+				"sheetName":"Sheet1",
+				"valueRenderOption":"FORMATTED_VALUE",
+				"objectSourceResourceName":"gsheets_fetch_columns",
+				"range":"2:13",
+				"spreadsheetId":"1tApXuLNj-X-9lhHE468z7fHp2TPMcmc016Pqm3gQ11E__DLP Mock - 1"
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"global":false
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"STOP",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Google Sheets",
+			"title":"Get rows",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":896,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_7aqEn-1",
+			"id":"n_KR2xh",
+			"index":3,
+			"inputs":{
+				"result":{
+					"dlpoutput":{
+						"source":"{{ n_BN78c.outputs }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_BN78c.outputs.rows[0].Month__0 }}{{ n_BN78c.outputs.rows[0].MAU__1 }}{{ n_BN78c.outputs.rows[0].Plan_Usage____2 }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":185911,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +187,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
