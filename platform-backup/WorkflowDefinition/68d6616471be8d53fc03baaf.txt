@@ -80,7 +80,7 @@
 	"id":"68d6616471be8d53fc03baaf",
 	"lastModifiedBy":44567,
 	"lcName":"test-nullstr",
-	"modifiedTime":1759076768198,
+	"modifiedTime":1759124676485,
 	"name":"test-nullstr",
 	"nodes":[
 		{
@@ -90,7 +90,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_n1Giy-1",
 			"id":"n_3Nohz",
@@ -116,7 +116,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_n1Giy-1",
 			"id":"n_tcNwu",
@@ -169,7 +169,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_n1Giy-1",
 			"id":"n_CMx6h",
@@ -191,7 +191,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_n1Giy-1",
 			"id":"n_dmVtP",
@@ -277,7 +277,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_n1Giy-1",
 			"id":"n_vFVhP",
@@ -293,18 +293,12 @@
 						"a":{
 							"type":"integer",
 							"title":"A"
-						},
-						"b":{
-							"type":"integer",
-							"title":"B"
 						}
 					},
 					"required":[]
 				}
 			},
-			"inputs":{
-				"b":10
-			},
+			"inputs":{},
 			"outputSchema":{
 				"dynamic":false,
 				"schema":{
@@ -314,10 +308,6 @@
 						"a":{
 							"type":"integer",
 							"title":"A"
-						},
-						"b":{
-							"type":"integer",
-							"title":"B"
 						}
 					},
 					"required":[]
@@ -336,7 +326,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_n1Giy-1",
 			"id":"n_HUD88",
@@ -345,11 +335,11 @@
 				"variables":[
 					{
 						"source":"{{ n_vFVhP.outputs.a }}",
-						"value":"=SUM({{ n_vFVhP.outputs.a }},{{ n_vFVhP.outputs.b }})"
+						"value":"=SUM({{ n_vFVhP.outputs.a }}, 5)"
 					},
 					{
-						"source":"{{ n_vFVhP.outputs.b }}",
-						"value":"=SUM({{ n_vFVhP.outputs.b }},{{ n_vFVhP.outputs.a }})"
+						"source":"",
+						"value":"=SUM(,{{ n_vFVhP.outputs.a }})"
 					}
 				]
 			},
@@ -366,7 +356,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_n1Giy-1",
 			"id":"n_U4ekX",
@@ -387,9 +377,7 @@
 					"required":[]
 				}
 			},
-			"inputs":{
-				"c":"abc"
-			},
+			"inputs":{},
 			"outputSchema":{
 				"dynamic":false,
 				"schema":{
@@ -417,7 +405,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_n1Giy-1",
 			"id":"n_JNlq0",
@@ -443,7 +431,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_n1Giy-1",
 			"id":"n_X1wnJ",
@@ -492,7 +480,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_n1Giy-1",
 			"id":"n_ihjPz",
@@ -528,5 +516,5 @@
 	"tags":[
 		
 	],
-	"version":33
+	"version":34
 }
