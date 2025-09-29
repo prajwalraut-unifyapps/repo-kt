@@ -22,6 +22,13 @@
 			"fromNodeId":"n_nMUz0",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_Ki0pE",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Ki0pE",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_zPwE7",
 			"type":"next"
 		}
@@ -29,7 +36,7 @@
 	"id":"68d6cfbcc2c40100a47f56f4",
 	"lastModifiedBy":44105,
 	"lcName":"[azure-function]detect-changes",
-	"modifiedTime":1759154254657,
+	"modifiedTime":1759154348843,
 	"name":"[Azure-function]Detect-Changes",
 	"nodes":[
 		{
@@ -48,7 +55,7 @@
 				"resourceName":"callables_from_api"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RcjTs-1",
 			"id":"n_wj7jz",
@@ -112,7 +119,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RcjTs-1",
 			"id":"n_nMUz0",
@@ -156,6 +163,62 @@
 					"requestBody":"=IF(LEN({{ n_wj7jz.outputs.body }})=0, \"\", {{ n_wj7jz.outputs.body }})"
 				}
 			},
+			"skip":true,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute CSharp script",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":39,
+				"resourceName":"code_by_unifyapps_csharp",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_RcjTs-1",
+			"id":"n_Ki0pE",
+			"index":3,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						
+					],
+					"properties":{
+						"result":{
+							"type":"string",
+							"title":"Result"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						
+					],
+					"properties":{
+						"name":{
+							"type":"string",
+							"title":"Name"
+						},
+						"requestBody":{
+							"type":"string",
+							"title":"Request Body"
+						}
+					}
+				},
+				"code":"using System;\nusing System.Threading.Tasks;\nusing Newtonsoft.Json;\nusing Newtonsoft.Json.Linq;\n\npublic static class RaveScheduler\n{\n    public static async Task<string> DetectChanges(string name, string requestBody)\n    {\n        Console.WriteLine(\"DetectChanges function executed.\");\n        JObject data = null;\n        if (!string.IsNullOrWhiteSpace(requestBody))\n        {\n            data = JObject.Parse(requestBody);\n        }\n        name = data?[\"name\"]?.ToString();\n\n        string responseMessage = string.IsNullOrEmpty(name)\n                ? \"This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.\"\n                : $\"Hello, {name}. This HTTP triggered function executed successfully.\";\n\n        return responseMessage;\n    }\n}\n\nvar result = await RaveScheduler.DetectChanges(name, requestBody);\nresult",
+				"isAsync":false,
+				"parameters":{
+					"name":"{{ n_wj7jz.outputs.queryParams.name }}",
+					"requestBody":"{{ n_wj7jz.outputs.body }}"
+				}
+			},
 			"skip":false,
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute CSharp script",
@@ -169,11 +232,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RcjTs-1",
 			"id":"n_zPwE7",
-			"index":3,
+			"index":4,
 			"inputs":{
 				"streamingCompleted":true,
 				"responseName":"200_ok",
@@ -202,5 +265,5 @@
 	},
 	"standard":false,
 	"tags":[],
-	"version":13
+	"version":14
 }
