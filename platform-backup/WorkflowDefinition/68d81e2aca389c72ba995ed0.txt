@@ -37,7 +37,7 @@
 	"id":"68d81e2aca389c72ba995ed0",
 	"lastModifiedBy":175131,
 	"lcName":"api sheet",
-	"modifiedTime":1759130670050,
+	"modifiedTime":1759130764655,
 	"name":"API Sheet",
 	"nodes":[
 		{
@@ -212,7 +212,7 @@
 					},
 					{
 						"key":"Count",
-						"value":"{{ n_Cm0Vb.outputs.result[0].columns.count(*) }}"
+						"value":"=TEXT({{ n_Cm0Vb.outputs.result[0].columns.count(*) }})"
 					}
 				],
 				"skipHeaderRow":false,
@@ -245,5 +245,5 @@
 	"tags":[
 		
 	],
-	"version":15
+	"version":16
 }
