@@ -30,8 +30,15 @@
 			"fromNodeId":"n_uzkh3",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_2VKRZ",
+			"toNodeId":"n_U3a4P",
 			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_U3a4P",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_2VKRZ",
+			"type":"next"
 		},
 		{
 			"fromNodeId":"n_2VKRZ",
@@ -52,7 +59,7 @@
 	"id":"68daa0178592117bcbd4f3e4",
 	"lastModifiedBy":569,
 	"lcName":"test-loop",
-	"modifiedTime":1759158455390,
+	"modifiedTime":1759158498346,
 	"name":"test-loop",
 	"nodes":[
 		{
@@ -457,6 +464,29 @@
 		},
 		{
 			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":96,
+				"resourceName":"utility_by_unifyapps_get_value_at_index_from_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_uzkh3@_tazd1-1@l",
+			"id":"n_U3a4P",
+			"index":5,
+			"inputs":{
+				"positionFrom":"START",
+				"listSource":"{{ n_389Rc.outputs.body.array }}",
+				"elementPosition":"{{ n_uzkh3.outputs.index }}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Get value at index from list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"variable_by_unifyapps",
 				"resourceVersion":864,
 				"resourceName":"variable_by_unifyapps_add_item_to_list",
@@ -467,8 +497,11 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_uzkh3@_tazd1-1@l",
 			"id":"n_2VKRZ",
-			"index":5,
+			"index":6,
 			"inputs":{
+				"itemToAdd":{
+					"test1":"{{ n_U3a4P.outputs.item.field1 }}"
+				},
 				"insertLocation":"END",
 				"listName":"{{ n_k3mxL.outputs.items[0] }}"
 			},
@@ -486,7 +519,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_tazd1-1",
 			"id":"n_ErN5r",
-			"index":6,
+			"index":7,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -510,5 +543,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
