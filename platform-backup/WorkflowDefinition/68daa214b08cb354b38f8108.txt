@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759158804581,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759158844829,
+		"deployedBy":175325,
+		"deployedDefinitionId":"68daa23cb08cb354b38f8129",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_80psI",
@@ -23,7 +31,7 @@
 	"id":"68daa214b08cb354b38f8108",
 	"lastModifiedBy":175325,
 	"lcName":"codebyunifyappslocalfijckcsgia",
-	"modifiedTime":1759158842886,
+	"modifiedTime":1759158849004,
 	"name":"CodeByUnifyAppsLocalfIjCKCSgIa",
 	"nodes":[
 		{
@@ -166,5 +174,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
