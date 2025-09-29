@@ -1,0 +1,67 @@
+{
+	"appsUsed":[
+		"typeform"
+	],
+	"createdTime":1756554122600,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1756557506391,
+		"deployedBy":15080,
+		"deployedDefinitionId":"68b2f0ba63ca721bbc45756b",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":3
+	},
+	"edges":[
+		
+	],
+	"id":"68b2e38ac7d3173f8b654725",
+	"lastModifiedBy":15080,
+	"lcName":"typeform",
+	"modifiedTime":1759154829459,
+	"name":"typeform",
+	"nodes":[
+		{
+			"context":{
+				"appName":"typeform",
+				"resourceVersion":5565,
+				"connectionId":"68944e745a08db5c705bc67b",
+				"resourceName":"typeform_on_form_response"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_2lwho-1",
+			"id":"n_PAmgQ",
+			"index":1,
+			"inputs":{
+				"form_id":"zR3pMLJa"
+			},
+			"skip":false,
+			"subTitle":"Typeform",
+			"title":"New form response (Typeform)",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":15080,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":4
+}
