@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759162481426,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759162611057,
+		"deployedBy":46209,
+		"deployedDefinitionId":"68dab0f23106eb2b3d248b21",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":7
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_c6jD3",
@@ -23,7 +31,7 @@
 	"id":"68dab0713106eb2b3d248139",
 	"lastModifiedBy":46209,
 	"lcName":"customapplicationtest",
-	"modifiedTime":1759162608563,
+	"modifiedTime":1759169056977,
 	"name":"customApplicationTest",
 	"nodes":[
 		{
@@ -33,7 +41,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Sm2OG-1",
 			"id":"n_c6jD3",
@@ -78,7 +86,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Sm2OG-1",
 			"id":"n_xa3kA",
@@ -126,7 +134,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Sm2OG-1",
 			"id":"n_PvXt7",
@@ -159,5 +167,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
