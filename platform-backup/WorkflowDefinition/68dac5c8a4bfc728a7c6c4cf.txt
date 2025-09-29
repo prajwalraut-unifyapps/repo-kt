@@ -16,7 +16,7 @@
 	"id":"68dac5c8a4bfc728a7c6c4cf",
 	"lastModifiedBy":33,
 	"lcName":"test",
-	"modifiedTime":1759178202076,
+	"modifiedTime":1759178894063,
 	"name":"test",
 	"nodes":[
 		{
@@ -62,7 +62,77 @@
 				"flightInfo":{
 					"marketingCarrier":"G9",
 					"flightNumber":"542",
-					"departureDate":"20250826"
+					"departureDate":"20250826",
+					"boardPoint":"SHJ"
+				},
+				"bodySchema":{
+					"type":"object",
+					"properties":{
+						"apal:DCSLST_GetPassengerList":{
+							"type":"object",
+							"properties":{
+								"apal:flightInfo":{
+									"type":"object",
+									"properties":{
+										"apal:carrierDetails":{
+											"type":"object",
+											"properties":{
+												"apal:marketingCarrier":{
+													"type":"string"
+												}
+											}
+										},
+										"apal:flightDetails":{
+											"type":"object",
+											"properties":{
+												"apal:flightNumber":{
+													"type":"string"
+												}
+											}
+										},
+										"apal:departureDate":{
+											"type":"string"
+										},
+										"apal:boardPoint":{
+											"type":"string"
+										}
+									}
+								},
+								"apal:orFiltersQuery":{
+									"type":"object",
+									"properties":{
+										"apal:dummy":{
+											"type":"string"
+										},
+										"apal:andFiltersQuery":{
+											"type":"object",
+											"properties":{
+												"apal:passengerListFilterName":{
+													"type":"object",
+													"properties":{
+														"apal:attributeDetails":{
+															"type":"object",
+															"properties":{
+																"apal:attributeType":{
+																	"type":"string"
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									},
+									"required":[
+										"apal:dummy"
+									]
+								}
+							}
+						}
+					}
+				},
+				"filters":{
+					"attributeType":"TAG"
 				}
 			},
 			"skip":false,
@@ -88,5 +158,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
