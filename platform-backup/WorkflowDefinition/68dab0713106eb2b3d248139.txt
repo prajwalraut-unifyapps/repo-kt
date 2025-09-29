@@ -9,6 +9,13 @@
 			"fromNodeId":"n_c6jD3",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_xa3kA",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_xa3kA",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_PvXt7",
 			"type":"next"
 		}
@@ -16,7 +23,7 @@
 	"id":"68dab0713106eb2b3d248139",
 	"lastModifiedBy":46209,
 	"lcName":"customapplicationtest",
-	"modifiedTime":1759162529937,
+	"modifiedTime":1759162608563,
 	"name":"customApplicationTest",
 	"nodes":[
 		{
@@ -65,6 +72,54 @@
 		},
 		{
 			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Sm2OG-1",
+			"id":"n_xa3kA",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"response":{
+							"type":"string",
+							"title":"Response"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"name":{
+							"type":"string",
+							"title":"Name"
+						}
+					}
+				},
+				"code":"def res = \"name is \" + name;\n\nreturn [\"response\": res]",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"name":"{{ n_c6jD3.outputs.name }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"callables",
 				"resourceVersion":896,
 				"resourceName":"callables_return_to_automation",
@@ -75,10 +130,10 @@
 			"fallbackMode":"STOP",
 			"groupId":"_Sm2OG-1",
 			"id":"n_PvXt7",
-			"index":2,
+			"index":3,
 			"inputs":{
 				"result":{
-					"messages":"{{ n_c6jD3.outputs.name }}"
+					"messages":"{{ n_xa3kA.outputs.result.response }}"
 				}
 			},
 			"skip":false,
@@ -104,5 +159,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":7
 }
