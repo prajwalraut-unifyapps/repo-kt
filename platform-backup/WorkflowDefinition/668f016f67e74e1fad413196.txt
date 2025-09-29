@@ -1,5 +1,7 @@
 {
-	"appsUsed":["schedule"],
+	"appsUsed":[
+		"schedule"
+	],
 	"createdTime":1720648047124,
 	"deleted":false,
 	"edges":[
