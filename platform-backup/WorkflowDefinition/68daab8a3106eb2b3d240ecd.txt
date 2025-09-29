@@ -16,12 +16,14 @@
 	"id":"68daab8a3106eb2b3d240ecd",
 	"lastModifiedBy":2621,
 	"lcName":"test sisense",
-	"modifiedTime":1759161260044,
+	"modifiedTime":1759161263714,
 	"name":"test sisense",
 	"nodes":[
 		{
 			"context":{
-				"appName":"webhooks"
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
 			},
 			"debug":false,
 			"dirty":true,
@@ -29,9 +31,14 @@
 			"groupId":"_JquJv-1",
 			"id":"n_sfn69",
 			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
 			"subTitle":"Webhook",
-			"title":"Select a trigger event",
+			"title":"New event",
 			"trigger":{
 				"type":"WEBHOOK"
 			},
@@ -78,5 +85,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
