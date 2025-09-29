@@ -1,5 +1,7 @@
 {
-	"appsUsed":[],
+	"appsUsed":[
+		
+	],
 	"createdTime":1721397035070,
 	"deleted":true,
 	"description":"",
@@ -110,14 +112,10 @@
 							"title":"S CSA"
 						}
 					},
-					"required":[
-						
-					]
+					"required":[]
 				}
 			},
-			"inputs":{
-				
-			},
+			"inputs":{},
 			"outputSchema":{
 				"type":"SCHEMA",
 				"dynamic":false,
@@ -130,9 +128,7 @@
 							"title":"S CSA"
 						}
 					},
-					"required":[
-						
-					]
+					"required":[]
 				}
 			},
 			"skip":false,
