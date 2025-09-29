@@ -41,12 +41,19 @@
 			"skip":false,
 			"toNodeId":"n_tFH3l",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_tFH3l",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_n3mc9",
+			"type":"next"
 		}
 	],
 	"id":"68d3db461dc5d95a2963efa3",
 	"lastModifiedBy":46209,
 	"lcName":"tesgsd",
-	"modifiedTime":1759136372310,
+	"modifiedTime":1759136389972,
 	"name":"tesgsd",
 	"nodes":[
 		{
@@ -483,6 +490,21 @@
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Groovy code",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_f8tNU-1",
+			"id":"n_n3mc9",
+			"index":5,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":46209,
@@ -502,5 +524,5 @@
 	"tags":[
 		
 	],
-	"version":18
+	"version":19
 }
