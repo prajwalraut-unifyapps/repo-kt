@@ -1,5 +1,7 @@
 {
-	"appsUsed":[],
+	"appsUsed":[
+		
+	],
 	"createdTime":1756218992865,
 	"deleted":false,
 	"deploymentState":{
@@ -36,7 +38,7 @@
 	"id":"68adc67014aac77847c31f2d",
 	"lastModifiedBy":-1,
 	"lcName":"slow automation detector",
-	"modifiedTime":1759154187417,
+	"modifiedTime":1759154981325,
 	"name":"Slow automation detector",
 	"nodes":[
 		{
@@ -165,7 +167,9 @@
 		}
 	],
 	"ownerUserId":1,
-	"schemaReferences":[],
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -176,6 +180,8 @@
 		}
 	},
 	"standard":false,
-	"tags":[],
-	"version":3116
+	"tags":[
+		
+	],
+	"version":3117
 }
