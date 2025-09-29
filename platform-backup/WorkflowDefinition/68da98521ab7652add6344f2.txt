@@ -1,51 +1,77 @@
 {
 	"appsUsed":[
-		
+		"sisense"
 	],
 	"createdTime":1759156306622,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_tVkNW",
+			"fromNodeId":"n_fu40g",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_Othej",
+			"toNodeId":"n_zpirC",
 			"type":"next"
 		}
 	],
 	"id":"68da98521ab7652add6344f2",
 	"lastModifiedBy":2621,
 	"lcName":"test",
-	"modifiedTime":1759156306622,
+	"modifiedTime":1759156452214,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_tVkNW-1",
-			"id":"_tVkNW",
-			"index":0,
+			"id":"n_fu40g",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"sisense",
+				"resourceVersion":2,
+				"connectionId":"68da98c539387d0eb857b596",
+				"resourceName":"sisense_query_data_datasources",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_tVkNW-1",
-			"id":"_Othej",
-			"index":0,
+			"id":"n_zpirC",
+			"index":2,
+			"inputs":{
+				"datasource":"Sample Lead Generation",
+				"query":"SELECT COUNT(*) as total_records FROM [Lead Generation]"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Sisense",
+			"title":"Query data from datasources",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":2621,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +85,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
