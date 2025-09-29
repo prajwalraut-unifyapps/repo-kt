@@ -5,12 +5,12 @@
 	"createdTime":1758668857673,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758672213473,
-		"deployedBy":508,
-		"deployedDefinitionId":"68d33555c49067299b2ae7ee",
+		"deployedAt":1759058518214,
+		"deployedBy":45011,
+		"deployedDefinitionId":"68d91a56d626ce42b9698ec7",
 		"status":"DEPLOYED",
-		"version":3,
-		"workflowVersion":3
+		"version":4,
+		"workflowVersion":4
 	},
 	"edges":[
 		{
@@ -24,7 +24,7 @@
 	"id":"68d3283938757c179b135d6c",
 	"lastModifiedBy":45011,
 	"lcName":"stream-test",
-	"modifiedTime":1759058515735,
+	"modifiedTime":1759133213963,
 	"name":"stream-test",
 	"nodes":[
 		{
@@ -34,7 +34,7 @@
 				"resourceName":"streams_by_unifyapps_on_event"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_UvMbI-1",
 			"id":"n_r7KJI",
@@ -42,7 +42,7 @@
 			"inputs":{
 				"triggerAfterCompletion":true,
 				"messageLimit":1,
-				"streamId":"e_68d32c1c168f1641309dd3fe"
+				"streamId":"e_68b2da7a05c50946e659ec9b"
 			},
 			"skip":false,
 			"subTitle":"Streams by UnifyApps",
@@ -92,5 +92,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
