@@ -48,12 +48,19 @@
 			"skip":false,
 			"toNodeId":"n_2q3ab",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_2q3ab",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_WGDwW",
+			"type":"next"
 		}
 	],
 	"id":"672cd9d68c32db7dba89d788",
 	"lastModifiedBy":34,
 	"lcName":"textract test",
-	"modifiedTime":1759124551767,
+	"modifiedTime":1759124558546,
 	"name":"textract test",
 	"nodes":[
 		{
@@ -246,6 +253,21 @@
 			"subTitle":"Azure Document Intelligence",
 			"title":"Get analyze result",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_4lvFV-1",
+			"id":"n_WGDwW",
+			"index":6,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":1,
@@ -261,5 +283,5 @@
 	"tags":[
 		
 	],
-	"version":17
+	"version":18
 }
