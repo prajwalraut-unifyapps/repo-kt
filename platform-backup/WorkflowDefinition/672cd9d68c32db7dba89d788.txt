@@ -50,6 +50,13 @@
 		},
 		{
 			"fromNodeId":"n_0r5p1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_dWzpg",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_dWzpg",
 			"name":"loopback",
 			"priority":0,
 			"skip":false,
@@ -67,7 +74,7 @@
 	"id":"672cd9d68c32db7dba89d788",
 	"lastModifiedBy":34,
 	"lcName":"textract test",
-	"modifiedTime":1759124608634,
+	"modifiedTime":1759124633770,
 	"name":"textract test",
 	"nodes":[
 		{
@@ -191,7 +198,7 @@
 						{
 							"property":"{{ n_5SbQu.outputs.status }}",
 							"filter":{
-								"operator":"NOT_EQUAL",
+								"operator":"EQUAL",
 								"value":"running"
 							}
 						}
@@ -289,6 +296,28 @@
 		},
 		{
 			"context":{
+				"appName":"delay",
+				"resourceVersion":791,
+				"resourceName":"delay_for",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_2q3ab@_4lvFV-1@l",
+			"id":"n_dWzpg",
+			"index":7,
+			"inputs":{
+				"duration":2,
+				"unit":"SECONDS"
+			},
+			"skip":false,
+			"subTitle":"Delay",
+			"title":"Set delay duration",
+			"type":"DELAY"
+		},
+		{
+			"context":{
 				"appName":"stop"
 			},
 			"debug":false,
@@ -296,7 +325,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_4lvFV-1",
 			"id":"n_WGDwW",
-			"index":7,
+			"index":8,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -316,5 +345,5 @@
 	"tags":[
 		
 	],
-	"version":19
+	"version":20
 }
