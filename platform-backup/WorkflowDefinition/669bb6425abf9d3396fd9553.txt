@@ -1,7 +1,5 @@
 {
-	"appsUsed":[
-		"copper"
-	],
+	"appsUsed":["copper"],
 	"createdTime":1721480770088,
 	"deleted":true,
 	"edges":[
@@ -25,7 +23,9 @@
 			"groupId":"KtX46-1",
 			"id":"KtX46",
 			"index":0,
-			"inputs":{},
+			"inputs":{
+				
+			},
 			"skip":false,
 			"title":"Delete activity",
 			"trigger":{
