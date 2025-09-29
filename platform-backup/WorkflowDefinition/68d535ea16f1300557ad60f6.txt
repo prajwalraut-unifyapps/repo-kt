@@ -16,42 +16,43 @@
 	"id":"68d535ea16f1300557ad60f6",
 	"lastModifiedBy":67744,
 	"lcName":"test-variables",
-	"modifiedTime":1758960272756,
+	"modifiedTime":1759130479260,
 	"name":"test-variables",
 	"nodes":[
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{
+						"request":{}
+					}
+				}
+			},
 			"context":{
 				"appName":"callables",
 				"resourceVersion":961,
 				"resourceName":"callables_from_api"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_vHKoQ-1",
 			"id":"n_MyreN",
 			"index":1,
 			"inputs":{
 				"request":{
-					"contentType":"multipart/form-data",
-					"multipartBody":{
+					"cookies":{
 						"type":"object",
-						"properties":{
-							"test1":{
-								"type":"string",
-								"title":"Test 1"
-							},
-							"test2":{
-								"type":"string",
-								"title":"Test 2"
-							}
-						},
 						"additionalProperties":false,
-						"required":[
-							"test1",
-							"test2"
-						]
-					}
+						"required":[],
+						"properties":{
+							"checking":{
+								"type":"string",
+								"title":"Checking",
+								"format":"skip"
+							}
+						}
+					},
+					"contentType":"multipart/form-data"
 				},
 				"endpointType":"REST",
 				"streamingResponse":false
@@ -99,7 +100,7 @@
 				}
 			},
 			"inputs":{
-				"checking_variable":"{{ n_MyreN.outputs.files[0].fileType }}{{ n_MyreN.outputs.files[0].sourceType }}{{ n_MyreN.outputs.body }}"
+				"checking_variable":"{{ n_MyreN.outputs.body }}"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -140,5 +141,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":8
 }
