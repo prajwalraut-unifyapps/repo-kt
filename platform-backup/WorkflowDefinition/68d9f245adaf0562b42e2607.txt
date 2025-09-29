@@ -47,12 +47,19 @@
 			"skip":false,
 			"toNodeId":"n_rcRVf",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_rcRVf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_dkdG6",
+			"type":"next"
 		}
 	],
 	"id":"68d9f245adaf0562b42e2607",
 	"lastModifiedBy":161908,
 	"lcName":"test",
-	"modifiedTime":1759123454604,
+	"modifiedTime":1759123462103,
 	"name":"test",
 	"nodes":[
 		{
@@ -475,6 +482,21 @@
 			"subTitle":"Variable by UnifyApps",
 			"title":"Update variables",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_74tHZ-1",
+			"id":"n_dkdG6",
+			"index":7,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":15,
@@ -494,5 +516,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
