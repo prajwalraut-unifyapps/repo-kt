@@ -1,8 +1,6 @@
 {
 	"appsUsed":[
-		"gmail",
-		"slack",
-		"webex_teams"
+		"slack"
 	],
 	"createdTime":1759231195699,
 	"deleted":false,
@@ -78,28 +76,14 @@
 			"name":"yes",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"yHBq5",
-			"type":"if"
-		},
-		{
-			"fromNodeId":"yHBq5",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"ewkPq",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"ewkPq",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"PkG3x",
-			"type":"next"
+			"type":"if"
 		}
 	],
 	"id":"68dbbcdbc6fe0a442ae356ca",
 	"lastModifiedBy":20249,
 	"lcName":"high execution time ",
-	"modifiedTime":1759238961631,
+	"modifiedTime":1759238976636,
 	"name":"High execution time ",
 	"nodes":[
 		{
@@ -721,37 +705,6 @@
 		},
 		{
 			"context":{
-				"appName":"gmail",
-				"resourceVersion":77,
-				"connectionId":"6788cdee5b564552bfa6405d",
-				"resourceName":"gmail_send_email",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"BOT0l@_YROwK-1@y",
-			"id":"yHBq5",
-			"index":9,
-			"inputs":{
-				"email_type":"text",
-				"subject":"DT | DOT IPAAS| Prod | Execution Time higher than 30 seconds",
-				"fromName":"ALERT",
-				"from":"alerts@unifyapps.com",
-				"to":[
-					"parth.agarwal@unifyapps.com",
-					"chunky.gupta@telekom-digital.com",
-					"avinav.saigal@telekom-digital.com"
-				],
-				"message":"HIGH EXECUTION TIME ALERT: {{ EgRe8.outputs.items }}"
-			},
-			"skip":false,
-			"subTitle":"Gmail",
-			"title":"Send email",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"slack",
 				"resourceVersion":65,
 				"connectionId":"67a06fb01702557b647f24b1",
@@ -763,7 +716,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"BOT0l@_YROwK-1@y",
 			"id":"ewkPq",
-			"index":10,
+			"index":9,
 			"inputs":{
 				"link_names":true,
 				"messageType":"blocks",
@@ -789,29 +742,6 @@
 			"subTitle":"Slack",
 			"title":"Post message",
 			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"webex_teams",
-				"resourceVersion":83,
-				"connectionId":"684add08d942937f3aeeb362",
-				"resourceName":"webex_teams_post_message",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"BOT0l@_YROwK-1@y",
-			"id":"PkG3x",
-			"index":11,
-			"inputs":{
-				"text":"DT | DOT IPAAS | Prod | Execution Time higher than 30 seconds\nDetails:{{ EgRe8.outputs.items }}",
-				"roomId":"Y2lzY29zcGFyazovL3VybjpURUFNOnVzLXdlc3QtMl9yL1JPT00vNWEyYzE3MTAtZTkyNy0xMWVmLTk2N2ItNWJjNGE2NTBmOWI0"
-			},
-			"skip":false,
-			"subTitle":"Webex Teams",
-			"title":"Post message",
-			"type":"ACTION"
 		}
 	],
 	"ownerUserId":20249,
@@ -832,5 +762,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
