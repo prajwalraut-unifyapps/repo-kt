@@ -1,0 +1,226 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1757514030603,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758655374846,
+		"deployedBy":0,
+		"deployedDefinitionId":"68d2f38e38757c179b123928",
+		"status":"DEPLOYED",
+		"version":5,
+		"workflowVersion":11
+	},
+	"edges":[
+		{
+			"fromNodeId":"arkqc",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Nf0XO",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"Nf0XO",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"LbHV7",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"68821675db1bca0f13db5a80",
+	"lastModifiedBy":-1,
+	"lcName":"knowledge indexer | confluence | index page in batch wrapper",
+	"modifiedTime":1759243558794,
+	"name":"Knowledge Indexer | Confluence | Index page in batch wrapper",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":677,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"niADo-1",
+			"id":"arkqc",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"success":{
+							"type":"boolean",
+							"title":"Success"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"inputs":{
+							"type":"object",
+							"properties":{},
+							"title":"inputs",
+							"additionalProperties":false,
+							"required":[]
+						},
+						"knowledge":{
+							"type":"object",
+							"properties":{
+								"applicationInfo":{
+									"type":"object",
+									"properties":{
+										"context":{
+											"type":"object",
+											"properties":{
+												"connectionId":{
+													"type":"string",
+													"title":"connectionId"
+												}
+											},
+											"title":"context",
+											"additionalProperties":false
+										}
+									},
+									"title":"applicationInfo",
+									"additionalProperties":false
+								},
+								"readVersion":{
+									"type":"integer",
+									"title":"readVersion"
+								},
+								"lastSyncTime":{
+									"type":"string",
+									"title":"Last Sync Time"
+								},
+								"cursorObject":{
+									"type":"object",
+									"properties":{},
+									"additionalProperties":false,
+									"title":"Cursor Object"
+								}
+							},
+							"title":"knowledge",
+							"additionalProperties":false,
+							"required":[]
+						},
+						"knowledgeId":{
+							"type":"string",
+							"title":"knowledgeId"
+						},
+						"aiAgentId":{
+							"type":"string",
+							"title":"Ai Agent Id"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":702,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"niADo-1",
+			"id":"Nf0XO",
+			"index":2,
+			"inputs":{
+				"automationId":"67b21a12312af94f7f9946b5",
+				"runtimeConnections":{
+					"confluence":"{{ arkqc.outputs.knowledge.applicationInfo.context.connectionId }}"
+				},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"knowledgeId":"{{ arkqc.outputs.knowledgeId }}",
+					"aiAgentId":"{{ arkqc.outputs.aiAgentId }}",
+					"knowledge":{
+						"readVersion":"{{ arkqc.outputs.knowledge.readVersion }}",
+						"lastSyncTime":"{{ arkqc.outputs.knowledge.lastSyncTime }}",
+						"cursorObject":"{{ arkqc.outputs.knowledge.cursorObject }}",
+						"applicationInfo":{
+							"context":{
+								"connectionId":"{{ arkqc.outputs.knowledge.applicationInfo.context.connectionId }}"
+							}
+						}
+					},
+					"inputs":"{{ arkqc.outputs.inputs }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":363,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"niADo-1",
+			"id":"LbHV7",
+			"index":3,
+			"inputs":{
+				"result":{
+					"success":"{{ Nf0XO.outputs.success }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":44103,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":false,
+		"enableRunLogging":true,
+		"enableVariableLogging":false,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		
+	],
+	"version":12
+}
