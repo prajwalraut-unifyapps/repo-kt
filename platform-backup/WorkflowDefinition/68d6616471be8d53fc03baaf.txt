@@ -80,7 +80,7 @@
 	"id":"68d6616471be8d53fc03baaf",
 	"lastModifiedBy":44567,
 	"lcName":"test-nullstr",
-	"modifiedTime":1759246744683,
+	"modifiedTime":1759246783214,
 	"name":"test-nullstr",
 	"nodes":[
 		{
@@ -491,7 +491,7 @@
 				"variables":[
 					{
 						"source":"{{ n_X1wnJ.outputs.d }}",
-						"value":"=TEXT({{ n_X1wnJ.outputs.d }},\"yymmdd\")"
+						"value":"=TEXT({{ n_X1wnJ.outputs.d }},\"0\")"
 					}
 				]
 			},
@@ -518,5 +518,5 @@
 	"tags":[
 		
 	],
-	"version":36
+	"version":37
 }
