@@ -37,7 +37,7 @@
 	"id":"68db7b851ef9aa7d26781da5",
 	"lastModifiedBy":155341,
 	"lcName":"tesatpptpdf",
-	"modifiedTime":1759220730268,
+	"modifiedTime":1759222000726,
 	"name":"tesatpptpdf",
 	"nodes":[
 		{
@@ -290,7 +290,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Ssznf-1",
 			"id":"FUK1t",
@@ -314,7 +314,7 @@
 						}
 					}
 				},
-				"jsonString":"{\n  \"pipeline\": [\n    {\n      \"$project\": {\n        \"_id\": 0,\n        \"firstName\": 1,\n        \"lastName\": 1,\n        \"email\": 1,\n        \"telephone\": 1\n      }\n    },\n    {\n      \"$limit\": 200\n    }\n  ]\n}"
+				"jsonString":"{\n  \"pipeline\": [\n    {\n      \"$match\": { \"isActive\": true }\n    },\n    {\n      \"$sort\": { \"created\": -1 }\n    },\n    {\n      \"$limit\": 10\n    }\n  ]\n}"
 			},
 			"skip":false,
 			"subTitle":"Utility by UnifyApps",
@@ -415,5 +415,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
