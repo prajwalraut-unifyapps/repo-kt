@@ -20,6 +20,13 @@
 			"fromNodeId":"n_n4wKZ",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_AzCAS",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_AzCAS",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_GsNXV",
 			"type":"next"
 		},
@@ -147,7 +154,7 @@
 	"id":"68d117de852fdd034c42ed99",
 	"lastModifiedBy":187421,
 	"lcName":"meeting assistant | join meet",
-	"modifiedTime":1759131059229,
+	"modifiedTime":1759223276566,
 	"name":"Meeting Assistant | Join meet",
 	"nodes":[
 		{
@@ -176,6 +183,32 @@
 		},
 		{
 			"context":{
+				"appName":"gcalendar",
+				"resourceVersion":1021,
+				"connectionId":"68d3a3bff5127209905f7738",
+				"resourceName":"gcalendar_search_events",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_UxBP5-1",
+			"id":"n_AzCAS",
+			"index":2,
+			"inputs":{
+				"q":"Meeting",
+				"singleEvents":true,
+				"calendarId":"primary",
+				"timeMax":"2025-09-30T08:09:00.000Z",
+				"timeMin":"2025-09-29T08:09:00.000Z"
+			},
+			"skip":false,
+			"subTitle":"Google Calendar",
+			"title":"Search events",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"openai",
 				"resourceVersion":1087,
 				"connectionId":"687c9f1f5ef2a3b9730448d1",
@@ -183,15 +216,15 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_GsNXV",
-			"index":2,
+			"index":3,
 			"inputs":{
-				"response_format":"json_object",
+				"response_format":"text",
 				"model":"gpt-3.5-turbo",
-				"message":"Extract only the meeting link (Microsoft Teams, Google Meet, or Zoom) from the event description: \n\n\"{{ n_n4wKZ.outputs.htmlLink }}, {{ n_n4wKZ.outputs.summary }}, {{ n_n4wKZ.outputs.description }}, {{ n_n4wKZ.outputs.hangoutLink }}\"\n\nIf multiple links are present, return only the main meeting link which will led me to join the meet.\nOutput must be the exact meeting URL only — no additional text."
+				"message":"Extract the main meeting link (only Microsoft Teams, Google Meet, or Zoom) from the pills attached {{ n_AzCAS.outputs.items[0].description }} OR {{ n_n4wKZ.outputs.hangoutLink }}\nReturn the result strictly as JUST THE LINK. Do NOT include any extra text, explanations, or NAME and COMMA. "
 			},
 			"skip":false,
 			"subTitle":"OpenAI",
@@ -206,20 +239,20 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_RtX4l",
-			"index":3,
+			"index":4,
 			"inputs":{
-				"start_time":"{{ n_n4wKZ.outputs.originalStartTime.dateTime }}",
+				"start_time":"{{ n_AzCAS.outputs.timeZone }}",
 				"runtimeConnections":{},
 				"schedule_type":"ONE_TIME",
 				"cancel_existing":true,
 				"schedule_name":"Meeting bot time",
 				"version":"-1"
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Callable",
 			"title":"Schedule callable",
 			"type":"ACTION"
@@ -232,16 +265,16 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_5BYIx",
-			"index":4,
+			"index":5,
 			"inputs":{
 				"botName":"UnifyApps Meeting Assistant",
 				"meetingUrl":"{{ n_GsNXV.outputs.choices[0].message.content }}"
 			},
-			"skip":true,
+			"skip":false,
 			"subTitle":"Meeting bot by UnifyApps",
 			"title":"Join meeting",
 			"type":"ACTION"
@@ -254,11 +287,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_G5pMv",
-			"index":5,
+			"index":6,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -281,7 +314,7 @@
 				"compile_static":false,
 				"captureStdOutput":false
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Groovy code",
 			"type":"ACTION"
@@ -294,11 +327,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_ZE48j",
-			"index":6,
+			"index":7,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -550,14 +583,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_E2a99",
-			"index":7,
+			"index":8,
 			"inputs":{
 				"repeatMode":"SINGLE",
-				"listSource":"{{ n_G5pMv.outputs.result.files }}",
+				"listSource":"{{ n_5BYIx.outputs.segmentedVideoRecordingFiles }}",
 				"captureIterations":false
 			},
 			"skip":false,
@@ -573,11 +606,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_E2a99@_UxBP5-1@l",
 			"id":"n_of6WK",
-			"index":8,
+			"index":9,
 			"inputs":{
 				"automationId":"68b962c8e4492b2af300db51",
 				"runtimeConnections":{},
@@ -610,7 +643,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_E2a99@_UxBP5-1@l",
 			"id":"n_Ohr4G",
-			"index":9,
+			"index":10,
 			"inputs":{
 				"itemToAdd":"{{ n_of6WK.outputs.result[0].text }}",
 				"insertLocation":"END",
@@ -634,27 +667,25 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_FSSYU",
-			"index":10,
+			"index":11,
 			"inputs":{
 				"output":{
 					"type":"object",
-					"additionalProperties":false,
-					"required":[],
 					"properties":{
 						"transcriptString":{
 							"type":"string",
 							"title":"Transcript String"
 						}
-					}
+					},
+					"additionalProperties":false,
+					"required":[]
 				},
 				"input":{
 					"type":"object",
-					"additionalProperties":false,
-					"required":[],
 					"properties":{
 						"transcripts":{
 							"type":"array",
@@ -663,11 +694,12 @@
 							},
 							"title":"Transcripts"
 						}
-					}
+					},
+					"additionalProperties":false,
+					"required":[]
 				},
-				"code":"def transcripts = binding.hasVariable('transcripts') ? transcripts : []\nreturn [\"transcriptString\" : transcripts.join(' ')];",
 				"compile_static":false,
-				"captureStdOutput":false,
+				"code":"def transcripts = binding.hasVariable('transcripts') ? transcripts : []\nreturn [\"transcriptString\" : transcripts.join(' ')];",
 				"parameters":{
 					"transcripts":{
 						"source":"{{ n_ZE48j.outputs.items }}",
@@ -694,7 +726,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_aYiZT",
-			"index":11,
+			"index":12,
 			"inputs":{
 				"source_text":"{{ n_FSSYU.outputs.result.transcriptString }}",
 				"instruction":"You are a highly precise and effective AI meeting assistant. Given the full transcript text of a meeting recorded by an AI bot, perform the following tasks with absolute fidelity to the source material. Do NOT add, interpret, or omit content beyond what is present.\n\n1. Summary:\n- Provide a clear and concise summary of the meeting in 4 to 6 sentences.\n- Focus on what was discussed, decided, or accomplished.\n\n2. Purpose:\n- State the primary purpose or objective of the meeting in 1 to 2 sentences.\n\n3. Key Takeaways:\n- List the critical insights, decisions, or conclusions from the meeting as bullet points.\n\n4. Topics Discussed:\n- Enumerate all major topics or agenda items addressed in the meeting as a bulleted list.\n\n5. Next Steps:\n- List the next steps identified during the meeting as bullet points.\n- These are the general tasks or follow-up activities discussed that may or may not have specific ownership assigned.\n\n6. Action Items with Person Tagging:\n- Extract all specific actionable tasks assigned during the meeting.\n- For each action item, state:\n   - The responsible person’s proper name (no generic labels).\n   - The exact task assigned or next set of actions that person must take.\n   - Any deadlines or due dates mentioned.\n- If no specific action items or tasks are assigned to individuals, explicitly state: \"No specific actionable tasks or assignments were made during this meeting.\"\n- Present this as a Markdown table with columns: Owner | Action Item | Deadline.\n\n7. Exact Verbatim Transcript:\n- Provide the complete verbatim transcript of the meeting.\n- Include speaker names as identified via diarisation.\n- Include accurate start and end timestamps for each speaker segment in \"HH:MM:SS\" format.\n- Present this transcript as a JSON array of objects with fields: \"speaker\", \"transcript\", \"start_time\", and \"end_time\".\n\nImportant Instructions:\n- Do NOT add any subjective commentary, tone analysis, or assumptions.\n- Use only speaker names identified in the transcript; avoid generic naming.\n- Return all outputs clearly and distinctly labeled, in the order specified above.\n- Ensure that every section is precise, fact-based, and fully supported by the transcript.\n\n",
@@ -713,37 +745,36 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_R0yZO",
-			"index":12,
+			"index":13,
 			"inputs":{
 				"output":{
 					"type":"object",
-					"additionalProperties":false,
-					"required":[],
 					"properties":{
 						"prompt":{
 							"type":"string",
 							"title":"Prompt"
 						}
-					}
+					},
+					"additionalProperties":false,
+					"required":[]
 				},
 				"input":{
 					"type":"object",
-					"additionalProperties":false,
-					"required":[],
 					"properties":{
 						"transcript":{
 							"type":"string",
 							"title":"Transcript"
 						}
-					}
+					},
+					"additionalProperties":false,
+					"required":[]
 				},
-				"code":"def transcript = transcript\n\ndef content = \"\"\"You are a highly precise and effective AI meeting assistant. Given the full transcript text of a meeting recorded by an AI bot, perform the following tasks with absolute fidelity to the source material. Do NOT add, interpret, or omit content beyond what is present.\n\n1. Summary:\n- Provide a clear and concise summary of the meeting in 4 to 6 sentences.\n- Focus on what was discussed, decided, or accomplished.\n\n2. Purpose:\n- State the primary purpose or objective of the meeting in 1 to 2 sentences.\n\n3. Key Takeaways:\n- List the critical insights, decisions, or conclusions from the meeting as bullet points.\n\n4. Topics Discussed:\n- Enumerate all major topics or agenda items addressed in the meeting as a bulleted list.\n\n5. Next Steps:\n- List the next steps identified during the meeting as bullet points.\n- These are the general tasks or follow-up activities discussed that may or may not have specific ownership assigned.\n\n6. Action Items with Person Tagging:\n- Extract all specific actionable tasks assigned during the meeting.\n- For each action item, state:\n   - The responsible person’s proper name (no generic labels).\n   - The exact task assigned or next set of actions that person must take.\n   - Any deadlines or due dates mentioned.\n- If no specific action items or tasks are assigned to individuals, explicitly state: \"No specific actionable tasks or assignments were made during this meeting.\"\n- Present this as a Markdown table with columns: Owner | Action Item | Deadline.\n\n7. Exact Verbatim Transcript:\n- Provide the complete verbatim transcript of the meeting.\n- Include speaker names as identified via diarisation.\n- Include accurate start and end timestamps for each speaker segment in \"HH:MM:SS\" format.\n- Present this transcript as a JSON array of objects with fields: \"speaker\", \"transcript\", \"start_time\", and \"end_time\".\n\nImportant Instructions:\n- Do NOT add any subjective commentary, tone analysis, or assumptions.\n- Use only speaker names identified in the transcript; avoid generic naming.\n- Return all outputs clearly and distinctly labeled, in the order specified above.\n- Ensure that every section is precise, fact-based, and fully supported by the transcript.\n\n\nReturn the output in the following json format:\n{\n  \"summary\": \"Concise summary here...\",\n  \"purpose\": \"Primary objective here...\",\n  \"key_takeaways\": [\n    \"Takeaway 1\",\n    \"Takeaway 2\"\n  ],\n  \"topics_discussed\": [\n    \"Topic 1\",\n    \"Topic 2\"\n  ],\n  \"next_steps\": [\n    \"Next step 1\",\n    \"Next step 2\"\n  ],\n  \"action_items\": [\n    {\n      \"owner\": \"John Doe\",\n      \"action_item\": \"Prepare project report\",\n      \"deadline\": \"2025-10-01\"\n    },\n    {\n      \"owner\": \"No specific actionable tasks or assignments were made during this meeting.\",\n      \"action_item\": \"\",\n      \"deadline\": \"\"\n    }\n  ],\n  \"verbatim_transcript\": [\n    {\n      \"speaker\": \"Alice\",\n      \"transcript\": \"Hello, everyone.\",\n      \"start_time\": \"00:00:00\",\n      \"end_time\": \"00:00:03\"\n    }\n  ]\n}\n\n\"\"\" + transcript \n\nreturn [\"prompt\" : content]",
 				"compile_static":false,
-				"captureStdOutput":false,
+				"code":"def transcript = transcript\n\ndef content = \"\"\"You are a highly precise and effective AI meeting assistant. Given the full transcript text of a meeting recorded by an AI bot, perform the following tasks with absolute fidelity to the source material. Do NOT add, interpret, or omit content beyond what is present.\n\n1. Summary:\n- Provide a clear and concise summary of the meeting in 4 to 6 sentences.\n- Focus on what was discussed, decided, or accomplished.\n\n2. Purpose:\n- State the primary purpose or objective of the meeting in 1 to 2 sentences.\n\n3. Key Takeaways:\n- List the critical insights, decisions, or conclusions from the meeting as bullet points.\n\n4. Topics Discussed:\n- Enumerate all major topics or agenda items addressed in the meeting as a bulleted list.\n\n5. Next Steps:\n- List the next steps identified during the meeting as bullet points.\n- These are the general tasks or follow-up activities discussed that may or may not have specific ownership assigned.\n\n6. Action Items with Person Tagging:\n- Extract all specific actionable tasks assigned during the meeting.\n- For each action item, state:\n   - The responsible person’s proper name (no generic labels).\n   - The exact task assigned or next set of actions that person must take.\n   - Any deadlines or due dates mentioned.\n- If no specific action items or tasks are assigned to individuals, explicitly state: \"No specific actionable tasks or assignments were made during this meeting.\"\n- Present this as a Markdown table with columns: Owner | Action Item | Deadline.\n\n7. Exact Verbatim Transcript:\n- Provide the complete verbatim transcript of the meeting.\n- Include speaker names as identified via diarisation.\n- Include accurate start and end timestamps for each speaker segment in \"HH:MM:SS\" format.\n- Present this transcript as a JSON array of objects with fields: \"speaker\", \"transcript\", \"start_time\", and \"end_time\".\n\nImportant Instructions:\n- Do NOT add any subjective commentary, tone analysis, or assumptions.\n- Use only speaker names identified in the transcript; avoid generic naming.\n- Return all outputs clearly and distinctly labeled, in the order specified above.\n- Ensure that every section is precise, fact-based, and fully supported by the transcript.\n\n\nReturn the output in the following json format:\n{\n  \"summary\": \"Concise summary here...\",\n  \"purpose\": \"Primary objective here...\",\n  \"key_takeaways\": [\n    \"Takeaway 1\",\n    \"Takeaway 2\"\n  ],\n  \"topics_discussed\": [\n    \"Topic 1\",\n    \"Topic 2\"\n  ],\n  \"next_steps\": [\n    \"Next step 1\",\n    \"Next step 2\"\n  ],\n  \"action_items\": [\n    {\n      \"owner\": \"John Doe\",\n      \"action_item\": \"Prepare project report\",\n      \"deadline\": \"2025-10-01\"\n    },\n    {\n      \"owner\": \"No specific actionable tasks or assignments were made during this meeting.\",\n      \"action_item\": \"\",\n      \"deadline\": \"\"\n    }\n  ],\n  \"verbatim_transcript\": [\n    {\n      \"speaker\": \"Alice\",\n      \"transcript\": \"Hello, everyone.\",\n      \"start_time\": \"00:00:00\",\n      \"end_time\": \"00:00:03\"\n    }\n  ]\n}\n\n\"\"\" + transcript \n\nreturn [\"prompt\" : content]",
 				"parameters":{
 					"transcript":"{{ n_FSSYU.outputs.result.transcriptString }}"
 				}
@@ -765,7 +796,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_n2mOW",
-			"index":13,
+			"index":14,
 			"inputs":{
 				"automationId":"66dfd76eb70dad256986b784",
 				"runtimeConnections":{},
@@ -794,7 +825,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_JkuXa",
-			"index":14,
+			"index":15,
 			"inputs":{
 				"jsonSchema":{
 					"type":"object",
@@ -912,7 +943,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"_tr7Yk",
-			"index":15,
+			"index":16,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"meeting_bot_data",
@@ -970,13 +1001,13 @@
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_SzED4",
-			"index":16,
+			"index":17,
 			"inputs":{
 				"source_text":"{{ n_n2mOW.outputs.llmResponse }}",
 				"instruction":"Prompt:\n\nYou are an expert at writing professional, concise, and highly readable business emails. Use the following meeting transcript or notes to generate a short email. Follow these instructions carefully:\n\nSubject Line:\nCreate a direct and relevant subject line that clearly reflects the meeting’s main topic.\n\nSummary Section:\n\nWrite a brief 4–5 line overview of the meeting.\n\nInclude only essential points: key discussions, decisions, and context needed for action.\n\nUse short, simple sentences.\n\nKeep each point on a separate line to enhance skimmability.\n\nAction Items Section:\n\nList each task in a bullet point.\n\nFor each action item, clearly include:\n\nTask: What needs to be done\n\nOwner: Person responsible\n\nDeadline: Date or event\n\nDependencies/Links: If relevant\n\nUse separate lines for each piece of information.\n\nMake it easy to scan at a glance.\n\nFormatting & Style:\n\nUse clear headers: \"Summary\" and \"Action Items.\"\n\nSpace out sections with line breaks for readability.\n\nAvoid jargon, filler, or long paragraphs.\n\nKeep it ultra-minimal: only include necessary details.\n\nAvoid numbered lists, footers, or unrelated commentary.\n\nSignature:\nClose with a simple professional sign-off:\n\nExample: \"Best regards,\" followed by Name and Title\n\nOutput Example:\n\nSubject: [Meeting Title/Topic]\n\nSummary:\n[Key point 1]\n[Key point 2]\n[Key point 3]\n[Key point 4]\n\nAction Items:\n\n[Task 1]\nOwner: [Name]\nDeadline: [Date]\n\n[Task 2]\nOwner: [Name]\nDeadline: [Date]\n\nBest regards,\n[Your Name]\n[Your Title]\n\nGoal: Make the email extremely readable, scannable, and actionable. Every detail should be clear at a glance with zero clutter.",
 				"model":"gpt-4o"
 			},
-			"skip":true,
+			"skip":false,
 			"subTitle":"OpenAI",
 			"title":"Analyze text",
 			"type":"ACTION"
@@ -990,11 +1021,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_JgjY1",
-			"index":17,
+			"index":18,
 			"inputs":{
 				"email_type":"text",
 				"subject":"Meeting Summary | UnifyApps",
@@ -1018,7 +1049,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_UxBP5-1",
 			"id":"n_46RcJ",
-			"index":18,
+			"index":19,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -1039,5 +1070,5 @@
 		}
 	},
 	"standard":false,
-	"version":75
+	"version":76
 }
