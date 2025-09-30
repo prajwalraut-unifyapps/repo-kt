@@ -5,12 +5,12 @@
 	"createdTime":1722949056290,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655323589,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f35b38757c179b123078",
+		"deployedAt":1759243514089,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbecfa9213d707c2d272a6",
 		"status":"DEPLOYED",
-		"version":31,
-		"workflowVersion":87
+		"version":32,
+		"workflowVersion":88
 	},
 	"edges":[
 		{
@@ -164,7 +164,7 @@
 	"id":"66b21dc0ab12d571b5b54062",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer thread | slack",
-	"modifiedTime":1759243513994,
+	"modifiedTime":1759243551279,
 	"name":"Knowledge Indexer Thread | Slack",
 	"nodes":[
 		{
@@ -1037,5 +1037,5 @@
 		}
 	},
 	"standard":true,
-	"version":88
+	"version":89
 }
