@@ -5,12 +5,12 @@
 	"createdTime":1758646549624,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655370983,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f38a38757c179b12388f",
+		"deployedAt":1759243555887,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed235e003e08cdeb2eed",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":9
+		"version":3,
+		"workflowVersion":10
 	},
 	"edges":[
 		{
@@ -55,7 +55,7 @@
 	"id":"68930c0033962cfbbceaac32",
 	"lastModifiedBy":-1,
 	"lcName":"deep research tool | entrypoint",
-	"modifiedTime":1759243555819,
+	"modifiedTime":1759243588634,
 	"name":"Deep Research Tool | Entrypoint",
 	"nodes":[
 		{
@@ -299,5 +299,5 @@
 	"tags":[
 		
 	],
-	"version":10
+	"version":11
 }
