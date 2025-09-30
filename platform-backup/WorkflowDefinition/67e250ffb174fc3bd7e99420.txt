@@ -5,12 +5,12 @@
 	"createdTime":1743076284190,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646520576,
+		"deployedAt":1758655341888,
 		"deployedBy":0,
-		"deployedDefinitionId":"68d2d0f8db1a4411eeae829f",
+		"deployedDefinitionId":"68d2f36d38757c179b12336e",
 		"status":"DEPLOYED",
-		"version":52,
-		"workflowVersion":100
+		"version":53,
+		"workflowVersion":101
 	},
 	"edges":[
 		{
@@ -60,9 +60,9 @@
 		]
 	},
 	"id":"67e250ffb174fc3bd7e99420",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"get guardrail settings | ai agent",
-	"modifiedTime":1758655341788,
+	"modifiedTime":1759243529618,
 	"name":"Get Guardrail Settings | AI Agent",
 	"nodes":[
 		{
@@ -1001,5 +1001,5 @@
 	"tags":[
 		
 	],
-	"version":101
+	"version":102
 }
