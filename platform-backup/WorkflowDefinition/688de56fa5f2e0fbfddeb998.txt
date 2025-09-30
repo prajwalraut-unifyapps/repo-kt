@@ -5,12 +5,12 @@
 	"createdTime":1754129828656,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759209166007,
+		"deployedAt":1759215018358,
 		"deployedBy":175325,
-		"deployedDefinitionId":"68db66cdcb40715bb2d8f49b",
+		"deployedDefinitionId":"68db7daa74e0284cd73ff8c1",
 		"status":"DEPLOYED",
-		"version":95,
-		"workflowVersion":94
+		"version":96,
+		"workflowVersion":95
 	},
 	"edges":[
 		{
@@ -24,7 +24,7 @@
 	"id":"688de56fa5f2e0fbfddeb998",
 	"lastModifiedBy":175325,
 	"lcName":"cs_soap_callable_post_basic_dnd",
-	"modifiedTime":1759215017936,
+	"modifiedTime":1759220743979,
 	"name":"CS_SOAP_CALLABLE_POST_BASIC_DND",
 	"nodes":[
 		{
@@ -166,5 +166,5 @@
 		}
 	},
 	"standard":false,
-	"version":95
+	"version":96
 }
