@@ -5,12 +5,12 @@
 	"createdTime":1722519345366,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655335483,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f36738757c179b123271",
+		"deployedAt":1759243524286,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed049213d707c2d272c6",
 		"status":"DEPLOYED",
-		"version":117,
-		"workflowVersion":166
+		"version":118,
+		"workflowVersion":167
 	},
 	"edges":[
 		{
@@ -135,7 +135,7 @@
 	"id":"66ab8f31a1c8b020e8374cd1",
 	"lastModifiedBy":-1,
 	"lcName":"generic_co_pilot_fetch_message_content",
-	"modifiedTime":1759243524145,
+	"modifiedTime":1759243559911,
 	"name":"GENERIC_CO_PILOT_Fetch_Message_Content",
 	"nodes":[
 		{
@@ -1337,5 +1337,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":167
+	"version":168
 }
