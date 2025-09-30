@@ -5,12 +5,12 @@
 	"createdTime":1758977661374,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759222337622,
+		"deployedAt":1759222576590,
 		"deployedBy":44096,
-		"deployedDefinitionId":"68db9a4132ab681f2e8b616f",
+		"deployedDefinitionId":"68db9b30537a6c488fd3a7d6",
 		"status":"DEPLOYED",
-		"version":3,
-		"workflowVersion":11
+		"version":4,
+		"workflowVersion":12
 	},
 	"edges":[
 		{
@@ -24,7 +24,7 @@
 			"fromNodeId":"n_ZMSAj",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_qdHus",
+			"toNodeId":"n_hc1Z2",
 			"type":"next"
 		}
 	],
@@ -55,7 +55,7 @@
 	"id":"68d7933d7ceaf455c79a4dbf",
 	"lastModifiedBy":44096,
 	"lcName":"lookup form test",
-	"modifiedTime":1759222574866,
+	"modifiedTime":1759222688774,
 	"name":"Lookup Form Test",
 	"nodes":[
 		{
@@ -70,7 +70,7 @@
 				"resourceName":"callables_from_interface"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_RrDve-1",
 			"id":"n_dGKSQ",
@@ -227,7 +227,7 @@
 		{
 			"context":{
 				"appName":"callables",
-				"resourceVersion":75,
+				"resourceVersion":899,
 				"resourceName":"callables_return_to_automation",
 				"type":"APPLICATION"
 			},
@@ -235,19 +235,10 @@
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RrDve-1",
-			"id":"n_qdHus",
+			"id":"n_hc1Z2",
 			"index":3,
 			"inputs":{
 				"result":{
-					"response":{
-						"hasMore":false,
-						"type":"HITS",
-						"objects":{
-							"source":"{{ n_ZMSAj.outputs.result }}",
-							"ua:type":"mappedArray",
-							"items":"{{ n_ZMSAj.outputs.result[0] }}"
-						}
-					},
 					"objects":{
 						"source":"{{ n_ZMSAj.outputs.result }}",
 						"ua:type":"mappedArray",
@@ -278,5 +269,5 @@
 	"tags":[
 		
 	],
-	"version":12
+	"version":13
 }
