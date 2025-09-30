@@ -5,12 +5,12 @@
 	"createdTime":1745179322875,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646542017,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2d10dbd00df618e363d07",
+		"deployedAt":1759243550304,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed1e9213d707c2d27319",
 		"status":"DEPLOYED",
-		"version":59,
-		"workflowVersion":90
+		"version":61,
+		"workflowVersion":92
 	},
 	"edges":[
 		{
@@ -66,48 +66,77 @@
 			"fromNodeId":"n_1gMzG",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_ioqXo",
+			"toNodeId":"n_8BWBU",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_ioqXo",
-			"name":"yes",
+			"fromNodeId":"n_8BWBU",
+			"name":"1",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_OqKAA",
-			"type":"if"
+			"toNodeId":"n_8BWBU@1",
+			"type":"branch"
 		},
 		{
-			"fromNodeId":"n_OqKAA",
+			"fromNodeId":"n_8BWBU@1",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_pmxv4",
+			"toNodeId":"_2WCKE",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_ioqXo",
-			"name":"no",
+			"fromNodeId":"_2WCKE",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"qjDaN",
+			"toNodeId":"_C5WgC",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"qjDaN",
+			"fromNodeId":"n_8BWBU",
+			"name":"2",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_4Dg69",
+			"toNodeId":"n_8BWBU@2",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"n_8BWBU@2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_EeT81",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_pmxv4",
+			"fromNodeId":"_EeT81",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_eyplo",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_8BWBU",
+			"name":"default",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_QozcV",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"_C5WgC",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"CSZ80",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"_4Dg69",
+			"fromNodeId":"_eyplo",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"CSZ80",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_QozcV",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"CSZ80",
@@ -175,9 +204,9 @@
 		]
 	},
 	"id":"68050ca67df58855654804a0",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"invoke ai agent by unifyapps",
-	"modifiedTime":1758655364334,
+	"modifiedTime":1759243582737,
 	"name":"Invoke AI Agent By UnifyApps",
 	"nodes":[
 		{
@@ -195,22 +224,16 @@
 			"inputs":{
 				"result":{
 					"additionalProperties":false,
+					"type":"object",
+					"required":[],
 					"ua:modal":{
 						"field_type":"STRING",
 						"is_optional":true
 					},
-					"type":"object",
 					"properties":{
 						"sessionId":{
 							"type":"string",
 							"title":"sessionId"
-						},
-						"agentResponse":{
-							"type":"array",
-							"items":{
-								"type":"string"
-							},
-							"title":"agentResponse"
 						},
 						"citations":{
 							"type":"array",
@@ -221,15 +244,118 @@
 							},
 							"title":"Citations"
 						},
-						"textMessage":{
-							"type":"string",
-							"title":"textMessage"
+						"agentResponses":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"text":{
+										"type":"string",
+										"title":"Text"
+									},
+									"coPilotBlocks":{
+										"type":"array",
+										"items":{
+											"type":"object",
+											"properties":{},
+											"additionalProperties":false
+										},
+										"title":"Co Pilot Blocks"
+									},
+									"interfaceDetails":{
+										"type":"object",
+										"properties":{},
+										"additionalProperties":false,
+										"title":"Interface Details"
+									},
+									"messageId":{
+										"type":"string",
+										"title":"Message Id"
+									},
+									"additional":{
+										"type":"object",
+										"properties":{},
+										"additionalProperties":false,
+										"title":"Additional"
+									},
+									"messageCreatedTime":{
+										"type":"string",
+										"title":"Message Created Time"
+									},
+									"choices":{
+										"type":"array",
+										"items":{
+											"type":"object",
+											"properties":{
+												"id":{
+													"type":"string",
+													"title":"Id"
+												},
+												"title":{
+													"type":"string",
+													"title":"Title"
+												},
+												"url":{
+													"type":"string",
+													"title":"Url"
+												}
+											},
+											"additionalProperties":false,
+											"required":[]
+										},
+										"title":"Choices"
+									}
+								},
+								"additionalProperties":false,
+								"required":[]
+							},
+							"title":"Agent Responses"
+						},
+						"publicResponse":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"text":{
+										"type":"string",
+										"title":"Text"
+									},
+									"choices":{
+										"type":"array",
+										"items":{
+											"type":"object",
+											"properties":{
+												"id":{
+													"type":"string",
+													"title":"Id"
+												},
+												"title":{
+													"type":"string",
+													"title":"Title"
+												},
+												"url":{
+													"type":"string",
+													"title":"Url"
+												}
+											},
+											"additionalProperties":false,
+											"required":[]
+										},
+										"title":"Choices"
+									}
+								},
+								"additionalProperties":false,
+								"required":[]
+							},
+							"title":"Public Response"
 						}
-					},
-					"required":[]
+					}
 				},
 				"callableInterfaceId":"__ua__invoke_ai_agent_by_unifyapps",
 				"setup":{
+					"additionalProperties":false,
+					"type":"object",
+					"required":[],
 					"layout":{
 						"aiAgentId":{
 							"ui:title":"AI Agent",
@@ -276,12 +402,10 @@
 							"ui:help":"User email address, used for identification"
 						}
 					},
-					"additionalProperties":false,
 					"ua:modal":{
 						"field_type":"STRING",
 						"is_optional":true
 					},
-					"type":"object",
 					"properties":{
 						"sessionId":{
 							"type":"string",
@@ -314,13 +438,25 @@
 							"type":"array",
 							"items":{
 								"type":"object",
-								"properties":{},
-								"additionalProperties":false
+								"properties":{
+									"fileDetails":{
+										"type":"object",
+										"properties":{},
+										"additionalProperties":false,
+										"title":"File Details"
+									}
+								},
+								"additionalProperties":false,
+								"required":[]
 							},
 							"title":"Attachments"
+						},
+						"triggerWorkflowWithRuntimeType":{
+							"type":"string",
+							"title":"Trigger Workflow With Runtime Type",
+							"default":"IN_MEMORY"
 						}
-					},
-					"required":[]
+					}
 				}
 			},
 			"skip":false,
@@ -848,28 +984,33 @@
 			"inputs":{
 				"output":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"isBase64":{
 							"type":"boolean",
 							"title":"Is Base 64"
+						},
+						"url":{
+							"type":"string",
+							"title":"Url"
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				},
 				"input":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"content":{
 							"type":"string",
 							"title":"Content"
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				},
+				"code":"import java.util.Base64\nclass Base64Utils {\n\n    static boolean isBase64(String input) {\n        try {\n            // Try decoding; if it fails, it's not valid Base64\n            Base64.getDecoder().decode(input)\n            return true\n        } catch (IllegalArgumentException e) {\n            return false\n        }\n    }\n}\n\nif (binding.hasVariable('content') && content instanceof String) {\n    return [ 'isBase64': Base64Utils.isBase64(content) ]\n} else if(binding.hasVariable('content')) {\n    def url = content?.url ?: content?.link ?: content?.fileDetails?.url ?: content?.fileDetails?.link\n    \n    if(url) {\n        return [ 'isBase64': false, 'url': url ]\n    }\n}\n\nreturn [ 'isBase64': false ]",
 				"compile_static":false,
-				"code":"import java.util.Base64\nclass Base64Utils {\n\n    static boolean isBase64(String input) {\n        try {\n            // Try decoding; if it fails, it's not valid Base64\n            Base64.getDecoder().decode(input)\n            return true\n        } catch (IllegalArgumentException e) {\n            return false\n        }\n    }\n}\n\nif (binding.hasVariable('content') && content instanceof String) {\n    return [ 'isBase64': Base64Utils.isBase64(content) ]\n}\n\nreturn [ 'isBase64': false ]",
+				"captureStdOutput":false,
 				"parameters":{
 					"content":"{{ d3ZdW.outputs.item }}"
 				}
@@ -918,9 +1059,14 @@
 								"sourceType":{
 									"type":"string",
 									"title":"sourceType"
+								},
+								"size":{
+									"type":"integer",
+									"title":"Size"
 								}
 							},
-							"additionalProperties":false
+							"additionalProperties":false,
+							"required":[]
 						}
 					},
 					"required":[]
@@ -951,9 +1097,14 @@
 								"sourceType":{
 									"type":"string",
 									"title":"sourceType"
+								},
+								"size":{
+									"type":"integer",
+									"title":"Size"
 								}
 							},
-							"additionalProperties":false
+							"additionalProperties":false,
+							"required":[]
 						}
 					},
 					"required":[]
@@ -966,54 +1117,128 @@
 		},
 		{
 			"context":{
-				"appName":"if_else",
-				"resourceVersion":438,
-				"resourceName":"if_else_condition",
+				"appName":"branch",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"d3ZdW@xjey4-1@l",
-			"id":"n_ioqXo",
+			"id":"n_8BWBU",
 			"index":9,
 			"inputs":{
-				"filters":[
+				"branches":[
 					{
-						"property":"{{ n_ZxSoB.outputs.result.isBase64 }}",
-						"filter":{
-							"operator":"EQUAL",
-							"value":"true"
+						"id":"1",
+						"inputs":{
+							"name":"isBase64 ?",
+							"conditions":{
+								"filters":[
+									{
+										"property":"{{ n_ZxSoB.outputs.result.isBase64 }}",
+										"filter":{
+											"operator":"EXISTS"
+										}
+									},
+									{
+										"property":"{{ n_ZxSoB.outputs.result.isBase64 }}",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"true"
+										}
+									}
+								],
+								"operator":"AND"
+							}
 						}
+					},
+					{
+						"id":"2",
+						"inputs":{
+							"name":"isUrl ?",
+							"conditions":{
+								"filters":[
+									{
+										"property":"{{ n_ZxSoB.outputs.result.url }}",
+										"filter":{
+											"operator":"EXISTS"
+										}
+									}
+								],
+								"operator":"AND"
+							}
+						}
+					},
+					{
+						"id":"default"
 					}
-				],
-				"operator":"AND"
+				]
 			},
 			"skip":false,
-			"subTitle":"isBase64 ?",
-			"title":"Condition",
-			"type":"IF_ELSE"
+			"subTitle":"Branch",
+			"title":"",
+			"type":"BRANCH"
 		},
 		{
 			"context":{
-				"appName":"utility_by_unifyapps",
-				"resourceVersion":311,
-				"resourceName":"utility_by_unifyapps_upload_base_64_content",
+				"appName":"branch_condition",
+				"resourceVersion":0,
+				"resourceName":"branch_condition",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
-			"groupId":"n_ioqXo@d3ZdW@xjey4-1@l@y",
-			"id":"n_OqKAA",
+			"groupId":"n_8BWBU@d3ZdW@xjey4-1@l@1",
+			"id":"n_8BWBU@1",
 			"index":10,
 			"inputs":{
-				"fileName":"attachment_{{ d3ZdW.outputs.index }}",
-				"content":"{{ d3ZdW.outputs.item }}"
+				"name":"isBase64 ?",
+				"conditions":{
+					"filters":[
+						{
+							"property":"{{ n_ZxSoB.outputs.result.isBase64 }}",
+							"filter":{
+								"operator":"EXISTS"
+							}
+						},
+						{
+							"property":"{{ n_ZxSoB.outputs.result.isBase64 }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"true"
+							}
+						}
+					],
+					"operator":"AND"
+				}
 			},
 			"skip":false,
-			"subTitle":"Utility by UnifyApps",
-			"title":"Upload Base64 Content",
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"files_by_unifyapps",
+				"resourceVersion":395,
+				"resourceName":"files_by_unifyapps_upload_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_8BWBU@d3ZdW@xjey4-1@l@1",
+			"id":"_2WCKE",
+			"index":11,
+			"inputs":{
+				"base64Content":"{{ d3ZdW.outputs.item }}",
+				"fileName":"attachment_{{ d3ZdW.outputs.index }}",
+				"url":"{{ d3ZdW.outputs.item.url }}",
+				"option":"base64Content"
+			},
+			"skip":false,
+			"subTitle":"Files by UnifyApps",
+			"title":"Upload file",
 			"type":"ACTION"
 		},
 		{
@@ -1026,18 +1251,19 @@
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
-			"groupId":"n_ioqXo@d3ZdW@xjey4-1@l@y",
-			"id":"n_pmxv4",
-			"index":11,
+			"groupId":"n_8BWBU@d3ZdW@xjey4-1@l@1",
+			"id":"_C5WgC",
+			"index":12,
 			"inputs":{
 				"variables":[
 					{
 						"source":"{{ n_1gMzG.outputs.fileDetails }}",
 						"value":{
-							"fileType":"{{ n_OqKAA.outputs.fileDetails.fileType }}",
-							"name":"{{ n_OqKAA.outputs.fileDetails.name }}",
-							"source":"{{ n_OqKAA.outputs.fileDetails.source }}",
-							"sourceType":"{{ n_OqKAA.outputs.fileDetails.sourceType }}"
+							"fileType":"{{ _2WCKE.outputs.fileDetails.fileType }}",
+							"name":"{{ _2WCKE.outputs.fileDetails.name }}",
+							"source":"{{ _2WCKE.outputs.fileDetails.source }}",
+							"sourceType":"{{ _2WCKE.outputs.fileDetails.sourceType }}",
+							"size":"{{ _2WCKE.outputs.fileDetails.size }}"
 						}
 					}
 				]
@@ -1049,20 +1275,51 @@
 		},
 		{
 			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":0,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_8BWBU@d3ZdW@xjey4-1@l@2",
+			"id":"n_8BWBU@2",
+			"index":13,
+			"inputs":{
+				"name":"isUrl ?",
+				"conditions":{
+					"filters":[
+						{
+							"property":"{{ n_ZxSoB.outputs.result.url }}",
+							"filter":{
+								"operator":"EXISTS"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
 				"appName":"files_by_unifyapps",
-				"resourceVersion":395,
+				"resourceVersion":489,
 				"resourceName":"files_by_unifyapps_upload_file",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
-			"groupId":"n_ioqXo@d3ZdW@xjey4-1@l@n",
-			"id":"qjDaN",
-			"index":12,
+			"groupId":"n_8BWBU@d3ZdW@xjey4-1@l@2",
+			"id":"_EeT81",
+			"index":14,
 			"inputs":{
 				"fileName":"attachment_{{ d3ZdW.outputs.index }}",
-				"url":"{{ d3ZdW.outputs.item.url }}",
+				"url":"{{ n_ZxSoB.outputs.result.url }}",
 				"option":"url"
 			},
 			"skip":false,
@@ -1080,18 +1337,51 @@
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
-			"groupId":"n_ioqXo@d3ZdW@xjey4-1@l@n",
-			"id":"_4Dg69",
-			"index":13,
+			"groupId":"n_8BWBU@d3ZdW@xjey4-1@l@2",
+			"id":"_eyplo",
+			"index":15,
 			"inputs":{
 				"variables":[
 					{
 						"source":"{{ n_1gMzG.outputs.fileDetails }}",
 						"value":{
-							"fileType":"{{ qjDaN.outputs.fileDetails.fileType }}",
-							"name":"{{ qjDaN.outputs.fileDetails.name }}",
-							"source":"{{ qjDaN.outputs.fileDetails.source }}",
-							"sourceType":"{{ qjDaN.outputs.fileDetails.sourceType }}"
+							"fileType":"{{ _EeT81.outputs.fileDetails.fileType }}",
+							"name":"{{ _EeT81.outputs.fileDetails.name }}",
+							"source":"{{ _EeT81.outputs.fileDetails.source }}",
+							"sourceType":"{{ _EeT81.outputs.fileDetails.sourceType }}",
+							"size":"{{ _EeT81.outputs.fileDetails.size }}"
+						}
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":446,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_8BWBU@d3ZdW@xjey4-1@l@default",
+			"id":"_QozcV",
+			"index":16,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ n_1gMzG.outputs.fileDetails }}",
+						"value":{
+							"fileType":"{{ d3ZdW.outputs.item.fileDetails.fileType }}",
+							"name":"{{ d3ZdW.outputs.item.fileDetails.name }}",
+							"source":"{{ d3ZdW.outputs.item.fileDetails.source }}",
+							"sourceType":"{{ d3ZdW.outputs.item.fileDetails.sourceType }}",
+							"size":"{{ d3ZdW.outputs.item.fileDetails.size }}"
 						}
 					}
 				]
@@ -1113,7 +1403,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"d3ZdW@xjey4-1@l",
 			"id":"CSZ80",
-			"index":14,
+			"index":17,
 			"inputs":{
 				"file":"{{ n_1gMzG.outputs.fileDetails }}"
 			},
@@ -1134,7 +1424,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"d3ZdW@xjey4-1@l",
 			"id":"2RuFh",
-			"index":15,
+			"index":18,
 			"inputs":{
 				"automationId":"67c8501b23160033d36f69dc",
 				"runtimeConnections":{},
@@ -1161,15 +1451,16 @@
 			"fallbackMode":"STOP",
 			"groupId":"d3ZdW@xjey4-1@l",
 			"id":"soUlO",
-			"index":16,
+			"index":19,
 			"inputs":{
 				"itemToAdd":{
-					"url":"{{ CSZ80.outputs.path }}",
-					"mimeType":"{{ 2RuFh.outputs.mimeType }}",
 					"name":"{{ n_1gMzG.outputs.fileDetails.name }}",
 					"source":"{{ n_1gMzG.outputs.fileDetails.source }}",
 					"sourceType":"{{ n_1gMzG.outputs.fileDetails.sourceType }}",
-					"fileType":"{{ n_1gMzG.outputs.fileDetails.fileType }}"
+					"fileType":"{{ n_1gMzG.outputs.fileDetails.fileType }}",
+					"size":"{{ n_1gMzG.outputs.fileDetails.size }}",
+					"url":"{{ CSZ80.outputs.path }}",
+					"mimeType":"{{ 2RuFh.outputs.mimeType }}"
 				},
 				"insertLocation":"END",
 				"listName":"{{ bJrdg.outputs.items[0] }}"
@@ -1191,7 +1482,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"xjey4-1",
 			"id":"K8iTn",
-			"index":17,
+			"index":20,
 			"inputs":{
 				"automationId":"674afe5adefb851816d61959",
 				"runtimeConnections":{},
@@ -1238,7 +1529,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"xjey4-1",
 			"id":"MLUnP",
-			"index":18,
+			"index":21,
 			"inputs":{
 				"automationId":"6761589c529264022c7d1650",
 				"runtimeConnections":{},
@@ -1250,12 +1541,12 @@
 					"userQuery":"{{ w6CHY.outputs.userQuery }}",
 					"aiAgentId":"{{ w6CHY.outputs.aiAgentId }}",
 					"userEmailAddress":"{{ w6CHY.outputs.userEmailAddress }}",
+					"citations":true,
 					"externalKnowledgeSets":{
 						"source":"{{ w6CHY.outputs.externalKnowledgeSets }}",
 						"ua:type":"mappedArray",
 						"items":"{{ w6CHY.outputs.externalKnowledgeSets[0] }}"
-					},
-					"citations":true
+					}
 				}
 			},
 			"skip":false,
@@ -1288,7 +1579,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"xjey4-1",
 			"id":"n_WKi4b",
-			"index":19,
+			"index":22,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -1420,7 +1711,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"xjey4-1",
 			"id":"G3803",
-			"index":20,
+			"index":23,
 			"inputs":{
 				"result":{
 					"sessionId":"{{ K8iTn.outputs.caseId }}",
@@ -1429,10 +1720,46 @@
 						"ua:type":"mappedArray",
 						"items":"{{ MLUnP.outputs.coPilotBlocks[0] }}"
 					},
-					"agentResponse":{
+					"agentResponses":{
+						"source":"{{ MLUnP.outputs.agentResponses }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"text":"{{ MLUnP.outputs.agentResponses[0].text }}",
+							"coPilotBlocks":{
+								"source":"{{ MLUnP.outputs.agentResponses[0].coPilotBlocks }}",
+								"ua:type":"mappedArray",
+								"items":"{{ MLUnP.outputs.agentResponses[0].coPilotBlocks[0] }}"
+							},
+							"interfaceDetails":"{{ MLUnP.outputs.agentResponses[0].interfaceDetails }}",
+							"messageId":"{{ MLUnP.outputs.agentResponses[0].messageId }}",
+							"additional":"{{ MLUnP.outputs.agentResponses[0].additional }}",
+							"messageCreatedTime":"{{ MLUnP.outputs.agentResponses[0].messageCreatedTime }}",
+							"choices":{
+								"source":"{{ MLUnP.outputs.agentResponses[0].choices }}",
+								"ua:type":"mappedArray",
+								"items":{
+									"id":"{{ MLUnP.outputs.agentResponses[0].choices[0].id }}",
+									"title":"{{ MLUnP.outputs.agentResponses[0].choices[0].title }}",
+									"url":"{{ MLUnP.outputs.agentResponses[0].choices[0].url }}"
+								}
+							}
+						}
+					},
+					"publicResponse":{
 						"source":"{{ MLUnP.outputs.listPublicResponse }}",
 						"ua:type":"mappedArray",
-						"items":"{{ MLUnP.outputs.listPublicResponse[0] }}"
+						"items":{
+							"text":"{{ MLUnP.outputs.listPublicResponse[0].text }}",
+							"choices":{
+								"source":"{{ MLUnP.outputs.listPublicResponse[0].choices }}",
+								"ua:type":"mappedArray",
+								"items":{
+									"id":"{{ MLUnP.outputs.listPublicResponse[0].choices[0].id }}",
+									"title":"{{ MLUnP.outputs.listPublicResponse[0].choices[0].title }}",
+									"url":"{{ MLUnP.outputs.listPublicResponse[0].choices[0].url }}"
+								}
+							}
+						}
 					}
 				}
 			},
@@ -1460,5 +1787,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":91
+	"version":93
 }
