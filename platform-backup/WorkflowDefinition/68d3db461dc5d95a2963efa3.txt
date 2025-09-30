@@ -5,12 +5,12 @@
 	"createdTime":1758714694174,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759166418395,
+		"deployedAt":1759227517475,
 		"deployedBy":46209,
-		"deployedDefinitionId":"68dabfd27e3aef4d82c4d84d",
+		"deployedDefinitionId":"68dbae7c3966e7349fcd7b66",
 		"status":"DEPLOYED",
-		"version":13,
-		"workflowVersion":32
+		"version":14,
+		"workflowVersion":33
 	},
 	"edges":[
 		{
@@ -38,7 +38,7 @@
 	"id":"68d3db461dc5d95a2963efa3",
 	"lastModifiedBy":46209,
 	"lcName":"tesgsd",
-	"modifiedTime":1759227514552,
+	"modifiedTime":1759229324247,
 	"name":"tesgsd",
 	"nodes":[
 		{
@@ -106,7 +106,7 @@
 						}
 					}
 				},
-				"code":"\ndef context = new HashMap<>()\n\ncontext[\"appName\"] = \"callables\"\ncontext[\"resourceName\"] = \"callables_call_automation\"\n\ndef input = new HashMap<>()\n    \ninput[\"automationId\"] = \"68dab0713106eb2b3d248139\"\n\ndef parameters = new HashMap<>()\nparameters[\"name\"] = \"applicationTest\"\ninput[\"parameters\"] = parameters\ninput[\"runtimeConnections\"] = new HashMap<>()\ninput[\"synchronous\"] = false\ninput[\"timeoutInMillis\"] = 120000\ninput[\"version\"] = \"-1\"\n\nreturn [\n  \"context\" : context,\n  \"input\" : input\n]",
+				"code":"\ndef context = new HashMap<>()\n\ncontext[\"appName\"] = \"callables\"\ncontext[\"resourceName\"] = \"callables_call_automation\"\n\ndef input = new HashMap<>()\n    \ninput[\"automationId\"] = \"68dab0713106eb2b3d248139\"\n\ndef parameters = new HashMap<>()\nparameters[\"name\"] = \"applicationTest\"\ninput[\"parameters\"] = parameters\ninput[\"runtimeConnections\"] = new HashMap<>()\ninput[\"synchronous\"] = true\ninput[\"timeoutInMillis\"] = 120000\ninput[\"version\"] = \"-1\"\n\nreturn [\n  \"context\" : context,\n  \"input\" : input\n]",
 				"compile_static":false,
 				"captureStdOutput":false
 			},
@@ -170,5 +170,5 @@
 	"tags":[
 		
 	],
-	"version":33
+	"version":34
 }
