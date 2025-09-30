@@ -5,12 +5,12 @@
 	"createdTime":1755341340292,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759219760581,
+		"deployedAt":1759219815445,
 		"deployedBy":44096,
-		"deployedDefinitionId":"68db9030e0514e66333df4b4",
+		"deployedDefinitionId":"68db9067b631023b322fc6d1",
 		"status":"DEPLOYED",
-		"version":4,
-		"workflowVersion":12
+		"version":5,
+		"workflowVersion":13
 	},
 	"edges":[
 		{
@@ -45,7 +45,7 @@
 	"id":"68a0621ce2145a693b0a5877",
 	"lastModifiedBy":44096,
 	"lcName":"testlookup",
-	"modifiedTime":1759219813981,
+	"modifiedTime":1759220152777,
 	"name":"testLookup",
 	"nodes":[
 		{
@@ -164,6 +164,18 @@
 			"id":"n_v8z4e",
 			"index":4,
 			"inputs":{
+				"filter":{
+					"filters":[
+						{
+							"property":"one",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"two"
+							}
+						}
+					],
+					"operator":"AND"
+				},
 				"query":"new query",
 				"options":"{{ n_uNvzq.outputs.result.options }}",
 				"lookupType":"CUSTOM_WORKFLOW_LOOKUP",
@@ -222,5 +234,5 @@
 	"tags":[
 		
 	],
-	"version":13
+	"version":14
 }
