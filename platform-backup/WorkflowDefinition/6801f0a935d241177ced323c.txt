@@ -5,12 +5,12 @@
 	"createdTime":1750490279331,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655327313,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f35f38757c179b123126",
+		"deployedAt":1759243517438,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbecfd5e003e08cdeb2e50",
 		"status":"DEPLOYED",
-		"version":26,
-		"workflowVersion":49
+		"version":27,
+		"workflowVersion":50
 	},
 	"edges":[
 		{
@@ -219,7 +219,7 @@
 	"id":"6801f0a935d241177ced323c",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | zoho invoice | index invoices",
-	"modifiedTime":1759243517253,
+	"modifiedTime":1759243553835,
 	"name":"Knowledge Indexer | Zoho Invoice | Index Invoices",
 	"nodes":[
 		{
@@ -1578,5 +1578,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":50
+	"version":51
 }
