@@ -16,7 +16,7 @@
 	"id":"68dc48fd3b484b11b9ff194a",
 	"lastModifiedBy":2621,
 	"lcName":"test",
-	"modifiedTime":1759267656585,
+	"modifiedTime":1759267743067,
 	"name":"test",
 	"nodes":[
 		{
@@ -47,26 +47,28 @@
 		{
 			"context":{
 				"appName":"figma",
-				"resourceVersion":2,
+				"resourceVersion":1082,
 				"connectionId":"68dc4926eb879d41b10492a0",
-				"resourceName":"figma_get_image_download_url",
+				"resourceName":"figma_create_comment",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_gSR4P-1",
 			"id":"n_THKj2",
 			"index":2,
 			"inputs":{
 				"file_id":"3xU9GGDZKjQQtXmEzGLCNQ",
-				"format":"pdf",
-				"ids":"4368:321039",
-				"scale":2
+				"client_meta":{
+					"x":100,
+					"y":200
+				},
+				"message":"djjssaa"
 			},
 			"skip":false,
 			"subTitle":"Figma",
-			"title":"Get image download URL",
+			"title":"Create a comment",
 			"type":"ACTION"
 		}
 	],
@@ -87,5 +89,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
