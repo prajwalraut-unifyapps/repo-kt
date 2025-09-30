@@ -21,9 +21,9 @@
 		}
 	],
 	"id":"68daa7e0b08cb354b38f8345",
-	"lastModifiedBy":3952,
+	"lastModifiedBy":17,
 	"lcName":"async failures",
-	"modifiedTime":1759160322235,
+	"modifiedTime":1759219160578,
 	"name":"Async failures",
 	"nodes":[
 		{
@@ -33,7 +33,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_7n4yE-1",
 			"id":"n_pXezB",
@@ -59,7 +59,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_7n4yE-1",
 			"id":"n_RYNUq",
@@ -92,7 +92,7 @@
 				"ignore_errors":false,
 				"file":"{{ n_RYNUq.outputs.fileDetails }}",
 				"all_varchar":false,
-				"sqlQuery":"SELEC * FROM FILE;",
+				"sqlQuery":"SELECT * FROM FILE;",
 				"number_of_files":"SINGLE_FILE",
 				"hasLargeFiles":true,
 				"fileType":"csv"
@@ -120,5 +120,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
