@@ -5,12 +5,12 @@
 	"createdTime":1743152414376,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655361261,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f38138757c179b1236df",
+		"deployedAt":1759243547930,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed1b5e003e08cdeb2eb5",
 		"status":"DEPLOYED",
-		"version":63,
-		"workflowVersion":83
+		"version":64,
+		"workflowVersion":84
 	},
 	"edges":[
 		{
@@ -243,7 +243,7 @@
 	"id":"67e6651efd3591529146b261",
 	"lastModifiedBy":-1,
 	"lcName":"apply pii to knowledge chunk",
-	"modifiedTime":1759243547818,
+	"modifiedTime":1759243580415,
 	"name":"Apply PII to knowledge chunk",
 	"nodes":[
 		{
@@ -1296,5 +1296,5 @@
 		}
 	},
 	"standard":true,
-	"version":84
+	"version":85
 }
