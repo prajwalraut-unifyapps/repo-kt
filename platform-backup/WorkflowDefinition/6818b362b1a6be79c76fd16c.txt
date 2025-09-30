@@ -6,12 +6,12 @@
 	"createdTime":1748544450023,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646526256,
+		"deployedAt":1758655347494,
 		"deployedBy":0,
-		"deployedDefinitionId":"68d2d0febd00df618e363ce3",
+		"deployedDefinitionId":"68d2f37338757c179b12346e",
 		"status":"DEPLOYED",
-		"version":34,
-		"workflowVersion":78
+		"version":35,
+		"workflowVersion":79
 	},
 	"edges":[
 		{
@@ -163,9 +163,9 @@
 		]
 	},
 	"id":"6818b362b1a6be79c76fd16c",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"call custom http application (openai type payload) (streaming)",
-	"modifiedTime":1758655347381,
+	"modifiedTime":1759243534766,
 	"name":"Call Custom HTTP Application (OpenAI type Payload) (Streaming)",
 	"nodes":[
 		{
@@ -1659,5 +1659,5 @@
 		}
 	},
 	"standard":true,
-	"version":79
+	"version":80
 }
