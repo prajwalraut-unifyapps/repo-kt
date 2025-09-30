@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759226125665,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_0z2vL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_OFyVj",
+			"type":"next"
+		}
+	],
+	"id":"68dba90d93dd1b05dca28085",
+	"lastModifiedBy":185583,
+	"lcName":"task_pm_check",
+	"modifiedTime":1759226125665,
+	"name":"Task_PM_Check",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_0z2vL-1",
+			"id":"_0z2vL",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_0z2vL-1",
+			"id":"_OFyVj",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":185583,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
