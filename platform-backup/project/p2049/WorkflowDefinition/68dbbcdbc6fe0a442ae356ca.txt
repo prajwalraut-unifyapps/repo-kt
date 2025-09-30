@@ -78,12 +78,27 @@
 			"skip":false,
 			"toNodeId":"ewkPq",
 			"type":"if"
+		},
+		{
+			"fromNodeId":"ewkPq",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_t0TAv",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"BOT0l",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_t0TAv",
+			"type":"next"
 		}
 	],
 	"id":"68dbbcdbc6fe0a442ae356ca",
 	"lastModifiedBy":20249,
 	"lcName":"high execution time ",
-	"modifiedTime":1759238976636,
+	"modifiedTime":1759238984397,
 	"name":"High execution time ",
 	"nodes":[
 		{
@@ -742,6 +757,21 @@
 			"subTitle":"Slack",
 			"title":"Post message",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_YROwK-1",
+			"id":"n_t0TAv",
+			"index":10,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":20249,
@@ -762,5 +792,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":5
 }
