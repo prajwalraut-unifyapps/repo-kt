@@ -1,0 +1,323 @@
+{
+	"appsUsed":[
+		"microsoft_entra_id"
+	],
+	"createdTime":1750508117166,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758655352842,
+		"deployedBy":0,
+		"deployedDefinitionId":"68d2f37838757c179b123556",
+		"status":"DEPLOYED",
+		"version":8,
+		"workflowVersion":22
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_Czrzd",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_75IDw",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_75IDw",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_ZyD5P",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_ZyD5P",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_ZWfC5",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_ZWfC5",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_fAWSN",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"68567e4763c02c4a43e05ec7",
+	"lastModifiedBy":-1,
+	"lcName":"people indexer | ms entra id (batch)",
+	"modifiedTime":1759243539719,
+	"name":"People Indexer | MS Entra ID (Batch)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":444,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_m9D96-1",
+			"id":"n_Czrzd",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"personId":{
+							"type":"string",
+							"title":"Person Id"
+						},
+						"person":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Person"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"sourceUserInfo":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Source User Info"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"microsoft_entra_id",
+				"resourceVersion":1725,
+				"connectionId":"683eb0662880936ccb805bf2",
+				"resourceName":"microsoft_entra_id_get_manager",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"CONTINUE",
+			"groupId":"_m9D96-1",
+			"id":"_75IDw",
+			"index":0,
+			"inputs":{
+				"userId":"{{ n_Czrzd.outputs.sourceUserInfo.id }}"
+			},
+			"options":{
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false,
+					"slidingWindowType":"COUNT_BASED"
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"unit":"MINUTES",
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"CONTINUE",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Microsoft Entra ID",
+			"title":"Get manager",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":406,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_m9D96-1",
+			"id":"_ZyD5P",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"sourceUserInfo":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Source User Info"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"sourceUserInfo":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Source User Info"
+						},
+						"manager":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Manager"
+						},
+						"managerId":{
+							"type":"string",
+							"title":"Manager Id"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"compile_static":false,
+				"code":"if(!binding.hasVariable(\"sourceUserInfo\")){\n  return [:]\n}\nif (binding.hasVariable(\"manager\") && binding.hasVariable(\"managerId\")){ \n  sourceUserInfo << [\"manager\" : manager]\n}\nreturn [\"sourceUserInfo\" : sourceUserInfo]",
+				"parameters":{
+					"sourceUserInfo":"{{ n_Czrzd.outputs.sourceUserInfo }}",
+					"manager":"{{ _75IDw.outputs }}",
+					"managerId":"{{ _75IDw.outputs.id }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"create SourceUserInfo",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":371,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_m9D96-1",
+			"id":"_ZWfC5",
+			"index":0,
+			"inputs":{
+				"automationId":"685561bad46eee0b43a5492d",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"sourceUserInfo":"{{ _ZyD5P.outputs.result.sourceUserInfo }}",
+					"appName":"microsoft_entra_id",
+					"sourceUserId":"{{ n_Czrzd.outputs.sourceUserInfo.id }}",
+					"email":"{{ n_Czrzd.outputs.sourceUserInfo.mail }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":454,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_m9D96-1",
+			"id":"n_fAWSN",
+			"index":0,
+			"inputs":{
+				"result":{
+					"personId":"{{ _ZWfC5.outputs.personId }}",
+					"person":"{{ _ZWfC5.outputs.person }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":47193,
+	"runtimeConnectionAppNames":[
+		"microsoft_entra_id"
+	],
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		
+	],
+	"version":23
+}
