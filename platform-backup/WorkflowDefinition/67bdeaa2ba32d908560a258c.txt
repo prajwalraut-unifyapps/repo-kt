@@ -5,12 +5,12 @@
 	"createdTime":1740599065215,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655350075,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f37638757c179b1234f9",
+		"deployedAt":1759243538167,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed125e003e08cdeb2e8e",
 		"status":"DEPLOYED",
-		"version":56,
-		"workflowVersion":87
+		"version":57,
+		"workflowVersion":88
 	},
 	"edges":[
 		{
@@ -84,7 +84,7 @@
 	"id":"67bdeaa2ba32d908560a258c",
 	"lastModifiedBy":-1,
 	"lcName":"generate citations from reference",
-	"modifiedTime":1759243537689,
+	"modifiedTime":1759243572043,
 	"name":"Generate Citations from Reference",
 	"nodes":[
 		{
@@ -665,5 +665,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":88
+	"version":89
 }
