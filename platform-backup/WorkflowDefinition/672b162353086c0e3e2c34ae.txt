@@ -155,9 +155,9 @@
 		]
 	},
 	"id":"672b162353086c0e3e2c34ae",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"excel file indexer",
-	"modifiedTime":1758655390883,
+	"modifiedTime":1759243571932,
 	"name":"Excel File Indexer",
 	"nodes":[
 		{
@@ -815,5 +815,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":98
+	"version":99
 }
