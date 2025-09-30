@@ -5,12 +5,12 @@
 	"createdTime":1742209909535,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646533935,
+		"deployedAt":1758655356025,
 		"deployedBy":0,
-		"deployedDefinitionId":"68d2d105bd00df618e363cfb",
+		"deployedDefinitionId":"68d2f37c38757c179b1235f2",
 		"status":"DEPLOYED",
-		"version":21,
-		"workflowVersion":219
+		"version":22,
+		"workflowVersion":220
 	},
 	"edges":[
 		{
@@ -207,9 +207,9 @@
 		]
 	},
 	"id":"67d80375ca81d80f3711bc44",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | trello | index all lists",
-	"modifiedTime":1758655355912,
+	"modifiedTime":1759243542516,
 	"name":"Knowledge Indexer | Trello | Index all lists",
 	"nodes":[
 		{
@@ -997,5 +997,5 @@
 	"tags":[
 		
 	],
-	"version":220
+	"version":221
 }
