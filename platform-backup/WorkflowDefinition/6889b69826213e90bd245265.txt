@@ -5,12 +5,12 @@
 	"createdTime":1757480394752,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655313460,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f35138757c179b122ecb",
+		"deployedAt":1759243504888,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbecf09213d707c2d27287",
 		"status":"DEPLOYED",
-		"version":5,
-		"workflowVersion":21
+		"version":6,
+		"workflowVersion":22
 	},
 	"edges":[
 		{
@@ -62,7 +62,7 @@
 	"id":"6889b69826213e90bd245265",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | confluence | blog comment",
-	"modifiedTime":1759243504800,
+	"modifiedTime":1759243543256,
 	"name":"Knowledge Indexer | Confluence | Blog Comment",
 	"nodes":[
 		{
@@ -478,5 +478,5 @@
 	"tags":[
 		"knowledge_v2"
 	],
-	"version":22
+	"version":23
 }
