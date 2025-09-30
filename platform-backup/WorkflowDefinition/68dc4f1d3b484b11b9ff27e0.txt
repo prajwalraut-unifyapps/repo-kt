@@ -30,7 +30,7 @@
 	"id":"68dc4f1d3b484b11b9ff27e0",
 	"lastModifiedBy":59995,
 	"lcName":"export-storage-ordering",
-	"modifiedTime":1759271418906,
+	"modifiedTime":1759271578409,
 	"name":"export-storage-ordering",
 	"nodes":[
 		{
@@ -85,7 +85,7 @@
 						}
 					}
 				},
-				"jsonString":"{\"key\": [\"properties_type\", \"properties_category\"]}"
+				"jsonString":"{\"key\": [\"properties_category\", \"properties_type\"]}"
 			},
 			"skip":false,
 			"subTitle":"Utility by UnifyApps",
@@ -175,5 +175,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
