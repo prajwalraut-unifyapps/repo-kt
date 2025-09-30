@@ -11,12 +11,19 @@
 			"skip":false,
 			"toNodeId":"n_PLFJ8",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_PLFJ8",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_roEYZ",
+			"type":"next"
 		}
 	],
 	"id":"68dbc6b2e29dbd1c8af83b29",
 	"lastModifiedBy":185583,
 	"lcName":"task_pm_check",
-	"modifiedTime":1759233903134,
+	"modifiedTime":1759234446436,
 	"name":"Task_PM_Check",
 	"nodes":[
 		{
@@ -105,6 +112,20 @@
 			"id":"n_PLFJ8",
 			"index":2,
 			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"flag":{
+							"type":"boolean",
+							"title":"flag"
+						},
+						"messageID":{
+							"type":"string",
+							"title":"messageID"
+						}
+					}
+				},
 				"input":{
 					"additionalProperties":false,
 					"type":"object",
@@ -133,7 +154,7 @@
 						}
 					}
 				},
-				"code":"if(age>=18){\nreturn {\n  messageID:\"Can Vote\",\n  flag:true\n};}\nelse\n{\n  return {\n  messageID:\"Can not Vote\",\n  flag:false\n};\n}",
+				"code":"if(age>=18){\n  messageID=\"Can Vote\";\n  flag=true;\n}\nelse\n{\n  messageID=\"Can not Vote\";\n  flag=false;\n}\n// return {\n//   flag:true,\n//   messageID:\"ho ya\"\n// };",
 				"isAsync":false,
 				"parameters":{
 					"name":"{{ n_zydpf.outputs.name }}",
@@ -145,6 +166,30 @@
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Javascript",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":901,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_5QIiF-1",
+			"id":"n_roEYZ",
+			"index":3,
+			"inputs":{
+				"result":{
+					"flag":"{{ n_PLFJ8.outputs.result.flag }}",
+					"messageID":"{{ n_PLFJ8.outputs.result.messageID }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":185583,
@@ -164,5 +209,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
