@@ -1,5 +1,5 @@
 {
-	"createdTime":1759215314777,
+	"createdTime":1759215367089,
 	"deleted":false,
 	"edges":[
 		{
@@ -13,7 +13,7 @@
 	"id":"68db7df7566f906a12aac841",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa2r288dnybdrbz",
-	"modifiedTime":1759215314777,
+	"modifiedTime":1759215367089,
 	"name":"changeSetQA2r288dNyBDrBZ",
 	"nodes":[
 		{
@@ -84,7 +84,7 @@
 			"index":0,
 			"inputs":{
 				"result":{
-					"c":"=PRODUCT({{ 7pKsG.outputs.a }},{{ 7pKsG.outputs.b }})"
+					"c":"=SUM({{ 7pKsG.outputs.a }},{{ 7pKsG.outputs.b }})"
 				}
 			},
 			"skip":false,
@@ -110,5 +110,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":11
 }
