@@ -1,0 +1,340 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1751353163607,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_RKIGQ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_6M4a9",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_6M4a9",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_UelNN",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_UelNN",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_4QS2P",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_4QS2P",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_7lhDZ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_UelNN",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_EAFpj",
+			"type":"next"
+		}
+	],
+	"id":"6863874bee3325399347673a",
+	"lastModifiedBy":46030,
+	"lcName":"infra tool | k8s | copy files from pod",
+	"modifiedTime":1759220063059,
+	"name":"Infra Tool | k8s | Copy files from POD",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":784,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_I9pYO-1",
+			"id":"n_RKIGQ",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"fileDetails":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"File Details"
+						},
+						"errorDetails":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Error Details"
+						},
+						"url":{
+							"type":"string",
+							"title":"Url"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"namespace":{
+							"type":"string",
+							"title":"Namespace"
+						},
+						"podName":{
+							"type":"string",
+							"title":"Pod Name"
+						},
+						"fromPath":{
+							"type":"string",
+							"title":"From Path"
+						},
+						"fileName":{
+							"type":"string",
+							"title":"File Name"
+						},
+						"container":{
+							"type":"string",
+							"title":"Container"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"custom_http_endpoint",
+				"resourceVersion":874,
+				"resourceName":"custom_http_endpoint_execute",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_I9pYO-1",
+			"id":"n_6M4a9",
+			"index":0,
+			"inputs":{
+				"path":"/internal/infra-tools/copy-files-from-pod",
+				"baseUrl":"http://internal-global-svc:80",
+				"queryParamsList":[
+					{
+						"key":"namespace",
+						"value":"{{ n_RKIGQ.outputs.namespace }}"
+					},
+					{
+						"key":"podName",
+						"value":"{{ n_RKIGQ.outputs.podName }}"
+					},
+					{
+						"key":"container",
+						"value":"{{ n_RKIGQ.outputs.container }}"
+					},
+					{
+						"key":"fromPath",
+						"value":"{{ n_RKIGQ.outputs.fromPath }}"
+					},
+					{
+						"key":"fileName",
+						"value":"{{ n_RKIGQ.outputs.fileName }}"
+					}
+				],
+				"responseContentType":"application/json",
+				"isAsync":false,
+				"enableProxy":false,
+				"requestTimeoutInSecs":-1,
+				"authType":"CUSTOM",
+				"httpMethod":"POST",
+				"requestContentType":"application/json",
+				"ignoreTrailingSlashes":false,
+				"sslVerify":false
+			},
+			"options":{
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false,
+					"slidingWindowType":"COUNT_BASED"
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"unit":"MINUTES",
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"STOP",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Custom HTTP Endpoint",
+			"title":"Execute REST request",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":755,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_I9pYO-1",
+			"id":"n_UelNN",
+			"index":0,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_6M4a9.outputs.status }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"200"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":739,
+				"resourceName":"utility_by_unifyapps_generate_public_url",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_UelNN@_I9pYO-1@y",
+			"id":"n_4QS2P",
+			"index":0,
+			"inputs":{
+				"file":"{{ n_6M4a9.outputs.result }}",
+				"expiryTime":1
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Generate public file URL",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":795,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_UelNN@_I9pYO-1@y",
+			"id":"n_7lhDZ",
+			"index":0,
+			"inputs":{
+				"result":{
+					"fileDetails":"{{ n_6M4a9.outputs.result }}",
+					"url":"{{ n_4QS2P.outputs.url }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":795,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_UelNN@_I9pYO-1@n",
+			"id":"n_EAFpj",
+			"index":0,
+			"inputs":{
+				"result":{
+					"errorDetails":"{{ n_6M4a9.outputs.result }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":46030,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		"ua-infra",
+		"Infra Tools"
+	],
+	"version":11
+}
