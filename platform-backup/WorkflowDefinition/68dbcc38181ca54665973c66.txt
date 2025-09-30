@@ -11,12 +11,19 @@
 			"skip":false,
 			"toNodeId":"n_eKsC4",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_eKsC4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_3ivnr",
+			"type":"next"
 		}
 	],
 	"id":"68dbcc38181ca54665973c66",
 	"lastModifiedBy":47201,
 	"lcName":"meeting bot test",
-	"modifiedTime":1759235226779,
+	"modifiedTime":1759235238870,
 	"name":"Meeting Bot Test",
 	"nodes":[
 		{
@@ -65,6 +72,21 @@
 			"subTitle":"Meeting bot by UnifyApps",
 			"title":"Join meeting",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_NVKkT-1",
+			"id":"n_3ivnr",
+			"index":3,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":47201,
@@ -84,5 +106,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
