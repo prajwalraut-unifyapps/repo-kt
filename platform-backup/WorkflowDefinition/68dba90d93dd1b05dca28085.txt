@@ -6,46 +6,156 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_0z2vL",
+			"fromNodeId":"n_4p4yH",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_OFyVj",
+			"toNodeId":"n_kRmib",
 			"type":"next"
 		}
 	],
 	"id":"68dba90d93dd1b05dca28085",
 	"lastModifiedBy":185583,
 	"lcName":"task_pm_check",
-	"modifiedTime":1759226125665,
+	"modifiedTime":1759228293107,
 	"name":"Task_PM_Check",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":857,
+				"resourceName":"callables_from_interface"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_0z2vL-1",
-			"id":"_0z2vL",
-			"index":0,
+			"id":"n_4p4yH",
+			"index":1,
+			"inputs":{
+				"result":{
+					"additionalProperties":false,
+					"type":"object",
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
+					"properties":{
+						"message":{
+							"type":"string",
+							"title":"message"
+						},
+						"flag":{
+							"type":"boolean",
+							"title":"flag"
+						}
+					}
+				},
+				"callableInterfaceId":"68dbacf0a30f2c5f853e7585",
+				"setup":{
+					"additionalProperties":false,
+					"type":"object",
+					"required":[
+						"name",
+						"age",
+						"gender"
+					],
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
+					"properties":{
+						"name":{
+							"type":"string",
+							"title":"name"
+						},
+						"age":{
+							"type":"integer",
+							"title":"age"
+						},
+						"gender":{
+							"type":"string",
+							"title":"gender"
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger interface",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":813,
+				"resourceName":"code_by_unifyapps_javascript",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_0z2vL-1",
-			"id":"_OFyVj",
-			"index":0,
+			"id":"n_kRmib",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"message":{
+							"type":"string",
+							"title":"message"
+						},
+						"flag":{
+							"type":"boolean",
+							"title":"flag"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"name",
+						"age",
+						"gender"
+					],
+					"properties":{
+						"name":{
+							"type":"string",
+							"title":"name"
+						},
+						"age":{
+							"type":"integer",
+							"title":"age"
+						},
+						"gender":{
+							"type":"string",
+							"title":"gender"
+						}
+					}
+				},
+				"code":"if (age>18)\n{\nmessage = \"can vote\";\nflag = true;\n}\nelse{\nmessage = \"can not vote\";\nflag = false;\n}",
+				"isAsync":false,
+				"parameters":{
+					"name":"{{ n_4p4yH.outputs.name }}",
+					"age":"{{ n_4p4yH.outputs.age }}",
+					"gender":"{{ n_4p4yH.outputs.gender }}"
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Javascript",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":185583,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +169,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
