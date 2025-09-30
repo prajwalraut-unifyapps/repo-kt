@@ -1,0 +1,998 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1731129273038,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758655326753,
+		"deployedBy":0,
+		"deployedDefinitionId":"68d2f35e38757c179b12310a",
+		"status":"DEPLOYED",
+		"version":124,
+		"workflowVersion":179
+	},
+	"edges":[
+		{
+			"fromNodeId":"_QbuFF",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_yyoZQ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_yyoZQ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_XXOsf",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_XXOsf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"U9Dup",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"U9Dup",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_0gp8Y",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_0gp8Y",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_cgZwc",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_cgZwc",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_6GdOV",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_6GdOV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_riX3H",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_cgZwc",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_riX3H",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_riX3H",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"nJq8F",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"nJq8F",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"3RHvi",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"3RHvi",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Ze80q",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"3RHvi",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_E6Rpe",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"Ze80q",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_E6Rpe",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_E6Rpe",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Ov4zF",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"_Ov4zF",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_uQU6W",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_E6Rpe",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_uQU6W",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"672eefb99d0e461f4f99c3bd",
+	"lastModifiedBy":-1,
+	"lcName":"query on sql based platforms",
+	"modifiedTime":1759243516916,
+	"name":"Query On SQL Based Platforms",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":73,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_NmEen-1",
+			"id":"_QbuFF",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"success":{
+							"type":"string",
+							"title":"Success"
+						},
+						"errorMessage":{
+							"type":"string",
+							"title":"Error Message"
+						},
+						"columnNames":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Column Names"
+						},
+						"sqlOutput":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Sql Output"
+						},
+						"tableNames":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"table_name":{
+										"type":"string",
+										"title":"Table Name"
+									},
+									"platform_name":{
+										"type":"string",
+										"title":"Platform Name"
+									},
+									"tableNameUI":{
+										"type":"string",
+										"title":"Table Name UI"
+									}
+								},
+								"additionalProperties":false,
+								"required":[]
+							},
+							"title":"Table Names"
+						},
+						"sqlQueryPlatformName":{
+							"type":"string",
+							"title":"sqlQueryPlatformName"
+						},
+						"sqlQuery":{
+							"type":"string",
+							"title":"sqlQuery"
+						},
+						"hasMoreData":{
+							"type":"boolean",
+							"title":"hasMoreData"
+						},
+						"passMessageDirectlyToAgent":{
+							"type":"string",
+							"title":"Pass Message Directly To Agent"
+						},
+						"assumptions_for_sql_generation":{
+							"type":"string",
+							"title":"Assumptions For Sql Generation"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"metadata":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"column_description":{
+										"type":"string",
+										"title":"column_description"
+									},
+									"column_label":{
+										"type":"string",
+										"title":"column_label"
+									},
+									"column_name":{
+										"type":"string",
+										"title":"column_name"
+									},
+									"column_datatype":{
+										"type":"string",
+										"title":"column_datatype"
+									},
+									"table_name":{
+										"type":"string",
+										"title":"table_name"
+									},
+									"platformName":{
+										"type":"string",
+										"title":"Platform Name"
+									},
+									"tableDescription":{
+										"type":"string",
+										"title":"tableDescription"
+									},
+									"tablePrimaryKey":{
+										"type":"string",
+										"title":"tablePrimaryKey"
+									},
+									"tableNameUI":{
+										"type":"string",
+										"title":"Table Name UI"
+									}
+								},
+								"additionalProperties":false,
+								"required":[
+									"platformName"
+								]
+							},
+							"title":"metadata"
+						},
+						"userQuery":{
+							"type":"string",
+							"title":"userQuery"
+						},
+						"platformName":{
+							"type":"string",
+							"title":"Platform Name"
+						},
+						"fewShotExamples":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"fewShotExamples"
+						},
+						"knowledgeInstructions":{
+							"type":"string",
+							"title":"knowledgeInstructions"
+						},
+						"executeUsingModel":{
+							"type":"string",
+							"title":"executeUsingModel"
+						},
+						"caseId":{
+							"type":"string",
+							"title":"caseId"
+						},
+						"max_row_limit":{
+							"type":"integer",
+							"title":"Max Row Limit"
+						},
+						"aiAgentId":{
+							"type":"string",
+							"title":"Ai Agent Id"
+						},
+						"AutomationIdForContextAdditionForSQLQueryGeneration":{
+							"type":"string",
+							"title":"Automation Id For Context Addition For SQL Query Generation"
+						},
+						"FewShotExtraFilterNeeded":{
+							"type":"boolean",
+							"title":"Few Shot Extra Filter Needed"
+						},
+						"AutomationIdForFewShotExtraFilter":{
+							"type":"string",
+							"title":"Automation Id For Few Shot Extra Filter"
+						},
+						"assumptionNeededInFinalAnswer":{
+							"type":"boolean",
+							"title":"Assumption Needed In Final Answer"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":453,
+				"resourceName":"variable_by_unifyapps_get_session_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_NmEen-1",
+			"id":"n_yyoZQ",
+			"index":2,
+			"inputs":{
+				"variableSchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"sqlServerRelatedDynamicMetadata":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Sql Server Related Dynamic Metadata"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Sql Server Related Dynamic Metadata",
+			"title":"Get Session Variables",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.parameters.metadata.source",
+					"root.parameters.metadata.ua:type",
+					"root.parameters.metadata.items.column_datatype",
+					"root.parameters.metadata.items.column_description",
+					"root.parameters.metadata.items.column_label",
+					"root.parameters.metadata.items.column_name",
+					"root.parameters.metadata.items.platformName",
+					"root.parameters.metadata.items.tableNameUI",
+					"root.parameters.metadata.items.tablePrimaryKey",
+					"root.parameters.metadata.items.table_name",
+					"root.parameters.caseId",
+					"root.parameters.platformName",
+					"root.parameters.userQuery",
+					"root.parameters.knowledgeInstructions",
+					"root.parameters.aiAgentId"
+				]
+			},
+			"context":{
+				"appName":"callables",
+				"resourceVersion":516,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_NmEen-1",
+			"id":"n_XXOsf",
+			"index":3,
+			"inputs":{
+				"automationId":"68d40b9991992c6c03332c78",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"caseId":"{{ _QbuFF.outputs.caseId }}",
+					"platformName":"{{ _QbuFF.outputs.platformName }}",
+					"userQuery":"{{ _QbuFF.outputs.userQuery }}",
+					"knowledgeInstructions":"{{ _QbuFF.outputs.knowledgeInstructions }}",
+					"aiAgentId":"{{ _QbuFF.outputs.aiAgentId }}",
+					"sqlServerRelatedDynamicMetadata":"{{ n_yyoZQ.outputs.sqlServerRelatedDynamicMetadata }}",
+					"metadata":{
+						"source":"{{ _QbuFF.outputs.metadata }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"column_datatype":"{{ _QbuFF.outputs.metadata[0].column_datatype }}",
+							"column_description":"{{ _QbuFF.outputs.metadata[0].column_description }}",
+							"column_label":"{{ _QbuFF.outputs.metadata[0].column_label }}",
+							"column_name":"{{ _QbuFF.outputs.metadata[0].column_name }}",
+							"platformName":"{{ _QbuFF.outputs.metadata[0].platformName }}",
+							"tableNameUI":"{{ _QbuFF.outputs.metadata[0].tableNameUI }}",
+							"tablePrimaryKey":"{{ _QbuFF.outputs.metadata[0].tablePrimaryKey }}",
+							"table_name":"{{ _QbuFF.outputs.metadata[0].table_name }}"
+						}
+					},
+					"fewShotExamples":{
+						"source":"{{ _QbuFF.outputs.fewShotExamples }}",
+						"ua:type":"mappedArray",
+						"items":"{{ _QbuFF.outputs.fewShotExamples[0] }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"preparePromptForSQLgeneration",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":368,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_NmEen-1",
+			"id":"U9Dup",
+			"index":4,
+			"inputs":{
+				"automationId":"67d5af775c39266befb87be3",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"aiAgentId":"{{ _QbuFF.outputs.aiAgentId }}",
+					"purpose":"AGENTS_sqlModel"
+				}
+			},
+			"skip":false,
+			"subTitle":"modelid",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.parameters.platformName",
+					"root.parameters.maxRowLimit",
+					"root.parameters.metadata.source",
+					"root.parameters.metadata.ua:type",
+					"root.parameters.metadata.items.table_name",
+					"root.parameters.metadata.items.tableNameUI",
+					"root.parameters.metadata.items.platformName",
+					"root.parameters.aiagentId"
+				]
+			},
+			"context":{
+				"appName":"callables",
+				"resourceVersion":516,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_NmEen-1",
+			"id":"n_0gp8Y",
+			"index":5,
+			"inputs":{
+				"automationId":"68d3da37efe64779b75f6341",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"modelId":"{{ U9Dup.outputs.modelId }}",
+					"platformName":"{{ _QbuFF.outputs.platformName }}",
+					"maxRowLimit":"{{ _QbuFF.outputs.max_row_limit }}",
+					"promptForSQLgen":"{{ n_XXOsf.outputs.prompt }}",
+					"SqlServerRelatedDynamicMetadata":"{{ n_yyoZQ.outputs.sqlServerRelatedDynamicMetadata }}",
+					"metadata":{
+						"source":"{{ _QbuFF.outputs.metadata }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"table_name":"{{ _QbuFF.outputs.metadata[0].table_name }}",
+							"tableNameUI":"{{ _QbuFF.outputs.metadata[0].tableNameUI }}",
+							"platformName":"{{ _QbuFF.outputs.metadata[0].platformName }}"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Execution on sql based platfors",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":439,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_NmEen-1",
+			"id":"n_cgZwc",
+			"index":6,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_0gp8Y.outputs.PassMessageDirectlyToAgent }}",
+						"filter":{
+							"operator":"EXISTS"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"pass directly 2 agent",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":457,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_cgZwc@_NmEen-1@y",
+			"id":"n_6GdOV",
+			"index":7,
+			"inputs":{
+				"result":{
+					"success":"true",
+					"passMessageDirectlyToAgent":"{{ n_0gp8Y.outputs.PassMessageDirectlyToAgent }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{},
+				"visibleOptionalFields":[
+					"root.parameters.rows.items",
+					"root.parameters.cols.items"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":78,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_NmEen-1",
+			"id":"_riX3H",
+			"index":8,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"rowData":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Row Data"
+						},
+						"countRows":{
+							"type":"integer",
+							"title":"countRows"
+						},
+						"max_limit":{
+							"type":"integer",
+							"title":"Max Limit"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"rows":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"rows"
+						},
+						"max_row_limit":{
+							"type":"integer",
+							"title":"Max Row Limit"
+						}
+					}
+				},
+				"code":"def limit = 25\nif (binding.hasVariable(\"max_row_limit\")) {\n    limit = Math.min(max_row_limit, limit)\n}\n\nif (binding.hasVariable(\"rows\")) {\n    return [\n        \"countRows\" : rows.size(),\n        \"rowData\"   : rows.take(limit),\n        \"max_limit\" : limit\n    ]\n} else {\n    return [\n        \"countRows\" : 0,\n        \"rowData\"   : [],\n        \"max_limit\" : limit\n    ]\n}",
+				"compile_static":false,
+				"isAsync":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"max_row_limit":"{{ _QbuFF.outputs.max_row_limit }}",
+					"rows":{
+						"ua:type":"mappedArray",
+						"items":"{{ n_6GdOV.outputs.sqlOutput[0] }}",
+						"source":"{{ n_6GdOV.outputs.sqlOutput }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"subset(rows)",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":238,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_NmEen-1",
+			"id":"nJq8F",
+			"index":9,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"hasMoreData":{
+							"type":"boolean",
+							"title":"hasMoreData"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"hasMoreData":false
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"hasMoreData":{
+							"type":"boolean",
+							"title":"hasMoreData"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":231,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_NmEen-1",
+			"id":"3RHvi",
+			"index":10,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ _riX3H.outputs.result.countRows }}",
+						"filter":{
+							"operator":"LTE",
+							"value":"{{ _riX3H.outputs.result.max_limit }}"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"hasMoreData",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":236,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"3RHvi@_NmEen-1@n",
+			"id":"Ze80q",
+			"index":11,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ nJq8F.outputs.hasMoreData }}",
+						"value":true
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":442,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_NmEen-1",
+			"id":"n_E6Rpe",
+			"index":12,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_0gp8Y.outputs.assumptions_for_sql_generation }}",
+						"filter":{
+							"operator":"EXISTS"
+						}
+					},
+					{
+						"property":"{{ _QbuFF.outputs.assumptionNeededInFinalAnswer }}",
+						"filter":{
+							"operator":"EXISTS"
+						}
+					},
+					{
+						"property":"{{ _QbuFF.outputs.assumptionNeededInFinalAnswer }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"true"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"assumption needed ? => pass",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.result.success",
+					"root.result.errorMessage",
+					"root.result.columnNames.source",
+					"root.result.columnNames.ua:type",
+					"root.result.columnNames.items",
+					"root.result.tableNames.source",
+					"root.result.tableNames.ua:type",
+					"root.result.tableNames.items.table_name",
+					"root.result.tableNames.items.platform_name",
+					"root.result.tableNames.items.tableNameUI",
+					"root.result.sqlQueryPlatformName",
+					"root.result.sqlQuery",
+					"root.result.passMessageDirectlyToAgent",
+					"root.result.assumptions_for_sql_generation"
+				]
+			},
+			"context":{
+				"appName":"callables",
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_E6Rpe@_NmEen-1@y",
+			"id":"_Ov4zF",
+			"index":13,
+			"inputs":{
+				"result":{
+					"success":"{{ n_0gp8Y.outputs.Success }}",
+					"errorMessage":"{{ n_0gp8Y.outputs.ErrorMessage }}",
+					"sqlQueryPlatformName":"{{ n_0gp8Y.outputs.sqlQueryPlatformName }}",
+					"sqlQuery":"{{ n_0gp8Y.outputs.sqlQuery }}",
+					"hasMoreData":"{{ nJq8F.outputs.hasMoreData }}",
+					"passMessageDirectlyToAgent":"{{ n_0gp8Y.outputs.PassMessageDirectlyToAgent }}",
+					"assumptions_for_sql_generation":"{{ n_0gp8Y.outputs.assumptions_for_sql_generation }}",
+					"columnNames":{
+						"source":"{{ n_0gp8Y.outputs.ColumnNames }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_0gp8Y.outputs.ColumnNames[0] }}"
+					},
+					"tableNames":{
+						"source":"{{ n_0gp8Y.outputs.TableNames }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"table_name":"{{ n_0gp8Y.outputs.TableNames[0].tableName }}",
+							"platform_name":"{{ n_0gp8Y.outputs.TableNames[0].platformName }}",
+							"tableNameUI":"{{ n_0gp8Y.outputs.TableNames[0].tableNameUI }}"
+						}
+					},
+					"sqlOutput":{
+						"source":"{{ n_0gp8Y.outputs.SqlOutput }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_0gp8Y.outputs.SqlOutput[0] }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.result.success",
+					"root.result.errorMessage",
+					"root.result.columnNames.source",
+					"root.result.columnNames.ua:type",
+					"root.result.columnNames.items",
+					"root.result.tableNames.source",
+					"root.result.tableNames.ua:type",
+					"root.result.tableNames.items.table_name",
+					"root.result.tableNames.items.platform_name",
+					"root.result.tableNames.items.tableNameUI",
+					"root.result.sqlQueryPlatformName",
+					"root.result.sqlQuery",
+					"root.result.hasMoreData",
+					"root.result.passMessageDirectlyToAgent",
+					"root.result.assumptions_for_sql_generation",
+					"root.result.success",
+					"root.result.errorMessage",
+					"root.result.columnNames.source",
+					"root.result.columnNames.ua:type",
+					"root.result.columnNames.items",
+					"root.result.tableNames.source",
+					"root.result.tableNames.ua:type",
+					"root.result.tableNames.items.table_name",
+					"root.result.tableNames.items.platform_name",
+					"root.result.tableNames.items.tableNameUI",
+					"root.result.sqlQueryPlatformName",
+					"root.result.sqlQuery",
+					"root.result.passMessageDirectlyToAgent",
+					"root.result.assumptions_for_sql_generation",
+					"root.result.errorMessage",
+					"root.result.columnNames.source",
+					"root.result.columnNames.ua:type",
+					"root.result.columnNames.items",
+					"root.result.tableNames.source",
+					"root.result.tableNames.ua:type",
+					"root.result.tableNames.items.table_name",
+					"root.result.tableNames.items.platform_name",
+					"root.result.tableNames.items.tableNameUI",
+					"root.result.sqlQueryPlatformName",
+					"root.result.sqlQuery",
+					"root.result.passMessageDirectlyToAgent",
+					"root.result.assumptions_for_sql_generation"
+				]
+			},
+			"context":{
+				"appName":"callables",
+				"resourceVersion":65,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_NmEen-1",
+			"id":"_uQU6W",
+			"index":14,
+			"inputs":{
+				"result":{
+					"success":"{{ n_0gp8Y.outputs.Success }}",
+					"errorMessage":"{{ n_0gp8Y.outputs.ErrorMessage }}",
+					"sqlQueryPlatformName":"{{ n_0gp8Y.outputs.sqlQueryPlatformName }}",
+					"sqlQuery":"{{ n_0gp8Y.outputs.sqlQuery }}",
+					"hasMoreData":"{{ n_0gp8Y.outputs.hasMoreData }}",
+					"passMessageDirectlyToAgent":"{{ n_0gp8Y.outputs.PassMessageDirectlyToAgent }}",
+					"columnNames":{
+						"ua:type":"mappedArray",
+						"source":"{{ n_0gp8Y.outputs.ColumnNames }}",
+						"items":"{{ n_0gp8Y.outputs.ColumnNames[0] }}"
+					},
+					"sqlOutput":{
+						"ua:type":"mappedArray",
+						"items":"{{ n_0gp8Y.outputs.SqlOutput[0] }}",
+						"source":"{{ n_0gp8Y.outputs.SqlOutput }}"
+					},
+					"tableNames":{
+						"source":"{{ n_0gp8Y.outputs.TableNames }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"table_name":"{{ n_0gp8Y.outputs.TableNames[0].tableName }}",
+							"platform_name":"{{ n_0gp8Y.outputs.TableNames[0].platformName }}",
+							"tableNameUI":"{{ n_0gp8Y.outputs.TableNames[0].tableNameUI }}"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":1866,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"version":180
+}
