@@ -5,12 +5,12 @@
 	"createdTime":1758646552683,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646552811,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2d118db1a4411eeae8308",
+		"deployedAt":1759243558458,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed265e003e08cdeb2efc",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":33
+		"version":3,
+		"workflowVersion":35
 	},
 	"edges":[
 		{
@@ -262,9 +262,9 @@
 		]
 	},
 	"id":"68cd723098627d6a9f035f41",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"[a2a] case management",
-	"modifiedTime":1758655374249,
+	"modifiedTime":1759243590940,
 	"name":"[A2A] Case Management",
 	"nodes":[
 		{
@@ -1565,5 +1565,5 @@
 	"tags":[
 		"a2a"
 	],
-	"version":34
+	"version":36
 }
