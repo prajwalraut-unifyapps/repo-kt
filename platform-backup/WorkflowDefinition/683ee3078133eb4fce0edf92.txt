@@ -1,0 +1,1021 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1750159219043,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758655348269,
+		"deployedBy":0,
+		"deployedDefinitionId":"68d2f37438757c179b12349b",
+		"status":"DEPLOYED",
+		"version":37,
+		"workflowVersion":55
+	},
+	"edges":[
+		{
+			"fromNodeId":"cMVH3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"P5QcG",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"P5QcG",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"IW4Gz",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"IW4Gz",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"KmPe5",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"KmPe5",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"l3Coz",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"IW4Gz",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"l3Coz",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"l3Coz",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_7n6gp",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_7n6gp",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_vLJRs",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_vLJRs",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_hvbQr",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_7n6gp",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"kZoRr",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"kZoRr",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"ANYyv",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"ANYyv",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"eXINC",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"eXINC",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"DSrYv",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_hvbQr",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"jqpal",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"DSrYv",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"jqpal",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"jqpal",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"ib8Q7",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"ib8Q7",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"c3aSo",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"c3aSo",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Xg1eq",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"jqpal",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Xg1eq",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"683ee3078133eb4fce0edf92",
+	"lastModifiedBy":-1,
+	"lcName":"knowledge indexer | zendesk | index organisation specific tickets",
+	"modifiedTime":1759243535429,
+	"name":"Knowledge Indexer | Zendesk | Index Organisation Specific Tickets",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":396,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"wMowU-1",
+			"id":"cMVH3",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"success":{
+							"type":"boolean",
+							"title":"Success"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"ticket":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Ticket"
+						},
+						"status":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Status"
+						},
+						"assignee":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Assignee"
+						},
+						"tags":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Tags"
+						},
+						"startDate":{
+							"type":"string",
+							"title":"Start Date"
+						},
+						"endDate":{
+							"type":"string",
+							"title":"End Date"
+						},
+						"lastSyncTime":{
+							"type":"integer",
+							"title":"Last Sync Time"
+						},
+						"connectionId":{
+							"type":"string",
+							"title":"Connection Id"
+						},
+						"knowledgeId":{
+							"type":"string",
+							"title":"Knowledge Id"
+						},
+						"knowledgeVersion":{
+							"type":"number",
+							"title":"Knowledge Version"
+						},
+						"includeComments":{
+							"type":"boolean",
+							"title":"Include Comments"
+						},
+						"customFieldsMap":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Custom Fields Map"
+						},
+						"inputsTimeStamp":{
+							"type":"number",
+							"title":"Inputs Time Stamp"
+						},
+						"isMetadataIndexing":{
+							"type":"boolean",
+							"title":"Is Metadata Indexing"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.parameters.status.items",
+					"root.parameters.assignee.items",
+					"root.parameters.tags.items"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":417,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"wMowU-1",
+			"id":"P5QcG",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"allowed":{
+							"type":"boolean",
+							"title":"Allowed"
+						},
+						"url":{
+							"type":"string",
+							"title":"Url"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"item":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Item"
+						},
+						"status":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Status"
+						},
+						"assignee":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Assignee"
+						},
+						"tags":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Tags"
+						},
+						"startDate":{
+							"type":"string",
+							"title":"Start Date"
+						},
+						"endDate":{
+							"type":"string",
+							"title":"End Date"
+						},
+						"lastSyncTime":{
+							"type":"string",
+							"title":"Last Sync Time"
+						},
+						"inputsTimeStamp":{
+							"type":"number",
+							"title":"Inputs Time Stamp"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"compile_static":false,
+				"code":"import java.text.SimpleDateFormat\nimport java.util.TimeZone\n\n\ndef date = item['updated_at']\n\ndef DATE_FORMAT =  \"yyyy-MM-dd'T'HH:mm:ss'Z'\"\ndef UNIFY_DATE_FORMAT = \"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'\"\n\ndef allowed = true\n\n// lastSyncTime\nif (binding.hasVariable('lastSyncTime')) {\n    def modifiedTime = date ? getTimestampMillis(date, DATE_FORMAT) : null\n    allowed = allowed && (lastSyncTime < modifiedTime)\n}\n\n//filter on status\nif(binding.hasVariable('status') && status.size() > 0){\n   allowed = allowed && (status.contains(item['status']))\n}\n\n//filter on assignee\nif(binding.hasVariable('assignee') && assignee.size() > 0){\n    allowed = allowed && (assignee.contains(item['assignee_id']))\n}\n\n//filter on tages\nif(binding.hasVariable('tags') && tags.size() > 0){\n    allowed = allowed && (tags.intersect(item['tags']).size() > 0)\n}\n\n\nreturn [\n    'allowed': allowed,\n    'url' : item.url\n]\n\nstatic long getTimestampMillis(String timestamp, String dateFormat) {\n    if (timestamp) {\n        def format = new SimpleDateFormat(dateFormat, Locale.ENGLISH)\n        def date = format.parse(timestamp)\n        return date.getTime()\n    }\n    return 0\n}",
+				"parameters":{
+					"status":{
+						"ua:type":"mappedArray",
+						"source":"{{ cMVH3.outputs.status }}",
+						"items":"{{ cMVH3.outputs.status[0] }}"
+					},
+					"assignee":{
+						"ua:type":"mappedArray",
+						"source":"{{ cMVH3.outputs.assignee }}",
+						"items":"{{ cMVH3.outputs.assignee[0] }}"
+					},
+					"tags":{
+						"ua:type":"mappedArray",
+						"source":"{{ cMVH3.outputs.tags }}",
+						"items":"{{ cMVH3.outputs.tags[0] }}"
+					},
+					"item":"{{ cMVH3.outputs.ticket }}",
+					"startDate":"{{ cMVH3.outputs.startDate }}",
+					"endDate":"{{ cMVH3.outputs.endDate }}",
+					"lastSyncTime":"{{ cMVH3.outputs.lastSyncTime }}",
+					"inputsTimeStamp":"{{ cMVH3.outputs.inputsTimeStamp }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":389,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"wMowU-1",
+			"id":"IW4Gz",
+			"index":3,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ P5QcG.outputs.result.allowed }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"false"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":402,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"IW4Gz@wMowU-1@y",
+			"id":"KmPe5",
+			"index":4,
+			"inputs":{
+				"result":{
+					"success":true
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":420,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"wMowU-1",
+			"id":"l3Coz",
+			"index":5,
+			"inputs":{
+				"automationId":"67d86515a707ac4c02db0e55",
+				"runtimeConnections":{
+					"zendesk":"{{ cMVH3.outputs.connectionId }}"
+				},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"inputs":"{{ cMVH3.outputs.ticket }}",
+					"connectionId":"{{ cMVH3.outputs.connectionId }}",
+					"customFieldsMap":"{{ cMVH3.outputs.customFieldsMap }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"[Zendesk] Get ID to Name Mapping",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":439,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"wMowU-1",
+			"id":"n_7n6gp",
+			"index":6,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ cMVH3.outputs.isMetadataIndexing }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"true"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":451,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_7n6gp@wMowU-1@y",
+			"id":"n_vLJRs",
+			"index":7,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"assignee_id":{
+							"type":"integer",
+							"title":"assignee_id"
+						},
+						"brand_id":{
+							"type":"integer",
+							"title":"brand_id"
+						},
+						"created_at":{
+							"type":"string",
+							"title":"created_at"
+						},
+						"custom_status_id":{
+							"type":"integer",
+							"title":"custom_status_id"
+						},
+						"description":{
+							"type":"string",
+							"title":"description"
+						},
+						"encoded_id":{
+							"type":"string",
+							"title":"encoded_id"
+						},
+						"generated_timestamp":{
+							"type":"integer",
+							"title":"generated_timestamp"
+						},
+						"group_id":{
+							"type":"integer",
+							"title":"group_id"
+						},
+						"id":{
+							"type":"integer",
+							"title":"id"
+						},
+						"priority":{
+							"type":"string",
+							"title":"priority"
+						},
+						"raw_subject":{
+							"type":"string",
+							"title":"raw_subject"
+						},
+						"requester_id":{
+							"type":"integer",
+							"title":"requester_id"
+						},
+						"status":{
+							"type":"string",
+							"title":"status"
+						},
+						"subject":{
+							"type":"string",
+							"title":"subject"
+						},
+						"submitter_id":{
+							"type":"integer",
+							"title":"submitter_id"
+						},
+						"ticket_form_id":{
+							"type":"integer",
+							"title":"ticket_form_id"
+						},
+						"type":{
+							"type":"string",
+							"title":"type"
+						},
+						"updated_at":{
+							"type":"string",
+							"title":"updated_at"
+						},
+						"url":{
+							"type":"string",
+							"title":"url"
+						},
+						"organization":{
+							"type":"integer",
+							"title":"Organization"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"ticket":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Ticket"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"compile_static":false,
+				"code":"def resultMap = [:]\n\nif(binding.hasVariable('ticket')){\n\n  if (ticket.containsKey('id') && ticket['id'] != null) {\n        resultMap[\"id\"] = ticket['id']\n    }\n    if (ticket.containsKey('created_at') && ticket['created_at'] != null) {\n        resultMap[\"created_at\"] = ticket['created_at']\n    }\n    if (ticket.containsKey('updated_at') && ticket['updated_at'] != null) {\n        resultMap[\"updated_at\"] = ticket['updated_at']\n    }\n    if (ticket.containsKey('due_at') && ticket['due_at'] != null) {\n        resultMap[\"due_at\"] = ticket['due_at']\n    }\n    if (ticket.containsKey('external_id') && ticket['external_id'] != null) {\n        resultMap[\"external_id\"] = ticket['external_id']\n    }\n    if (ticket.containsKey('description') && ticket['description'] != null) {\n        resultMap[\"description\"] = ticket['description']\n    }\n    if (ticket.containsKey('raw_subject') && ticket['raw_subject'] != null) {\n        resultMap[\"raw_subject\"] = ticket['raw_subject']\n    }\n    if (ticket.containsKey('subject') && ticket['subject'] != null) {\n        resultMap[\"subject\"] = ticket['subject']\n    }\n    if (ticket.containsKey('type') && ticket['type'] != null) {\n        resultMap[\"type\"] = ticket['type']\n    }\n    if (ticket.containsKey('priority') && ticket['priority'] != null) {\n        resultMap[\"priority\"] = ticket['priority']\n    }\n    if (ticket.containsKey('status') && ticket['status'] != null) {\n        resultMap[\"status\"] = ticket['status']\n    }\n    if (ticket.containsKey('recipient') && ticket['recipient'] != null) {\n        resultMap[\"recipient\"] = ticket['recipient']\n    }\n    if (ticket.containsKey('requester_id') && ticket['requester_id'] != null) {\n        resultMap[\"requester_id\"] = ticket['requester_id']\n    }\n    if (ticket.containsKey('submitter_id') && ticket['submitter_id'] != null) {\n        resultMap[\"submitter_id\"] = ticket['submitter_id']\n    }\n    if (ticket.containsKey('assignee_id') && ticket['assignee_id'] != null) {\n        resultMap[\"assignee_id\"] = ticket['assignee_id']\n    }\n    if (ticket.containsKey('organization') && ticket['organization'] != null) {\n        resultMap[\"organization\"] = ticket['organization']\n    }\n}\n\nreturn resultMap",
+				"parameters":{
+					"ticket":"{{ cMVH3.outputs.ticket }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":464,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_7n6gp@wMowU-1@y",
+			"id":"n_hvbQr",
+			"index":8,
+			"inputs":{
+				"automationId":"689c7bea2aa3d9a5c15fab9e",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"ticket":{
+						"assignee_id":"{{ n_vLJRs.outputs.result.assignee_id }}",
+						"brand_id":"{{ n_vLJRs.outputs.result.brand_id }}",
+						"created_at":"{{ n_vLJRs.outputs.result.created_at }}",
+						"custom_status_id":"{{ n_vLJRs.outputs.result.custom_status_id }}",
+						"description":"{{ n_vLJRs.outputs.result.description }}",
+						"encoded_id":"{{ n_vLJRs.outputs.result.encoded_id }}",
+						"generated_timestamp":"{{ n_vLJRs.outputs.result.generated_timestamp }}",
+						"group_id":"{{ n_vLJRs.outputs.result.group_id }}",
+						"id":"{{ n_vLJRs.outputs.result.id }}",
+						"organization_id":"{{ n_vLJRs.outputs.result.organization }}",
+						"priority":"{{ n_vLJRs.outputs.result.priority }}",
+						"raw_subject":"{{ n_vLJRs.outputs.result.raw_subject }}",
+						"requester_id":"{{ n_vLJRs.outputs.result.requester_id }}",
+						"status":"{{ n_vLJRs.outputs.result.status }}",
+						"subject":"{{ n_vLJRs.outputs.result.subject }}",
+						"submitter_id":"{{ n_vLJRs.outputs.result.submitter_id }}",
+						"ticket_form_id":"{{ n_vLJRs.outputs.result.ticket_form_id }}",
+						"type":"{{ n_vLJRs.outputs.result.type }}",
+						"updated_at":"{{ n_vLJRs.outputs.result.updated_at }}",
+						"url":"{{ n_vLJRs.outputs.result.url }}"
+					},
+					"knowledgeId":"{{ cMVH3.outputs.knowledgeId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":415,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_7n6gp@wMowU-1@n",
+			"id":"kZoRr",
+			"index":9,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"chunkMetadata":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Chunk Metadata"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"item":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Item"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"compile_static":false,
+				"code":"def chunkMetadata = [:]\n\ndef modifiedUrl = item['url']?.replace(\"/api/v2\", \"\")?.replace(\".json\", \"\")\n\nchunkMetadata.put(\"appName\", \"zendesk\")\n\nimport java.text.SimpleDateFormat\nimport java.util.TimeZone\n\nlong toEpochMillis(String isoDate) {\n    def format = new SimpleDateFormat(\"yyyy-MM-dd'T'HH:mm:ssX\")\n    format.setTimeZone(TimeZone.getTimeZone(\"UTC\"))\n    return format.parse(isoDate).getTime()\n}\n\nif (binding.hasVariable('item')) {\n    if (item['created_at']) {\n        chunkMetadata.put(\"createdTime\", toEpochMillis(item['created_at']))\n    }\n    if (item['updated_at']) {\n        chunkMetadata.put(\"modifiedTime\", toEpochMillis(item['updated_at']))\n    }\n    if (item['due_at']) {\n        chunkMetadata.put(\"due_at\", toEpochMillis(item['due_at']))\n    }\n    if (item['generated_timestamp']) {\n        chunkMetadata.put(\"generated_timestamp\", item['generated_timestamp'])\n    }\n    if (item['id']) {\n        chunkMetadata.put(\"ticket_id\", item['id'])\n    }\n    if (item['external_id']) {\n        chunkMetadata.put(\"external_id\", item['external_id'])\n    }\n    if (item['is_public'] != null) {\n        chunkMetadata.put(\"is_public\", item['is_public'])\n    }\n    if (item['priority']) {\n        chunkMetadata.put(\"priority\", item['priority'])\n    }\n    if (item['status']) {\n        chunkMetadata.put(\"status\", item['status'])\n    }\n    if (modifiedUrl) {\n        chunkMetadata.put(\"referenceUrl\", modifiedUrl)\n    }\n    if (item['type']) {\n        chunkMetadata.put(\"type\", item['type'])\n    }\n    if (item['satisfaction_rating'] != null) {\n        chunkMetadata.put(\"satisfaction_rating\", item['satisfaction_rating'])\n    }\n    if (item['raw_subject'] != null) {\n        chunkMetadata.put(\"name\", item['raw_subject'])\n        chunkMetadata.put(\"title\", item['raw_subject'])\n    }\n}\n\nreturn [\"chunkMetadata\": chunkMetadata]\n",
+				"parameters":{
+					"item":"{{ cMVH3.outputs.ticket }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"ChunkMetaData",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":415,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_7n6gp@wMowU-1@n",
+			"id":"ANYyv",
+			"index":10,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"information":{
+							"type":"string",
+							"title":"Information"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"item":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Item"
+						},
+						"mapping":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Mapping"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"compile_static":false,
+				"code":"def str = \"ticket information: |\"\n\nif (binding.hasVariable('item') && binding.hasVariable('mapping')) {\n\n    if (item.containsKey('id') && item['id'] != null) {\n        str += \"ticket id: \" + item['id'] + \" |\"\n    }\n    if (item.containsKey('created_at') && item['created_at'] != null) {\n        str += \"ticket creation date: \" + item['created_at'] + \" |\"\n    }\n    if (item.containsKey('updated_at') && item['updated_at'] != null) {\n        str += \"ticket last update date: \" + item['updated_at'] + \" |\"\n    }\n    if (item.containsKey('due_at') && item['due_at'] != null) {\n        str += \"ticket due date: \" + item['due_at'] + \" |\"\n    }\n    if (item.containsKey('external_id') && item['external_id'] != null) {\n        str += \"ticket external id: \" + item['external_id'] + \" |\"\n    }\n    if (item.containsKey('description') && item['description'] != null) {\n        str += \"description of ticket: \" + item['description'] + \" |\"\n    }\n    if (item.containsKey('raw_subject') && item['raw_subject'] != null) {\n        str += \"raw subject of ticket: \" + item['raw_subject'] + \" |\"\n    }\n    if (item.containsKey('subject') && item['subject'] != null) {\n        str += \"subject of ticket: \" + item['subject'] + \" |\"\n    }\n    if (item.containsKey('type') && item['type'] != null) {\n        str += \"type of ticket: \" + item['type'] + \" |\"\n    }\n    if (item.containsKey('priority') && item['priority'] != null) {\n        str += \"priority of ticket: \" + item['priority'] + \" |\"\n    }\n    if (item.containsKey('status') && item['status'] != null) {\n        str += \"status of ticket: \" + item['status'] + \" |\"\n    }\n    if (item.containsKey('recipient') && item['recipient'] != null) {\n        str += \"recipient: \" + item['recipient'] + \" |\"\n    }\n\n    str += \"requester id:\" + item['requester_id'] + \" requester name:\" + mapping[item['requester_id']?.toString()] + \" |\"\n    str += \"submitter id:\" + item['submitter_id'] + \" submitter name:\" + mapping[item['submitter_id']?.toString()] + \" |\"\n    str += \"assignee id:\" + item['assignee_id'] + \" assignee name:\" + mapping[item['assignee_id']?.toString()] + \" |\"\n    str += \"organization id:\" + item['organization_id'] + \" organization name:\" + mapping[item['organization_id']?.toString()] + \" |\"\n\n    if (mapping[item['group_id']?.toString()]) {\n        str += \"group id:\" + item['group_id'] + \" group name:\" + mapping[item['group_id']?.toString()] + \" |\"\n    }\n\n    item['collaborator_ids']?.each { id ->\n        str += \"collaborator id:\" + id + \" collaborator name:\" + mapping[id?.toString()] + \" |\"\n    }\n\n    item['follower_ids']?.each { id ->\n        str += \"follower id:\" + id + \" follower name:\" + mapping[id?.toString()] + \" |\"\n    }\n\n    item['email_cc_ids']?.each { id ->\n        str += \"email cc id:\" + id + \" email cc name:\" + mapping[id?.toString()] + \" |\"\n    }\n\n    str += \"tags of ticket: \"\n    item['tags']?.each { tag ->\n        str += tag + \" \"\n    }\n    str += \"|\"\n\n    item['custom_fields']?.each { field ->\n        def name = mapping[field.id?.toString()]\n        if (field.value) {\n            str += name + \": \" + field.value + \" |\"\n        }\n    }\n\n    str += \"brand id:\" + item['brand_id'] + \" brand name:\" + mapping[item['brand_id']?.toString()] + \" |\"\n}\n\nreturn [\n    'information': str\n]\n",
+				"parameters":{
+					"mapping":"{{ l3Coz.outputs.mapping }}",
+					"item":"{{ cMVH3.outputs.ticket }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Extracting Information",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":425,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_7n6gp@wMowU-1@n",
+			"id":"eXINC",
+			"index":11,
+			"inputs":{
+				"automationId":"67091f09c6db330cf5b08ead",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"mimeType":"text/plain",
+					"text":"{{ ANYyv.outputs.result.information }}",
+					"knowledgeId":"{{ cMVH3.outputs.knowledgeId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Text Chunker",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":425,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_7n6gp@wMowU-1@n",
+			"id":"DSrYv",
+			"index":12,
+			"inputs":{
+				"automationId":"66af3ff4cd79b321cb478a37",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"chunks":{
+						"source":"{{ eXINC.outputs.chunks }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"data":"{{ eXINC.outputs.chunks[0] }}",
+							"sharedWithIds":{
+								"source":"{{ l3Coz.outputs.sharedWithIds }}",
+								"ua:type":"mappedArray",
+								"items":"{{ l3Coz.outputs.sharedWithIds[0] }}"
+							},
+							"chunkMetadata":"{{ kZoRr.outputs.result.chunkMetadata }}"
+						}
+					},
+					"chunkMetadata":"{{ kZoRr.outputs.result.chunkMetadata }}",
+					"knowledgeId":"{{ cMVH3.outputs.knowledgeId }}",
+					"knowledgeVersion":"{{ cMVH3.outputs.knowledgeVersion }}",
+					"uniqueEntityId":"{{ P5QcG.outputs.result.url }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Knowledge Indexer",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":375,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"wMowU-1",
+			"id":"jqpal",
+			"index":13,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ cMVH3.outputs.includeComments }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"true"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Is Comment",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":417,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"jqpal@wMowU-1@y",
+			"id":"ib8Q7",
+			"index":14,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"id":{
+							"type":"string",
+							"title":"Id"
+						},
+						"url":{
+							"type":"string",
+							"title":"Url"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"item":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Item"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"compile_static":false,
+				"code":"def modifiedUrl = item['url'].replace(\"/api/v2\", \"\").replace(\".json\", \"\")\n\nreturn [\n  'id' : item['id'],\n  'url' : modifiedUrl\n]",
+				"parameters":{
+					"item":"{{ cMVH3.outputs.ticket }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":428,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"jqpal@wMowU-1@y",
+			"id":"c3aSo",
+			"index":15,
+			"inputs":{
+				"automationId":"683ef06422c00c3841439163",
+				"runtimeConnections":{
+					"zendesk":"{{ cMVH3.outputs.connectionId }}"
+				},
+				"synchronous":true,
+				"triggerWorkflowWithRuntimeType":"IN_MEMORY",
+				"version":"-1",
+				"parameters":{
+					"id":"{{ ib8Q7.outputs.result.id }}",
+					"sharedWithIds":{
+						"source":"{{ l3Coz.outputs.sharedWithIds }}",
+						"ua:type":"mappedArray",
+						"items":"{{ l3Coz.outputs.sharedWithIds[0] }}"
+					},
+					"url":"{{ ib8Q7.outputs.result.url }}",
+					"knowledgeId":"{{ cMVH3.outputs.knowledgeId }}",
+					"knowledgeVersion":"{{ cMVH3.outputs.knowledgeVersion }}",
+					"connectionId":"{{ cMVH3.outputs.connectionId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":402,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"wMowU-1",
+			"id":"Xg1eq",
+			"index":16,
+			"inputs":{
+				"result":{
+					"success":true
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":45775,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		"AI Agent"
+	],
+	"version":56
+}
