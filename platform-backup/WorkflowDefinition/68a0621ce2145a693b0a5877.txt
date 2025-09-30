@@ -31,11 +31,11 @@
 			"fromNodeId":"n_7xTUy",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_JlTkZ",
+			"toNodeId":"n_v8z4e",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"_JlTkZ",
+			"fromNodeId":"n_v8z4e",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_aDcNX",
@@ -45,7 +45,7 @@
 	"id":"68a0621ce2145a693b0a5877",
 	"lastModifiedBy":44096,
 	"lcName":"testlookup",
-	"modifiedTime":1759055254419,
+	"modifiedTime":1759219754345,
 	"name":"testLookup",
 	"nodes":[
 		{
@@ -89,7 +89,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_lUik9-1",
 			"id":"n_uNvzq",
@@ -158,15 +158,13 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_lUik9-1",
-			"id":"_JlTkZ",
+			"id":"n_v8z4e",
 			"index":4,
 			"inputs":{
-				"keys":[
-					"key1"
-				],
+				"query":"new query",
 				"options":"{{ n_uNvzq.outputs.result.options }}",
 				"lookupType":"CUSTOM_WORKFLOW_LOOKUP",
 				"page":{
@@ -175,7 +173,7 @@
 				},
 				"type":"ByQuery",
 				"fields":[
-					"fields1"
+					"neww"
 				]
 			},
 			"skip":false,
@@ -224,5 +222,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":12
 }
