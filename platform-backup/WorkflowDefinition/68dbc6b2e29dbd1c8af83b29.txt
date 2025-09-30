@@ -31,7 +31,7 @@
 	"id":"68dbc6b2e29dbd1c8af83b29",
 	"lastModifiedBy":185583,
 	"lcName":"task_pm_check",
-	"modifiedTime":1759234498827,
+	"modifiedTime":1759234642639,
 	"name":"Task_PM_Check",
 	"nodes":[
 		{
@@ -162,7 +162,7 @@
 						}
 					}
 				},
-				"code":"if(age>=18){\n  messageID=\"Can Vote\";\n  flag=true;\n}\nelse\n{\n  messageID=\"Can not Vote\";\n  flag=false;\n}\n\nreturn flag;",
+				"code":"if (age >= 18) {\n  messageID = \"Can Vote\";\n  flag = true;\n} else {\n  messageID = \"Can not Vote\";\n  flag = false;\n}\n\n// return values from the code block\nreturn {\n  messageID,\n  flag\n};",
 				"isAsync":false,
 				"parameters":{
 					"name":"{{ n_zydpf.outputs.name }}",
@@ -217,5 +217,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
