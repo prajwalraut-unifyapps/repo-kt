@@ -5,12 +5,12 @@
 	"createdTime":1743763607724,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655362843,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f38238757c179b123712",
+		"deployedAt":1759243548806,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed1c9213d707c2d27310",
 		"status":"DEPLOYED",
-		"version":58,
-		"workflowVersion":79
+		"version":59,
+		"workflowVersion":80
 	},
 	"edges":[
 		{
@@ -62,7 +62,7 @@
 	"id":"67efad294c5088175588e4a4",
 	"lastModifiedBy":-1,
 	"lcName":"create excel file and send notification",
-	"modifiedTime":1759243548745,
+	"modifiedTime":1759243581330,
 	"name":"Create excel file and send notification",
 	"nodes":[
 		{
@@ -321,5 +321,5 @@
 	"tags":[
 		
 	],
-	"version":80
+	"version":81
 }
