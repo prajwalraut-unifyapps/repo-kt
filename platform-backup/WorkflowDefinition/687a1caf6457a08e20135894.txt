@@ -1,0 +1,732 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1756991661568,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759243534080,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed0e23e6682b9a51eace",
+		"status":"DEPLOYED",
+		"version":12,
+		"workflowVersion":33
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_YFuhI",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_FeUgW",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_FeUgW",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_yqWkY",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_yqWkY",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"S6HYQ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"S6HYQ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_JuCJs",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_JuCJs",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Fo6sl",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_Fo6sl",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"vPnvz",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"vPnvz",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"fuLyt",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"fuLyt",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_POMRK",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"687a1caf6457a08e20135894",
+	"lastModifiedBy":-1,
+	"lcName":"knowledge indexer | jira | issue (v2)",
+	"modifiedTime":1759243568652,
+	"name":"Knowledge Indexer | Jira | Issue (V2)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":436,
+				"resourceName":"callables_from_interface"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_hNHYl-1",
+			"id":"n_YFuhI",
+			"index":1,
+			"inputs":{
+				"result":{
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
+					"properties":{
+						"success":{
+							"type":"boolean",
+							"title":"Success"
+						}
+					},
+					"required":[]
+				},
+				"callableInterfaceId":"686e0f90c92a3538c991f984",
+				"setup":{
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
+					"properties":{
+						"knowledgeId":{
+							"type":"string",
+							"title":"Knowledge Id"
+						},
+						"resourceType":{
+							"type":"string",
+							"title":"Resource Type"
+						},
+						"sourceResponse":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Source Response"
+						},
+						"sharedWithIds":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Shared With Ids"
+						},
+						"knowledgeVersion":{
+							"type":"integer",
+							"title":"Knowledge Version"
+						},
+						"uniqueEntityId":{
+							"type":"string",
+							"title":"Unique Entity Id"
+						}
+					},
+					"required":[
+						"uniqueEntityId"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger interface",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":448,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_hNHYl-1",
+			"id":"n_FeUgW",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"response":{
+							"type":"object",
+							"title":"response"
+						},
+						"issueApiResponse":{
+							"type":"object",
+							"title":"issueApiResponse"
+						},
+						"commentsApiResponse":{
+							"type":"array",
+							"items":{
+								"type":"object"
+							},
+							"title":"commentsApiResponse"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"sourceResponse":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Source Response"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"compile_static":false,
+				"code":"return sourceResponse",
+				"parameters":{
+					"sourceResponse":"{{ n_YFuhI.outputs.sourceResponse }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Resolve Input",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.parameters.attachments.items"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":64,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_hNHYl-1",
+			"id":"_yqWkY",
+			"index":3,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"chunkMetadata":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Chunk Metadata"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"projectId":{
+							"type":"string",
+							"title":"Project Id"
+						},
+						"issueId":{
+							"type":"string",
+							"title":"Issue Id"
+						},
+						"appName":{
+							"type":"string",
+							"title":"App Name"
+						},
+						"name":{
+							"type":"string",
+							"title":"Name"
+						},
+						"author":{
+							"type":"string",
+							"title":"Author"
+						},
+						"referenceUrl":{
+							"type":"string",
+							"title":"Reference Url"
+						},
+						"createdTime":{
+							"type":"string",
+							"title":"Created Time"
+						},
+						"createdBy":{
+							"type":"string",
+							"title":"Created By"
+						},
+						"attachments":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Attachments"
+						},
+						"modifiedOn":{
+							"type":"string",
+							"title":"Modified On"
+						},
+						"modifiedBy":{
+							"type":"string",
+							"title":"Modified By"
+						},
+						"key":{
+							"type":"string",
+							"title":"Key"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"modifiedOn"
+					]
+				},
+				"compile_static":false,
+				"code":"import java.time.OffsetDateTime\nimport java.time.format.DateTimeFormatter\ndef chunkMetadata = [:]\n\nchunkMetadata << (binding.hasVariable('projectId') && projectId ? [\"projectId\": projectId] : [:])\nchunkMetadata << (binding.hasVariable('issueId') && issueId ? [\"issueId\": issueId] : [:])\nchunkMetadata << (binding.hasVariable('appName') && appName ? [\"appName\": appName] : [:])\nchunkMetadata << (binding.hasVariable('name') && name ? [\"name\": name] : [:])\nchunkMetadata << (binding.hasVariable('author') && author ? [\"author\": author] : [:])\n\nif (binding.hasVariable('referenceUrl') && referenceUrl && binding.hasVariable('key') && key) {\n    // Extract the base URL using a regex that matches the protocol and domain\n    def domainMatcher = referenceUrl =~ /^(https?:\\/\\/[^\\/]+)/\n    if (domainMatcher) {\n        def baseUrl = domainMatcher[0][1]\n        def newUrl = \"${baseUrl}/browse/${key}\".toString()\n        chunkMetadata << [\"referenceUrl\": newUrl]\n    } else {\n        // Fallback if the regex does not match\n        chunkMetadata << [\"referenceUrl\": referenceUrl]\n    }\n}\n\nchunkMetadata << (binding.hasVariable('modifiedBy') && modifiedBy ? [\"modifiedBy\": modifiedBy] : [:])\nchunkMetadata << (binding.hasVariable('createdBy') && createdBy ? [\"createdBy\": createdBy] : [:])\n\n// Date-time conversion\ndef dateTimeStr = binding.hasVariable('createdTime') ? createdTime : null\nif (dateTimeStr) {\n    def offsetDateTime = java.time.OffsetDateTime.parse(dateTimeStr, java.time.format.DateTimeFormatter.ofPattern(\"yyyy-MM-dd'T'HH:mm:ss.SSSZ\"))\n    def epochMillis = offsetDateTime.toInstant().toEpochMilli()\n    chunkMetadata << [\"date\": epochMillis]\n}\n\ndef modifiedOnStr = binding.hasVariable('modifiedOn') ? modifiedOn : null\nif (modifiedOnStr) {\n    def offsetDateTime = java.time.OffsetDateTime.parse(modifiedOnStr, java.time.format.DateTimeFormatter.ofPattern(\"yyyy-MM-dd'T'HH:mm:ss.SSSZ\"))\n    def epochMillis = offsetDateTime.toInstant().toEpochMilli()\n    chunkMetadata << [\"modifiedOn\": epochMillis]\n}\n\ndef hasAttachments = binding.hasVariable('attachments') && attachments instanceof List && !attachments.isEmpty()\n\nchunkMetadata << [\"hasAttachments\": hasAttachments]\n\nreturn [\"chunkMetadata\": chunkMetadata]\n",
+				"isAsync":false,
+				"parameters":{
+					"projectId":"{{ n_FeUgW.outputs.result.issueApiResponse.fields.project.id }}",
+					"appName":"jira",
+					"author":"{{ n_FeUgW.outputs.result.issueApiResponse.fields.creator.displayName }}",
+					"issueId":"{{ n_FeUgW.outputs.result.response.inputs.issueId }}",
+					"name":"{{ n_FeUgW.outputs.result.issueApiResponse.fields.project.name }} - {{ n_FeUgW.outputs.result.issueApiResponse.fields.summary }} ({{ n_FeUgW.outputs.result.issueApiResponse.key }})",
+					"createdTime":"{{ n_FeUgW.outputs.result.issueApiResponse.fields.created }}",
+					"createdBy":"{{ n_FeUgW.outputs.result.issueApiResponse.fields.creator.emailAddress }}",
+					"modifiedOn":"{{ n_FeUgW.outputs.result.response.inputs.modifiedOn }}",
+					"modifiedBy":"{{ n_FeUgW.outputs.result.response.inputs.modifiedBy }}",
+					"attachments":{
+						"source":"{{ n_FeUgW.outputs.result.issueApiResponse.fields.attachment }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_FeUgW.outputs.result.issueApiResponse.fields.attachment[0] }}"
+					},
+					"key":"{{ n_FeUgW.outputs.result.issueApiResponse.key }}",
+					"referenceUrl":"{{ n_FeUgW.outputs.result.issueApiResponse.self }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"chunkMetadata",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.parameters.comments.items"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":68,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_hNHYl-1",
+			"id":"S6HYQ",
+			"index":4,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"formattedComments":{
+							"type":"string",
+							"title":"Formatted Comments"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"comments":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Comments"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"compile_static":false,
+				"code":"def idx = 0\nif(binding.hasVariable('index')){\n    idx = index\n}\n\n// TODO: Check mapping acc to run\n\ndef commentsPart = \"\"\nif (binding.hasVariable('comments') && comments instanceof List) {\n    comments.eachWithIndex { comment, i ->\n        commentsPart += \"Comment ${idx + i + 1}: ${comment}, \"\n    }\n    idx += comments.size()\n}\n\ndef finalData = \"\"\nif(binding.hasVariable('initComments')){\n    finalData = initComments + commentsPart\n}else{\n    finalData = commentsPart\n}\n\nreturn [\n    \"formattedComments\": finalData,\n    \"commentSize\": idx\n    ]",
+				"parameters":{
+					"comments":{
+						"source":"{{ n_FeUgW.outputs.result.commentsApiResponse }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_FeUgW.outputs.result.commentsApiResponse[0] }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Format comment text",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":10,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"CONTINUE",
+			"groupId":"_hNHYl-1",
+			"id":"_JuCJs",
+			"index":5,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"content":{
+							"type":"string",
+							"title":"Content"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"content"
+					]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"description":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Description"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"description"
+					]
+				},
+				"compile_static":false,
+				"code":"// Helper method to flatten nested lists/structures,\n// now only extracting actual text content.\ndef flattenContent(content) {\n    def result = []\n\n    if (content instanceof List) {\n        content.each { item ->\n            result.addAll(flattenContent(item))\n        }\n    } else if (content instanceof Map) {\n        if (content.containsKey(\"text\")) {\n            // If this node has text, add it.\n            result << content.text.toString()\n        } else if (content.containsKey(\"content\")) {\n            // Otherwise, if it has a \"content\" field, flatten that.\n            result.addAll(flattenContent(content.content))\n        }\n        // Any other keys (like \"type\" or \"version\") are ignored.\n    } else if (content != null) {\n        result << content.toString()\n    }\n\n    return result\n}\n\nString concatenateDescription(description) {\n    if (description instanceof String) {\n        return description\n    }\n    if (!(description instanceof Map) || !description.containsKey(\"content\")) {\n        return \"\"  // Return an empty string if description is missing or doesn't have \"content\"\n    }\n    \n    def content = description.content\n    def flattenedContent = flattenContent(content)\n    \n    return flattenedContent.join(\" \")\n}\n\n// Return statement with inline check for 'description'\nreturn [\"content\": binding.hasVariable(\"description\") ? concatenateDescription(description) : \"\"]\n",
+				"parameters":{
+					"description":"{{ n_FeUgW.outputs.result.issueApiResponse.fields.description }}"
+				}
+			},
+			"options":{
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false
+				},
+				"logConfig":{
+					"enabled":false
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"CONTINUE",
+				"telemetryConfig":{
+					"enableTelemetry":false
+				}
+			},
+			"skip":false,
+			"subTitle":"Flatten content",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.parameters.attachments.items"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":61,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_hNHYl-1",
+			"id":"_Fo6sl",
+			"index":6,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"data":{
+							"type":"string",
+							"title":"Data"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"data"
+					]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"name":{
+							"type":"string",
+							"title":"Name"
+						},
+						"description":{
+							"type":"string",
+							"title":"Description"
+						},
+						"comments":{
+							"type":"string",
+							"title":"Comments"
+						},
+						"type":{
+							"type":"string",
+							"title":"Type"
+						},
+						"assignee":{
+							"type":"string",
+							"title":"Assignee"
+						},
+						"status":{
+							"type":"string",
+							"title":"Status"
+						},
+						"attachments":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Attachments"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"compile_static":false,
+				"code":"def namePart = (binding.hasVariable('name') && name) ? \"The issue name is: ${name}; \" : \"The issue's name is missing; \"\ndef descriptionPart = (binding.hasVariable('description') && description) ? \"The issue description is: ${description}; \" : \"The issue's description is missing; \"\ndef typePart = (binding.hasVariable('type') && type) ? \"The issue type is: ${type}; \" : \"The issue's type is missing; \"\ndef commentsPart = (binding.hasVariable('comments') && comments) ? \"${comments}; \" : \"The issue's comments are missing; \"\ndef assigneePart = (binding.hasVariable('assignee') && assignee) ? \"The issue has been assigned to: ${assignee}; \" : \"The issue has not been assigned to anyone yet; \"\ndef statusPart = (binding.hasVariable('status') && status) ? \"The issue's status is: ${status}, \" : \"The issue's status has not been updated yet; \"\ndef attachment = (binding.hasVariable('attachments') && attachments) ? attachments.join(', ') : \"\"\ndef attachmentPart = (attachment != \"\") ? \"The issue has the following attachmentss: ${attachment}, \" : \"The issue does not have any attachments; \"\n\ndef data = \"${namePart}${descriptionPart}${typePart}${commentsPart}${assigneePart}${statusPart}${attachmentPart}\"\n\nreturn [ \"data\":data.toString() ]\n",
+				"parameters":{
+					"name":"{{ n_FeUgW.outputs.result.issueApiResponse.fields.summary }}",
+					"description":"{{ _JuCJs.outputs.result.content }}",
+					"comments":"{{ S6HYQ.outputs.result.formattedComments }}",
+					"type":"{{ n_FeUgW.outputs.result.issueApiResponse.fields.issuetype.name }}",
+					"assignee":"{{ n_FeUgW.outputs.result.issueApiResponse.fields.assignee.emailAddress }}, {{ n_FeUgW.outputs.result.issueApiResponse.fields.assignee.displayName }}",
+					"status":"{{ n_FeUgW.outputs.result.issueApiResponse.fields.status.name }}, {{ n_FeUgW.outputs.result.issueApiResponse.fields.status.description }}",
+					"attachments":{
+						"source":"{{ n_FeUgW.outputs.result.issueApiResponse.fields.attachment }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_FeUgW.outputs.result.issueApiResponse.fields.attachment[0].filename }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Content formatting",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":73,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"CONTINUE",
+			"groupId":"_hNHYl-1",
+			"id":"vPnvz",
+			"index":7,
+			"inputs":{
+				"automationId":"67091f09c6db330cf5b08ead",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"knowledgeId":"{{ n_YFuhI.outputs.knowledgeId }}",
+					"text":"{{ _Fo6sl.outputs.result.data }}"
+				}
+			},
+			"options":{
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false
+				},
+				"logConfig":{
+					"enabled":false
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"CONTINUE",
+				"telemetryConfig":{
+					"enableTelemetry":false
+				}
+			},
+			"skip":false,
+			"subTitle":"Text chunker",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":48,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_hNHYl-1",
+			"id":"fuLyt",
+			"index":8,
+			"inputs":{
+				"automationId":"66af3ff4cd79b321cb478a37",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"chunks":{
+						"items":{
+							"data":"{{ vPnvz.outputs.chunks[0] }}",
+							"sharedWithIds":{
+								"source":"{{ n_YFuhI.outputs.sharedWithIds }}",
+								"ua:type":"mappedArray",
+								"items":"{{ n_YFuhI.outputs.sharedWithIds[0] }}"
+							},
+							"chunkMetadata":"{{ _yqWkY.outputs.result.chunkMetadata }}"
+						},
+						"ua:type":"mappedArray",
+						"source":"{{ vPnvz.outputs.chunks }}"
+					},
+					"chunkMetadata":"{{ _yqWkY.outputs.result.chunkMetadata }}",
+					"knowledgeId":"{{ n_YFuhI.outputs.knowledgeId }}",
+					"knowledgeVersion":"{{ n_YFuhI.outputs.knowledgeVersion }}",
+					"uniqueEntityId":"{{ n_YFuhI.outputs.uniqueEntityId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Indexer With RBAC",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":454,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_hNHYl-1",
+			"id":"n_POMRK",
+			"index":9,
+			"inputs":{
+				"result":{
+					"success":true
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":0,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":false,
+		"enableRunLogging":false,
+		"enableVariableLogging":false,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		"knowledge_v2"
+	],
+	"version":34
+}
