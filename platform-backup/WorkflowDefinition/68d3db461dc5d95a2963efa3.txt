@@ -5,12 +5,12 @@
 	"createdTime":1758714694174,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759163002254,
+		"deployedAt":1759166418395,
 		"deployedBy":46209,
-		"deployedDefinitionId":"68dab277ba8a5546d407c015",
+		"deployedDefinitionId":"68dabfd27e3aef4d82c4d84d",
 		"status":"DEPLOYED",
-		"version":12,
-		"workflowVersion":31
+		"version":13,
+		"workflowVersion":32
 	},
 	"edges":[
 		{
@@ -38,7 +38,7 @@
 	"id":"68d3db461dc5d95a2963efa3",
 	"lastModifiedBy":46209,
 	"lcName":"tesgsd",
-	"modifiedTime":1759166415381,
+	"modifiedTime":1759227514552,
 	"name":"tesgsd",
 	"nodes":[
 		{
@@ -81,7 +81,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_f8tNU-1",
 			"id":"n_pn90g",
@@ -106,7 +106,7 @@
 						}
 					}
 				},
-				"code":"\ndef context = new HashMap<>()\n\ncontext[\"appName\"] = \"callables\"\ncontext[\"resourceName\"] = \"callables_call_automation\"\n\ndef input = new HashMap<>()\n    \ninput[\"automationId\"] = \"68dab0713106eb2b3d248139\"\n\ndef parameters = new HashMap<>()\nparameters[\"name\"] = \"applicationTest\"\ninput[\"parameters\"] = parameters\ninput[\"runtimeConnections\"] = new HashMap<>()\ninput[\"synchronous\"] = true\ninput[\"timeoutInMillis\"] = 120000\ninput[\"version\"] = \"-1\"\n\nreturn [\n  \"context\" : context,\n  \"input\" : input\n]",
+				"code":"\ndef context = new HashMap<>()\n\ncontext[\"appName\"] = \"callables\"\ncontext[\"resourceName\"] = \"callables_call_automation\"\n\ndef input = new HashMap<>()\n    \ninput[\"automationId\"] = \"68dab0713106eb2b3d248139\"\n\ndef parameters = new HashMap<>()\nparameters[\"name\"] = \"applicationTest\"\ninput[\"parameters\"] = parameters\ninput[\"runtimeConnections\"] = new HashMap<>()\ninput[\"synchronous\"] = false\ninput[\"timeoutInMillis\"] = 120000\ninput[\"version\"] = \"-1\"\n\nreturn [\n  \"context\" : context,\n  \"input\" : input\n]",
 				"compile_static":false,
 				"captureStdOutput":false
 			},
@@ -170,5 +170,5 @@
 	"tags":[
 		
 	],
-	"version":32
+	"version":33
 }
