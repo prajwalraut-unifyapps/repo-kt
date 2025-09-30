@@ -5,12 +5,12 @@
 	"createdTime":1732173328683,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646552171,
+		"deployedAt":1758655373667,
 		"deployedBy":0,
-		"deployedDefinitionId":"68d2d1189f85565fb8fa5dcb",
+		"deployedDefinitionId":"68d2f38d38757c179b1238f9",
 		"status":"DEPLOYED",
-		"version":110,
-		"workflowVersion":145
+		"version":111,
+		"workflowVersion":146
 	},
 	"edges":[
 		{
@@ -381,9 +381,9 @@
 		]
 	},
 	"id":"673ede10befa5e1573509632",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"single lang common response publisher",
-	"modifiedTime":1758655373491,
+	"modifiedTime":1759243557578,
 	"name":"Single Lang Common Response Publisher",
 	"nodes":[
 		{
@@ -873,11 +873,16 @@
 				"synchronous":true,
 				"version":"-1",
 				"parameters":{
+					"channelName":"{{ n_ZfA3j.outputs.properties.channelName }}",
+					"text":"{{ ysaHW.outputs.content }}",
 					"caseAssociationType":"PREVIOUS_FAN_MESSAGE",
-					"triggeredFromAutomationId":"{{ __RUN__.outputs.workflowId }}",
 					"messageType":"BOT",
 					"caseId":"{{ ysaHW.outputs.caseId }}",
-					"text":"{{ ysaHW.outputs.content }}",
+					"triggeredFromAutomationId":"{{ __RUN__.outputs.workflowId }}",
+					"fromCustomerUserId":"{{ n_FMsQt.outputs.fromCustomerUserId }}",
+					"toCustomerUserId":"{{ n_ZfA3j.outputs.properties.fromCustomerUserId }}",
+					"internalMessageType":"{{ 3p5Mz.outputs.internalMessageType }}",
+					"temporaryMessage":"=IF(ISBLANK({{ 3p5Mz.outputs.internalMessageType }}), FALSE(), TRUE())",
 					"attachments":{
 						"source":"{{ ysaHW.outputs.attachments }}",
 						"ua:type":"mappedArray",
@@ -888,11 +893,15 @@
 						"ua:type":"mappedArray",
 						"items":"{{ ysaHW.outputs.coPilotBlocks[0] }}"
 					},
-					"internalMessageType":"{{ 3p5Mz.outputs.internalMessageType }}",
-					"temporaryMessage":"=IF(ISBLANK({{ 3p5Mz.outputs.internalMessageType }}), FALSE(), TRUE())",
-					"channelName":"{{ n_ZfA3j.outputs.properties.channelName }}",
-					"toCustomerUserId":"{{ n_ZfA3j.outputs.properties.fromCustomerUserId }}",
-					"fromCustomerUserId":"{{ n_FMsQt.outputs.fromCustomerUserId }}"
+					"choiceList":{
+						"source":"{{ ysaHW.outputs.choices }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"id":"{{ ysaHW.outputs.choices[0].id }}",
+							"title":"{{ ysaHW.outputs.choices[0].title }}",
+							"url":"{{ ysaHW.outputs.choices[0].url }}"
+						}
+					}
 				}
 			},
 			"skip":false,
@@ -921,12 +930,19 @@
 							"operator":"EQUAL",
 							"value":"THOUGHT"
 						}
+					},
+					{
+						"property":"{{ 3p5Mz.outputs.internalMessageType }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"CITATIONS"
+						}
 					}
 				],
-				"operator":"AND"
+				"operator":"OR"
 			},
 			"skip":false,
-			"subTitle":"thought Message ?",
+			"subTitle":"thought or citations ?",
 			"title":"Condition",
 			"type":"IF_ELSE"
 		},
@@ -2153,5 +2169,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":146
+	"version":147
 }
