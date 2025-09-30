@@ -5,12 +5,12 @@
 	"createdTime":1736763610743,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646522874,
+		"deployedAt":1758655344098,
 		"deployedBy":0,
-		"deployedDefinitionId":"68d2d0fadb1a4411eeae82a4",
+		"deployedDefinitionId":"68d2f37038757c179b1233dc",
 		"status":"DEPLOYED",
-		"version":84,
-		"workflowVersion":143
+		"version":85,
+		"workflowVersion":144
 	},
 	"edges":[
 		{
@@ -581,9 +581,9 @@
 		]
 	},
 	"id":"6784e8da2bf24b00b3975b17",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"fetch relevant knowledge chunks",
-	"modifiedTime":1758655343790,
+	"modifiedTime":1759243531446,
 	"name":"Fetch Relevant Knowledge Chunks",
 	"nodes":[
 		{
@@ -1151,6 +1151,7 @@
 					"caseId":"{{ EIiwt.outputs.caseId }}",
 					"aiAgentId":"{{ EIiwt.outputs.aiAgentId }}",
 					"filter":"{{ EIiwt.outputs.filter }}",
+					"fetchKnowledgeSetKnowledges":true,
 					"filterByLLM":{
 						"knowledgeTags":{
 							"source":"{{ EIiwt.outputs.filterByLLM.knowledgeTags }}",
@@ -4439,5 +4440,5 @@
 		"AI Agent",
 		"Knowledge"
 	],
-	"version":144
+	"version":145
 }
