@@ -5,12 +5,12 @@
 	"createdTime":1732171669581,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655350842,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f37638757c179b123510",
+		"deployedAt":1759243538502,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed1223e6682b9a51eadf",
 		"status":"DEPLOYED",
-		"version":21,
-		"workflowVersion":69
+		"version":22,
+		"workflowVersion":70
 	},
 	"edges":[
 		{
@@ -184,7 +184,7 @@
 	"id":"673ed795befa5e1573509477",
 	"lastModifiedBy":-1,
 	"lcName":"slack publisher (ai agent)",
-	"modifiedTime":1759243538394,
+	"modifiedTime":1759243572505,
 	"name":"Slack Publisher (AI Agent)",
 	"nodes":[
 		{
@@ -981,5 +981,5 @@
 		"AI Agent",
 		"Publish"
 	],
-	"version":70
+	"version":71
 }
