@@ -18,12 +18,19 @@
 			"skip":false,
 			"toNodeId":"n_35l9z",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_35l9z",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_U07F1",
+			"type":"next"
 		}
 	],
 	"id":"68dc4f1d3b484b11b9ff27e0",
 	"lastModifiedBy":59995,
 	"lcName":"export-storage-ordering",
-	"modifiedTime":1759269347425,
+	"modifiedTime":1759270168402,
 	"name":"export-storage-ordering",
 	"nodes":[
 		{
@@ -108,9 +115,46 @@
 				"keepExactFileName":false,
 				"fileType":"CSV"
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Storage by UnifyApps",
 			"title":"Export records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"analytics_by_unifyapps",
+				"resourceVersion":844,
+				"resourceName":"analytics_by_unifyapps_export",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_I2TRH-1",
+			"id":"n_U07F1",
+			"index":4,
+			"inputs":{
+				"projections":[
+					{
+						"name":"ENTITY_infra_alert_steps=::=ID",
+						"aggregationFunction":"GROUP"
+					},
+					{
+						"name":"ENTITY_infra_alert_steps=::=OWNER_USER_ID",
+						"aggregationFunction":"GROUP"
+					}
+				],
+				"entityType":"ENTITY_infra_alert_steps",
+				"page":{
+					"limit":10
+				},
+				"keepExactFileName":false,
+				"fileType":"CSV",
+				"group":"ENTITY_REPORTING"
+			},
+			"skip":false,
+			"subTitle":"Analytics by UnifyApps",
+			"title":"Export Reports",
 			"type":"ACTION"
 		}
 	],
@@ -131,5 +175,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
