@@ -5,12 +5,12 @@
 	"createdTime":1759220102644,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759220142665,
+		"deployedAt":1759220173512,
 		"deployedBy":39713,
-		"deployedDefinitionId":"68db91aca3602561f0c46e8f",
+		"deployedDefinitionId":"68db91cda3602561f0c46ebd",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":1
+		"version":2,
+		"workflowVersion":2
 	},
 	"edges":[
 		
@@ -18,31 +18,32 @@
 	"id":"68db9186a3602561f0c46e60",
 	"lastModifiedBy":39713,
 	"lcName":"webhooktesting",
-	"modifiedTime":1759220171489,
+	"modifiedTime":1759220194666,
 	"name":"webhookTesting",
 	"nodes":[
 		{
 			"context":{
-				"appName":"webhooks",
-				"resourceVersion":816,
-				"resourceName":"webhooks_default"
+				"appName":"schedule",
+				"resourceVersion":814,
+				"resourceName":"schedule_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ECdjW-1",
-			"id":"n_VpLE8",
+			"id":"n_dV1Qn",
 			"index":1,
 			"inputs":{
-				"request":{
-					"contentType":"application/json"
-				}
+				"cron":"INTERVAL",
+				"sequential":false,
+				"interval":15,
+				"frequency":"MINUTES"
 			},
 			"skip":false,
-			"subTitle":"Webhook",
-			"title":"New event",
+			"subTitle":"Schedule",
+			"title":"New recurring event",
 			"trigger":{
-				"type":"WEBHOOK"
+				"type":"SCHEDULED"
 			},
 			"type":"START"
 		}
@@ -64,5 +65,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
