@@ -5,12 +5,12 @@
 	"createdTime":1756473896489,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655349783,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f37538757c179b1234f0",
+		"deployedAt":1759243537670,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed115e003e08cdeb2e8d",
 		"status":"DEPLOYED",
-		"version":16,
-		"workflowVersion":56
+		"version":17,
+		"workflowVersion":57
 	},
 	"edges":[
 		{
@@ -113,7 +113,7 @@
 	"id":"688b78d66a9b22fd7647b56e",
 	"lastModifiedBy":-1,
 	"lcName":"extract triples and filter from vector store | graphrag",
-	"modifiedTime":1759243537555,
+	"modifiedTime":1759243571902,
 	"name":"Extract Triples and Filter From Vector Store | GraphRAG",
 	"nodes":[
 		{
@@ -697,5 +697,5 @@
 	"tags":[
 		
 	],
-	"version":57
+	"version":58
 }
