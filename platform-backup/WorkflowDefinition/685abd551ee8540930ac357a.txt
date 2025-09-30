@@ -5,12 +5,12 @@
 	"createdTime":1751469748825,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646555803,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2d11b9f85565fb8fa5de3",
+		"deployedAt":1759243561406,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed295e003e08cdeb2f10",
 		"status":"DEPLOYED",
-		"version":38,
-		"workflowVersion":52
+		"version":40,
+		"workflowVersion":54
 	},
 	"edges":[
 		{
@@ -67,9 +67,9 @@
 		]
 	},
 	"id":"685abd551ee8540930ac357a",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"schedule knowledge processor",
-	"modifiedTime":1758655377427,
+	"modifiedTime":1759243593863,
 	"name":"Schedule knowledge processor",
 	"nodes":[
 		{
@@ -365,5 +365,5 @@
 		}
 	},
 	"standard":true,
-	"version":53
+	"version":55
 }
