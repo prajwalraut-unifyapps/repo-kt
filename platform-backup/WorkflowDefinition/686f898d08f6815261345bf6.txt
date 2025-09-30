@@ -5,12 +5,12 @@
 	"createdTime":1752842411480,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655334975,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f36638757c179b12325f",
+		"deployedAt":1759243523791,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed035e003e08cdeb2e62",
 		"status":"DEPLOYED",
-		"version":29,
-		"workflowVersion":52
+		"version":30,
+		"workflowVersion":53
 	},
 	"edges":[
 		{
@@ -207,7 +207,7 @@
 	"id":"686f898d08f6815261345bf6",
 	"lastModifiedBy":-1,
 	"lcName":"text to workflow v2 | update connectors job",
-	"modifiedTime":1759243523603,
+	"modifiedTime":1759243559445,
 	"name":"Text to workflow v2 | Update connectors Job",
 	"nodes":[
 		{
@@ -1447,5 +1447,5 @@
 	"tags":[
 		"Text_to_Workflow_v2"
 	],
-	"version":53
+	"version":54
 }
