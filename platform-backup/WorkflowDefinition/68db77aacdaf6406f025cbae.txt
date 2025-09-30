@@ -39,7 +39,7 @@
 	"id":"68db77aacdaf6406f025cbae",
 	"lastModifiedBy":44105,
 	"lcName":"dp-func-fusionintg-prod-sa",
-	"modifiedTime":1759227778138,
+	"modifiedTime":1759227811598,
 	"name":"dp-func-fusionintg-prod-sa",
 	"nodes":[
 		{
@@ -221,9 +221,9 @@
 			"index":5,
 			"inputs":{
 				"streamingCompleted":true,
-				"responseName":"200_undefined",
-				"body":"",
-				"status":200
+				"responseName":"400_undefined",
+				"body":"{{ n_7doD3.outputs.result }}",
+				"status":400
 			},
 			"skip":false,
 			"subTitle":"Callable",
@@ -248,5 +248,5 @@
 	"tags":[
 		"virtusa"
 	],
-	"version":24
+	"version":25
 }
