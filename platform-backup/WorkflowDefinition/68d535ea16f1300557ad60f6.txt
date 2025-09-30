@@ -18,12 +18,19 @@
 			"skip":false,
 			"toNodeId":"n_8atoe",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_8atoe",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_lgn2Z",
+			"type":"next"
 		}
 	],
 	"id":"68d535ea16f1300557ad60f6",
 	"lastModifiedBy":67744,
 	"lcName":"test-variables",
-	"modifiedTime":1759165893557,
+	"modifiedTime":1759217986691,
 	"name":"test-variables",
 	"nodes":[
 		{
@@ -184,12 +191,30 @@
 				"requestContentType":"application/json",
 				"ignoreTrailingSlashes":false,
 				"connectionType":"DIRECT",
-				"sslVerify":false,
+				"sslVerify":true,
 				"certificateType":"CERT_STRING"
 			},
 			"skip":false,
 			"subTitle":"Custom HTTP Endpoint",
 			"title":"Execute REST request",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":927,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_vHKoQ-1",
+			"id":"n_lgn2Z",
+			"index":4,
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
 			"type":"ACTION"
 		}
 	],
@@ -210,5 +235,5 @@
 	"tags":[
 		
 	],
-	"version":17
+	"version":19
 }
