@@ -5,12 +5,12 @@
 	"createdTime":1742538780983,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646534457,
+		"deployedAt":1758655356411,
 		"deployedBy":0,
-		"deployedDefinitionId":"68d2d1069f85565fb8fa5da2",
+		"deployedDefinitionId":"68d2f37c38757c179b123605",
 		"status":"DEPLOYED",
-		"version":77,
-		"workflowVersion":107
+		"version":78,
+		"workflowVersion":108
 	},
 	"edges":[
 		{
@@ -46,9 +46,9 @@
 		]
 	},
 	"id":"67dd081c8445037d9b06b119",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"ai eval | ai as judge evaluator",
-	"modifiedTime":1758655356350,
+	"modifiedTime":1759243542966,
 	"name":"AI Eval | AI As Judge Evaluator",
 	"nodes":[
 		{
@@ -194,19 +194,24 @@
 			"inputs":{
 				"output":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"scoreRange"
+					],
 					"properties":{
 						"scoreRange":{
 							"type":"string",
 							"title":"Score Range"
 						}
-					},
-					"additionalProperties":false,
-					"required":[
-						"scoreRange"
-					]
+					}
 				},
 				"input":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"scale",
+						"type"
+					],
 					"properties":{
 						"scale":{
 							"type":"array",
@@ -219,22 +224,18 @@
 							"type":"string",
 							"title":"Type"
 						}
-					},
-					"additionalProperties":false,
-					"required":[
-						"scale",
-						"type"
-					]
+					}
 				},
+				"code":"String range = '0.0 - 1.0'\nif (type == 'SCALE') {\n    range = String.format(\"%.1f - %.1f\", scale.get(0).toDouble(), scale.get(1).toDouble())\n}\n\nreturn ['scoreRange': range]",
 				"compile_static":false,
-				"code":"String range = '0 - 1';\nif (type = 'SCALE') {\n  range = scale.get(0) + \" - \" + scale.get(1);\n}\n\nreturn ['scoreRange' : range]",
+				"captureStdOutput":false,
 				"parameters":{
+					"type":"{{ 5bATh.outputs.scaleType }}",
 					"scale":{
 						"source":"{{ 5bATh.outputs.evaluationScale }}",
 						"ua:type":"mappedArray",
 						"items":"{{ 5bATh.outputs.evaluationScale[0] }}"
-					},
-					"type":"{{ 5bATh.outputs.scaleType }}"
+					}
 				}
 			},
 			"skip":false,
@@ -262,6 +263,7 @@
 				"triggerWorkflowWithRuntimeType":"DEFAULT",
 				"callableInterfaces":[
 					{
+						"workflowId":"67e29909b7d2dd451ebaaf36",
 						"filter":{
 							"filters":[
 								{
@@ -280,10 +282,10 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"67e29909b7d2dd451ebaaf36"
+						}
 					},
 					{
+						"workflowId":"67e11b0b7810a05ba5c0a4ff",
 						"filter":{
 							"filters":[
 								{
@@ -295,10 +297,10 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"67e11b0b7810a05ba5c0a4ff"
+						}
 					},
 					{
+						"workflowId":"67e14752d5ff3e69decc14f6",
 						"filter":{
 							"filters":[
 								{
@@ -310,10 +312,10 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"67e14752d5ff3e69decc14f6"
+						}
 					},
 					{
+						"workflowId":"67e130267b581f53850cf787",
 						"filter":{
 							"filters":[
 								{
@@ -325,10 +327,10 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"67e130267b581f53850cf787"
+						}
 					},
 					{
+						"workflowId":"67e14eb30d68ab0f1e732348",
 						"filter":{
 							"filters":[
 								{
@@ -340,10 +342,10 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"67e14eb30d68ab0f1e732348"
+						}
 					},
 					{
+						"workflowId":"67e267460260917d9fbb6a5d",
 						"filter":{
 							"filters":[
 								{
@@ -355,10 +357,10 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"67e267460260917d9fbb6a5d"
+						}
 					},
 					{
+						"workflowId":"67e288d0bb5c3c51ededeabc",
 						"filter":{
 							"filters":[
 								{
@@ -370,10 +372,10 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"67e288d0bb5c3c51ededeabc"
+						}
 					},
 					{
+						"workflowId":"67e269a2455dc33dfe5cc653",
 						"filter":{
 							"filters":[
 								{
@@ -385,10 +387,10 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"67e269a2455dc33dfe5cc653"
+						}
 					},
 					{
+						"workflowId":"683ae4b77f57df17f4818a47",
 						"filter":{
 							"filters":[
 								{
@@ -400,10 +402,10 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"683ae4b77f57df17f4818a47"
+						}
 					},
 					{
+						"workflowId":"683bec009a3289636f25372e",
 						"filter":{
 							"filters":[
 								{
@@ -415,10 +417,10 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"683bec009a3289636f25372e"
+						}
 					},
 					{
+						"workflowId":"6846f31237a4d938a3f8cdd5",
 						"filter":{
 							"filters":[
 								{
@@ -430,10 +432,10 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"6846f31237a4d938a3f8cdd5"
+						}
 					},
 					{
+						"workflowId":"6846ef870851243c0b7550ff",
 						"filter":{
 							"filters":[
 								{
@@ -445,10 +447,10 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"6846ef870851243c0b7550ff"
+						}
 					},
 					{
+						"workflowId":"684a64da4d25095fbbf65a59",
 						"filter":{
 							"filters":[
 								{
@@ -466,10 +468,10 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"684a64da4d25095fbbf65a59"
+						}
 					},
 					{
+						"workflowId":"680a35e6fac64d2823be7581",
 						"filter":{
 							"filters":[
 								{
@@ -481,8 +483,7 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"680a35e6fac64d2823be7581"
+						}
 					},
 					{
 						"workflowId":"680e285779c07b58ae998d26",
@@ -500,6 +501,7 @@
 						}
 					},
 					{
+						"workflowId":"680b4a974103ca6e4cde1e53",
 						"filter":{
 							"filters":[
 								{
@@ -511,10 +513,10 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"680b4a974103ca6e4cde1e53"
+						}
 					},
 					{
+						"workflowId":"680b2456c1a5ea436052c2bc",
 						"filter":{
 							"filters":[
 								{
@@ -526,10 +528,10 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"680b2456c1a5ea436052c2bc"
+						}
 					},
 					{
+						"workflowId":"680b1fba28a37355040a88c8",
 						"filter":{
 							"filters":[
 								{
@@ -541,10 +543,10 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"680b1fba28a37355040a88c8"
+						}
 					},
 					{
+						"workflowId":"67e2d9d194875751e6bc1ad9",
 						"filter":{
 							"filters":[
 								{
@@ -556,10 +558,10 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"67e2d9d194875751e6bc1ad9"
+						}
 					},
 					{
+						"workflowId":"68471587bdab1d6e93e1ce7c",
 						"filter":{
 							"filters":[
 								{
@@ -571,10 +573,10 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"68471587bdab1d6e93e1ce7c"
+						}
 					},
 					{
+						"workflowId":"6846f16737a4d938a3f8cc03",
 						"filter":{
 							"filters":[
 								{
@@ -586,10 +588,10 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"6846f16737a4d938a3f8cc03"
+						}
 					},
 					{
+						"workflowId":"681c615250405d05bc668207",
 						"filter":{
 							"filters":[
 								{
@@ -601,10 +603,10 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"681c615250405d05bc668207"
+						}
 					},
 					{
+						"workflowId":"681c4fa32a21a227b80bab23",
 						"filter":{
 							"filters":[
 								{
@@ -616,10 +618,10 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"681c4fa32a21a227b80bab23"
+						}
 					},
 					{
+						"workflowId":"680a3628fac64d2823be773c",
 						"filter":{
 							"filters":[
 								{
@@ -631,10 +633,10 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"680a3628fac64d2823be773c"
+						}
 					},
 					{
+						"workflowId":"680b629e25da79166ed85547",
 						"filter":{
 							"filters":[
 								{
@@ -646,10 +648,10 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"680b629e25da79166ed85547"
+						}
 					},
 					{
+						"workflowId":"680a4a1524121404989c755a",
 						"filter":{
 							"filters":[
 								{
@@ -661,31 +663,30 @@
 								}
 							],
 							"operator":"AND"
-						},
-						"workflowId":"680a4a1524121404989c755a"
+						}
 					}
 				],
 				"fallbackWorkflowId":"67e29909b7d2dd451ebaaf36",
 				"parameters":{
 					"criteria":"{{ 5bATh.outputs.criteria }}",
+					"model":"{{ 5bATh.outputs.model }}",
+					"testCase":"{{ 5bATh.outputs.testCase }}",
+					"scoreRange":"{{ IOyq9.outputs.result.scoreRange }}",
+					"testCaseId":"{{ 5bATh.outputs.testCaseId }}",
+					"runId":"{{ 5bATh.outputs.runId }}",
+					"experimentId":"{{ 5bATh.outputs.experimentId }}",
+					"metricId":"{{ 5bATh.outputs.metricId }}",
 					"evaluationSteps":{
 						"source":"{{ 5bATh.outputs.evaluationSteps }}",
 						"ua:type":"mappedArray",
 						"items":"{{ 5bATh.outputs.evaluationSteps[0] }}"
 					},
-					"model":"{{ 5bATh.outputs.model }}",
 					"evaluationParameters":{
 						"source":"{{ 5bATh.outputs.evaluationParameters }}",
 						"ua:type":"mappedArray",
 						"items":"{{ 5bATh.outputs.evaluationParameters[0] }}"
 					},
-					"testCase":"{{ 5bATh.outputs.testCase }}",
-					"scoringInstruction":"{{ IOyq9.outputs.result.scoreRange }}",
-					"scoreRange":"{{ IOyq9.outputs.result.scoreRange }}",
-					"testCaseId":"{{ 5bATh.outputs.testCaseId }}",
-					"runId":"{{ 5bATh.outputs.runId }}",
-					"experimentId":"{{ 5bATh.outputs.experimentId }}",
-					"metricId":"{{ 5bATh.outputs.metricId }}"
+					"scoringInstruction":"{{ IOyq9.outputs.result.scoreRange }}"
 				}
 			},
 			"skip":false,
@@ -711,8 +712,7 @@
 					"score":"{{ CjJ4s.outputs.score }}",
 					"reason":"{{ CjJ4s.outputs.reason }}",
 					"cost":"{{ CjJ4s.outputs.cost }}",
-					"tokensUsed":"{{ CjJ4s.outputs.tokensUsed }}",
-					"latency":"{{ CjJ4s.outputs.latency }}"
+					"tokensUsed":"{{ CjJ4s.outputs.tokensUsed }}"
 				}
 			},
 			"skip":false,
@@ -738,5 +738,5 @@
 	"tags":[
 		
 	],
-	"version":108
+	"version":109
 }
