@@ -5,12 +5,12 @@
 	"createdTime":1749918647125,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646526618,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2d0fee982524a6e5cd6af",
+		"deployedAt":1759243535138,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed0f23e6682b9a51ead3",
 		"status":"DEPLOYED",
-		"version":20,
-		"workflowVersion":42
+		"version":22,
+		"workflowVersion":44
 	},
 	"edges":[
 		{
@@ -117,9 +117,9 @@
 		]
 	},
 	"id":"684d4ad52cf8b32edce6f1fe",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | gmail | index folders or all emails batch wrapper",
-	"modifiedTime":1758655347658,
+	"modifiedTime":1759243569655,
 	"name":"Knowledge Indexer | Gmail | Index folders or all emails batch Wrapper",
 	"nodes":[
 		{
@@ -824,5 +824,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":43
+	"version":45
 }
