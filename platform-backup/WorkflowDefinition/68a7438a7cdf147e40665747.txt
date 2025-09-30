@@ -5,12 +5,12 @@
 	"createdTime":1757150607103,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1757441829060,
+		"deployedAt":1758655336597,
 		"deployedBy":0,
-		"deployedDefinitionId":"68c06f2591dbf0016b76885f",
+		"deployedDefinitionId":"68d2f36838757c179b1232a2",
 		"status":"DEPLOYED",
-		"version":4,
-		"workflowVersion":41
+		"version":5,
+		"workflowVersion":50
 	},
 	"edges":[
 		{
@@ -332,9 +332,9 @@
 		]
 	},
 	"id":"68a7438a7cdf147e40665747",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"trigger ai agent (streaming)",
-	"modifiedTime":1758655336503,
+	"modifiedTime":1759243525181,
 	"name":"Trigger AI Agent (Streaming)",
 	"nodes":[
 		{
@@ -2136,5 +2136,5 @@
 		}
 	},
 	"standard":true,
-	"version":50
+	"version":51
 }
