@@ -75,7 +75,7 @@
 	"id":"68db7b851ef9aa7d26781da5",
 	"lastModifiedBy":155341,
 	"lcName":"tesatpptpdf",
-	"modifiedTime":1759218530654,
+	"modifiedTime":1759218567886,
 	"name":"tesatpptpdf",
 	"nodes":[
 		{
@@ -440,7 +440,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Ssznf-1",
 			"id":"FUK1t",
@@ -448,6 +448,10 @@
 			"inputs":{
 				"jsonSchema":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"pipeline"
+					],
 					"properties":{
 						"pipeline":{
 							"type":"array",
@@ -458,13 +462,9 @@
 							},
 							"title":"Pipeline"
 						}
-					},
-					"additionalProperties":false,
-					"required":[
-						"pipeline"
-					]
+					}
 				},
-				"jsonString":"{\n\"pipeline\": [\n{\n\"$match\": {\n\"commitmentMonth\":\"{{ n_vv6NA.outputs.result.commitmentDate }}\"\n}\n},\n{ \"$project\": { \"affiliateCode\": 1, \"response\": 1 } }\n]\n}"
+				"jsonString":"{\n\"pipeline\": [\n},\n{ \"$project\": { \"affiliateCode\": 1, \"response\": 1 } }\n]\n}"
 			},
 			"skip":false,
 			"subTitle":"Utility by UnifyApps",
@@ -565,5 +565,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
