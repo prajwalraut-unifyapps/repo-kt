@@ -5,12 +5,12 @@
 	"createdTime":1749669086870,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646522050,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2d0fa9f85565fb8fa5d77",
+		"deployedAt":1759243531022,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed0b5e003e08cdeb2e7a",
 		"status":"DEPLOYED",
-		"version":29,
-		"workflowVersion":41
+		"version":31,
+		"workflowVersion":43
 	},
 	"edges":[
 		{
@@ -32,9 +32,9 @@
 		]
 	},
 	"id":"6849ca06e4a54135c111f918",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | gong | get user sharedwithids",
-	"modifiedTime":1758655343135,
+	"modifiedTime":1759243566046,
 	"name":"Knowledge Indexer | Gong | Get user sharedWithIds",
 	"nodes":[
 		{
@@ -132,5 +132,5 @@
 	"tags":[
 		
 	],
-	"version":42
+	"version":44
 }
