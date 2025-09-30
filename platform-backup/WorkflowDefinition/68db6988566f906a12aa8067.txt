@@ -1,6 +1,17 @@
 {
+	"appsUsed":[
+		
+	],
 	"createdTime":1759210098127,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759210101110,
+		"deployedBy":175325,
+		"deployedDefinitionId":"68db6a7366de4041583a9c6f",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":8
+	},
 	"edges":[
 		{
 			"fromNodeId":"7pKsG",
@@ -13,7 +24,7 @@
 	"id":"68db6988566f906a12aa8067",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa2jt4rnx55pgid",
-	"modifiedTime":1759210098127,
+	"modifiedTime":1759210102731,
 	"name":"changeSetQA2Jt4RNx55pgId",
 	"nodes":[
 		{
@@ -110,5 +121,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
