@@ -5,12 +5,12 @@
 	"createdTime":1748544416222,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646554340,
+		"deployedAt":1758655376008,
 		"deployedBy":0,
-		"deployedDefinitionId":"68d2d11a9f85565fb8fa5dd8",
+		"deployedDefinitionId":"68d2f38f38757c179b123972",
 		"status":"DEPLOYED",
-		"version":47,
-		"workflowVersion":92
+		"version":48,
+		"workflowVersion":93
 	},
 	"edges":[
 		{
@@ -74,9 +74,9 @@
 		]
 	},
 	"id":"683167691592ec414bb0f1c4",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"graph rag | extract entities and relationship from a chunk",
-	"modifiedTime":1758655375862,
+	"modifiedTime":1759243559845,
 	"name":"Graph RAG | Extract Entities and RelationShip from a Chunk",
 	"nodes":[
 		{
@@ -859,5 +859,5 @@
 	"tags":[
 		
 	],
-	"version":93
+	"version":94
 }
