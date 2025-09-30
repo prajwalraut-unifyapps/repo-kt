@@ -5,12 +5,12 @@
 	"createdTime":1726774761923,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1757441830107,
+		"deployedAt":1758655338470,
 		"deployedBy":0,
-		"deployedDefinitionId":"68c06f2691dbf0016b768879",
+		"deployedDefinitionId":"68d2f36a38757c179b1232fc",
 		"status":"DEPLOYED",
-		"version":74,
-		"workflowVersion":98
+		"version":75,
+		"workflowVersion":109
 	},
 	"edges":[
 		{
@@ -46,9 +46,9 @@
 		]
 	},
 	"id":"66ec7de9343dbb10068139e8",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"api to trigger ai agent",
-	"modifiedTime":1758655338384,
+	"modifiedTime":1759243527107,
 	"name":"API to Trigger AI Agent",
 	"nodes":[
 		{
@@ -62,7 +62,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"rPHaB-1",
 			"id":"yzZwd",
-			"index":0,
+			"index":1,
 			"inputs":{
 				"request":{
 					"contentType":"application/json",
@@ -119,7 +119,38 @@
 								"agentResponse":{
 									"type":"array",
 									"items":{
-										"type":"string"
+										"type":"object",
+										"properties":{
+											"text":{
+												"type":"string",
+												"title":"Text"
+											},
+											"choices":{
+												"type":"array",
+												"items":{
+													"type":"object",
+													"properties":{
+														"id":{
+															"type":"string",
+															"title":"Id"
+														},
+														"title":{
+															"type":"string",
+															"title":"Title"
+														},
+														"url":{
+															"type":"string",
+															"title":"Url"
+														}
+													},
+													"additionalProperties":false,
+													"required":[]
+												},
+												"title":"Choices"
+											}
+										},
+										"additionalProperties":false,
+										"required":[]
 									},
 									"title":"Agent Response"
 								},
@@ -179,7 +210,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"rPHaB-1",
 			"id":"_lQMD6",
-			"index":0,
+			"index":2,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -266,7 +297,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"rPHaB-1",
 			"id":"8iqyU",
-			"index":0,
+			"index":3,
 			"inputs":{
 				"callableInterfaceId":"__ua__invoke_ai_agent_by_unifyapps",
 				"runtimeConnections":{},
@@ -278,12 +309,13 @@
 					"userQuery":"{{ yzZwd.outputs.body.userQuery }}",
 					"aiAgentId":"{{ yzZwd.outputs.body.aiAgentId }}",
 					"userEmailAddress":"{{ yzZwd.outputs.body.userEmailAddress }}",
+					"citations":"{{ yzZwd.outputs.body.citations }}",
+					"triggerWorkflowWithRuntimeType":"IN_MEMORY",
 					"externalKnowledgeSets":{
 						"source":"{{ yzZwd.outputs.body.externalKnowledgeSets }}",
 						"ua:type":"mappedArray",
 						"items":"{{ yzZwd.outputs.body.externalKnowledgeSets[0] }}"
 					},
-					"citations":"{{ yzZwd.outputs.body.citations }}",
 					"attachments":{
 						"source":"{{ yzZwd.outputs.body.attachments }}",
 						"ua:type":"mappedArray",
@@ -308,7 +340,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"rPHaB-1",
 			"id":"vxOzR",
-			"index":0,
+			"index":4,
 			"inputs":{
 				"streamingCompleted":true,
 				"responseName":"200_undefined",
@@ -320,15 +352,19 @@
 						"items":"{{ 8iqyU.outputs.citations[0] }}"
 					},
 					"agentResponse":{
-						"source":"{{ 8iqyU.outputs.agentResponse }}",
-						"ua:type":"mappedArray",
-						"items":"{{ 8iqyU.outputs.agentResponse[0] }}"
-					},
-					"listAttachments":{
-						"source":"{{ 8iqyU.outputs.listAttachments }}",
+						"source":"{{ 8iqyU.outputs.publicResponse }}",
 						"ua:type":"mappedArray",
 						"items":{
-							"url":"{{ 8iqyU.outputs.listAttachments[0].url }}"
+							"text":"{{ 8iqyU.outputs.publicResponse[0].text }}",
+							"choices":{
+								"source":"{{ 8iqyU.outputs.publicResponse[0].choices }}",
+								"ua:type":"mappedArray",
+								"items":{
+									"id":"{{ 8iqyU.outputs.publicResponse[0].choices[0].id }}",
+									"title":"{{ 8iqyU.outputs.publicResponse[0].choices[0].title }}",
+									"url":"{{ 8iqyU.outputs.publicResponse[0].choices[0].url }}"
+								}
+							}
 						}
 					}
 				},
@@ -357,5 +393,5 @@
 	"tags":[
 		
 	],
-	"version":109
+	"version":110
 }
