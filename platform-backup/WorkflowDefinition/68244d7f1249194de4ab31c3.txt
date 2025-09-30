@@ -5,12 +5,12 @@
 	"createdTime":1747641656818,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655325956,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f35d38757c179b1230f0",
+		"deployedAt":1759243516228,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbecfc5e003e08cdeb2e4c",
 		"status":"DEPLOYED",
-		"version":49,
-		"workflowVersion":76
+		"version":50,
+		"workflowVersion":77
 	},
 	"edges":[
 		{
@@ -341,7 +341,7 @@
 	"id":"68244d7f1249194de4ab31c3",
 	"lastModifiedBy":-1,
 	"lcName":"text to workflow v2 | get input schema with instruction",
-	"modifiedTime":1759243516009,
+	"modifiedTime":1759243553087,
 	"name":"Text to Workflow v2 | Get Input Schema with Instruction",
 	"nodes":[
 		{
@@ -1563,5 +1563,5 @@
 	"tags":[
 		"Text_to_Workflow_v2"
 	],
-	"version":77
+	"version":78
 }
