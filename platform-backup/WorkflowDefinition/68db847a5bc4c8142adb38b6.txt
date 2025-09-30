@@ -81,7 +81,7 @@
 	"id":"68db847a5bc4c8142adb38b6",
 	"lastModifiedBy":39715,
 	"lcName":"test_csv_consume_data",
-	"modifiedTime":1759219558677,
+	"modifiedTime":1759219564375,
 	"name":"test_csv_consume_data",
 	"nodes":[
 		{
@@ -420,5 +420,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
