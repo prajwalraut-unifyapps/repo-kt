@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759214469748,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_Ssznf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_jdoAr",
+			"type":"next"
+		}
+	],
+	"id":"68db7b851ef9aa7d26781da5",
+	"lastModifiedBy":155543,
+	"lcName":"tesatpptpdf",
+	"modifiedTime":1759214469748,
+	"name":"tesatpptpdf",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Ssznf-1",
+			"id":"_Ssznf",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Ssznf-1",
+			"id":"_jdoAr",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":155543,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
