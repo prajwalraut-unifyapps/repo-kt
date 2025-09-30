@@ -6,46 +6,71 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_NVKkT",
+			"fromNodeId":"n_aARoX",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_J6XP2",
+			"toNodeId":"n_eKsC4",
 			"type":"next"
 		}
 	],
 	"id":"68dbcc38181ca54665973c66",
 	"lastModifiedBy":47201,
 	"lcName":"meeting bot test",
-	"modifiedTime":1759235128075,
+	"modifiedTime":1759235226779,
 	"name":"Meeting Bot Test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_NVKkT-1",
-			"id":"_NVKkT",
-			"index":0,
+			"id":"n_aARoX",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"meeting_bot_by_unifyapps",
+				"resourceVersion":61,
+				"resourceName":"meeting_bot_by_unifyapps_join_meeting",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_NVKkT-1",
-			"id":"_J6XP2",
-			"index":0,
+			"id":"n_eKsC4",
+			"index":2,
+			"inputs":{
+				"botName":"UnifyApps",
+				"meetingUrl":"https://teams.microsoft.com/meet/4312856952776?p=XYM5rixRolgD4b0adj"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Meeting bot by UnifyApps",
+			"title":"Join meeting",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":47201,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +84,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
