@@ -5,12 +5,12 @@
 	"createdTime":1725945710317,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646559030,
+		"deployedAt":1758655381551,
 		"deployedBy":0,
-		"deployedDefinitionId":"68d2d11fbd00df618e363d37",
+		"deployedDefinitionId":"68d2f39538757c179b123a3d",
 		"status":"DEPLOYED",
-		"version":81,
-		"workflowVersion":168
+		"version":82,
+		"workflowVersion":169
 	},
 	"edges":[
 		{
@@ -99,9 +99,9 @@
 		]
 	},
 	"id":"66dfd76eb70dad256986b784",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"simple call llm",
-	"modifiedTime":1758655381468,
+	"modifiedTime":1759243564257,
 	"name":"Simple Call LLM",
 	"nodes":[
 		{
@@ -753,5 +753,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":169
+	"version":170
 }
