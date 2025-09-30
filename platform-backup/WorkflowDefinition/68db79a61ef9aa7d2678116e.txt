@@ -6,46 +6,89 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_ZtUux",
+			"fromNodeId":"n_6grfj",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_eRZbc",
+			"toNodeId":"n_eNYMf",
 			"type":"next"
 		}
 	],
 	"id":"68db79a61ef9aa7d2678116e",
 	"lastModifiedBy":175325,
 	"lcName":"excelformulaslocalxfhllihmkl",
-	"modifiedTime":1759213990234,
+	"modifiedTime":1759214001242,
 	"name":"ExcelFormulasLocalXfhLlIhMkl",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":880,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ZtUux-1",
-			"id":"_ZtUux",
-			"index":0,
+			"id":"n_6grfj",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"r":{
+							"type":"string",
+							"title":"r"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"a":{
+							"type":"string",
+							"title":"a"
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":897,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ZtUux-1",
-			"id":"_eRZbc",
-			"index":0,
+			"id":"n_eNYMf",
+			"index":2,
+			"inputs":{
+				"result":{
+					"r":"=MINUTE(\"10:05 AM\")"
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":175325,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +102,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
