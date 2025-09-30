@@ -1,0 +1,1604 @@
+{
+	"appsUsed":[
+		"storage_by_unifyapps"
+	],
+	"createdTime":1748544443825,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758655370862,
+		"deployedBy":0,
+		"deployedDefinitionId":"68d2f38a38757c179b12388c",
+		"status":"DEPLOYED",
+		"version":45,
+		"workflowVersion":76
+	},
+	"edges":[
+		{
+			"fromNodeId":"hqkdg",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"yRZyK",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"yRZyK",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"aefh1",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"aefh1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"htKBO",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"htKBO",
+			"name":"1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"htKBO@1",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"htKBO@1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"hbCsK",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"hbCsK",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"WEFhT",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"htKBO",
+			"name":"2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"htKBO@2",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"htKBO@2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"HtsNy",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"HtsNy",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"teTjl",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"htKBO",
+			"name":"3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"htKBO@3",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"htKBO@3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"dkG3W",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"dkG3W",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"tCsWh",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"htKBO",
+			"name":"4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"htKBO@4",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"htKBO@4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n9t1e",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n9t1e",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"OCZGL",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"htKBO",
+			"name":"default",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"UO9su",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"WEFhT",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"3gPQF",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"teTjl",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"3gPQF",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"tCsWh",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"3gPQF",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"OCZGL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"3gPQF",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"UO9su",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"3gPQF",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"682389ac4ac3830d083e2c7d",
+	"lastModifiedBy":-1,
+	"lcName":"knowledge metadata fetcher",
+	"modifiedTime":1759243555741,
+	"name":"Knowledge Metadata Fetcher",
+	"nodes":[
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root.result":{}
+				}
+			},
+			"context":{
+				"appName":"callables",
+				"resourceVersion":46,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FFUnJ-1",
+			"id":"hqkdg",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"records":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"score":{
+										"type":"number",
+										"title":"score"
+									},
+									"document":{
+										"type":"object",
+										"properties":{
+											"properties":{
+												"type":"object",
+												"properties":{
+													"knowledgeId":{
+														"type":"string",
+														"title":"knowledgeId"
+													},
+													"tableName":{
+														"type":"string",
+														"title":"Table Name"
+													},
+													"columnName":{
+														"type":"string",
+														"title":"Column Name"
+													},
+													"metadata":{
+														"type":"string",
+														"title":"Metadata"
+													},
+													"description":{
+														"type":"string",
+														"title":"Description"
+													},
+													"tableId":{
+														"type":"string",
+														"title":"Table Id"
+													},
+													"metadataSource":{
+														"type":"string",
+														"title":"Metadata Source"
+													},
+													"tableDescription":{
+														"type":"string",
+														"title":"Table Description"
+													},
+													"tablePrimaryKey":{
+														"type":"string",
+														"title":"Table Primary Key"
+													},
+													"tableNameUI":{
+														"type":"string",
+														"title":"Table Name UI"
+													},
+													"label":{
+														"type":"string",
+														"title":"Label"
+													},
+													"type":{
+														"type":"string",
+														"title":"Type"
+													}
+												},
+												"title":"properties",
+												"additionalProperties":false,
+												"required":[]
+											}
+										},
+										"title":"document",
+										"additionalProperties":false,
+										"required":[]
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"records"
+						},
+						"status":{
+							"type":"string",
+							"title":"Status"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"embeddings":{
+							"type":"array",
+							"items":{
+								"type":"number"
+							},
+							"title":"Embeddings"
+						},
+						"filter":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Filter"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger from automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":114,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FFUnJ-1",
+			"id":"yRZyK",
+			"index":0,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{
+					"ui:submitButtonOptions":{
+						"norender":true
+					}
+				},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"embeddingsLength":{
+							"type":"number",
+							"title":"Embeddings Length"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"embeddingsLength":"=LEN({{ hqkdg.outputs.embeddings }})"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"embeddingsLength":{
+							"type":"number",
+							"title":"Embeddings Length"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":247,
+				"resourceName":"variable_by_unifyapps_create_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FFUnJ-1",
+			"id":"aefh1",
+			"index":0,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{
+					"createList":{
+						"ui:title":"",
+						"ua:type":{
+							"ui:widget":"hidden"
+						},
+						"items":{
+							"ui:title":"Initial list items",
+							"ui:description":"Set the initial values of the list (defaults to empty)"
+						},
+						"ui:order":[
+							"*",
+							"items"
+						]
+					},
+					"ua:title":{
+						"ui:widget":"hidden"
+					},
+					"ua:list_type":{
+						"ui:widget":"hidden"
+					}
+				},
+				"schema":{
+					"allOf":[
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"OBJECT"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"items":{
+												"type":"object",
+												"properties":{}
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"STRING"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of String"
+											},
+											"items":{
+												"type":"string"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"INTEGER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Integers"
+											},
+											"items":{
+												"type":"integer"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"NUMBER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Numbers"
+											},
+											"items":{
+												"type":"number"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"BOOLEAN"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Booleans"
+											},
+											"items":{
+												"type":"boolean"
+											}
+										}
+									}
+								}
+							}
+						}
+					],
+					"format":"ua:list",
+					"type":"object",
+					"properties":{
+						"ua:title":{
+							"type":"string"
+						},
+						"ua:list_type":{
+							"type":"string",
+							"title":"List Type",
+							"oneOf":[
+								{
+									"const":"OBJECT",
+									"title":"Object"
+								},
+								{
+									"const":"STRING",
+									"title":"String"
+								},
+								{
+									"const":"NUMBER",
+									"title":"Number"
+								},
+								{
+									"const":"INTEGER",
+									"title":"Integer"
+								},
+								{
+									"const":"BOOLEAN",
+									"title":"Boolean"
+								}
+							],
+							"default":"OBJECT"
+						},
+						"createList":{
+							"type":"object",
+							"properties":{
+								"ua:type":{
+									"type":"string",
+									"default":"mappedArray"
+								},
+								"source":{
+									"type":"string",
+									"format":"ua:source",
+									"title":"List Item Source"
+								},
+								"items":{
+									"type":"object",
+									"properties":{
+										"records":{
+											"type":"array",
+											"items":{
+												"type":"object",
+												"properties":{
+													"document":{
+														"type":"object",
+														"properties":{
+															"properties":{
+																"type":"object",
+																"properties":{
+																	"embeddings":{
+																		"type":"array",
+																		"items":{
+																			"type":"number"
+																		},
+																		"title":"embeddings"
+																	},
+																	"knowledgeId":{
+																		"type":"string",
+																		"title":"knowledgeId"
+																	},
+																	"tableName":{
+																		"type":"string",
+																		"title":"tableName"
+																	},
+																	"columnName":{
+																		"type":"string",
+																		"title":"columnName"
+																	},
+																	"metadata":{
+																		"type":"string",
+																		"title":"metadata"
+																	},
+																	"description":{
+																		"type":"string",
+																		"title":"description"
+																	},
+																	"tableId":{
+																		"type":"string",
+																		"title":"tableId"
+																	},
+																	"metadataSource":{
+																		"type":"string",
+																		"title":"metadataSource"
+																	},
+																	"tableDescription":{
+																		"type":"string",
+																		"title":"tableDescription"
+																	},
+																	"tablePrimaryKey":{
+																		"type":"string",
+																		"title":"tablePrimaryKey"
+																	},
+																	"tableNameUI":{
+																		"type":"string",
+																		"title":"tableNameUI"
+																	},
+																	"label":{
+																		"type":"string",
+																		"title":"label"
+																	},
+																	"type":{
+																		"type":"string",
+																		"title":"type"
+																	}
+																},
+																"title":"properties",
+																"additionalProperties":false,
+																"required":[]
+															}
+														},
+														"title":"document",
+														"additionalProperties":false
+													},
+													"score":{
+														"type":"number",
+														"title":"score"
+													}
+												},
+												"additionalProperties":false
+											},
+											"title":"records"
+										}
+									},
+									"additionalProperties":false
+								}
+							}
+						}
+					}
+				}
+			},
+			"inputs":{
+				"createList":{
+					"ua:type":"mappedArray"
+				},
+				"ua:title":"Records",
+				"ua:list_type":"OBJECT"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"type":"object",
+					"properties":{
+						"items":{
+							"type":"array",
+							"title":"Records",
+							"disableActions":true,
+							"items":{
+								"type":"object",
+								"properties":{
+									"records":{
+										"type":"array",
+										"items":{
+											"type":"object",
+											"properties":{
+												"document":{
+													"type":"object",
+													"properties":{
+														"properties":{
+															"type":"object",
+															"properties":{
+																"embeddings":{
+																	"type":"array",
+																	"items":{
+																		"type":"number"
+																	},
+																	"title":"embeddings"
+																},
+																"knowledgeId":{
+																	"type":"string",
+																	"title":"knowledgeId"
+																},
+																"tableName":{
+																	"type":"string",
+																	"title":"tableName"
+																},
+																"columnName":{
+																	"type":"string",
+																	"title":"columnName"
+																},
+																"metadata":{
+																	"type":"string",
+																	"title":"metadata"
+																},
+																"description":{
+																	"type":"string",
+																	"title":"description"
+																},
+																"tableId":{
+																	"type":"string",
+																	"title":"tableId"
+																},
+																"metadataSource":{
+																	"type":"string",
+																	"title":"metadataSource"
+																},
+																"tableDescription":{
+																	"type":"string",
+																	"title":"tableDescription"
+																},
+																"tablePrimaryKey":{
+																	"type":"string",
+																	"title":"tablePrimaryKey"
+																},
+																"tableNameUI":{
+																	"type":"string",
+																	"title":"tableNameUI"
+																},
+																"label":{
+																	"type":"string",
+																	"title":"label"
+																},
+																"type":{
+																	"type":"string",
+																	"title":"type"
+																}
+															},
+															"title":"properties",
+															"additionalProperties":false,
+															"required":[]
+														}
+													},
+													"title":"document",
+													"additionalProperties":false
+												},
+												"score":{
+													"type":"number",
+													"title":"score"
+												}
+											},
+											"additionalProperties":false
+										},
+										"title":"records"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"branch",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FFUnJ-1",
+			"id":"htKBO",
+			"index":0,
+			"inputs":{
+				"branches":[
+					{
+						"id":"1",
+						"inputs":{
+							"name":"1024",
+							"conditions":{
+								"filters":[
+									{
+										"property":"{{ yRZyK.outputs.embeddingsLength }}",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"1024"
+										}
+									}
+								],
+								"operator":"AND"
+							}
+						}
+					},
+					{
+						"id":"2",
+						"inputs":{
+							"name":"1536",
+							"conditions":{
+								"filters":[
+									{
+										"property":"{{ yRZyK.outputs.embeddingsLength }}",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"1536"
+										}
+									}
+								],
+								"operator":"AND"
+							}
+						}
+					},
+					{
+						"id":"3",
+						"inputs":{
+							"name":"3072",
+							"conditions":{
+								"filters":[
+									{
+										"property":"{{ yRZyK.outputs.embeddingsLength }}",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"3072"
+										}
+									}
+								],
+								"operator":"AND"
+							}
+						}
+					},
+					{
+						"id":"4",
+						"inputs":{
+							"name":"768",
+							"conditions":{
+								"filters":[
+									{
+										"property":"{{ yRZyK.outputs.embeddingsLength }}",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"768"
+										}
+									}
+								],
+								"operator":"AND"
+							}
+						}
+					},
+					{
+						"id":"default"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Branch",
+			"title":"",
+			"type":"BRANCH"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":34,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@1",
+			"id":"htKBO@1",
+			"index":0,
+			"inputs":{
+				"name":"1024",
+				"conditions":{
+					"filters":[
+						{
+							"property":"{{ yRZyK.outputs.embeddingsLength }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"1024"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":2144,
+				"resourceName":"storage_by_unifyapps_semantic_query_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@1",
+			"id":"hbCsK",
+			"index":0,
+			"inputs":{
+				"hybridSearch":false,
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"resolvedFilter":{
+								"filter":"{{ hqkdg.outputs.filter }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"searchField":{
+					"op":"KNN",
+					"values":"{{ hqkdg.outputs.embeddings }}",
+					"field":"properties.embeddings"
+				},
+				"object_type":"knowledge_metadata_store_1024",
+				"numberOfRecordsToFetch":200
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Semantic search records",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.itemsToAdd.items.records.items.document.properties.embeddings.items",
+					"root.itemsToAdd.items.records.items.document.properties.knowledgeId",
+					"root.itemsToAdd.items.records.items.document.properties.tableName",
+					"root.itemsToAdd.items.records.items.document.properties.columnName",
+					"root.itemsToAdd.items.records.items.document.properties.metadata",
+					"root.itemsToAdd.items.records.items.document.properties.description",
+					"root.itemsToAdd.items.records.items.document.properties.tableId",
+					"root.itemsToAdd.items.records.items.document.properties.metadataSource",
+					"root.itemsToAdd.items.records.items.document.properties.tableDescription",
+					"root.itemsToAdd.items.records.items.document.properties.tablePrimaryKey",
+					"root.itemsToAdd.items.records.items.score",
+					"root.itemsToAdd.items.records.items.document.properties.tableNameUI",
+					"root.itemsToAdd.items.records.items.document.properties.label",
+					"root.itemsToAdd.items.records.items.document.properties.type"
+				]
+			},
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":187,
+				"resourceName":"variable_by_unifyapps_add_items_to_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@1",
+			"id":"WEFhT",
+			"index":0,
+			"inputs":{
+				"insertLocation":"END",
+				"itemsToAdd":{
+					"ua:type":"mappedArray",
+					"items":{
+						"score":"{{ hbCsK.outputs.objects[0].score }}",
+						"document":{
+							"properties":{
+								"knowledgeId":"{{ hbCsK.outputs.objects[0].document.properties.knowledgeId }}",
+								"sharedWithIds":{
+									"source":"{{ hbCsK.outputs.objects[0].document.properties.sharedWithIds }}",
+									"ua:type":"mappedArray",
+									"items":"{{ hbCsK.outputs.objects[0].document.properties.sharedWithIds[0] }}"
+								},
+								"text":"{{ hbCsK.outputs.objects[0].document.properties.text }}",
+								"chunkMetadata":"{{ hbCsK.outputs.objects[0].document.properties.chunkMetadata }}"
+							}
+						},
+						"records":{
+							"source":"{{ hbCsK.outputs.objects }}",
+							"ua:type":"mappedArray",
+							"items":{
+								"document":{
+									"properties":{
+										"embeddings":{
+											"source":"{{ hbCsK.outputs.objects[0].document.properties.embeddings }}",
+											"ua:type":"mappedArray",
+											"items":"{{ hbCsK.outputs.objects[0].document.properties.embeddings[0] }}"
+										},
+										"knowledgeId":"{{ hbCsK.outputs.objects[0].document.properties.knowledgeId }}",
+										"tableName":"{{ hbCsK.outputs.objects[0].document.properties.tableName }}",
+										"columnName":"{{ hbCsK.outputs.objects[0].document.properties.columnName }}",
+										"metadata":"{{ hbCsK.outputs.objects[0].document.properties.metadata }}",
+										"description":"{{ hbCsK.outputs.objects[0].document.properties.description }}",
+										"tableId":"{{ hbCsK.outputs.objects[0].document.properties.table_id }}",
+										"metadataSource":"{{ hbCsK.outputs.objects[0].document.properties.metadataSource }}",
+										"tableDescription":"{{ hbCsK.outputs.objects[0].document.properties.tableDescription }}",
+										"tablePrimaryKey":"{{ hbCsK.outputs.objects[0].document.properties.tablePrimaryKey }}",
+										"tableNameUI":"{{ hbCsK.outputs.objects[0].document.properties.tableNameUI }}",
+										"label":"{{ hbCsK.outputs.objects[0].document.properties.label }}",
+										"type":"{{ hbCsK.outputs.objects[0].document.properties.type }}"
+									}
+								},
+								"score":"{{ hbCsK.outputs.objects[0].score }}"
+							}
+						}
+					}
+				},
+				"listName":"{{ aefh1.outputs.items[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Add items to list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":34,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@2",
+			"id":"htKBO@2",
+			"index":0,
+			"inputs":{
+				"name":"1536",
+				"conditions":{
+					"filters":[
+						{
+							"property":"{{ yRZyK.outputs.embeddingsLength }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"1536"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":2144,
+				"resourceName":"storage_by_unifyapps_semantic_query_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@2",
+			"id":"HtsNy",
+			"index":0,
+			"inputs":{
+				"hybridSearch":false,
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"resolvedFilter":{
+								"filter":"{{ hqkdg.outputs.filter }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"searchField":{
+					"op":"KNN",
+					"field":"properties.embeddings",
+					"values":"{{ hqkdg.outputs.embeddings }}"
+				},
+				"object_type":"knowledge_metadata_store_1536",
+				"numberOfRecordsToFetch":200
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Semantic search records",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.itemsToAdd.items.records.items.document.properties.embeddings.items",
+					"root.itemsToAdd.items.records.items.document.properties.knowledgeId",
+					"root.itemsToAdd.items.records.items.document.properties.tableName",
+					"root.itemsToAdd.items.records.items.document.properties.columnName",
+					"root.itemsToAdd.items.records.items.document.properties.metadata",
+					"root.itemsToAdd.items.records.items.document.properties.description",
+					"root.itemsToAdd.items.records.items.document.properties.tableId",
+					"root.itemsToAdd.items.records.items.document.properties.metadataSource",
+					"root.itemsToAdd.items.records.items.document.properties.tableDescription",
+					"root.itemsToAdd.items.records.items.document.properties.tablePrimaryKey",
+					"root.itemsToAdd.items.records.items.score",
+					"root.itemsToAdd.items.records.items.document.properties.tableNameUI",
+					"root.itemsToAdd.items.records.items.document.properties.label",
+					"root.itemsToAdd.items.records.items.document.properties.type"
+				]
+			},
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":187,
+				"resourceName":"variable_by_unifyapps_add_items_to_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@2",
+			"id":"teTjl",
+			"index":0,
+			"inputs":{
+				"insertLocation":"END",
+				"itemsToAdd":{
+					"ua:type":"mappedArray",
+					"items":{
+						"score":"{{ HtsNy.outputs.objects[0].score }}",
+						"document":{
+							"properties":{
+								"knowledgeId":"{{ HtsNy.outputs.objects[0].document.properties.knowledgeId }}",
+								"sharedWithIds":{
+									"source":"{{ HtsNy.outputs.objects[0].document.properties.sharedWithIds }}",
+									"ua:type":"mappedArray",
+									"items":"{{ HtsNy.outputs.objects[0].document.properties.sharedWithIds[0] }}"
+								},
+								"text":"{{ HtsNy.outputs.objects[0].document.properties.text }}",
+								"chunkMetadata":"{{ HtsNy.outputs.objects[0].document.properties.chunkMetadata }}"
+							}
+						},
+						"records":{
+							"source":"{{ HtsNy.outputs.objects }}",
+							"ua:type":"mappedArray",
+							"items":{
+								"document":{
+									"properties":{
+										"embeddings":{
+											"source":"{{ HtsNy.outputs.objects[0].document.properties.embeddings }}",
+											"ua:type":"mappedArray",
+											"items":"{{ HtsNy.outputs.objects[0].document.properties.embeddings[0] }}"
+										},
+										"knowledgeId":"{{ HtsNy.outputs.objects[0].document.properties.knowledgeId }}",
+										"tableName":"{{ HtsNy.outputs.objects[0].document.properties.tableName }}",
+										"columnName":"{{ HtsNy.outputs.objects[0].document.properties.columnName }}",
+										"metadata":"{{ HtsNy.outputs.objects[0].document.properties.metadata }}",
+										"description":"{{ HtsNy.outputs.objects[0].document.properties.description }}",
+										"tableId":"{{ HtsNy.outputs.objects[0].document.properties.table_id }}",
+										"metadataSource":"{{ HtsNy.outputs.objects[0].document.properties.metadataSource }}",
+										"tableDescription":"{{ HtsNy.outputs.objects[0].document.properties.tableDescription }}",
+										"tablePrimaryKey":"{{ HtsNy.outputs.objects[0].document.properties.tablePrimaryKey }}",
+										"tableNameUI":"{{ HtsNy.outputs.objects[0].document.properties.tableNameUI }}",
+										"label":"{{ HtsNy.outputs.objects[0].document.properties.label }}",
+										"type":"{{ HtsNy.outputs.objects[0].document.properties.type }}"
+									}
+								},
+								"score":"{{ HtsNy.outputs.objects[0].score }}"
+							}
+						}
+					}
+				},
+				"listName":"{{ aefh1.outputs.items[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Add items to list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":34,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@3",
+			"id":"htKBO@3",
+			"index":0,
+			"inputs":{
+				"name":"3072",
+				"conditions":{
+					"filters":[
+						{
+							"property":"{{ yRZyK.outputs.embeddingsLength }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"3072"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":2144,
+				"resourceName":"storage_by_unifyapps_semantic_query_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@3",
+			"id":"dkG3W",
+			"index":0,
+			"inputs":{
+				"hybridSearch":false,
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"resolvedFilter":{
+								"filter":"{{ hqkdg.outputs.filter }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"searchField":{
+					"op":"KNN",
+					"field":"properties.embeddings",
+					"values":"{{ hqkdg.outputs.embeddings }}"
+				},
+				"object_type":"e_knowledge_metadata_store",
+				"numberOfRecordsToFetch":200
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Semantic search records",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.itemsToAdd.items.records.items.document.properties.embeddings.items",
+					"root.itemsToAdd.items.records.items.document.properties.knowledgeId",
+					"root.itemsToAdd.items.records.items.document.properties.tableName",
+					"root.itemsToAdd.items.records.items.document.properties.columnName",
+					"root.itemsToAdd.items.records.items.document.properties.metadata",
+					"root.itemsToAdd.items.records.items.document.properties.description",
+					"root.itemsToAdd.items.records.items.document.properties.tableId",
+					"root.itemsToAdd.items.records.items.document.properties.metadataSource",
+					"root.itemsToAdd.items.records.items.document.properties.tableDescription",
+					"root.itemsToAdd.items.records.items.document.properties.tablePrimaryKey",
+					"root.itemsToAdd.items.records.items.score",
+					"root.itemsToAdd.items.records.items.document.properties.tableNameUI",
+					"root.itemsToAdd.items.records.items.document.properties.label",
+					"root.itemsToAdd.items.records.items.document.properties.type"
+				]
+			},
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":187,
+				"resourceName":"variable_by_unifyapps_add_items_to_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@3",
+			"id":"tCsWh",
+			"index":0,
+			"inputs":{
+				"insertLocation":"END",
+				"itemsToAdd":{
+					"ua:type":"mappedArray",
+					"items":{
+						"score":"{{ dkG3W.outputs.objects[0].score }}",
+						"document":{
+							"properties":{
+								"knowledgeId":"{{ dkG3W.outputs.objects[0].document.properties.knowledgeId }}",
+								"sharedWithIds":{
+									"source":"{{ dkG3W.outputs.objects[0].document.properties.sharedWithIds }}",
+									"ua:type":"mappedArray",
+									"items":"{{ dkG3W.outputs.objects[0].document.properties.sharedWithIds[0] }}"
+								},
+								"text":"{{ dkG3W.outputs.objects[0].document.properties.text }}",
+								"chunkMetadata":"{{ dkG3W.outputs.objects[0].document.properties.chunkMetadata }}"
+							}
+						},
+						"records":{
+							"source":"{{ dkG3W.outputs.objects }}",
+							"ua:type":"mappedArray",
+							"items":{
+								"document":{
+									"properties":{
+										"embeddings":{
+											"source":"{{ dkG3W.outputs.objects[0].document.properties.embeddings }}",
+											"ua:type":"mappedArray",
+											"items":"{{ dkG3W.outputs.objects[0].document.properties.embeddings[0] }}"
+										},
+										"knowledgeId":"{{ dkG3W.outputs.objects[0].document.properties.knowledgeId }}",
+										"tableName":"{{ dkG3W.outputs.objects[0].document.properties.tableName }}",
+										"columnName":"{{ dkG3W.outputs.objects[0].document.properties.columnName }}",
+										"metadata":"{{ dkG3W.outputs.objects[0].document.properties.metadata }}",
+										"description":"{{ dkG3W.outputs.objects[0].document.properties.description }}",
+										"tableId":"{{ dkG3W.outputs.objects[0].document.properties.table_id }}",
+										"metadataSource":"{{ dkG3W.outputs.objects[0].document.properties.metadataSource }}",
+										"tableDescription":"{{ dkG3W.outputs.objects[0].document.properties.tableDescription }}",
+										"tablePrimaryKey":"{{ dkG3W.outputs.objects[0].document.properties.tablePrimaryKey }}",
+										"tableNameUI":"{{ dkG3W.outputs.objects[0].document.properties.tableNameUI }}",
+										"label":"{{ dkG3W.outputs.objects[0].document.properties.label }}",
+										"type":"{{ dkG3W.outputs.objects[0].document.properties.type }}"
+									}
+								},
+								"score":"{{ dkG3W.outputs.objects[0].score }}"
+							}
+						}
+					}
+				},
+				"listName":"{{ aefh1.outputs.items[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Add items to list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":0,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@4",
+			"id":"htKBO@4",
+			"index":0,
+			"inputs":{
+				"name":"768",
+				"conditions":{
+					"filters":[
+						{
+							"property":"{{ yRZyK.outputs.embeddingsLength }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"768"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":2144,
+				"resourceName":"storage_by_unifyapps_semantic_query_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@4",
+			"id":"n9t1e",
+			"index":0,
+			"inputs":{
+				"hybridSearch":false,
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"resolvedFilter":{
+								"filter":"{{ hqkdg.outputs.filter }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"searchField":{
+					"op":"KNN",
+					"field":"properties.embeddings",
+					"values":"{{ hqkdg.outputs.embeddings }}"
+				},
+				"object_type":"knowledge_metadata_store_768_embedding_length",
+				"numberOfRecordsToFetch":200
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Semantic search records",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.itemsToAdd.items.records.items.document.properties.embeddings.items",
+					"root.itemsToAdd.items.records.items.document.properties.knowledgeId",
+					"root.itemsToAdd.items.records.items.document.properties.tableName",
+					"root.itemsToAdd.items.records.items.document.properties.columnName",
+					"root.itemsToAdd.items.records.items.document.properties.metadata",
+					"root.itemsToAdd.items.records.items.document.properties.description",
+					"root.itemsToAdd.items.records.items.document.properties.tableId",
+					"root.itemsToAdd.items.records.items.document.properties.metadataSource",
+					"root.itemsToAdd.items.records.items.document.properties.tableDescription",
+					"root.itemsToAdd.items.records.items.document.properties.tablePrimaryKey",
+					"root.itemsToAdd.items.records.items.document.properties.tableNameUI",
+					"root.itemsToAdd.items.records.items.document.properties.label",
+					"root.itemsToAdd.items.records.items.document.properties.type",
+					"root.itemsToAdd.items.records.items.score"
+				]
+			},
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":187,
+				"resourceName":"variable_by_unifyapps_add_items_to_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@4",
+			"id":"OCZGL",
+			"index":0,
+			"inputs":{
+				"insertLocation":"END",
+				"itemsToAdd":{
+					"ua:type":"mappedArray",
+					"items":{
+						"score":"{{ n9t1e.outputs.objects[0].score }}",
+						"document":{
+							"properties":{
+								"knowledgeId":"{{ n9t1e.outputs.objects[0].document.properties.knowledgeId }}",
+								"sharedWithIds":{
+									"source":"{{ n9t1e.outputs.objects[0].document.properties.sharedWithIds }}",
+									"ua:type":"mappedArray",
+									"items":"{{ n9t1e.outputs.objects[0].document.properties.sharedWithIds[0] }}"
+								},
+								"text":"{{ n9t1e.outputs.objects[0].document.properties.text }}",
+								"chunkMetadata":"{{ n9t1e.outputs.objects[0].document.properties.chunkMetadata }}"
+							}
+						},
+						"records":{
+							"source":"{{ n9t1e.outputs.objects }}",
+							"ua:type":"mappedArray",
+							"items":{
+								"document":{
+									"properties":{
+										"embeddings":{
+											"source":"{{ n9t1e.outputs.objects[0].document.properties.embeddings }}",
+											"ua:type":"mappedArray",
+											"items":"{{ n9t1e.outputs.objects[0].document.properties.embeddings[0] }}"
+										},
+										"knowledgeId":"{{ n9t1e.outputs.objects[0].document.properties.knowledgeId }}",
+										"tableName":"{{ n9t1e.outputs.objects[0].document.properties.tableName }}",
+										"columnName":"{{ n9t1e.outputs.objects[0].document.properties.columnName }}",
+										"metadata":"{{ n9t1e.outputs.objects[0].document.properties.metadata }}",
+										"description":"{{ n9t1e.outputs.objects[0].document.properties.description }}",
+										"tableId":"{{ n9t1e.outputs.objects[0].document.properties.tableId }}",
+										"metadataSource":"{{ n9t1e.outputs.objects[0].document.properties.metadataSource }}",
+										"tableDescription":"{{ n9t1e.outputs.objects[0].document.properties.tableDescription }}",
+										"tablePrimaryKey":"{{ n9t1e.outputs.objects[0].document.properties.tablePrimaryKey }}",
+										"label":"{{ n9t1e.outputs.objects[0].document.properties.label }}",
+										"type":"{{ n9t1e.outputs.objects[0].document.properties.type }}",
+										"tableNameUI":"{{ n9t1e.outputs.objects[0].document.properties.tableNameUI }}"
+									}
+								},
+								"score":"{{ n9t1e.outputs.objects[0].score }}"
+							}
+						}
+					}
+				},
+				"listName":"{{ aefh1.outputs.items[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Add items to list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":42,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@default",
+			"id":"UO9su",
+			"index":0,
+			"inputs":{
+				"result":{
+					"status":"false"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":42,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FFUnJ-1",
+			"id":"3gPQF",
+			"index":0,
+			"inputs":{
+				"result":{
+					"records":{
+						"ua:type":"mappedArray",
+						"items":{
+							"document":{
+								"properties":{
+									"knowledgeId":"{{ aefh1.outputs.items[0].records[0].document.properties.knowledgeId }}",
+									"tableName":"{{ aefh1.outputs.items[0].records[0].document.properties.tableName }}",
+									"columnName":"{{ aefh1.outputs.items[0].records[0].document.properties.columnName }}",
+									"metadata":"{{ aefh1.outputs.items[0].records[0].document.properties.metadata }}",
+									"description":"{{ aefh1.outputs.items[0].records[0].document.properties.description }}",
+									"tableId":"{{ aefh1.outputs.items[0].records[0].document.properties.tableId }}",
+									"metadataSource":"{{ aefh1.outputs.items[0].records[0].document.properties.metadataSource }}",
+									"tableDescription":"{{ aefh1.outputs.items[0].records[0].document.properties.tableDescription }}",
+									"tablePrimaryKey":"{{ aefh1.outputs.items[0].records[0].document.properties.tablePrimaryKey }}",
+									"tableNameUI":"{{ aefh1.outputs.items[0].records[0].document.properties.tableNameUI }}",
+									"label":"{{ aefh1.outputs.items[0].records[0].document.properties.label }}",
+									"type":"{{ aefh1.outputs.items[0].records[0].document.properties.type }}"
+								}
+							},
+							"score":"{{ aefh1.outputs.items[0].records[0].score }}"
+						},
+						"source":"{{ aefh1.outputs.items[0].records }}"
+					},
+					"status":"true"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":1728,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		
+	],
+	"version":77
+}
