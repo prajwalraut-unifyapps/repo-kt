@@ -5,12 +5,12 @@
 	"createdTime":1728304089361,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655344446,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f37038757c179b1233e7",
+		"deployedAt":1759243532180,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed0c23e6682b9a51eac3",
 		"status":"DEPLOYED",
-		"version":23,
-		"workflowVersion":112
+		"version":24,
+		"workflowVersion":113
 	},
 	"edges":[
 		{
@@ -152,7 +152,7 @@
 	"id":"6703d3d90937310c343f882d",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | ms teams | index a channel",
-	"modifiedTime":1759243532082,
+	"modifiedTime":1759243566939,
 	"name":"Knowledge Indexer | MS Teams | Index a Channel",
 	"nodes":[
 		{
@@ -928,5 +928,5 @@
 		}
 	},
 	"standard":true,
-	"version":113
+	"version":114
 }
