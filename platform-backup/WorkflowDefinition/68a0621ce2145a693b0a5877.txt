@@ -5,12 +5,12 @@
 	"createdTime":1755341340292,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758976379557,
+		"deployedAt":1759219760581,
 		"deployedBy":44096,
-		"deployedDefinitionId":"68d7d97be95f7900d654cda6",
+		"deployedDefinitionId":"68db9030e0514e66333df4b4",
 		"status":"DEPLOYED",
-		"version":3,
-		"workflowVersion":7
+		"version":4,
+		"workflowVersion":12
 	},
 	"edges":[
 		{
@@ -45,7 +45,7 @@
 	"id":"68a0621ce2145a693b0a5877",
 	"lastModifiedBy":44096,
 	"lcName":"testlookup",
-	"modifiedTime":1759219754345,
+	"modifiedTime":1759219813981,
 	"name":"testLookup",
 	"nodes":[
 		{
@@ -89,7 +89,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_lUik9-1",
 			"id":"n_uNvzq",
@@ -108,7 +108,7 @@
 						}
 					}
 				},
-				"code":"return [\"options\":[\"workflowId\":\"68d7933d7ceaf455c79a4dbf\",\"runtimeType\":\"DEFAULT\",\"resolvePath\":\"objects\"]]",
+				"code":"return [\"options\":[\"workflowId\":\"68d7933d7ceaf455c79a4dbf\",\"runtimeType\":\"IN_MEMORY\",\"resolvePath\":\"objects\"]]",
 				"compile_static":false,
 				"captureStdOutput":false
 			},
@@ -222,5 +222,5 @@
 	"tags":[
 		
 	],
-	"version":12
+	"version":13
 }
