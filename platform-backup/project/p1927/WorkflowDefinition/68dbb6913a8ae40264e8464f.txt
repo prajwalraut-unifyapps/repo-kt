@@ -23,7 +23,7 @@
 	"id":"68dbb6913a8ae40264e8464f",
 	"lastModifiedBy":308,
 	"lcName":"[dp-func-extractbip-prod-sa]schedulebipfunction",
-	"modifiedTime":1759240349920,
+	"modifiedTime":1759240411326,
 	"name":"[dp-func-extractbip-prod-sa]ScheduleBIPFunction",
 	"nodes":[
 		{
@@ -86,7 +86,10 @@
 						"FusionEndPointPassword",
 						"StagingDBConnectionString",
 						"FTPServerName",
-						"FTPUserName"
+						"FTPUserName",
+						"FTPPassword",
+						"FTPRootFolder",
+						"FusionEndPointTimeOutInMinutes"
 					],
 					"properties":{
 						"FusionEndPointScheduleURL":{
@@ -112,6 +115,18 @@
 						"FTPUserName":{
 							"type":"string",
 							"title":"FTP User Name"
+						},
+						"FTPPassword":{
+							"type":"string",
+							"title":"FTP Password"
+						},
+						"FTPRootFolder":{
+							"type":"string",
+							"title":"FTP Root Folder"
+						},
+						"FusionEndPointTimeOutInMinutes":{
+							"type":"string",
+							"title":"Fusion End Point Time Out In Minutes"
 						}
 					}
 				},
@@ -165,5 +180,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
