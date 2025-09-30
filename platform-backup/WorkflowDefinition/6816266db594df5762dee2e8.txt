@@ -1,0 +1,378 @@
+{
+	"appsUsed":[
+		"storage_by_unifyapps"
+	],
+	"createdTime":1746282093638,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759243560338,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed289213d707c2d27335",
+		"status":"DEPLOYED",
+		"version":55,
+		"workflowVersion":69
+	},
+	"edges":[
+		{
+			"fromNodeId":"dQtuo",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"YxBXj",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"YxBXj",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"aLfmE",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"aLfmE",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"LjYF8",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"6816266db594df5762dee2e8",
+	"lastModifiedBy":-1,
+	"lcName":"create user knowledge",
+	"modifiedTime":1759243592861,
+	"name":"Create User Knowledge",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":637,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Jy2WO-1",
+			"id":"dQtuo",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"success":{
+							"type":"boolean",
+							"title":"Success"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"success"
+					]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"connectionId":{
+							"type":"string",
+							"title":"Connection Id"
+						},
+						"baseKnowledgeId":{
+							"type":"string",
+							"title":"Base Knowledge Id"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"connectionId",
+						"baseKnowledgeId"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":2568,
+				"resourceName":"storage_by_unifyapps_get_records_by_ids",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Jy2WO-1",
+			"id":"YxBXj",
+			"index":0,
+			"inputs":{
+				"object_type":"knowledge",
+				"includeRoleMappings":false,
+				"ids":[
+					"{{ dQtuo.outputs.baseKnowledgeId }}"
+				],
+				"includeCurrentUserPermissions":false
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Get records by IDs",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.record.fileDetails.name",
+					"root.record.fileDetails.source",
+					"root.record.fileDetails.fileType",
+					"root.record.fileDetails.size",
+					"root.record.fileDetails.fileExtension",
+					"root.record.fileDetails.sourceType",
+					"root.record.fileDetails.url",
+					"root.record.websiteImportInfo.specificWebpages",
+					"root.record.websiteImportInfo.urlList.items",
+					"root.record.applicationInfo.inputs",
+					"root.record.applicationInfo.context.appName",
+					"root.record.applicationInfo.context.connectionId",
+					"root.record.applicationInfo.context.resourceName",
+					"root.record.refreshDetails.lastRefreshStartTime",
+					"root.record.settings.indexingStrategySettings.mimeTypeOverride.items.contentTypeConfig.image.textExtractionModel",
+					"root.record.settings.indexingStrategySettings.mimeTypeOverride.items.contentTypeConfig.image.processingMethod",
+					"root.record.settings.indexingStrategySettings.mimeTypeOverride.items.contentTypeConfig.tabularData.indexingType",
+					"root.record.settings.indexingStrategySettings.mimeTypeOverride.items.contentTypeConfig.text.embeddingType",
+					"root.record.settings.indexingStrategySettings.mimeTypeOverride.items.contentTypeConfig.text.chunkOverlap",
+					"root.record.settings.indexingStrategySettings.mimeTypeOverride.items.contentTypeConfig.text.delimiters.items",
+					"root.record.settings.indexingStrategySettings.mimeTypeOverride.items.contentTypeConfig.text.language",
+					"root.record.settings.indexingStrategySettings.mimeTypeOverride.items.contentTypeConfig.text.embeddingModel",
+					"root.record.settings.indexingStrategySettings.mimeTypeOverride.items.contentTypeConfig.text.maxChunkSize",
+					"root.record.settings.indexingStrategySettings.mimeTypeOverride.items.contentTypeConfig.text.thresholdType",
+					"root.record.settings.indexingStrategySettings.mimeTypeOverride.items.contentTypeConfig.text.algorithm",
+					"root.record.settings.indexingStrategySettings.mimeTypeOverride.items.contentTypeConfig.audio.embeddingType",
+					"root.record.settings.indexingStrategySettings.mimeTypeOverride.items.contentTypeConfig.audio.chunkOverlap",
+					"root.record.settings.indexingStrategySettings.mimeTypeOverride.items.contentTypeConfig.audio.delimiters.items",
+					"root.record.settings.indexingStrategySettings.mimeTypeOverride.items.contentTypeConfig.audio.processingMethod",
+					"root.record.settings.indexingStrategySettings.mimeTypeOverride.items.contentTypeConfig.audio.language",
+					"root.record.settings.indexingStrategySettings.mimeTypeOverride.items.contentTypeConfig.audio.transcriptionModel",
+					"root.record.settings.indexingStrategySettings.mimeTypeOverride.items.contentTypeConfig.audio.embeddingModel",
+					"root.record.settings.indexingStrategySettings.mimeTypeOverride.items.contentTypeConfig.audio.maxChunkSize",
+					"root.record.settings.indexingStrategySettings.mimeTypeOverride.items.contentTypeConfig.audio.thresholdType",
+					"root.record.settings.indexingStrategySettings.mimeTypeOverride.items.contentTypeConfig.audio.algorithm",
+					"root.record.settings.indexingStrategySettings.mimeTypeOverride.items.mimeType.items",
+					"root.record.settings.piiMasking.regex.enabled",
+					"root.record.settings.piiMasking.automations.enabled",
+					"root.record.settings.piiMasking.automations.ids.items",
+					"root.record.settings.piiMasking.piiByUA.enabled",
+					"root.record.settings.enrichment.enabled",
+					"root.record.settings.enrichment.processingMethod",
+					"root.record.settings.enrichment.model",
+					"root.record.settings.enrichment.parameters.items.name",
+					"root.record.settings.enrichment.parameters.items.description",
+					"root.record.additionalDetails.unifiedEntityModelId",
+					"root.record.additionalDetails.metadataIndexing",
+					"root.record.additionalDetails.embeddingModel",
+					"root.record.additionalDetails.knowledgeInstructionsForPrompt",
+					"root.record.dataCatalogInfo.id",
+					"root.record.accessibleTo.items",
+					"root.record.errorDetails.errorMessage"
+				]
+			},
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":2630,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Jy2WO-1",
+			"id":"aLfmE",
+			"index":0,
+			"inputs":{
+				"object_type":"knowledge",
+				"record":{
+					"enabled":true,
+					"sourceType":"{{ YxBXj.outputs.objects[0].properties.sourceType }}",
+					"name":"{{ YxBXj.outputs.objects[0].properties.name }}",
+					"refreshFrequency":"{{ YxBXj.outputs.objects[0].properties.refreshFrequency }}",
+					"settings":{
+						"piiMasking":{
+							"regex":{
+								"patterns":{
+									"ua:type":"mappedArray",
+									"items":{
+										"name":"{{ YxBXj.outputs.objects[0].properties.settings.piiMasking.regex.patterns[0].name }}",
+										"pattern":"{{ YxBXj.outputs.objects[0].properties.settings.piiMasking.regex.patterns[0].pattern }}",
+										"behaviour":"{{ YxBXj.outputs.objects[0].properties.settings.piiMasking.regex.patterns[0].behaviour }}"
+									},
+									"source":"{{ YxBXj.outputs.objects[0].properties.settings.piiMasking.regex.patterns }}"
+								},
+								"enabled":"{{ YxBXj.outputs.objects[0].properties.settings.piiMasking.regex.enabled }}"
+							},
+							"automations":{
+								"enabled":"{{ YxBXj.outputs.objects[0].properties.settings.piiMasking.automations.enabled }}",
+								"ids":{
+									"ua:type":"mappedArray",
+									"items":"{{ YxBXj.outputs.objects[0].properties.settings.piiMasking.automations.ids[0] }}",
+									"source":"{{ YxBXj.outputs.objects[0].properties.settings.piiMasking.automations.ids }}"
+								}
+							},
+							"piiByUA":{
+								"enabled":"{{ YxBXj.outputs.objects[0].properties.settings.piiMasking.piiByUA.enabled }}"
+							}
+						},
+						"indexingStrategySettings":{
+							"mimeTypeOverride":{
+								"ua:type":"mappedArray",
+								"items":{
+									"contentTypeConfig":{
+										"image":{
+											"textExtractionModel":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].contentTypeConfig.image.textExtractionModel }}",
+											"processingMethod":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].contentTypeConfig.image.processingMethod }}"
+										},
+										"tabularData":{
+											"indexingType":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].contentTypeConfig.tabularData.indexingType }}"
+										},
+										"text":{
+											"embeddingType":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].contentTypeConfig.text.embeddingType }}",
+											"chunkOverlap":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].contentTypeConfig.text.chunkOverlap }}",
+											"delimiters":{
+												"ua:type":"mappedArray",
+												"source":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].contentTypeConfig.text.delimiters }}",
+												"items":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].contentTypeConfig.text.delimiters[0] }}"
+											},
+											"language":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].contentTypeConfig.text.language }}",
+											"embeddingModel":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].contentTypeConfig.text.embeddingModel }}",
+											"maxChunkSize":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].contentTypeConfig.text.maxChunkSize }}",
+											"thresholdType":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].contentTypeConfig.text.thresholdType }}",
+											"algorithm":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].contentTypeConfig.text.algorithm }}"
+										},
+										"audio":{
+											"embeddingType":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].contentTypeConfig.audio.embeddingType }}",
+											"chunkOverlap":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].contentTypeConfig.audio.chunkOverlap }}",
+											"delimiters":{
+												"ua:type":"mappedArray",
+												"source":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].contentTypeConfig.audio.delimiters }}",
+												"items":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].contentTypeConfig.audio.delimiters[0] }}"
+											},
+											"processingMethod":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].contentTypeConfig.audio.processingMethod }}",
+											"language":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].contentTypeConfig.audio.language }}",
+											"transcriptionModel":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].contentTypeConfig.audio.transcriptionModel }}",
+											"embeddingModel":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].contentTypeConfig.audio.embeddingModel }}",
+											"maxChunkSize":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].contentTypeConfig.audio.maxChunkSize }}",
+											"thresholdType":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].contentTypeConfig.audio.thresholdType }}",
+											"algorithm":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].contentTypeConfig.audio.algorithm }}"
+										}
+									},
+									"mimeType":{
+										"ua:type":"mappedArray",
+										"source":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].mimeType }}",
+										"items":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride[0].mimeType[0] }}"
+									}
+								},
+								"source":"{{ YxBXj.outputs.objects[0].properties.settings.indexingStrategySettings.mimeTypeOverride }}"
+							}
+						},
+						"enrichment":{
+							"enabled":"{{ YxBXj.outputs.objects[0].properties.settings.enrichment.enabled }}",
+							"processingMethod":"{{ YxBXj.outputs.objects[0].properties.settings.enrichment.processingMethod }}",
+							"model":"{{ YxBXj.outputs.objects[0].properties.settings.enrichment.model }}",
+							"parameters":{
+								"ua:type":"mappedArray",
+								"items":{
+									"name":"{{ YxBXj.outputs.objects[0].properties.settings.enrichment.parameters[0].name }}",
+									"description":"{{ YxBXj.outputs.objects[0].properties.settings.enrichment.parameters[0].description }}"
+								},
+								"source":"{{ YxBXj.outputs.objects[0].properties.settings.enrichment.parameters }}"
+							}
+						}
+					},
+					"customMetadata":{
+						"source":"{{ YxBXj.outputs.objects[0].properties.customMetadata[0] }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"name":"{{ YxBXj.outputs.objects[0].properties.customMetadata[0].name }}"
+						}
+					},
+					"description":"{{ YxBXj.outputs.objects[0].properties.description }}",
+					"runTimeConnectionEnabled":false,
+					"applicationInfo":{
+						"inputs":"{{ YxBXj.outputs.objects[0].properties.applicationInfo.inputs }}",
+						"context":{
+							"appName":"{{ YxBXj.outputs.objects[0].properties.applicationInfo.context.appName }}",
+							"resourceName":"{{ YxBXj.outputs.objects[0].properties.applicationInfo.context.resourceName }}",
+							"connectionId":"{{ dQtuo.outputs.connectionId }}"
+						}
+					},
+					"additionalDetails":{
+						"unifiedEntityModelId":"{{ YxBXj.outputs.objects[0].properties.additionalDetails.unifiedEntityModelId }}",
+						"metadataIndexing":"{{ YxBXj.outputs.objects[0].properties.additionalDetails.metadataIndexing }}",
+						"embeddingModel":"{{ YxBXj.outputs.objects[0].properties.additionalDetails.embeddingModel }}",
+						"knowledgeInstructionsForPrompt":"{{ YxBXj.outputs.objects[0].properties.additionalDetails.knowledgeInstructionsForPrompt }}"
+					},
+					"dataCatalogInfo":{
+						"id":"{{ YxBXj.outputs.objects[0].properties.dataCatalogInfo.id }}"
+					},
+					"status":"DRAFT",
+					"baseKnowledgeId":"{{ dQtuo.outputs.baseKnowledgeId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":646,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Jy2WO-1",
+			"id":"LjYF8",
+			"index":0,
+			"inputs":{
+				"result":{
+					"success":true
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":311,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		"AI Agent"
+	],
+	"version":70
+}
