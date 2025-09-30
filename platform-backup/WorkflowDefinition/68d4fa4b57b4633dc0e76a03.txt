@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759243543761,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759243543923,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed1723e6682b9a51eb08",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":5
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_N6bd3",
@@ -84,7 +92,7 @@
 	"id":"68d4fa4b57b4633dc0e76a03",
 	"lastModifiedBy":-1,
 	"lcName":"user/assistant conversationhistory ",
-	"modifiedTime":1759243543761,
+	"modifiedTime":1759243577299,
 	"name":"User/Assistant ConversationHistory ",
 	"nodes":[
 		{
@@ -507,5 +515,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
