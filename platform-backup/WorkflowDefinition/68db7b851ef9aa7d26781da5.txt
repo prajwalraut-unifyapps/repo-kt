@@ -7,7 +7,7 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_Ssznf",
+			"fromNodeId":"n_G7hjk",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_EalEd",
@@ -70,32 +70,37 @@
 			"skip":false,
 			"toNodeId":"GIKeN",
 			"type":"next"
-		},
-		{
-			"fromNodeId":"GIKeN",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_jdoAr",
-			"type":"next"
 		}
 	],
 	"id":"68db7b851ef9aa7d26781da5",
-	"lastModifiedBy":51337,
+	"lastModifiedBy":155341,
 	"lcName":"tesatpptpdf",
-	"modifiedTime":1759218438216,
+	"modifiedTime":1759218530654,
 	"name":"tesatpptpdf",
 	"nodes":[
 		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":814,
+				"resourceName":"schedule_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Ssznf-1",
-			"id":"_Ssznf",
+			"id":"n_G7hjk",
 			"index":1,
+			"inputs":{
+				"cron":"INTERVAL",
+				"sequential":false,
+				"interval":15,
+				"frequency":"MINUTES"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Schedule",
+			"title":"New recurring event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"SCHEDULED"
 			},
 			"type":"START"
 		},
@@ -125,7 +130,7 @@
 				"readThroughSessionVariables":false,
 				"includeTotalCount":false
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Storage by UnifyApps",
 			"title":"Fetch records",
 			"type":"ACTION"
@@ -246,7 +251,7 @@
 					]
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Javascript",
 			"type":"ACTION"
@@ -276,7 +281,7 @@
 				],
 				"operator":"AND"
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Scheduler Day Check",
 			"title":"Condition",
 			"type":"IF_ELSE"
@@ -291,7 +296,7 @@
 			"groupId":"n_QAwRr@_Ssznf-1@n",
 			"id":"n_dXKcc",
 			"index":5,
-			"skip":false,
+			"skip":true,
 			"subTitle":"Stop",
 			"title":"Stop",
 			"type":"STOP"
@@ -386,7 +391,7 @@
 					]
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Variable by UnifyApps",
 			"title":"Create variables",
 			"type":"ACTION"
@@ -422,7 +427,7 @@
 				"readThroughSessionVariables":false,
 				"includeTotalCount":false
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Storage by UnifyApps",
 			"title":"Fetch records",
 			"type":"ACTION"
@@ -435,7 +440,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Ssznf-1",
 			"id":"FUK1t",
@@ -470,7 +475,7 @@
 			"context":{
 				"appName":"mongo",
 				"resourceVersion":122,
-				"connectionId":"6863f2006a5884327ec84f10",
+				"connectionId":"67592611b73f613be2e69429",
 				"resourceName":"mongodb_aggregate_documents",
 				"type":"APPLICATION"
 			},
@@ -541,17 +546,6 @@
 			"subTitle":"Commitment Response",
 			"title":"Aggregate documents in MongoDB collection",
 			"type":"ACTION"
-		},
-		{
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_Ssznf-1",
-			"id":"_jdoAr",
-			"index":10,
-			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
 		}
 	],
 	"ownerUserId":155543,
@@ -571,5 +565,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
