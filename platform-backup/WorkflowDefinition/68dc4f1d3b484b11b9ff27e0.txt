@@ -9,6 +9,13 @@
 			"fromNodeId":"n_mNUWw",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_Kb8Es",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Kb8Es",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_35l9z",
 			"type":"next"
 		}
@@ -16,7 +23,7 @@
 	"id":"68dc4f1d3b484b11b9ff27e0",
 	"lastModifiedBy":59995,
 	"lcName":"export-storage-ordering",
-	"modifiedTime":1759268871368,
+	"modifiedTime":1759269131195,
 	"name":"export-storage-ordering",
 	"nodes":[
 		{
@@ -26,7 +33,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_I2TRH-1",
 			"id":"n_mNUWw",
@@ -46,6 +53,40 @@
 		},
 		{
 			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"utility_by_unifyapps_to_json_object",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_I2TRH-1",
+			"id":"n_Kb8Es",
+			"index":2,
+			"inputs":{
+				"jsonSchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"key":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"key"
+						}
+					}
+				},
+				"jsonString":"{\"key\": [\"type\", \"category\"]}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Deserialise string to JSON object",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"storage_by_unifyapps",
 				"resourceVersion":4417,
 				"resourceName":"storage_by_unifyapps_export_records",
@@ -56,21 +97,11 @@
 			"fallbackMode":"STOP",
 			"groupId":"_I2TRH-1",
 			"id":"n_35l9z",
-			"index":2,
+			"index":3,
 			"inputs":{
 				"maxRowsPerFile":1048576,
-				"triggerInputCondition":{
-					"filters":[
-						{
-							"property":"properties_alertCategory",
-							"filter":{
-								"operator":"EQUAL"
-							}
-						}
-					],
-					"operator":"AND"
-				},
 				"object_type":"infra_configs",
+				"fieldsToExport":"{{ n_Kb8Es.outputs.result.key }}",
 				"format":"MM/dd/yyyy",
 				"recordsBatchSize":100,
 				"writeToMultipleFilesIfOverflow":false,
@@ -100,5 +131,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
