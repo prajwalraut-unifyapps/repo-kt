@@ -5,12 +5,12 @@
 	"createdTime":1742462143877,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646554577,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2d11a9f85565fb8fa5dd9",
+		"deployedAt":1759243560180,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed2823e6682b9a51eb6d",
 		"status":"DEPLOYED",
-		"version":21,
-		"workflowVersion":39
+		"version":23,
+		"workflowVersion":41
 	},
 	"edges":[
 		{
@@ -134,9 +134,9 @@
 		]
 	},
 	"id":"67dbdcbfbd7836118da1c765",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"[asana] rbac automation",
-	"modifiedTime":1758655376177,
+	"modifiedTime":1759243592698,
 	"name":"[Asana] RBAC Automation",
 	"nodes":[
 		{
@@ -774,5 +774,5 @@
 	"tags":[
 		"knowledge_v2"
 	],
-	"version":40
+	"version":42
 }
