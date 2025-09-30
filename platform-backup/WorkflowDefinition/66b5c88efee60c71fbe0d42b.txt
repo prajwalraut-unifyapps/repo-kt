@@ -1,0 +1,1339 @@
+{
+	"appsUsed":[
+		"storage_by_unifyapps"
+	],
+	"createdTime":1723189390491,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758655348005,
+		"deployedBy":0,
+		"deployedDefinitionId":"68d2f37338757c179b12348c",
+		"status":"DEPLOYED",
+		"version":60,
+		"workflowVersion":82
+	},
+	"edges":[
+		{
+			"fromNodeId":"hqkdg",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_9j8He",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_9j8He",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"yRZyK",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"yRZyK",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_yE8Bz",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_yE8Bz",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_fpgBA",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_fpgBA",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_ekFyP",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_ekFyP",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"htKBO",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_yE8Bz",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"htKBO",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"htKBO",
+			"name":"1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"htKBO@1",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"htKBO@1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"1NRlc",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"1NRlc",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"XSmrp",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"htKBO",
+			"name":"2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"htKBO@2",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"htKBO@2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"91Lgt",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"91Lgt",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"fPaZa",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"htKBO",
+			"name":"3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"htKBO@3",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"htKBO@3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"qApBx",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"qApBx",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"7e51T",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"htKBO",
+			"name":"4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"htKBO@4",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"htKBO@4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"tZqBL",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"tZqBL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"xrzPe",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"htKBO",
+			"name":"5",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"htKBO@5",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"htKBO@5",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_DiIVv",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_DiIVv",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Q5Ua3",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"htKBO",
+			"name":"default",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"MEY3K",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"XSmrp",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"3gPQF",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"fPaZa",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"3gPQF",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"7e51T",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"3gPQF",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"xrzPe",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"3gPQF",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_Q5Ua3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"3gPQF",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"MEY3K",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"3gPQF",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"66b5c88efee60c71fbe0d42b",
+	"lastModifiedBy":-1,
+	"lcName":"chunk indexer",
+	"modifiedTime":1759243535235,
+	"name":"Chunk Indexer",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":46,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FFUnJ-1",
+			"id":"hqkdg",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"success":{
+							"type":"boolean",
+							"title":"Success",
+							"default":false
+						},
+						"chunkId":{
+							"type":"string",
+							"title":"Chunk Id"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"embeddings":{
+							"type":"array",
+							"items":{
+								"type":"number"
+							},
+							"title":"Embeddings"
+						},
+						"knowledgeId":{
+							"type":"string",
+							"title":"Knowledge Id"
+						},
+						"text":{
+							"type":"string",
+							"title":"Text"
+						},
+						"sharedWithIds":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Shared With Ids"
+						},
+						"chunkMetadata":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Chunk Metadata"
+						},
+						"knowledgeVersion":{
+							"type":"number",
+							"title":"Knowledge Version"
+						},
+						"authorEmail":{
+							"type":"string",
+							"title":"Author Email"
+						},
+						"uniqueEntityId":{
+							"type":"string",
+							"title":"Unique Entity Id"
+						},
+						"knowledgeType":{
+							"type":"string",
+							"title":"Knowledge Type"
+						},
+						"uniqueId":{
+							"type":"string",
+							"title":"Unique Id"
+						},
+						"knowledgeSetId":{
+							"type":"string",
+							"title":"Knowledge Set Id"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger from automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":460,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FFUnJ-1",
+			"id":"n_9j8He",
+			"index":2,
+			"inputs":{
+				"automationId":"6708d355e5c64343ba9b278e",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"knowledgeId":"{{ hqkdg.outputs.knowledgeId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":114,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FFUnJ-1",
+			"id":"yRZyK",
+			"index":3,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"embeddingsLength":{
+							"type":"number",
+							"title":"Embeddings Length"
+						},
+						"chunkId":{
+							"type":"string",
+							"title":"Chunk Id"
+						}
+					},
+					"required":[
+						"chunkId"
+					]
+				}
+			},
+			"inputs":{
+				"embeddingsLength":"=LEN({{ hqkdg.outputs.embeddings }})"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"embeddingsLength":{
+							"type":"number",
+							"title":"Embeddings Length"
+						},
+						"chunkId":{
+							"type":"string",
+							"title":"Chunk Id"
+						}
+					},
+					"required":[
+						"chunkId"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":438,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FFUnJ-1",
+			"id":"n_yE8Bz",
+			"index":4,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_9j8He.outputs.indexingSetting.vectorStore }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"weaviate"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":460,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_yE8Bz@FFUnJ-1@y",
+			"id":"n_fpgBA",
+			"index":5,
+			"inputs":{
+				"automationId":"68834640b85c028e0d7175a2",
+				"runtimeConnections":{
+					"weaviate":"{{ n_9j8He.outputs.indexingSetting.vectorStoreConnectionId }}"
+				},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"chunkMetadata":"{{ hqkdg.outputs.chunkMetadata }}",
+					"embeddings":{
+						"source":"{{ hqkdg.outputs.embeddings }}",
+						"ua:type":"mappedArray",
+						"items":"{{ hqkdg.outputs.embeddings[0] }}"
+					},
+					"knowledgeId":"{{ hqkdg.outputs.knowledgeId }}",
+					"knowledgeVersion":"{{ hqkdg.outputs.knowledgeVersion }}",
+					"sharedWithIds":{
+						"source":"{{ hqkdg.outputs.sharedWithIds }}",
+						"ua:type":"mappedArray",
+						"items":"{{ hqkdg.outputs.sharedWithIds[0] }}"
+					},
+					"text":"{{ hqkdg.outputs.text }}",
+					"uniqueEntityId":"{{ hqkdg.outputs.uniqueEntityId }}",
+					"uniqueId":"{{ hqkdg.outputs.uniqueId }}",
+					"authorEmail":"{{ hqkdg.outputs.authorEmail }}",
+					"knowledgeType":"{{ hqkdg.outputs.knowledgeType }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":42,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_yE8Bz@FFUnJ-1@y",
+			"id":"_ekFyP",
+			"index":6,
+			"inputs":{
+				"result":{
+					"success":true,
+					"chunkId":"{{ n_fpgBA.outputs.chunkId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"branch",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FFUnJ-1",
+			"id":"htKBO",
+			"index":7,
+			"inputs":{
+				"branches":[
+					{
+						"id":"1",
+						"inputs":{
+							"name":"1024",
+							"conditions":{
+								"filters":[
+									{
+										"property":"{{ yRZyK.outputs.embeddingsLength }}",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"1024"
+										}
+									}
+								],
+								"operator":"AND"
+							}
+						}
+					},
+					{
+						"id":"2",
+						"inputs":{
+							"name":"1536",
+							"conditions":{
+								"filters":[
+									{
+										"property":"{{ yRZyK.outputs.embeddingsLength }}",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"1536"
+										}
+									}
+								],
+								"operator":"AND"
+							}
+						}
+					},
+					{
+						"id":"3",
+						"inputs":{
+							"name":"3072",
+							"conditions":{
+								"filters":[
+									{
+										"property":"{{ yRZyK.outputs.embeddingsLength }}",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"3072"
+										}
+									}
+								],
+								"operator":"AND"
+							}
+						}
+					},
+					{
+						"id":"4",
+						"inputs":{
+							"name":"768",
+							"conditions":{
+								"filters":[
+									{
+										"property":"{{ yRZyK.outputs.embeddingsLength }}",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"768"
+										}
+									}
+								],
+								"operator":"AND"
+							}
+						}
+					},
+					{
+						"id":"5",
+						"inputs":{
+							"name":"4096",
+							"conditions":{
+								"filters":[
+									{
+										"property":"{{ yRZyK.outputs.embeddingsLength }}",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"4096"
+										}
+									}
+								],
+								"operator":"AND"
+							}
+						}
+					},
+					{
+						"id":"default"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Branch",
+			"title":"",
+			"type":"BRANCH"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":34,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@1",
+			"id":"htKBO@1",
+			"index":8,
+			"inputs":{
+				"name":"1024",
+				"conditions":{
+					"filters":[
+						{
+							"property":"{{ yRZyK.outputs.embeddingsLength }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"1024"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":1448,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@1",
+			"id":"1NRlc",
+			"index":9,
+			"inputs":{
+				"writeThroughSessionVariables":false,
+				"object_type":"knowledge_vector_store",
+				"record":{
+					"embeddings":{
+						"source":"{{ hqkdg.outputs.embeddings }}",
+						"ua:type":"mappedArray",
+						"items":"{{ hqkdg.outputs.embeddings[0] }}"
+					},
+					"knowledgeId":"{{ hqkdg.outputs.knowledgeId }}",
+					"text":"{{ hqkdg.outputs.text }}",
+					"sharedWithIds":{
+						"source":"{{ hqkdg.outputs.sharedWithIds }}",
+						"ua:type":"mappedArray",
+						"items":"{{ hqkdg.outputs.sharedWithIds[0] }}"
+					},
+					"chunkMetadata":"{{ hqkdg.outputs.chunkMetadata }}",
+					"knowledgeVersion":"{{ hqkdg.outputs.knowledgeVersion }}",
+					"authorEmail":"{{ hqkdg.outputs.authorEmail }}",
+					"uniqueEntityId":"{{ hqkdg.outputs.uniqueEntityId }}",
+					"knowledgeType":"{{ hqkdg.outputs.knowledgeType }}",
+					"knowledgeSetId":"{{ hqkdg.outputs.knowledgeSetId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"1024 embeddings",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":404,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@1",
+			"id":"XSmrp",
+			"index":10,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ yRZyK.outputs.chunkId }}",
+						"value":"{{ 1NRlc.outputs.id }}"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":34,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@2",
+			"id":"htKBO@2",
+			"index":11,
+			"inputs":{
+				"name":"1536",
+				"conditions":{
+					"filters":[
+						{
+							"property":"{{ yRZyK.outputs.embeddingsLength }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"1536"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":1448,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@2",
+			"id":"91Lgt",
+			"index":12,
+			"inputs":{
+				"writeThroughSessionVariables":false,
+				"object_type":"knowledge_vector_store_open_ai",
+				"record":{
+					"embeddings":{
+						"source":"{{ hqkdg.outputs.embeddings }}",
+						"ua:type":"mappedArray",
+						"items":"{{ hqkdg.outputs.embeddings[0] }}"
+					},
+					"knowledgeId":"{{ hqkdg.outputs.knowledgeId }}",
+					"text":"{{ hqkdg.outputs.text }}",
+					"sharedWithIds":{
+						"source":"{{ hqkdg.outputs.sharedWithIds }}",
+						"ua:type":"mappedArray",
+						"items":"{{ hqkdg.outputs.sharedWithIds[0] }}"
+					},
+					"chunkMetadata":"{{ hqkdg.outputs.chunkMetadata }}",
+					"knowledgeVersion":"{{ hqkdg.outputs.knowledgeVersion }}",
+					"authorEmail":"{{ hqkdg.outputs.authorEmail }}",
+					"uniqueEntityId":"{{ hqkdg.outputs.uniqueEntityId }}",
+					"knowledgeType":"{{ hqkdg.outputs.knowledgeType }}",
+					"knowledgeSetId":"{{ hqkdg.outputs.knowledgeSetId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"1536 embeddings",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":404,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@2",
+			"id":"fPaZa",
+			"index":13,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ yRZyK.outputs.chunkId }}",
+						"value":"{{ 91Lgt.outputs.id }}"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":34,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@3",
+			"id":"htKBO@3",
+			"index":14,
+			"inputs":{
+				"name":"3072",
+				"conditions":{
+					"filters":[
+						{
+							"property":"{{ yRZyK.outputs.embeddingsLength }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"3072"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":1448,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@3",
+			"id":"qApBx",
+			"index":15,
+			"inputs":{
+				"writeThroughSessionVariables":false,
+				"object_type":"knowledge_vector_store_open_ai_3072",
+				"record":{
+					"embeddings":{
+						"source":"{{ hqkdg.outputs.embeddings }}",
+						"ua:type":"mappedArray",
+						"items":"{{ hqkdg.outputs.embeddings[0] }}"
+					},
+					"knowledgeId":"{{ hqkdg.outputs.knowledgeId }}",
+					"text":"{{ hqkdg.outputs.text }}",
+					"sharedWithIds":{
+						"source":"{{ hqkdg.outputs.sharedWithIds }}",
+						"ua:type":"mappedArray",
+						"items":"{{ hqkdg.outputs.sharedWithIds[0] }}"
+					},
+					"chunkMetadata":"{{ hqkdg.outputs.chunkMetadata }}",
+					"knowledgeVersion":"{{ hqkdg.outputs.knowledgeVersion }}",
+					"authorEmail":"{{ hqkdg.outputs.authorEmail }}",
+					"uniqueEntityId":"{{ hqkdg.outputs.uniqueEntityId }}",
+					"knowledgeType":"{{ hqkdg.outputs.knowledgeType }}",
+					"uniqueId":"{{ hqkdg.outputs.uniqueId }}",
+					"knowledgeSetId":"{{ hqkdg.outputs.knowledgeSetId }}"
+				}
+			},
+			"options":{
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false
+				},
+				"logConfig":{
+					"enabled":false
+				},
+				"rateLimitConfig":{
+					"duration":"1",
+					"enabled":false,
+					"threshold":"10",
+					"unit":"MINUTES",
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"count":5,
+					"enabled":true,
+					"initialDelay":100
+				},
+				"stepError":"STOP",
+				"telemetryConfig":{
+					"enableTelemetry":false
+				}
+			},
+			"skip":false,
+			"subTitle":"3072 embeddings",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":404,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@3",
+			"id":"7e51T",
+			"index":16,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ yRZyK.outputs.chunkId }}",
+						"value":"{{ qApBx.outputs.id }}"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":0,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@4",
+			"id":"htKBO@4",
+			"index":17,
+			"inputs":{
+				"name":"768",
+				"conditions":{
+					"filters":[
+						{
+							"property":"{{ yRZyK.outputs.embeddingsLength }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"768"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.record.sharedWithIds.items"
+				]
+			},
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":1448,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@4",
+			"id":"tZqBL",
+			"index":18,
+			"inputs":{
+				"writeThroughSessionVariables":false,
+				"object_type":"knowledge_vector_store_768_embedding_length",
+				"record":{
+					"embeddings":{
+						"source":"{{ hqkdg.outputs.embeddings }}",
+						"ua:type":"mappedArray",
+						"items":"{{ hqkdg.outputs.embeddings[0] }}"
+					},
+					"knowledgeId":"{{ hqkdg.outputs.knowledgeId }}",
+					"text":"{{ hqkdg.outputs.text }}",
+					"sharedWithIds":{
+						"source":"{{ hqkdg.outputs.sharedWithIds }}",
+						"ua:type":"mappedArray",
+						"items":"{{ hqkdg.outputs.sharedWithIds[0] }}"
+					},
+					"chunkMetadata":"{{ hqkdg.outputs.chunkMetadata }}",
+					"knowledgeVersion":"{{ hqkdg.outputs.knowledgeVersion }}",
+					"authorEmail":"{{ hqkdg.outputs.authorEmail }}",
+					"uniqueEntityId":"{{ hqkdg.outputs.uniqueEntityId }}",
+					"knowledgeType":"{{ hqkdg.outputs.knowledgeType }}",
+					"knowledgeSetId":"{{ hqkdg.outputs.knowledgeSetId }}"
+				}
+			},
+			"options":{
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false
+				},
+				"logConfig":{
+					"enabled":false
+				},
+				"rateLimitConfig":{
+					"duration":"1",
+					"enabled":false,
+					"threshold":"10",
+					"unit":"MINUTES",
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"count":5,
+					"enabled":true,
+					"initialDelay":100
+				},
+				"stepError":"STOP",
+				"telemetryConfig":{
+					"enableTelemetry":false
+				}
+			},
+			"skip":false,
+			"subTitle":"768 embeddings",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":404,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@4",
+			"id":"xrzPe",
+			"index":19,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ yRZyK.outputs.chunkId }}",
+						"value":"{{ tZqBL.outputs.id }}"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":0,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@5",
+			"id":"htKBO@5",
+			"index":20,
+			"inputs":{
+				"name":"4096",
+				"conditions":{
+					"filters":[
+						{
+							"property":"{{ yRZyK.outputs.embeddingsLength }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"4096"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.record.sharedWithIds.items"
+				]
+			},
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":1448,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@5",
+			"id":"_DiIVv",
+			"index":21,
+			"inputs":{
+				"writeThroughSessionVariables":false,
+				"object_type":"knowledge_vector_store_4096_embedding_length",
+				"record":{
+					"embeddings":{
+						"source":"{{ hqkdg.outputs.embeddings }}",
+						"ua:type":"mappedArray",
+						"items":"{{ hqkdg.outputs.embeddings[0] }}"
+					},
+					"knowledgeId":"{{ hqkdg.outputs.knowledgeId }}",
+					"text":"{{ hqkdg.outputs.text }}",
+					"sharedWithIds":{
+						"source":"{{ hqkdg.outputs.sharedWithIds }}",
+						"ua:type":"mappedArray",
+						"items":"{{ hqkdg.outputs.sharedWithIds[0] }}"
+					},
+					"chunkMetadata":"{{ hqkdg.outputs.chunkMetadata }}",
+					"knowledgeVersion":"{{ hqkdg.outputs.knowledgeVersion }}",
+					"authorEmail":"{{ hqkdg.outputs.authorEmail }}",
+					"uniqueEntityId":"{{ hqkdg.outputs.uniqueEntityId }}",
+					"knowledgeType":"{{ hqkdg.outputs.knowledgeType }}",
+					"knowledgeSetId":"{{ hqkdg.outputs.knowledgeSetId }}"
+				}
+			},
+			"options":{
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false
+				},
+				"logConfig":{
+					"enabled":false
+				},
+				"rateLimitConfig":{
+					"duration":"1",
+					"enabled":false,
+					"threshold":"10",
+					"unit":"MINUTES",
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"count":5,
+					"enabled":true,
+					"initialDelay":100
+				},
+				"stepError":"STOP",
+				"telemetryConfig":{
+					"enableTelemetry":false
+				}
+			},
+			"skip":false,
+			"subTitle":"768 embeddings",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":404,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@5",
+			"id":"_Q5Ua3",
+			"index":22,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ yRZyK.outputs.chunkId }}",
+						"value":"{{ _DiIVv.outputs.id }}"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":42,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"htKBO@FFUnJ-1@default",
+			"id":"MEY3K",
+			"index":23,
+			"inputs":{
+				"result":{
+					"success":false
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":42,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FFUnJ-1",
+			"id":"3gPQF",
+			"index":24,
+			"inputs":{
+				"result":{
+					"success":true,
+					"chunkId":"{{ yRZyK.outputs.chunkId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":1866,
+	"runtimeConnectionAppNames":[
+		"weaviate"
+	],
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":false,
+		"enableRunLogging":true,
+		"enableVariableLogging":false,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		"AI Agent"
+	],
+	"version":83
+}
