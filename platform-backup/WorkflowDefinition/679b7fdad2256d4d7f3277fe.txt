@@ -5,12 +5,12 @@
 	"createdTime":1738309677710,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646547447,
+		"deployedAt":1758655368753,
 		"deployedBy":0,
-		"deployedDefinitionId":"68d2d113db1a4411eeae82f4",
+		"deployedDefinitionId":"68d2f38838757c179b123831",
 		"status":"DEPLOYED",
-		"version":61,
-		"workflowVersion":91
+		"version":62,
+		"workflowVersion":92
 	},
 	"edges":[
 		{
@@ -148,11 +148,62 @@
 			"fromNodeId":"_keZUp",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_Auu7o",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Auu7o",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"_XvvRo",
 			"type":"next"
 		},
 		{
 			"fromNodeId":"_XvvRo",
+			"name":"success",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_a1gS4",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_a1gS4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_4np6g",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_XvvRo",
+			"name":"error",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_hEvhw",
+			"type":"error"
+		},
+		{
+			"fromNodeId":"_hEvhw",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_cyNOJ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_cyNOJ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_yZT3b",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_4np6g",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_yhHvW",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_yZT3b",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"_yhHvW",
@@ -273,11 +324,48 @@
 			"fromNodeId":"PXUiF",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"_DLXc9",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_DLXc9",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"Ymh6A",
 			"type":"next"
 		},
 		{
 			"fromNodeId":"Ymh6A",
+			"name":"success",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_IMnXd",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"Ymh6A",
+			"name":"error",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_KLlkQ",
+			"type":"error"
+		},
+		{
+			"fromNodeId":"_KLlkQ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_LkfRx",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_IMnXd",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"fYHvJ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_LkfRx",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"fYHvJ",
@@ -316,9 +404,9 @@
 		]
 	},
 	"id":"679b7fdad2256d4d7f3277fe",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"fetch chunks given filter and embedding models",
-	"modifiedTime":1758655368546,
+	"modifiedTime":1759243553989,
 	"name":"Fetch Chunks Given Filter and Embedding Models",
 	"nodes":[
 		{
@@ -431,6 +519,8 @@
 			"inputs":{
 				"variableSchema":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"ai_agent_use_deployed_entity":{
 							"type":"boolean",
@@ -439,10 +529,20 @@
 						"ai_agent_deployed_version":{
 							"type":"integer",
 							"title":"Ai Agent Deployed Version"
+						},
+						"aiAgentId":{
+							"type":"string",
+							"title":"Ai Agent Id"
+						},
+						"caseId":{
+							"type":"string",
+							"title":"Case Id"
+						},
+						"messageId":{
+							"type":"string",
+							"title":"Message Id"
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				}
 			},
 			"skip":false,
@@ -702,6 +802,7 @@
 				},
 				"code":"def finalMap = [:]\ndef finalFilter = []\n\ndef defaultModel = binding.hasVariable('globalEmbeddingModel') ? globalEmbeddingModel : \"DEFAULT\"\n\nif (!binding.hasVariable(\"knowledgeSet\")) {\n    return [\"embeddingVsKnowledgeFilter\": []]\n}\n\nknowledgeSet.each { knowledge ->\n    def id = knowledge.id\n\n    def embeddingModel = knowledge.properties?.indexingSettings?.embeddingModel ?: defaultModel\n\n    if (embeddingModel == \"e_66b2808745f17a17c0e7c271\") {\n        embeddingModel = defaultModel\n    }\n    def vectorStore = knowledge.properties?.indexingSettings?.vectorStore ?: \"\"\n    def vectorStoreId = knowledge.properties?.indexingSettings?.vectorStoreConnectionId ?: \"\"\n\n    def compositeKey = embeddingModel + \"||\" + vectorStore + \"||\" + vectorStoreId\n\n    def currentKnowledgeList = finalMap.get(compositeKey)\n    if (currentKnowledgeList == null) {\n        currentKnowledgeList = []\n    }\n\n    currentKnowledgeList.add(id)\n\n    finalMap[compositeKey] = currentKnowledgeList\n}\n\nfinalMap.each { key, ids ->\n\n    def parts = key.split(\"\\\\|\\\\|\", -1)\n    def embeddingModel = parts[0]\n    def vectorStore = parts[1]\n    def vectorStoreId = parts[2]\n\n    def knowledgeFilter = [\n        field : 'id',\n        op    : 'IN',\n        values: ids\n    ]\n\n    def resultItem = [\n        embeddingModel : embeddingModel,\n        knowledgeFilter: knowledgeFilter\n    ]\n\n    if (vectorStore) {\n        resultItem.vectorStore = vectorStore\n    }\n\n    if (vectorStoreId) {\n        resultItem.vectorStoreConnectionId = vectorStoreId\n    }\n\n    finalFilter.add(resultItem)\n}\n\nreturn [\"embeddingVsKnowledgeFilter\": finalFilter]\n",
 				"compile_static":false,
+				"captureStdOutput":false,
 				"parameters":{
 					"globalEmbeddingModel":"{{ n_Xlnn5.outputs.properties.indexingSettings.embeddingModel }}",
 					"knowledgeSet":{
@@ -948,7 +1049,7 @@
 				"createList":{
 					"ua:type":"mappedArray",
 					"source":"{{ le3y3.outputs.knowledgeSets }}",
-					"items":"{{ le3y3.outputs.knowledgeSets[0] }}"
+					"items":"{{ le3y3.outputs.knowledgeSets[0].id }}"
 				},
 				"ua:title":"knowledgeSetIds",
 				"ua:list_type":"STRING"
@@ -1642,9 +1743,10 @@
 						}
 					}
 				},
-				"code":"def combinedFilter = [\n    op: 'AND',\n    values: []\n]\n\n// SharedWithIds Filter\ndef sharedFilter = null\nif (binding.hasVariable('sharedWithIds')) {\n    sharedFilter = [\n        field: 'properties.sharedWithIds',\n        op: 'IN',\n        values: sharedWithIds\n    ]\n    combinedFilter['values'].add(sharedFilter)\n}\n\n// Knowledge Filter\ndef knowledgeSetFilter = null\nif (binding.hasVariable('knowledgeSet')) {\n    knowledgeSetFilter = [\n        op: 'OR',\n        values: knowledgeSet.collect { knowledgeItem ->\n            [\n                op: 'OR',\n                values: [\n                    [\n                        field: 'properties.knowledgeSetId',\n                        op: 'EQUAL',\n                        values: [knowledgeItem.id]\n                    ],\n                    [\n                        field: 'properties.knowledgeSetId.__raw__',\n                        op: 'EQUAL',\n                        values: [knowledgeItem.id]\n                    ]\n                ]\n            ]\n        }\n    ]\n    combinedFilter['values'].add(knowledgeSetFilter)\n}\n\n// Helper function to recursively process filter elements and lowercase string values\ndef processFilterElement(element) {\n    if (element instanceof Map) {\n        def processed = [:]\n        element.each { key, value ->\n            if (key == 'values' && value instanceof List) {\n                processed[key] = value.collect { v ->\n                    if (v instanceof String) {\n                        return v.toLowerCase()\n                    } else if (v instanceof Map || v instanceof List) {\n                        return processFilterElement(v)\n                    } else {\n                        return v\n                    }\n                }\n            } else if (value instanceof Map || value instanceof List) {\n                processed[key] = processFilterElement(value)\n            } else {\n                processed[key] = value\n            }\n        }\n        return processed\n    } else if (element instanceof List) {\n        return element.collect { item ->\n            processFilterElement(item)\n        }\n    } else {\n        return element\n    }\n}\n\n// Combine with additionalFilter if it exists\ndef finalFilter = null\ndef validAdditionalFilter = (binding.hasVariable('additionalFilter') &&\n                             additionalFilter instanceof Map &&\n                             additionalFilter.containsKey('op') &&\n                             additionalFilter.containsKey('values'))\n\ndef validCombinedFilter = combinedFilter['values'].size() > 0\n\nif (validCombinedFilter && validAdditionalFilter) {\n    finalFilter = [\n        op: 'AND',\n        values: [\n            additionalFilter,\n            combinedFilter\n        ]\n    ]\n} else if (validCombinedFilter) {\n    finalFilter = combinedFilter\n} else if (validAdditionalFilter) {\n    finalFilter = additionalFilter\n}\n\nreturn ['filter': finalFilter]\n",
+				"code":"def combinedFilter = [\n    op: 'AND',\n    values: []\n]\n\n// SharedWithIds Filter\ndef sharedFilter = null\nif (binding.hasVariable('sharedWithIds')) {\n    sharedFilter = [\n        field: 'properties.sharedWithIds',\n        op: 'IN',\n        values: sharedWithIds\n    ]\n    combinedFilter['values'].add(sharedFilter)\n}\n\n// Knowledge Filter\ndef knowledgeSetFilter = null\nif (binding.hasVariable('knowledgeSet')) {\n    knowledgeSetFilter = [\n        op: 'OR',\n        values: knowledgeSet.collect { knowledgeItem ->\n            [\n                op: 'OR',\n                values: [\n                    [\n                        field: 'properties.knowledgeSetId',\n                        op: 'EQUAL',\n                        values: [knowledgeItem.id]\n                    ],\n                    [\n                        field: 'properties.knowledgeSetId.__raw__',\n                        op: 'EQUAL',\n                        values: [knowledgeItem.id]\n                    ]\n                ]\n            ]\n        }\n    ]\n    combinedFilter['values'].add(knowledgeSetFilter)\n}\n\n// Handle new filter format\nif (binding.hasVariable('filter') && filter instanceof Map && filter.containsKey('op') && filter.containsKey('values')) {\n    filter.values.each { filterElement ->\n        def processedElement = processFilterElement(filterElement)\n        combinedFilter['values'].add(processedElement)\n    }\n}\n\n// Helper function to recursively process filter elements and lowercase string values\ndef processFilterElement(element) {\n    if (element instanceof Map) {\n        def processed = [:]\n        element.each { key, value ->\n            if (key == 'values' && value instanceof List) {\n                processed[key] = value.collect { v ->\n                    if (v instanceof String) {\n                        return v.toLowerCase()\n                    } else if (v instanceof Map || v instanceof List) {\n                        return processFilterElement(v)\n                    } else {\n                        return v\n                    }\n                }\n            } else if (value instanceof Map || value instanceof List) {\n                processed[key] = processFilterElement(value)\n            } else {\n                processed[key] = value\n            }\n        }\n        return processed\n    } else if (element instanceof List) {\n        return element.collect { item ->\n            processFilterElement(item)\n        }\n    } else {\n        return element\n    }\n}\n\n// Combine with additionalFilter if it exists\ndef finalFilter = null\ndef validAdditionalFilter = (binding.hasVariable('additionalFilter') &&\n                             additionalFilter instanceof Map &&\n                             additionalFilter.containsKey('op') &&\n                             additionalFilter.containsKey('values'))\n\ndef validCombinedFilter = combinedFilter['values'].size() > 0\n\nif (validCombinedFilter && validAdditionalFilter) {\n    finalFilter = [\n        op: 'AND',\n        values: [\n            additionalFilter,\n            combinedFilter\n        ]\n    ]\n} else if (validCombinedFilter) {\n    finalFilter = combinedFilter\n} else if (validAdditionalFilter) {\n    finalFilter = additionalFilter\n}\n\nreturn ['filter': finalFilter]\n",
 				"compile_static":false,
 				"isAsync":false,
+				"captureStdOutput":false,
 				"parameters":{
 					"filter":"{{ le3y3.outputs.filter }}",
 					"additionalFilter":"{{ _94gvN.outputs.additionalFilter }}",
@@ -1669,6 +1771,57 @@
 		},
 		{
 			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":458,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_ZeXKb@_KwFz2@qoogX-1@y@l",
+			"id":"n_Auu7o",
+			"index":18,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"startTime":{
+							"type":"integer",
+							"title":"Start Time"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"startTime":"=INT((NOW() - DATE(1970,1,1)) * 86400000)"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"startTime":{
+							"type":"integer",
+							"title":"Start Time"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"startTime Variable",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"callables",
 				"resourceVersion":48,
 				"resourceName":"callables_call_automation",
@@ -1676,22 +1829,327 @@
 			},
 			"debug":false,
 			"dirty":false,
-			"fallbackMode":"STOP",
+			"fallbackMode":"MANUAL",
 			"groupId":"_ZeXKb@_KwFz2@qoogX-1@y@l",
 			"id":"_XvvRo",
-			"index":18,
+			"index":19,
 			"inputs":{
 				"automationId":"6784b9216fb83f0972c5625d",
 				"runtimeConnections":{},
 				"synchronous":true,
+				"triggerWorkflowWithRuntimeType":"IN_MEMORY",
 				"version":"-1",
 				"parameters":{
 					"userQuery":"{{ le3y3.outputs.userQuery }}",
 					"modelId":"{{ _ZeXKb.outputs.item.embeddingModel }}"
 				}
 			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"global":false
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"MANUAL",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
+			},
 			"skip":false,
 			"subTitle":"Fetch Embeddings ",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":448,
+				"resourceName":"utility_by_unifyapps_to_json_object",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_XvvRo@_ZeXKb@_KwFz2@qoogX-1@y@l@success",
+			"id":"n_a1gS4",
+			"index":20,
+			"inputs":{
+				"jsonString":"{\"userQuery\": \"{{ le3y3.outputs.userQuery }}\" , \"embeddingModel\": \" {{ _ZeXKb.outputs.item.embeddingModel }}\"}"
+			},
+			"skip":false,
+			"subTitle":"Capture Input",
+			"title":"Deserialise string to JSON object",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":467,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"CONTINUE",
+			"groupId":"_XvvRo@_ZeXKb@_KwFz2@qoogX-1@y@l@success",
+			"id":"n_4np6g",
+			"index":21,
+			"inputs":{
+				"automationId":"68c51597269ad81cc750a3ca",
+				"runtimeConnections":{},
+				"synchronous":false,
+				"triggerWorkflowWithRuntimeType":"IN_MEMORY",
+				"version":"-1",
+				"parameters":{
+					"caseId":"{{ 53LAF.outputs.caseId }}",
+					"aiAgentId":"{{ 53LAF.outputs.aiAgentId }}",
+					"executionInstanceId":"{{ _XvvRo.outputs.executionInstanceId }}",
+					"parent":"Retrieval",
+					"messageId":"{{ 53LAF.outputs.messageId }}",
+					"llmTimeTaken":"=INT((NOW() - DATE(1970,1,1)) * 86400000)-{{ n_Auu7o.outputs.startTime }}",
+					"input":"{{ n_a1gS4.outputs.result }}",
+					"currentType":"Fetch Embeddings",
+					"rootExecutionId":"{{ __RUN__.outputs.rootExecutionId }}",
+					"parentExecutionId":"{{ __RUN__.outputs.executionId }}",
+					"userId":"=IF(ISNUMBER({{ __RUN__.outputs.userId }}), {{ __RUN__.outputs.userId }}, 0)",
+					"fromAutomationId":"6784b9216fb83f0972c5625d",
+					"startTime":"{{ n_Auu7o.outputs.startTime }}",
+					"success":true
+				}
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"global":false
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"CONTINUE",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Capture Trace",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":448,
+				"resourceName":"utility_by_unifyapps_to_json_object",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_XvvRo@_ZeXKb@_KwFz2@qoogX-1@y@l@error",
+			"id":"_hEvhw",
+			"index":22,
+			"inputs":{
+				"jsonString":"{\"userQuery\": \"{{ le3y3.outputs.userQuery }}\" , \"embeddingModel\": \" {{ _ZeXKb.outputs.item.embeddingModel }}\"}"
+			},
+			"skip":false,
+			"subTitle":"Capture Input",
+			"title":"Deserialise string to JSON object",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":467,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"CONTINUE",
+			"groupId":"_XvvRo@_ZeXKb@_KwFz2@qoogX-1@y@l@error",
+			"id":"_cyNOJ",
+			"index":23,
+			"inputs":{
+				"automationId":"68c51597269ad81cc750a3ca",
+				"runtimeConnections":{},
+				"synchronous":false,
+				"triggerWorkflowWithRuntimeType":"IN_MEMORY",
+				"version":"-1",
+				"parameters":{
+					"caseId":"{{ 53LAF.outputs.caseId }}",
+					"aiAgentId":"{{ 53LAF.outputs.aiAgentId }}",
+					"executionInstanceId":"{{ __RUN__.outputs.executionId }}",
+					"parent":"Retrieval",
+					"messageId":"{{ 53LAF.outputs.messageId }}",
+					"llmTimeTaken":"=INT((NOW() - DATE(1970,1,1)) * 86400000)-{{ n_Auu7o.outputs.startTime }}",
+					"input":"{{ _hEvhw.outputs.result }}",
+					"currentType":"Fetch Embeddings",
+					"rootExecutionId":"{{ __RUN__.outputs.rootExecutionId }}",
+					"parentExecutionId":"{{ __RUN__.outputs.parentExecutionId }}",
+					"userId":"=IF(ISNUMBER({{ __RUN__.outputs.userId }}), {{ __RUN__.outputs.userId }}, 0)",
+					"output":"{{ _XvvRo.outputs }}",
+					"fromAutomationId":"679b7fdad2256d4d7f3277fe",
+					"startTime":"{{ n_Auu7o.outputs.startTime }}",
+					"success":false
+				}
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"global":false
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"CONTINUE",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Capture Trace",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":467,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_XvvRo@_ZeXKb@_KwFz2@qoogX-1@y@l@error",
+			"id":"n_yZT3b",
+			"index":24,
+			"inputs":{
+				"automationId":"68b827559a4a9d0149caa07d",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"errorDetails":"{{ _XvvRo.outputs }}",
+					"caseId":"{{ 53LAF.outputs.caseId }}",
+					"messageId":"{{ 53LAF.outputs.messageId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Throw Error",
 			"title":"Call automation",
 			"type":"CALL_WORKFLOW"
 		},
@@ -1707,7 +2165,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_ZeXKb@_KwFz2@qoogX-1@y@l",
 			"id":"_yhHvW",
-			"index":19,
+			"index":25,
 			"inputs":{
 				"automationId":"6784ec5e2bf24b00b3976630",
 				"runtimeConnections":{},
@@ -1749,7 +2207,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_ZeXKb@_KwFz2@qoogX-1@y@l",
 			"id":"_F80jl",
-			"index":20,
+			"index":26,
 			"inputs":{
 				"insertLocation":"END",
 				"itemsToAdd":{
@@ -1779,7 +2237,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"qoogX-1",
 			"id":"GJSUp",
-			"index":21,
+			"index":27,
 			"inputs":{
 				"repeatMode":"SINGLE",
 				"listSource":"{{ do2nR.outputs.result.embeddingVsKnowledgeFilter }}",
@@ -1802,7 +2260,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"GJSUp@qoogX-1@l",
 			"id":"7AvkW",
-			"index":22,
+			"index":28,
 			"inputs":{
 				"triggerInputCondition":{
 					"filters":[
@@ -1852,7 +2310,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"GJSUp@qoogX-1@l",
 			"id":"lr0UB",
-			"index":23,
+			"index":29,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -1926,7 +2384,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"GJSUp@qoogX-1@l",
 			"id":"nLE0z",
-			"index":24,
+			"index":30,
 			"inputs":{
 				"filters":[
 					{
@@ -1956,7 +2414,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"nLE0z@GJSUp@qoogX-1@l@y",
 			"id":"_dGN2s",
-			"index":25,
+			"index":31,
 			"inputs":{
 				"automationId":"6762c6bfaaaee539c3421ac7",
 				"runtimeConnections":{},
@@ -1995,7 +2453,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"nLE0z@GJSUp@qoogX-1@l@y",
 			"id":"n_eC5KA",
-			"index":26,
+			"index":32,
 			"inputs":{
 				"filters":[
 					{
@@ -2030,7 +2488,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_eC5KA@nLE0z@GJSUp@qoogX-1@l@y@y",
 			"id":"_NzqcM",
-			"index":27,
+			"index":33,
 			"inputs":{
 				"result":{
 					"relevantContent":{
@@ -2060,7 +2518,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"nLE0z@GJSUp@qoogX-1@l@y",
 			"id":"9JXJ6",
-			"index":28,
+			"index":34,
 			"inputs":{
 				"variables":[
 					{
@@ -2094,7 +2552,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"GJSUp@qoogX-1@l",
 			"id":"PXUiF",
-			"index":29,
+			"index":35,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -2185,6 +2643,93 @@
 		},
 		{
 			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":458,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"GJSUp@qoogX-1@l",
+			"id":"_DLXc9",
+			"index":36,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"startTime":{
+							"type":"integer",
+							"title":"Start Time"
+						},
+						"input":{
+							"type":"object",
+							"properties":{
+								"userQuery":{
+									"type":"string",
+									"title":"User Query"
+								},
+								"embeddingModel":{
+									"type":"string",
+									"title":"Embedding Model"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Input",
+							"required":[]
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"input":{
+					"userQuery":"{{ le3y3.outputs.userQuery }}",
+					"embeddingModel":"{{ GJSUp.outputs.item.embeddingModel }}"
+				},
+				"startTime":"=INT((NOW() - DATE(1970,1,1)) * 86400000)"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"startTime":{
+							"type":"integer",
+							"title":"Start Time"
+						},
+						"input":{
+							"type":"object",
+							"properties":{
+								"userQuery":{
+									"type":"string",
+									"title":"User Query"
+								},
+								"embeddingModel":{
+									"type":"string",
+									"title":"Embedding Model"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Input",
+							"required":[]
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"startTime Variable",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"callables",
 				"resourceVersion":48,
 				"resourceName":"callables_call_automation",
@@ -2192,10 +2737,10 @@
 			},
 			"debug":false,
 			"dirty":false,
-			"fallbackMode":"STOP",
+			"fallbackMode":"MANUAL",
 			"groupId":"GJSUp@qoogX-1@l",
 			"id":"Ymh6A",
-			"index":30,
+			"index":37,
 			"inputs":{
 				"automationId":"6784b9216fb83f0972c5625d",
 				"runtimeConnections":{},
@@ -2206,8 +2751,270 @@
 					"modelId":"{{ GJSUp.outputs.item.embeddingModel }}"
 				}
 			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"global":false
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"MANUAL",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
+			},
 			"skip":false,
 			"subTitle":"Fetch Embeddings ",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":467,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"CONTINUE",
+			"groupId":"Ymh6A@GJSUp@qoogX-1@l@success",
+			"id":"_IMnXd",
+			"index":38,
+			"inputs":{
+				"automationId":"68c51597269ad81cc750a3ca",
+				"runtimeConnections":{},
+				"synchronous":false,
+				"triggerWorkflowWithRuntimeType":"IN_MEMORY",
+				"version":"-1",
+				"parameters":{
+					"caseId":"{{ 53LAF.outputs.caseId }}",
+					"aiAgentId":"{{ 53LAF.outputs.aiAgentId }}",
+					"executionInstanceId":"{{ Ymh6A.outputs.executionInstanceId }}",
+					"parent":"Retrieval",
+					"messageId":"{{ 53LAF.outputs.messageId }}",
+					"llmTimeTaken":"=INT((NOW() - DATE(1970,1,1)) * 86400000)-{{ _DLXc9.outputs.startTime }}",
+					"input":"{{ _DLXc9.outputs.input }}",
+					"currentType":"Fetch Embeddings",
+					"rootExecutionId":"{{ __RUN__.outputs.rootExecutionId }}",
+					"parentExecutionId":"{{ __RUN__.outputs.executionId }}",
+					"userId":"=IF(ISNUMBER({{ __RUN__.outputs.userId }}), {{ __RUN__.outputs.userId }}, 0)",
+					"fromAutomationId":"6784b9216fb83f0972c5625d",
+					"startTime":"{{ _DLXc9.outputs.startTime }}",
+					"success":true
+				}
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"global":false
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"CONTINUE",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Capture Trace",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":467,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"CONTINUE",
+			"groupId":"Ymh6A@GJSUp@qoogX-1@l@error",
+			"id":"_KLlkQ",
+			"index":39,
+			"inputs":{
+				"automationId":"68c51597269ad81cc750a3ca",
+				"runtimeConnections":{},
+				"synchronous":false,
+				"triggerWorkflowWithRuntimeType":"IN_MEMORY",
+				"version":"-1",
+				"parameters":{
+					"caseId":"{{ 53LAF.outputs.caseId }}",
+					"aiAgentId":"{{ 53LAF.outputs.aiAgentId }}",
+					"executionInstanceId":"{{ __RUN__.outputs.executionId }}",
+					"parent":"Retrieval",
+					"messageId":"{{ 53LAF.outputs.messageId }}",
+					"llmTimeTaken":"=INT((NOW() - DATE(1970,1,1)) * 86400000)-{{ _DLXc9.outputs.startTime }}",
+					"input":"{{ _DLXc9.outputs.input }}",
+					"currentType":"Fetch Embeddings",
+					"rootExecutionId":"{{ __RUN__.outputs.rootExecutionId }}",
+					"parentExecutionId":"{{ __RUN__.outputs.parentExecutionId }}",
+					"userId":"=IF(ISNUMBER({{ __RUN__.outputs.userId }}), {{ __RUN__.outputs.userId }}, 0)",
+					"output":"{{ _XvvRo.outputs }}",
+					"fromAutomationId":"679b7fdad2256d4d7f3277fe",
+					"startTime":"{{ _DLXc9.outputs.startTime }}",
+					"success":false
+				}
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"global":false
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"CONTINUE",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Capture Trace",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":467,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Ymh6A@GJSUp@qoogX-1@l@error",
+			"id":"_LkfRx",
+			"index":40,
+			"inputs":{
+				"automationId":"68b827559a4a9d0149caa07d",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"errorDetails":"{{ Ymh6A.outputs }}",
+					"caseId":"{{ 53LAF.outputs.caseId }}",
+					"messageId":"{{ 53LAF.outputs.messageId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Throw Error",
 			"title":"Call automation",
 			"type":"CALL_WORKFLOW"
 		},
@@ -2223,7 +3030,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"GJSUp@qoogX-1@l",
 			"id":"fYHvJ",
-			"index":31,
+			"index":41,
 			"inputs":{
 				"automationId":"6784ec5e2bf24b00b3976630",
 				"runtimeConnections":{},
@@ -2265,7 +3072,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"GJSUp@qoogX-1@l",
 			"id":"oZ3KL",
-			"index":32,
+			"index":42,
 			"inputs":{
 				"insertLocation":"END",
 				"itemsToAdd":{
@@ -2301,7 +3108,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"qoogX-1",
 			"id":"HUjmx",
-			"index":33,
+			"index":43,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -2395,7 +3202,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"qoogX-1",
 			"id":"XYHEW",
-			"index":34,
+			"index":44,
 			"inputs":{
 				"result":{
 					"relevantContent":{
@@ -2432,5 +3239,5 @@
 		"AI Agent",
 		"Knowledge"
 	],
-	"version":92
+	"version":93
 }
