@@ -1,6 +1,7 @@
 {
 	"appsUsed":[
-		
+		"mongo",
+		"storage_by_unifyapps"
 	],
 	"createdTime":1759214469748,
 	"deleted":false,
@@ -9,14 +10,79 @@
 			"fromNodeId":"_Ssznf",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_EalEd",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_EalEd",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_vv6NA",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_vv6NA",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_QAwRr",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_QAwRr",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_dXKcc",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_QAwRr",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Aao7i",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_dXKcc",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Aao7i",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Aao7i",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_1wZ80",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_1wZ80",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"FUK1t",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"FUK1t",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"GIKeN",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"GIKeN",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"_jdoAr",
 			"type":"next"
 		}
 	],
 	"id":"68db7b851ef9aa7d26781da5",
-	"lastModifiedBy":155543,
+	"lastModifiedBy":51337,
 	"lcName":"tesatpptpdf",
-	"modifiedTime":1759214469748,
+	"modifiedTime":1759218438216,
 	"name":"tesatpptpdf",
 	"nodes":[
 		{
@@ -25,7 +91,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_Ssznf-1",
 			"id":"_Ssznf",
-			"index":0,
+			"index":1,
 			"skip":false,
 			"title":"Select a trigger event",
 			"trigger":{
@@ -34,18 +100,464 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":283,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Ssznf-1",
+			"id":"n_EalEd",
+			"index":2,
+			"inputs":{
+				"object_type":"bottoms_up_rm_activation_campaign_object",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"translationsOption":"DEFAULT",
+				"page":{
+					"paginateBy":"OFFSET",
+					"limit":20
+				},
+				"numberOfRecordsToFetch":"MULTIPLE",
+				"readThroughSessionVariables":false,
+				"includeTotalCount":false
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":82,
+				"resourceName":"code_by_unifyapps_javascript",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Ssznf-1",
+			"id":"n_vv6NA",
+			"index":3,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"mongoCurrentFromDate":{
+							"type":"string",
+							"title":"mongoCurrentFromDate"
+						},
+						"mongoCurrentToDate":{
+							"type":"string",
+							"title":"mongoCurrentToDate"
+						},
+						"mongoLmtdFromDate":{
+							"type":"string",
+							"title":"mongoLmtdFromDate"
+						},
+						"mongoLmtdToDate":{
+							"type":"string",
+							"title":"mongoLmtdToDate"
+						},
+						"sqlFromDate":{
+							"type":"string",
+							"title":"sqlFromDate"
+						},
+						"sqlToDate":{
+							"type":"string",
+							"title":"sqlToDate"
+						},
+						"commitmentDate":{
+							"type":"string",
+							"title":"commitmentDate"
+						},
+						"schedulerDay":{
+							"type":"string",
+							"title":"schedulerDay"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"commitmentDate",
+						"schedulerDay"
+					]
+				},
+				"code":"const dateUtils = {\n    // Get current date\n    now: () => new Date(),\n    \n    // Format date to YYYY-MM-DD\n    format: (date, format = 'YYYY-MM-DD') => {\n        const d = new Date(date);\n        const year = d.getFullYear();\n        const month = String(d.getMonth() + 1).padStart(2, '0');\n        const day = String(d.getDate()).padStart(2, '0');\n        return `${year}-${month}-${day}`;\n    },\n    \n    // Get date from string\n    parse: (dateString) => new Date(dateString),\n    \n    // Get day of month\n    getDate: (date) => new Date(date).getDate(),\n    \n    // Get last day of month\n    getLastDayOfMonth: (date) => {\n        const d = new Date(date);\n        return new Date(d.getFullYear(), d.getMonth() + 1, 0).getDate();\n    },\n    \n    // Get start of month\n    startOfMonth: (date) => {\n        const d = new Date(date);\n        return new Date(d.getFullYear(), d.getMonth(), 1);\n    },\n    \n    // Get end of month\n    endOfMonth: (date) => {\n        const d = new Date(date);\n        return new Date(d.getFullYear(), d.getMonth() + 1, 0);\n    },\n    \n    // Add/subtract months\n    addMonths: (date, months) => {\n        const d = new Date(date);\n        d.setMonth(d.getMonth() + months);\n        return d;\n    },\n    \n    // Check if date is after another date\n    isAfter: (date1, date2) => new Date(date1) > new Date(date2),\n    \n    // Check if date is before another date\n    isBefore: (date1, date2) => new Date(date1) < new Date(date2),\n    \n    // Check if dates are same day\n    isSameDay: (date1, date2) => {\n        const d1 = new Date(date1);\n        const d2 = new Date(date2);\n        return d1.getFullYear() === d2.getFullYear() &&\n               d1.getMonth() === d2.getMonth() &&\n               d1.getDate() === d2.getDate();\n    },\n     // Format date to MongoDB ISOString format (start of day)\n    formatToMongoFromDate: (date) => {\n        const d = new Date(date);\n        return new Date(d.getFullYear(), d.getMonth(), d.getDate(), 0, 0, 0, 0).toISOString();\n    },\n    \n    // Format date to MongoDB ISOString format (end of day)\n    formatToMongoToDate: (date) => {\n        const d = new Date(date);\n        return new Date(d.getFullYear(), d.getMonth(), d.getDate(), 23, 59, 59, 999).toISOString();\n    },\n};\nconst  currentDate = new Date()\nconst lastMonth = dateUtils.addMonths(currentDate, -1);\nconst daysInLastMonth = dateUtils.getLastDayOfMonth(lastMonth);\nconst endDayForLastMonth = Math.min(dateUtils.getDate(currentDate), daysInLastMonth);\n\nconst lastMonthStart = new Date(lastMonth.getFullYear(), lastMonth.getMonth(), 1);\nconst lastMonthEnd = new Date(lastMonth.getFullYear(), lastMonth.getMonth(), endDayForLastMonth);\nconst threeDayStart = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate() - 2);\nconst threeDayEnd = new Date(currentDate.getFullYear(), currentDate.getMonth(), currentDate.getDate());\nconst commitmentDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1).toISOString().split('T')[0];\nconst schedulerDay = currentDate.getDate();\n\nresult = {\n    \"mongoCurrentFromDate\": dateUtils.formatToMongoFromDate(new Date(currentDate.getFullYear(), currentDate.getMonth(), 1)),\n    \"mongoCurrentToDate\":dateUtils.formatToMongoToDate(currentDate),\n    \"mongoLmtdFromDate\": dateUtils.formatToMongoFromDate(lastMonthStart),\n    \"mongoLmtdToDate\":dateUtils.formatToMongoToDate(lastMonthEnd),\n    \"sqlFromDate\": `${dateUtils.format(threeDayStart)} 00:00:00`,\n    \"sqlToDate\": `${dateUtils.format(threeDayEnd)} 23:59:59`,\n    \"commitmentDate\": commitmentDate,\n    \"schedulerDay\": schedulerDay,\n    \"campaignDays\":{{ n_EalEd.outputs.objects[0].properties.campaignDays }}\n}",
+				"isAsync":false
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"global":false
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false,
+					"slidingWindowType":"COUNT_BASED"
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"unit":"MINUTES",
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"STOP",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Javascript",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":84,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Ssznf-1",
+			"id":"n_QAwRr",
+			"index":4,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_vv6NA.outputs.result.schedulerDay }}",
+						"filter":{
+							"operator":"IN",
+							"value":"{{ n_EalEd.outputs.objects[0].properties.campaignDays }}"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Scheduler Day Check",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_QAwRr@_Ssznf-1@n",
+			"id":"n_dXKcc",
+			"index":5,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":80,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Ssznf-1",
+			"id":"n_Aao7i",
+			"index":6,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"BottomsUpResponse":{
+							"type":"number",
+							"title":"BottomsUpResponse"
+						},
+						"GrowthLMTD":{
+							"type":"number",
+							"title":"GrowthLMTD"
+						},
+						"LeadsLast3Days":{
+							"type":"number",
+							"title":"LeadsLast3Days"
+						},
+						"ContestOptin":{
+							"type":"number",
+							"title":"ContestOptin"
+						},
+						"CurrentBooking":{
+							"type":"integer",
+							"title":"CurrentBooking"
+						},
+						"LastBooking":{
+							"type":"integer",
+							"title":"LastBooking"
+						}
+					},
+					"required":[
+						"CurrentBooking",
+						"LastBooking"
+					]
+				}
+			},
+			"inputs":{},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"BottomsUpResponse":{
+							"type":"number",
+							"title":"BottomsUpResponse"
+						},
+						"GrowthLMTD":{
+							"type":"number",
+							"title":"GrowthLMTD"
+						},
+						"LeadsLast3Days":{
+							"type":"number",
+							"title":"LeadsLast3Days"
+						},
+						"ContestOptin":{
+							"type":"number",
+							"title":"ContestOptin"
+						},
+						"CurrentBooking":{
+							"type":"integer",
+							"title":"CurrentBooking"
+						},
+						"LastBooking":{
+							"type":"integer",
+							"title":"LastBooking"
+						}
+					},
+					"required":[
+						"CurrentBooking",
+						"LastBooking"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":156,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Ssznf-1",
+			"id":"n_1wZ80",
+			"index":7,
+			"inputs":{
+				"object_type":"bottoms_up_rm_activation_campaign_object",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"sortBy":[
+					{
+						"field":"",
+						"order":"ASC"
+					}
+				],
+				"page":{
+					"paginateBy":"OFFSET",
+					"limit":20000
+				},
+				"numberOfRecordsToFetch":"MULTIPLE",
+				"readThroughSessionVariables":false,
+				"includeTotalCount":false
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":59,
+				"resourceName":"utility_by_unifyapps_to_json_object",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Ssznf-1",
+			"id":"FUK1t",
+			"index":8,
+			"inputs":{
+				"jsonSchema":{
+					"type":"object",
+					"properties":{
+						"pipeline":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Pipeline"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"pipeline"
+					]
+				},
+				"jsonString":"{\n\"pipeline\": [\n{\n\"$match\": {\n\"commitmentMonth\":\"{{ n_vv6NA.outputs.result.commitmentDate }}\"\n}\n},\n{ \"$project\": { \"affiliateCode\": 1, \"response\": 1 } }\n]\n}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Deserialise string to JSON object",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"mongo",
+				"resourceVersion":122,
+				"connectionId":"6863f2006a5884327ec84f10",
+				"resourceName":"mongodb_aggregate_documents",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Ssznf-1",
+			"id":"GIKeN",
+			"index":9,
+			"inputs":{
+				"pipeline":{
+					"source":"{{ FUK1t.outputs.result.pipeline }}",
+					"ua:type":"mappedArray",
+					"items":"{{ FUK1t.outputs.result.pipeline }}"
+				},
+				"objectSourceResourceName":"mongodb_fetch_collection_information",
+				"collection":"commitmentWAResponse"
+			},
+			"options":{
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false,
+					"slidingWindowType":"COUNT_BASED"
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"unit":"MINUTES",
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"STOP",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Commitment Response",
+			"title":"Aggregate documents in MongoDB collection",
+			"type":"ACTION"
+		},
+		{
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Ssznf-1",
 			"id":"_jdoAr",
-			"index":0,
+			"index":10,
 			"skip":false,
 			"title":"Select an app and action",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":155543,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +571,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
