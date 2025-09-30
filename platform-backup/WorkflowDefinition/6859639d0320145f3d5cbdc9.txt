@@ -5,12 +5,12 @@
 	"createdTime":1750926265287,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655376955,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f39038757c179b12399a",
+		"deployedAt":1759243560791,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed2823e6682b9a51eb73",
 		"status":"DEPLOYED",
-		"version":45,
-		"workflowVersion":71
+		"version":46,
+		"workflowVersion":72
 	},
 	"edges":[
 		{
@@ -41,7 +41,7 @@
 	"id":"6859639d0320145f3d5cbdc9",
 	"lastModifiedBy":-1,
 	"lcName":"text to workflow v2 | update workflow adjacency list (debug)",
-	"modifiedTime":1759243560723,
+	"modifiedTime":1759243593310,
 	"name":"Text to Workflow v2 | Update Workflow Adjacency List (debug)",
 	"nodes":[
 		{
@@ -260,5 +260,5 @@
 		}
 	},
 	"standard":true,
-	"version":72
+	"version":73
 }
