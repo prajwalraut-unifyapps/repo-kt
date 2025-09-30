@@ -1,0 +1,273 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1752507469873,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758655408817,
+		"deployedBy":0,
+		"deployedDefinitionId":"68d2f3b038757c179b123e9d",
+		"status":"DEPLOYED",
+		"version":32,
+		"workflowVersion":55
+	},
+	"edges":[
+		{
+			"fromNodeId":"DQD66",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_2nBq4",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_2nBq4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_KQsS2",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_KQsS2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"bJbHQ",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"682cd6aba66f2460f7c092f6",
+	"lastModifiedBy":-1,
+	"lcName":"clustering | cluster summary",
+	"modifiedTime":1759243586612,
+	"name":"Clustering | Cluster Summary",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":32,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Czkfa-1",
+			"id":"DQD66",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"clusterEmbedding":{
+							"type":"array",
+							"items":{
+								"type":"number"
+							},
+							"title":"clusterEmbedding"
+						},
+						"clusterSummary":{
+							"type":"string",
+							"title":"Cluster Summary"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"document_batch":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"document_batch"
+						},
+						"llmModelId":{
+							"type":"string",
+							"title":"Llm Model Id"
+						},
+						"embeddingModelId":{
+							"type":"string",
+							"title":"Embedding Model Id"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":464,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Czkfa-1",
+			"id":"n_2nBq4",
+			"index":2,
+			"inputs":{
+				"automationId":"66dfd76eb70dad256986b784",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"type":"text",
+					"response_format":"text",
+					"modelId":"{{ DQD66.outputs.llmModelId }}",
+					"content":"You are an expert at summarizing clusters of messages. I will provide a group of messages, and your task is to concisely summarize the main intent or theme of the cluster in English, regardless of the original language.\n\nMessages:{{ DQD66.outputs.document_batch }}\n\nThe summary must clearly highlight:\nOverall problem or sentiment (positive or negative)\nSpecific issue (if mentioned)\nWho is affected\nWhat is being requested from the government (if applicable)\nSpecific points of appreciation or criticism\nAny initiatives or events mentioned\n\nIf the messages are mostly tags, or blank, then return the summary as \"Not relevant\"\n\nYour output should be only the summary of the cluster—concise and to the point. No extra explanation or commentary."
+				}
+			},
+			"skip":false,
+			"subTitle":"Simple Call LLM",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":464,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Czkfa-1",
+			"id":"n_KQsS2",
+			"index":3,
+			"inputs":{
+				"automationId":"6784b9216fb83f0972c5625d",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"modelId":"{{ DQD66.outputs.embeddingModelId }}",
+					"userQuery":"{{ n_2nBq4.outputs.llmResponse }}"
+				}
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"global":false
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false,
+					"slidingWindowType":"COUNT_BASED"
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"unit":"MINUTES",
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"STOP",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Fetch Embeddings",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":32,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Czkfa-1",
+			"id":"bJbHQ",
+			"index":4,
+			"inputs":{
+				"result":{
+					"clusterEmbedding":{
+						"source":"{{ n_KQsS2.outputs.embeddings }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_KQsS2.outputs.embeddings[0] }}"
+					},
+					"clusterSummary":"{{ n_2nBq4.outputs.llmResponse }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":-1,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		"Clustering"
+	],
+	"version":56
+}
