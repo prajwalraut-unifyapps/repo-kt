@@ -5,12 +5,12 @@
 	"createdTime":1759162481426,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759228570404,
+		"deployedAt":1759228773529,
 		"deployedBy":46209,
-		"deployedDefinitionId":"68dbb29aa482523872e2ced0",
+		"deployedDefinitionId":"68dbb365a482523872e2d33a",
 		"status":"DEPLOYED",
-		"version":4,
-		"workflowVersion":10
+		"version":5,
+		"workflowVersion":12
 	},
 	"edges":[
 		{
@@ -31,6 +31,13 @@
 			"fromNodeId":"n_n7Jps",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_VHCe6",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_VHCe6",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_PvXt7",
 			"type":"next"
 		}
@@ -38,7 +45,7 @@
 	"id":"68dab0713106eb2b3d248139",
 	"lastModifiedBy":46209,
 	"lcName":"customapplicationtest",
-	"modifiedTime":1759228760787,
+	"modifiedTime":1759232711518,
 	"name":"customApplicationTest",
 	"nodes":[
 		{
@@ -141,7 +148,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Sm2OG-1",
 			"id":"n_n7Jps",
@@ -201,6 +208,134 @@
 			"type":"ACTION"
 		},
 		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.parameters.passengerDetails.items.fullName",
+					"root.parameters.passengerDetails.items.country",
+					"root.parameters.passengerDetails.items.gender",
+					"root.parameters.passengerDetails.items.birthDate",
+					"root.parameters.passengerDetails.items.idDocumentType",
+					"root.parameters.passengerDetails.items.idDocumentNumber",
+					"root.parameters.passengerDetails.items.idDocumentExpiryDate"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":871,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Sm2OG-1",
+			"id":"n_VHCe6",
+			"index":4,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"passengerDetails":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"fullName":{
+										"type":"string",
+										"title":"fullName"
+									},
+									"country":{
+										"type":"string",
+										"title":"country"
+									},
+									"gender":{
+										"type":"string",
+										"title":"gender"
+									},
+									"birthDate":{
+										"type":"string",
+										"title":"birthDate"
+									},
+									"idDocumentType":{
+										"type":"string",
+										"title":"idDocumentType"
+									},
+									"idDocumentNumber":{
+										"type":"string",
+										"title":"idDocumentNumber"
+									},
+									"idDocumentExpiryDate":{
+										"type":"string",
+										"title":"idDocumentExpiryDate"
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"passengerDetails"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"passengerDetails":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"fullName":{
+										"type":"string",
+										"title":"fullName"
+									},
+									"country":{
+										"type":"string",
+										"title":"country"
+									},
+									"gender":{
+										"type":"string",
+										"title":"gender"
+									},
+									"birthDate":{
+										"type":"string",
+										"title":"birthDate"
+									},
+									"idDocumentType":{
+										"type":"string",
+										"title":"idDocumentType"
+									},
+									"idDocumentNumber":{
+										"type":"string",
+										"title":"idDocumentNumber"
+									},
+									"idDocumentExpiryDate":{
+										"type":"string",
+										"title":"idDocumentExpiryDate"
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"passengerDetails"
+						}
+					}
+				},
+				"code":"Map<String,String> country = [:]\ncountry[\"AF\"] = \"Afghanistan\"\ncountry[\"AL\"] = \"Albania\"\ncountry[\"DZ\"] = \"Algeria\"\ncountry[\"AS\"] = \"American Samoa\"\ncountry[\"AD\"] = \"AndorrA\"\ncountry[\"AO\"] = \"Angola\"\ncountry[\"AI\"] = \"Anguilla\"\ncountry[\"AQ\"] = \"Antarctica\"\ncountry[\"AG\"] = \"Antigua and Barbuda\"\ncountry[\"AR\"] = \"Argentina\"\ncountry[\"AM\"] = \"Armenia\"\ncountry[\"AW\"] = \"Aruba\"\ncountry[\"AU\"] = \"Australia\"\ncountry[\"AT\"] = \"Austria\"\ncountry[\"AZ\"] = \"Azerbaijan\"\ncountry[\"BS\"] = \"Bahamas\"\ncountry[\"BH\"] = \"Bahrain\"\ncountry[\"BD\"] = \"Bangladesh\"\ncountry[\"BB\"] = \"Barbados\"\ncountry[\"BY\"] = \"Belarus\"\ncountry[\"BE\"] = \"Belgium\"\ncountry[\"BZ\"] = \"Belize\"\ncountry[\"BJ\"] = \"Benin\"\ncountry[\"BM\"] = \"Bermuda\"\ncountry[\"BT\"] = \"Bhutan\"\ncountry[\"BO\"] = \"Bolivia\"\ncountry[\"BA\"] = \"Bosnia and Herzegovina\"\ncountry[\"BW\"] = \"Botswana\"\ncountry[\"BV\"] = \"Bouvet Island\"\ncountry[\"BR\"] = \"Brazil\"\ncountry[\"IO\"] = \"British Indian OT\"\ncountry[\"BN\"] = \"Brunei Darussalam\"\ncountry[\"BG\"] = \"Bulgaria\"\ncountry[\"BF\"] = \"Burkina Faso\"\ncountry[\"BI\"] = \"Burundi\"\ncountry[\"KH\"] = \"Cambodia\"\ncountry[\"CM\"] = \"Cameroon\"\ncountry[\"CA\"] = \"Canada\"\ncountry[\"CV\"] = \"Cape Verde\"\ncountry[\"KY\"] = \"Cayman Islands\"\ncountry[\"CF\"] = \"Central African Republic\"\ncountry[\"TD\"] = \"Chad\"\ncountry[\"CL\"] = \"Chile\"\ncountry[\"CN\"] = \"China\"\ncountry[\"CX\"] = \"Christmas Island\"\ncountry[\"CC\"] = \"Cocos (Keeling) Islands\"\ncountry[\"CO\"] = \"Colombia\"\ncountry[\"KM\"] = \"Comoros\"\ncountry[\"CG\"] = \"Congo\"\ncountry[\"CD\"] = \"Congo\"\ncountry[\"CK\"] = \"Cook Islands\"\ncountry[\"CR\"] = \"Costa Rica\"\ncountry[\"CI\"] = \"Cote D'Ivoire\"\ncountry[\"HR\"] = \"Croatia\"\ncountry[\"CU\"] = \"Cuba\"\ncountry[\"CY\"] = \"Cyprus\"\ncountry[\"CZ\"] = \"Czech Republic\"\ncountry[\"DK\"] = \"Denmark\"\ncountry[\"DJ\"] = \"Djibouti\"\ncountry[\"DM\"] = \"Dominica\"\ncountry[\"DO\"] = \"Dominican Republic\"\ncountry[\"EC\"] = \"Ecuador\"\ncountry[\"EG\"] = \"Egypt\"\ncountry[\"SV\"] = \"El Salvador\"\ncountry[\"GQ\"] = \"Equatorial Guinea\"\ncountry[\"ER\"] = \"Eritrea\"\ncountry[\"EE\"] = \"Estonia\"\ncountry[\"ET\"] = \"Ethiopia\"\ncountry[\"FK\"] = \"Falkland Islands (Malvinas)\"\ncountry[\"FO\"] = \"Faroe Islands\"\ncountry[\"FJ\"] = \"Fiji\"\ncountry[\"FI\"] = \"Finland\"\ncountry[\"FR\"] = \"France\"\ncountry[\"GF\"] = \"French Guiana\"\ncountry[\"PF\"] = \"French Polynesia\"\ncountry[\"TF\"] = \"French Southern Territories\"\ncountry[\"GA\"] = \"Gabon\"\ncountry[\"GM\"] = \"Gambia\"\ncountry[\"GE\"] = \"Georgia\"\ncountry[\"DE\"] = \"Germany\"\ncountry[\"GH\"] = \"Ghana\"\ncountry[\"GI\"] = \"Gibraltar\"\ncountry[\"GR\"] = \"Greece\"\ncountry[\"GL\"] = \"Greenland\"\ncountry[\"GD\"] = \"Grenada\"\ncountry[\"GP\"] = \"Guadeloupe\"\ncountry[\"GU\"] = \"Guam\"\ncountry[\"GT\"] = \"Guatemala\"\ncountry[\"GG\"] = \"Guernsey\"\ncountry[\"GN\"] = \"Guinea\"\ncountry[\"GW\"] = \"Guinea-Bissau\"\ncountry[\"GY\"] = \"Guyana\"\ncountry[\"HT\"] = \"Haiti\"\ncountry[\"HM\"] = \"Heard Island\"\ncountry[\"VA\"] = \"Holy See (Vatican City State)\"\ncountry[\"HN\"] = \"Honduras\"\ncountry[\"HK\"] = \"Hong Kong\"\ncountry[\"HU\"] = \"Hungary\"\ncountry[\"IS\"] = \"Iceland\"\ncountry[\"IN\"] = \"India\"\ncountry[\"ID\"] = \"Indonesia\"\ncountry[\"IR\"] = \"Islamic Republic Of Iran\"\ncountry[\"IQ\"] = \"Iraq\"\ncountry[\"IE\"] = \"Ireland\"\ncountry[\"IM\"] = \"Isle of Man\"\ncountry[\"IL\"] = \"Israel\"\ncountry[\"IT\"] = \"Italy\"\ncountry[\"JM\"] = \"Jamaica\"\ncountry[\"JP\"] = \"Japan\"\ncountry[\"JE\"] = \"Jersey\"\ncountry[\"JO\"] = \"Jordan\"\ncountry[\"KZ\"] = \"Kazakhstan\"\ncountry[\"KE\"] = \"Kenya\"\ncountry[\"KI\"] = \"Kiribati\"\ncountry[\"KP\"] = \"North Korea\"\ncountry[\"KR\"] = \"South Korea\"\ncountry[\"KW\"] = \"Kuwait\"\ncountry[\"KG\"] = \"Kyrgyzstan\"\ncountry[\"LA\"] = \"Lao People'S Democratic Republic\"\ncountry[\"LV\"] = \"Latvia\"\ncountry[\"LB\"] = \"Lebanon\"\ncountry[\"LS\"] = \"Lesotho\"\ncountry[\"LR\"] = \"Liberia\"\ncountry[\"LY\"] = \"Libyan Arab Jamahiriya\"\ncountry[\"LI\"] = \"Liechtenstein\"\ncountry[\"LT\"] = \"Lithuania\"\ncountry[\"LU\"] = \"Luxembourg\"\ncountry[\"MO\"] = \"Macao\"\ncountry[\"MK\"] = \"Macedonia, The Former Yugoslav Republic of\"\ncountry[\"MG\"] = \"Madagascar\"\ncountry[\"MW\"] = \"Malawi\"\ncountry[\"MY\"] = \"Malaysia\"\ncountry[\"MV\"] = \"Maldives\"\ncountry[\"ML\"] = \"Mali\"\ncountry[\"MT\"] = \"Malta\"\ncountry[\"MH\"] = \"Marshall Islands\"\ncountry[\"MQ\"] = \"Martinique\"\ncountry[\"MR\"] = \"Mauritania\"\ncountry[\"MU\"] = \"Mauritius\"\ncountry[\"YT\"] = \"Mayotte\"\ncountry[\"MX\"] = \"Mexico\"\ncountry[\"FM\"] = \"Micronesia, Federated States of\"\ncountry[\"MD\"] = \"Moldova, Republic of\"\ncountry[\"MC\"] = \"Monaco\"\ncountry[\"MN\"] = \"Mongolia\"\ncountry[\"ME\"] = \"Montenegro\"\ncountry[\"MS\"] = \"Montserrat\"\ncountry[\"MA\"] = \"Morocco\"\ncountry[\"MZ\"] = \"Mozambique\"\ncountry[\"MM\"] = \"Myanmar\"\ncountry[\"NA\"] = \"Namibia\"\ncountry[\"NR\"] = \"Nauru\"\ncountry[\"NP\"] = \"Nepal\"\ncountry[\"NL\"] = \"Netherlands\"\ncountry[\"AN\"] = \"Netherlands Antilles\"\ncountry[\"NC\"] = \"New Caledonia\"\ncountry[\"NZ\"] = \"New Zealand\"\ncountry[\"NI\"] = \"Nicaragua\"\ncountry[\"NE\"] = \"Niger\"\ncountry[\"NG\"] = \"Nigeria\"\ncountry[\"NU\"] = \"Niue\"\ncountry[\"NF\"] = \"Norfolk Island\"\ncountry[\"MP\"] = \"Northern Mariana Islands\"\ncountry[\"NO\"] = \"Norway\"\ncountry[\"OM\"] = \"Oman\"\ncountry[\"PK\"] = \"Pakistan\"\ncountry[\"PW\"] = \"Palau\"\ncountry[\"PS\"] = \"Palestinian Territory, Occupied\"\ncountry[\"PA\"] = \"Panama\"\ncountry[\"PG\"] = \"Papua New Guinea\"\ncountry[\"PY\"] = \"Paraguay\"\ncountry[\"PE\"] = \"Peru\"\ncountry[\"PH\"] = \"Philippines\"\ncountry[\"PN\"] = \"Pitcairn\"\ncountry[\"PL\"] = \"Poland\"\ncountry[\"PT\"] = \"Portugal\"\ncountry[\"PR\"] = \"Puerto Rico\"\ncountry[\"QA\"] = \"Qatar\"\ncountry[\"RE\"] = \"Reunion\"\ncountry[\"RO\"] = \"Romania\"\ncountry[\"RU\"] = \"Russian Federation\"\ncountry[\"RW\"] = \"RWANDA\"\ncountry[\"SH\"] = \"Saint Helena\"\ncountry[\"KN\"] = \"Saint Kitts and Nevis\"\ncountry[\"LC\"] = \"Saint Lucia\"\ncountry[\"PM\"] = \"Saint Pierre and Miquelon\"\ncountry[\"VC\"] = \"Saint Vincent\"\ncountry[\"WS\"] = \"Samoa\"\ncountry[\"SM\"] = \"San Marino\"\ncountry[\"ST\"] = \"Sao Tome and Principe\"\ncountry[\"SA\"] = \"Saudi Arabia\"\ncountry[\"SN\"] = \"Senegal\"\ncountry[\"RA\"] = \"Serbia\"\ncountry[\"SC\"] = \"Seychelles\"\ncountry[\"SL\"] = \"Sierra Leone\"\ncountry[\"SG\"] = \"Singapore\"\ncountry[\"SK\"] = \"Slovakia\"\ncountry[\"SI\"] = \"Slovenia\"\ncountry[\"SB\"] = \"Solomon Islands\"\ncountry[\"SO\"] = \"Somalia\"\ncountry[\"ZA\"] = \"South Africa\"\ncountry[\"GS\"] = \"South Georgia\"\ncountry[\"ES\"] = \"Spain\"\ncountry[\"LK\"] = \"Sri Lanka\"\ncountry[\"SD\"] = \"Sudan\"\ncountry[\"SR\"] = \"Suriname\"\ncountry[\"SJ\"] = \"Svalbard and Jan Mayen\"\ncountry[\"SZ\"] = \"Swaziland\"\ncountry[\"SE\"] = \"Sweden\"\ncountry[\"CH\"] = \"Switzerland\"\ncountry[\"SY\"] = \"Syrian Arab Republic\"\ncountry[\"TW\"] = \"Taiwan, Province of China\"\ncountry[\"TJ\"] = \"Tajikistan\"\ncountry[\"TZ\"] = \"Tanzania, United Republic of\"\ncountry[\"TH\"] = \"Thailand\"\ncountry[\"TL\"] = \"Timor-Leste\"\ncountry[\"TG\"] = \"Togo\"\ncountry[\"TK\"] = \"Tokelau\"\ncountry[\"TO\"] = \"Tonga\"\ncountry[\"TT\"] = \"Trinidad and Tobago\"\ncountry[\"TN\"] = \"Tunisia\"\ncountry[\"TR\"] = \"Turkey\"\ncountry[\"TM\"] = \"Turkmenistan\"\ncountry[\"TC\"] = \"Turks and Caicos Islands\"\ncountry[\"TV\"] = \"Tuvalu\"\ncountry[\"UG\"] = \"Uganda\"\ncountry[\"UA\"] = \"Ukraine\"\ncountry[\"AE\"] = \"United Arab Emirates\"\ncountry[\"GB\"] = \"United Kingdom\"\ncountry[\"US\"] = \"United States\"\ncountry[\"UM\"] = \"United States Minor Outlying Islands\"\ncountry[\"UY\"] = \"Uruguay\"\ncountry[\"UZ\"] = \"Uzbekistan\"\ncountry[\"VU\"] = \"Vanuatu\"\ncountry[\"VE\"] = \"Venezuela\"\ncountry[\"VN\"] = \"Vietnam\"\ncountry[\"VG\"] = \"Virgin Islands, British\"\ncountry[\"VI\"] = \"Virgin Islands, U.S.\"\ncountry[\"WF\"] = \"Wallis and Futuna\"\ncountry[\"YE\"] = \"Yemen\"\ncountry[\"ZM\"] = \"Zambia\"\ncountry[\"ZW\"] = \"Zimbabwe\"\n\nMap<Integer,String> idDocumentType = [:]\nidDocumentType[2] = \"Passport\"\nidDocumentType[5] = \"GCC Id\"\n\ndef passengerDetails = binding.hasVariable(\"passengerDetails\")?binding.getVariable(\"passengerDetails\"):[]\n\npassengerDetails.each{passengerDetail->\n    passengerDetail.country = country[passengerDetail.country]\n    passengerDetail.idDocumentType = idDocumentType[passengerDetail.idDocumentType]\n}\n\nreturn [passengerDetails:passengerDetails]",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"passengerDetails":{
+						"source":"{{ n_n7Jps.outputs.result.passengerDetails }}",
+						"ua:type":"mappedArray"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
 			"context":{
 				"appName":"callables",
 				"resourceVersion":896,
@@ -212,7 +347,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_Sm2OG-1",
 			"id":"n_PvXt7",
-			"index":4,
+			"index":5,
 			"inputs":{
 				"result":{
 					"messages":"{{ n_xa3kA.outputs.result.response }}"
@@ -241,5 +376,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":13
 }
