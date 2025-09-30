@@ -5,12 +5,12 @@
 	"createdTime":1742881212261,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655332853,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f36438757c179b1231fe",
+		"deployedAt":1759243521958,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed015e003e08cdeb2e5a",
 		"status":"DEPLOYED",
-		"version":26,
-		"workflowVersion":41
+		"version":27,
+		"workflowVersion":42
 	},
 	"edges":[
 		{
@@ -48,7 +48,7 @@
 	"id":"67e241bcb174fc3bd7e91a3f",
 	"lastModifiedBy":-1,
 	"lcName":"execute azure query",
-	"modifiedTime":1759243521825,
+	"modifiedTime":1759243557909,
 	"name":"Execute Azure Query",
 	"nodes":[
 		{
@@ -260,5 +260,5 @@
 	"tags":[
 		
 	],
-	"version":42
+	"version":43
 }
