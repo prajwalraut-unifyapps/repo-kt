@@ -5,12 +5,12 @@
 	"createdTime":1732230407238,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646561974,
+		"deployedAt":1758655384507,
 		"deployedBy":0,
-		"deployedDefinitionId":"68d2d121bd00df618e363d46",
+		"deployedDefinitionId":"68d2f39838757c179b123ad3",
 		"status":"DEPLOYED",
-		"version":55,
-		"workflowVersion":78
+		"version":56,
+		"workflowVersion":79
 	},
 	"edges":[
 		{
@@ -85,9 +85,9 @@
 		]
 	},
 	"id":"673fbd0724c8443e29f73731",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"ai agent deployment enablement handler",
-	"modifiedTime":1758655384422,
+	"modifiedTime":1759243566627,
 	"name":"AI Agent Deployment Enablement Handler",
 	"nodes":[
 		{
@@ -300,5 +300,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":79
+	"version":80
 }
