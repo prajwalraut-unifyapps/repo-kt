@@ -5,12 +5,12 @@
 	"createdTime":1758646544707,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655366482,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f38638757c179b1237c9",
+		"deployedAt":1759243552226,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed205e003e08cdeb2ed6",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":3
+		"version":3,
+		"workflowVersion":4
 	},
 	"edges":[
 		{
@@ -48,7 +48,7 @@
 	"id":"68c8fff47139d8060b86c9cf",
 	"lastModifiedBy":-1,
 	"lcName":"parallelpdftoimage",
-	"modifiedTime":1759243552169,
+	"modifiedTime":1759243584606,
 	"name":"parallelPdfToImage",
 	"nodes":[
 		{
@@ -265,5 +265,5 @@
 		"AI Agent",
 		"Internal"
 	],
-	"version":4
+	"version":5
 }
