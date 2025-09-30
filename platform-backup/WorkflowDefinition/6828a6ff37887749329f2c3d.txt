@@ -5,12 +5,12 @@
 	"createdTime":1748544402786,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646545387,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2d111a7f0ee5a6b6196fa",
+		"deployedAt":1759243552619,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed2023e6682b9a51eb31",
 		"status":"DEPLOYED",
-		"version":43,
-		"workflowVersion":56
+		"version":45,
+		"workflowVersion":58
 	},
 	"edges":[
 		{
@@ -75,9 +75,9 @@
 		]
 	},
 	"id":"6828a6ff37887749329f2c3d",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"content category | authority rerank documents",
-	"modifiedTime":1758655366902,
+	"modifiedTime":1759243585112,
 	"name":"Content Category | Authority Rerank Documents",
 	"nodes":[
 		{
@@ -772,5 +772,5 @@
 		}
 	},
 	"standard":true,
-	"version":57
+	"version":59
 }
