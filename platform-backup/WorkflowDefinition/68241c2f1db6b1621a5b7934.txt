@@ -5,12 +5,12 @@
 	"createdTime":1747198937707,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655342320,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f36e38757c179b12338a",
+		"deployedAt":1759243530116,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed0a23e6682b9a51eaba",
 		"status":"DEPLOYED",
-		"version":46,
-		"workflowVersion":60
+		"version":47,
+		"workflowVersion":61
 	},
 	"edges":[
 		{
@@ -137,7 +137,7 @@
 	"id":"68241c2f1db6b1621a5b7934",
 	"lastModifiedBy":-1,
 	"lcName":"few shot query fetcher",
-	"modifiedTime":1759243530058,
+	"modifiedTime":1759243565185,
 	"name":"Few Shot Query Fetcher",
 	"nodes":[
 		{
@@ -812,5 +812,5 @@
 		}
 	},
 	"standard":true,
-	"version":61
+	"version":62
 }
