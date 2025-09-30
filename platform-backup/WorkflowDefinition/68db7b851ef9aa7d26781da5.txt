@@ -1,20 +1,12 @@
 {
 	"appsUsed":[
-		"mongo",
-		"storage_by_unifyapps"
+		"mongo"
 	],
 	"createdTime":1759214469748,
 	"deleted":false,
 	"edges":[
 		{
 			"fromNodeId":"n_G7hjk",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_EalEd",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_EalEd",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_vv6NA",
@@ -24,41 +16,11 @@
 			"fromNodeId":"n_vv6NA",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_QAwRr",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_QAwRr",
-			"name":"no",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_dXKcc",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_QAwRr",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_Aao7i",
-			"type":"if"
-		},
-		{
-			"fromNodeId":"n_dXKcc",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_Aao7i",
 			"type":"next"
 		},
 		{
 			"fromNodeId":"n_Aao7i",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_1wZ80",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_1wZ80",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"FUK1t",
@@ -75,7 +37,7 @@
 	"id":"68db7b851ef9aa7d26781da5",
 	"lastModifiedBy":155341,
 	"lcName":"tesatpptpdf",
-	"modifiedTime":1759218599232,
+	"modifiedTime":1759218790578,
 	"name":"tesatpptpdf",
 	"nodes":[
 		{
@@ -105,37 +67,6 @@
 			"type":"START"
 		},
 		{
-			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":283,
-				"resourceName":"storage_by_unifyapps_fetch_records",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_Ssznf-1",
-			"id":"n_EalEd",
-			"index":2,
-			"inputs":{
-				"object_type":"bottoms_up_rm_activation_campaign_object",
-				"includeRoleMappings":false,
-				"includeCurrentUserPermissions":false,
-				"translationsOption":"DEFAULT",
-				"page":{
-					"paginateBy":"OFFSET",
-					"limit":20
-				},
-				"numberOfRecordsToFetch":"MULTIPLE",
-				"readThroughSessionVariables":false,
-				"includeTotalCount":false
-			},
-			"skip":true,
-			"subTitle":"Storage by UnifyApps",
-			"title":"Fetch records",
-			"type":"ACTION"
-		},
-		{
 			"additional":{
 				"xsdSchemaConfig":{
 					"root":{}
@@ -152,7 +83,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_Ssznf-1",
 			"id":"n_vv6NA",
-			"index":3,
+			"index":2,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -258,51 +189,6 @@
 		},
 		{
 			"context":{
-				"appName":"if_else",
-				"resourceVersion":84,
-				"resourceName":"if_else_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_Ssznf-1",
-			"id":"n_QAwRr",
-			"index":4,
-			"inputs":{
-				"filters":[
-					{
-						"property":"{{ n_vv6NA.outputs.result.schedulerDay }}",
-						"filter":{
-							"operator":"IN",
-							"value":"{{ n_EalEd.outputs.objects[0].properties.campaignDays }}"
-						}
-					}
-				],
-				"operator":"AND"
-			},
-			"skip":true,
-			"subTitle":"Scheduler Day Check",
-			"title":"Condition",
-			"type":"IF_ELSE"
-		},
-		{
-			"context":{
-				"appName":"stop"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"n_QAwRr@_Ssznf-1@n",
-			"id":"n_dXKcc",
-			"index":5,
-			"skip":true,
-			"subTitle":"Stop",
-			"title":"Stop",
-			"type":"STOP"
-		},
-		{
-			"context":{
 				"appName":"variable_by_unifyapps",
 				"resourceVersion":80,
 				"resourceName":"variable_by_unifyapps_create_variables",
@@ -313,7 +199,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_Ssznf-1",
 			"id":"n_Aao7i",
-			"index":6,
+			"index":3,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -398,42 +284,6 @@
 		},
 		{
 			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":156,
-				"resourceName":"storage_by_unifyapps_fetch_records",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_Ssznf-1",
-			"id":"n_1wZ80",
-			"index":7,
-			"inputs":{
-				"object_type":"bottoms_up_rm_activation_campaign_object",
-				"includeRoleMappings":false,
-				"includeCurrentUserPermissions":false,
-				"sortBy":[
-					{
-						"field":"",
-						"order":"ASC"
-					}
-				],
-				"page":{
-					"paginateBy":"OFFSET",
-					"limit":20000
-				},
-				"numberOfRecordsToFetch":"MULTIPLE",
-				"readThroughSessionVariables":false,
-				"includeTotalCount":false
-			},
-			"skip":true,
-			"subTitle":"Storage by UnifyApps",
-			"title":"Fetch records",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"utility_by_unifyapps",
 				"resourceVersion":59,
 				"resourceName":"utility_by_unifyapps_to_json_object",
@@ -444,7 +294,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_Ssznf-1",
 			"id":"FUK1t",
-			"index":8,
+			"index":4,
 			"inputs":{
 				"jsonSchema":{
 					"type":"object",
@@ -464,7 +314,7 @@
 						}
 					}
 				},
-				"jsonString":"{\n\"pipeline\": [\n},\n{ \"$project\": { \"affiliateCode\": 1, \"response\": 1 } }\n]\n}"
+				"jsonString":"{\n\"pipeline\": [\n{ \"$project\": { \"affiliateCode\": 1, \"response\": 1 } }\n]\n}"
 			},
 			"skip":false,
 			"subTitle":"Utility by UnifyApps",
@@ -484,7 +334,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_Ssznf-1",
 			"id":"GIKeN",
-			"index":9,
+			"index":5,
 			"inputs":{
 				"pipeline":{
 					"source":"{{ FUK1t.outputs.result.pipeline }}",
@@ -565,5 +415,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
