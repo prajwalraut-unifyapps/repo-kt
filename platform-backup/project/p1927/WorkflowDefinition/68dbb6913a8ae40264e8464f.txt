@@ -23,7 +23,7 @@
 	"id":"68dbb6913a8ae40264e8464f",
 	"lastModifiedBy":308,
 	"lcName":"[dp-func-extractbip-prod-sa]schedulebipfunction",
-	"modifiedTime":1759229622302,
+	"modifiedTime":1759229624958,
 	"name":"[dp-func-extractbip-prod-sa]ScheduleBIPFunction",
 	"nodes":[
 		{
@@ -66,6 +66,8 @@
 		{
 			"context":{
 				"appName":"code_by_unifyapps",
+				"resourceVersion":44,
+				"resourceName":"code_by_unifyapps_csharp",
 				"type":"APPLICATION"
 			},
 			"debug":false,
@@ -74,9 +76,12 @@
 			"groupId":"_MKOHG-1",
 			"id":"n_leC1R",
 			"index":2,
+			"inputs":{
+				"isAsync":false
+			},
 			"skip":false,
 			"subTitle":"Code by UnifyApps",
-			"title":"Select an action",
+			"title":"Execute CSharp script",
 			"type":"ACTION"
 		},
 		{
@@ -121,5 +126,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
