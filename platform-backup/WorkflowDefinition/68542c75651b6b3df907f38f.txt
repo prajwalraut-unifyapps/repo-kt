@@ -1,0 +1,905 @@
+{
+	"appsUsed":[
+		"storage_by_unifyapps"
+	],
+	"createdTime":1751469655760,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758655318807,
+		"deployedBy":0,
+		"deployedDefinitionId":"68d2f35638757c179b122fb2",
+		"status":"DEPLOYED",
+		"version":39,
+		"workflowVersion":79
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_SgZeg",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_ScwCk",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_ScwCk",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_K33p5",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_K33p5",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_6sMbn",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_6sMbn",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_LpgxV",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_LpgxV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_7FGJN",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_7FGJN",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_v6xKy",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_v6xKy",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_sWp2S",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_sWp2S",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_JCO7w",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_JCO7w",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_sUcpk",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_sUcpk",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_KXLmh",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"_KXLmh",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_sZNDg",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_sZNDg",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_hgPA3",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_hgPA3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_zZ0S1",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_sUcpk",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_zZ0S1",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_zZ0S1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_I4dpr",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_I4dpr",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_3La95",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_3La95",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_6sMbn",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_6sMbn",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_xHwpp",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"68542c75651b6b3df907f38f",
+	"lastModifiedBy":-1,
+	"lcName":"knowledge indexer",
+	"modifiedTime":1759243510199,
+	"name":"Knowledge Indexer",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":444,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_7uzFA-1",
+			"id":"n_SgZeg",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"terminationReason":{
+							"type":"string",
+							"title":"Termination Reason"
+						},
+						"processedCount":{
+							"type":"integer",
+							"title":"Processed Count"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"knowledgeId":{
+							"type":"string",
+							"title":"Knowledge Id"
+						},
+						"dataType":{
+							"type":"string",
+							"title":"Data Type"
+						},
+						"indexerAutomation":{
+							"type":"string",
+							"title":"Indexer Automation"
+						},
+						"indexingVersion":{
+							"type":"integer",
+							"title":"Indexing Version"
+						},
+						"batchSize":{
+							"type":"string",
+							"title":"Batch Size"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":452,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_7uzFA-1",
+			"id":"n_ScwCk",
+			"index":2,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"count":{
+							"type":"integer",
+							"title":"Count"
+						},
+						"terminationReason":{
+							"type":"string",
+							"title":"Termination Reason"
+						},
+						"processedCount":{
+							"type":"integer",
+							"title":"Processed Count"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"processedCount":0,
+				"count":0,
+				"terminationReason":"LIMIT_REACHED"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"count":{
+							"type":"integer",
+							"title":"Count"
+						},
+						"terminationReason":{
+							"type":"string",
+							"title":"Termination Reason"
+						},
+						"processedCount":{
+							"type":"integer",
+							"title":"Processed Count"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"count = 0",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":450,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_7uzFA-1",
+			"id":"n_K33p5",
+			"index":3,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"schedulerMaxIterations":{
+							"type":"integer",
+							"title":"Scheduler Max Iterations"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"schedulerMaxIterations":{
+							"type":"integer",
+							"title":"Scheduler Max Iterations"
+						}
+					}
+				},
+				"code":"return [\n  \"schedulerMaxIterations\" : binding.hasVariable(\"schedulerMaxIterations\") ? schedulerMaxIterations : 1000\n]",
+				"compile_static":false,
+				"parameters":{
+					"schedulerMaxIterations":"{{ __ENV__.outputs.KNOWLEDGE_SCHEDULER_MAX_ITERATIONS }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"get Environment Vars",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":454,
+				"resourceName":"loop_while",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_7uzFA-1",
+			"id":"n_6sMbn",
+			"index":4,
+			"inputs":{
+				"condition":{
+					"filters":[
+						{
+							"property":"{{ n_ScwCk.outputs.count }}",
+							"filter":{
+								"operator":"LT",
+								"value":"{{ n_K33p5.outputs.result.schedulerMaxIterations }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"captureIterations":false
+			},
+			"skip":false,
+			"subTitle":"count < maxIterations",
+			"title":"While loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":459,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_6sMbn@_7uzFA-1@l",
+			"id":"n_LpgxV",
+			"index":5,
+			"inputs":{
+				"automationId":"68676a717693334d88bb539f",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"knowledgeId":"{{ n_SgZeg.outputs.knowledgeId }}",
+					"type":"indexer",
+					"parentEntityId":"{{ n_SgZeg.outputs.dataType }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Get or Create Cursor",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":448,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_6sMbn@_7uzFA-1@l",
+			"id":"n_7FGJN",
+			"index":6,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"timeStampEpoch":{
+							"type":"integer",
+							"title":"Time Stamp Epoch"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"cursor":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Cursor"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"compile_static":false,
+				"code":"return [\"timeStampEpoch\" : binding.hasVariable(\"cursor\") ? cursor.get('timeStampEpoch',0) : 0]",
+				"parameters":{
+					"cursor":"{{ n_LpgxV.outputs.cursor }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Get Timestamp Epoch",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_6sMbn@_7uzFA-1@l",
+			"id":"n_v6xKy",
+			"index":7,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"batchSize":{
+							"type":"string",
+							"title":"Batch Size"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"batchSize":{
+							"type":"string",
+							"title":"Batch Size"
+						},
+						"defaultBatchSize":{
+							"type":"string",
+							"title":"Default Batch Size"
+						}
+					}
+				},
+				"code":"def batchSize = binding.hasVariable('batchSize') ? batchSize : (binding.hasVariable('defaultBatchSize') ? defaultBatchSize : 20)\nreturn [\"batchSize\":batchSize]",
+				"compile_static":false,
+				"parameters":{
+					"batchSize":"{{ n_SgZeg.outputs.batchSize }}",
+					"defaultBatchSize":"{{ __ENV__.outputs.KNOWLEDGE_INDEXER_BATCH_SIZE }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"get batchSize",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":459,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_6sMbn@_7uzFA-1@l",
+			"id":"n_sWp2S",
+			"index":8,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"mTm",
+							"filter":{
+								"operator":"GTE",
+								"value":"{{ n_7FGJN.outputs.result.timeStampEpoch }}"
+							}
+						},
+						{
+							"property":"properties_knowledgeId",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ n_SgZeg.outputs.knowledgeId }}"
+							}
+						},
+						{
+							"property":"properties_resourceType",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ n_SgZeg.outputs.dataType }}"
+							}
+						},
+						{
+							"property":"properties_status",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"UNPROCESSED"
+							}
+						},
+						{
+							"property":"properties_knowledgeVersion",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ n_SgZeg.outputs.indexingVersion }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"knowledge_raw_data_store",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"sortBy":[
+					{
+						"field":"mTm",
+						"order":"ASC"
+					}
+				],
+				"translationsOption":"DEFAULT",
+				"page":{
+					"paginateBy":"OFFSET",
+					"limit":"{{ n_v6xKy.outputs.result.batchSize }}"
+				},
+				"numberOfRecordsToFetch":"MULTIPLE",
+				"readThroughSessionVariables":false,
+				"includeTotalCount":false
+			},
+			"skip":false,
+			"subTitle":"Fetch Raw Data",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":445,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_6sMbn@_7uzFA-1@l",
+			"id":"n_JCO7w",
+			"index":9,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ n_ScwCk.outputs.count }}",
+						"value":"=({{ n_ScwCk.outputs.count }}+1)"
+					},
+					{
+						"source":"{{ n_ScwCk.outputs.processedCount }}",
+						"value":"=({{ n_ScwCk.outputs.processedCount }}+LEN({{ n_sWp2S.outputs.objects }}))"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"count++",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":437,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_6sMbn@_7uzFA-1@l",
+			"id":"n_sUcpk",
+			"index":10,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_sWp2S.outputs.objects[0].id }}",
+						"filter":{
+							"operator":"MISSING"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Empty data",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":460,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_sUcpk@n_6sMbn@_7uzFA-1@l@y",
+			"id":"_KXLmh",
+			"index":11,
+			"inputs":{
+				"automationId":"686aecd817f4c626f9b2d7ea",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"knowledgeId":"{{ n_SgZeg.outputs.knowledgeId }}",
+					"id":"{{ n_LpgxV.outputs.id }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Update Indexer Cursor",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":445,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_sUcpk@n_6sMbn@_7uzFA-1@l@y",
+			"id":"n_sZNDg",
+			"index":12,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ n_ScwCk.outputs.terminationReason }}",
+						"value":"EMPTY_RESPONSE"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Termination Reason = EMPTY_RESPONSE",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"break",
+				"resourceVersion":453,
+				"resourceName":"break",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_sUcpk@n_6sMbn@_7uzFA-1@l@y",
+			"id":"n_hgPA3",
+			"index":13,
+			"inputs":{
+				"loop":"n_6sMbn"
+			},
+			"skip":false,
+			"subTitle":"Terminate",
+			"title":"Break",
+			"type":"BREAK"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":447,
+				"resourceName":"callables_call_automation_batch",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_6sMbn@_7uzFA-1@l",
+			"id":"n_zZ0S1",
+			"index":14,
+			"inputs":{
+				"automationId":"686d35b160366b44cfdfa72c",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"distributeWorkflowLoad":true,
+				"parametersList":{
+					"source":"{{ n_sWp2S.outputs.objects }}",
+					"ua:type":"mappedArray",
+					"items":{
+						"knowledgeId":"{{ n_sWp2S.outputs.objects[0].properties.knowledgeId }}",
+						"resourceType":"{{ n_sWp2S.outputs.objects[0].properties.resourceType }}",
+						"sourceResponse":"{{ n_sWp2S.outputs.objects[0].properties.sourceResponse }}",
+						"sharedWithIds":{
+							"source":"{{ n_sWp2S.outputs.objects[0].properties.sharedWithIds }}",
+							"ua:type":"mappedArray",
+							"items":"{{ n_sWp2S.outputs.objects[0].properties.sharedWithIds[0] }}"
+						},
+						"knowledgeVersion":"{{ n_sWp2S.outputs.objects[0].properties.knowledgeVersion }}",
+						"indexerAutomation":"{{ n_SgZeg.outputs.indexerAutomation }}",
+						"rawDataId":"{{ n_sWp2S.outputs.objects[0].id }}",
+						"retryCount":"{{ n_sWp2S.outputs.objects[0].properties.retryCount }}",
+						"lastDownloadedTime":"{{ n_sWp2S.outputs.objects[0].properties.lastDownloadedTime }}",
+						"metadata":"{{ n_sWp2S.outputs.objects[0].properties.metadata }}"
+					}
+				},
+				"version":"-1"
+			},
+			"skip":false,
+			"subTitle":"Call channel indexer",
+			"title":"Call automation (batch)",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.parameters.records.items"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":448,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_6sMbn@_7uzFA-1@l",
+			"id":"n_I4dpr",
+			"index":15,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"cursor":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Cursor"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"records":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Records"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"compile_static":false,
+				"code":"if (!binding.hasVariable(\"records\")){\n  return [:]\n}\nreturn [\"cursor\": [\"timeStampEpoch\" : records[-1].modifiedTime]]",
+				"parameters":{
+					"records":{
+						"source":"{{ n_sWp2S.outputs.objects }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_sWp2S.outputs.objects[0] }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Get Updated Cursor",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.updateFields.items.fieldName",
+					"root.updateFields.items.actionType"
+				]
+			},
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":437,
+				"resourceName":"storage_by_unifyapps_update_record_fields_by_id",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_6sMbn@_7uzFA-1@l",
+			"id":"_3La95",
+			"index":16,
+			"inputs":{
+				"recordId":"{{ n_LpgxV.outputs.id }}",
+				"writeThroughSessionVariables":false,
+				"object_type":"knowledge_state_cursor",
+				"skipPermissionCheck":false,
+				"updateFields":[
+					{
+						"fieldName":"properties.cursor",
+						"actionType":"SET",
+						"setValue":"{{ n_I4dpr.outputs.result.cursor }}"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Update Cursor",
+			"title":"Update an existing record's fields",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":454,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_7uzFA-1",
+			"id":"n_xHwpp",
+			"index":17,
+			"inputs":{
+				"result":{
+					"terminationReason":"{{ n_ScwCk.outputs.terminationReason }}",
+					"processedCount":"{{ n_ScwCk.outputs.processedCount }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":148386,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		"knowledge_v2"
+	],
+	"version":80
+}
