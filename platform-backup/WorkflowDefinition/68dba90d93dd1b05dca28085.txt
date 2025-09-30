@@ -23,7 +23,7 @@
 	"id":"68dba90d93dd1b05dca28085",
 	"lastModifiedBy":185583,
 	"lcName":"task_pm_check",
-	"modifiedTime":1759228620924,
+	"modifiedTime":1759228836098,
 	"name":"Task_PM_Check",
 	"nodes":[
 		{
@@ -145,7 +145,7 @@
 						}
 					}
 				},
-				"code":"if (age>18)\n{\nmessage += \"can vote\";\nflag = true;\n}\nelse{\nmessage += \"can not vote\";\nflag = false;\n}",
+				"code":"let message = \"\";\nif (age>18)\n{\n  gender = \"can vote\";\n  flag = true;\n}\nelse{\n  message = \"can not vote\";\n  flag = false;\n}",
 				"isAsync":false,
 				"parameters":{
 					"name":"{{ n_4p4yH.outputs.name }}",
@@ -200,5 +200,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
