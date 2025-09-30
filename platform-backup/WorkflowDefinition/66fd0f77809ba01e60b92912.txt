@@ -5,12 +5,12 @@
 	"createdTime":1727860599735,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646518733,
+		"deployedAt":1758655339348,
 		"deployedBy":0,
-		"deployedDefinitionId":"68d2d0f6db1a4411eeae8296",
+		"deployedDefinitionId":"68d2f36b38757c179b123326",
 		"status":"DEPLOYED",
-		"version":71,
-		"workflowVersion":95
+		"version":72,
+		"workflowVersion":96
 	},
 	"edges":[
 		{
@@ -127,9 +127,9 @@
 		]
 	},
 	"id":"66fd0f77809ba01e60b92912",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"ai agents multimodality table processing",
-	"modifiedTime":1758655339280,
+	"modifiedTime":1759243527919,
 	"name":"AI Agents MultiModality Table Processing",
 	"nodes":[
 		{
@@ -668,5 +668,5 @@
 	"tags":[
 		
 	],
-	"version":96
+	"version":97
 }
