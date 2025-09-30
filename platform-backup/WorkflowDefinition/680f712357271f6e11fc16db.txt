@@ -6,12 +6,12 @@
 	"createdTime":1747641657264,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646567627,
+		"deployedAt":1758655389287,
 		"deployedBy":0,
-		"deployedDefinitionId":"68d2d127a7f0ee5a6b619728",
+		"deployedDefinitionId":"68d2f39d38757c179b123b9f",
 		"status":"DEPLOYED",
-		"version":46,
-		"workflowVersion":65
+		"version":47,
+		"workflowVersion":66
 	},
 	"edges":[
 		{
@@ -68,9 +68,9 @@
 		]
 	},
 	"id":"680f712357271f6e11fc16db",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"text to workflow v2 | fetchactions (deprecated)",
-	"modifiedTime":1758655389182,
+	"modifiedTime":1759243570668,
 	"name":"Text to Workflow v2 | FetchActions (deprecated)",
 	"nodes":[
 		{
@@ -588,5 +588,5 @@
 	"tags":[
 		"Text_to_Workflow_v2"
 	],
-	"version":66
+	"version":67
 }
