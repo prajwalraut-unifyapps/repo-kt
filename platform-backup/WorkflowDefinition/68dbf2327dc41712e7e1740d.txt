@@ -1,0 +1,117 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759244850112,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759245881236,
+		"deployedBy":47201,
+		"deployedDefinitionId":"68dbf63897b9ca674c82aa97",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_pzgkJ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_jG9R2",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_jG9R2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_cLHAH",
+			"type":"next"
+		}
+	],
+	"id":"68dbf2327dc41712e7e1740d",
+	"lastModifiedBy":47201,
+	"lcName":"fetch recordings",
+	"modifiedTime":1759246067009,
+	"name":"Fetch Recordings",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":818,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_VCMYG-1",
+			"id":"n_pzgkJ",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"meeting_bot_by_unifyapps",
+				"resourceVersion":68,
+				"resourceName":"meeting_bot_by_unifyapps_get_recording_till_now",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_VCMYG-1",
+			"id":"n_jG9R2",
+			"index":2,
+			"inputs":{
+				"meetingUrl":"https://teams.microsoft.com/meet/4194840392256?p=02OtFBLXdgtxMVsp3G"
+			},
+			"skip":false,
+			"subTitle":"Meeting bot by UnifyApps",
+			"title":"Get recording till now",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_VCMYG-1",
+			"id":"n_cLHAH",
+			"index":3,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":47201,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
