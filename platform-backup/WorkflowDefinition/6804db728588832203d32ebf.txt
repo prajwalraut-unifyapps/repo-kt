@@ -6,12 +6,12 @@
 	"createdTime":1745148786346,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1757441832297,
+		"deployedAt":1758655341660,
 		"deployedBy":0,
-		"deployedDefinitionId":"68c06f2891dbf0016b768894",
+		"deployedDefinitionId":"68d2f36d38757c179b12335f",
 		"status":"DEPLOYED",
-		"version":296,
-		"workflowVersion":382
+		"version":297,
+		"workflowVersion":393
 	},
 	"edges":[
 		{
@@ -613,9 +613,9 @@
 		]
 	},
 	"id":"6804db728588832203d32ebf",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"openai session starter",
-	"modifiedTime":1758655341360,
+	"modifiedTime":1759243529234,
 	"name":"OpenAI Session Starter",
 	"nodes":[
 		{
@@ -3493,5 +3493,5 @@
 		}
 	},
 	"standard":true,
-	"version":393
+	"version":394
 }
