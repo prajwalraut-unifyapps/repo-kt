@@ -5,12 +5,12 @@
 	"createdTime":1738062235048,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1757441842345,
+		"deployedAt":1758655356112,
 		"deployedBy":0,
-		"deployedDefinitionId":"68c06f326bc3be145d7940aa",
+		"deployedDefinitionId":"68d2f37c38757c179b1235f7",
 		"status":"DEPLOYED",
-		"version":59,
-		"workflowVersion":72
+		"version":60,
+		"workflowVersion":81
 	},
 	"edges":[
 		{
@@ -83,9 +83,9 @@
 		]
 	},
 	"id":"679621731a248f0b3415bddd",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"trigger agent and wait for response",
-	"modifiedTime":1758655356047,
+	"modifiedTime":1759243542612,
 	"name":"Trigger Agent And Wait For Response",
 	"nodes":[
 		{
@@ -415,5 +415,5 @@
 		"AI Agent",
 		"Team"
 	],
-	"version":81
+	"version":82
 }
