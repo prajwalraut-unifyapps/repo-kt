@@ -5,12 +5,12 @@
 	"createdTime":1741841309946,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646551726,
+		"deployedAt":1758655373197,
 		"deployedBy":0,
-		"deployedDefinitionId":"68d2d1179f85565fb8fa5dc9",
+		"deployedDefinitionId":"68d2f38d38757c179b1238de",
 		"status":"DEPLOYED",
-		"version":57,
-		"workflowVersion":110
+		"version":58,
+		"workflowVersion":111
 	},
 	"edges":[
 		{
@@ -163,9 +163,9 @@
 		]
 	},
 	"id":"67cc525547eaf7139db954c6",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"summarize",
-	"modifiedTime":1758655373108,
+	"modifiedTime":1759243557198,
 	"name":"Summarize",
 	"nodes":[
 		{
@@ -1249,5 +1249,5 @@
 		}
 	},
 	"standard":true,
-	"version":111
+	"version":112
 }
