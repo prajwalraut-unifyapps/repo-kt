@@ -1,0 +1,217 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1747728837276,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758655349561,
+		"deployedBy":0,
+		"deployedDefinitionId":"68d2f37538757c179b1234e0",
+		"status":"DEPLOYED",
+		"version":29,
+		"workflowVersion":50
+	},
+	"edges":[
+		{
+			"fromNodeId":"zXvNm",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"P874J",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"P874J",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"LbHV7",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"682b78f07f7eb34f85b3dd28",
+	"lastModifiedBy":-1,
+	"lcName":"knowledge indexer | jira | index issue in batch (wrapper)",
+	"modifiedTime":1759243537236,
+	"name":"Knowledge Indexer | JIRA | Index Issue in batch (Wrapper)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":357,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Cho4a-1",
+			"id":"zXvNm",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"success":{
+							"type":"boolean",
+							"title":"success"
+						}
+					},
+					"additionalProperties":false
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"inputs":{
+							"type":"object",
+							"properties":{},
+							"title":"inputs",
+							"additionalProperties":false,
+							"required":[]
+						},
+						"knowledge":{
+							"type":"object",
+							"properties":{
+								"applicationInfo":{
+									"type":"object",
+									"properties":{
+										"context":{
+											"type":"object",
+											"properties":{
+												"connectionId":{
+													"type":"string",
+													"title":"connectionId"
+												}
+											},
+											"title":"context",
+											"additionalProperties":false
+										}
+									},
+									"title":"applicationInfo",
+									"additionalProperties":false
+								},
+								"readVersion":{
+									"type":"integer",
+									"title":"readVersion"
+								},
+								"lastSyncTime":{
+									"type":"integer",
+									"title":"Last Sync Time"
+								}
+							},
+							"title":"knowledge",
+							"additionalProperties":false,
+							"required":[]
+						},
+						"knowledgeId":{
+							"type":"string",
+							"title":"knowledgeId"
+						},
+						"aiAgentId":{
+							"type":"string",
+							"title":"Ai Agent Id"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":371,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Cho4a-1",
+			"id":"P874J",
+			"index":0,
+			"inputs":{
+				"automationId":"67ab29fd4583846ca4b6d586",
+				"runtimeConnections":{
+					"jira":"{{ zXvNm.outputs.knowledge.applicationInfo.context.connectionId }}"
+				},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"aiAgentId":"{{ zXvNm.outputs.aiAgentId }}",
+					"knowledge":{
+						"readVersion":"{{ zXvNm.outputs.knowledge.readVersion }}",
+						"lastSyncTime":"{{ zXvNm.outputs.knowledge.lastSyncTime }}",
+						"applicationInfo":{
+							"context":{
+								"connectionId":"{{ zXvNm.outputs.knowledge.applicationInfo.context.connectionId }}"
+							}
+						}
+					},
+					"inputs":"{{ zXvNm.outputs.inputs }}",
+					"knowledgeId":"{{ zXvNm.outputs.knowledgeId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":363,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Cho4a-1",
+			"id":"LbHV7",
+			"index":0,
+			"inputs":{
+				"result":{
+					"success":"{{ P874J.outputs.success }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":43523,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		
+	],
+	"version":51
+}
