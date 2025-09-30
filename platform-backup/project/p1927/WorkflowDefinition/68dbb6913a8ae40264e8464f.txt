@@ -6,47 +6,108 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_MKOHG",
+			"fromNodeId":"n_w3L5T",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_GSjWF",
+			"toNodeId":"n_leC1R",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_leC1R",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_sFerY",
 			"type":"next"
 		}
 	],
 	"id":"68dbb6913a8ae40264e8464f",
 	"lastModifiedBy":308,
 	"lcName":"[dp-func-extractbip-prod-sa]schedulebipfunction",
-	"modifiedTime":1759229585185,
+	"modifiedTime":1759229622302,
 	"name":"[dp-func-extractbip-prod-sa]ScheduleBIPFunction",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":970,
+				"resourceName":"callables_from_api"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_MKOHG-1",
-			"id":"_MKOHG",
-			"index":0,
+			"id":"n_w3L5T",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				},
+				"endpointType":"REST",
+				"response":[
+					{
+						"name":"ok",
+						"status":200,
+						"contentType":"application/json",
+						"textBody":{
+							"type":"string"
+						}
+					}
+				],
+				"streamingResponse":false
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via API",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_MKOHG-1",
-			"id":"_GSjWF",
-			"index":0,
+			"id":"n_leC1R",
+			"index":2,
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Code by UnifyApps",
+			"title":"Select an action",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":921,
+				"resourceName":"callables_return_response_to_api",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_MKOHG-1",
+			"id":"n_sFerY",
+			"index":3,
+			"inputs":{
+				"streamingCompleted":true,
+				"responseName":"200_ok",
+				"status":200
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to API request",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":308,
 	"projectId":1927,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -60,5 +121,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
