@@ -31,7 +31,7 @@
 	"id":"68d6cfbcc2c40100a47f56f4",
 	"lastModifiedBy":44105,
 	"lcName":"[azure-function]detect-changes",
-	"modifiedTime":1759210674144,
+	"modifiedTime":1759210737006,
 	"name":"[Azure-function]Detect-Changes",
 	"nodes":[
 		{
@@ -48,7 +48,7 @@
 				"resourceName":"callables_from_api"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RcjTs-1",
 			"id":"n_wj7jz",
@@ -142,7 +142,9 @@
 							"title":"Name"
 						},
 						"requestBody":{
-							"type":"string",
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
 							"title":"Request Body"
 						}
 					}
@@ -167,7 +169,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RcjTs-1",
 			"id":"n_zPwE7",
@@ -204,5 +206,5 @@
 	"tags":[
 		
 	],
-	"version":19
+	"version":20
 }
