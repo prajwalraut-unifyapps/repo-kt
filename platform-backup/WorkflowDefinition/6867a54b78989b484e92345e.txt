@@ -5,60 +5,16 @@
 	"createdTime":1754285377704,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646538678,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2d10adb1a4411eeae82d8",
+		"deployedAt":1759243547797,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed1b23e6682b9a51eb1c",
 		"status":"DEPLOYED",
-		"version":28,
-		"workflowVersion":47
+		"version":30,
+		"workflowVersion":49
 	},
 	"edges":[
 		{
 			"fromNodeId":"n_mCuz4",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_Z55o1",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_Z55o1",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_gnSoe",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_gnSoe",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_O6YVF",
-			"type":"if"
-		},
-		{
-			"fromNodeId":"n_O6YVF",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_KfQUv",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_KfQUv",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_6YWgS",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_6YWgS",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_TUYYX",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_gnSoe",
-			"name":"no",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_TUYYX",
@@ -104,9 +60,9 @@
 		]
 	},
 	"id":"6867a54b78989b484e92345e",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"store knowledge raw data",
-	"modifiedTime":1758655360987,
+	"modifiedTime":1759243580346,
 	"name":"Store Knowledge Raw Data",
 	"nodes":[
 		{
@@ -203,178 +159,6 @@
 		},
 		{
 			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":468,
-				"resourceName":"variable_by_unifyapps_create_variables",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_2TPIG-1",
-			"id":"n_Z55o1",
-			"index":2,
-			"inputSchema":{
-				"type":"SCHEMA_AND_LAYOUT",
-				"dynamic":false,
-				"layout":{},
-				"schema":{
-					"additionalProperties":false,
-					"type":"object",
-					"properties":{
-						"authorEmail":{
-							"type":"string",
-							"title":"Author Email"
-						}
-					},
-					"required":[]
-				}
-			},
-			"inputs":{
-				"authorEmail":"{{ n_mCuz4.outputs.authorEmail }}"
-			},
-			"outputSchema":{
-				"dynamic":false,
-				"schema":{
-					"additionalProperties":false,
-					"type":"object",
-					"properties":{
-						"authorEmail":{
-							"type":"string",
-							"title":"Author Email"
-						}
-					},
-					"required":[]
-				}
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Create variables",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"if_else",
-				"resourceVersion":441,
-				"resourceName":"if_else_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_2TPIG-1",
-			"id":"n_gnSoe",
-			"index":3,
-			"inputs":{
-				"filters":[
-					{
-						"property":"{{ n_Z55o1.outputs.authorEmail }}",
-						"filter":{
-							"operator":"MISSING"
-						}
-					}
-				],
-				"operator":"AND"
-			},
-			"skip":false,
-			"subTitle":"Condition",
-			"title":"Condition",
-			"type":"IF_ELSE"
-		},
-		{
-			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":690,
-				"resourceName":"storage_by_unifyapps_fetch_records",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_gnSoe@_2TPIG-1@y",
-			"id":"n_O6YVF",
-			"index":4,
-			"inputs":{
-				"triggerInputCondition":{
-					"filters":[
-						{
-							"property":"id",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"{{ n_mCuz4.outputs.knowledgeId }}"
-							}
-						}
-					],
-					"operator":"AND"
-				},
-				"object_type":"knowledge",
-				"includeRoleMappings":false,
-				"includeCurrentUserPermissions":false,
-				"translationsOption":"DEFAULT",
-				"page":{
-					"paginateBy":"OFFSET",
-					"limit":20
-				},
-				"numberOfRecordsToFetch":"SINGLE",
-				"readThroughSessionVariables":false,
-				"includeTotalCount":false
-			},
-			"skip":false,
-			"subTitle":"Storage by UnifyApps",
-			"title":"Fetch records",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"standard_entities",
-				"resourceVersion":471,
-				"resourceName":"standard_entities_fetch_user",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_gnSoe@_2TPIG-1@y",
-			"id":"n_KfQUv",
-			"index":5,
-			"inputs":{
-				"fetchBy":"id",
-				"applicationId":"",
-				"user":"{{ n_O6YVF.outputs.ownerUserId }}"
-			},
-			"skip":false,
-			"subTitle":"Standard entities by UnifyApps",
-			"title":"Fetch User",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":458,
-				"resourceName":"variable_by_unifyapps_update_variables",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_gnSoe@_2TPIG-1@y",
-			"id":"n_6YWgS",
-			"index":6,
-			"inputs":{
-				"variables":[
-					{
-						"source":"{{ n_Z55o1.outputs.authorEmail }}",
-						"value":"{{ n_KfQUv.outputs.username }}"
-					}
-				]
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Update variables",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"callables",
 				"resourceVersion":464,
 				"resourceName":"callables_call_automation",
@@ -385,7 +169,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_2TPIG-1",
 			"id":"n_TUYYX",
-			"index":7,
+			"index":2,
 			"inputs":{
 				"automationId":"6893a55b4a3dd6363af6b6b5",
 				"runtimeConnections":{},
@@ -393,7 +177,7 @@
 				"version":"-1",
 				"parameters":{
 					"chunkMetadata":"{{ n_mCuz4.outputs.metadata }}",
-					"authorEmail":"{{ n_Z55o1.outputs.authorEmail }}",
+					"authorEmail":"{{ n_mCuz4.outputs.authorEmail }}",
 					"isTypeFile":"{{ n_mCuz4.outputs.isTypeFile }}"
 				}
 			},
@@ -414,7 +198,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_2TPIG-1",
 			"id":"n_0T2xX",
-			"index":8,
+			"index":3,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -469,7 +253,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_2TPIG-1",
 			"id":"n_r8lAz",
-			"index":9,
+			"index":4,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -510,7 +294,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_2TPIG-1",
 			"id":"n_7Clmk",
-			"index":10,
+			"index":5,
 			"inputs":{
 				"recordId":"{{ n_0T2xX.outputs.id }}",
 				"writeThroughSessionVariables":false,
@@ -555,7 +339,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_2TPIG-1",
 			"id":"n_vQi9e",
-			"index":11,
+			"index":6,
 			"inputs":{
 				"result":{
 					"success":"{{ n_7Clmk.outputs.success }}",
@@ -586,5 +370,5 @@
 	"tags":[
 		"knowledge_v2"
 	],
-	"version":48
+	"version":50
 }
