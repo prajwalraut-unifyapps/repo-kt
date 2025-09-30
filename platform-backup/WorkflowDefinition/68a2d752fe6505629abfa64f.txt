@@ -5,12 +5,12 @@
 	"createdTime":1755502418819,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646526876,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2d0febd00df618e363ce4",
+		"deployedAt":1759243535407,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed0f5e003e08cdeb2e82",
 		"status":"DEPLOYED",
-		"version":23,
-		"workflowVersion":35
+		"version":25,
+		"workflowVersion":37
 	},
 	"edges":[
 		{
@@ -97,9 +97,9 @@
 		]
 	},
 	"id":"68a2d752fe6505629abfa64f",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"[a2a] find agents skills",
-	"modifiedTime":1758655348025,
+	"modifiedTime":1759243569909,
 	"name":"[A2A] Find Agents Skills",
 	"nodes":[
 		{
@@ -758,5 +758,5 @@
 	"tags":[
 		"a2a"
 	],
-	"version":36
+	"version":38
 }
