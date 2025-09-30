@@ -5,12 +5,12 @@
 	"createdTime":1738309676792,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655366163,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f38638757c179b1237b2",
+		"deployedAt":1759243551903,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed1f9213d707c2d2731f",
 		"status":"DEPLOYED",
-		"version":61,
-		"workflowVersion":81
+		"version":62,
+		"workflowVersion":82
 	},
 	"edges":[
 		{
@@ -64,7 +64,7 @@
 	"id":"679b73add2256d4d7f3264d1",
 	"lastModifiedBy":-1,
 	"lcName":"openai embeddings",
-	"modifiedTime":1759243551832,
+	"modifiedTime":1759243584255,
 	"name":"OpenAI Embeddings",
 	"nodes":[
 		{
@@ -382,5 +382,5 @@
 		"AI Agent",
 		"Internal"
 	],
-	"version":82
+	"version":83
 }
