@@ -5,12 +5,12 @@
 	"createdTime":1748544443825,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655370862,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f38a38757c179b12388c",
+		"deployedAt":1759243555802,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed2323e6682b9a51eb4b",
 		"status":"DEPLOYED",
-		"version":45,
-		"workflowVersion":76
+		"version":46,
+		"workflowVersion":77
 	},
 	"edges":[
 		{
@@ -179,7 +179,7 @@
 	"id":"682389ac4ac3830d083e2c7d",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge metadata fetcher",
-	"modifiedTime":1759243555741,
+	"modifiedTime":1759243588558,
 	"name":"Knowledge Metadata Fetcher",
 	"nodes":[
 		{
@@ -1600,5 +1600,5 @@
 	"tags":[
 		
 	],
-	"version":77
+	"version":78
 }
