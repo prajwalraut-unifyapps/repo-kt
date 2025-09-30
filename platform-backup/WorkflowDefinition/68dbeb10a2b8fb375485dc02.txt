@@ -5,26 +5,103 @@
 	"createdTime":1759243024865,
 	"deleted":false,
 	"edges":[
-		
+		{
+			"fromNodeId":"lZXRK",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"CPBFM",
+			"type":"next"
+		}
 	],
 	"id":"68dbeb10a2b8fb375485dc02",
 	"lastModifiedBy":175325,
 	"lcName":"changesetlocalautoguxtrqfkmy",
-	"modifiedTime":1759243024865,
+	"modifiedTime":1759243026830,
 	"name":"changeSetLocalautogUXtrQFKMy",
 	"nodes":[
-		
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":125,
+				"resourceName":"callables_from_interface"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"3tFTv-1",
+			"id":"lZXRK",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"c":{
+							"type":"integer",
+							"title":"c"
+						}
+					},
+					"required":[]
+				},
+				"callableInterfaceId":"68dbeb102d9c7356b781d655",
+				"setup":{
+					"type":"object",
+					"properties":{
+						"a":{
+							"type":"integer",
+							"title":"a"
+						},
+						"b":{
+							"type":"integer",
+							"title":"b"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger interface",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":125,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"3tFTv-1",
+			"id":"CPBFM",
+			"index":0,
+			"inputs":{
+				"result":{
+					"c":"=SUM({{ lZXRK.outputs.a }},{{ lZXRK.outputs.b }})"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
 	],
 	"ownerUserId":175325,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
-		"enableVariableLogging":true,
-		"route":{
-			"default":false,
-			"tierName":"global"
-		}
+		"enableVariableLogging":true
 	},
 	"standard":false,
-	"version":0
+	"tags":[
+		
+	],
+	"version":1
 }
