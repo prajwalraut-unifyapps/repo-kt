@@ -5,47 +5,87 @@
 	"createdTime":1759220102644,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759220173512,
+		"deployedAt":1759220196821,
 		"deployedBy":39713,
-		"deployedDefinitionId":"68db91cda3602561f0c46ebd",
+		"deployedDefinitionId":"68db91e4a3602561f0c46ee3",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":2
+		"version":3,
+		"workflowVersion":3
 	},
 	"edges":[
-		
+		{
+			"fromNodeId":"n_VIEG0",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_sN1jz",
+			"type":"next"
+		}
 	],
 	"id":"68db9186a3602561f0c46e60",
 	"lastModifiedBy":39713,
 	"lcName":"webhooktesting",
-	"modifiedTime":1759220194666,
+	"modifiedTime":1759220254541,
 	"name":"webhookTesting",
 	"nodes":[
 		{
 			"context":{
-				"appName":"schedule",
-				"resourceVersion":814,
-				"resourceName":"schedule_default"
+				"appName":"callables",
+				"resourceVersion":967,
+				"resourceName":"callables_from_api"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ECdjW-1",
-			"id":"n_dV1Qn",
+			"id":"n_VIEG0",
 			"index":1,
 			"inputs":{
-				"cron":"INTERVAL",
-				"sequential":false,
-				"interval":15,
-				"frequency":"MINUTES"
+				"request":{
+					"contentType":"application/json"
+				},
+				"endpointType":"REST",
+				"response":[
+					{
+						"name":"200",
+						"status":200,
+						"contentType":"application/json",
+						"textBody":{
+							"type":"string"
+						}
+					}
+				],
+				"streamingResponse":false
 			},
 			"skip":false,
-			"subTitle":"Schedule",
-			"title":"New recurring event",
+			"subTitle":"Callable",
+			"title":"Trigger via API",
 			"trigger":{
-				"type":"SCHEDULED"
+				"type":"CALLABLE"
 			},
 			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":918,
+				"resourceName":"callables_return_response_to_api",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_ECdjW-1",
+			"id":"n_sN1jz",
+			"index":2,
+			"inputs":{
+				"streamingCompleted":true,
+				"responseName":"200_200",
+				"status":200
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to API request",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":39713,
@@ -65,5 +105,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
