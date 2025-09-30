@@ -5,12 +5,12 @@
 	"createdTime":1758977661374,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758977774181,
-		"deployedBy":23949,
-		"deployedDefinitionId":"68d7deee88d6e673246bfaef",
+		"deployedAt":1759222337622,
+		"deployedBy":44096,
+		"deployedDefinitionId":"68db9a4132ab681f2e8b616f",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":10
+		"version":3,
+		"workflowVersion":11
 	},
 	"edges":[
 		{
@@ -55,7 +55,7 @@
 	"id":"68d7933d7ceaf455c79a4dbf",
 	"lastModifiedBy":44096,
 	"lcName":"lookup form test",
-	"modifiedTime":1759222335616,
+	"modifiedTime":1759222574866,
 	"name":"Lookup Form Test",
 	"nodes":[
 		{
@@ -77,38 +77,20 @@
 			"index":1,
 			"inputs":{
 				"result":{
-					"additionalProperties":false,
-					"type":"object",
+					"required":[],
 					"ua:modal":{
 						"field_type":"STRING",
 						"is_optional":true
 					},
 					"properties":{
-						"response":{
-							"type":"object",
-							"properties":{
-								"hasMore":{
-									"type":"boolean",
-									"title":"hasMore"
-								},
-								"objects":{
-									"type":"array",
-									"items":{
-										"type":"object",
-										"properties":{},
-										"additionalProperties":false,
-										"required":[]
-									},
-									"title":"objects"
-								},
-								"type":{
-									"type":"string",
-									"title":"type"
-								}
+						"objects":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
 							},
-							"title":"response",
-							"additionalProperties":false,
-							"required":[]
+							"title":"Objects"
 						}
 					}
 				},
@@ -265,6 +247,11 @@
 							"ua:type":"mappedArray",
 							"items":"{{ n_ZMSAj.outputs.result[0] }}"
 						}
+					},
+					"objects":{
+						"source":"{{ n_ZMSAj.outputs.result }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_ZMSAj.outputs.result[0] }}"
 					}
 				}
 			},
@@ -291,5 +278,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":12
 }
