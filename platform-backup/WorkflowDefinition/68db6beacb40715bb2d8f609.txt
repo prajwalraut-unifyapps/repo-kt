@@ -1,0 +1,30 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759210474421,
+	"deleted":false,
+	"edges":[
+		
+	],
+	"id":"68db6beacb40715bb2d8f609",
+	"lastModifiedBy":175325,
+	"lcName":"changesetqa2autowwupfogbpr",
+	"modifiedTime":1759210474421,
+	"name":"changeSetQA2autowwUPfoGBpr",
+	"nodes":[
+		
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
