@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759220102644,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_ECdjW",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_lTEIe",
+			"type":"next"
+		}
+	],
+	"id":"68db9186a3602561f0c46e60",
+	"lastModifiedBy":39713,
+	"lcName":"webhooktesting",
+	"modifiedTime":1759220102644,
+	"name":"webhookTesting",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_ECdjW-1",
+			"id":"_ECdjW",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_ECdjW-1",
+			"id":"_lTEIe",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":39713,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
