@@ -1,0 +1,343 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1750490480200,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758655345423,
+		"deployedBy":0,
+		"deployedDefinitionId":"68d2f37138757c179b123419",
+		"status":"DEPLOYED",
+		"version":43,
+		"workflowVersion":69
+	},
+	"edges":[
+		{
+			"fromNodeId":"M3ePf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"0deil",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"0deil",
+			"name":"success",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"18d1d",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"0deil",
+			"name":"error",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"UwUpx",
+			"type":"error"
+		},
+		{
+			"fromNodeId":"18d1d",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"v8qSw",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"UwUpx",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"v8qSw",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"6835bfecda942e07f197ff7d",
+	"lastModifiedBy":-1,
+	"lcName":"graphrag | entity extraction | signal wrapper",
+	"modifiedTime":1759243532847,
+	"name":"GraphRAG | Entity Extraction | Signal Wrapper",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"M3ePf-1",
+			"id":"M3ePf",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"status":{
+							"type":"string",
+							"title":"Status"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"domain":{
+							"type":"string",
+							"title":"Domain"
+						},
+						"chunkText":{
+							"type":"string",
+							"title":"Chunk Text"
+						},
+						"modeId":{
+							"type":"string",
+							"title":"Mode ID"
+						},
+						"chunkMetadata":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Chunk Metadata"
+						},
+						"entityTypes":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Entity Types"
+						},
+						"signalProperties":{
+							"type":"object",
+							"properties":{
+								"signalId":{
+									"type":"string",
+									"title":"signalId"
+								},
+								"waitingInstanceId":{
+									"type":"string",
+									"title":"waitingInstanceId"
+								},
+								"waitingInstanceRunTimeType":{
+									"type":"string",
+									"title":"waitingInstanceRunTimeType"
+								}
+							},
+							"additionalProperties":false
+						},
+						"knowledgeType":{
+							"type":"string",
+							"title":"Knowledge Type"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":391,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"MANUAL",
+			"groupId":"M3ePf-1",
+			"id":"0deil",
+			"index":2,
+			"inputs":{
+				"automationId":"683167691592ec414bb0f1c4",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"entity_types":{
+						"source":"{{ M3ePf.outputs.entityTypes }}",
+						"ua:type":"mappedArray",
+						"items":"{{ M3ePf.outputs.entityTypes[0] }}"
+					},
+					"chunkText":"{{ M3ePf.outputs.chunkText }}",
+					"domain":"{{ M3ePf.outputs.domain }}",
+					"modelId":"{{ M3ePf.outputs.modeId }}",
+					"chunkMetaData":"{{ M3ePf.outputs.chunkMetadata }}",
+					"knowledgeType":"{{ M3ePf.outputs.knowledgeType }}"
+				}
+			},
+			"options":{
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false,
+					"slidingWindowType":"COUNT_BASED"
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"unit":"MINUTES",
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":2.0,
+					"captureRetries":false,
+					"count":3,
+					"enabled":true,
+					"initialDelay":2000,
+					"maxDelay":10000
+				},
+				"stepError":"MANUAL",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"signals_by_unifyapps",
+				"resourceName":"signals_by_unifyapps_emit_signal"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"0deil@M3ePf-1@success",
+			"id":"18d1d",
+			"index":3,
+			"inputs":{
+				"automation_id":"6835668650b3973ae9e37c54",
+				"with_signal_id":true,
+				"waitingInstanceRuntimeType":"{{ M3ePf.outputs.signalProperties.waitingInstanceRunTimeType }}",
+				"waitingInstanceId":"{{ M3ePf.outputs.signalProperties.waitingInstanceId }}",
+				"signal_id":"{{ M3ePf.outputs.signalProperties.signalId }}",
+				"signal_payload":{
+					"nodes":{
+						"source":"{{ 0deil.outputs.nodes }}",
+						"ua:type":"mappedArray"
+					},
+					"edges":{
+						"source":"{{ 0deil.outputs.edges }}",
+						"ua:type":"mappedArray"
+					}
+				},
+				"nodeId":"fWYGv"
+			},
+			"skip":false,
+			"subTitle":"Signals_by_unifyapps",
+			"title":"Emit Signal",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"signals_by_unifyapps",
+				"resourceName":"signals_by_unifyapps_emit_signal"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"0deil@M3ePf-1@error",
+			"id":"UwUpx",
+			"index":4,
+			"inputs":{
+				"automation_id":"6835668650b3973ae9e37c54",
+				"with_signal_id":true,
+				"waitingInstanceRuntimeType":"{{ M3ePf.outputs.signalProperties.waitingInstanceRunTimeType }}",
+				"waitingInstanceId":"{{ M3ePf.outputs.signalProperties.waitingInstanceId }}",
+				"signal_id":"{{ M3ePf.outputs.signalProperties.signalId }}",
+				"nodeId":"fWYGv"
+			},
+			"skip":false,
+			"subTitle":"Signals_by_unifyapps",
+			"title":"Emit Signal",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":383,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"M3ePf-1",
+			"id":"v8qSw",
+			"index":5,
+			"inputs":{
+				"result":{
+					"status":"ok"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":1728,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		
+	],
+	"version":70
+}
