@@ -5,12 +5,12 @@
 	"createdTime":1740110526906,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1757441835375,
+		"deployedAt":1758655345874,
 		"deployedBy":0,
-		"deployedDefinitionId":"68c06f2b91dbf0016b7688b5",
+		"deployedDefinitionId":"68d2f37138757c179b12342b",
 		"status":"DEPLOYED",
-		"version":61,
-		"workflowVersion":105
+		"version":62,
+		"workflowVersion":114
 	},
 	"edges":[
 		{
@@ -135,9 +135,9 @@
 		]
 	},
 	"id":"67b45c506083d2071be3d528",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"resume stream",
-	"modifiedTime":1758655345816,
+	"modifiedTime":1759243533384,
 	"name":"Resume Stream",
 	"nodes":[
 		{
@@ -234,10 +234,11 @@
 				"includeCurrentUserPermissions":false,
 				"sortBy":[
 					{
-						"order":"DESC",
-						"field":"properties_instanceType"
+						"field":"properties_instanceType",
+						"order":"DESC"
 					}
 				],
+				"translationsOption":"DEFAULT",
 				"page":{
 					"paginateBy":"OFFSET",
 					"limit":20
@@ -316,6 +317,7 @@
 					"operator":"AND"
 				},
 				"object_type":"e_ai_agent_streaming_detail",
+				"skipIfBlank":false,
 				"updateFields":[
 					{
 						"fieldName":"properties.waitingInstanceId",
@@ -323,9 +325,9 @@
 						"setValue":"{{ __RUN__.outputs.executionId }}"
 					},
 					{
+						"fieldName":"properties.waitingInstanceRunTimeType",
 						"actionType":"SET",
-						"setValue":"{{ __RUN__.outputs.workflowRunTimeType }}",
-						"fieldName":"properties.waitingInstanceRunTimeType"
+						"setValue":"{{ __RUN__.outputs.workflowRunTimeType }}"
 					},
 					{
 						"fieldName":"properties.instanceType",
@@ -337,7 +339,8 @@
 				"page":{
 					"offset":0,
 					"limit":20
-				}
+				},
+				"unsetIfNull":false
 			},
 			"skip":false,
 			"subTitle":"Update listener",
@@ -360,15 +363,16 @@
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"e_ai_agent_streaming_detail",
+				"skipIfBlank":false,
 				"record":{
-					"streamingInProgress":"{{ n_xaIPv.outputs.properties.streamingInProgress }}",
 					"waitingInstanceId":"{{ __RUN__.outputs.executionId }}",
 					"aiAgentId":"{{ n_xaIPv.outputs.properties.aiAgentId }}",
 					"currentMessageId":"{{ n_xaIPv.outputs.properties.currentMessageId }}",
-					"instanceType":"UI_LISTENER",
+					"streamingInProgress":"{{ n_xaIPv.outputs.properties.streamingInProgress }}",
 					"currentMessageType":"{{ n_xaIPv.outputs.properties.currentMessageType }}",
 					"userId_caseId":"{{ __RUN__.outputs.userId }}_{{ o4fed.outputs.caseId }}",
-					"waitingInstanceRunTimeType":"{{ n_xaIPv.outputs.properties.waitingInstanceRunTimeType }}"
+					"instanceType":"UI_LISTENER",
+					"waitingInstanceRunTimeType":"{{ __RUN__.outputs.workflowRunTimeType }}"
 				}
 			},
 			"skip":false,
@@ -654,5 +658,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":114
+	"version":115
 }
