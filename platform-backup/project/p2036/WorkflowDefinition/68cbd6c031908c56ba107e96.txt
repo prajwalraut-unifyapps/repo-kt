@@ -5,12 +5,12 @@
 	"createdTime":1758189248372,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758891433247,
+		"deployedAt":1758892229519,
 		"deployedBy":103171,
-		"deployedDefinitionId":"68d68da9b6097853bb8fc3eb",
+		"deployedDefinitionId":"68d690c5e1842120ede01d39",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":10
+		"version":3,
+		"workflowVersion":11
 	},
 	"edges":[
 		{
@@ -29,9 +29,9 @@
 		}
 	],
 	"id":"68cbd6c031908c56ba107e96",
-	"lastModifiedBy":103171,
+	"lastModifiedBy":44105,
 	"lcName":"[virtu-rpa-contractuploadfn] contract_support_data_prep",
-	"modifiedTime":1758892229348,
+	"modifiedTime":1759217337501,
 	"name":"[virtu-rpa-contractuploadfn] Contract_support_data_prep",
 	"nodes":[
 		{
@@ -87,7 +87,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RiGOz-1",
 			"id":"n_t3ZzR",
@@ -117,8 +117,11 @@
 						}
 					}
 				},
-				"configurationMode":"DEFAULT",
+				"configurationMode":"MANUAL",
 				"code":"import logging\nimport json\nimport pandas as pd\n\nlogging.info('Python HTTP trigger function processed a request.')\n\ndata = reqBody\ndf = pd.DataFrame(data)\n\ncustomer_arr = []\nproject_arr = []\n\ncustomer_arr = df['Customer Number'].unique()\nproject_arr = df['Project Number'].unique()\n\ncust_string = ''\nproj_string = ''\n\nfor cust_num in customer_arr:\n    # print(cust_num)\n    if cust_string == '':\n        cust_string = cust_num\n    else:\n        cust_string = cust_string + ',' + cust_num\n\nfor proj_num in project_arr:\n    # print(proj_num)\n    if proj_string == '':\n        proj_string = proj_num\n    else:\n        proj_string = proj_string + ',' + proj_num\n\nx = '{ \"cusrtomer_list\":\"' + cust_string + '\", \"proj_string\":\"' + proj_string + '\"}'\ny = json.loads(x)\n\nresult = str(y)\n",
+				"imports":[
+					"pandas"
+				],
 				"isAsync":false,
 				"python_version":"3.12",
 				"captureStdOutput":false,
@@ -174,5 +177,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":12
 }
