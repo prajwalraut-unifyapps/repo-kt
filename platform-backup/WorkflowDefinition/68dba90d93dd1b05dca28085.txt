@@ -23,7 +23,7 @@
 	"id":"68dba90d93dd1b05dca28085",
 	"lastModifiedBy":185583,
 	"lcName":"task_pm_check",
-	"modifiedTime":1759231873815,
+	"modifiedTime":1759232351753,
 	"name":"Task_PM_Check",
 	"nodes":[
 		{
@@ -121,14 +121,9 @@
 					"type":"object",
 					"additionalProperties":false,
 					"required":[
-						"messageID",
-						"flag"
+						"messageID"
 					],
 					"properties":{
-						"flag":{
-							"type":"boolean",
-							"title":"flag"
-						},
 						"messageID":{
 							"type":"string",
 							"title":"message"
@@ -191,7 +186,7 @@
 			"index":3,
 			"inputs":{
 				"result":{
-					"flag":"{{ n_kRmib.outputs.result.flag }}",
+					"flag":"",
 					"messageID":"{{ n_kRmib.outputs.result.messageID }}"
 				}
 			},
@@ -218,5 +213,5 @@
 	"tags":[
 		
 	],
-	"version":14
+	"version":15
 }
