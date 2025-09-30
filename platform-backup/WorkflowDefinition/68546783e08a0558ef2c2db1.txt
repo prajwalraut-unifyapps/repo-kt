@@ -1,0 +1,1020 @@
+{
+	"appsUsed":[
+		"slack"
+	],
+	"createdTime":1754285340995,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758655315144,
+		"deployedBy":0,
+		"deployedDefinitionId":"68d2f35338757c179b122f1b",
+		"status":"DEPLOYED",
+		"version":19,
+		"workflowVersion":105
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_YxLaL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"1WPP3",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"1WPP3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"dzmTW",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"dzmTW",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_rxD1s",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_rxD1s",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_CPRYj",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_CPRYj",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_8yOnB",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_8yOnB",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_CPRYj",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_CPRYj",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_UH4sB",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_UH4sB",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Rah3o",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"68546783e08a0558ef2c2db1",
+	"lastModifiedBy":-1,
+	"lcName":"knowledge downloader | slack | channel",
+	"modifiedTime":1759243506621,
+	"name":"Knowledge Downloader | Slack | Channel",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":435,
+				"resourceName":"callables_from_interface"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_SQjXE-1",
+			"id":"n_YxLaL",
+			"index":1,
+			"inputs":{
+				"result":{
+					"additionalProperties":false,
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
+					"type":"object",
+					"properties":{
+						"hasMore":{
+							"type":"boolean",
+							"title":"Has More"
+						},
+						"cursor":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Cursor"
+						},
+						"downloadedEntitiesCount":{
+							"type":"integer",
+							"title":"Downloaded Entities Count"
+						},
+						"knowledgeDownloadFinished":{
+							"type":"boolean",
+							"title":"Knowledge Download Finished"
+						}
+					},
+					"required":[]
+				},
+				"callableInterfaceId":"6854484ac68462013926b9cf",
+				"setup":{
+					"additionalProperties":false,
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
+					"type":"object",
+					"properties":{
+						"knowledgeId":{
+							"type":"string",
+							"title":"knowledgeId"
+						},
+						"aiAgentId":{
+							"type":"string",
+							"title":"aiAgentId"
+						},
+						"knowledge":{
+							"type":"object",
+							"properties":{
+								"readVersion":{
+									"type":"integer",
+									"title":"readVersion"
+								},
+								"lastSyncTime":{
+									"type":"integer",
+									"title":"lastSyncTime"
+								},
+								"cursorObject":{
+									"type":"object",
+									"title":"cursorObject"
+								},
+								"applicationInfo":{
+									"type":"object",
+									"properties":{
+										"context":{
+											"type":"object",
+											"properties":{
+												"connectionId":{
+													"type":"string",
+													"title":"Connection Id"
+												}
+											},
+											"additionalProperties":false,
+											"title":"Context",
+											"required":[]
+										}
+									},
+									"additionalProperties":false,
+									"title":"Application Info",
+									"required":[]
+								},
+								"indexingVersion":{
+									"type":"integer",
+									"title":"Indexing Version"
+								}
+							},
+							"title":"knowledge",
+							"additionalProperties":false,
+							"required":[]
+						},
+						"inputs":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Inputs"
+						},
+						"cursor":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Cursor"
+						},
+						"importerConnections":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Importer Connections"
+						},
+						"downloaderConfig":{
+							"type":"object",
+							"properties":{
+								"grabberType":{
+									"type":"string",
+									"title":"Grabber Type"
+								},
+								"currentTimeEpoch":{
+									"type":"integer",
+									"title":"Current Time Epoch"
+								},
+								"startTimeEpoch":{
+									"type":"integer",
+									"title":"Start Time Epoch"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Downloader Config",
+							"required":[]
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger interface",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":68,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_SQjXE-1",
+			"id":"1WPP3",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"mappedInputs":{
+							"type":"object",
+							"properties":{
+								"startDate":{
+									"type":"string",
+									"title":"Start Date"
+								},
+								"endDate":{
+									"type":"string",
+									"title":"End Date"
+								},
+								"IncludeAttachment":{
+									"type":"boolean",
+									"title":"Include Attachment"
+								},
+								"visibility":{
+									"type":"string",
+									"title":"Visibility"
+								},
+								"channelId":{
+									"type":"string",
+									"title":"Channel Id"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Mapped Inputs",
+							"required":[]
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"inputs":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Inputs"
+						},
+						"cursor":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Cursor"
+						},
+						"downloaderConfig":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Downloader Config"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"compile_static":false,
+				"code":"import java.lang.Math\ndef inputs = binding.hasVariable(\"inputs\") ? inputs : [:]\ndef startTimeEpoch = binding.hasVariable(\"downloaderConfig\") ? downloaderConfig.get(\"startTimeEpoch\",0) : 0\ndef startTimeEpochInSeconds = (startTimeEpoch/1000).longValue()\ndef userSpecifiedStartDate = inputs?.startDate?:0\n\ninputs <<  [\"startDate\" : Math.max(userSpecifiedStartDate, startTimeEpochInSeconds).longValue() ]\n\nif (binding.hasVariable(\"cursor\") && cursor?.lastMessageTime != null ) {\n    inputs.startDate = cursor.lastMessageTime.longValue()\n} \n\nreturn [\n    \"mappedInputs\": inputs\n];",
+				"parameters":{
+					"inputs":"{{ n_YxLaL.outputs.inputs }}",
+					"cursor":"{{ n_YxLaL.outputs.cursor }}",
+					"downloaderConfig":"{{ n_YxLaL.outputs.downloaderConfig }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Resolve inputs",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"slack",
+				"resourceVersion":25,
+				"connectionId":"6867db48bb16db2a8a5250dc",
+				"resourceName":"slack_list_conversation_history",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_SQjXE-1",
+			"id":"dzmTW",
+			"index":3,
+			"inputs":{
+				"oldest":"{{ 1WPP3.outputs.result.mappedInputs.startDate }}",
+				"limit":999,
+				"channel":"{{ 1WPP3.outputs.result.mappedInputs.channelId }}",
+				"latest":"{{ 1WPP3.outputs.result.mappedInputs.endDate }}"
+			},
+			"options":{
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false,
+					"slidingWindowType":"COUNT_BASED"
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"duration":"1",
+					"enabled":true,
+					"threshold":"45",
+					"unit":"MINUTES",
+					"waitForNextWindow":true
+				},
+				"retryConfig":{
+					"backOffFactor":2.0,
+					"captureRetries":false,
+					"count":2,
+					"enabled":false,
+					"initialDelay":30000
+				},
+				"stepError":"STOP",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Slack",
+			"title":"List conversation history",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{}
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":448,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_SQjXE-1",
+			"id":"n_rxD1s",
+			"index":4,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"messages":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"files":{
+										"type":"array",
+										"items":{
+											"type":"object",
+											"properties":{
+												"id":{
+													"type":"string"
+												},
+												"created":{
+													"type":"integer"
+												},
+												"timestamp":{
+													"type":"integer"
+												},
+												"name":{
+													"type":"string"
+												},
+												"title":{
+													"type":"string"
+												},
+												"mimetype":{
+													"type":"string"
+												},
+												"filetype":{
+													"type":"string"
+												},
+												"pretty_type":{
+													"type":"string"
+												},
+												"user":{
+													"type":"string"
+												},
+												"user_team":{
+													"type":"string"
+												},
+												"editable":{
+													"type":"boolean"
+												},
+												"size":{
+													"type":"integer"
+												},
+												"mode":{
+													"type":"string"
+												},
+												"is_external":{
+													"type":"boolean"
+												},
+												"external_type":{
+													"type":"string"
+												},
+												"is_public":{
+													"type":"boolean"
+												},
+												"public_url_shared":{
+													"type":"boolean"
+												},
+												"display_as_bot":{
+													"type":"boolean"
+												},
+												"username":{
+													"type":"string"
+												},
+												"url_private":{
+													"type":"string",
+													"format":"uri"
+												},
+												"url_private_download":{
+													"type":"string",
+													"format":"uri"
+												},
+												"media_display_type":{
+													"type":"string"
+												},
+												"thumb_pdf":{
+													"type":"string",
+													"format":"uri"
+												},
+												"thumb_pdf_w":{
+													"type":"integer"
+												},
+												"thumb_pdf_h":{
+													"type":"integer"
+												},
+												"permalink":{
+													"type":"string",
+													"format":"uri"
+												},
+												"permalink_public":{
+													"type":"string",
+													"format":"uri"
+												},
+												"is_starred":{
+													"type":"boolean"
+												},
+												"has_rich_preview":{
+													"type":"boolean"
+												},
+												"file_access":{
+													"type":"string"
+												}
+											}
+										}
+									},
+									"type":{
+										"type":"string"
+									},
+									"client_msg_id":{
+										"type":"string"
+									},
+									"team":{
+										"type":"string"
+									},
+									"blocks":{
+										"type":"array",
+										"items":{
+											"type":"object",
+											"properties":{
+												"type":{
+													"type":"string"
+												},
+												"block_id":{
+													"type":"string"
+												},
+												"elements":{
+													"type":"array",
+													"items":{
+														"type":"object",
+														"properties":{
+															"type":{
+																"type":"string"
+															},
+															"elements":{
+																"type":"array",
+																"items":{
+																	"type":"object",
+																	"properties":{
+																		"type":{
+																			"type":"string"
+																		},
+																		"text":{
+																			"type":"string"
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									},
+									"user":{
+										"type":"string"
+									},
+									"text":{
+										"type":"string"
+									},
+									"thread_ts":{
+										"type":"string"
+									},
+									"reply_count":{
+										"type":"integer",
+										"minimum":0
+									},
+									"replies":{
+										"type":"array",
+										"items":{
+											"type":"object",
+											"properties":{
+												"user":{
+													"type":"string"
+												},
+												"ts":{
+													"type":"string"
+												}
+											}
+										}
+									},
+									"reply_users":{
+										"type":"array",
+										"items":{
+											"type":"string"
+										},
+										"maxItems":5
+									},
+									"reply_users_count":{
+										"type":"integer",
+										"minimum":0
+									},
+									"latest_reply":{
+										"type":"string"
+									},
+									"subscribed":{
+										"type":"boolean"
+									},
+									"last_read":{
+										"type":"string"
+									},
+									"unread_count":{
+										"type":"integer",
+										"minimum":0
+									},
+									"ts":{
+										"type":"string"
+									},
+									"parent_user_id":{
+										"type":"string"
+									},
+									"attachments":{
+										"type":"array",
+										"items":{
+											"type":"object",
+											"properties":{
+												"service_name":{
+													"type":"string"
+												},
+												"text":{
+													"type":"string"
+												},
+												"fallback":{
+													"type":"string"
+												},
+												"thumb_url":{
+													"type":"string"
+												},
+												"thumb_width":{
+													"type":"integer"
+												},
+												"thumb_height":{
+													"type":"integer"
+												},
+												"id":{
+													"type":"integer"
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"message":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Message"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"message"
+					]
+				},
+				"compile_static":false,
+				"code":"def filterObjectsWithFilesOrText(inputArray) {\n    def filteredArray = inputArray?.findAll { item ->\n        (item?.containsKey('files') && item?.files != null && item?.files?.size()>0)  || \n        (item?.containsKey('text') && item?.text != null)\n    }\n    return filteredArray\n}\n\nif (binding.hasVariable('message')) {\n    return [\"messages\": filterObjectsWithFilesOrText(message)]\n}\n\nreturn [\"messages\": []]",
+				"parameters":{
+					"message":{
+						"source":"{{ dzmTW.outputs.messages }}",
+						"ua:type":"mappedArray",
+						"items":"{{ dzmTW.outputs.messages[0] }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Filter chats",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":453,
+				"resourceName":"loop_for_each",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_SQjXE-1",
+			"id":"n_CPRYj",
+			"index":5,
+			"inputs":{
+				"repeatMode":"BATCH",
+				"listSource":"{{ n_rxD1s.outputs.result.messages }}",
+				"captureIterations":false,
+				"batchSize":30
+			},
+			"skip":false,
+			"subTitle":"Loop (Batch = 30)",
+			"title":"For loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":447,
+				"resourceName":"callables_call_automation_batch",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_CPRYj@_SQjXE-1@l",
+			"id":"n_8yOnB",
+			"index":6,
+			"inputs":{
+				"automationId":"685475c5f8fdf67b14f064a3",
+				"runtimeConnections":{
+					"slack":"{{ n_YxLaL.outputs.knowledge.applicationInfo.context.connectionId }}"
+				},
+				"synchronous":true,
+				"distributeWorkflowLoad":false,
+				"parametersList":{
+					"source":"{{ n_CPRYj.outputs.item }}",
+					"ua:type":"mappedArray",
+					"items":{
+						"message":{
+							"files":{
+								"source":"{{ n_CPRYj.outputs.item[0].files }}",
+								"ua:type":"mappedArray",
+								"items":{
+									"id":"{{ n_CPRYj.outputs.item[0].files[0].id }}",
+									"created":"{{ n_CPRYj.outputs.item[0].files[0].created }}",
+									"timestamp":"{{ n_CPRYj.outputs.item[0].files[0].timestamp }}",
+									"name":"{{ n_CPRYj.outputs.item[0].files[0].name }}",
+									"title":"{{ n_CPRYj.outputs.item[0].files[0].title }}",
+									"mimetype":"{{ n_CPRYj.outputs.item[0].files[0].mimetype }}",
+									"filetype":"{{ n_CPRYj.outputs.item[0].files[0].filetype }}",
+									"pretty_type":"{{ n_CPRYj.outputs.item[0].files[0].pretty_type }}",
+									"user":"{{ n_CPRYj.outputs.item[0].files[0].user }}",
+									"user_team":"{{ n_CPRYj.outputs.item[0].files[0].user_team }}",
+									"editable":"{{ n_CPRYj.outputs.item[0].files[0].editable }}",
+									"size":"{{ n_CPRYj.outputs.item[0].files[0].size }}",
+									"mode":"{{ n_CPRYj.outputs.item[0].files[0].mode }}",
+									"is_external":"{{ n_CPRYj.outputs.item[0].files[0].is_external }}",
+									"external_type":"{{ n_CPRYj.outputs.item[0].files[0].external_type }}",
+									"is_public":"{{ n_CPRYj.outputs.item[0].files[0].is_public }}",
+									"public_url_shared":"{{ n_CPRYj.outputs.item[0].files[0].public_url_shared }}",
+									"display_as_bot":"{{ n_CPRYj.outputs.item[0].files[0].display_as_bot }}",
+									"username":"{{ n_CPRYj.outputs.item[0].files[0].username }}",
+									"url_private":"{{ n_CPRYj.outputs.item[0].files[0].url_private }}",
+									"url_private_download":"{{ n_CPRYj.outputs.item[0].files[0].url_private_download }}",
+									"media_display_type":"{{ n_CPRYj.outputs.item[0].files[0].media_display_type }}",
+									"thumb_pdf":"{{ n_CPRYj.outputs.item[0].files[0].thumb_pdf }}",
+									"thumb_pdf_w":"{{ n_CPRYj.outputs.item[0].files[0].thumb_pdf_w }}",
+									"thumb_pdf_h":"{{ n_CPRYj.outputs.item[0].files[0].thumb_pdf_h }}",
+									"permalink":"{{ n_CPRYj.outputs.item[0].files[0].permalink }}",
+									"permalink_public":"{{ n_CPRYj.outputs.item[0].files[0].permalink_public }}",
+									"is_starred":"{{ n_CPRYj.outputs.item[0].files[0].is_starred }}",
+									"has_rich_preview":"{{ n_CPRYj.outputs.item[0].files[0].has_rich_preview }}",
+									"file_access":"{{ n_CPRYj.outputs.item[0].files[0].file_access }}"
+								}
+							},
+							"type":"{{ n_CPRYj.outputs.item[0].type }}",
+							"client_msg_id":"{{ n_CPRYj.outputs.item[0].client_msg_id }}",
+							"team":"{{ n_CPRYj.outputs.item[0].team }}",
+							"blocks":{
+								"source":"{{ n_CPRYj.outputs.item[0].blocks }}",
+								"ua:type":"mappedArray",
+								"items":{
+									"type":"{{ n_CPRYj.outputs.item[0].blocks[0].type }}",
+									"block_id":"{{ n_CPRYj.outputs.item[0].blocks[0].block_id }}",
+									"elements":{
+										"source":"{{ n_CPRYj.outputs.item[0].blocks[0].elements }}",
+										"ua:type":"mappedArray",
+										"items":{
+											"type":"{{ n_CPRYj.outputs.item[0].blocks[0].elements[0].type }}",
+											"elements":{
+												"source":"{{ n_CPRYj.outputs.item[0].blocks[0].elements[0].elements }}",
+												"ua:type":"mappedArray",
+												"items":{
+													"type":"{{ n_CPRYj.outputs.item[0].blocks[0].elements[0].elements[0].type }}",
+													"text":"{{ n_CPRYj.outputs.item[0].blocks[0].elements[0].elements[0].text }}"
+												}
+											}
+										}
+									}
+								}
+							},
+							"user":"{{ n_CPRYj.outputs.item[0].user }}",
+							"text":"{{ n_CPRYj.outputs.item[0].text }}",
+							"thread_ts":"{{ n_CPRYj.outputs.item[0].thread_ts }}",
+							"reply_count":"{{ n_CPRYj.outputs.item[0].reply_count }}",
+							"replies":{
+								"source":"{{ n_CPRYj.outputs.item[0].replies }}",
+								"ua:type":"mappedArray",
+								"items":{
+									"user":"{{ n_CPRYj.outputs.item[0].replies[0].user }}",
+									"ts":"{{ n_CPRYj.outputs.item[0].replies[0].ts }}"
+								}
+							},
+							"reply_users":{
+								"source":"{{ n_CPRYj.outputs.item[0].reply_users }}",
+								"ua:type":"mappedArray",
+								"items":"{{ n_CPRYj.outputs.item[0].reply_users[0] }}"
+							},
+							"reply_users_count":"{{ n_CPRYj.outputs.item[0].reply_users_count }}",
+							"latest_reply":"{{ n_CPRYj.outputs.item[0].latest_reply }}",
+							"subscribed":"{{ n_CPRYj.outputs.item[0].subscribed }}",
+							"last_read":"{{ n_CPRYj.outputs.item[0].last_read }}",
+							"unread_count":"{{ n_CPRYj.outputs.item[0].unread_count }}",
+							"ts":"{{ n_CPRYj.outputs.item[0].ts }}",
+							"parent_user_id":"{{ n_CPRYj.outputs.item[0].parent_user_id }}",
+							"attachments":{
+								"source":"{{ n_CPRYj.outputs.item[0].attachments }}",
+								"ua:type":"mappedArray",
+								"items":{
+									"service_name":"{{ n_CPRYj.outputs.item[0].attachments[0].service_name }}",
+									"text":"{{ n_CPRYj.outputs.item[0].attachments[0].text }}",
+									"fallback":"{{ n_CPRYj.outputs.item[0].attachments[0].fallback }}",
+									"thumb_url":"{{ n_CPRYj.outputs.item[0].attachments[0].thumb_url }}",
+									"thumb_width":"{{ n_CPRYj.outputs.item[0].attachments[0].thumb_width }}",
+									"thumb_height":"{{ n_CPRYj.outputs.item[0].attachments[0].thumb_height }}",
+									"id":"{{ n_CPRYj.outputs.item[0].attachments[0].id }}"
+								}
+							}
+						},
+						"channel_actions_count":"{{ dzmTW.outputs.channel_actions_count }}",
+						"ok":"{{ dzmTW.outputs.ok }}",
+						"has_more":"{{ dzmTW.outputs.has_more }}",
+						"pin_count":"{{ dzmTW.outputs.pin_count }}",
+						"oldest":"{{ dzmTW.outputs.oldest }}",
+						"latest":"{{ dzmTW.outputs.latest }}",
+						"response_metadata":{
+							"next_cursor":"{{ dzmTW.outputs.response_metadata.next_cursor }}"
+						},
+						"IncludeAttachment":"{{ 1WPP3.outputs.result.mappedInputs.IncludeAttachment }}",
+						"channel":{
+							"Id":"{{ 1WPP3.outputs.result.mappedInputs.channelId }}"
+						},
+						"endDate":"{{ 1WPP3.outputs.result.mappedInputs.endDate }}",
+						"startDate":"{{ 1WPP3.outputs.result.mappedInputs.startDate }}",
+						"visibility":"{{ 1WPP3.outputs.result.mappedInputs.visibility }}",
+						"knowledgeId":"{{ n_YxLaL.outputs.knowledgeId }}",
+						"connectionId":"{{ n_YxLaL.outputs.knowledge.applicationInfo.context.connectionId }}",
+						"indexingVersion":"{{ n_YxLaL.outputs.knowledge.indexingVersion }}"
+					}
+				},
+				"version":"-1"
+			},
+			"skip":false,
+			"subTitle":"Message Downloader",
+			"title":"Call automation (batch)",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.parameters.messages.items"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":448,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_SQjXE-1",
+			"id":"n_UH4sB",
+			"index":7,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"cursor":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Cursor"
+						},
+						"hasMore":{
+							"type":"boolean",
+							"title":"Has More"
+						},
+						"knowledgeDownloadFinished":{
+							"type":"boolean",
+							"title":"Knowledge Download Finished"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"messages":{
+							"type":"array",
+							"items":{
+								"type":"number"
+							},
+							"title":"Messages"
+						},
+						"downloaderConfig":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Downloader Config"
+						},
+						"channelApiHasMore":{
+							"type":"boolean",
+							"title":"Channel Api Has More"
+						},
+						"userSpecifiedEndTime":{
+							"type":"integer",
+							"title":"User Specified End Time"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"compile_static":false,
+				"code":"boolean hasMore = false\ndef lastMessageTime\nif (binding.hasVariable('messages') && messages.size() != 0) {\n    lastMessageTime = messages[-1].toString().toDouble().longValue()  \n}\ndef currentTimeEpochInSeconds = (currentTimeEpoch/1000).longValue()\n\nhasMore = channelApiHasMore && (currentTimeEpochInSeconds >= lastMessageTime)    // flag for individual grabber -> should consider the startTime of individual grabber\nboolean userSpecifiedTimeReached = binding.hasVariable(\"userSpecifiedEndTime\") ? (lastMessageTime != null && (lastMessageTime > userSpecifiedEndTime)) : false // hasMore for entire knowledge -> should only consider the userSpecifiedEndTime\n\nreturn [\n    \"cursor\": [\"lastMessageTime\": lastMessageTime],\n    \"hasMore\" : hasMore,\n    \"knowledgeDownloadFinished\" : !channelApiHasMore && userSpecifiedTimeReached\n]\n",
+				"parameters":{
+					"messages":{
+						"source":"{{ dzmTW.outputs.messages }}",
+						"ua:type":"mappedArray",
+						"items":"{{ dzmTW.outputs.messages[0].ts }}"
+					},
+					"channelApiHasMore":"{{ dzmTW.outputs.has_more }}",
+					"downloaderConfig":"{{ n_YxLaL.outputs.downloaderConfig }}",
+					"userSpecifiedEndTime":"{{ 1WPP3.outputs.result.mappedInputs.endDate }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Get cursor",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":454,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_SQjXE-1",
+			"id":"n_Rah3o",
+			"index":8,
+			"inputs":{
+				"result":{
+					"cursor":"{{ n_UH4sB.outputs.result.cursor }}",
+					"downloadedEntitiesCount":"=LEN({{ dzmTW.outputs.messages }})",
+					"hasMore":"{{ n_UH4sB.outputs.result.hasMore }}",
+					"knowledgeDownloadFinished":"{{ n_UH4sB.outputs.result.knowledgeDownloadFinished }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":-1,
+	"runtimeConnectionAppNames":[
+		"slack"
+	],
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		"knowledge_v2"
+	],
+	"version":106
+}
