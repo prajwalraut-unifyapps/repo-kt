@@ -23,7 +23,7 @@
 	"id":"68dba90d93dd1b05dca28085",
 	"lastModifiedBy":185583,
 	"lcName":"task_pm_check",
-	"modifiedTime":1759228568325,
+	"modifiedTime":1759228620924,
 	"name":"Task_PM_Check",
 	"nodes":[
 		{
@@ -102,7 +102,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_0z2vL-1",
 			"id":"n_kRmib",
@@ -145,7 +145,7 @@
 						}
 					}
 				},
-				"code":"if (age>18)\n{\nmessage = \"can vote\";\nflag = true;\n}\nelse{\nmessage = \"can not vote\";\nflag = false;\n}",
+				"code":"if (age>18)\n{\nmessage += \"can vote\";\nflag = true;\n}\nelse{\nmessage += \"can not vote\";\nflag = false;\n}",
 				"isAsync":false,
 				"parameters":{
 					"name":"{{ n_4p4yH.outputs.name }}",
@@ -200,5 +200,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
