@@ -5,12 +5,12 @@
 	"createdTime":1740110507929,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646516611,
+		"deployedAt":1758655337087,
 		"deployedBy":0,
-		"deployedDefinitionId":"68d2d0f49f85565fb8fa5d6d",
+		"deployedDefinitionId":"68d2f36938757c179b1232b8",
 		"status":"DEPLOYED",
-		"version":53,
-		"workflowVersion":111
+		"version":54,
+		"workflowVersion":112
 	},
 	"edges":[
 		{
@@ -62,9 +62,9 @@
 		]
 	},
 	"id":"67b719cd21729f617c16f742",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"fetch collect slot tool",
-	"modifiedTime":1758655337022,
+	"modifiedTime":1759243525828,
 	"name":"Fetch collect slot tool",
 	"nodes":[
 		{
@@ -412,5 +412,5 @@
 		"AI Agent",
 		"Internal"
 	],
-	"version":112
+	"version":113
 }
