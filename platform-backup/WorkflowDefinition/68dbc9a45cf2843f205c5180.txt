@@ -6,46 +6,169 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_MQvh2",
+			"fromNodeId":"n_ZybUp",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_4uvGn",
+			"toNodeId":"n_pu7ZR",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_pu7ZR",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_U1oEx",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_U1oEx",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_pu7ZR",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_pu7ZR",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_fWuLC",
 			"type":"next"
 		}
 	],
 	"id":"68dbc9a45cf2843f205c5180",
 	"lastModifiedBy":39715,
 	"lcName":"test_null_check_by_sumit",
-	"modifiedTime":1759234468420,
+	"modifiedTime":1759234638127,
 	"name":"test_null_check_by_sumit",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_MQvh2-1",
-			"id":"_MQvh2",
-			"index":0,
+			"id":"n_ZybUp",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":17,
+				"resourceName":"loop_for",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_MQvh2-1",
-			"id":"_4uvGn",
-			"index":0,
+			"id":"n_pu7ZR",
+			"index":2,
+			"inputs":{
+				"start":0,
+				"limit":3,
+				"step":1,
+				"captureIterations":true
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Loop",
+			"title":"For loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":930,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_pu7ZR@_MQvh2-1@l",
+			"id":"n_U1oEx",
+			"index":3,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"key1":{
+							"type":"string",
+							"title":"Key 1"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"key1":"{{ n_ZybUp.outputs.body }}"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"key1":{
+							"type":"string",
+							"title":"Key 1"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":871,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_MQvh2-1",
+			"id":"n_fWuLC",
+			"index":4,
+			"inputs":{
+				"code":"return 2",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":39715,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +182,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
