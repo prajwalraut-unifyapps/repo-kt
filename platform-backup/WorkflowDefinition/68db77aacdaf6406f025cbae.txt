@@ -23,14 +23,14 @@
 	"id":"68db77aacdaf6406f025cbae",
 	"lastModifiedBy":44105,
 	"lcName":"dp-func-fusionintg-prod-sa",
-	"modifiedTime":1759214321997,
+	"modifiedTime":1759214404048,
 	"name":"dp-func-fusionintg-prod-sa",
 	"nodes":[
 		{
 			"context":{
 				"appName":"callables",
-				"resourceVersion":880,
-				"resourceName":"callables_from_automation"
+				"resourceVersion":966,
+				"resourceName":"callables_from_api"
 			},
 			"debug":false,
 			"dirty":true,
@@ -38,10 +38,29 @@
 			"groupId":"_nz9mE-1",
 			"id":"n_zWwTH",
 			"index":1,
-			"inputs":{},
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				},
+				"endpointType":"REST",
+				"response":[
+					{
+						"status":200,
+						"contentType":"application/json",
+						"textBody":{
+							"type":"string"
+						},
+						"body":{
+							"type":"object"
+						},
+						"namespaces":[]
+					}
+				],
+				"streamingResponse":false
+			},
 			"skip":false,
 			"subTitle":"Callable",
-			"title":"Trigger via automation",
+			"title":"Trigger via API",
 			"trigger":{
 				"type":"CALLABLE"
 			},
@@ -61,6 +80,32 @@
 			"id":"n_7doD3",
 			"index":2,
 			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"result":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Result"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"reqBody":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Req Body"
+						}
+					}
+				},
 				"configurationMode":"DEFAULT",
 				"code":"import logging\nimport azure.functions as func\n\nfrom libs.extraction_utils.APIM import APIM\nfrom libs.extraction_utils.TaskInfo import TaskInfo\nfrom libs.fusion_services.Schedule import Schedule\n\ndef main(req):\n    '''\n    HTTP Trigger for Schedule Data Ingestion\n    '''\n\n    logging.info('Schedule extraction function received a request.')\n\n    # try:\n    #     req_body = req.get_json()\n    # except ValueError:\n    #     return func.HttpResponse(\n    #             \"Missing required request parameters.\",\n    #             status_code=400\n    #         )\n    # else:\n    #     task_info = TaskInfo(\n    #             bip_id = req_body.get('BipId'),\n    #             chunk_number = req_body.get('ChunkNumber'),\n    #             entity_name = req_body.get('EntityName'),\n    #             report_path = req_body.get('ReportPath'),\n    #             parameter_list = req_body.get('ParameterList'),\n    #             file_name = None,\n    #             data_lake_path = req_body.get('DataLakePath'),\n    #             bip_type = req_body.get('BipType'),\n    #             file_format = req_body.get('FileFormat'),\n    #             callback_url=None,\n    #             xml_data=None,\n    #             csv_data=None,\n    #             status_code=None,\n    #             message=None)\n\n    #     apim_credentials = req_body.get('APIMCredentials')\n\n    #     apim = APIM()\n\n    #     for cred in apim_credentials:\n    #         if cred['name'] == 'Virtu-Business-Public-sub-key':\n    #             apim.set_public_subscription_key(cred['value'])\n    #         elif cred['name'] == 'Virtu-Business-Internal-sub-key':\n    #             apim.set_internal_subscription_key(cred['value'])\n    #         elif cred['name'] == 'virtuIntegrationAppClientID':\n    #             apim.set_client_id(cred['value'])\n    #         elif cred['name'] == 'virtuIntegrationAppSecret':\n    #             apim.set_client_secret(cred['value'])\n    #         elif cred['name'] == 'virtuIntegrationAppAudiance':\n    #             apim.set_resource(cred['value'])\n                        \n    #     if task_info.BipId != None:\n    #         try:\n    #             scheduler = Schedule(apim)\n\n    #             if scheduler.status == 'FAILED':\n    #                 return {\n    #                         \"status\": 400,\n    #                         \"message\":  f\"FAILED: {scheduler.message}\"\n    #                 }\n    #             else:\n    #                 schedule_job_id = scheduler.continue_schedule_bip(task_info)\n\n    #                 response = {\"ScheduleJobID\": schedule_job_id}\n\n    #                 if schedule_job_id != None:\n    #                     return {\n    #                         \"status\": 200,\n    #                         \"response\": str(response)\n    #                     }\n    #                 else:\n    #                     return {\n    #                         \"status\": 400,\n    #                         \"message\":  f\"FAILED: {scheduler.message}\"\n    #                     }\n    #         except Exception as ex:\n    #             logging.error(str(ex))\n    #     else:\n    #         return {\n    #             \"status\": 400,\n    #             \"message\": \"'BipID' is a required parameter\"\n    #         }\n    return {\n                 \"status\": 400,\n                \"message\": \"'BipID' is a required parameter\"\n            }\n\nresult = main(reqBody)\n",
 				"isAsync":false,
@@ -75,8 +120,8 @@
 		{
 			"context":{
 				"appName":"callables",
-				"resourceVersion":897,
-				"resourceName":"callables_return_to_automation",
+				"resourceVersion":917,
+				"resourceName":"callables_return_response_to_api",
 				"type":"APPLICATION"
 			},
 			"debug":false,
@@ -85,10 +130,15 @@
 			"groupId":"_nz9mE-1",
 			"id":"n_ES15y",
 			"index":3,
-			"inputs":{},
+			"inputs":{
+				"streamingCompleted":true,
+				"responseName":"200_undefined",
+				"body":"{{ n_7doD3.outputs.result }}",
+				"status":200
+			},
 			"skip":false,
 			"subTitle":"Callable",
-			"title":"Respond to automation",
+			"title":"Respond to API request",
 			"type":"STOP"
 		}
 	],
@@ -109,5 +159,5 @@
 	"tags":[
 		"virtusa"
 	],
-	"version":1
+	"version":2
 }
