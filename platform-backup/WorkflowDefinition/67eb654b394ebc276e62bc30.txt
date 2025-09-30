@@ -1,0 +1,137 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1743575646637,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758655329164,
+		"deployedBy":0,
+		"deployedDefinitionId":"68d2f36138757c179b123174",
+		"status":"DEPLOYED",
+		"version":25,
+		"workflowVersion":38
+	},
+	"edges":[
+		{
+			"fromNodeId":"vG6GT",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"ipLBj",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"67eb654b394ebc276e62bc30",
+	"lastModifiedBy":-1,
+	"lcName":"[shortcut] get user sharedwithids",
+	"modifiedTime":1759243519169,
+	"name":"[Shortcut] Get User SharedWithIds",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":161,
+				"resourceName":"callables_from_interface"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"qaXL7-1",
+			"id":"vG6GT",
+			"index":0,
+			"inputs":{
+				"result":{
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
+					"properties":{
+						"sharedWithIds":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Shared With Ids"
+						}
+					},
+					"required":[]
+				},
+				"callableInterfaceId":"67091cd2c6db330cf5b08881",
+				"setup":{
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
+					"properties":{
+						"userEmailAddress":{
+							"type":"string",
+							"title":"User Email Address"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger interface",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":168,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"qaXL7-1",
+			"id":"ipLBj",
+			"index":0,
+			"inputs":{
+				"result":{
+					"sharedWithIds":[
+						"shortcut/u/{{ vG6GT.outputs.userEmailAddress }}",
+						"shortcut/g/-1"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":45775,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		"AI Agent"
+	],
+	"version":39
+}
