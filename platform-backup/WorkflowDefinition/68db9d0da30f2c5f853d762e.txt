@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759223053275,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759223158139,
+		"deployedBy":44096,
+		"deployedDefinitionId":"68db9d76a30f2c5f853d78e6",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_dGKSQ",
@@ -16,14 +24,14 @@
 			"fromNodeId":"n_ZMSAj",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_hc1Z2",
+			"toNodeId":"n_4pSKP",
 			"type":"next"
 		}
 	],
 	"id":"68db9d0da30f2c5f853d762e",
 	"lastModifiedBy":44096,
 	"lcName":"lookup form test by keys",
-	"modifiedTime":1759223156581,
+	"modifiedTime":1759223221755,
 	"name":"Lookup Form Test By Keys",
 	"nodes":[
 		{
@@ -182,16 +190,11 @@
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RrDve-1",
-			"id":"n_hc1Z2",
+			"id":"n_4pSKP",
 			"index":3,
 			"inputs":{
 				"result":{
-					"response":"{{ n_ZMSAj.outputs.result }}",
-					"objects":{
-						"source":"{{ n_ZMSAj.outputs.result }}",
-						"ua:type":"mappedArray",
-						"items":"{{ n_ZMSAj.outputs.result[0] }}"
-					}
+					"response":"{{ n_ZMSAj.outputs.result }}"
 				}
 			},
 			"skip":false,
@@ -217,5 +220,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
