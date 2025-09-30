@@ -4,6 +4,14 @@
 	],
 	"createdTime":1758977661374,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758977774181,
+		"deployedBy":23949,
+		"deployedDefinitionId":"68d7deee88d6e673246bfaef",
+		"status":"DEPLOYED",
+		"version":2,
+		"workflowVersion":10
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_dGKSQ",
@@ -20,10 +28,34 @@
 			"type":"next"
 		}
 	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"EXPORT_AS_TEMPLATE",
+					"A",
+					"C",
+					"S",
+					"VI",
+					"D",
+					"TEST",
+					"VIEW_RUNS",
+					"E",
+					"V",
+					"VS",
+					"DEP"
+				],
+				"principalIds":[
+					"67a1a7856d555959c8608546"
+				],
+				"principalType":"USER_GROUPS"
+			}
+		]
+	},
 	"id":"68d7933d7ceaf455c79a4dbf",
-	"lastModifiedBy":23949,
+	"lastModifiedBy":44096,
 	"lcName":"lookup form test",
-	"modifiedTime":1758977661374,
+	"modifiedTime":1759222335616,
 	"name":"Lookup Form Test",
 	"nodes":[
 		{
@@ -34,104 +66,143 @@
 			},
 			"context":{
 				"appName":"callables",
-				"resourceVersion":74,
-				"resourceName":"callables_from_automation"
+				"resourceVersion":856,
+				"resourceName":"callables_from_interface"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RrDve-1",
 			"id":"n_dGKSQ",
 			"index":1,
 			"inputs":{
 				"result":{
-					"type":"object",
-					"properties":{
-						"objects":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"name":{
-										"type":"string",
-										"title":"name"
-									},
-									"id":{
-										"type":"string",
-										"title":"id"
-									}
-								},
-								"additionalProperties":false
-							},
-							"title":"objects"
-						}
-					},
 					"additionalProperties":false,
-					"required":[]
-				},
-				"setup":{
 					"type":"object",
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
 					"properties":{
-						"lookupType":{
-							"type":"string",
-							"title":"lookupType"
-						},
-						"options":{
+						"response":{
 							"type":"object",
 							"properties":{
-								"inputs":{
-									"type":"object",
-									"properties":{
-										"key":{
-											"type":"string",
-											"title":"key"
-										}
-									},
-									"title":"inputs",
-									"additionalProperties":false
+								"hasMore":{
+									"type":"boolean",
+									"title":"hasMore"
 								},
-								"workflowId":{
+								"objects":{
+									"type":"array",
+									"items":{
+										"type":"object",
+										"properties":{},
+										"additionalProperties":false,
+										"required":[]
+									},
+									"title":"objects"
+								},
+								"type":{
 									"type":"string",
-									"title":"workflowId"
+									"title":"type"
 								}
 							},
-							"title":"options",
-							"additionalProperties":false
+							"title":"response",
+							"additionalProperties":false,
+							"required":[]
+						}
+					}
+				},
+				"callableInterfaceId":"68db93d18f09e432d7ea8b44",
+				"setup":{
+					"required":[
+						"type",
+						"lookupType",
+						"options"
+					],
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
+					"properties":{
+						"type":{
+							"type":"string",
+							"title":"Type"
+						},
+						"fields":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Fields"
+						},
+						"query":{
+							"type":"string",
+							"title":"Query"
+						},
+						"lookupType":{
+							"type":"string",
+							"title":"Lookup Type"
 						},
 						"page":{
 							"type":"object",
 							"properties":{
-								"batchSize":{
-									"type":"integer",
-									"title":"batchSize"
-								},
 								"limit":{
 									"type":"integer",
-									"title":"limit"
+									"title":"Limit"
 								},
 								"offset":{
 									"type":"integer",
-									"title":"offset"
+									"title":"Offset"
 								}
 							},
-							"title":"page",
-							"additionalProperties":false
+							"additionalProperties":false,
+							"title":"Page",
+							"required":[]
 						},
-						"query":{
-							"type":"string",
-							"title":"query"
+						"filter":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Filter"
 						},
-						"type":{
-							"type":"string",
-							"title":"type"
+						"options":{
+							"type":"object",
+							"properties":{
+								"workflowId":{
+									"type":"string",
+									"title":"Workflow Id"
+								},
+								"runtimeType":{
+									"type":"string",
+									"title":"Runtime Type"
+								},
+								"runtimeConnections":{
+									"type":"string",
+									"title":"Runtime Connections"
+								},
+								"timeoutInMillis":{
+									"type":"number",
+									"title":"Timeout In Millis"
+								},
+								"sessionVariables":{
+									"type":"object",
+									"properties":{},
+									"additionalProperties":false,
+									"title":"Session Variables"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Options",
+							"required":[
+								"workflowId"
+							]
 						}
-					},
-					"additionalProperties":false
+					}
 				}
 			},
 			"skip":false,
 			"subTitle":"Callable",
-			"title":"Trigger via automation",
+			"title":"Trigger interface",
 			"trigger":{
 				"type":"CALLABLE"
 			},
@@ -179,19 +250,21 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RrDve-1",
 			"id":"n_qdHus",
 			"index":3,
 			"inputs":{
 				"result":{
-					"objects":{
-						"items":{
-							"name":"1",
-							"id":"1"
-						},
-						"ua:type":"mappedArray"
+					"response":{
+						"hasMore":false,
+						"type":"HITS",
+						"objects":{
+							"source":"{{ n_ZMSAj.outputs.result }}",
+							"ua:type":"mappedArray",
+							"items":"{{ n_ZMSAj.outputs.result[0] }}"
+						}
 					}
 				}
 			},
@@ -218,5 +291,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":11
 }
