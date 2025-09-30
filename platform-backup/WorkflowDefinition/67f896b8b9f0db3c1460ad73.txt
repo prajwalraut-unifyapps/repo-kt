@@ -5,12 +5,12 @@
 	"createdTime":1744346439792,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646527782,
+		"deployedAt":1758655349006,
 		"deployedBy":0,
-		"deployedDefinitionId":"68d2d0ffbd00df618e363ce6",
+		"deployedDefinitionId":"68d2f37438757c179b1234bd",
 		"status":"DEPLOYED",
-		"version":52,
-		"workflowVersion":65
+		"version":53,
+		"workflowVersion":66
 	},
 	"edges":[
 		{
@@ -46,9 +46,9 @@
 		]
 	},
 	"id":"67f896b8b9f0db3c1460ad73",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"clarifyconnection tool",
-	"modifiedTime":1758655348944,
+	"modifiedTime":1759243536605,
 	"name":"ClarifyConnection Tool",
 	"nodes":[
 		{
@@ -253,5 +253,5 @@
 	"tags":[
 		
 	],
-	"version":66
+	"version":67
 }
