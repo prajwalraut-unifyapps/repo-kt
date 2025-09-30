@@ -5,12 +5,12 @@
 	"createdTime":1758646549624,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646549734,
+		"deployedAt":1758655370983,
 		"deployedBy":0,
-		"deployedDefinitionId":"68d2d115e982524a6e5cd8e9",
+		"deployedDefinitionId":"68d2f38a38757c179b12388f",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":8
+		"version":2,
+		"workflowVersion":9
 	},
 	"edges":[
 		{
@@ -31,6 +31,13 @@
 			"fromNodeId":"n_ejxnl",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_yKG7E",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_yKG7E",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_3q9qA",
 			"type":"next"
 		}
@@ -46,9 +53,9 @@
 		]
 	},
 	"id":"68930c0033962cfbbceaac32",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"deep research tool | entrypoint",
-	"modifiedTime":1758655370882,
+	"modifiedTime":1759243555819,
 	"name":"Deep Research Tool | Entrypoint",
 	"nodes":[
 		{
@@ -228,6 +235,31 @@
 		{
 			"context":{
 				"appName":"callables",
+				"resourceVersion":516,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_YKHPt-1",
+			"id":"n_yKG7E",
+			"index":4,
+			"inputs":{
+				"automationId":"685e54fe32228032eecf1eec",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{}
+			},
+			"skip":false,
+			"subTitle":"Skip Final Answer Generation",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
 				"resourceVersion":457,
 				"resourceName":"callables_return_to_automation",
 				"type":"APPLICATION"
@@ -237,7 +269,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_YKHPt-1",
 			"id":"n_3q9qA",
-			"index":4,
+			"index":5,
 			"inputs":{
 				"result":{
 					"toolOutput":"{{ n_ejxnl.outputs.final_output }}",
@@ -267,5 +299,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
