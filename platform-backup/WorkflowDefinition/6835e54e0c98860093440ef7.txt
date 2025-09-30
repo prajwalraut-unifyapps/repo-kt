@@ -5,12 +5,12 @@
 	"createdTime":1748528569541,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646566274,
+		"deployedAt":1758655388127,
 		"deployedBy":0,
-		"deployedDefinitionId":"68d2d126db1a4411eeae832e",
+		"deployedDefinitionId":"68d2f39c38757c179b123b7e",
 		"status":"DEPLOYED",
-		"version":4,
-		"workflowVersion":49
+		"version":5,
+		"workflowVersion":50
 	},
 	"edges":[
 		{
@@ -104,9 +104,9 @@
 		]
 	},
 	"id":"6835e54e0c98860093440ef7",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"trigger ai agent streaming",
-	"modifiedTime":1758655388074,
+	"modifiedTime":1759243569802,
 	"name":"Trigger AI Agent Streaming",
 	"nodes":[
 		{
@@ -582,5 +582,5 @@
 	"tags":[
 		
 	],
-	"version":50
+	"version":51
 }
