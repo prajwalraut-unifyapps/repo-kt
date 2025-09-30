@@ -1,0 +1,516 @@
+{
+	"appsUsed":[
+		"storage_by_unifyapps"
+	],
+	"createdTime":1748130379367,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758655373085,
+		"deployedBy":0,
+		"deployedDefinitionId":"68d2f38d38757c179b1238d9",
+		"status":"DEPLOYED",
+		"version":52,
+		"workflowVersion":74
+	},
+	"edges":[
+		{
+			"fromNodeId":"S5Bj1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Cw28F",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"Cw28F",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"3UC6b",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"3UC6b",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_KmEfJ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_KmEfJ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"vqgZ5",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"vqgZ5",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_YGiGn",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_YGiGn",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_1wKer",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_1wKer",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_BFQBt",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_BFQBt",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Mq9aH",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_1wKer",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Mq9aH",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"682f0e3898a5d956a2459333",
+	"lastModifiedBy":-1,
+	"lcName":"execute pdf data in parallel",
+	"modifiedTime":1759243557117,
+	"name":"Execute pdf data in parallel",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":19,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"PsT0d-1",
+			"id":"S5Bj1",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"success":{
+							"type":"string",
+							"title":"Success"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"success"
+					]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"fileDetails":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"File Details"
+						},
+						"knowledgeId":{
+							"type":"string",
+							"title":"Knowledge Id"
+						},
+						"mimeType":{
+							"type":"string",
+							"title":"Mime Type"
+						},
+						"cntr":{
+							"type":"number",
+							"title":"Cntr"
+						},
+						"chunkMetadata":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Chunk Metadata"
+						},
+						"sharedWithIds":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Shared With Ids"
+						},
+						"knowledgeVersion":{
+							"type":"string",
+							"title":"Knowledge Version"
+						},
+						"uniqueEntityId":{
+							"type":"string",
+							"title":"Unique Entity Id"
+						},
+						"authorEmail":{
+							"type":"string",
+							"title":"Author Email"
+						},
+						"pageOffset":{
+							"type":"integer",
+							"title":"Page Offset",
+							"default":"0"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"mimeType",
+						"cntr",
+						"uniqueEntityId",
+						"pageOffset"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":173,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"PsT0d-1",
+			"id":"Cw28F",
+			"index":2,
+			"inputs":{
+				"automationId":"67091a28c6db330cf5b0795e",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"knowledgeId":"{{ S5Bj1.outputs.knowledgeId }}",
+					"mimeType":"{{ S5Bj1.outputs.mimeType }}",
+					"chunkMetadata":"{{ S5Bj1.outputs.chunkMetadata }}",
+					"filedetails":"{{ S5Bj1.outputs.fileDetails }}",
+					"cntr":"{{ S5Bj1.outputs.cntr }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":370,
+				"resourceName":"utility_by_unifyapps_generate_public_url",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"PsT0d-1",
+			"id":"3UC6b",
+			"index":3,
+			"inputs":{
+				"file":"{{ S5Bj1.outputs.fileDetails }}",
+				"expiryTime":1
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Generate public file URL",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":626,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"PsT0d-1",
+			"id":"n_KmEfJ",
+			"index":4,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"id",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ S5Bj1.outputs.knowledgeId }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"knowledge",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"translationsOption":"DEFAULT",
+				"page":{
+					"paginateBy":"OFFSET",
+					"limit":20
+				},
+				"numberOfRecordsToFetch":"SINGLE",
+				"readThroughSessionVariables":false,
+				"includeTotalCount":false
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":19,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"PsT0d-1",
+			"id":"vqgZ5",
+			"index":5,
+			"inputs":{
+				"automationId":"66af3ff4cd79b321cb478a37",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"knowledgeId":"{{ S5Bj1.outputs.knowledgeId }}",
+					"chunkMetadata":"{{ S5Bj1.outputs.chunkMetadata }}",
+					"knowledgeVersion":"{{ S5Bj1.outputs.knowledgeVersion }}",
+					"authorEmail":"{{ S5Bj1.outputs.authorEmail }}",
+					"uniqueEntityId":"{{ S5Bj1.outputs.uniqueEntityId }}",
+					"knowledgeSetId":"{{ n_KmEfJ.outputs.properties.knowledgeSetId }}",
+					"chunks":{
+						"ua:type":"mappedArray",
+						"items":{
+							"sharedWithIds":{
+								"source":"{{ S5Bj1.outputs.sharedWithIds }}",
+								"ua:type":"mappedArray",
+								"items":"{{ S5Bj1.outputs.sharedWithIds[0] }}"
+							},
+							"chunkMetadata":"{{ Cw28F.outputs.chunks[0].metadata }}",
+							"data":"{{ Cw28F.outputs.chunks[0].text }}"
+						},
+						"source":"{{ Cw28F.outputs.chunks }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.parameters.chunkIds.items"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":448,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"PsT0d-1",
+			"id":"n_YGiGn",
+			"index":6,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"storeCoordinates":{
+							"type":"boolean",
+							"title":"Store Coordinates"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"chunkIds":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Chunk Ids"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"compile_static":false,
+				"code":"if(!binding.hasVariable('chunkIds')){\n  return [\"storeCoordinates\": false]\n}\nelse if(chunkIds.size() == 0) {\n  return [\"storeCoordinates\": false]\n}\n\nreturn [\"storeCoordinates\": true]",
+				"parameters":{
+					"chunkIds":{
+						"source":"{{ vqgZ5.outputs.chunkIds }}",
+						"ua:type":"mappedArray",
+						"items":"{{ vqgZ5.outputs.chunkIds[0] }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Checking empty chunks",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":437,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"PsT0d-1",
+			"id":"n_1wKer",
+			"index":7,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_YGiGn.outputs.result.storeCoordinates }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"true"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":465,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_1wKer@PsT0d-1@y",
+			"id":"n_BFQBt",
+			"index":8,
+			"inputs":{
+				"automationId":"68b81e99380612565bad2a7e",
+				"runtimeConnections":{},
+				"synchronous":false,
+				"triggerWorkflowWithRuntimeType":"IN_MEMORY",
+				"version":"-1",
+				"parameters":{
+					"url":"{{ 3UC6b.outputs.url }}",
+					"pageOffset":"{{ S5Bj1.outputs.pageOffset }}",
+					"chunkMetadata":{
+						"name":"{{ S5Bj1.outputs.chunkMetadata.name }}",
+						"source":"{{ S5Bj1.outputs.chunkMetadata.source }}",
+						"fileType":"{{ S5Bj1.outputs.chunkMetadata.fileType }}",
+						"referenceUrl":"{{ S5Bj1.outputs.chunkMetadata.referenceUrl }}",
+						"sourceType":"{{ S5Bj1.outputs.chunkMetadata.sourceType }}"
+					},
+					"knowledgeId":"{{ S5Bj1.outputs.knowledgeId }}",
+					"chunkIds":{
+						"source":"{{ vqgZ5.outputs.chunkIds }}",
+						"ua:type":"mappedArray",
+						"items":"{{ vqgZ5.outputs.chunkIds[0] }}"
+					},
+					"chunks":{
+						"source":"{{ Cw28F.outputs.chunks }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"text":"{{ Cw28F.outputs.chunks[0].text }}",
+							"metadata":"{{ Cw28F.outputs.chunks[0].metadata }}"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":19,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"PsT0d-1",
+			"id":"Mq9aH",
+			"index":9,
+			"inputs":{
+				"result":{
+					"success":"true"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":44096,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":false,
+		"enableRunLogging":true,
+		"enableVariableLogging":false,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		
+	],
+	"version":75
+}
