@@ -1,51 +1,77 @@
 {
 	"appsUsed":[
-		
+		"figma"
 	],
 	"createdTime":1759225352240,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_6onmr",
+			"fromNodeId":"n_FwUrL",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_R6gNp",
+			"toNodeId":"n_uqNcn",
 			"type":"next"
 		}
 	],
 	"id":"68dba60831307131c21350b6",
 	"lastModifiedBy":155341,
 	"lcName":"testt",
-	"modifiedTime":1759225352240,
+	"modifiedTime":1759225580017,
 	"name":"testt",
 	"nodes":[
 		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":814,
+				"resourceName":"schedule_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_6onmr-1",
-			"id":"_6onmr",
-			"index":0,
+			"id":"n_FwUrL",
+			"index":1,
+			"inputs":{
+				"cron":"INTERVAL",
+				"sequential":false,
+				"interval":15,
+				"frequency":"MINUTES"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Schedule",
+			"title":"New recurring event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"SCHEDULED"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"figma",
+				"resourceVersion":3489,
+				"connectionId":"685908af5383fe2b52b71f02",
+				"resourceName":"figma_get_file",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_6onmr-1",
-			"id":"_R6gNp",
-			"index":0,
+			"id":"n_uqNcn",
+			"index":2,
+			"inputs":{
+				"file_id":"UkDYbydBzbaf34A1XVn9Qx"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Figma",
+			"title":"Get file",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":155341,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +85,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
