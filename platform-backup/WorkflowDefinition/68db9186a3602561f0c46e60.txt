@@ -4,13 +4,21 @@
 	],
 	"createdTime":1759220102644,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759220142665,
+		"deployedBy":39713,
+		"deployedDefinitionId":"68db91aca3602561f0c46e8f",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		
 	],
 	"id":"68db9186a3602561f0c46e60",
 	"lastModifiedBy":39713,
 	"lcName":"webhooktesting",
-	"modifiedTime":1759220114704,
+	"modifiedTime":1759220171489,
 	"name":"webhookTesting",
 	"nodes":[
 		{
@@ -20,7 +28,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_ECdjW-1",
 			"id":"n_VpLE8",
@@ -56,5 +64,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
