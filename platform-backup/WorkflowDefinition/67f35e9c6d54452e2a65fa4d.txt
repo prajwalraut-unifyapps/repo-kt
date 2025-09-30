@@ -5,12 +5,12 @@
 	"createdTime":1744002716876,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646532001,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2d103db1a4411eeae82be",
+		"deployedAt":1759243541060,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed1523e6682b9a51eaf2",
 		"status":"DEPLOYED",
-		"version":30,
-		"workflowVersion":41
+		"version":32,
+		"workflowVersion":43
 	},
 	"edges":[
 		{
@@ -46,9 +46,9 @@
 		]
 	},
 	"id":"67f35e9c6d54452e2a65fa4d",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"[sap odata] get user sharedwithids",
-	"modifiedTime":1758655354199,
+	"modifiedTime":1759243574797,
 	"name":"[SAP OData] Get User SharedWithIds",
 	"nodes":[
 		{
@@ -427,5 +427,5 @@
 	"tags":[
 		
 	],
-	"version":42
+	"version":44
 }
