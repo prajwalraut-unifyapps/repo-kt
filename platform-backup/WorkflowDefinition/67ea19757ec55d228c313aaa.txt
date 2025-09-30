@@ -5,12 +5,12 @@
 	"createdTime":1743395189127,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655351964,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f37738757c179b123535",
+		"deployedAt":1759243539059,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed139213d707c2d272de",
 		"status":"DEPLOYED",
-		"version":34,
-		"workflowVersion":86
+		"version":35,
+		"workflowVersion":87
 	},
 	"edges":[
 		{
@@ -129,7 +129,7 @@
 	"id":"67ea19757ec55d228c313aaa",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | github commits",
-	"modifiedTime":1759243538919,
+	"modifiedTime":1759243572957,
 	"name":"Knowledge Indexer | Github Commits",
 	"nodes":[
 		{
@@ -848,5 +848,5 @@
 	"tags":[
 		
 	],
-	"version":87
+	"version":88
 }
