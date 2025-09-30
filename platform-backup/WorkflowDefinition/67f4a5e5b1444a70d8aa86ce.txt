@@ -5,12 +5,12 @@
 	"createdTime":1744090268244,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646527528,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2d0ffdb1a4411eeae82b2",
+		"deployedAt":1759243536355,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed1023e6682b9a51ead9",
 		"status":"DEPLOYED",
-		"version":25,
-		"workflowVersion":40
+		"version":27,
+		"workflowVersion":42
 	},
 	"edges":[
 		{
@@ -46,9 +46,9 @@
 		]
 	},
 	"id":"67f4a5e5b1444a70d8aa86ce",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"[mailchimp] get user sharedwithids",
-	"modifiedTime":1758655348674,
+	"modifiedTime":1759243570630,
 	"name":"[Mailchimp] Get User SharedWithIds",
 	"nodes":[
 		{
@@ -425,5 +425,5 @@
 		}
 	},
 	"standard":true,
-	"version":41
+	"version":43
 }
