@@ -5,12 +5,12 @@
 	"createdTime":1752842407681,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655333140,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f36538757c179b123210",
+		"deployedAt":1759243522248,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed025e003e08cdeb2e5c",
 		"status":"DEPLOYED",
-		"version":29,
-		"workflowVersion":45
+		"version":30,
+		"workflowVersion":46
 	},
 	"edges":[
 		{
@@ -92,7 +92,7 @@
 	"id":"684c372646daf225b74198c6",
 	"lastModifiedBy":-1,
 	"lcName":"text to workflow v2 | generate embeddings for action",
-	"modifiedTime":1759243522186,
+	"modifiedTime":1759243558177,
 	"name":"Text to workflow v2 | Generate Embeddings for action",
 	"nodes":[
 		{
@@ -433,5 +433,5 @@
 	"tags":[
 		"Text_to_Workflow_v2"
 	],
-	"version":46
+	"version":47
 }
