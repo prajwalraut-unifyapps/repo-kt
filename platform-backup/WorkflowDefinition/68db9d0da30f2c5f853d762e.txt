@@ -23,7 +23,7 @@
 	"id":"68db9d0da30f2c5f853d762e",
 	"lastModifiedBy":44096,
 	"lcName":"lookup form test by keys",
-	"modifiedTime":1759223053275,
+	"modifiedTime":1759223156581,
 	"name":"Lookup Form Test By Keys",
 	"nodes":[
 		{
@@ -38,7 +38,7 @@
 				"resourceName":"callables_from_interface"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RrDve-1",
 			"id":"n_dGKSQ",
@@ -51,22 +51,18 @@
 						"is_optional":true
 					},
 					"properties":{
-						"objects":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{},
-								"additionalProperties":false
-							},
-							"title":"Objects"
+						"response":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Response"
 						}
 					}
 				},
-				"callableInterfaceId":"68db93d18f09e432d7ea8b44",
+				"callableInterfaceId":"682d88d2d19e0b782b8afbe2",
 				"setup":{
 					"required":[
 						"type",
-						"lookupType",
 						"options"
 					],
 					"ua:modal":{
@@ -78,42 +74,16 @@
 							"type":"string",
 							"title":"Type"
 						},
-						"fields":{
+						"keys":{
 							"type":"array",
 							"items":{
 								"type":"string"
 							},
-							"title":"Fields"
-						},
-						"query":{
-							"type":"string",
-							"title":"Query"
+							"title":"Keys"
 						},
 						"lookupType":{
 							"type":"string",
 							"title":"Lookup Type"
-						},
-						"page":{
-							"type":"object",
-							"properties":{
-								"limit":{
-									"type":"integer",
-									"title":"Limit"
-								},
-								"offset":{
-									"type":"integer",
-									"title":"Offset"
-								}
-							},
-							"additionalProperties":false,
-							"title":"Page",
-							"required":[]
-						},
-						"filter":{
-							"type":"object",
-							"properties":{},
-							"additionalProperties":false,
-							"title":"Filter"
 						},
 						"options":{
 							"type":"object",
@@ -127,7 +97,9 @@
 									"title":"Runtime Type"
 								},
 								"runtimeConnections":{
-									"type":"string",
+									"type":"object",
+									"properties":{},
+									"additionalProperties":false,
 									"title":"Runtime Connections"
 								},
 								"timeoutInMillis":{
@@ -146,6 +118,13 @@
 							"required":[
 								"workflowId"
 							]
+						},
+						"fields":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Fields"
 						}
 					}
 				}
@@ -200,13 +179,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RrDve-1",
 			"id":"n_hc1Z2",
 			"index":3,
 			"inputs":{
 				"result":{
+					"response":"{{ n_ZMSAj.outputs.result }}",
 					"objects":{
 						"source":"{{ n_ZMSAj.outputs.result }}",
 						"ua:type":"mappedArray",
@@ -237,5 +217,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
