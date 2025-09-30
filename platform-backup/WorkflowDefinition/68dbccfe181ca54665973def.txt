@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759235326620,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_XHsUM",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_N4g4s",
+			"type":"next"
+		}
+	],
+	"id":"68dbccfe181ca54665973def",
+	"lastModifiedBy":47201,
+	"lcName":"meeting bot recordings",
+	"modifiedTime":1759235326620,
+	"name":"Meeting bot recordings",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_XHsUM-1",
+			"id":"_XHsUM",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_XHsUM-1",
+			"id":"_N4g4s",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":47201,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
