@@ -80,7 +80,7 @@
 	"id":"68d6616471be8d53fc03baaf",
 	"lastModifiedBy":44567,
 	"lcName":"test-nullstr",
-	"modifiedTime":1759246783214,
+	"modifiedTime":1759246853461,
 	"name":"test-nullstr",
 	"nodes":[
 		{
@@ -277,7 +277,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_n1Giy-1",
 			"id":"n_vFVhP",
@@ -298,7 +298,9 @@
 					"required":[]
 				}
 			},
-			"inputs":{},
+			"inputs":{
+				"a":11
+			},
 			"outputSchema":{
 				"dynamic":false,
 				"schema":{
@@ -326,7 +328,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_n1Giy-1",
 			"id":"n_HUD88",
@@ -335,7 +337,7 @@
 				"variables":[
 					{
 						"source":"{{ n_vFVhP.outputs.a }}",
-						"value":"=SUM({{ n_vFVhP.outputs.a }}, 5)"
+						"value":"=({{ n_vFVhP.outputs.a }} & \"cew\" & \"hjnwe\")"
 					},
 					{
 						"source":"",
@@ -518,5 +520,5 @@
 	"tags":[
 		
 	],
-	"version":37
+	"version":38
 }
