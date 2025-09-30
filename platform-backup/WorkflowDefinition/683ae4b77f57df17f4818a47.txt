@@ -1,0 +1,390 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1748757215303,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759243523128,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed035e003e08cdeb2e5f",
+		"status":"DEPLOYED",
+		"version":63,
+		"workflowVersion":95
+	},
+	"edges":[
+		{
+			"fromNodeId":"9nNaS",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"2QgP9",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"2QgP9",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"cOgN9",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"cOgN9",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"jkSRj",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"jkSRj",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"kzx3S",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"kzx3S",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"ugPlh",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"683ae4b77f57df17f4818a47",
+	"lastModifiedBy":-1,
+	"lcName":"ai eval | metrics | cosine similarity",
+	"modifiedTime":1759243558952,
+	"name":"AI Eval | Metrics | Cosine Similarity",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":380,
+				"resourceName":"callables_from_interface"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"e0x7J-1",
+			"id":"9nNaS",
+			"index":0,
+			"inputs":{
+				"result":{
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
+					"properties":{
+						"score":{
+							"type":"number",
+							"title":"Score"
+						},
+						"reason":{
+							"type":"string",
+							"title":"Reason"
+						},
+						"cost":{
+							"type":"number",
+							"title":"Cost"
+						},
+						"latency":{
+							"type":"number",
+							"title":"Latency"
+						},
+						"tokensUsed":{
+							"type":"number",
+							"title":"Tokens Used"
+						}
+					},
+					"required":[]
+				},
+				"callableInterfaceId":"67e2b5d9e1d4f12ce20011f0",
+				"setup":{
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
+					"properties":{
+						"criteria":{
+							"type":"string",
+							"title":"Evaluation Criteria"
+						},
+						"evaluationSteps":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Evaluation Steps"
+						},
+						"model":{
+							"type":"string",
+							"title":"Model"
+						},
+						"evaluationParameters":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Evaluation Parameters"
+						},
+						"testCase":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Test Case"
+						},
+						"scoreRange":{
+							"type":"string",
+							"title":"Scoring Range"
+						},
+						"testCaseId":{
+							"type":"string",
+							"title":"Test Case Id"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger interface",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":565,
+				"resourceName":"utility_by_unifyapps_to_json_object",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"e0x7J-1",
+			"id":"2QgP9",
+			"index":0,
+			"inputs":{
+				"jsonSchema":{
+					"type":"object",
+					"properties":{
+						"testCases":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"EXPECTED_OUTPUT":{
+										"type":"string",
+										"title":"EXPECTED OUTPUT"
+									},
+									"ACTUAL_OUTPUT":{
+										"type":"string",
+										"title":"ACTUAL OUTPUT"
+									}
+								},
+								"additionalProperties":false,
+								"required":[
+									"EXPECTED_OUTPUT",
+									"ACTUAL_OUTPUT"
+								]
+							},
+							"title":"Test Cases"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"testCases"
+					]
+				},
+				"jsonString":"{{ 9nNaS.outputs.testCase }}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Deserialise string to JSON object",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":403,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"e0x7J-1",
+			"id":"cOgN9",
+			"index":0,
+			"inputs":{
+				"automationId":"6784b9216fb83f0972c5625d",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"text_batch":[],
+					"modelId":"{{ 9nNaS.outputs.model }}",
+					"userQuery":"{{ 2QgP9.outputs.result.testCases[0].ACTUAL_OUTPUT }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":403,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"e0x7J-1",
+			"id":"jkSRj",
+			"index":0,
+			"inputs":{
+				"automationId":"6784b9216fb83f0972c5625d",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"modelId":"{{ 9nNaS.outputs.model }}",
+					"userQuery":"{{ 2QgP9.outputs.result.testCases[0].EXPECTED_OUTPUT }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{}
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":393,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"e0x7J-1",
+			"id":"kzx3S",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"cosine_score":{
+							"type":"number",
+							"title":"Cosine Score"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"cosine_score"
+					]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"embeddings1":{
+							"type":"array",
+							"items":{
+								"type":"number"
+							},
+							"title":"Embeddings 1"
+						},
+						"embeddings2":{
+							"type":"array",
+							"items":{
+								"type":"number"
+							},
+							"title":"Embeddings 2"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"embeddings1",
+						"embeddings2"
+					]
+				},
+				"compile_static":false,
+				"code":"def cosineSimilarity(List<Double> a, List<Double> b) {\n    double dotProduct = 0\n    double normA = 0\n    double normB = 0\n\n    for (int i = 0; i < a.size(); i++) {\n        dotProduct += a[i] * b[i]\n        normA += Math.pow(a[i], 2)\n        normB += Math.pow(b[i], 2)\n    }\n    return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB))\n}\n\n\ndef similarity = cosineSimilarity(embeddings1, embeddings2)\n\nreturn [\"cosine_score\": Math.round(similarity*100000)/100000]\n",
+				"parameters":{
+					"embeddings1":{
+						"source":"{{ cOgN9.outputs.embeddings }}",
+						"ua:type":"mappedArray",
+						"items":"{{ cOgN9.outputs.embeddings[0] }}"
+					},
+					"embeddings2":{
+						"source":"{{ jkSRj.outputs.embeddings }}",
+						"ua:type":"mappedArray",
+						"items":"{{ jkSRj.outputs.embeddings[0] }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":395,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"e0x7J-1",
+			"id":"ugPlh",
+			"index":0,
+			"inputs":{
+				"result":{
+					"score":"{{ kzx3S.outputs.result.cosine_score }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":49915,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		
+	],
+	"version":96
+}
