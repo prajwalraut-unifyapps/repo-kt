@@ -6,12 +6,12 @@
 	"createdTime":1759270864433,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759270937701,
+		"deployedAt":1759270949279,
 		"deployedBy":175325,
-		"deployedDefinitionId":"68dc58193b484b11b9ff3d41",
+		"deployedDefinitionId":"68dc582501fee91d6be6d6d9",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":2
+		"version":3,
+		"workflowVersion":3
 	},
 	"edges":[
 		{
@@ -39,7 +39,7 @@
 	"id":"68dc56d04e42fa2f47637107",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa2slack4784233049",
-	"modifiedTime":1759270949207,
+	"modifiedTime":1759270949298,
 	"name":"changeSetQA2Slack4784233049",
 	"nodes":[
 		{
@@ -182,5 +182,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
