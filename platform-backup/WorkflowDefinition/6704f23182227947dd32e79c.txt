@@ -5,16 +5,23 @@
 	"createdTime":1728377393676,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646564701,
+		"deployedAt":1758655386547,
 		"deployedBy":0,
-		"deployedDefinitionId":"68d2d124bd00df618e363d50",
+		"deployedDefinitionId":"68d2f39a38757c179b123b31",
 		"status":"DEPLOYED",
-		"version":69,
-		"workflowVersion":106
+		"version":70,
+		"workflowVersion":107
 	},
 	"edges":[
 		{
 			"fromNodeId":"_53lgk",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_W3wLQ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_W3wLQ",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"53LAF",
@@ -132,6 +139,29 @@
 			"fromNodeId":"n_WPGYu",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_766GO",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_766GO",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_QlBdx",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_QlBdx",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_8sokf",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_766GO",
+			"name":"no",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"_8sokf",
 			"type":"next"
 		}
@@ -147,9 +177,9 @@
 		]
 	},
 	"id":"6704f23182227947dd32e79c",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"generic user rbac detail fetcher",
-	"modifiedTime":1758655386470,
+	"modifiedTime":1759243568443,
 	"name":"Generic User RBAC Detail Fetcher",
 	"nodes":[
 		{
@@ -201,6 +231,10 @@
 								"type":"string"
 							},
 							"title":"Knowledge Set Id"
+						},
+						"parentType":{
+							"type":"string",
+							"title":"Parent Type"
 						}
 					}
 				}
@@ -216,6 +250,57 @@
 		{
 			"context":{
 				"appName":"variable_by_unifyapps",
+				"resourceVersion":458,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_0rMWg-1",
+			"id":"n_W3wLQ",
+			"index":2,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"startTime":{
+							"type":"integer",
+							"title":"Start Time"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"startTime":"=INT((NOW() - DATE(1970,1,1)) * 86400000)"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"startTime":{
+							"type":"integer",
+							"title":"Start Time"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"traceStartTime",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
 				"resourceVersion":220,
 				"resourceName":"variable_by_unifyapps_get_session_variables",
 				"type":"APPLICATION"
@@ -225,10 +310,12 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0rMWg-1",
 			"id":"53LAF",
-			"index":2,
+			"index":3,
 			"inputs":{
 				"variableSchema":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"ai_agent_use_deployed_entity":{
 							"type":"boolean",
@@ -237,10 +324,20 @@
 						"ai_agent_deployed_version":{
 							"type":"integer",
 							"title":"Ai Agent Deployed Version"
+						},
+						"aiAgentId":{
+							"type":"string",
+							"title":"Ai Agent Id"
+						},
+						"caseId":{
+							"type":"string",
+							"title":"Case Id"
+						},
+						"messageId":{
+							"type":"string",
+							"title":"Message Id"
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				}
 			},
 			"skip":false,
@@ -260,7 +357,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0rMWg-1",
 			"id":"n_6NBpe",
-			"index":3,
+			"index":4,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -518,7 +615,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0rMWg-1",
 			"id":"n_c1OTQ",
-			"index":4,
+			"index":5,
 			"inputs":{
 				"filters":[
 					{
@@ -552,7 +649,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_c1OTQ@_0rMWg-1@y",
 			"id":"tzYIA",
-			"index":5,
+			"index":6,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -608,7 +705,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_c1OTQ@_0rMWg-1@y",
 			"id":"ItaHi",
-			"index":6,
+			"index":7,
 			"inputs":{
 				"triggerInputCondition":{
 					"filters":[
@@ -709,7 +806,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_c1OTQ@_0rMWg-1@y",
 			"id":"n_hjoit",
-			"index":7,
+			"index":8,
 			"inputs":{
 				"insertLocation":"END",
 				"itemsToAdd":{
@@ -736,7 +833,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0rMWg-1",
 			"id":"_6Qn6O",
-			"index":8,
+			"index":9,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -992,7 +1089,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0rMWg-1",
 			"id":"_77OSC",
-			"index":9,
+			"index":10,
 			"inputs":{
 				"itemToAdd":"GLOBAL",
 				"insertLocation":"END",
@@ -1015,10 +1112,14 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0rMWg-1",
 			"id":"n_OwC4Y",
-			"index":10,
+			"index":11,
 			"inputs":{
 				"output":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"knowledgeLevelRbacApps"
+					],
 					"properties":{
 						"knowledgeLevelRbacApps":{
 							"type":"array",
@@ -1027,14 +1128,11 @@
 							},
 							"title":"Knowledge Level Rbac Apps"
 						}
-					},
-					"additionalProperties":false,
-					"required":[
-						"knowledgeLevelRbacApps"
-					]
+					}
 				},
+				"code":"def appNames = [\"microsoft_teams\"]\n\nreturn [\"knowledgeLevelRbacApps\": appNames]",
 				"compile_static":false,
-				"code":"def appNames = [\"microsoft_teams\"]\n\nreturn [\"knowledgeLevelRbacApps\": appNames]"
+				"captureStdOutput":false
 			},
 			"skip":false,
 			"subTitle":"Knowledge Level RBAC Apps",
@@ -1053,7 +1151,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0rMWg-1",
 			"id":"n_5K6lU",
-			"index":11,
+			"index":12,
 			"inputs":{
 				"repeatMode":"BATCH",
 				"listSource":"{{ n_6NBpe.outputs.items }}",
@@ -1077,7 +1175,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_5K6lU@_0rMWg-1@l",
 			"id":"n_5rrWY",
-			"index":12,
+			"index":13,
 			"inputs":{
 				"automationId":"68bc29147b3f397105eafea2",
 				"runtimeConnections":{},
@@ -1120,7 +1218,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_5K6lU@_0rMWg-1@l",
 			"id":"_YT1HR",
-			"index":13,
+			"index":14,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -1161,6 +1259,7 @@
 				},
 				"code":"def allSharedWithIds\ndef uniqueSharedWithIds = []\n\nif(binding.hasVariable('result')){\n    allSharedWithIds = result.collectMany { it.sharedWithIds ?: [] }\n    uniqueSharedWithIds = allSharedWithIds.toSet().toList()\n}\n\nreturn [\"uniqueSharedWithIds\": uniqueSharedWithIds]",
 				"compile_static":false,
+				"captureStdOutput":false,
 				"parameters":{
 					"result":{
 						"source":"{{ n_5rrWY.outputs.result }}",
@@ -1192,7 +1291,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_5K6lU@_0rMWg-1@l",
 			"id":"n_YmANb",
-			"index":14,
+			"index":15,
 			"inputs":{
 				"insertLocation":"END",
 				"itemsToAdd":{
@@ -1224,7 +1323,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0rMWg-1",
 			"id":"n_WPGYu",
-			"index":15,
+			"index":16,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -1256,6 +1355,7 @@
 				},
 				"code":"def uniqueSharedWithIds = []\n\nif (binding.hasVariable('sharedWithIds')) {\n    uniqueSharedWithIds = (sharedWithIds as Set).toList()\n}\n\nreturn [\"uniqueSharedWithIds\": uniqueSharedWithIds]\n",
 				"compile_static":false,
+				"captureStdOutput":false,
 				"parameters":{
 					"sharedWithIds":{
 						"source":"{{ _6Qn6O.outputs.items }}",
@@ -1271,6 +1371,126 @@
 		},
 		{
 			"context":{
+				"appName":"if_else",
+				"resourceVersion":439,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_0rMWg-1",
+			"id":"n_766GO",
+			"index":17,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ _53lgk.outputs.parentType }}",
+						"filter":{
+							"operator":"EXISTS"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":467,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"CONTINUE",
+			"groupId":"n_766GO@_0rMWg-1@y",
+			"id":"n_QlBdx",
+			"index":18,
+			"inputs":{
+				"automationId":"68c51597269ad81cc750a3ca",
+				"runtimeConnections":{},
+				"synchronous":false,
+				"triggerWorkflowWithRuntimeType":"IN_MEMORY",
+				"version":"-1",
+				"parameters":{
+					"caseId":"{{ 53LAF.outputs.caseId }}",
+					"aiAgentId":"{{ 53LAF.outputs.aiAgentId }}",
+					"executionInstanceId":"{{ __RUN__.outputs.executionId }}",
+					"parent":"{{ _53lgk.outputs.parentType }}",
+					"messageId":"{{ 53LAF.outputs.messageId }}",
+					"llmTimeTaken":"=INT((NOW() - DATE(1970,1,1)) * 86400000)-{{ n_W3wLQ.outputs.startTime }}",
+					"input":"{{ _53lgk.outputs }}",
+					"currentType":"RBAC Permissions",
+					"rootExecutionId":"{{ __RUN__.outputs.rootExecutionId }}",
+					"parentExecutionId":"{{ __RUN__.outputs.parentExecutionId }}",
+					"userId":"=IF(ISNUMBER({{ __RUN__.outputs.userId }}), {{ __RUN__.outputs.userId }}, 0)",
+					"fromAutomationId":"{{ __RUN__.outputs.workflowId }}",
+					"startTime":"{{ n_W3wLQ.outputs.startTime }}",
+					"success":true
+				}
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"global":false
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"CONTINUE",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Capture Trace",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
 				"appName":"callables",
 				"resourceVersion":50,
 				"resourceName":"callables_return_to_automation",
@@ -1281,7 +1501,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0rMWg-1",
 			"id":"_8sokf",
-			"index":16,
+			"index":19,
 			"inputs":{
 				"result":{
 					"sharedWithIds":{
@@ -1315,5 +1535,5 @@
 		"AI Agent",
 		"RBAC"
 	],
-	"version":107
+	"version":108
 }
