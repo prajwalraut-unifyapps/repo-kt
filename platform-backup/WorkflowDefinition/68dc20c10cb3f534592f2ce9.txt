@@ -37,7 +37,7 @@
 	"id":"68dc20c10cb3f534592f2ce9",
 	"lastModifiedBy":1246,
 	"lcName":"checfigmaakshat",
-	"modifiedTime":1759261446652,
+	"modifiedTime":1759261492017,
 	"name":"checfigmaAkshat",
 	"nodes":[
 		{
@@ -69,7 +69,7 @@
 			"context":{
 				"appName":"figma",
 				"resourceVersion":3539,
-				"connectionId":"671138a600fb511f1b354fdd",
+				"connectionId":"68dc23a9eb879d41b103b70c",
 				"resourceName":"figma_get_file",
 				"type":"APPLICATION"
 			},
@@ -167,5 +167,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
