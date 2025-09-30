@@ -5,12 +5,12 @@
 	"createdTime":1758530301469,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655335879,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f36738757c179b123283",
+		"deployedAt":1759243524719,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed0423e6682b9a51eab3",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":14
+		"version":3,
+		"workflowVersion":15
 	},
 	"edges":[
 		{
@@ -84,7 +84,7 @@
 	"id":"6881f669423c70d0f4f1d3f1",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge downloader | hubspot | index contacts [new indexing flow]",
-	"modifiedTime":1759243524621,
+	"modifiedTime":1759243560269,
 	"name":"Knowledge Downloader | Hubspot | Index contacts [New Indexing Flow]",
 	"nodes":[
 		{
@@ -503,5 +503,5 @@
 	"tags":[
 		"knowledge_v2"
 	],
-	"version":15
+	"version":16
 }
