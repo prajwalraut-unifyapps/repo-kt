@@ -5,12 +5,12 @@
 	"createdTime":1743575646793,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646555046,
+		"deployedAt":1758655376735,
 		"deployedBy":0,
-		"deployedDefinitionId":"68d2d11bbd00df618e363d2c",
+		"deployedDefinitionId":"68d2f39038757c179b123990",
 		"status":"DEPLOYED",
-		"version":26,
-		"workflowVersion":39
+		"version":27,
+		"workflowVersion":40
 	},
 	"edges":[
 		{
@@ -103,9 +103,9 @@
 		]
 	},
 	"id":"67eb5834d10e187ea2b0870e",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"[shortcut] get story/epic sharedwithids",
-	"modifiedTime":1758655376648,
+	"modifiedTime":1759243560518,
 	"name":"[Shortcut] Get Story/Epic SharedWithIds",
 	"nodes":[
 		{
@@ -762,5 +762,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":40
+	"version":41
 }
