@@ -5,12 +5,12 @@
 	"createdTime":1742365404821,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655358663,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f37e38757c179b12366e",
+		"deployedAt":1759243545272,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed195e003e08cdeb2ea1",
 		"status":"DEPLOYED",
-		"version":25,
-		"workflowVersion":49
+		"version":26,
+		"workflowVersion":50
 	},
 	"edges":[
 		{
@@ -70,7 +70,7 @@
 	"id":"67da62dc19f17e42c3bdf4cc",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | asana | index workspace",
-	"modifiedTime":1759243545197,
+	"modifiedTime":1759243578423,
 	"name":"knowledge Indexer | Asana | Index workspace",
 	"nodes":[
 		{
@@ -400,5 +400,5 @@
 		}
 	},
 	"standard":true,
-	"version":50
+	"version":51
 }
