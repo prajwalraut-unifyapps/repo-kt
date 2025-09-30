@@ -16,14 +16,30 @@
 			"fromNodeId":"n_7doD3",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_NxN8V",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_NxN8V",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_ES15y",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_NxN8V",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_qR7BK",
 			"type":"next"
 		}
 	],
 	"id":"68db77aacdaf6406f025cbae",
 	"lastModifiedBy":44105,
 	"lcName":"dp-func-fusionintg-prod-sa",
-	"modifiedTime":1759227664997,
+	"modifiedTime":1759227778138,
 	"name":"dp-func-fusionintg-prod-sa",
 	"nodes":[
 		{
@@ -33,7 +49,7 @@
 				"resourceName":"callables_from_api"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_nz9mE-1",
 			"id":"n_zWwTH",
@@ -46,6 +62,17 @@
 				"response":[
 					{
 						"status":200,
+						"contentType":"application/json",
+						"textBody":{
+							"type":"string"
+						},
+						"body":{
+							"type":"object"
+						},
+						"namespaces":[]
+					},
+					{
+						"status":400,
 						"contentType":"application/json",
 						"textBody":{
 							"type":"string"
@@ -74,7 +101,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_nz9mE-1",
 			"id":"n_7doD3",
@@ -85,11 +112,9 @@
 					"additionalProperties":false,
 					"required":[],
 					"properties":{
-						"result":{
-							"type":"object",
-							"properties":{},
-							"additionalProperties":false,
-							"title":"Result"
+						"status":{
+							"type":"integer",
+							"title":"Status"
 						}
 					}
 				},
@@ -129,6 +154,36 @@
 		},
 		{
 			"context":{
+				"appName":"if_else",
+				"resourceVersion":773,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_nz9mE-1",
+			"id":"n_NxN8V",
+			"index":3,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_7doD3.outputs.result.status }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"200"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
 				"appName":"callables",
 				"resourceVersion":917,
 				"resourceName":"callables_return_response_to_api",
@@ -137,13 +192,37 @@
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
-			"groupId":"_nz9mE-1",
+			"groupId":"n_NxN8V@_nz9mE-1@y",
 			"id":"n_ES15y",
-			"index":3,
+			"index":4,
 			"inputs":{
 				"streamingCompleted":true,
 				"responseName":"200_undefined",
 				"body":"{{ n_7doD3.outputs.result }}",
+				"status":200
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to API request",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":917,
+				"resourceName":"callables_return_response_to_api",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_NxN8V@_nz9mE-1@n",
+			"id":"_qR7BK",
+			"index":5,
+			"inputs":{
+				"streamingCompleted":true,
+				"responseName":"200_undefined",
+				"body":"",
 				"status":200
 			},
 			"skip":false,
@@ -169,5 +248,5 @@
 	"tags":[
 		"virtusa"
 	],
-	"version":23
+	"version":24
 }
