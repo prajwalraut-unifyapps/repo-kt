@@ -6,46 +6,89 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_JMTOx",
+			"fromNodeId":"n_JsthS",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_LENiJ",
+			"toNodeId":"n_AfT3c",
 			"type":"next"
 		}
 	],
 	"id":"68db8d65f5554f0164216954",
 	"lastModifiedBy":175325,
 	"lcName":"excelformulaslocalnocoicftqi",
-	"modifiedTime":1759219045906,
+	"modifiedTime":1759219056794,
 	"name":"ExcelFormulasLocalnOCoICFTqi",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":881,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_JMTOx-1",
-			"id":"_JMTOx",
-			"index":0,
+			"id":"n_JsthS",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"r":{
+							"type":"string",
+							"title":"r"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"a":{
+							"type":"string",
+							"title":"a"
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":898,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_JMTOx-1",
-			"id":"_LENiJ",
-			"index":0,
+			"id":"n_AfT3c",
+			"index":2,
+			"inputs":{
+				"result":{
+					"r":"=NOW()"
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":175325,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +102,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
