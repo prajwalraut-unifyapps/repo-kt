@@ -5,12 +5,12 @@
 	"createdTime":1756732847700,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646523725,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2d0fbbd00df618e363cd2",
+		"deployedAt":1759243532830,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed0c23e6682b9a51eac6",
 		"status":"DEPLOYED",
-		"version":13,
-		"workflowVersion":28
+		"version":15,
+		"workflowVersion":30
 	},
 	"edges":[
 		{
@@ -46,9 +46,9 @@
 		]
 	},
 	"id":"689aed17aebbc06353598193",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"trigger preview interface (canvas)",
-	"modifiedTime":1758655345268,
+	"modifiedTime":1759243567621,
 	"name":"Trigger Preview Interface (Canvas)",
 	"nodes":[
 		{
@@ -71,19 +71,21 @@
 			"inputs":{
 				"result":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"success"
+					],
 					"properties":{
 						"success":{
 							"type":"boolean",
 							"title":"Success"
 						}
-					},
-					"additionalProperties":false,
-					"required":[
-						"success"
-					]
+					}
 				},
 				"setup":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"caseId":{
 							"type":"string",
@@ -164,6 +166,10 @@
 														"required":[]
 													},
 													"title":"Events"
+												},
+												"size":{
+													"type":"string",
+													"title":"Size"
 												}
 											},
 											"title":"props",
@@ -230,9 +236,7 @@
 							"additionalProperties":false,
 							"required":[]
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				}
 			},
 			"skip":false,
@@ -298,6 +302,7 @@
 								"interfacePageSlug":"{{ _W9xca.outputs.previewDetails.canvas.props.interfacePageSlug }}",
 								"pageInputs":"{{ _W9xca.outputs.previewDetails.canvas.props.pageInputs }}",
 								"src":"{{ _W9xca.outputs.previewDetails.canvas.props.src }}",
+								"size":"{{ _W9xca.outputs.previewDetails.canvas.props.size }}",
 								"events":{
 									"source":"{{ _W9xca.outputs.previewDetails.canvas.props.events }}",
 									"ua:type":"mappedArray",
@@ -371,5 +376,5 @@
 		}
 	},
 	"standard":true,
-	"version":29
+	"version":31
 }
