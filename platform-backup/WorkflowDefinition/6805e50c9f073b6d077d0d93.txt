@@ -5,12 +5,12 @@
 	"createdTime":1750490574024,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646563460,
+		"deployedAt":1758655385519,
 		"deployedBy":0,
-		"deployedDefinitionId":"68d2d123db1a4411eeae8325",
+		"deployedDefinitionId":"68d2f39938757c179b123b07",
 		"status":"DEPLOYED",
-		"version":25,
-		"workflowVersion":59
+		"version":26,
+		"workflowVersion":60
 	},
 	"edges":[
 		{
@@ -217,9 +217,9 @@
 		]
 	},
 	"id":"6805e50c9f073b6d077d0d93",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | zoho invoice | index recurring invoices",
-	"modifiedTime":1758655385355,
+	"modifiedTime":1759243567460,
 	"name":"Knowledge Indexer | Zoho Invoice | Index Recurring Invoices",
 	"nodes":[
 		{
@@ -1564,5 +1564,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":60
+	"version":61
 }
