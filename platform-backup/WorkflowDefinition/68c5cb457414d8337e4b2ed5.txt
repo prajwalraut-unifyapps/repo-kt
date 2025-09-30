@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759243519520,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759243519614,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbecff5e003e08cdeb2e56",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":19
+	},
 	"edges":[
 		{
 			"fromNodeId":"Oksdr",
@@ -186,7 +194,7 @@
 	"id":"68c5cb457414d8337e4b2ed5",
 	"lastModifiedBy":-1,
 	"lcName":"[mcp server] request processor for agent mcp",
-	"modifiedTime":1759243519520,
+	"modifiedTime":1759243555657,
 	"name":"[MCP Server] Request Processor for Agent MCP",
 	"nodes":[
 		{
@@ -1127,5 +1135,5 @@
 	"tags":[
 		"MCP Server"
 	],
-	"version":19
+	"version":20
 }
