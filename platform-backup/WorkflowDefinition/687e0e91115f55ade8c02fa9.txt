@@ -5,12 +5,12 @@
 	"createdTime":1756411294921,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655309679,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f34d38757c179b122e5a",
+		"deployedAt":1759243501635,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbeced9213d707c2d2727b",
 		"status":"DEPLOYED",
-		"version":25,
-		"workflowVersion":44
+		"version":26,
+		"workflowVersion":45
 	},
 	"edges":[
 		{
@@ -69,7 +69,7 @@
 	"id":"687e0e91115f55ade8c02fa9",
 	"lastModifiedBy":-1,
 	"lcName":"deep research (workflow agent)",
-	"modifiedTime":1759243501569,
+	"modifiedTime":1759243540875,
 	"name":"Deep Research (Workflow Agent)",
 	"nodes":[
 		{
@@ -358,5 +358,5 @@
 	"tags":[
 		
 	],
-	"version":45
+	"version":46
 }
