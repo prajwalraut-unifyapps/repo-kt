@@ -11,12 +11,19 @@
 			"skip":false,
 			"toNodeId":"n_kRmib",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_kRmib",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_fY7jI",
+			"type":"next"
 		}
 	],
 	"id":"68dba90d93dd1b05dca28085",
 	"lastModifiedBy":185583,
 	"lcName":"task_pm_check",
-	"modifiedTime":1759228344789,
+	"modifiedTime":1759228438249,
 	"name":"Task_PM_Check",
 	"nodes":[
 		{
@@ -150,6 +157,30 @@
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Javascript",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":901,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_0z2vL-1",
+			"id":"n_fY7jI",
+			"index":3,
+			"inputs":{
+				"result":{
+					"message":"{{ n_kRmib.outputs.result.message }}",
+					"flag":"{{ n_kRmib.outputs.result.flag }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":185583,
@@ -169,5 +200,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
