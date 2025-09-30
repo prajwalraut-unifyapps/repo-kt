@@ -32,19 +32,12 @@
 			"skip":false,
 			"toNodeId":"GIKeN",
 			"type":"next"
-		},
-		{
-			"fromNodeId":"GIKeN",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_IILQ8",
-			"type":"next"
 		}
 	],
 	"id":"68db7b851ef9aa7d26781da5",
 	"lastModifiedBy":155341,
 	"lcName":"tesatpptpdf",
-	"modifiedTime":1759219458279,
+	"modifiedTime":1759219797927,
 	"name":"tesatpptpdf",
 	"nodes":[
 		{
@@ -54,7 +47,7 @@
 				"resourceName":"schedule_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Ssznf-1",
 			"id":"n_G7hjk",
@@ -86,7 +79,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Ssznf-1",
 			"id":"n_vv6NA",
@@ -202,7 +195,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Ssznf-1",
 			"id":"n_Aao7i",
@@ -321,7 +314,7 @@
 						}
 					}
 				},
-				"jsonString":"{\n\"pipeline\": [\n{ \"$project\": { \"affiliateCode\": 1, \"response\": 1 } }\n]\n}"
+				"jsonString":"{\n  \"pipeline\": [\n    {\n      \"$project\": {\n        \"_id\": 0,\n        \"firstName\": 1,\n        \"lastName\": 1,\n        \"email\": 1,\n        \"telephone\": 1\n      }\n    },\n    {\n      \"$limit\": 200\n    }\n  ]\n}"
 			},
 			"skip":false,
 			"subTitle":"Utility by UnifyApps",
@@ -337,7 +330,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Ssznf-1",
 			"id":"GIKeN",
@@ -403,479 +396,6 @@
 			"subTitle":"Commitment Response",
 			"title":"Aggregate documents in MongoDB collection",
 			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"mongo",
-				"resourceVersion":5355,
-				"connectionId":"67592611b73f613be2e69429",
-				"resourceName":"mongodb_find_documents",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_Ssznf-1",
-			"id":"n_IILQ8",
-			"index":6,
-			"inputs":{
-				"document_schema":{
-					"type":"object",
-					"properties":{
-						"addresses":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"id":{
-										"type":"integer"
-									},
-									"firstName":{
-										"type":"string"
-									},
-									"lastName":{
-										"type":"string"
-									},
-									"phone":{
-										"type":"string"
-									},
-									"phoneCode":{
-										"type":"string"
-									},
-									"email":{
-										"type":"string"
-									},
-									"addressLabel":{
-										"type":"string"
-									},
-									"addressline1":{
-										"type":"string"
-									},
-									"addressline2":{
-										"type":"string"
-									},
-									"city":{
-										"type":"string"
-									},
-									"lkCountry":{
-										"type":"string"
-									},
-									"floor":{
-										"type":"integer"
-									},
-									"liftAvailable":{
-										"type":"boolean"
-									},
-									"state":{
-										"type":"string"
-									},
-									"postcode":{
-										"type":"string"
-									},
-									"country":{
-										"type":"string"
-									},
-									"created":{
-										"type":"string"
-									},
-									"updated":{
-										"type":"string"
-									},
-									"locality":{
-										"type":"string"
-									},
-									"gender":{
-										"type":"string"
-									},
-									"latitude":{
-										"type":"number"
-									},
-									"longitude":{
-										"type":"number"
-									},
-									"isClarityAddress":{
-										"type":"boolean"
-									}
-								}
-							}
-						},
-						"walletUnlockNeeded":{
-							"type":"boolean"
-						},
-						"isActive":{
-							"type":"boolean"
-						},
-						"type":{
-							"type":"string"
-						},
-						"passwordHash":{
-							"type":"string"
-						},
-						"hasPlacedOfflineOrder":{
-							"type":"boolean"
-						},
-						"lastInventoryRefreshedDate":{
-							"type":"string"
-						},
-						"monthlyLoyaltyOrderCount":{
-							"type":"integer"
-						},
-						"loyaltyOrderCountLastUpdatedMonth":{
-							"type":"integer"
-						},
-						"isTelephoneVerified":{
-							"type":"boolean"
-						},
-						"lastActiveCartMap":{
-							"type":"object"
-						},
-						"hasPlacedOrder":{
-							"type":"boolean"
-						},
-						"group":{
-							"type":"integer"
-						},
-						"walletId":{
-							"type":"string"
-						},
-						"searches":{
-							"type":"array"
-						},
-						"rpToken":{
-							"type":"string"
-						},
-						"autogroupchange":{
-							"type":"boolean"
-						},
-						"created":{
-							"type":"string"
-						},
-						"loyaltyOrderCount":{
-							"type":"integer"
-						},
-						"telephone":{
-							"type":"string"
-						},
-						"tierLabel":{
-							"type":"string"
-						},
-						"confirmation":{
-							"type":"boolean"
-						},
-						"version":{
-							"type":"integer"
-						},
-						"linkedProfiles":{
-							"type":"array"
-						},
-						"firstName":{
-							"type":"string"
-						},
-						"walletCreationDate":{
-							"type":"string"
-						},
-						"tierName":{
-							"type":"string"
-						},
-						"monthlyOrderCount":{
-							"type":"object",
-							"properties":{
-								"2024-02":{
-									"type":"integer"
-								}
-							}
-						},
-						"_id":{
-							"type":"string"
-						},
-						"dailyOrderCount":{
-							"type":"object",
-							"properties":{
-								"2024-02-20":{
-									"type":"integer"
-								}
-							}
-						},
-						"linkedCustomers":{
-							"type":"array"
-						},
-						"updated":{
-							"type":"string"
-						},
-						"lastName":{
-							"type":"string"
-						},
-						"hasPlacedHtoOrder":{
-							"type":"boolean"
-						},
-						"tiers":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"name":{
-										"type":"string"
-									},
-									"startDate":{
-										"type":"string"
-									},
-									"expiryDate":{
-										"type":"string"
-									},
-									"isActive":{
-										"type":"boolean"
-									},
-									"usage":{
-										"type":"object",
-										"properties":{
-											"monthlyCount":{
-												"type":"object",
-												"properties":{
-													"2023-02":{
-														"type":"integer"
-													},
-													"2024-02":{
-														"type":"integer"
-													}
-												}
-											},
-											"yearlyCount":{
-												"type":"object",
-												"properties":{
-													"2023":{
-														"type":"integer"
-													},
-													"2024":{
-														"type":"integer"
-													}
-												}
-											},
-											"totalPurchase":{
-												"type":"object",
-												"properties":{
-													"value":{
-														"type":"string"
-													},
-													"currencyCode":{
-														"type":"string"
-													}
-												}
-											},
-											"benefits":{
-												"type":"object",
-												"properties":{
-													"value":{
-														"type":"string"
-													},
-													"currencyCode":{
-														"type":"string"
-													}
-												}
-											},
-											"usageCount":{
-												"type":"integer"
-											},
-											"appliedOnOrderIds":{
-												"type":"object"
-											}
-										}
-									},
-									"activeMembershipId":{
-										"type":"string"
-									},
-									"membershipAvailLogs":{
-										"type":"array",
-										"items":{
-											"type":"object",
-											"properties":{
-												"membershipId":{
-													"type":"string"
-												},
-												"availDate":{
-													"type":"string"
-												},
-												"startDate":{
-													"type":"string"
-												},
-												"expiryDate":{
-													"type":"string"
-												},
-												"duration":{
-													"type":"integer"
-												},
-												"count":{
-													"type":"integer"
-												}
-											}
-										}
-									},
-									"upgradedFromMemberships":{
-										"type":"array"
-									}
-								}
-							}
-						},
-						"gender":{
-							"type":"string"
-						},
-						"juspayCustomerId":{
-							"type":"string"
-						},
-						"syncedToD365":{
-							"type":"boolean"
-						},
-						"dittos":{
-							"type":"array",
-							"items":{
-								"type":"string"
-							}
-						},
-						"walletCreationSource":{
-							"type":"string"
-						},
-						"loyaltyExpiryDate":{
-							"type":"string"
-						},
-						"activeCartShippingAddressId":{
-							"type":"integer"
-						},
-						"phoneCode":{
-							"type":"string"
-						},
-						"lkCountry":{
-							"type":"string"
-						},
-						"email":{
-							"type":"string"
-						},
-						"hasPlacedOnlineOrder":{
-							"type":"boolean"
-						},
-						"isWhatsappConsented":{
-							"type":"boolean"
-						},
-						"loyaltyStartDate":{
-							"type":"string"
-						},
-						"isWalletVerified":{
-							"type":"boolean"
-						},
-						"yearlyLoyaltyOrderCount":{
-							"type":"integer"
-						},
-						"store":{
-							"type":"integer"
-						},
-						"emailVerificationStatus":{
-							"type":"string"
-						},
-						"marketingSubscription":{
-							"type":"object",
-							"properties":{
-								"email":{
-									"type":"boolean"
-								},
-								"pushNotification":{
-									"type":"boolean"
-								},
-								"sms":{
-									"type":"boolean"
-								},
-								"whatsapp":{
-									"type":"boolean"
-								}
-							}
-						},
-						"isLoyalty":{
-							"type":"boolean"
-						},
-						"websiteid":{
-							"type":"integer"
-						},
-						"groupMap":{
-							"type":"object",
-							"properties":{
-								"310198643":{
-									"type":"object",
-									"properties":{
-										"groupName":{
-											"type":"string"
-										},
-										"expriryDate":{
-											"type":"string"
-										},
-										"startDate":{
-											"type":"string"
-										}
-									}
-								}
-							}
-						},
-						"customerIdsWithTelephone":{
-							"type":"array"
-						},
-						"faceAnalysis":{
-							"type":"object",
-							"properties":{
-								"sessionId":{
-									"type":"string"
-								},
-								"frameWidth":{
-									"type":"number"
-								},
-								"pd":{
-									"type":"number"
-								},
-								"faceShape":{
-									"type":"string"
-								},
-								"imageUrl":{
-									"type":"string"
-								},
-								"faceWidth":{
-									"type":"number"
-								},
-								"eyeglass":{
-									"type":"object",
-									"properties":{
-										"name":{
-											"type":"string"
-										},
-										"filterId":{
-											"type":"string"
-										}
-									}
-								},
-								"sunglass":{
-									"type":"object",
-									"properties":{
-										"name":{
-											"type":"string"
-										},
-										"filterId":{
-											"type":"string"
-										}
-									}
-								}
-							}
-						},
-						"customerOrderClassifications":{
-							"type":"array",
-							"items":{
-								"type":"string"
-							}
-						}
-					}
-				},
-				"objectSourceResourceName":"mongodb_fetch_collection_information",
-				"limit":10,
-				"skip":0,
-				"objectId":"testLoadCollection"
-			},
-			"skip":false,
-			"subTitle":"MongoDB",
-			"title":"Find documents",
-			"type":"ACTION"
 		}
 	],
 	"ownerUserId":155543,
@@ -895,5 +415,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
