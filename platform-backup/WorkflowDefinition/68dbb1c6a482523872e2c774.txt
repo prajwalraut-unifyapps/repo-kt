@@ -6,46 +6,106 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_cwUBA",
+			"fromNodeId":"n_2BA5U",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_1KhnV",
+			"toNodeId":"n_Yncda",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Yncda",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_ICKB3",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_ICKB3",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Yncda",
 			"type":"next"
 		}
 	],
 	"id":"68dbb1c6a482523872e2c774",
 	"lastModifiedBy":168826,
 	"lcName":"test-currency",
-	"modifiedTime":1759228358243,
+	"modifiedTime":1759228499082,
 	"name":"test-currency",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":816,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_cwUBA-1",
-			"id":"_cwUBA",
-			"index":0,
+			"id":"n_2BA5U",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"csv_by_unifyapps",
+				"resourceVersion":813,
+				"resourceName":"csv_by_unifyapps_for_each_row_or_rows",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_cwUBA-1",
-			"id":"_1KhnV",
-			"index":0,
+			"id":"n_Yncda",
+			"index":2,
+			"inputs":{
+				"startFromRow":1,
+				"headerRow":true,
+				"columns":[
+					"label",
+					"countries.label",
+					"countries.value"
+				],
+				"delimiter":",",
+				"batch":false,
+				"encoding":"UTF-8",
+				"batchSize":100
+			},
+			"skip":false,
+			"subTitle":"CSV by UnifyApps",
+			"title":"Consume data from CSV file",
+			"type":"LOOP"
+		},
+		{
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_Yncda@_cwUBA-1@l",
+			"id":"n_ICKB3",
+			"index":3,
 			"skip":false,
 			"title":"Select an app and action",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":168826,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +119,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
