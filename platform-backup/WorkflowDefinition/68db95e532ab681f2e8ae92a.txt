@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759221221309,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759221273732,
+		"deployedBy":21056,
+		"deployedDefinitionId":"68db961932ab681f2e8af00e",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_waU5x",
@@ -23,7 +31,7 @@
 	"id":"68db95e532ab681f2e8ae92a",
 	"lastModifiedBy":21056,
 	"lcName":"new video",
-	"modifiedTime":1759221271707,
+	"modifiedTime":1759221376892,
 	"name":"new video",
 	"nodes":[
 		{
@@ -33,7 +41,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_cVfc8-1",
 			"id":"n_waU5x",
@@ -80,7 +88,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_cVfc8-1",
 			"id":"n_0KWSv",
@@ -102,7 +110,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_cVfc8-1",
 			"id":"n_kqP94",
@@ -126,8 +134,10 @@
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
 		"enableVariableLogging":true,
+		"nodeLogLevel":"ERROR",
 		"route":{
 			"default":false,
+			"headerValueTierMap":{},
 			"tierName":"global"
 		}
 	},
@@ -135,5 +145,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
