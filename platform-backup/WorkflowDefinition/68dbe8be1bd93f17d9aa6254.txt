@@ -1,51 +1,83 @@
 {
 	"appsUsed":[
-		
+		"gmail"
 	],
 	"createdTime":1759242430527,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_oKLjG",
+			"fromNodeId":"n_HIJXc",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_W8BCa",
+			"toNodeId":"n_plNsj",
 			"type":"next"
 		}
 	],
 	"id":"68dbe8be1bd93f17d9aa6254",
 	"lastModifiedBy":569,
 	"lcName":"test-scheduler-connection-deletion",
-	"modifiedTime":1759242430527,
+	"modifiedTime":1759243004282,
 	"name":"test-scheduler-connection-deletion",
 	"nodes":[
 		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":814,
+				"resourceName":"schedule_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_oKLjG-1",
-			"id":"_oKLjG",
-			"index":0,
+			"id":"n_HIJXc",
+			"index":1,
+			"inputs":{
+				"cron":"INTERVAL",
+				"sequential":false,
+				"interval":1,
+				"frequency":"MINUTES"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Schedule",
+			"title":"New recurring event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"SCHEDULED"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"gmail",
+				"resourceVersion":5486,
+				"connectionId":"671b4c43acef2908c66209a7",
+				"resourceName":"gmail_send_email",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_oKLjG-1",
-			"id":"_W8BCa",
-			"index":0,
+			"id":"n_plNsj",
+			"index":2,
+			"inputs":{
+				"email_type":"text",
+				"subject":"Test",
+				"to":{
+					"items":"krishan.goyal@unifyapps.com",
+					"ua:type":"mappedArray"
+				},
+				"message":"Hi"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Gmail",
+			"title":"Send email",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":569,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +91,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
