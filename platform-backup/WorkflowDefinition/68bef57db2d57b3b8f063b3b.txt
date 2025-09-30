@@ -5,12 +5,12 @@
 	"createdTime":1757528314282,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646532677,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2d104db1a4411eeae82c1",
+		"deployedAt":1759243541702,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed1523e6682b9a51eaf8",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":54
+		"version":4,
+		"workflowVersion":56
 	},
 	"edges":[
 		{
@@ -118,9 +118,9 @@
 		]
 	},
 	"id":"68bef57db2d57b3b8f063b3b",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"knowledge downloader | onedrive | file",
-	"modifiedTime":1758655354788,
+	"modifiedTime":1759243575365,
 	"name":"Knowledge Downloader | OneDrive | File",
 	"nodes":[
 		{
@@ -864,5 +864,5 @@
 	"tags":[
 		"knowledge_v2"
 	],
-	"version":55
+	"version":57
 }
