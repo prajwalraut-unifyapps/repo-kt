@@ -1,0 +1,2067 @@
+{
+	"appsUsed":[
+		"storage_by_unifyapps"
+	],
+	"createdTime":1750512893638,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758655333858,
+		"deployedBy":0,
+		"deployedDefinitionId":"68d2f36538757c179b123230",
+		"status":"DEPLOYED",
+		"version":49,
+		"workflowVersion":65
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_3J1zl",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_t0RWK",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_t0RWK",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_pWL3r",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_pWL3r",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_kLBJI",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_kLBJI",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_lRR0q",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_lRR0q",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_YFVmu",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_YFVmu",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_4k4Hk",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_YFVmu",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Ls7GP",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Ls7GP",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_LI9X6",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_LI9X6",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_L68cP",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"6853f632c629c934b666a01d",
+	"lastModifiedBy":-1,
+	"lcName":"load case",
+	"modifiedTime":1759243522824,
+	"name":"Load Case",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":444,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Z5w6u-1",
+			"id":"n_3J1zl",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"id":{
+							"type":"string",
+							"title":"id"
+						},
+						"entityType":{
+							"type":"string",
+							"title":"entityType"
+						},
+						"properties":{
+							"type":"object",
+							"properties":{
+								"fromCustomerUserId":{
+									"type":"string",
+									"title":"fromCustomerUserId"
+								},
+								"priority":{
+									"type":"string",
+									"title":"priority"
+								},
+								"status":{
+									"type":"string",
+									"title":"status"
+								},
+								"toCustomerUserId":{
+									"type":"string",
+									"title":"toCustomerUserId"
+								},
+								"sentiment":{
+									"type":"string",
+									"title":"sentiment"
+								},
+								"csat":{
+									"type":"string",
+									"title":"csat"
+								},
+								"requiredSkills":{
+									"type":"array",
+									"items":{
+										"type":"object",
+										"properties":{
+											"skill":{
+												"type":"string",
+												"title":"skill"
+											},
+											"skillCategory":{
+												"type":"string",
+												"title":"skillCategory"
+											},
+											"op":{
+												"type":"string",
+												"title":"op"
+											}
+										},
+										"additionalProperties":false
+									},
+									"title":"requiredSkills"
+								},
+								"subject":{
+									"type":"string",
+									"title":"subject"
+								},
+								"caseNum":{
+									"type":"integer",
+									"title":"caseNum"
+								},
+								"language":{
+									"type":"string",
+									"title":"language"
+								},
+								"lastInteractionTime":{
+									"type":"integer",
+									"title":"lastInteractionTime"
+								},
+								"channelName":{
+									"type":"string",
+									"title":"channelName"
+								},
+								"customProperties":{
+									"type":"object",
+									"properties":{
+										"awbNumber":{
+											"type":"string",
+											"title":"awbNumber"
+										},
+										"channelName":{
+											"type":"string",
+											"title":"channelName"
+										},
+										"finoCustom":{
+											"type":"array",
+											"items":{
+												"type":"object",
+												"properties":{
+													"mainGrievance":{
+														"type":"string",
+														"title":"mainGrievance"
+													},
+													"subGrievance":{
+														"type":"string",
+														"title":"subGrievance"
+													},
+													"deliveryChannel":{
+														"type":"string",
+														"title":"deliveryChannel"
+													},
+													"compaintMode":{
+														"type":"string",
+														"title":"compaintMode"
+													}
+												},
+												"additionalProperties":false
+											},
+											"title":"finoCustom"
+										}
+									},
+									"title":"customProperties",
+									"additionalProperties":false
+								},
+								"assignmentDetails":{
+									"type":"object",
+									"properties":{
+										"assigneeId":{
+											"type":"string",
+											"title":"assigneeId"
+										},
+										"assigneeType":{
+											"type":"string",
+											"title":"assigneeType"
+										}
+									},
+									"title":"assignmentDetails",
+									"additionalProperties":false
+								},
+								"lastFanMessageId":{
+									"type":"string",
+									"title":"lastFanMessageId"
+								},
+								"additional":{
+									"type":"object",
+									"properties":{
+										"aiAgentId":{
+											"type":"string",
+											"title":"aiAgentId"
+										},
+										"lastAssociatedMassageType":{
+											"type":"string",
+											"title":"lastAssociatedMassageType"
+										},
+										"isBookmarked":{
+											"type":"boolean",
+											"title":"isBookmarked"
+										},
+										"shouldSummarise":{
+											"type":"boolean",
+											"title":"shouldSummarise"
+										},
+										"latestExecutionId":{
+											"type":"string",
+											"title":"latestExecutionId"
+										},
+										"generatingResponse":{
+											"type":"boolean",
+											"title":"generatingResponse"
+										},
+										"pinnedMessageIds":{
+											"type":"array",
+											"items":{
+												"type":"string"
+											},
+											"title":"pinnedMessageIds"
+										},
+										"firstFanMessageId":{
+											"type":"string",
+											"title":"First Fan Message Id"
+										},
+										"firstFanMessageCreatedTime":{
+											"type":"integer",
+											"title":"First Fan Message Created Time"
+										},
+										"lastBrandMessageId":{
+											"type":"string",
+											"title":"Last Brand Message Id"
+										},
+										"lastBrandMessageTime":{
+											"type":"integer",
+											"title":"Last Brand Message Time"
+										}
+									},
+									"title":"additional",
+									"additionalProperties":false,
+									"required":[]
+								},
+								"lastFanMessageTime":{
+									"type":"integer",
+									"title":"Last Fan Message Time"
+								}
+							},
+							"title":"properties",
+							"additionalProperties":false,
+							"required":[]
+						},
+						"version":{
+							"type":"integer",
+							"title":"version"
+						},
+						"createdTime":{
+							"type":"integer",
+							"title":"createdTime"
+						},
+						"modifiedTime":{
+							"type":"integer",
+							"title":"modifiedTime"
+						},
+						"ownerUserId":{
+							"type":"integer",
+							"title":"ownerUserId"
+						},
+						"lastModifiedBy":{
+							"type":"integer",
+							"title":"lastModifiedBy"
+						},
+						"deleted":{
+							"type":"boolean",
+							"title":"deleted"
+						}
+					},
+					"additionalProperties":false,
+					"dynamic":true
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"caseId":{
+							"type":"string",
+							"title":"Case Id"
+						},
+						"forceLoadFromStorage":{
+							"type":"boolean",
+							"title":"Force Load From Storage"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"caseId",
+						"forceLoadFromStorage"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Temp change - until we update the case in session",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":2,
+				"resourceName":"storage_by_unifyapps_get_record_by_id",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Z5w6u-1",
+			"id":"_t0RWK",
+			"index":2,
+			"inputs":{
+				"object_type":"service_hub_case",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"id":"{{ n_3J1zl.outputs.caseId }}",
+				"readThroughSessionVariables":false
+			},
+			"skip":false,
+			"subTitle":"Load from DB",
+			"title":"Fetch record by ID",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":445,
+				"resourceName":"variable_by_unifyapps_set_session_variable",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Z5w6u-1",
+			"id":"_pWL3r",
+			"index":3,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"case":{
+							"type":"object",
+							"properties":{
+								"id":{
+									"type":"string",
+									"title":"id"
+								},
+								"entityType":{
+									"type":"string",
+									"title":"entityType"
+								},
+								"properties":{
+									"type":"object",
+									"properties":{
+										"fromCustomerUserId":{
+											"type":"string",
+											"title":"fromCustomerUserId"
+										},
+										"priority":{
+											"type":"string",
+											"title":"priority"
+										},
+										"status":{
+											"type":"string",
+											"title":"status"
+										},
+										"toCustomerUserId":{
+											"type":"string",
+											"title":"toCustomerUserId"
+										},
+										"sentiment":{
+											"type":"string",
+											"title":"sentiment"
+										},
+										"csat":{
+											"type":"string",
+											"title":"csat"
+										},
+										"requiredSkills":{
+											"type":"array",
+											"items":{
+												"type":"object",
+												"properties":{
+													"skill":{
+														"type":"string",
+														"title":"skill"
+													},
+													"skillCategory":{
+														"type":"string",
+														"title":"skillCategory"
+													},
+													"op":{
+														"type":"string",
+														"title":"op"
+													}
+												},
+												"additionalProperties":false
+											},
+											"title":"requiredSkills"
+										},
+										"subject":{
+											"type":"string",
+											"title":"subject"
+										},
+										"caseNum":{
+											"type":"integer",
+											"title":"caseNum"
+										},
+										"language":{
+											"type":"string",
+											"title":"language"
+										},
+										"lastInteractionTime":{
+											"type":"integer",
+											"title":"lastInteractionTime"
+										},
+										"channelName":{
+											"type":"string",
+											"title":"channelName"
+										},
+										"customProperties":{
+											"type":"object",
+											"properties":{
+												"awbNumber":{
+													"type":"string",
+													"title":"awbNumber"
+												},
+												"channelName":{
+													"type":"string",
+													"title":"channelName"
+												},
+												"finoCustom":{
+													"type":"array",
+													"items":{
+														"type":"object",
+														"properties":{
+															"mainGrievance":{
+																"type":"string",
+																"title":"mainGrievance"
+															},
+															"subGrievance":{
+																"type":"string",
+																"title":"subGrievance"
+															},
+															"deliveryChannel":{
+																"type":"string",
+																"title":"deliveryChannel"
+															},
+															"compaintMode":{
+																"type":"string",
+																"title":"compaintMode"
+															}
+														},
+														"additionalProperties":false
+													},
+													"title":"finoCustom"
+												}
+											},
+											"title":"customProperties",
+											"additionalProperties":false
+										},
+										"assignmentDetails":{
+											"type":"object",
+											"properties":{
+												"assigneeId":{
+													"type":"string",
+													"title":"assigneeId"
+												},
+												"assigneeType":{
+													"type":"string",
+													"title":"assigneeType"
+												}
+											},
+											"title":"assignmentDetails",
+											"additionalProperties":false
+										},
+										"lastFanMessageId":{
+											"type":"string",
+											"title":"lastFanMessageId"
+										},
+										"additional":{
+											"type":"object",
+											"properties":{
+												"aiAgentId":{
+													"type":"string",
+													"title":"aiAgentId"
+												},
+												"lastAssociatedMassageType":{
+													"type":"string",
+													"title":"lastAssociatedMassageType"
+												},
+												"isBookmarked":{
+													"type":"boolean",
+													"title":"isBookmarked"
+												},
+												"shouldSummarise":{
+													"type":"boolean",
+													"title":"shouldSummarise"
+												},
+												"latestExecutionId":{
+													"type":"string",
+													"title":"latestExecutionId"
+												},
+												"generatingResponse":{
+													"type":"boolean",
+													"title":"generatingResponse"
+												},
+												"pinnedMessageIds":{
+													"type":"array",
+													"items":{
+														"type":"string"
+													},
+													"title":"pinnedMessageIds"
+												}
+											},
+											"title":"additional",
+											"additionalProperties":false
+										}
+									},
+									"title":"properties",
+									"additionalProperties":false
+								},
+								"version":{
+									"type":"integer",
+									"title":"version"
+								},
+								"createdTime":{
+									"type":"integer",
+									"title":"createdTime"
+								},
+								"modifiedTime":{
+									"type":"integer",
+									"title":"modifiedTime"
+								},
+								"ownerUserId":{
+									"type":"integer",
+									"title":"ownerUserId"
+								},
+								"lastModifiedBy":{
+									"type":"integer",
+									"title":"lastModifiedBy"
+								},
+								"deleted":{
+									"type":"boolean",
+									"title":"deleted"
+								}
+							},
+							"title":"case",
+							"additionalProperties":false
+						}
+					}
+				}
+			},
+			"inputs":{
+				"case":{
+					"properties":{
+						"requiredSkills":{
+							"ua:type":"mappedArray",
+							"items":{
+								"skill":"{{ _t0RWK.outputs.properties.requiredSkills[0].skill }}",
+								"skillCategory":"{{ _t0RWK.outputs.properties.requiredSkills[0].skillCategory }}",
+								"op":"{{ _t0RWK.outputs.properties.requiredSkills[0].op }}"
+							},
+							"source":"{{ _t0RWK.outputs.properties.requiredSkills }}"
+						},
+						"customProperties":{
+							"finoCustom":{
+								"ua:type":"mappedArray",
+								"items":{
+									"mainGrievance":"{{ _t0RWK.outputs.properties.customProperties.finoCustom[0].mainGrievance }}",
+									"subGrievance":"{{ _t0RWK.outputs.properties.customProperties.finoCustom[0].subGrievance }}",
+									"deliveryChannel":"{{ _t0RWK.outputs.properties.customProperties.finoCustom[0].deliveryChannel }}",
+									"compaintMode":"{{ _t0RWK.outputs.properties.customProperties.finoCustom[0].compaintMode }}"
+								},
+								"source":"{{ _t0RWK.outputs.properties.customProperties.finoCustom }}"
+							},
+							"awbNumber":"{{ _t0RWK.outputs.properties.customProperties.awbNumber }}",
+							"channelName":"{{ _t0RWK.outputs.properties.customProperties.channelName }}"
+						},
+						"assignmentDetails":{
+							"assigneeId":"{{ _t0RWK.outputs.properties.assignmentDetails.assigneeId }}",
+							"assigneeType":"{{ _t0RWK.outputs.properties.assignmentDetails.assigneeType }}"
+						},
+						"additional":{
+							"pinnedMessageIds":{
+								"ua:type":"mappedArray",
+								"source":"{{ _t0RWK.outputs.properties.additional.pinnedMessageIds }}",
+								"items":"{{ _t0RWK.outputs.properties.additional.pinnedMessageIds[0] }}"
+							},
+							"aiAgentId":"{{ _t0RWK.outputs.properties.additional.aiAgentId }}",
+							"lastAssociatedMassageType":"{{ _t0RWK.outputs.properties.additional.lastAssociatedMassageType }}",
+							"isBookmarked":"{{ _t0RWK.outputs.properties.additional.isBookmarked }}",
+							"shouldSummarise":"{{ _t0RWK.outputs.properties.additional.shouldSummarise }}",
+							"latestExecutionId":"{{ _t0RWK.outputs.properties.additional.latestExecutionId }}",
+							"generatingResponse":"{{ _t0RWK.outputs.properties.additional.generatingResponse }}"
+						},
+						"fromCustomerUserId":"{{ _t0RWK.outputs.properties.fromCustomerUserId }}",
+						"priority":"{{ _t0RWK.outputs.properties.priority }}",
+						"status":"{{ _t0RWK.outputs.properties.status }}",
+						"toCustomerUserId":"{{ _t0RWK.outputs.properties.toCustomerUserId }}",
+						"sentiment":"{{ _t0RWK.outputs.properties.sentiment }}",
+						"csat":"{{ _t0RWK.outputs.properties.csat }}",
+						"subject":"{{ _t0RWK.outputs.properties.subject }}",
+						"caseNum":"{{ _t0RWK.outputs.properties.caseNum }}",
+						"language":"{{ _t0RWK.outputs.properties.language }}",
+						"lastInteractionTime":"{{ _t0RWK.outputs.properties.lastInteractionTime }}",
+						"channelName":"{{ _t0RWK.outputs.properties.channelName }}",
+						"lastFanMessageId":"{{ _t0RWK.outputs.properties.lastFanMessageId }}"
+					},
+					"id":"{{ _t0RWK.outputs.id }}",
+					"entityType":"{{ _t0RWK.outputs.entityType }}",
+					"version":"{{ _t0RWK.outputs.version }}",
+					"createdTime":"{{ _t0RWK.outputs.createdTime }}",
+					"modifiedTime":"{{ _t0RWK.outputs.modifiedTime }}",
+					"ownerUserId":"{{ _t0RWK.outputs.ownerUserId }}",
+					"lastModifiedBy":"{{ _t0RWK.outputs.lastModifiedBy }}",
+					"deleted":"{{ _t0RWK.outputs.deleted }}"
+				}
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"case":{
+							"type":"object",
+							"properties":{
+								"id":{
+									"type":"string",
+									"title":"id"
+								},
+								"entityType":{
+									"type":"string",
+									"title":"entityType"
+								},
+								"properties":{
+									"type":"object",
+									"properties":{
+										"fromCustomerUserId":{
+											"type":"string",
+											"title":"fromCustomerUserId"
+										},
+										"priority":{
+											"type":"string",
+											"title":"priority"
+										},
+										"status":{
+											"type":"string",
+											"title":"status"
+										},
+										"toCustomerUserId":{
+											"type":"string",
+											"title":"toCustomerUserId"
+										},
+										"sentiment":{
+											"type":"string",
+											"title":"sentiment"
+										},
+										"csat":{
+											"type":"string",
+											"title":"csat"
+										},
+										"requiredSkills":{
+											"type":"array",
+											"items":{
+												"type":"object",
+												"properties":{
+													"skill":{
+														"type":"string",
+														"title":"skill"
+													},
+													"skillCategory":{
+														"type":"string",
+														"title":"skillCategory"
+													},
+													"op":{
+														"type":"string",
+														"title":"op"
+													}
+												},
+												"additionalProperties":false
+											},
+											"title":"requiredSkills"
+										},
+										"subject":{
+											"type":"string",
+											"title":"subject"
+										},
+										"caseNum":{
+											"type":"integer",
+											"title":"caseNum"
+										},
+										"language":{
+											"type":"string",
+											"title":"language"
+										},
+										"lastInteractionTime":{
+											"type":"integer",
+											"title":"lastInteractionTime"
+										},
+										"channelName":{
+											"type":"string",
+											"title":"channelName"
+										},
+										"customProperties":{
+											"type":"object",
+											"properties":{
+												"awbNumber":{
+													"type":"string",
+													"title":"awbNumber"
+												},
+												"channelName":{
+													"type":"string",
+													"title":"channelName"
+												},
+												"finoCustom":{
+													"type":"array",
+													"items":{
+														"type":"object",
+														"properties":{
+															"mainGrievance":{
+																"type":"string",
+																"title":"mainGrievance"
+															},
+															"subGrievance":{
+																"type":"string",
+																"title":"subGrievance"
+															},
+															"deliveryChannel":{
+																"type":"string",
+																"title":"deliveryChannel"
+															},
+															"compaintMode":{
+																"type":"string",
+																"title":"compaintMode"
+															}
+														},
+														"additionalProperties":false
+													},
+													"title":"finoCustom"
+												}
+											},
+											"title":"customProperties",
+											"additionalProperties":false
+										},
+										"assignmentDetails":{
+											"type":"object",
+											"properties":{
+												"assigneeId":{
+													"type":"string",
+													"title":"assigneeId"
+												},
+												"assigneeType":{
+													"type":"string",
+													"title":"assigneeType"
+												}
+											},
+											"title":"assignmentDetails",
+											"additionalProperties":false
+										},
+										"lastFanMessageId":{
+											"type":"string",
+											"title":"lastFanMessageId"
+										},
+										"additional":{
+											"type":"object",
+											"properties":{
+												"aiAgentId":{
+													"type":"string",
+													"title":"aiAgentId"
+												},
+												"lastAssociatedMassageType":{
+													"type":"string",
+													"title":"lastAssociatedMassageType"
+												},
+												"isBookmarked":{
+													"type":"boolean",
+													"title":"isBookmarked"
+												},
+												"shouldSummarise":{
+													"type":"boolean",
+													"title":"shouldSummarise"
+												},
+												"latestExecutionId":{
+													"type":"string",
+													"title":"latestExecutionId"
+												},
+												"generatingResponse":{
+													"type":"boolean",
+													"title":"generatingResponse"
+												},
+												"pinnedMessageIds":{
+													"type":"array",
+													"items":{
+														"type":"string"
+													},
+													"title":"pinnedMessageIds"
+												}
+											},
+											"title":"additional",
+											"additionalProperties":false
+										}
+									},
+									"title":"properties",
+									"additionalProperties":false
+								},
+								"version":{
+									"type":"integer",
+									"title":"version"
+								},
+								"createdTime":{
+									"type":"integer",
+									"title":"createdTime"
+								},
+								"modifiedTime":{
+									"type":"integer",
+									"title":"modifiedTime"
+								},
+								"ownerUserId":{
+									"type":"integer",
+									"title":"ownerUserId"
+								},
+								"lastModifiedBy":{
+									"type":"integer",
+									"title":"lastModifiedBy"
+								},
+								"deleted":{
+									"type":"boolean",
+									"title":"deleted"
+								}
+							},
+							"title":"case",
+							"additionalProperties":false
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Set in session",
+			"title":"Set Session Variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":454,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Z5w6u-1",
+			"id":"_kLBJI",
+			"index":4,
+			"inputs":{
+				"result":{
+					"properties":{
+						"requiredSkills":{
+							"ua:type":"mappedArray",
+							"items":{
+								"skill":"{{ _pWL3r.outputs.case.properties.requiredSkills[0].skill }}",
+								"skillCategory":"{{ _pWL3r.outputs.case.properties.requiredSkills[0].skillCategory }}",
+								"op":"{{ _pWL3r.outputs.case.properties.requiredSkills[0].op }}"
+							},
+							"source":"{{ _pWL3r.outputs.case.properties.requiredSkills }}"
+						},
+						"customProperties":{
+							"finoCustom":{
+								"ua:type":"mappedArray",
+								"items":{
+									"mainGrievance":"{{ _pWL3r.outputs.case.properties.customProperties.finoCustom[0].mainGrievance }}",
+									"subGrievance":"{{ _pWL3r.outputs.case.properties.customProperties.finoCustom[0].subGrievance }}",
+									"deliveryChannel":"{{ _pWL3r.outputs.case.properties.customProperties.finoCustom[0].deliveryChannel }}",
+									"compaintMode":"{{ _pWL3r.outputs.case.properties.customProperties.finoCustom[0].compaintMode }}"
+								},
+								"source":"{{ _pWL3r.outputs.case.properties.customProperties.finoCustom }}"
+							},
+							"awbNumber":"{{ _pWL3r.outputs.case.properties.customProperties.awbNumber }}",
+							"channelName":"{{ _pWL3r.outputs.case.properties.customProperties.channelName }}"
+						},
+						"assignmentDetails":{
+							"assigneeId":"{{ _pWL3r.outputs.case.properties.assignmentDetails.assigneeId }}",
+							"assigneeType":"{{ _pWL3r.outputs.case.properties.assignmentDetails.assigneeType }}"
+						},
+						"additional":{
+							"pinnedMessageIds":{
+								"ua:type":"mappedArray",
+								"source":"{{ _pWL3r.outputs.case.properties.additional.pinnedMessageIds }}",
+								"items":"{{ _pWL3r.outputs.case.properties.additional.pinnedMessageIds[0] }}"
+							},
+							"aiAgentId":"{{ _pWL3r.outputs.case.properties.additional.aiAgentId }}",
+							"lastAssociatedMassageType":"{{ _pWL3r.outputs.case.properties.additional.lastAssociatedMassageType }}",
+							"isBookmarked":"{{ _pWL3r.outputs.case.properties.additional.isBookmarked }}",
+							"shouldSummarise":"{{ _pWL3r.outputs.case.properties.additional.shouldSummarise }}",
+							"latestExecutionId":"{{ _pWL3r.outputs.case.properties.additional.latestExecutionId }}",
+							"generatingResponse":"{{ _pWL3r.outputs.case.properties.additional.generatingResponse }}",
+							"firstFanMessageId":"{{ _t0RWK.outputs.properties.additional.firstFanMessageId }}",
+							"firstFanMessageCreatedTime":"{{ _t0RWK.outputs.properties.additional.firstFanMessageCreatedTime }}",
+							"lastBrandMessageId":"{{ _t0RWK.outputs.properties.additional.lastBrandMessageId }}",
+							"lastBrandMessageTime":"{{ _t0RWK.outputs.properties.additional.lastBrandMessageTime }}"
+						},
+						"fromCustomerUserId":"{{ _pWL3r.outputs.case.properties.fromCustomerUserId }}",
+						"priority":"{{ _pWL3r.outputs.case.properties.priority }}",
+						"status":"{{ _pWL3r.outputs.case.properties.status }}",
+						"toCustomerUserId":"{{ _pWL3r.outputs.case.properties.toCustomerUserId }}",
+						"sentiment":"{{ _pWL3r.outputs.case.properties.sentiment }}",
+						"csat":"{{ _pWL3r.outputs.case.properties.csat }}",
+						"subject":"{{ _pWL3r.outputs.case.properties.subject }}",
+						"caseNum":"{{ _pWL3r.outputs.case.properties.caseNum }}",
+						"language":"{{ _pWL3r.outputs.case.properties.language }}",
+						"lastInteractionTime":"{{ _pWL3r.outputs.case.properties.lastInteractionTime }}",
+						"channelName":"{{ _pWL3r.outputs.case.properties.channelName }}",
+						"lastFanMessageId":"{{ _pWL3r.outputs.case.properties.lastFanMessageId }}",
+						"lastFanMessageTime":"{{ _t0RWK.outputs.properties.lastFanMessageTime }}"
+					},
+					"id":"{{ _pWL3r.outputs.case.id }}",
+					"entityType":"{{ _pWL3r.outputs.case.entityType }}",
+					"version":"{{ _pWL3r.outputs.case.version }}",
+					"createdTime":"{{ _pWL3r.outputs.case.createdTime }}",
+					"modifiedTime":"{{ _pWL3r.outputs.case.modifiedTime }}",
+					"ownerUserId":"{{ _pWL3r.outputs.case.ownerUserId }}",
+					"lastModifiedBy":"{{ _pWL3r.outputs.case.lastModifiedBy }}",
+					"deleted":"{{ _t0RWK.outputs.deleted }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Return",
+			"title":"Respond to automation",
+			"type":"STOP"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{}
+			},
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":451,
+				"resourceName":"variable_by_unifyapps_get_session_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Z5w6u-1",
+			"id":"n_lRR0q",
+			"index":5,
+			"inputs":{
+				"variableSchema":{
+					"type":"object",
+					"properties":{
+						"case":{
+							"type":"object",
+							"properties":{
+								"id":{
+									"type":"string",
+									"title":"id"
+								},
+								"entityType":{
+									"type":"string",
+									"title":"entityType"
+								},
+								"properties":{
+									"type":"object",
+									"properties":{
+										"fromCustomerUserId":{
+											"type":"string",
+											"title":"fromCustomerUserId"
+										},
+										"priority":{
+											"type":"string",
+											"title":"priority"
+										},
+										"status":{
+											"type":"string",
+											"title":"status"
+										},
+										"toCustomerUserId":{
+											"type":"string",
+											"title":"toCustomerUserId"
+										},
+										"sentiment":{
+											"type":"string",
+											"title":"sentiment"
+										},
+										"csat":{
+											"type":"string",
+											"title":"csat"
+										},
+										"requiredSkills":{
+											"type":"array",
+											"items":{
+												"type":"object",
+												"properties":{
+													"skill":{
+														"type":"string",
+														"title":"skill"
+													},
+													"skillCategory":{
+														"type":"string",
+														"title":"skillCategory"
+													},
+													"op":{
+														"type":"string",
+														"title":"op"
+													}
+												},
+												"additionalProperties":false
+											},
+											"title":"requiredSkills"
+										},
+										"subject":{
+											"type":"string",
+											"title":"subject"
+										},
+										"caseNum":{
+											"type":"integer",
+											"title":"caseNum"
+										},
+										"language":{
+											"type":"string",
+											"title":"language"
+										},
+										"lastInteractionTime":{
+											"type":"integer",
+											"title":"lastInteractionTime"
+										},
+										"channelName":{
+											"type":"string",
+											"title":"channelName"
+										},
+										"customProperties":{
+											"type":"object",
+											"properties":{
+												"awbNumber":{
+													"type":"string",
+													"title":"awbNumber"
+												},
+												"channelName":{
+													"type":"string",
+													"title":"channelName"
+												},
+												"finoCustom":{
+													"type":"array",
+													"items":{
+														"type":"object",
+														"properties":{
+															"mainGrievance":{
+																"type":"string",
+																"title":"mainGrievance"
+															},
+															"subGrievance":{
+																"type":"string",
+																"title":"subGrievance"
+															},
+															"deliveryChannel":{
+																"type":"string",
+																"title":"deliveryChannel"
+															},
+															"compaintMode":{
+																"type":"string",
+																"title":"compaintMode"
+															}
+														},
+														"additionalProperties":false
+													},
+													"title":"finoCustom"
+												}
+											},
+											"title":"customProperties",
+											"additionalProperties":false
+										},
+										"assignmentDetails":{
+											"type":"object",
+											"properties":{
+												"assigneeId":{
+													"type":"string",
+													"title":"assigneeId"
+												},
+												"assigneeType":{
+													"type":"string",
+													"title":"assigneeType"
+												}
+											},
+											"title":"assignmentDetails",
+											"additionalProperties":false
+										},
+										"lastFanMessageId":{
+											"type":"string",
+											"title":"lastFanMessageId"
+										},
+										"additional":{
+											"type":"object",
+											"properties":{
+												"aiAgentId":{
+													"type":"string",
+													"title":"aiAgentId"
+												},
+												"lastAssociatedMassageType":{
+													"type":"string",
+													"title":"lastAssociatedMassageType"
+												},
+												"isBookmarked":{
+													"type":"boolean",
+													"title":"isBookmarked"
+												},
+												"shouldSummarise":{
+													"type":"boolean",
+													"title":"shouldSummarise"
+												},
+												"latestExecutionId":{
+													"type":"string",
+													"title":"latestExecutionId"
+												},
+												"generatingResponse":{
+													"type":"boolean",
+													"title":"generatingResponse"
+												},
+												"pinnedMessageIds":{
+													"type":"array",
+													"items":{
+														"type":"string"
+													},
+													"title":"pinnedMessageIds"
+												}
+											},
+											"title":"additional",
+											"additionalProperties":false
+										}
+									},
+									"title":"properties",
+									"additionalProperties":false
+								},
+								"version":{
+									"type":"integer",
+									"title":"version"
+								},
+								"createdTime":{
+									"type":"integer",
+									"title":"createdTime"
+								},
+								"modifiedTime":{
+									"type":"integer",
+									"title":"modifiedTime"
+								},
+								"ownerUserId":{
+									"type":"integer",
+									"title":"ownerUserId"
+								},
+								"lastModifiedBy":{
+									"type":"integer",
+									"title":"lastModifiedBy"
+								},
+								"deleted":{
+									"type":"boolean",
+									"title":"deleted"
+								}
+							},
+							"title":"case",
+							"additionalProperties":false
+						}
+					},
+					"additionalProperties":false
+				}
+			},
+			"skip":false,
+			"subTitle":"Load from session",
+			"title":"Get Session Variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":437,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Z5w6u-1",
+			"id":"n_YFVmu",
+			"index":6,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_lRR0q.outputs.case.id }}",
+						"filter":{
+							"operator":"EXISTS"
+						}
+					},
+					{
+						"property":"{{ n_3J1zl.outputs.forceLoadFromStorage }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"true"
+						}
+					}
+				],
+				"operator":"OR"
+			},
+			"skip":false,
+			"subTitle":"Found in session",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.result.id",
+					"root.result.entityType",
+					"root.result.properties.fromCustomerUserId",
+					"root.result.properties.priority",
+					"root.result.properties.status",
+					"root.result.properties.toCustomerUserId",
+					"root.result.properties.sentiment",
+					"root.result.properties.csat",
+					"root.result.properties.requiredSkills.source",
+					"root.result.properties.requiredSkills.ua:type",
+					"root.result.properties.requiredSkills.items.skill",
+					"root.result.properties.requiredSkills.items.skillCategory",
+					"root.result.properties.requiredSkills.items.op",
+					"root.result.properties.subject",
+					"root.result.properties.caseNum",
+					"root.result.properties.language",
+					"root.result.properties.lastInteractionTime",
+					"root.result.properties.channelName",
+					"root.result.properties.customProperties.awbNumber",
+					"root.result.properties.customProperties.channelName",
+					"root.result.properties.customProperties.finoCustom.source",
+					"root.result.properties.customProperties.finoCustom.ua:type",
+					"root.result.properties.customProperties.finoCustom.items.mainGrievance",
+					"root.result.properties.customProperties.finoCustom.items.subGrievance",
+					"root.result.properties.customProperties.finoCustom.items.deliveryChannel",
+					"root.result.properties.customProperties.finoCustom.items.compaintMode",
+					"root.result.properties.assignmentDetails.assigneeId",
+					"root.result.properties.assignmentDetails.assigneeType",
+					"root.result.properties.lastFanMessageId",
+					"root.result.properties.additional.aiAgentId",
+					"root.result.properties.additional.lastAssociatedMassageType",
+					"root.result.properties.additional.isBookmarked",
+					"root.result.properties.additional.shouldSummarise",
+					"root.result.properties.additional.latestExecutionId",
+					"root.result.properties.additional.generatingResponse",
+					"root.result.properties.additional.pinnedMessageIds.source",
+					"root.result.properties.additional.pinnedMessageIds.ua:type",
+					"root.result.properties.additional.pinnedMessageIds.items",
+					"root.result.version",
+					"root.result.createdTime",
+					"root.result.modifiedTime",
+					"root.result.ownerUserId",
+					"root.result.lastModifiedBy",
+					"root.result.deleted"
+				]
+			},
+			"context":{
+				"appName":"callables",
+				"resourceVersion":454,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_YFVmu@_Z5w6u-1@y",
+			"id":"n_4k4Hk",
+			"index":7,
+			"inputs":{
+				"result":{
+					"id":"{{ n_lRR0q.outputs.case.id }}",
+					"entityType":"{{ n_lRR0q.outputs.case.entityType }}",
+					"properties":{
+						"fromCustomerUserId":"{{ n_lRR0q.outputs.case.properties.fromCustomerUserId }}",
+						"priority":"{{ n_lRR0q.outputs.case.properties.priority }}",
+						"status":"{{ n_lRR0q.outputs.case.properties.status }}",
+						"toCustomerUserId":"{{ n_lRR0q.outputs.case.properties.toCustomerUserId }}",
+						"sentiment":"{{ n_lRR0q.outputs.case.properties.sentiment }}",
+						"csat":"{{ n_lRR0q.outputs.case.properties.csat }}",
+						"requiredSkills":{
+							"source":"{{ n_lRR0q.outputs.case.properties.requiredSkills }}",
+							"ua:type":"mappedArray",
+							"items":{
+								"skill":"{{ n_lRR0q.outputs.case.properties.requiredSkills[0].skill }}",
+								"skillCategory":"{{ n_lRR0q.outputs.case.properties.requiredSkills[0].skillCategory }}",
+								"op":"{{ n_lRR0q.outputs.case.properties.requiredSkills[0].op }}"
+							}
+						},
+						"subject":"{{ n_lRR0q.outputs.case.properties.subject }}",
+						"caseNum":"{{ n_lRR0q.outputs.case.properties.caseNum }}",
+						"language":"{{ n_lRR0q.outputs.case.properties.language }}",
+						"lastInteractionTime":"{{ n_lRR0q.outputs.case.properties.lastInteractionTime }}",
+						"channelName":"{{ n_lRR0q.outputs.case.properties.channelName }}",
+						"customProperties":{
+							"awbNumber":"{{ n_lRR0q.outputs.case.properties.customProperties.awbNumber }}",
+							"channelName":"{{ n_lRR0q.outputs.case.properties.customProperties.channelName }}",
+							"finoCustom":{
+								"source":"{{ n_lRR0q.outputs.case.properties.customProperties.finoCustom }}",
+								"ua:type":"mappedArray",
+								"items":{
+									"mainGrievance":"{{ n_lRR0q.outputs.case.properties.customProperties.finoCustom[0].mainGrievance }}",
+									"subGrievance":"{{ n_lRR0q.outputs.case.properties.customProperties.finoCustom[0].subGrievance }}",
+									"deliveryChannel":"{{ n_lRR0q.outputs.case.properties.customProperties.finoCustom[0].deliveryChannel }}",
+									"compaintMode":"{{ n_lRR0q.outputs.case.properties.customProperties.finoCustom[0].compaintMode }}"
+								}
+							}
+						},
+						"assignmentDetails":{
+							"assigneeId":"{{ n_lRR0q.outputs.case.properties.assignmentDetails.assigneeId }}",
+							"assigneeType":"{{ n_lRR0q.outputs.case.properties.assignmentDetails.assigneeType }}"
+						},
+						"lastFanMessageId":"{{ n_lRR0q.outputs.case.properties.lastFanMessageId }}",
+						"additional":{
+							"aiAgentId":"{{ n_lRR0q.outputs.case.properties.additional.aiAgentId }}",
+							"lastAssociatedMassageType":"{{ n_lRR0q.outputs.case.properties.additional.lastAssociatedMassageType }}",
+							"isBookmarked":"{{ n_lRR0q.outputs.case.properties.additional.isBookmarked }}",
+							"shouldSummarise":"{{ n_lRR0q.outputs.case.properties.additional.shouldSummarise }}",
+							"latestExecutionId":"{{ n_lRR0q.outputs.case.properties.additional.latestExecutionId }}",
+							"generatingResponse":"{{ n_lRR0q.outputs.case.properties.additional.generatingResponse }}",
+							"pinnedMessageIds":{
+								"source":"{{ n_lRR0q.outputs.case.properties.additional.pinnedMessageIds }}",
+								"ua:type":"mappedArray",
+								"items":"{{ n_lRR0q.outputs.case.properties.additional.pinnedMessageIds[0] }}"
+							}
+						}
+					},
+					"version":"{{ n_lRR0q.outputs.case.version }}",
+					"createdTime":"{{ n_lRR0q.outputs.case.createdTime }}",
+					"modifiedTime":"{{ n_lRR0q.outputs.case.modifiedTime }}",
+					"ownerUserId":"{{ n_lRR0q.outputs.case.ownerUserId }}",
+					"lastModifiedBy":"{{ n_lRR0q.outputs.case.lastModifiedBy }}",
+					"deleted":"{{ n_lRR0q.outputs.case.deleted }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Return",
+			"title":"Respond to automation",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":2,
+				"resourceName":"storage_by_unifyapps_get_record_by_id",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_YFVmu@_Z5w6u-1@n",
+			"id":"n_Ls7GP",
+			"index":8,
+			"inputs":{
+				"object_type":"service_hub_case",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"id":"{{ n_3J1zl.outputs.caseId }}",
+				"readThroughSessionVariables":false
+			},
+			"skip":false,
+			"subTitle":"Load from DB",
+			"title":"Fetch record by ID",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":445,
+				"resourceName":"variable_by_unifyapps_set_session_variable",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_YFVmu@_Z5w6u-1@n",
+			"id":"n_LI9X6",
+			"index":9,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"case":{
+							"type":"object",
+							"properties":{
+								"id":{
+									"type":"string",
+									"title":"id"
+								},
+								"entityType":{
+									"type":"string",
+									"title":"entityType"
+								},
+								"properties":{
+									"type":"object",
+									"properties":{
+										"fromCustomerUserId":{
+											"type":"string",
+											"title":"fromCustomerUserId"
+										},
+										"priority":{
+											"type":"string",
+											"title":"priority"
+										},
+										"status":{
+											"type":"string",
+											"title":"status"
+										},
+										"toCustomerUserId":{
+											"type":"string",
+											"title":"toCustomerUserId"
+										},
+										"sentiment":{
+											"type":"string",
+											"title":"sentiment"
+										},
+										"csat":{
+											"type":"string",
+											"title":"csat"
+										},
+										"requiredSkills":{
+											"type":"array",
+											"items":{
+												"type":"object",
+												"properties":{
+													"skill":{
+														"type":"string",
+														"title":"skill"
+													},
+													"skillCategory":{
+														"type":"string",
+														"title":"skillCategory"
+													},
+													"op":{
+														"type":"string",
+														"title":"op"
+													}
+												},
+												"additionalProperties":false
+											},
+											"title":"requiredSkills"
+										},
+										"subject":{
+											"type":"string",
+											"title":"subject"
+										},
+										"caseNum":{
+											"type":"integer",
+											"title":"caseNum"
+										},
+										"language":{
+											"type":"string",
+											"title":"language"
+										},
+										"lastInteractionTime":{
+											"type":"integer",
+											"title":"lastInteractionTime"
+										},
+										"channelName":{
+											"type":"string",
+											"title":"channelName"
+										},
+										"customProperties":{
+											"type":"object",
+											"properties":{
+												"awbNumber":{
+													"type":"string",
+													"title":"awbNumber"
+												},
+												"channelName":{
+													"type":"string",
+													"title":"channelName"
+												},
+												"finoCustom":{
+													"type":"array",
+													"items":{
+														"type":"object",
+														"properties":{
+															"mainGrievance":{
+																"type":"string",
+																"title":"mainGrievance"
+															},
+															"subGrievance":{
+																"type":"string",
+																"title":"subGrievance"
+															},
+															"deliveryChannel":{
+																"type":"string",
+																"title":"deliveryChannel"
+															},
+															"compaintMode":{
+																"type":"string",
+																"title":"compaintMode"
+															}
+														},
+														"additionalProperties":false
+													},
+													"title":"finoCustom"
+												}
+											},
+											"title":"customProperties",
+											"additionalProperties":false
+										},
+										"assignmentDetails":{
+											"type":"object",
+											"properties":{
+												"assigneeId":{
+													"type":"string",
+													"title":"assigneeId"
+												},
+												"assigneeType":{
+													"type":"string",
+													"title":"assigneeType"
+												}
+											},
+											"title":"assignmentDetails",
+											"additionalProperties":false
+										},
+										"lastFanMessageId":{
+											"type":"string",
+											"title":"lastFanMessageId"
+										},
+										"additional":{
+											"type":"object",
+											"properties":{
+												"aiAgentId":{
+													"type":"string",
+													"title":"aiAgentId"
+												},
+												"lastAssociatedMassageType":{
+													"type":"string",
+													"title":"lastAssociatedMassageType"
+												},
+												"isBookmarked":{
+													"type":"boolean",
+													"title":"isBookmarked"
+												},
+												"shouldSummarise":{
+													"type":"boolean",
+													"title":"shouldSummarise"
+												},
+												"latestExecutionId":{
+													"type":"string",
+													"title":"latestExecutionId"
+												},
+												"generatingResponse":{
+													"type":"boolean",
+													"title":"generatingResponse"
+												},
+												"pinnedMessageIds":{
+													"type":"array",
+													"items":{
+														"type":"string"
+													},
+													"title":"pinnedMessageIds"
+												}
+											},
+											"title":"additional",
+											"additionalProperties":false
+										}
+									},
+									"title":"properties",
+									"additionalProperties":false
+								},
+								"version":{
+									"type":"integer",
+									"title":"version"
+								},
+								"createdTime":{
+									"type":"integer",
+									"title":"createdTime"
+								},
+								"modifiedTime":{
+									"type":"integer",
+									"title":"modifiedTime"
+								},
+								"ownerUserId":{
+									"type":"integer",
+									"title":"ownerUserId"
+								},
+								"lastModifiedBy":{
+									"type":"integer",
+									"title":"lastModifiedBy"
+								},
+								"deleted":{
+									"type":"boolean",
+									"title":"deleted"
+								}
+							},
+							"title":"case",
+							"additionalProperties":false
+						}
+					}
+				}
+			},
+			"inputs":{
+				"case":{
+					"properties":{
+						"requiredSkills":{
+							"ua:type":"mappedArray",
+							"items":{
+								"skill":"{{ n_Ls7GP.outputs.properties.requiredSkills[0].skill }}",
+								"skillCategory":"{{ n_Ls7GP.outputs.properties.requiredSkills[0].skillCategory }}",
+								"op":"{{ n_Ls7GP.outputs.properties.requiredSkills[0].op }}"
+							},
+							"source":"{{ n_Ls7GP.outputs.properties.requiredSkills }}"
+						},
+						"customProperties":{
+							"finoCustom":{
+								"ua:type":"mappedArray",
+								"items":{
+									"mainGrievance":"{{ n_Ls7GP.outputs.properties.customProperties.finoCustom[0].mainGrievance }}",
+									"subGrievance":"{{ n_Ls7GP.outputs.properties.customProperties.finoCustom[0].subGrievance }}",
+									"deliveryChannel":"{{ n_Ls7GP.outputs.properties.customProperties.finoCustom[0].deliveryChannel }}",
+									"compaintMode":"{{ n_Ls7GP.outputs.properties.customProperties.finoCustom[0].compaintMode }}"
+								},
+								"source":"{{ n_Ls7GP.outputs.properties.customProperties.finoCustom }}"
+							},
+							"awbNumber":"{{ n_Ls7GP.outputs.properties.customProperties.awbNumber }}",
+							"channelName":"{{ n_Ls7GP.outputs.properties.customProperties.channelName }}"
+						},
+						"assignmentDetails":{
+							"assigneeId":"{{ n_Ls7GP.outputs.properties.assignmentDetails.assigneeId }}",
+							"assigneeType":"{{ n_Ls7GP.outputs.properties.assignmentDetails.assigneeType }}"
+						},
+						"additional":{
+							"pinnedMessageIds":{
+								"ua:type":"mappedArray",
+								"source":"{{ n_Ls7GP.outputs.properties.additional.pinnedMessageIds }}",
+								"items":"{{ n_Ls7GP.outputs.properties.additional.pinnedMessageIds[0] }}"
+							},
+							"aiAgentId":"{{ n_Ls7GP.outputs.properties.additional.aiAgentId }}",
+							"lastAssociatedMassageType":"{{ n_Ls7GP.outputs.properties.additional.lastAssociatedMassageType }}",
+							"isBookmarked":"{{ n_Ls7GP.outputs.properties.additional.isBookmarked }}",
+							"shouldSummarise":"{{ n_Ls7GP.outputs.properties.additional.shouldSummarise }}",
+							"latestExecutionId":"{{ n_Ls7GP.outputs.properties.additional.latestExecutionId }}",
+							"generatingResponse":"{{ n_Ls7GP.outputs.properties.additional.generatingResponse }}"
+						},
+						"fromCustomerUserId":"{{ n_Ls7GP.outputs.properties.fromCustomerUserId }}",
+						"priority":"{{ n_Ls7GP.outputs.properties.priority }}",
+						"status":"{{ n_Ls7GP.outputs.properties.status }}",
+						"toCustomerUserId":"{{ n_Ls7GP.outputs.properties.toCustomerUserId }}",
+						"sentiment":"{{ n_Ls7GP.outputs.properties.sentiment }}",
+						"csat":"{{ n_Ls7GP.outputs.properties.csat }}",
+						"subject":"{{ n_Ls7GP.outputs.properties.subject }}",
+						"caseNum":"{{ n_Ls7GP.outputs.properties.caseNum }}",
+						"language":"{{ n_Ls7GP.outputs.properties.language }}",
+						"lastInteractionTime":"{{ n_Ls7GP.outputs.properties.lastInteractionTime }}",
+						"channelName":"{{ n_Ls7GP.outputs.properties.channelName }}",
+						"lastFanMessageId":"{{ n_Ls7GP.outputs.properties.lastFanMessageId }}"
+					},
+					"id":"{{ n_Ls7GP.outputs.id }}",
+					"entityType":"{{ n_Ls7GP.outputs.entityType }}",
+					"version":"{{ n_Ls7GP.outputs.version }}",
+					"createdTime":"{{ n_Ls7GP.outputs.createdTime }}",
+					"modifiedTime":"{{ n_Ls7GP.outputs.modifiedTime }}",
+					"ownerUserId":"{{ n_Ls7GP.outputs.ownerUserId }}",
+					"lastModifiedBy":"{{ n_Ls7GP.outputs.lastModifiedBy }}",
+					"deleted":"{{ n_Ls7GP.outputs.deleted }}"
+				}
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"case":{
+							"type":"object",
+							"properties":{
+								"id":{
+									"type":"string",
+									"title":"id"
+								},
+								"entityType":{
+									"type":"string",
+									"title":"entityType"
+								},
+								"properties":{
+									"type":"object",
+									"properties":{
+										"fromCustomerUserId":{
+											"type":"string",
+											"title":"fromCustomerUserId"
+										},
+										"priority":{
+											"type":"string",
+											"title":"priority"
+										},
+										"status":{
+											"type":"string",
+											"title":"status"
+										},
+										"toCustomerUserId":{
+											"type":"string",
+											"title":"toCustomerUserId"
+										},
+										"sentiment":{
+											"type":"string",
+											"title":"sentiment"
+										},
+										"csat":{
+											"type":"string",
+											"title":"csat"
+										},
+										"requiredSkills":{
+											"type":"array",
+											"items":{
+												"type":"object",
+												"properties":{
+													"skill":{
+														"type":"string",
+														"title":"skill"
+													},
+													"skillCategory":{
+														"type":"string",
+														"title":"skillCategory"
+													},
+													"op":{
+														"type":"string",
+														"title":"op"
+													}
+												},
+												"additionalProperties":false
+											},
+											"title":"requiredSkills"
+										},
+										"subject":{
+											"type":"string",
+											"title":"subject"
+										},
+										"caseNum":{
+											"type":"integer",
+											"title":"caseNum"
+										},
+										"language":{
+											"type":"string",
+											"title":"language"
+										},
+										"lastInteractionTime":{
+											"type":"integer",
+											"title":"lastInteractionTime"
+										},
+										"channelName":{
+											"type":"string",
+											"title":"channelName"
+										},
+										"customProperties":{
+											"type":"object",
+											"properties":{
+												"awbNumber":{
+													"type":"string",
+													"title":"awbNumber"
+												},
+												"channelName":{
+													"type":"string",
+													"title":"channelName"
+												},
+												"finoCustom":{
+													"type":"array",
+													"items":{
+														"type":"object",
+														"properties":{
+															"mainGrievance":{
+																"type":"string",
+																"title":"mainGrievance"
+															},
+															"subGrievance":{
+																"type":"string",
+																"title":"subGrievance"
+															},
+															"deliveryChannel":{
+																"type":"string",
+																"title":"deliveryChannel"
+															},
+															"compaintMode":{
+																"type":"string",
+																"title":"compaintMode"
+															}
+														},
+														"additionalProperties":false
+													},
+													"title":"finoCustom"
+												}
+											},
+											"title":"customProperties",
+											"additionalProperties":false
+										},
+										"assignmentDetails":{
+											"type":"object",
+											"properties":{
+												"assigneeId":{
+													"type":"string",
+													"title":"assigneeId"
+												},
+												"assigneeType":{
+													"type":"string",
+													"title":"assigneeType"
+												}
+											},
+											"title":"assignmentDetails",
+											"additionalProperties":false
+										},
+										"lastFanMessageId":{
+											"type":"string",
+											"title":"lastFanMessageId"
+										},
+										"additional":{
+											"type":"object",
+											"properties":{
+												"aiAgentId":{
+													"type":"string",
+													"title":"aiAgentId"
+												},
+												"lastAssociatedMassageType":{
+													"type":"string",
+													"title":"lastAssociatedMassageType"
+												},
+												"isBookmarked":{
+													"type":"boolean",
+													"title":"isBookmarked"
+												},
+												"shouldSummarise":{
+													"type":"boolean",
+													"title":"shouldSummarise"
+												},
+												"latestExecutionId":{
+													"type":"string",
+													"title":"latestExecutionId"
+												},
+												"generatingResponse":{
+													"type":"boolean",
+													"title":"generatingResponse"
+												},
+												"pinnedMessageIds":{
+													"type":"array",
+													"items":{
+														"type":"string"
+													},
+													"title":"pinnedMessageIds"
+												}
+											},
+											"title":"additional",
+											"additionalProperties":false
+										}
+									},
+									"title":"properties",
+									"additionalProperties":false
+								},
+								"version":{
+									"type":"integer",
+									"title":"version"
+								},
+								"createdTime":{
+									"type":"integer",
+									"title":"createdTime"
+								},
+								"modifiedTime":{
+									"type":"integer",
+									"title":"modifiedTime"
+								},
+								"ownerUserId":{
+									"type":"integer",
+									"title":"ownerUserId"
+								},
+								"lastModifiedBy":{
+									"type":"integer",
+									"title":"lastModifiedBy"
+								},
+								"deleted":{
+									"type":"boolean",
+									"title":"deleted"
+								}
+							},
+							"title":"case",
+							"additionalProperties":false
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Set in session",
+			"title":"Set Session Variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":454,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_YFVmu@_Z5w6u-1@n",
+			"id":"n_L68cP",
+			"index":10,
+			"inputs":{
+				"result":{
+					"properties":{
+						"requiredSkills":{
+							"ua:type":"mappedArray",
+							"items":{
+								"skill":"{{ n_LI9X6.outputs.case.properties.requiredSkills[0].skill }}",
+								"skillCategory":"{{ n_LI9X6.outputs.case.properties.requiredSkills[0].skillCategory }}",
+								"op":"{{ n_LI9X6.outputs.case.properties.requiredSkills[0].op }}"
+							},
+							"source":"{{ n_LI9X6.outputs.case.properties.requiredSkills }}"
+						},
+						"customProperties":{
+							"finoCustom":{
+								"ua:type":"mappedArray",
+								"items":{
+									"mainGrievance":"{{ n_LI9X6.outputs.case.properties.customProperties.finoCustom[0].mainGrievance }}",
+									"subGrievance":"{{ n_LI9X6.outputs.case.properties.customProperties.finoCustom[0].subGrievance }}",
+									"deliveryChannel":"{{ n_LI9X6.outputs.case.properties.customProperties.finoCustom[0].deliveryChannel }}",
+									"compaintMode":"{{ n_LI9X6.outputs.case.properties.customProperties.finoCustom[0].compaintMode }}"
+								},
+								"source":"{{ n_LI9X6.outputs.case.properties.customProperties.finoCustom }}"
+							},
+							"awbNumber":"{{ n_LI9X6.outputs.case.properties.customProperties.awbNumber }}",
+							"channelName":"{{ n_LI9X6.outputs.case.properties.customProperties.channelName }}"
+						},
+						"assignmentDetails":{
+							"assigneeId":"{{ n_LI9X6.outputs.case.properties.assignmentDetails.assigneeId }}",
+							"assigneeType":"{{ n_LI9X6.outputs.case.properties.assignmentDetails.assigneeType }}"
+						},
+						"additional":{
+							"pinnedMessageIds":{
+								"ua:type":"mappedArray",
+								"source":"{{ n_LI9X6.outputs.case.properties.additional.pinnedMessageIds }}",
+								"items":"{{ n_LI9X6.outputs.case.properties.additional.pinnedMessageIds[0] }}"
+							},
+							"aiAgentId":"{{ n_LI9X6.outputs.case.properties.additional.aiAgentId }}",
+							"lastAssociatedMassageType":"{{ n_LI9X6.outputs.case.properties.additional.lastAssociatedMassageType }}",
+							"isBookmarked":"{{ n_LI9X6.outputs.case.properties.additional.isBookmarked }}",
+							"shouldSummarise":"{{ n_LI9X6.outputs.case.properties.additional.shouldSummarise }}",
+							"latestExecutionId":"{{ n_LI9X6.outputs.case.properties.additional.latestExecutionId }}",
+							"generatingResponse":"{{ n_LI9X6.outputs.case.properties.additional.generatingResponse }}"
+						},
+						"fromCustomerUserId":"{{ n_LI9X6.outputs.case.properties.fromCustomerUserId }}",
+						"priority":"{{ n_LI9X6.outputs.case.properties.priority }}",
+						"status":"{{ n_LI9X6.outputs.case.properties.status }}",
+						"toCustomerUserId":"{{ n_LI9X6.outputs.case.properties.toCustomerUserId }}",
+						"sentiment":"{{ n_LI9X6.outputs.case.properties.sentiment }}",
+						"csat":"{{ n_LI9X6.outputs.case.properties.csat }}",
+						"subject":"{{ n_LI9X6.outputs.case.properties.subject }}",
+						"caseNum":"{{ n_LI9X6.outputs.case.properties.caseNum }}",
+						"language":"{{ n_LI9X6.outputs.case.properties.language }}",
+						"lastInteractionTime":"{{ n_LI9X6.outputs.case.properties.lastInteractionTime }}",
+						"channelName":"{{ n_LI9X6.outputs.case.properties.channelName }}",
+						"lastFanMessageId":"{{ n_LI9X6.outputs.case.properties.lastFanMessageId }}"
+					},
+					"id":"{{ n_LI9X6.outputs.case.id }}",
+					"entityType":"{{ n_LI9X6.outputs.case.entityType }}",
+					"version":"{{ n_LI9X6.outputs.case.version }}",
+					"createdTime":"{{ n_LI9X6.outputs.case.createdTime }}",
+					"modifiedTime":"{{ n_LI9X6.outputs.case.modifiedTime }}",
+					"ownerUserId":"{{ n_LI9X6.outputs.case.ownerUserId }}",
+					"lastModifiedBy":"{{ n_LI9X6.outputs.case.lastModifiedBy }}",
+					"deleted":"{{ n_Ls7GP.outputs.deleted }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Return",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":47193,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		
+	],
+	"version":66
+}
