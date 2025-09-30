@@ -5,12 +5,12 @@
 	"createdTime":1756986925219,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646543085,
+		"deployedAt":1758655365456,
 		"deployedBy":0,
-		"deployedDefinitionId":"68d2d10fdb1a4411eeae82e9",
+		"deployedDefinitionId":"68d2f38538757c179b123789",
 		"status":"DEPLOYED",
-		"version":10,
-		"workflowVersion":52
+		"version":11,
+		"workflowVersion":53
 	},
 	"edges":[
 		{
@@ -120,9 +120,9 @@
 		]
 	},
 	"id":"68ac3880d6b3ed5e68cb3ce8",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"llm stream processor",
-	"modifiedTime":1758655365191,
+	"modifiedTime":1759243550894,
 	"name":"LLM Stream Processor",
 	"nodes":[
 		{
@@ -1070,5 +1070,5 @@
 	"tags":[
 		
 	],
-	"version":53
+	"version":54
 }
