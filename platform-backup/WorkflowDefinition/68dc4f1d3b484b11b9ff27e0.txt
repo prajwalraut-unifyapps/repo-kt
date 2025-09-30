@@ -30,7 +30,7 @@
 	"id":"68dc4f1d3b484b11b9ff27e0",
 	"lastModifiedBy":59995,
 	"lcName":"export-storage-ordering",
-	"modifiedTime":1759270168402,
+	"modifiedTime":1759271418906,
 	"name":"export-storage-ordering",
 	"nodes":[
 		{
@@ -85,7 +85,7 @@
 						}
 					}
 				},
-				"jsonString":"{\"key\": [\"Type\", \"Category\"]}"
+				"jsonString":"{\"key\": [\"properties_type\", \"properties_category\"]}"
 			},
 			"skip":false,
 			"subTitle":"Utility by UnifyApps",
@@ -115,7 +115,7 @@
 				"keepExactFileName":false,
 				"fileType":"CSV"
 			},
-			"skip":true,
+			"skip":false,
 			"subTitle":"Storage by UnifyApps",
 			"title":"Export records",
 			"type":"ACTION"
@@ -152,7 +152,7 @@
 				"fileType":"CSV",
 				"group":"ENTITY_REPORTING"
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Analytics by UnifyApps",
 			"title":"Export Reports",
 			"type":"ACTION"
@@ -175,5 +175,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
