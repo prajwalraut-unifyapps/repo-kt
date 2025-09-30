@@ -5,12 +5,12 @@
 	"createdTime":1747641655839,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655310063,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f34e38757c179b122e69",
+		"deployedAt":1759243502227,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbecee5e003e08cdeb2e18",
 		"status":"DEPLOYED",
-		"version":47,
-		"workflowVersion":77
+		"version":48,
+		"workflowVersion":78
 	},
 	"edges":[
 		{
@@ -228,7 +228,7 @@
 	"id":"681b6dafb8b7345a42b64cf7",
 	"lastModifiedBy":-1,
 	"lcName":"text to workflow v2 | input filling tool",
-	"modifiedTime":1759243501891,
+	"modifiedTime":1759243541065,
 	"name":"Text to Workflow v2 | Input Filling Tool",
 	"nodes":[
 		{
@@ -1418,5 +1418,5 @@
 		}
 	},
 	"standard":true,
-	"version":78
+	"version":79
 }
