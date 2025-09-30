@@ -5,12 +5,12 @@
 	"createdTime":1755341340292,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759219815445,
+		"deployedAt":1759222346806,
 		"deployedBy":44096,
-		"deployedDefinitionId":"68db9067b631023b322fc6d1",
+		"deployedDefinitionId":"68db9a4a32ab681f2e8b6224",
 		"status":"DEPLOYED",
-		"version":5,
-		"workflowVersion":13
+		"version":6,
+		"workflowVersion":15
 	},
 	"edges":[
 		{
@@ -31,6 +31,13 @@
 			"fromNodeId":"n_7xTUy",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"_y598q",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_y598q",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_v8z4e",
 			"type":"next"
 		},
@@ -45,7 +52,7 @@
 	"id":"68a0621ce2145a693b0a5877",
 	"lastModifiedBy":44096,
 	"lcName":"testlookup",
-	"modifiedTime":1759222344928,
+	"modifiedTime":1759223189426,
 	"name":"testLookup",
 	"nodes":[
 		{
@@ -89,7 +96,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_lUik9-1",
 			"id":"n_uNvzq",
@@ -108,7 +115,7 @@
 						}
 					}
 				},
-				"code":"return [\"options\":[\"workflowId\":\"68d7933d7ceaf455c79a4dbf\",\"runtimeType\":\"IN_MEMORY\",\"resolvePath\":\"objects\"]]",
+				"code":"return [\"options\":[\"workflowId\":\"68db9d0da30f2c5f853d762e\",\"runtimeType\":\"IN_MEMORY\",\"resolvePath\":\"objects\"]]",
 				"compile_static":false,
 				"captureStdOutput":false
 			},
@@ -152,6 +159,42 @@
 		},
 		{
 			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_lUik9-1",
+			"id":"_y598q",
+			"index":4,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"options":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Options"
+						}
+					}
+				},
+				"code":"return [\"options\":[\"workflowId\":\"68d7933d7ceaf455c79a4dbf\",\"runtimeType\":\"IN_MEMORY\",\"resolvePath\":\"objects\"]]",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"standard_entities",
 				"resourceVersion":0,
 				"resourceName":"standard_entities_lookup_entities",
@@ -162,10 +205,10 @@
 			"fallbackMode":"STOP",
 			"groupId":"_lUik9-1",
 			"id":"n_v8z4e",
-			"index":4,
+			"index":5,
 			"inputs":{
 				"query":"new query",
-				"options":"{{ n_uNvzq.outputs.result.options }}",
+				"options":"{{ _y598q.outputs.result.options }}",
 				"lookupType":"CUSTOM_WORKFLOW_LOOKUP",
 				"page":{
 					"limit":20,
@@ -193,7 +236,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_lUik9-1",
 			"id":"n_aDcNX",
-			"index":5,
+			"index":6,
 			"inputs":{
 				"result":{
 					"res":true
@@ -222,5 +265,5 @@
 	"tags":[
 		
 	],
-	"version":15
+	"version":16
 }
