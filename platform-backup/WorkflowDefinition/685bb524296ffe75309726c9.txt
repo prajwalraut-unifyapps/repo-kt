@@ -5,12 +5,12 @@
 	"createdTime":1750961538318,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646525309,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2d0fd9f85565fb8fa5d86",
+		"deployedAt":1759243534172,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed0e5e003e08cdeb2e7e",
 		"status":"DEPLOYED",
-		"version":6,
-		"workflowVersion":17
+		"version":8,
+		"workflowVersion":19
 	},
 	"edges":[
 		{
@@ -68,9 +68,9 @@
 		]
 	},
 	"id":"685bb524296ffe75309726c9",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"people indexer | salseforce",
-	"modifiedTime":1758655346550,
+	"modifiedTime":1759243568782,
 	"name":"People Indexer | Salseforce",
 	"nodes":[
 		{
@@ -307,5 +307,5 @@
 	"tags":[
 		
 	],
-	"version":18
+	"version":20
 }
