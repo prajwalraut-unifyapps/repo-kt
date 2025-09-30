@@ -5,12 +5,12 @@
 	"createdTime":1740110512582,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646559181,
+		"deployedAt":1758655381679,
 		"deployedBy":0,
-		"deployedDefinitionId":"68d2d11fbd00df618e363d39",
+		"deployedDefinitionId":"68d2f39538757c179b123a46",
 		"status":"DEPLOYED",
-		"version":66,
-		"workflowVersion":144
+		"version":67,
+		"workflowVersion":145
 	},
 	"edges":[
 		{
@@ -590,9 +590,9 @@
 		]
 	},
 	"id":"67b36a0a978b861601977b84",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"dialogue manager new",
-	"modifiedTime":1758655381573,
+	"modifiedTime":1759243564351,
 	"name":"Dialogue Manager New",
 	"nodes":[
 		{
@@ -686,9 +686,14 @@
 															"title":{
 																"type":"string",
 																"title":"Title"
+															},
+															"url":{
+																"type":"string",
+																"title":"Url"
 															}
 														},
-														"additionalProperties":false
+														"additionalProperties":false,
+														"required":[]
 													},
 													"title":"Choices",
 													"required":[]
@@ -1487,9 +1492,14 @@
 													"title":{
 														"type":"string",
 														"title":"title"
+													},
+													"url":{
+														"type":"string",
+														"title":"Url"
 													}
 												},
-												"additionalProperties":false
+												"additionalProperties":false,
+												"required":[]
 											},
 											"title":"choices"
 										},
@@ -1557,9 +1567,14 @@
 												"title":{
 													"type":"string",
 													"title":"title"
+												},
+												"url":{
+													"type":"string",
+													"title":"Url"
 												}
 											},
-											"additionalProperties":false
+											"additionalProperties":false,
+											"required":[]
 										},
 										"title":"choices"
 									},
@@ -1635,7 +1650,8 @@
 								"ua:type":"mappedArray",
 								"items":{
 									"id":"{{ c8YIL.outputs.item.responses[0].choices[0].id }}",
-									"title":"{{ c8YIL.outputs.item.responses[0].choices[0].title }}"
+									"title":"{{ c8YIL.outputs.item.responses[0].choices[0].title }}",
+									"url":"{{ c8YIL.outputs.item.responses[0].choices[0].url }}"
 								}
 							},
 							"content":"{{ c8YIL.outputs.item.responses[0].question }}",
@@ -2785,7 +2801,8 @@
 								"ua:type":"mappedArray",
 								"items":{
 									"id":"{{ 5p2Sk.outputs.item.choices[0].id }}",
-									"title":"{{ 5p2Sk.outputs.item.choices[0].title }}"
+									"title":"{{ 5p2Sk.outputs.item.choices[0].title }}",
+									"url":"{{ 5p2Sk.outputs.item.choices[0].url }}"
 								}
 							}
 						}
@@ -3413,6 +3430,10 @@
 			"inputs":{
 				"output":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"unsetCollectedSlots"
+					],
 					"properties":{
 						"slotsList":{
 							"type":"array",
@@ -3439,14 +3460,12 @@
 							"additionalProperties":false,
 							"title":"Unset Collected Slots"
 						}
-					},
-					"additionalProperties":false,
-					"required":[
-						"unsetCollectedSlots"
-					]
+					}
 				},
 				"input":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"collectedSlots":{
 							"type":"object",
@@ -3461,12 +3480,11 @@
 							},
 							"title":"Requested Slot Names"
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				},
-				"compile_static":false,
 				"code":"if (!binding.hasVariable('collectedSlots')){\n  return [:]\n}\nreturn ['slotsList': collectedSlots.findAll { key, value -> \n      requestedSlotNames.contains(key.trim())\n    }.collect { key, value -> \n      ['name': key, 'value': value]\n    },\n    \"unsetCollectedSlots\":[\"unset_slots\":true]\n]",
+				"compile_static":false,
+				"captureStdOutput":false,
 				"parameters":{
 					"collectedSlots":"{{ WzWDJ.outputs.collectedSlots }}",
 					"requestedSlotNames":{
@@ -3744,5 +3762,5 @@
 		"AI Agent",
 		"Internal"
 	],
-	"version":145
+	"version":146
 }
