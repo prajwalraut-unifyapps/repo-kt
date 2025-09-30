@@ -23,7 +23,7 @@
 	"id":"68dba90d93dd1b05dca28085",
 	"lastModifiedBy":185583,
 	"lcName":"task_pm_check",
-	"modifiedTime":1759228836098,
+	"modifiedTime":1759229057927,
 	"name":"Task_PM_Check",
 	"nodes":[
 		{
@@ -33,7 +33,7 @@
 				"resourceName":"callables_from_interface"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_0z2vL-1",
 			"id":"n_4p4yH",
@@ -111,14 +111,18 @@
 				"output":{
 					"type":"object",
 					"additionalProperties":false,
+					"required":[
+						"messageID",
+						"flag"
+					],
 					"properties":{
-						"message":{
-							"type":"string",
-							"title":"message"
-						},
 						"flag":{
 							"type":"boolean",
 							"title":"flag"
+						},
+						"messageID":{
+							"type":"string",
+							"title":"message"
 						}
 					}
 				},
@@ -145,7 +149,7 @@
 						}
 					}
 				},
-				"code":"let message = \"\";\nif (age>18)\n{\n  gender = \"can vote\";\n  flag = true;\n}\nelse{\n  message = \"can not vote\";\n  flag = false;\n}",
+				"code":"let message = \"\";\nif (age>18)\n{\n  message = \"can vote\";\n  flag = true;\n}\nelse{\n  message = \"can not vote\";\n  flag = false;\n}\nlet x = {\"messageID\":message,\"flag\":flag};\nreturn x;",
 				"isAsync":false,
 				"parameters":{
 					"name":"{{ n_4p4yH.outputs.name }}",
@@ -173,7 +177,7 @@
 			"index":3,
 			"inputs":{
 				"result":{
-					"message":"{{ n_kRmib.outputs.result.message }}",
+					"message":"{{ n_kRmib.outputs.result.messageID }}",
 					"flag":"{{ n_kRmib.outputs.result.flag }}"
 				}
 			},
@@ -200,5 +204,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
