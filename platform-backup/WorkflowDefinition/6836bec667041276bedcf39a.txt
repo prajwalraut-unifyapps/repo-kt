@@ -5,12 +5,12 @@
 	"createdTime":1748530221625,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759314282272,
+		"deployedAt":1759318439188,
 		"deployedBy":44109,
-		"deployedDefinitionId":"68dd016a86650b56a119fe42",
+		"deployedDefinitionId":"68dd11a575a316566ae3fe0d",
 		"status":"DEPLOYED",
-		"version":53,
-		"workflowVersion":68
+		"version":54,
+		"workflowVersion":69
 	},
 	"edges":[
 		{
@@ -112,7 +112,7 @@
 	"id":"6836bec667041276bedcf39a",
 	"lastModifiedBy":44109,
 	"lcName":"handle stream completion",
-	"modifiedTime":1759318435597,
+	"modifiedTime":1759331932104,
 	"name":"Handle Stream Completion",
 	"nodes":[
 		{
@@ -531,7 +531,7 @@
 						}
 					}
 				},
-				"code":"return [ 'payload': [\n  \"responseGenerationCompleted\": \"true\"\n] ]",
+				"code":"return [ 'payload': [\n  \"responseGenerationCompleted\": \"completed\"\n] ]",
 				"compile_static":false,
 				"captureStdOutput":false
 			},
@@ -605,5 +605,5 @@
 	"tags":[
 		
 	],
-	"version":69
+	"version":70
 }
