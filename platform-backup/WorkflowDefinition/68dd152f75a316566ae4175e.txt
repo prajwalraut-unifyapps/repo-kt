@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759319343989,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_vsiis",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_DhxOi",
+			"type":"next"
+		}
+	],
+	"id":"68dd152f75a316566ae4175e",
+	"lastModifiedBy":175325,
+	"lcName":"playgroundsnippetmanager",
+	"modifiedTime":1759319343989,
+	"name":"PLAYGROUNDsnippetManager",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_vsiis-1",
+			"id":"_vsiis",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_vsiis-1",
+			"id":"_DhxOi",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
