@@ -71,9 +71,9 @@
 		}
 	],
 	"id":"68dceef7b3efb833fa4e40f4",
-	"lastModifiedBy":155341,
+	"lastModifiedBy":17,
 	"lcName":"figma list all frames",
-	"modifiedTime":1759310792998,
+	"modifiedTime":1759310871111,
 	"name":"Figma List all frames",
 	"nodes":[
 		{
@@ -91,7 +91,7 @@
 			"inputs":{
 				"cron":"INTERVAL",
 				"sequential":false,
-				"interval":15,
+				"interval":1,
 				"frequency":"MINUTES"
 			},
 			"skip":false,
@@ -110,7 +110,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_BgqBP-1",
 			"id":"n_4Hvzf",
@@ -366,7 +366,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_BgqBP-1",
 			"id":"n_OzRGm",
@@ -387,7 +387,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_BgqBP-1",
 			"id":"n_GfH5f",
@@ -410,7 +410,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_GfH5f@_BgqBP-1@l",
 			"id":"_NOj0C",
@@ -461,7 +461,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_GfH5f@_BgqBP-1@l",
 			"id":"_WJYfi",
@@ -483,7 +483,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_GfH5f@_BgqBP-1@l",
 			"id":"n_Xivtc",
@@ -533,7 +533,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_GfH5f@_BgqBP-1@l",
 			"id":"n_DiajA",
@@ -581,5 +581,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":12
 }
