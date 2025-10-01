@@ -1,0 +1,123 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759317002116,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_PaZ2t",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_NIsY7",
+			"type":"next"
+		}
+	],
+	"id":"68dd0c0afc8be17248c500f1",
+	"lastModifiedBy":161912,
+	"lcName":"demm (copy)",
+	"modifiedTime":1759317002116,
+	"name":"demm (copy)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":921,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Y4e0X-1",
+			"id":"n_PaZ2t",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"out"
+					],
+					"properties":{
+						"out":{
+							"type":"number",
+							"title":"Out"
+						}
+					}
+				},
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"{{ n_PaZ2t.outputs.in }}",
+							"filter":{
+								"operator":"MISSING"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"in"
+					],
+					"properties":{
+						"in":{
+							"type":"number",
+							"title":"In"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":938,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Y4e0X-1",
+			"id":"n_NIsY7",
+			"index":2,
+			"inputs":{
+				"result":{
+					"out":"{{ n_PaZ2t.outputs.in }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":161912,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
