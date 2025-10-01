@@ -16,7 +16,7 @@
 	"id":"68dccfda3374855239db5932",
 	"lastModifiedBy":20249,
 	"lcName":"figma testing",
-	"modifiedTime":1759301616809,
+	"modifiedTime":1759301641896,
 	"name":"Figma testing",
 	"nodes":[
 		{
@@ -84,5 +84,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
