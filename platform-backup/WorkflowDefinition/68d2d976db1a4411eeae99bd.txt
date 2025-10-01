@@ -1,30 +1,30 @@
 {
 	"appsUsed":[
-		"slack"
+		"fillout"
 	],
 	"createdTime":1758648694365,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758648753560,
+		"deployedAt":1758699860715,
 		"deployedBy":44105,
-		"deployedDefinitionId":"68d2d9b0a7f0ee5a6b61ab45",
+		"deployedDefinitionId":"68d3a1543b714f164974afb1",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":1
+		"version":2,
+		"workflowVersion":3
 	},
 	"edges":[
 		{
 			"fromNodeId":"n_vf7dT",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_GPAMa",
+			"toNodeId":"n_kFMyG",
 			"type":"next"
 		}
 	],
 	"id":"68d2d976db1a4411eeae99bd",
 	"lastModifiedBy":44105,
 	"lcName":"testtttt",
-	"modifiedTime":1758699858243,
+	"modifiedTime":1759299673411,
 	"name":"testtttt",
 	"nodes":[
 		{
@@ -54,28 +54,22 @@
 		},
 		{
 			"context":{
-				"appName":"slack",
-				"resourceVersion":6140,
-				"connectionId":"67e3d557275f6829a0732062",
-				"resourceName":"slack_post_message_in_channel",
+				"appName":"fillout",
+				"resourceVersion":2468,
+				"connectionId":"68c2a7c20c48cd5eea95307b",
+				"resourceName":"fillout_get_forms",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_xS692-1",
-			"id":"n_GPAMa",
+			"id":"n_kFMyG",
 			"index":2,
-			"inputs":{
-				"link_names":true,
-				"messageType":"text",
-				"channel":"C08J66HP6TS",
-				"text":"cool",
-				"mrkdwn":true
-			},
+			"inputs":{},
 			"skip":false,
-			"subTitle":"Slack",
-			"title":"Post message",
+			"subTitle":"Fillout",
+			"title":"Get forms",
 			"type":"ACTION"
 		}
 	],
@@ -96,5 +90,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
