@@ -59,7 +59,7 @@
 	"id":"68dceef7b3efb833fa4e40f4",
 	"lastModifiedBy":155341,
 	"lcName":"figma list all frames",
-	"modifiedTime":1759330102070,
+	"modifiedTime":1759330135830,
 	"name":"Figma List all frames",
 	"nodes":[
 		{
@@ -427,7 +427,10 @@
 				},
 				"code":"\nprivate void findFramesRecursively(def node, List idList) {\n        if (!node) return\n\n        // Check if the current node is a FRAME. If so, add its ID.\n        // This check ensures we only get frames, not pages or other elements.\n        if (node.type == 'FRAME') {\n            idList.add(node.id)\n        }\n\n        // If the node has children, recurse into them.\n        if (node.children) {\n            node.children.each { child ->\n                findFramesRecursively(child, idList)\n            }\n        }\n    }\n\n\n\n\n\n  def document = figmaFile\n\n  // A list to hold all the Frame IDs we find.\n  def frameIds = []\n  \n  // Start the recursive search from the top-level document node.\n  findFramesRecursively(document, frameIds)\n\n  // Join the list of IDs into a single string.\n  return [\"ids\": frameIds.join(',')]\n",
 				"compile_static":false,
-				"captureStdOutput":false
+				"captureStdOutput":false,
+				"parameters":{
+					"figmaFile":"{{ n_OzRGm.outputs.document }}"
+				}
 			},
 			"skip":false,
 			"subTitle":"Code by UnifyApps",
@@ -513,5 +516,5 @@
 	"tags":[
 		
 	],
-	"version":20
+	"version":21
 }
