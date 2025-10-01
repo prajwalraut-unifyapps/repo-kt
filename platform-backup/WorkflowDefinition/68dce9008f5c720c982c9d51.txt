@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759308032146,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759308144162,
+		"deployedBy":46218,
+		"deployedDefinitionId":"68dce96e8f5c720c982c9f4f",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_9ey6t",
@@ -21,9 +29,9 @@
 		}
 	],
 	"id":"68dce9008f5c720c982c9d51",
-	"lastModifiedBy":46218,
+	"lastModifiedBy":47201,
 	"lcName":"meetingbottest",
-	"modifiedTime":1759308140026,
+	"modifiedTime":1759308449352,
 	"name":"MeetingBotTest",
 	"nodes":[
 		{
@@ -33,7 +41,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_sDfIz-1",
 			"id":"n_9ey6t",
@@ -79,6 +87,7 @@
 				"automationId":"68dbcc38181ca54665973c66",
 				"runtimeConnections":{},
 				"synchronous":true,
+				"triggerWorkflowWithRuntimeType":"IN_MEMORY",
 				"version":"-1",
 				"parameters":{
 					"meetingUrl":"{{ n_9ey6t.outputs.queryParams.meetingurl }}"
@@ -94,7 +103,7 @@
 				"appName":"stop"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_sDfIz-1",
 			"id":"n_y9L6p",
@@ -122,5 +131,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
