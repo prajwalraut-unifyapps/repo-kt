@@ -32,7 +32,7 @@
 	"id":"68dbe8be1bd93f17d9aa6254",
 	"lastModifiedBy":43498,
 	"lcName":"test-scheduler-connection-deletion",
-	"modifiedTime":1759305191799,
+	"modifiedTime":1759305254605,
 	"name":"test-scheduler-connection-deletion",
 	"nodes":[
 		{
@@ -65,7 +65,7 @@
 			"context":{
 				"appName":"gmail",
 				"resourceVersion":5486,
-				"connectionId":"68ce8dfcb270492a09955fad",
+				"connectionId":"68d7a76153c80144ea6596df",
 				"resourceName":"gmail_send_email",
 				"type":"APPLICATION"
 			},
@@ -98,7 +98,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_oKLjG-1",
 			"id":"n_gZuZw",
@@ -136,5 +136,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
