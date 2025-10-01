@@ -73,7 +73,7 @@
 	"id":"68dceef7b3efb833fa4e40f4",
 	"lastModifiedBy":155341,
 	"lcName":"figma list all frames",
-	"modifiedTime":1759310786055,
+	"modifiedTime":1759310792998,
 	"name":"Figma List all frames",
 	"nodes":[
 		{
@@ -468,7 +468,7 @@
 			"index":6,
 			"inputs":{
 				"file_id":"WYnrW7WvFb42fwDFycibor",
-				"ids":"{{ n_GfH5f.outputs.item.id }}"
+				"ids":"{{ _NOj0C.outputs.result.id }}"
 			},
 			"skip":false,
 			"subTitle":"Figma",
@@ -581,5 +581,5 @@
 	"tags":[
 		
 	],
-	"version":10
+	"version":11
 }
