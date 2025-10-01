@@ -6,7 +6,7 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"n_FwUrL",
+			"fromNodeId":"n_5KzKo",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_uqNcn",
@@ -18,37 +18,67 @@
 			"skip":false,
 			"toNodeId":"n_Xwx8B",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Xwx8B",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_ocpZY",
+			"type":"next"
 		}
 	],
 	"id":"68dba60831307131c21350b6",
 	"lastModifiedBy":155341,
 	"lcName":"testt",
-	"modifiedTime":1759329208287,
+	"modifiedTime":1759330583693,
 	"name":"testt",
 	"nodes":[
 		{
 			"context":{
-				"appName":"schedule",
-				"resourceVersion":814,
-				"resourceName":"schedule_default"
+				"appName":"callables",
+				"resourceVersion":921,
+				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_6onmr-1",
-			"id":"n_FwUrL",
+			"id":"n_5KzKo",
 			"index":1,
 			"inputs":{
-				"cron":"INTERVAL",
-				"sequential":false,
-				"interval":15,
-				"frequency":"MINUTES"
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"iterations":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Iterations"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"fileId":{
+							"type":"string",
+							"title":"File Id"
+						}
+					}
+				}
 			},
 			"skip":false,
-			"subTitle":"Schedule",
-			"title":"New recurring event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"SCHEDULED"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
@@ -88,6 +118,22 @@
 			"id":"n_Xwx8B",
 			"index":3,
 			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"iterations":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Iterations"
+						}
+					}
+				},
 				"input":{
 					"type":"object",
 					"additionalProperties":false,
@@ -101,7 +147,7 @@
 						}
 					}
 				},
-				"code":"\nprivate void traverseNodes(def node, def parentNode, Map nameMap, Map parentMap, Map nodeMap) {\n    if (!node) return\n\n    // Populate our maps with the current node's data\n    nameMap[node.id] = node.name\n    nodeMap[node.id] = node\n    if (parentNode) {\n        parentMap[node.id] = parentNode.id\n    }\n\n    // Recurse into children, passing the current node as the new parent\n    if (node.children) {\n        node.children.each { child ->\n            traverseNodes(child, node, nameMap, parentMap, nodeMap)\n        }\n    }\n}\n\n\ndef document = figmaFile\n\n// --- Pass 1: Traverse the tree to build comprehensive maps ---\ndef nodeIdToNameMap = [:]\ndef nodeIdToParentIdMap = [:]\ndef nodeIdToNodeMap = [:] // Store the full node object for easy access\n\ntraverseNodes(document, null, nodeIdToNameMap, nodeIdToParentIdMap, nodeIdToNodeMap)\n\n// --- Pass 2: Iterate through nodes and build the JSON output ---\ndef interactionsList = []\n\nnodeIdToNodeMap.values().each { node ->\n    if (node.interactions) {\n        node.interactions.each { interaction ->\n            interaction.actions.each { action ->\n                if (action?.type == 'NODE' && action?.destinationId) {\n                    // Find visible text by looking for a child text node\n                    def visibleText = node.children?.find { it.type == 'TEXT' }?.characters ?: null\n\n                    // Get parent name from our map\n                    def parentId = nodeIdToParentIdMap[node.id]\n                    def parentName = parentId ? nodeIdToNameMap[parentId] : null\n\n                    // Build the interaction map object\n                    def interactionDetails = [\n                        source_id: node.id,\n                        source_name: node.name ?: \"Unnamed Node\",\n                        source_type: node.type,\n                        visible_text: visibleText,\n                        parent_name: parentName,\n                        trigger: interaction.trigger?.type ?: \"UNKNOWN_TRIGGER\",\n                        action: action.navigation ?: \"ACTION\",\n                        destination_id: action.destinationId\n                    ]\n                    \n                    interactionsList.add(interactionDetails)\n                }\n            }\n        }\n    }\n}\n\nreturn interactionsList",
+				"code":"\nprivate void traverseNodes(def node, def parentNode, Map nameMap, Map parentMap, Map nodeMap) {\n    if (!node) return\n\n    // Populate our maps with the current node's data\n    nameMap[node.id] = node.name\n    nodeMap[node.id] = node\n    if (parentNode) {\n        parentMap[node.id] = parentNode.id\n    }\n\n    // Recurse into children, passing the current node as the new parent\n    if (node.children) {\n        node.children.each { child ->\n            traverseNodes(child, node, nameMap, parentMap, nodeMap)\n        }\n    }\n}\n\n\ndef document = figmaFile\n\n// --- Pass 1: Traverse the tree to build comprehensive maps ---\ndef nodeIdToNameMap = [:]\ndef nodeIdToParentIdMap = [:]\ndef nodeIdToNodeMap = [:] // Store the full node object for easy access\n\ntraverseNodes(document, null, nodeIdToNameMap, nodeIdToParentIdMap, nodeIdToNodeMap)\n\n// --- Pass 2: Iterate through nodes and build the JSON output ---\ndef interactionsList = []\n\nnodeIdToNodeMap.values().each { node ->\n    if (node.interactions) {\n        node.interactions.each { interaction ->\n            interaction.actions.each { action ->\n                if (action?.type == 'NODE' && action?.destinationId) {\n                    // Find visible text by looking for a child text node\n                    def visibleText = node.children?.find { it.type == 'TEXT' }?.characters ?: null\n\n                    // Get parent name from our map\n                    def parentId = nodeIdToParentIdMap[node.id]\n                    def parentName = parentId ? nodeIdToNameMap[parentId] : null\n\n                    // Build the interaction map object\n                    def interactionDetails = [\n                        source_id: node.id,\n                        source_name: node.name ?: \"Unnamed Node\",\n                        source_type: node.type,\n                        visible_text: visibleText,\n                        parent_name: parentName,\n                        trigger: interaction.trigger?.type ?: \"UNKNOWN_TRIGGER\",\n                        action: action.navigation ?: \"ACTION\",\n                        destination_id: action.destinationId\n                    ]\n                    \n                    interactionsList.add(interactionDetails)\n                }\n            }\n        }\n    }\n}\n\nreturn [\"iterations\": interactionsList]",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
@@ -112,6 +158,33 @@
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Groovy code",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":938,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_6onmr-1",
+			"id":"n_ocpZY",
+			"index":4,
+			"inputs":{
+				"result":{
+					"iterations":{
+						"source":"{{ n_Xwx8B.outputs.result.iterations }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_Xwx8B.outputs.result.iterations[0] }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":155341,
@@ -131,5 +204,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":12
 }
