@@ -5,12 +5,12 @@
 	"createdTime":1759223053275,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759223223141,
+		"deployedAt":1759307466601,
 		"deployedBy":44096,
-		"deployedDefinitionId":"68db9db7a30f2c5f853d7aa8",
+		"deployedDefinitionId":"68dce6ca8f5c720c982c8f36",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":2
+		"version":3,
+		"workflowVersion":3
 	},
 	"edges":[
 		{
@@ -31,7 +31,7 @@
 	"id":"68db9d0da30f2c5f853d762e",
 	"lastModifiedBy":44096,
 	"lcName":"lookup form test by keys",
-	"modifiedTime":1759307464468,
+	"modifiedTime":1759309434504,
 	"name":"Lookup Form Test By Keys",
 	"nodes":[
 		{
@@ -67,7 +67,7 @@
 						}
 					}
 				},
-				"callableInterfaceId":"682d88d2d19e0b782b8afbe2",
+				"callableInterfaceId":"workflow_lookup_by_keys",
 				"setup":{
 					"required":[
 						"type",
@@ -187,7 +187,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_RrDve-1",
 			"id":"n_4pSKP",
@@ -220,5 +220,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
