@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759302609060,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759302850087,
+		"deployedBy":33167,
+		"deployedDefinitionId":"68dcd4bf32f1a70b6a2b5fdb",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_KDEmM",
@@ -16,7 +24,7 @@
 	"id":"68dcd3d13374855239dba77f",
 	"lastModifiedBy":33167,
 	"lcName":"github test",
-	"modifiedTime":1759302844794,
+	"modifiedTime":1759303074675,
 	"name":"Github test",
 	"nodes":[
 		{
@@ -95,5 +103,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
