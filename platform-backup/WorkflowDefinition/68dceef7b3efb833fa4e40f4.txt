@@ -5,16 +5,16 @@
 	"createdTime":1759309559495,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759310873012,
+		"deployedAt":1759310970895,
 		"deployedBy":17,
-		"deployedDefinitionId":"68dcf418c0a2bc3485d5cb8a",
+		"deployedDefinitionId":"68dcf47ac0a2bc3485d5cda6",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":12
+		"version":2,
+		"workflowVersion":14
 	},
 	"edges":[
 		{
-			"fromNodeId":"n_kG6g1",
+			"fromNodeId":"n_C3XoA",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_4Hvzf",
@@ -74,32 +74,31 @@
 	"id":"68dceef7b3efb833fa4e40f4",
 	"lastModifiedBy":17,
 	"lcName":"figma list all frames",
-	"modifiedTime":1759310968645,
+	"modifiedTime":1759311057334,
 	"name":"Figma List all frames",
 	"nodes":[
 		{
 			"context":{
-				"appName":"schedule",
-				"resourceVersion":816,
-				"resourceName":"schedule_default"
+				"appName":"webhooks",
+				"resourceVersion":818,
+				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_BgqBP-1",
-			"id":"n_kG6g1",
+			"id":"n_C3XoA",
 			"index":1,
 			"inputs":{
-				"cron":"INTERVAL",
-				"sequential":false,
-				"interval":1,
-				"frequency":"MINUTES"
+				"request":{
+					"contentType":"application/json"
+				}
 			},
 			"skip":false,
-			"subTitle":"Schedule",
-			"title":"New recurring event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"SCHEDULED"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
@@ -532,5 +531,5 @@
 	"tags":[
 		
 	],
-	"version":14
+	"version":15
 }
