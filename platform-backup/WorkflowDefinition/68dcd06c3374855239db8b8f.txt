@@ -5,12 +5,12 @@
 	"createdTime":1759301740245,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759301796745,
+		"deployedAt":1759301799495,
 		"deployedBy":37018,
-		"deployedDefinitionId":"68dcd0a43374855239db9db1",
+		"deployedDefinitionId":"68dcd0a73374855239db9db6",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":2
+		"version":3,
+		"workflowVersion":3
 	},
 	"edges":[
 		{
@@ -24,7 +24,7 @@
 	"id":"68dcd06c3374855239db8b8f",
 	"lastModifiedBy":37018,
 	"lcName":"automation1",
-	"modifiedTime":1759301797738,
+	"modifiedTime":1759304223782,
 	"name":"automation1",
 	"nodes":[
 		{
@@ -34,7 +34,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_kgqAq-1",
 			"id":"n_MZAnW",
@@ -70,7 +70,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_kgqAq-1",
 			"id":"n_SWw7l",
@@ -103,5 +103,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
