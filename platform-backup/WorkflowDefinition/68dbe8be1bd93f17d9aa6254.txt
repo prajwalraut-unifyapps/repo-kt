@@ -6,12 +6,12 @@
 	"createdTime":1759242430527,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759305256268,
+		"deployedAt":1759305526294,
 		"deployedBy":43498,
-		"deployedDefinitionId":"68dcde283374855239dbc7fc",
+		"deployedDefinitionId":"68dcdf366405035097db806a",
 		"status":"DEPLOYED",
-		"version":5,
-		"workflowVersion":10
+		"version":6,
+		"workflowVersion":11
 	},
 	"edges":[
 		{
@@ -27,12 +27,19 @@
 			"skip":false,
 			"toNodeId":"n_gZuZw",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_gZuZw",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_RWo91",
+			"type":"next"
 		}
 	],
 	"id":"68dbe8be1bd93f17d9aa6254",
 	"lastModifiedBy":43498,
 	"lcName":"test-scheduler-connection-deletion",
-	"modifiedTime":1759305524191,
+	"modifiedTime":1759308022806,
 	"name":"test-scheduler-connection-deletion",
 	"nodes":[
 		{
@@ -98,7 +105,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_oKLjG-1",
 			"id":"n_gZuZw",
@@ -117,6 +124,21 @@
 			"subTitle":"Teamwork",
 			"title":"Get all projects",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_oKLjG-1",
+			"id":"n_RWo91",
+			"index":4,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":569,
@@ -136,5 +158,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":12
 }
