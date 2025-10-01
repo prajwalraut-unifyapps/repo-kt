@@ -59,7 +59,7 @@
 	"id":"68dceef7b3efb833fa4e40f4",
 	"lastModifiedBy":155341,
 	"lcName":"figma list all frames",
-	"modifiedTime":1759310504554,
+	"modifiedTime":1759310510490,
 	"name":"Figma List all frames",
 	"nodes":[
 		{
@@ -502,5 +502,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
