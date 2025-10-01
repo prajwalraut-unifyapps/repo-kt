@@ -16,7 +16,7 @@
 	"id":"68dd0ac9b4c3186b57dd0664",
 	"lastModifiedBy":161912,
 	"lcName":"demm",
-	"modifiedTime":1759316754728,
+	"modifiedTime":1759316839881,
 	"name":"demm",
 	"nodes":[
 		{
@@ -32,19 +32,6 @@
 			"id":"n_PaZ2t",
 			"index":1,
 			"inputs":{
-				"result":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"output"
-					],
-					"properties":{
-						"output":{
-							"type":"string",
-							"title":"Output"
-						}
-					}
-				},
 				"triggerInputCondition":{
 					"filters":[
 						{
@@ -55,19 +42,6 @@
 						}
 					],
 					"operator":"AND"
-				},
-				"setup":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"input"
-					],
-					"properties":{
-						"input":{
-							"type":"string",
-							"title":"Input"
-						}
-					}
 				}
 			},
 			"skip":false,
@@ -93,7 +67,7 @@
 			"index":2,
 			"inputs":{
 				"result":{
-					"output":"{{ n_PaZ2t.outputs.input }}"
+					"output":""
 				}
 			},
 			"skip":false,
@@ -119,5 +93,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
