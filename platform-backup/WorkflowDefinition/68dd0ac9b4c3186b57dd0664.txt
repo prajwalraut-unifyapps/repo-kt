@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759316681859,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_Y4e0X",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_yuouo",
+			"type":"next"
+		}
+	],
+	"id":"68dd0ac9b4c3186b57dd0664",
+	"lastModifiedBy":161912,
+	"lcName":"demm",
+	"modifiedTime":1759316681859,
+	"name":"demm",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Y4e0X-1",
+			"id":"_Y4e0X",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Y4e0X-1",
+			"id":"_yuouo",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":161912,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
