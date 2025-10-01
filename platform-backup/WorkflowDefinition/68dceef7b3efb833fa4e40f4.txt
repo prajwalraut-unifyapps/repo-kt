@@ -66,7 +66,7 @@
 	"id":"68dceef7b3efb833fa4e40f4",
 	"lastModifiedBy":155341,
 	"lcName":"figma list all frames",
-	"modifiedTime":1759310597058,
+	"modifiedTime":1759310657244,
 	"name":"Figma List all frames",
 	"nodes":[
 		{
@@ -387,7 +387,7 @@
 			"index":4,
 			"inputs":{
 				"repeatMode":"SINGLE",
-				"listSource":"{{ n_OzRGm.outputs.document.children }}",
+				"listSource":"{{ n_OzRGm.outputs.document.children[0].children }}",
 				"captureIterations":true
 			},
 			"skip":false,
@@ -524,5 +524,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
