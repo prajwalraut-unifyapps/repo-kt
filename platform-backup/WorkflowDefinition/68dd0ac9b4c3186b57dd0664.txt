@@ -16,7 +16,7 @@
 	"id":"68dd0ac9b4c3186b57dd0664",
 	"lastModifiedBy":161912,
 	"lcName":"demm",
-	"modifiedTime":1759316866058,
+	"modifiedTime":1759316892918,
 	"name":"demm",
 	"nodes":[
 		{
@@ -93,7 +93,7 @@
 			"index":2,
 			"inputs":{
 				"result":{
-					"output":""
+					"out":"{{ n_PaZ2t.outputs.in }}"
 				}
 			},
 			"skip":false,
@@ -119,5 +119,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
