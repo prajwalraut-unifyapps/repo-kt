@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759301594844,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_M80R9",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_kwyLe",
+			"type":"next"
+		}
+	],
+	"id":"68dccfda3374855239db5932",
+	"lastModifiedBy":20249,
+	"lcName":"figma testing",
+	"modifiedTime":1759301594844,
+	"name":"Figma testing",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_M80R9-1",
+			"id":"_M80R9",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_M80R9-1",
+			"id":"_kwyLe",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":20249,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
