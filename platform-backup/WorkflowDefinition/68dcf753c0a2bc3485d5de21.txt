@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759311699106,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_mXPUk",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_4Zl2i",
+			"type":"next"
+		}
+	],
+	"id":"68dcf753c0a2bc3485d5de21",
+	"lastModifiedBy":161863,
+	"lcName":"test kafka automation",
+	"modifiedTime":1759311699106,
+	"name":"test kafka automation",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_mXPUk-1",
+			"id":"_mXPUk",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_mXPUk-1",
+			"id":"_4Zl2i",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":161863,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
