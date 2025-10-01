@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759308032146,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_sDfIz",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_CJrQc",
+			"type":"next"
+		}
+	],
+	"id":"68dce9008f5c720c982c9d51",
+	"lastModifiedBy":46218,
+	"lcName":"meetingbottest",
+	"modifiedTime":1759308032146,
+	"name":"MeetingBotTest",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_sDfIz-1",
+			"id":"_sDfIz",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_sDfIz-1",
+			"id":"_CJrQc",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":46218,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
