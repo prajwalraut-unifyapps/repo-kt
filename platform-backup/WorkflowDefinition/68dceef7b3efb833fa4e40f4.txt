@@ -5,12 +5,12 @@
 	"createdTime":1759309559495,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759310970895,
+		"deployedAt":1759311059204,
 		"deployedBy":17,
-		"deployedDefinitionId":"68dcf47ac0a2bc3485d5cda6",
+		"deployedDefinitionId":"68dcf4d2c0a2bc3485d5cf75",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":14
+		"version":3,
+		"workflowVersion":15
 	},
 	"edges":[
 		{
@@ -74,7 +74,7 @@
 	"id":"68dceef7b3efb833fa4e40f4",
 	"lastModifiedBy":17,
 	"lcName":"figma list all frames",
-	"modifiedTime":1759311057334,
+	"modifiedTime":1759311083465,
 	"name":"Figma List all frames",
 	"nodes":[
 		{
@@ -110,7 +110,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_BgqBP-1",
 			"id":"n_4Hvzf",
@@ -531,5 +531,5 @@
 	"tags":[
 		
 	],
-	"version":15
+	"version":16
 }
