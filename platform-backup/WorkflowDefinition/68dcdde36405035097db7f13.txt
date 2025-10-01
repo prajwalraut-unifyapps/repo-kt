@@ -37,7 +37,7 @@
 	"id":"68dcdde36405035097db7f13",
 	"lastModifiedBy":39713,
 	"lcName":"test",
-	"modifiedTime":1759309097641,
+	"modifiedTime":1759309131963,
 	"name":"test",
 	"nodes":[
 		{
@@ -47,7 +47,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Zm0i6-1",
 			"id":"n_CCNwe",
@@ -73,7 +73,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Zm0i6-1",
 			"id":"n_FDQgd",
@@ -124,7 +124,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Zm0i6-1",
 			"id":"n_mNTVk",
@@ -175,7 +175,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Zm0i6-1",
 			"id":"n_KLbVL",
@@ -210,7 +210,7 @@
 				"variables":[
 					{
 						"source":"{{ n_FDQgd.outputs.str }}",
-						"value":"=CONCATENATE({{ n_FDQgd.outputs.str }},TEXT({{ n_mNTVk.outputs.a }},\"0\"))"
+						"value":"=CONCATENATE({{ n_FDQgd.outputs.str }},TEXT({{ n_mNTVk.outputs.a }},\"0.0\"))"
 					}
 				]
 			},
@@ -237,5 +237,5 @@
 	"tags":[
 		
 	],
-	"version":10
+	"version":11
 }
