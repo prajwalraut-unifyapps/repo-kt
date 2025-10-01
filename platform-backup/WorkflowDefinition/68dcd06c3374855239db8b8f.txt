@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759301740245,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759301765009,
+		"deployedBy":37018,
+		"deployedDefinitionId":"68dcd0843374855239db9360",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_MZAnW",
@@ -16,7 +24,7 @@
 	"id":"68dcd06c3374855239db8b8f",
 	"lastModifiedBy":37018,
 	"lcName":"automation1",
-	"modifiedTime":1759301762292,
+	"modifiedTime":1759301794922,
 	"name":"automation1",
 	"nodes":[
 		{
@@ -95,5 +103,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
