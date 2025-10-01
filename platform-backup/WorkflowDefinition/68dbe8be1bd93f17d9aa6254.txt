@@ -5,16 +5,16 @@
 	"createdTime":1759242430527,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759302040856,
+		"deployedAt":1759302396752,
 		"deployedBy":43498,
-		"deployedDefinitionId":"68dcd19832f1a70b6a2b5bc5",
+		"deployedDefinitionId":"68dcd2fc3374855239dba5e2",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":5
+		"version":3,
+		"workflowVersion":6
 	},
 	"edges":[
 		{
-			"fromNodeId":"n_4P1CJ",
+			"fromNodeId":"n_HIJXc",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_plNsj",
@@ -24,31 +24,32 @@
 	"id":"68dbe8be1bd93f17d9aa6254",
 	"lastModifiedBy":43498,
 	"lcName":"test-scheduler-connection-deletion",
-	"modifiedTime":1759302394025,
+	"modifiedTime":1759302623956,
 	"name":"test-scheduler-connection-deletion",
 	"nodes":[
 		{
 			"context":{
-				"appName":"webhooks",
-				"resourceVersion":818,
-				"resourceName":"webhooks_default"
+				"appName":"schedule",
+				"resourceVersion":814,
+				"resourceName":"schedule_default"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_oKLjG-1",
-			"id":"n_4P1CJ",
+			"id":"n_HIJXc",
 			"index":1,
 			"inputs":{
-				"request":{
-					"contentType":"application/json"
-				}
+				"cron":"INTERVAL",
+				"sequential":false,
+				"interval":1,
+				"frequency":"MINUTES"
 			},
 			"skip":false,
-			"subTitle":"Webhook",
-			"title":"New event",
+			"subTitle":"Schedule",
+			"title":"New recurring event",
 			"trigger":{
-				"type":"WEBHOOK"
+				"type":"SCHEDULED"
 			},
 			"type":"START"
 		},
@@ -56,12 +57,12 @@
 			"context":{
 				"appName":"gmail",
 				"resourceVersion":5486,
-				"connectionId":"68d2cdf8f5127209905bf32e",
+				"connectionId":"671b4c43acef2908c66209a7",
 				"resourceName":"gmail_send_email",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_oKLjG-1",
 			"id":"n_plNsj",
@@ -98,5 +99,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
