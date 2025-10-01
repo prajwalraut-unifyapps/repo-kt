@@ -1,51 +1,99 @@
 {
 	"appsUsed":[
-		
+		"figma"
 	],
 	"createdTime":1759309559495,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_BgqBP",
+			"fromNodeId":"n_JfLu9",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_ZbZl9",
+			"toNodeId":"n_OzRGm",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_OzRGm",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_PkFq2",
 			"type":"next"
 		}
 	],
 	"id":"68dceef7b3efb833fa4e40f4",
 	"lastModifiedBy":17,
 	"lcName":"figma list all frames",
-	"modifiedTime":1759309559495,
+	"modifiedTime":1759310058111,
 	"name":"Figma List all frames",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_BgqBP-1",
-			"id":"_BgqBP",
-			"index":0,
+			"id":"n_JfLu9",
+			"index":1,
 			"skip":false,
+			"subTitle":"Callable",
 			"title":"Select a trigger event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"figma",
+				"resourceVersion":3549,
+				"connectionId":"68dccf9ebf51c14b15b932d6",
+				"resourceName":"figma_get_file",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_BgqBP-1",
-			"id":"_ZbZl9",
-			"index":0,
+			"id":"n_OzRGm",
+			"index":2,
+			"inputs":{
+				"file_id":"WYnrW7WvFb42fwDFycibor"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Figma",
+			"title":"Get file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"figma",
+				"resourceVersion":1072,
+				"connectionId":"68dccf9ebf51c14b15b932d6",
+				"resourceName":"figma_get_image",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_BgqBP-1",
+			"id":"n_PkFq2",
+			"index":3,
+			"inputs":{
+				"file_id":"WYnrW7WvFb42fwDFycibor",
+				"ids":"942:2723"
+			},
+			"skip":false,
+			"subTitle":"Figma",
+			"title":"Get image from a file",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":17,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +107,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
