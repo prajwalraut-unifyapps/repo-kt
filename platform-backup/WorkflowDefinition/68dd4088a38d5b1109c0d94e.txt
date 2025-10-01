@@ -6,46 +6,77 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_k8cis",
+			"fromNodeId":"n_QctjM",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_5zG1Z",
+			"toNodeId":"n_hh331",
 			"type":"next"
 		}
 	],
 	"id":"68dd4088a38d5b1109c0d94e",
 	"lastModifiedBy":155341,
 	"lcName":"sfsfsf",
-	"modifiedTime":1759330440608,
+	"modifiedTime":1759330464226,
 	"name":"sfsfsf",
 	"nodes":[
 		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":816,
+				"resourceName":"schedule_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_k8cis-1",
-			"id":"_k8cis",
-			"index":0,
+			"id":"n_QctjM",
+			"index":1,
+			"inputs":{
+				"cron":"INTERVAL",
+				"sequential":false,
+				"interval":15,
+				"frequency":"MINUTES"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Schedule",
+			"title":"New recurring event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"SCHEDULED"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":959,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_k8cis-1",
-			"id":"_5zG1Z",
-			"index":0,
+			"id":"n_hh331",
+			"index":2,
+			"inputs":{
+				"automationId":"68dceef7b3efb833fa4e40f4",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"fileId":"RIEEuabJ7egEbVAQHee6LI"
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
 		}
 	],
 	"ownerUserId":155341,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +90,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
