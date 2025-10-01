@@ -37,11 +37,11 @@
 			"fromNodeId":"_Q6YNw",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_2Ri8b",
+			"toNodeId":"n_e9oIJ",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_2Ri8b",
+			"fromNodeId":"n_e9oIJ",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_bDA1f",
@@ -81,7 +81,7 @@
 	"id":"68dd3b6aa38d5b1109c0c665",
 	"lastModifiedBy":49915,
 	"lcName":"adfsvd",
-	"modifiedTime":1759329811329,
+	"modifiedTime":1759329857203,
 	"name":"adfsvd",
 	"nodes":[
 		{
@@ -293,10 +293,7 @@
 				},
 				"code":"\n\ndef result = []\n\nfor (user in response.objects) {\n    def userMap = [:]        // create a new map\n    userMap.id = user.id     // add user id\n    userMap.userGroup = user.userGroups  // add userGroups list\n    result << userMap        // append to result list\n}\n\nreturn [\"userVsUserGroup\" : result, \"hasMore\": response.hasMore]\n",
 				"compile_static":false,
-				"captureStdOutput":false,
-				"parameters":{
-					"response":"{{ n_xTvjJ.outputs.response }}"
-				}
+				"captureStdOutput":false
 			},
 			"skip":false,
 			"subTitle":"Code by UnifyApps",
@@ -314,7 +311,7 @@
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_Vhzct@_sP0Nr-1@l",
-			"id":"n_2Ri8b",
+			"id":"n_e9oIJ",
 			"index":6,
 			"inputs":{
 				"variables":[
@@ -322,8 +319,7 @@
 						"source":"{{ n_qC5ua.outputs.userHasMore }}"
 					},
 					{
-						"source":"{{ n_qC5ua.outputs.userOffset }}",
-						"value":"=({{ n_qC5ua.outputs.userOffset }} + 20)"
+						"source":"{{ n_qC5ua.outputs.userOffset }}"
 					}
 				]
 			},
@@ -415,5 +411,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
