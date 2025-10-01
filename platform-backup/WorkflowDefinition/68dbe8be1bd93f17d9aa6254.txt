@@ -6,12 +6,12 @@
 	"createdTime":1759242430527,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759305526294,
+		"deployedAt":1759308025430,
 		"deployedBy":43498,
-		"deployedDefinitionId":"68dcdf366405035097db806a",
+		"deployedDefinitionId":"68dce8f98f5c720c982c9d16",
 		"status":"DEPLOYED",
-		"version":6,
-		"workflowVersion":11
+		"version":7,
+		"workflowVersion":12
 	},
 	"edges":[
 		{
@@ -39,7 +39,7 @@
 	"id":"68dbe8be1bd93f17d9aa6254",
 	"lastModifiedBy":43498,
 	"lcName":"test-scheduler-connection-deletion",
-	"modifiedTime":1759308022806,
+	"modifiedTime":1759308079488,
 	"name":"test-scheduler-connection-deletion",
 	"nodes":[
 		{
@@ -100,12 +100,12 @@
 			"context":{
 				"appName":"teamwork",
 				"resourceVersion":2541,
-				"connectionId":"679b4f2316ad4f2c0735c9db",
+				"connectionId":"68dce9263e107e10b8328284",
 				"resourceName":"teamwork_get_projects",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_oKLjG-1",
 			"id":"n_gZuZw",
@@ -158,5 +158,5 @@
 	"tags":[
 		
 	],
-	"version":12
+	"version":13
 }
