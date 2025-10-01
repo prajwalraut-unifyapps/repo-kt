@@ -37,7 +37,7 @@
 	"id":"68dcdde36405035097db7f13",
 	"lastModifiedBy":39713,
 	"lcName":"test",
-	"modifiedTime":1759309131963,
+	"modifiedTime":1759309146091,
 	"name":"test",
 	"nodes":[
 		{
@@ -210,7 +210,7 @@
 				"variables":[
 					{
 						"source":"{{ n_FDQgd.outputs.str }}",
-						"value":"=CONCATENATE({{ n_FDQgd.outputs.str }},TEXT({{ n_mNTVk.outputs.a }},\"0.0\"))"
+						"value":"=CONCATENATE({{ n_FDQgd.outputs.str }},TEXT({{ n_mNTVk.outputs.a }},\"0\"))"
 					}
 				]
 			},
@@ -237,5 +237,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":12
 }
