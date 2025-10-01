@@ -31,40 +31,18 @@
 			"fromNodeId":"n_OzRGm",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_GfH5f",
+			"toNodeId":"_Ixjgd",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_GfH5f",
+			"fromNodeId":"_Ixjgd",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_WJYfi",
-			"type":"loop"
-		},
-		{
-			"fromNodeId":"_WJYfi",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_Xivtc",
+			"toNodeId":"_7qqmK",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_Xivtc",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_DiajA",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_DiajA",
-			"name":"loopback",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_GfH5f",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_GfH5f",
+			"fromNodeId":"_7qqmK",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_SYB2U",
@@ -79,9 +57,9 @@
 		}
 	],
 	"id":"68dceef7b3efb833fa4e40f4",
-	"lastModifiedBy":17,
+	"lastModifiedBy":155341,
 	"lcName":"figma list all frames",
-	"modifiedTime":1759311242494,
+	"modifiedTime":1759330102070,
 	"name":"Figma List all frames",
 	"nodes":[
 		{
@@ -100,16 +78,13 @@
 				"result":{
 					"type":"object",
 					"additionalProperties":false,
-					"required":[
-						"iconUrls"
-					],
+					"required":[],
 					"properties":{
-						"iconUrls":{
-							"type":"array",
-							"items":{
-								"type":"string"
-							},
-							"title":"Icon Urls"
+						"images":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Images"
 						}
 					}
 				},
@@ -414,26 +389,50 @@
 		},
 		{
 			"context":{
-				"appName":"loop",
-				"resourceVersion":849,
-				"resourceName":"loop_for_each",
+				"appName":"code_by_unifyapps",
+				"resourceVersion":898,
+				"resourceName":"code_by_unifyapps_groovy",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_BgqBP-1",
-			"id":"n_GfH5f",
+			"id":"_Ixjgd",
 			"index":4,
 			"inputs":{
-				"repeatMode":"SINGLE",
-				"listSource":"{{ n_OzRGm.outputs.document.children[0].children }}",
-				"captureIterations":true
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"ids":{
+							"type":"string",
+							"title":"Ids"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"figmaFile":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Figma File"
+						}
+					}
+				},
+				"code":"\nprivate void findFramesRecursively(def node, List idList) {\n        if (!node) return\n\n        // Check if the current node is a FRAME. If so, add its ID.\n        // This check ensures we only get frames, not pages or other elements.\n        if (node.type == 'FRAME') {\n            idList.add(node.id)\n        }\n\n        // If the node has children, recurse into them.\n        if (node.children) {\n            node.children.each { child ->\n                findFramesRecursively(child, idList)\n            }\n        }\n    }\n\n\n\n\n\n  def document = figmaFile\n\n  // A list to hold all the Frame IDs we find.\n  def frameIds = []\n  \n  // Start the recursive search from the top-level document node.\n  findFramesRecursively(document, frameIds)\n\n  // Join the list of IDs into a single string.\n  return [\"ids\": frameIds.join(',')]\n",
+				"compile_static":false,
+				"captureStdOutput":false
 			},
 			"skip":false,
-			"subTitle":"Loop",
-			"title":"For each loop",
-			"type":"LOOP"
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
 		},
 		{
 			"context":{
@@ -446,89 +445,16 @@
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
-			"groupId":"n_GfH5f@_BgqBP-1@l",
-			"id":"_WJYfi",
+			"groupId":"_BgqBP-1",
+			"id":"_7qqmK",
 			"index":5,
 			"inputs":{
 				"file_id":"{{ n_uP33b.outputs.fileId }}",
-				"ids":"{{ n_GfH5f.outputs.item.id }}"
+				"ids":"{{ _Ixjgd.outputs.result.ids }}"
 			},
 			"skip":false,
 			"subTitle":"Figma",
 			"title":"Get image from a file",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":898,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_GfH5f@_BgqBP-1@l",
-			"id":"n_Xivtc",
-			"index":6,
-			"inputs":{
-				"output":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[],
-					"properties":{
-						"imageUrl":{
-							"type":"string",
-							"title":"Image Url"
-						}
-					}
-				},
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[],
-					"properties":{
-						"images":{
-							"type":"object",
-							"properties":{},
-							"additionalProperties":false,
-							"title":"Images"
-						}
-					}
-				},
-				"code":"\ndef imageUrl = images?.values()?.first()\n\nreturn [\"imageUrl\": imageUrl]",
-				"compile_static":false,
-				"captureStdOutput":false,
-				"parameters":{
-					"images":"{{ _WJYfi.outputs.images }}"
-				}
-			},
-			"skip":false,
-			"subTitle":"Code by UnifyApps",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":896,
-				"resourceName":"variable_by_unifyapps_add_item_to_list",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_GfH5f@_BgqBP-1@l",
-			"id":"n_DiajA",
-			"index":7,
-			"inputs":{
-				"itemToAdd":"{{ n_Xivtc.outputs.result.imageUrl }}",
-				"insertLocation":"END",
-				"listName":"{{ n_4Hvzf.outputs.items[0] }}"
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Add item to list",
 			"type":"ACTION"
 		},
 		{
@@ -543,14 +469,10 @@
 			"fallbackMode":"STOP",
 			"groupId":"_BgqBP-1",
 			"id":"n_SYB2U",
-			"index":8,
+			"index":6,
 			"inputs":{
 				"result":{
-					"iconUrls":{
-						"source":"{{ n_4Hvzf.outputs.items }}",
-						"ua:type":"mappedArray",
-						"items":"{{ n_4Hvzf.outputs.items[0] }}"
-					}
+					"images":"{{ _7qqmK.outputs.images }}"
 				}
 			},
 			"skip":false,
@@ -567,7 +489,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_BgqBP-1",
 			"id":"n_X1qI0",
-			"index":9,
+			"index":7,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -591,5 +513,5 @@
 	"tags":[
 		
 	],
-	"version":19
+	"version":20
 }
