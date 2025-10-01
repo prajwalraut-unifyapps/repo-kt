@@ -66,7 +66,7 @@
 	"id":"68dceef7b3efb833fa4e40f4",
 	"lastModifiedBy":155341,
 	"lcName":"figma list all frames",
-	"modifiedTime":1759310657244,
+	"modifiedTime":1759310720819,
 	"name":"Figma List all frames",
 	"nodes":[
 		{
@@ -404,7 +404,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_GfH5f@_BgqBP-1@l",
 			"id":"_WJYfi",
@@ -524,5 +524,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
