@@ -6,46 +6,172 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_sP0Nr",
+			"fromNodeId":"n_UHEal",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_6bOZi",
+			"toNodeId":"n_0wROC",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_0wROC",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_bDA1f",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_bDA1f",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_xTvjJ",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_xTvjJ",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_bDA1f",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_bDA1f",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_mBAGv",
 			"type":"next"
 		}
 	],
 	"id":"68dd3b6aa38d5b1109c0c665",
 	"lastModifiedBy":49915,
 	"lcName":"adfsvd",
-	"modifiedTime":1759329130556,
+	"modifiedTime":1759329260515,
 	"name":"adfsvd",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":818,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_sP0Nr-1",
-			"id":"_sP0Nr",
-			"index":0,
+			"id":"n_UHEal",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":1021,
+				"resourceName":"standard_entities_lookup_entities",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_sP0Nr-1",
-			"id":"_6bOZi",
-			"index":0,
+			"id":"n_0wROC",
+			"index":2,
+			"inputs":{
+				"lookupType":"USER",
+				"page":{
+					"limit":20,
+					"offset":0
+				},
+				"type":"ByQuery",
+				"fields":[
+					null
+				]
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Lookup Request",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":849,
+				"resourceName":"loop_for_each",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_sP0Nr-1",
+			"id":"n_bDA1f",
+			"index":3,
+			"inputs":{
+				"repeatMode":"SINGLE",
+				"listSource":"{{ n_0wROC.outputs.response.objects }}",
+				"captureIterations":false
+			},
+			"skip":false,
+			"subTitle":"Loop",
+			"title":"For each loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":1021,
+				"resourceName":"standard_entities_lookup_entities",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_bDA1f@_sP0Nr-1@l",
+			"id":"n_xTvjJ",
+			"index":4,
+			"inputs":{
+				"keys":{
+					"source":"{{ n_bDA1f.outputs.item.userGroups }}",
+					"ua:type":"mappedArray",
+					"items":"{{ n_bDA1f.outputs.item.userGroups[0] }}"
+				},
+				"lookupType":"USER_GROUP",
+				"type":"ByKeys"
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Lookup Request",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_sP0Nr-1",
+			"id":"n_mBAGv",
+			"index":5,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":49915,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +185,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
