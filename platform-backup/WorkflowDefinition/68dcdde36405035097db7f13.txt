@@ -37,7 +37,7 @@
 	"id":"68dcdde36405035097db7f13",
 	"lastModifiedBy":39713,
 	"lcName":"test",
-	"modifiedTime":1759309569785,
+	"modifiedTime":1759309583578,
 	"name":"test",
 	"nodes":[
 		{
@@ -95,7 +95,7 @@
 				}
 			},
 			"inputs":{
-				"str":"abc"
+				"str":"\"abc\""
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -237,5 +237,5 @@
 	"tags":[
 		
 	],
-	"version":14
+	"version":15
 }
