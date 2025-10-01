@@ -54,12 +54,19 @@
 			"skip":false,
 			"toNodeId":"n_GfH5f",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_GfH5f",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_X1qI0",
+			"type":"next"
 		}
 	],
 	"id":"68dceef7b3efb833fa4e40f4",
 	"lastModifiedBy":155341,
 	"lcName":"figma list all frames",
-	"modifiedTime":1759310516648,
+	"modifiedTime":1759310537438,
 	"name":"Figma List all frames",
 	"nodes":[
 		{
@@ -483,6 +490,21 @@
 			"subTitle":"Variable by UnifyApps",
 			"title":"Add item to list",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_BgqBP-1",
+			"id":"n_X1qI0",
+			"index":8,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":17,
@@ -502,5 +524,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
