@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759309559495,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759310873012,
+		"deployedBy":17,
+		"deployedDefinitionId":"68dcf418c0a2bc3485d5cb8a",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":12
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_kG6g1",
@@ -73,7 +81,7 @@
 	"id":"68dceef7b3efb833fa4e40f4",
 	"lastModifiedBy":17,
 	"lcName":"figma list all frames",
-	"modifiedTime":1759310871111,
+	"modifiedTime":1759310949954,
 	"name":"Figma List all frames",
 	"nodes":[
 		{
@@ -83,7 +91,7 @@
 				"resourceName":"schedule_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_BgqBP-1",
 			"id":"n_kG6g1",
@@ -461,14 +469,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_GfH5f@_BgqBP-1@l",
 			"id":"_WJYfi",
 			"index":6,
 			"inputs":{
 				"file_id":"WYnrW7WvFb42fwDFycibor",
-				"ids":"{{ _NOj0C.outputs.result.id }}"
+				"ids":"{{ n_GfH5f.outputs.item.id }}"
 			},
 			"skip":false,
 			"subTitle":"Figma",
@@ -581,5 +589,5 @@
 	"tags":[
 		
 	],
-	"version":12
+	"version":13
 }
