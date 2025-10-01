@@ -40,7 +40,7 @@
 	"id":"68dd0d1525368873c19bc718",
 	"lastModifiedBy":175325,
 	"lcName":"nhbfgvdc",
-	"modifiedTime":1759317447793,
+	"modifiedTime":1759317468886,
 	"name":"nhbfgvdc",
 	"nodes":[
 		{
@@ -109,7 +109,7 @@
 					{
 						"property":"=LEN({{ n_PblUr.outputs.a }})",
 						"filter":{
-							"operator":"EQUAL",
+							"operator":"GT",
 							"value":"0"
 						}
 					}
@@ -185,5 +185,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
