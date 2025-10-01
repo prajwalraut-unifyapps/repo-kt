@@ -37,7 +37,7 @@
 	"id":"68dcdde36405035097db7f13",
 	"lastModifiedBy":39713,
 	"lcName":"test",
-	"modifiedTime":1759309334334,
+	"modifiedTime":1759309569785,
 	"name":"test",
 	"nodes":[
 		{
@@ -73,7 +73,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Zm0i6-1",
 			"id":"n_FDQgd",
@@ -210,7 +210,7 @@
 				"variables":[
 					{
 						"source":"{{ n_FDQgd.outputs.str }}",
-						"value":"=CONCATENATE(\"abc\",{{ n_mNTVk.outputs.a }})"
+						"value":"=CONCATENATE({{ n_FDQgd.outputs.str }},{{ n_mNTVk.outputs.a }})"
 					}
 				]
 			},
@@ -237,5 +237,5 @@
 	"tags":[
 		
 	],
-	"version":13
+	"version":14
 }
