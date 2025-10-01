@@ -5,12 +5,12 @@
 	"createdTime":1758261085342,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759310947687,
+		"deployedAt":1759311030921,
 		"deployedBy":39714,
-		"deployedDefinitionId":"68dcf463c0a2bc3485d5cd32",
+		"deployedDefinitionId":"68dcf4b6c0a2bc3485d5ced1",
 		"status":"DEPLOYED",
-		"version":11,
-		"workflowVersion":14
+		"version":12,
+		"workflowVersion":15
 	},
 	"edges":[
 		{
@@ -31,7 +31,7 @@
 	"id":"68ccef5d8819fd75280c1623",
 	"lastModifiedBy":39714,
 	"lcName":"test-callable",
-	"modifiedTime":1759311025612,
+	"modifiedTime":1759311524844,
 	"name":"test-callable",
 	"nodes":[
 		{
@@ -99,7 +99,7 @@
 			"inputs":{
 				"performAsync":false,
 				"objectSourceResourceName":"oracledb_execute_sql_metadata",
-				"sql":"SELECT SALARY FROM manav_test WHERE EMPLOYEE_ID = '99999999999'"
+				"sql":"SELECT SALARY FROM manav_test WHERE EMPLOYEE_ID = '1'"
 			},
 			"skip":false,
 			"subTitle":"Oracle DB",
@@ -147,5 +147,5 @@
 	"tags":[
 		
 	],
-	"version":15
+	"version":16
 }
