@@ -6,12 +6,12 @@
 	"createdTime":1759242430527,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759308025430,
+		"deployedAt":1759308081179,
 		"deployedBy":43498,
-		"deployedDefinitionId":"68dce8f98f5c720c982c9d16",
+		"deployedDefinitionId":"68dce9318f5c720c982c9e38",
 		"status":"DEPLOYED",
-		"version":7,
-		"workflowVersion":12
+		"version":8,
+		"workflowVersion":13
 	},
 	"edges":[
 		{
@@ -32,14 +32,14 @@
 			"fromNodeId":"n_gZuZw",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_RWo91",
+			"toNodeId":"n_UvOki",
 			"type":"next"
 		}
 	],
 	"id":"68dbe8be1bd93f17d9aa6254",
 	"lastModifiedBy":43498,
 	"lcName":"test-scheduler-connection-deletion",
-	"modifiedTime":1759308079488,
+	"modifiedTime":1759309096922,
 	"name":"test-scheduler-connection-deletion",
 	"nodes":[
 		{
@@ -120,25 +120,37 @@
 				"status":"active",
 				"includePeople":false
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Teamwork",
 			"title":"Get all projects",
 			"type":"ACTION"
 		},
 		{
 			"context":{
-				"appName":"stop"
+				"appName":"streams_by_unifyapps",
+				"resourceVersion":1586,
+				"resourceName":"streams_by_unifyapps_publish_event",
+				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_oKLjG-1",
-			"id":"n_RWo91",
+			"id":"n_UvOki",
 			"index":4,
+			"inputs":{
+				"streamId":"e_68d66079793bfd127f1b3372",
+				"skipInputValidation":false,
+				"event":{
+					"tesaitn":"wdefgr",
+					"tesigng":"ewfrgt"
+				},
+				"key":"w"
+			},
 			"skip":false,
-			"subTitle":"Stop",
-			"title":"Stop",
-			"type":"STOP"
+			"subTitle":"Streams by UnifyApps",
+			"title":"Publish event to stream",
+			"type":"ACTION"
 		}
 	],
 	"ownerUserId":569,
@@ -158,5 +170,5 @@
 	"tags":[
 		
 	],
-	"version":13
+	"version":14
 }
