@@ -16,7 +16,7 @@
 	"id":"68dd0c0afc8be17248c500f1",
 	"lastModifiedBy":161912,
 	"lcName":"demm (copy)",
-	"modifiedTime":1759317002116,
+	"modifiedTime":1759317012728,
 	"name":"demm (copy)",
 	"nodes":[
 		{
@@ -26,7 +26,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Y4e0X-1",
 			"id":"n_PaZ2t",
@@ -119,5 +119,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
