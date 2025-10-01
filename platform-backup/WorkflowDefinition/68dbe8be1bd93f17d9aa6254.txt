@@ -22,9 +22,9 @@
 		}
 	],
 	"id":"68dbe8be1bd93f17d9aa6254",
-	"lastModifiedBy":4446,
+	"lastModifiedBy":43498,
 	"lcName":"test-scheduler-connection-deletion",
-	"modifiedTime":1759300911579,
+	"modifiedTime":1759301763599,
 	"name":"test-scheduler-connection-deletion",
 	"nodes":[
 		{
@@ -99,5 +99,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
