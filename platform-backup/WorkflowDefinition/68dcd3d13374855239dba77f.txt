@@ -1,51 +1,87 @@
 {
 	"appsUsed":[
-		
+		"github"
 	],
 	"createdTime":1759302609060,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_DfRps",
+			"fromNodeId":"n_KDEmM",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_c9t9i",
+			"toNodeId":"n_vj4Gl",
 			"type":"next"
 		}
 	],
 	"id":"68dcd3d13374855239dba77f",
 	"lastModifiedBy":33167,
 	"lcName":"github test",
-	"modifiedTime":1759302609060,
+	"modifiedTime":1759302844794,
 	"name":"Github test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":818,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_DfRps-1",
-			"id":"_DfRps",
-			"index":0,
+			"id":"n_KDEmM",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"github",
+				"resourceVersion":3345,
+				"connectionId":"6744b0f19d7e864de4c3774d",
+				"resourceName":"github_create_pull_request_review_comment",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_DfRps-1",
-			"id":"_c9t9i",
-			"index":0,
+			"id":"n_vj4Gl",
+			"index":2,
+			"inputs":{
+				"owner":"username:Testing-githu",
+				"path":"automation/manifest.json",
+				"side":"RIGHT",
+				"subject_type":"file",
+				"pull_number":117,
+				"line":14,
+				"repo":"Connector-testing",
+				"start_line":11,
+				"position":6,
+				"body":"testfiles",
+				"commit_id":"756bd597ea9ce80e264fab293adeb6b25f7e6b30",
+				"start_side":"RIGHT"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Github",
+			"title":"Create pull request review comment",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":33167,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +95,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
