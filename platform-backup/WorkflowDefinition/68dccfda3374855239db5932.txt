@@ -11,12 +11,19 @@
 			"skip":false,
 			"toNodeId":"n_dYvyj",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_dYvyj",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_pN6VD",
+			"type":"next"
 		}
 	],
 	"id":"68dccfda3374855239db5932",
 	"lastModifiedBy":20249,
 	"lcName":"figma testing",
-	"modifiedTime":1759301641896,
+	"modifiedTime":1759302014670,
 	"name":"Figma testing",
 	"nodes":[
 		{
@@ -65,6 +72,33 @@
 			"subTitle":"Figma",
 			"title":"Get file",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"figma",
+				"resourceVersion":1089,
+				"connectionId":"68dccf9ebf51c14b15b932d6",
+				"resourceName":"figma_create_comment",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_M80R9-1",
+			"id":"n_pN6VD",
+			"index":3,
+			"inputs":{
+				"file_id":"WYnrW7WvFb42fwDFycibor",
+				"client_meta":{
+					"x":4244.5,
+					"y":-160
+				},
+				"message":"Testing"
+			},
+			"skip":false,
+			"subTitle":"Figma",
+			"title":"Create a comment",
+			"type":"ACTION"
 		}
 	],
 	"ownerUserId":20249,
@@ -84,5 +118,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
