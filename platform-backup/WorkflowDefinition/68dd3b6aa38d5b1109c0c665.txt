@@ -16,6 +16,13 @@
 			"fromNodeId":"n_0wROC",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_ky2Zg",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_ky2Zg",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_bDA1f",
 			"type":"next"
 		},
@@ -45,7 +52,7 @@
 	"id":"68dd3b6aa38d5b1109c0c665",
 	"lastModifiedBy":49915,
 	"lcName":"adfsvd",
-	"modifiedTime":1759329279439,
+	"modifiedTime":1759329408879,
 	"name":"adfsvd",
 	"nodes":[
 		{
@@ -93,13 +100,80 @@
 					"offset":0
 				},
 				"type":"ByQuery",
-				"fields":[
-					null
-				]
+				"fields":[]
 			},
 			"skip":false,
 			"subTitle":"Standard entities by UnifyApps",
 			"title":"Lookup Request",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_sP0Nr-1",
+			"id":"n_ky2Zg",
+			"index":3,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"userVsUserGroup":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"userId":{
+										"type":"string",
+										"title":"User Id"
+									},
+									"userGroup":{
+										"type":"array",
+										"items":{
+											"type":"object",
+											"properties":{},
+											"additionalProperties":false
+										},
+										"title":"User Group"
+									}
+								},
+								"additionalProperties":false,
+								"required":[]
+							},
+							"title":"User Vs User Group"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"response":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Response"
+						}
+					}
+				},
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"response":"{{ n_0wROC.outputs.response }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
 			"type":"ACTION"
 		},
 		{
@@ -114,10 +188,10 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sP0Nr-1",
 			"id":"n_bDA1f",
-			"index":3,
+			"index":4,
 			"inputs":{
 				"repeatMode":"SINGLE",
-				"listSource":"{{ n_0wROC.outputs.response.objects }}",
+				"listSource":"{{ n_ky2Zg.outputs.result.userVsUserGroup }}",
 				"captureIterations":false
 			},
 			"skip":false,
@@ -137,12 +211,12 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_bDA1f@_sP0Nr-1@l",
 			"id":"n_xTvjJ",
-			"index":4,
+			"index":5,
 			"inputs":{
 				"keys":{
-					"source":"{{ n_bDA1f.outputs.item.userGroups }}",
+					"source":"{{ n_bDA1f.outputs.item.userGroup }}",
 					"ua:type":"mappedArray",
-					"items":"{{ n_bDA1f.outputs.item.userGroups[0] }}"
+					"items":"{{ n_bDA1f.outputs.item.userGroup[0] }}"
 				},
 				"lookupType":"USER_GROUP",
 				"type":"ByKeys"
@@ -161,7 +235,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sP0Nr-1",
 			"id":"n_mBAGv",
-			"index":5,
+			"index":6,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -185,5 +259,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
