@@ -24,7 +24,7 @@
 	"id":"68dbe8be1bd93f17d9aa6254",
 	"lastModifiedBy":43498,
 	"lcName":"test-scheduler-connection-deletion",
-	"modifiedTime":1759302623956,
+	"modifiedTime":1759302664999,
 	"name":"test-scheduler-connection-deletion",
 	"nodes":[
 		{
@@ -57,7 +57,7 @@
 			"context":{
 				"appName":"gmail",
 				"resourceVersion":5486,
-				"connectionId":"671b4c43acef2908c66209a7",
+				"connectionId":"68ce8dfcb270492a09955fad",
 				"resourceName":"gmail_send_email",
 				"type":"APPLICATION"
 			},
@@ -99,5 +99,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
