@@ -5,12 +5,12 @@
 	"createdTime":1759235128075,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759245441213,
-		"deployedBy":47201,
-		"deployedDefinitionId":"68dbf47fc8ce161f34fe81ec",
+		"deployedAt":1759307993172,
+		"deployedBy":46218,
+		"deployedDefinitionId":"68dce8d88f5c720c982c9c50",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":3
+		"version":3,
+		"workflowVersion":4
 	},
 	"edges":[
 		{
@@ -31,7 +31,7 @@
 	"id":"68dbcc38181ca54665973c66",
 	"lastModifiedBy":46218,
 	"lcName":"meeting bot test",
-	"modifiedTime":1759307990228,
+	"modifiedTime":1759308014340,
 	"name":"Meeting Bot Test",
 	"nodes":[
 		{
@@ -59,6 +59,19 @@
 							"title":"Success"
 						}
 					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"meetingUrl"
+					],
+					"properties":{
+						"meetingUrl":{
+							"type":"string",
+							"title":"Meeting Url"
+						}
+					}
 				}
 			},
 			"skip":false,
@@ -77,14 +90,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_NVKkT-1",
 			"id":"n_eKsC4",
 			"index":2,
 			"inputs":{
 				"botName":"UnifyApps",
-				"meetingUrl":"https://teams.microsoft.com/meet/4194840392256?p=02OtFBLXdgtxMVsp3G"
+				"meetingUrl":"{{ n_LCS5m.outputs.meetingUrl }}"
 			},
 			"skip":false,
 			"subTitle":"Meeting bot by UnifyApps",
@@ -132,5 +145,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
