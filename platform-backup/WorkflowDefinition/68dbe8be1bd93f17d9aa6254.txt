@@ -1,7 +1,6 @@
 {
 	"appsUsed":[
-		"gmail",
-		"teamwork"
+		"gmail"
 	],
 	"createdTime":1759242430527,
 	"deleted":false,
@@ -25,13 +24,6 @@
 			"fromNodeId":"n_plNsj",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_gZuZw",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_gZuZw",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_UvOki",
 			"type":"next"
 		}
@@ -39,7 +31,7 @@
 	"id":"68dbe8be1bd93f17d9aa6254",
 	"lastModifiedBy":43498,
 	"lcName":"test-scheduler-connection-deletion",
-	"modifiedTime":1759309096922,
+	"modifiedTime":1759309107994,
 	"name":"test-scheduler-connection-deletion",
 	"nodes":[
 		{
@@ -98,35 +90,6 @@
 		},
 		{
 			"context":{
-				"appName":"teamwork",
-				"resourceVersion":2541,
-				"connectionId":"68dce9263e107e10b8328284",
-				"resourceName":"teamwork_get_projects",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_oKLjG-1",
-			"id":"n_gZuZw",
-			"index":3,
-			"inputs":{
-				"includeProjectOwner":false,
-				"onlyStarredProjects":false,
-				"orderMode":"asc",
-				"getDeleted":false,
-				"includeTags":false,
-				"orderby":"name",
-				"status":"active",
-				"includePeople":false
-			},
-			"skip":true,
-			"subTitle":"Teamwork",
-			"title":"Get all projects",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"streams_by_unifyapps",
 				"resourceVersion":1586,
 				"resourceName":"streams_by_unifyapps_publish_event",
@@ -137,7 +100,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_oKLjG-1",
 			"id":"n_UvOki",
-			"index":4,
+			"index":3,
 			"inputs":{
 				"streamId":"e_68d66079793bfd127f1b3372",
 				"skipInputValidation":false,
@@ -170,5 +133,5 @@
 	"tags":[
 		
 	],
-	"version":14
+	"version":15
 }
