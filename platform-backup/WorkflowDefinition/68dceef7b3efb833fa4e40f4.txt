@@ -5,12 +5,12 @@
 	"createdTime":1759309559495,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759311059204,
+		"deployedAt":1759311205180,
 		"deployedBy":17,
-		"deployedDefinitionId":"68dcf4d2c0a2bc3485d5cf75",
+		"deployedDefinitionId":"68dcf564c0a2bc3485d5d232",
 		"status":"DEPLOYED",
-		"version":3,
-		"workflowVersion":15
+		"version":4,
+		"workflowVersion":17
 	},
 	"edges":[
 		{
@@ -81,7 +81,7 @@
 	"id":"68dceef7b3efb833fa4e40f4",
 	"lastModifiedBy":17,
 	"lcName":"figma list all frames",
-	"modifiedTime":1759311201486,
+	"modifiedTime":1759311227411,
 	"name":"Figma List all frames",
 	"nodes":[
 		{
@@ -110,6 +110,19 @@
 								"type":"string"
 							},
 							"title":"Icon Urls"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"fileId"
+					],
+					"properties":{
+						"fileId":{
+							"type":"string",
+							"title":"File Id"
 						}
 					}
 				}
@@ -386,13 +399,13 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_BgqBP-1",
 			"id":"n_OzRGm",
 			"index":3,
 			"inputs":{
-				"file_id":"WYnrW7WvFb42fwDFycibor"
+				"file_id":"{{ n_uP33b.outputs.fileId }}"
 			},
 			"skip":false,
 			"subTitle":"Figma",
@@ -578,5 +591,5 @@
 	"tags":[
 		
 	],
-	"version":17
+	"version":18
 }
