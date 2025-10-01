@@ -5,12 +5,12 @@
 	"createdTime":1759301877394,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759301882687,
+		"deployedAt":1759301902443,
 		"deployedBy":37018,
-		"deployedDefinitionId":"68dcd0fa3374855239db9f02",
+		"deployedDefinitionId":"68dcd10e3374855239db9f4c",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":0
+		"version":2,
+		"workflowVersion":1
 	},
 	"edges":[
 		{
@@ -31,7 +31,7 @@
 	"id":"68dcd0f53374855239db9ef4",
 	"lastModifiedBy":37018,
 	"lcName":"automation2",
-	"modifiedTime":1759301895235,
+	"modifiedTime":1759303902607,
 	"name":"automation2",
 	"nodes":[
 		{
@@ -135,5 +135,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
