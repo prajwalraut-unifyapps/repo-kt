@@ -30,8 +30,15 @@
 			"fromNodeId":"n_GfH5f",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_WJYfi",
+			"toNodeId":"_NOj0C",
 			"type":"loop"
+		},
+		{
+			"fromNodeId":"_NOj0C",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_WJYfi",
+			"type":"next"
 		},
 		{
 			"fromNodeId":"_WJYfi",
@@ -66,7 +73,7 @@
 	"id":"68dceef7b3efb833fa4e40f4",
 	"lastModifiedBy":155341,
 	"lcName":"figma list all frames",
-	"modifiedTime":1759310720819,
+	"modifiedTime":1759310786055,
 	"name":"Figma List all frames",
 	"nodes":[
 		{
@@ -76,7 +83,7 @@
 				"resourceName":"schedule_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_BgqBP-1",
 			"id":"n_kG6g1",
@@ -103,7 +110,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_BgqBP-1",
 			"id":"n_4Hvzf",
@@ -359,7 +366,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_BgqBP-1",
 			"id":"n_OzRGm",
@@ -397,6 +404,56 @@
 		},
 		{
 			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":898,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_GfH5f@_BgqBP-1@l",
+			"id":"_NOj0C",
+			"index":5,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"id":{
+							"type":"string",
+							"title":"Id"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"children":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Children"
+						}
+					}
+				},
+				"code":"return [\"id\": children?.id]",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"children":"{{ n_GfH5f.outputs.item }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"figma",
 				"resourceVersion":1072,
 				"connectionId":"68dccf9ebf51c14b15b932d6",
@@ -408,7 +465,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_GfH5f@_BgqBP-1@l",
 			"id":"_WJYfi",
-			"index":5,
+			"index":6,
 			"inputs":{
 				"file_id":"WYnrW7WvFb42fwDFycibor",
 				"ids":"{{ n_GfH5f.outputs.item.id }}"
@@ -426,11 +483,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_GfH5f@_BgqBP-1@l",
 			"id":"n_Xivtc",
-			"index":6,
+			"index":7,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -476,11 +533,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_GfH5f@_BgqBP-1@l",
 			"id":"n_DiajA",
-			"index":7,
+			"index":8,
 			"inputs":{
 				"itemToAdd":"{{ n_Xivtc.outputs.result.imageUrl }}",
 				"insertLocation":"END",
@@ -500,7 +557,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_BgqBP-1",
 			"id":"n_X1qI0",
-			"index":8,
+			"index":9,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -524,5 +581,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
