@@ -5,12 +5,13 @@
 	"createdTime":1748530221625,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759318439188,
+		"deployedAt":1759331951692,
 		"deployedBy":44109,
-		"deployedDefinitionId":"68dd11a575a316566ae3fe0d",
+		"deployedDefinitionId":"68dd466ff72d3041d70bf325",
+		"deploymentTag":"mqtts",
 		"status":"DEPLOYED",
-		"version":54,
-		"workflowVersion":69
+		"version":55,
+		"workflowVersion":70
 	},
 	"edges":[
 		{
@@ -112,7 +113,7 @@
 	"id":"6836bec667041276bedcf39a",
 	"lastModifiedBy":44109,
 	"lcName":"handle stream completion",
-	"modifiedTime":1759331932104,
+	"modifiedTime":1759332577189,
 	"name":"Handle Stream Completion",
 	"nodes":[
 		{
@@ -531,7 +532,7 @@
 						}
 					}
 				},
-				"code":"return [ 'payload': [\n  \"responseGenerationCompleted\": \"completed\"\n] ]",
+				"code":"return [ 'payload': [\n  \"responseGenerationStatus\": \"completed\"\n] ]",
 				"compile_static":false,
 				"captureStdOutput":false
 			},
@@ -605,5 +606,5 @@
 	"tags":[
 		
 	],
-	"version":70
+	"version":71
 }
