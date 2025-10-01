@@ -1,51 +1,76 @@
 {
 	"appsUsed":[
-		
+		"figma"
 	],
 	"createdTime":1759301594844,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_M80R9",
+			"fromNodeId":"n_r9j2t",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_kwyLe",
+			"toNodeId":"n_dYvyj",
 			"type":"next"
 		}
 	],
 	"id":"68dccfda3374855239db5932",
 	"lastModifiedBy":20249,
 	"lcName":"figma testing",
-	"modifiedTime":1759301594844,
+	"modifiedTime":1759301616809,
 	"name":"Figma testing",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":818,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_M80R9-1",
-			"id":"_M80R9",
-			"index":0,
+			"id":"n_r9j2t",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"figma",
+				"resourceVersion":3548,
+				"connectionId":"68dccf9ebf51c14b15b932d6",
+				"resourceName":"figma_get_file",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_M80R9-1",
-			"id":"_kwyLe",
-			"index":0,
+			"id":"n_dYvyj",
+			"index":2,
+			"inputs":{
+				"file_id":"WYnrW7WvFb42fwDFycibor"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Figma",
+			"title":"Get file",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":20249,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +84,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
