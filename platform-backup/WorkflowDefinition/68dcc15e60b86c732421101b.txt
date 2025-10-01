@@ -1,0 +1,30 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759297886071,
+	"deleted":false,
+	"edges":[
+		
+	],
+	"id":"68dcc15e60b86c732421101b",
+	"lastModifiedBy":175325,
+	"lcName":"changesetlocalautomigonkvmzz",
+	"modifiedTime":1759297886071,
+	"name":"changeSetLocalautomIgOnkvmzz",
+	"nodes":[
+		
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
