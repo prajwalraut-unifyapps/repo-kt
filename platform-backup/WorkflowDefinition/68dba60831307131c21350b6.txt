@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759225352240,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759330588580,
+		"deployedBy":155341,
+		"deployedDefinitionId":"68dd411ca38d5b1109c0da62",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":12
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_5KzKo",
@@ -29,9 +37,9 @@
 	],
 	"id":"68dba60831307131c21350b6",
 	"lastModifiedBy":155341,
-	"lcName":"testt",
-	"modifiedTime":1759330583693,
-	"name":"testt",
+	"lcName":"figma node interactions",
+	"modifiedTime":1759330640440,
+	"name":"Figma node interactions",
 	"nodes":[
 		{
 			"context":{
@@ -40,7 +48,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_6onmr-1",
 			"id":"n_5KzKo",
@@ -91,7 +99,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_6onmr-1",
 			"id":"n_uqNcn",
@@ -112,7 +120,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_6onmr-1",
 			"id":"n_Xwx8B",
@@ -167,7 +175,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_6onmr-1",
 			"id":"n_ocpZY",
@@ -204,5 +212,5 @@
 	"tags":[
 		
 	],
-	"version":12
+	"version":13
 }
