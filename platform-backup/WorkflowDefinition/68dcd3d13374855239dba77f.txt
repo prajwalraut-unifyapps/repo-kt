@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759302609060,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_DfRps",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_c9t9i",
+			"type":"next"
+		}
+	],
+	"id":"68dcd3d13374855239dba77f",
+	"lastModifiedBy":33167,
+	"lcName":"github test",
+	"modifiedTime":1759302609060,
+	"name":"Github test",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_DfRps-1",
+			"id":"_DfRps",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_DfRps-1",
+			"id":"_c9t9i",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":33167,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
