@@ -38,11 +38,33 @@
 			"fromNodeId":"_Ixjgd",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_7qqmK",
+			"toNodeId":"n_w18fS",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"_7qqmK",
+			"fromNodeId":"n_w18fS",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_9C980",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"_9C980",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Q9t8F",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Q9t8F",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_w18fS",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_w18fS",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_SYB2U",
@@ -59,7 +81,7 @@
 	"id":"68dceef7b3efb833fa4e40f4",
 	"lastModifiedBy":155341,
 	"lcName":"figma list all frames",
-	"modifiedTime":1759330135830,
+	"modifiedTime":1759330276452,
 	"name":"Figma List all frames",
 	"nodes":[
 		{
@@ -81,9 +103,12 @@
 					"required":[],
 					"properties":{
 						"images":{
-							"type":"object",
-							"properties":{},
-							"additionalProperties":false,
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
 							"title":"Images"
 						}
 					}
@@ -342,7 +367,7 @@
 				"createList":{
 					"ua:type":"mappedArray"
 				},
-				"ua:list_type":"STRING"
+				"ua:list_type":"OBJECT"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -354,7 +379,8 @@
 							"title":"List",
 							"disableActions":true,
 							"items":{
-								"type":"string"
+								"type":"object",
+								"properties":{}
 							}
 						}
 					}
@@ -407,7 +433,10 @@
 					"required":[],
 					"properties":{
 						"ids":{
-							"type":"string",
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
 							"title":"Ids"
 						}
 					}
@@ -425,7 +454,7 @@
 						}
 					}
 				},
-				"code":"\nprivate void findFramesRecursively(def node, List idList) {\n        if (!node) return\n\n        // Check if the current node is a FRAME. If so, add its ID.\n        // This check ensures we only get frames, not pages or other elements.\n        if (node.type == 'FRAME') {\n            idList.add(node.id)\n        }\n\n        // If the node has children, recurse into them.\n        if (node.children) {\n            node.children.each { child ->\n                findFramesRecursively(child, idList)\n            }\n        }\n    }\n\n\n\n\n\n  def document = figmaFile\n\n  // A list to hold all the Frame IDs we find.\n  def frameIds = []\n  \n  // Start the recursive search from the top-level document node.\n  findFramesRecursively(document, frameIds)\n\n  // Join the list of IDs into a single string.\n  return [\"ids\": frameIds.join(',')]\n",
+				"code":"\nprivate void findFramesRecursively(def node, List idList) {\n        if (!node) return\n\n        // Check if the current node is a FRAME. If so, add its ID.\n        // This check ensures we only get frames, not pages or other elements.\n        if (node.type == 'FRAME') {\n            idList.add(node.id)\n        }\n\n        // If the node has children, recurse into them.\n        if (node.children) {\n            node.children.each { child ->\n                findFramesRecursively(child, idList)\n            }\n        }\n    }\n\n\n\n\n\n  def document = figmaFile\n\n  // A list to hold all the Frame IDs we find.\n  def frameIds = []\n  \n  // Start the recursive search from the top-level document node.\n  findFramesRecursively(document, frameIds)\n\n  // Join the list of IDs into a single string.\n  return [\"ids\": frameIds]\n",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
@@ -439,6 +468,29 @@
 		},
 		{
 			"context":{
+				"appName":"loop",
+				"resourceVersion":849,
+				"resourceName":"loop_for_each",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_BgqBP-1",
+			"id":"n_w18fS",
+			"index":5,
+			"inputs":{
+				"repeatMode":"SINGLE",
+				"listSource":"{{ _Ixjgd.outputs.result.ids }}",
+				"captureIterations":false
+			},
+			"skip":false,
+			"subTitle":"Loop",
+			"title":"For each loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
 				"appName":"figma",
 				"resourceVersion":1072,
 				"connectionId":"68dccf9ebf51c14b15b932d6",
@@ -448,16 +500,39 @@
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
-			"groupId":"_BgqBP-1",
-			"id":"_7qqmK",
-			"index":5,
+			"groupId":"n_w18fS@_BgqBP-1@l",
+			"id":"_9C980",
+			"index":6,
 			"inputs":{
 				"file_id":"{{ n_uP33b.outputs.fileId }}",
-				"ids":"{{ _Ixjgd.outputs.result.ids }}"
+				"ids":"{{ n_w18fS.outputs.item }}"
 			},
 			"skip":false,
 			"subTitle":"Figma",
 			"title":"Get image from a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":896,
+				"resourceName":"variable_by_unifyapps_add_item_to_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_w18fS@_BgqBP-1@l",
+			"id":"n_Q9t8F",
+			"index":7,
+			"inputs":{
+				"itemToAdd":"{{ _9C980.outputs.images }}",
+				"insertLocation":"END",
+				"listName":"{{ n_4Hvzf.outputs.items[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Add item to list",
 			"type":"ACTION"
 		},
 		{
@@ -472,10 +547,14 @@
 			"fallbackMode":"STOP",
 			"groupId":"_BgqBP-1",
 			"id":"n_SYB2U",
-			"index":6,
+			"index":8,
 			"inputs":{
 				"result":{
-					"images":"{{ _7qqmK.outputs.images }}"
+					"images":{
+						"source":"{{ n_4Hvzf.outputs.items }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_4Hvzf.outputs.items[0] }}"
+					}
 				}
 			},
 			"skip":false,
@@ -492,7 +571,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_BgqBP-1",
 			"id":"n_X1qI0",
-			"index":7,
+			"index":9,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -516,5 +595,5 @@
 	"tags":[
 		
 	],
-	"version":21
+	"version":22
 }
