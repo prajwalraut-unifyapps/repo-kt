@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759301877394,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759301882687,
+		"deployedBy":37018,
+		"deployedDefinitionId":"68dcd0fa3374855239db9f02",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":0
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_o1ZwP",
@@ -22,9 +30,9 @@
 	],
 	"id":"68dcd0f53374855239db9ef4",
 	"lastModifiedBy":37018,
-	"lcName":"automation2 (copy)",
-	"modifiedTime":1759301877394,
-	"name":"automation2 (copy)",
+	"lcName":"automation2",
+	"modifiedTime":1759301895235,
+	"name":"automation2",
 	"nodes":[
 		{
 			"context":{
@@ -127,5 +135,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
