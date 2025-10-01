@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759312262413,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759312286273,
+		"deployedBy":44096,
+		"deployedDefinitionId":"68dcf99ec0a2bc3485d5eca8",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_6ryMx",
@@ -23,7 +31,7 @@
 	"id":"68dcf986c0a2bc3485d5ebe5",
 	"lastModifiedBy":44096,
 	"lcName":"lookup by keys",
-	"modifiedTime":1759312283475,
+	"modifiedTime":1759312316530,
 	"name":"Lookup by keys",
 	"nodes":[
 		{
@@ -181,7 +189,7 @@
 			"index":3,
 			"inputs":{
 				"result":{
-					"response":"{{ n_ZMSAj.outputs.result }}"
+					"response":"{{ n_ZMSAj.outputs.result[0] }}"
 				}
 			},
 			"skip":false,
@@ -207,5 +215,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
