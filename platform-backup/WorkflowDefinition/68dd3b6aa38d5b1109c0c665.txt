@@ -81,7 +81,7 @@
 	"id":"68dd3b6aa38d5b1109c0c665",
 	"lastModifiedBy":49915,
 	"lcName":"adfsvd",
-	"modifiedTime":1759329917460,
+	"modifiedTime":1759329937390,
 	"name":"adfsvd",
 	"nodes":[
 		{
@@ -237,7 +237,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_Vhzct@_sP0Nr-1@l",
 			"id":"_Q6YNw",
@@ -293,7 +293,10 @@
 				},
 				"code":"\n\ndef result = []\n\nfor (user in response.objects) {\n    def userMap = [:]        // create a new map\n    userMap.id = user.id     // add user id\n    userMap.userGroup = user.userGroups  // add userGroups list\n    result << userMap        // append to result list\n}\n\nreturn [\"userVsUserGroup\" : result, \"hasMore\": response.hasMore]\n",
 				"compile_static":false,
-				"captureStdOutput":false
+				"captureStdOutput":false,
+				"parameters":{
+					"response":"{{ _Hk1SQ.outputs.response }}"
+				}
 			},
 			"skip":false,
 			"subTitle":"Code by UnifyApps",
@@ -413,5 +416,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
