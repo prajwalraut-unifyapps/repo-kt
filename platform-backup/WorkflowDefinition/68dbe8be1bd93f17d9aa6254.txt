@@ -5,16 +5,16 @@
 	"createdTime":1759242430527,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243007570,
-		"deployedBy":569,
-		"deployedDefinitionId":"68dbeaffa2b8fb375485db29",
+		"deployedAt":1759302040856,
+		"deployedBy":43498,
+		"deployedDefinitionId":"68dcd19832f1a70b6a2b5bc5",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":1
+		"version":2,
+		"workflowVersion":5
 	},
 	"edges":[
 		{
-			"fromNodeId":"n_HIJXc",
+			"fromNodeId":"n_4P1CJ",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_plNsj",
@@ -24,32 +24,31 @@
 	"id":"68dbe8be1bd93f17d9aa6254",
 	"lastModifiedBy":43498,
 	"lcName":"test-scheduler-connection-deletion",
-	"modifiedTime":1759302038405,
+	"modifiedTime":1759302394025,
 	"name":"test-scheduler-connection-deletion",
 	"nodes":[
 		{
 			"context":{
-				"appName":"schedule",
-				"resourceVersion":814,
-				"resourceName":"schedule_default"
+				"appName":"webhooks",
+				"resourceVersion":818,
+				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_oKLjG-1",
-			"id":"n_HIJXc",
+			"id":"n_4P1CJ",
 			"index":1,
 			"inputs":{
-				"cron":"INTERVAL",
-				"sequential":false,
-				"interval":1,
-				"frequency":"MINUTES"
+				"request":{
+					"contentType":"application/json"
+				}
 			},
 			"skip":false,
-			"subTitle":"Schedule",
-			"title":"New recurring event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"SCHEDULED"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
@@ -62,7 +61,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_oKLjG-1",
 			"id":"n_plNsj",
@@ -99,5 +98,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
