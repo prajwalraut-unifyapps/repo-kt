@@ -5,12 +5,12 @@
 	"createdTime":1759223053275,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759307466601,
+		"deployedAt":1759309436234,
 		"deployedBy":44096,
-		"deployedDefinitionId":"68dce6ca8f5c720c982c8f36",
+		"deployedDefinitionId":"68dcee7c8f5c720c982ce643",
 		"status":"DEPLOYED",
-		"version":3,
-		"workflowVersion":3
+		"version":4,
+		"workflowVersion":4
 	},
 	"edges":[
 		{
@@ -31,7 +31,7 @@
 	"id":"68db9d0da30f2c5f853d762e",
 	"lastModifiedBy":44096,
 	"lcName":"lookup form test by keys",
-	"modifiedTime":1759309434504,
+	"modifiedTime":1759309495060,
 	"name":"Lookup Form Test By Keys",
 	"nodes":[
 		{
@@ -187,14 +187,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RrDve-1",
 			"id":"n_4pSKP",
 			"index":3,
 			"inputs":{
 				"result":{
-					"response":"{{ n_ZMSAj.outputs.result }}"
+					"response":"{{ n_ZMSAj.outputs.result[0] }}"
 				}
 			},
 			"skip":false,
@@ -220,5 +220,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
