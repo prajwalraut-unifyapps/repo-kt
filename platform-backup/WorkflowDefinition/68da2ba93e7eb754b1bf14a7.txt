@@ -185,7 +185,7 @@
 	"id":"68da2ba93e7eb754b1bf14a7",
 	"lastModifiedBy":39713,
 	"lcName":"callabltest",
-	"modifiedTime":1759305630060,
+	"modifiedTime":1759305646624,
 	"name":"CallablTest",
 	"nodes":[
 		{
@@ -884,7 +884,7 @@
 				"variables":[
 					{
 						"source":"{{ Gm6Pb.outputs.str }}",
-						"value":"=CONCATENATE({{ Gm6Pb.outputs.str }},\" \",2,\" \",3,\" \",{{ B0Lok.outputs.i }},\" \",{{ f22bN.outputs.j }},\" \",{{ n_K9tGf.outputs.a }})"
+						"value":"=CONCATENATE(\"123\",\" \",2,\" \",3,\" \",{{ B0Lok.outputs.i }},\" \",{{ f22bN.outputs.j }},\" \",{{ n_K9tGf.outputs.a }})"
 					}
 				]
 			},
@@ -949,5 +949,5 @@
 	"tags":[
 		
 	],
-	"version":61
+	"version":62
 }
