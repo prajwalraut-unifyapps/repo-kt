@@ -52,7 +52,7 @@
 	"id":"68a0621ce2145a693b0a5877",
 	"lastModifiedBy":44096,
 	"lcName":"testlookup",
-	"modifiedTime":1759312092313,
+	"modifiedTime":1759312296581,
 	"name":"testLookup",
 	"nodes":[
 		{
@@ -115,7 +115,7 @@
 						}
 					}
 				},
-				"code":"return [\"options\":[\"workflowId\":\"68db9d0da30f2c5f853d762f\",\"runtimeType\":\"IN_MEMORY\",\"resolvePath\":\"objects\"]]",
+				"code":"return [\"options\":[\"workflowId\":\"68dcf986c0a2bc3485d5ebe5\",\"runtimeType\":\"IN_MEMORY\",\"resolvePath\":\"objects\"]]",
 				"compile_static":false,
 				"captureStdOutput":false
 			},
@@ -265,5 +265,5 @@
 	"tags":[
 		
 	],
-	"version":23
+	"version":24
 }
