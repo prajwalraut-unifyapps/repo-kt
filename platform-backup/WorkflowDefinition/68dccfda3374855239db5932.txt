@@ -23,7 +23,7 @@
 	"id":"68dccfda3374855239db5932",
 	"lastModifiedBy":20249,
 	"lcName":"figma testing",
-	"modifiedTime":1759302014670,
+	"modifiedTime":1759302081179,
 	"name":"Figma testing",
 	"nodes":[
 		{
@@ -90,7 +90,7 @@
 			"inputs":{
 				"file_id":"WYnrW7WvFb42fwDFycibor",
 				"client_meta":{
-					"x":4244.5,
+					"x":4244,
 					"y":-160
 				},
 				"message":"Testing"
@@ -118,5 +118,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
