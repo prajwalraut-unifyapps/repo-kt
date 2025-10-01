@@ -81,7 +81,7 @@
 	"id":"68dceef7b3efb833fa4e40f4",
 	"lastModifiedBy":17,
 	"lcName":"figma list all frames",
-	"modifiedTime":1759311227411,
+	"modifiedTime":1759311242494,
 	"name":"Figma List all frames",
 	"nodes":[
 		{
@@ -143,7 +143,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_BgqBP-1",
 			"id":"n_4Hvzf",
@@ -444,13 +444,13 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_GfH5f@_BgqBP-1@l",
 			"id":"_WJYfi",
 			"index":5,
 			"inputs":{
-				"file_id":"WYnrW7WvFb42fwDFycibor",
+				"file_id":"{{ n_uP33b.outputs.fileId }}",
 				"ids":"{{ n_GfH5f.outputs.item.id }}"
 			},
 			"skip":false,
@@ -591,5 +591,5 @@
 	"tags":[
 		
 	],
-	"version":18
+	"version":19
 }
