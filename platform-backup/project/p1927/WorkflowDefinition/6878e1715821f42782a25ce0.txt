@@ -17,6 +17,13 @@
 			"fromNodeId":"n_6KyoI",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_OjGJW",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_OjGJW",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_F5m3f",
 			"type":"next"
 		},
@@ -29,9 +36,9 @@
 		}
 	],
 	"id":"6878e1715821f42782a25ce0",
-	"lastModifiedBy":103171,
+	"lastModifiedBy":39713,
 	"lcName":"[virtu-support-checkin-bot-fn] checkin-rm-project-diff",
-	"modifiedTime":1759004042560,
+	"modifiedTime":1759333414262,
 	"name":"[virtu-support-checkin-bot-fn] checkin-rm-project-diff",
 	"nodes":[
 		{
@@ -105,17 +112,110 @@
 		},
 		{
 			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":803,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Hw4aZ-1",
+			"id":"n_OjGJW",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"UnAvailableProjectNumberList"
+					],
+					"properties":{
+						"UnAvailableProjectNumberList":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Un Available Project Number List"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"email",
+						"VirtuBusinessPublicSubKey",
+						"RMPaasResourceId",
+						"snowBotAppPwd",
+						"snowBotAppAppID",
+						"APIMServerUrl",
+						"EmployeeMinimalUrl"
+					],
+					"properties":{
+						"email":{
+							"type":"string",
+							"title":"Email"
+						},
+						"VirtuBusinessPublicSubKey":{
+							"type":"string",
+							"title":"Virtu Business Public Sub Key"
+						},
+						"RMPaasResourceId":{
+							"type":"string",
+							"title":"RM Paas Resource Id"
+						},
+						"snowBotAppPwd":{
+							"type":"string",
+							"title":"Snow Bot App Pwd"
+						},
+						"snowBotAppAppID":{
+							"type":"string",
+							"title":"Snow Bot App App ID"
+						},
+						"APIMServerUrl":{
+							"type":"string",
+							"title":"APIM Server Url"
+						},
+						"EmployeeMinimalUrl":{
+							"type":"string",
+							"title":"Employee Minimal Url"
+						}
+					}
+				},
+				"code":"// Imports from standard Java libraries\nimport java.net.HttpURLConnection\nimport java.net.URL\nimport java.nio.charset.StandardCharsets\nimport java.io.BufferedReader\nimport java.io.InputStreamReader\nimport java.util.stream.Collectors\n\n// Requires a standard Java JSON library, like org.json.\n// This library must be available on the classpath.\nimport org.json.JSONObject\nimport java.net.HttpURLConnection\nimport java.net.URL\nimport java.net.URLEncoder\nimport java.nio.charset.StandardCharsets\nimport java.io.BufferedReader\nimport java.io.InputStreamReader\nimport java.util.stream.Collectors\n\n// Requires a standard Java JSON library (e.g., org.json) to be on the classpath.\nimport org.json.JSONObject\n\n\nimport java.net.HttpURLConnection\nimport java.net.URL\nimport java.nio.charset.StandardCharsets\nimport java.io.BufferedReader\nimport java.io.InputStreamReader\nimport java.time.LocalDate\nimport java.util.stream.Collectors\n\n// Requires a standard Java JSON library (e.g., org.json) to be on the classpath.\nimport org.json.JSONArray\nimport org.json.JSONObject\n\nimport java.time.LocalDate\n// Assumes org.json library is on the classpath\nimport org.json.JSONArray\nimport org.json.JSONObject\n\n\nimport java.net.HttpURLConnection\nimport java.net.URL\nimport java.net.URLEncoder\nimport java.nio.charset.StandardCharsets\nimport java.io.BufferedReader\nimport java.io.InputStreamReader\nimport java.util.stream.Collectors\n\n\nimport java.time.LocalDate\n// Assumes the org.json library is available on the classpath\nimport org.json.JSONArray\nimport org.json.JSONObject\n\n/**\n * Fetches and merges project data from multiple sources.\n *\n * This script assumes the following variables are globally defined:\n * - APIMServerUrl (String)\n * - CheckinProjectAPIPath (String)\n * - ProjectAPIURLPath (String)\n * - EmployeeMinimalUrl (String)\n * - virtusaBusinessInternalSubkey (String)\n * - virtusaBusinessPublicSubkey (String)\n * - bearerToken (String, the AAD token)\n *\n * @param startDateStr The start date in \"YYYY-MM-DD\" format.\n * @param endDateStr The end date in \"YYYY-MM-DD\" format.\n * @param userName The user's login ID.\n * @return A list of maps, where each map represents a fully detailed project.\n */\ndef getV5Projects(String startDateStr, String endDateStr, String userName) {\n    // === 1. Get initial project list from Check-in API ===\n    def checkinParams = \"P_FROM_DATE=${startDateStr}&P_TO_DATE=${endDateStr}&P_IN_TIME_STAMP=0&p_emp_login_id=${userName}\"\n    def checkinApiUrl = \"${APIMServerUrl}${CheckinProjectAPIPath}?${checkinParams}\"\n    def checkinHeaders = [\n        \"Ocp-Apim-Subscription-Key\": virtusaBusinessInternalSubkey,\n        \"Authorization\": \"Bearer ${bearerToken}\"\n    ]\n    def checkinResponseStr = makeApiGetRequest(checkinApiUrl, checkinHeaders)\n    if (!checkinResponseStr) return []\n\n    def checkinItems = new JSONObject(checkinResponseStr).optJSONArray(\"items\")?.toList()?.collect { it as JSONObject } ?: []\n    if (checkinItems.isEmpty()) return []\n\n    def veloProjectNumbers = checkinItems.collect { it.optString(\"veloprojectnumber\") }.findAll { it }.join(',')\n    if (!veloProjectNumbers) return []\n\n    // === 2. Get full project details from Velocity API ===\n    def velocityApiUrl = \"${APIMServerUrl}${ProjectAPIURLPath}?projectNumber=${veloProjectNumbers}\"\n    def v5Headers = [\n        \"Ocp-Apim-Subscription-Key\": virtusaBusinessPublicSubkey,\n        \"Authorization\": \"Bearer ${bearerToken}\"\n    ]\n    def v5ProjectResponseStr = makeApiGetRequest(velocityApiUrl, v5Headers)\n    if (!v5ProjectResponseStr) return []\n    \n    def v5Projects = new JSONArray(v5ProjectResponseStr).toList().collect { it as JSONObject }\n    // For efficient lookup, convert the list to a map keyed by project number\n    def v5ProjectsMap = v5Projects.collectEntries { [(it.optString(\"projectNumber\")): it] }\n\n    // === 3. Get details for all Project Managers ===\n    def pmPersonNumbers = v5Projects.collect { it.optString(\"projectManagerPersonNumber\") }.findAll { it }.unique().join(',')\n    def pmDetailsMap = [:]\n    if (pmPersonNumbers) {\n        def employeeApiUrl = \"${APIMServerUrl}${EmployeeMinimalUrl}?q=PersonNumber in (${pmPersonNumbers})\"\n        def employeeHeaders = v5Headers + [\"REST-Framework-Version\": \"2\"] // Add framework version header\n        def employeeResponseStr = makeApiGetRequest(employeeApiUrl, employeeHeaders)\n        if (employeeResponseStr) {\n            def pmItems = new JSONObject(employeeResponseStr).optJSONArray(\"items\")?.toList()?.collect { it as JSONObject } ?: []\n            // Create a map of PMs keyed by their person number\n            pmDetailsMap = pmItems.collectEntries { [(it.optString(\"PersonNumber\")): it] }\n        }\n    }\n\n    // === 4. Filter, merge, and transform the data ===\n    def fromDate = LocalDate.parse(startDateStr)\n    def toDate = LocalDate.parse(endDateStr)\n\n    def filteredCheckinProjects = checkinItems.findAll { item ->\n        def projStartDate = LocalDate.parse(item.optString(\"userallocationstartdate\"))\n        def projEndDate = LocalDate.parse(item.optString(\"userallocationenddate\"))\n        !projStartDate.isAfter(toDate) && !projEndDate.isBefore(fromDate)\n    }\n\n    def finalProjectList = filteredCheckinProjects.collect { checkinItem ->\n        def v5Project = v5ProjectsMap[checkinItem.optString(\"veloprojectnumber\")]\n        if (!v5Project) return null // Skip if no matching project detail was found\n\n        def pmPersonNumber = v5Project.optString(\"projectManagerPersonNumber\")\n        def pm = pmDetailsMap[pmPersonNumber]\n\n        // Create a new map representing the final merged project object\n        // This directly corresponds to the `v5ProjObjN` object in the C# code\n        [\n            checkinProjectId:         checkinItem.optString(\"projectid\"),\n            projectName:              checkinItem.optString(\"projectname\"),\n            projectID:                v5Project.optString(\"projectID\"),\n            projectNumber:            v5Project.optString(\"projectNumber\"),\n            projectManagerName:       pm?.optString(\"DisplayName\"),\n            projectManagerPersonNumber: pmPersonNumber,\n            projectManagerEmailAddress: v5Project.optString(\"projectManagerEmailAddress\"),\n            projectStartDate:         v5Project.optString(\"projectStartDate\"),\n            projectCompletionDate:    v5Project.optString(\"projectCompletionDate\"),\n            projectStatusCode:        v5Project.optString(\"projectStatusCode\"),\n            projectStatusName:        v5Project.optString(\"projectStatusName\"),\n            customerName:             v5Project.optString(\"customerName\")\n            // ... add any other fields from v5Project as needed\n        ]\n    }.findAll { it != null } // Remove any entries that failed to merge\n\n    return finalProjectList\n}\n\n\n/**\n * A helper function to execute an HTTP GET request.\n * @param apiUrl The full URL for the API endpoint.\n * @param headers A map of request headers.\n * @return The response body as a String, or null on failure.\n */\nprivate String makeApiGetRequest(String apiUrl, Map<String, String> headers) {\n    HttpURLConnection conn = null\n    try {\n        URL url = new URL(apiUrl)\n        conn = (HttpURLConnection) url.openConnection()\n        conn.requestMethod = 'GET'\n        headers.each { key, value -> conn.setRequestProperty(key, value) }\n\n        if (conn.responseCode in 200..<300) {\n            try (BufferedReader reader = new BufferedReader(new InputStreamReader(conn.inputStream, StandardCharsets.UTF_8))) {\n                return reader.lines().collect(Collectors.joining(\"\\n\"))\n            }\n        }\n    } catch (Exception e) {\n        // Silently fail as requested\n    } finally {\n        conn?.disconnect()\n    }\n    return null\n}\n\n\n/**\n * Fetches and merges project data from multiple sources.\n *\n * This script assumes the following variables are globally defined:\n * - APIMServerUrl (String)\n * - CheckinProjectAPIPath (String)\n * - ProjectAPIURLPath (String)\n * - EmployeeMinimalUrl (String) // Assumed for PM details\n * - virtusaBusinessInternalSubkey (String)\n * - virtusaBusinessPublicSubkey (String)\n * - bearerToken (String, the AAD token)\n *\n * @param startDateStr The start date in \"YYYY-MM-DD\" format.\n * @param endDateStr The end date in \"YYYY-MM-DD\" format.\n * @param userName The user's login ID.\n * @return A list of maps, where each map represents a fully detailed project.\n */\ndef getV5Projects(String startDateStr, String endDateStr, String userName) {\n    // === Step 1: Get initial project list from Check-in API ===\n    def checkinParams = \"P_FROM_DATE=${startDateStr}&P_TO_DATE=${endDateStr}&P_IN_TIME_STAMP=0&p_emp_login_id=${userName}\"\n    def checkinApiUrl = \"${APIMServerUrl}${CheckinProjectAPIPath}?${checkinParams}\"\n    def checkinHeaders = [\n        \"Ocp-Apim-Subscription-Key\": virtusaBusinessInternalSubkey,\n        \"Authorization\": \"Bearer ${bearerToken}\"\n    ]\n    def checkinResponseStr = makeApiGetRequest(checkinApiUrl, checkinHeaders)\n    if (!checkinResponseStr) return []\n\n    def checkinProjectResponse = new JSONObject(checkinResponseStr)\n    def checkinItems = checkinProjectResponse.optJSONArray(\"items\")?.toList()?.collect { it as JSONObject } ?: []\n    if (checkinItems.isEmpty()) return []\n\n    def veloProjectNumbers = checkinItems.collect { it.optString(\"veloprojectnumber\") }.findAll { it }.join(',')\n    if (!veloProjectNumbers) return []\n\n    // === Step 2: Get full project details from Velocity API ===\n    def velocityApiUrl = \"${APIMServerUrl}${ProjectAPIURLPath}?projectNumber=${veloProjectNumbers}\"\n    def velocityHeaders = [\n        \"Ocp-Apim-Subscription-Key\": virtusaBusinessPublicSubkey,\n        \"Authorization\": \"Bearer ${bearerToken}\"\n    ]\n    def v5ProjectResponseStr = makeApiGetRequest(velocityApiUrl, velocityHeaders)\n    if (!v5ProjectResponseStr) return []\n    \n    def v5Projects = new JSONArray(v5ProjectResponseStr).toList().collect { it as JSONObject }\n    // For efficient lookup, convert the list to a map keyed by project number\n    def v5ProjectsMap = v5Projects.collectEntries { [(it.optString(\"projectNumber\")): it] }\n\n    // === Step 3: Get details for all Project Managers ===\n    def pmPersonNumbers = v5Projects.collect { it.optString(\"projectManagerPersonNumber\") }.findAll { it }.unique().join(',')\n    def pmDetails = [:]\n    if (pmPersonNumbers) {\n        def employeeApiUrl = \"${APIMServerUrl}${EmployeeMinimalUrl}?q=PersonNumber=${pmPersonNumbers}\" // Assuming API supports comma-separated list\n        def employeeResponseStr = makeApiGetRequest(employeeApiUrl, velocityHeaders) // Reusing public key headers\n        if (employeeResponseStr) {\n            def empResponse = new JSONObject(employeeResponseStr)\n            def pmItems = empResponse.optJSONArray(\"items\")?.toList()?.collect { it as JSONObject } ?: []\n            // Create a map of PMs keyed by their person number\n            pmDetails = pmItems.collectEntries { [(it.optString(\"PersonNumber\")): it] }\n        }\n    }\n\n    // === Step 4: Filter, merge, and transform the data ===\n    def fromDate = LocalDate.parse(startDateStr)\n    def toDate = LocalDate.parse(endDateStr)\n\n    def filteredCheckinProjects = checkinItems.findAll { item ->\n        def projStartDate = LocalDate.parse(item.optString(\"userallocationstartdate\"))\n        def projEndDate = LocalDate.parse(item.optString(\"userallocationenddate\"))\n        !projStartDate.isAfter(toDate) && !projEndDate.isBefore(fromDate)\n    }\n\n    def finalProjectList = filteredCheckinProjects.collect { checkinItem ->\n        def v5Project = v5ProjectsMap[checkinItem.optString(\"veloprojectnumber\")]\n        if (!v5Project) return null // Skip if no matching project detail was found\n\n        def pmPersonNumber = v5Project.optString(\"projectManagerPersonNumber\")\n        def pm = pmDetails[pmPersonNumber]\n\n        // Create a new map representing the final merged project object\n        [\n            checkinProjectId:         checkinItem.optString(\"projectid\"),\n            projectName:              checkinItem.optString(\"projectname\"), // Name from check-in data\n            projectID:                v5Project.optString(\"projectID\"),\n            projectNumber:            v5Project.optString(\"projectNumber\"),\n            projectManagerName:       pm?.optString(\"DisplayName\"), // PM Name from employee data\n            projectManagerPersonNumber: pmPersonNumber,\n            // Copy all other desired fields from the detailed v5Project object\n            projectStartDate:         v5Project.optString(\"projectStartDate\"),\n            projectCompletionDate:    v5Project.optString(\"projectCompletionDate\"),\n            projectStatusCode:        v5Project.optString(\"projectStatusCode\"),\n            customerName:             v5Project.optString(\"customerName\")\n            // ... add any other fields as needed\n        ]\n    }.findAll { it != null } // Remove any entries that failed to merge\n\n    return finalProjectList\n}\n\n\n\n/**\n * Gets a list of project numbers for a person that are active within a given date range.\n *\n * This script assumes the following variables are globally defined:\n * - APIMServerUrl (String)\n * - RMAllocationProjectAPIPath (String)\n * - virtusaBusinessPublicSubkey (String)\n *\n * @param personNumber The employee's person number.\n * @param startDateStr The start of the date range to check (e.g., \"2025-01-31\").\n * @param endDateStr The end of the date range to check (e.g., \"2025-07-17\").\n * @param aadToken The authorization bearer token.\n * @return A list of project number strings, or an empty list on failure.\n */\ndef getRMAllocationProjectNumbers(String personNumber, String startDateStr, String endDateStr, String aadToken) {\n    // 1. Construct the API URL\n    def apiUrl = \"${APIMServerUrl}${RMAllocationProjectAPIPath}${personNumber}\"\n    HttpURLConnection conn = null\n    String responseString = \"\"\n\n    // 2. Make the HTTP GET request\n    try {\n        URL url = new URL(apiUrl)\n        conn = (HttpURLConnection) url.openConnection()\n        conn.requestMethod = 'GET'\n        conn.setRequestProperty('Accept', 'application/json')\n        conn.setRequestProperty('Ocp-Apim-Subscription-Key', virtusaBusinessPublicSubkey)\n        conn.setRequestProperty('Authorization', \"Bearer ${aadToken}\")\n\n        if (conn.responseCode in 200..<300) {\n            try (BufferedReader reader = new BufferedReader(new InputStreamReader(conn.inputStream, StandardCharsets.UTF_8))) {\n                responseString = reader.lines().collect(Collectors.joining(\"\\n\"))\n            }\n        } else {\n            // On API error, return an empty list\n            return []\n        }\n    } catch (Exception e) {\n        // On any exception, return an empty list\n        return []\n    } finally {\n        conn?.disconnect()\n    }\n\n    if (!responseString) {\n        return []\n    }\n    \n    // 3. Parse dates and JSON response\n    JSONArray projectsJsonArray = new JSONArray(responseString)\n    LocalDate fromDate = LocalDate.parse(startDateStr)\n    LocalDate toDate = LocalDate.parse(endDateStr)\n\n    // Convert JSONArray to a List for easier processing with Groovy closures\n    List<JSONObject> projectsList = projectsJsonArray.toList().collect { it as JSONObject }\n\n    // 4. Filter projects by date range and extract project numbers\n    def projectNumberList = projectsList.findAll { proj ->\n        // Parse the project's own start and end dates\n        def projStartDate = LocalDate.parse(proj.optString(\"startDate\"))\n        def projEndDate = LocalDate.parse(proj.optString(\"endDate\"))\n\n        // The project overlaps if its period is not entirely after OR not entirely before the query range.\n        // Condition: (projStart <= toDate) AND (projEnd >= fromDate)\n        !projStartDate.isAfter(toDate) && !projEndDate.isBefore(fromDate)\n\n    }.collect { filteredProj ->\n        // Safely access the nested project number\n        filteredProj.optJSONObject(\"project\")?.optString(\"projectNumber\")\n\n    }.findAll { it } // Remove any null or empty strings from the final list\n\n    return projectNumberList\n}\n\n/**\n * Retrieves a bearer token from the token endpoint using only standard Java libraries.\n *\n * This script assumes the following variables are globally defined:\n * - snow_bot_app_appID (String)\n * - secureToken (String)\n * - virtusaBusinessPublicSubkey (String)\n * - APIMServerUrl (String)\n * - TokenAPIURLPath (String)\n *\n * @param audience The resource audience for the token request.\n * @return The access token string, or an empty string if it fails.\n */\ndef getToken(String audience) {\n    // Construct the request body using Groovy's GString interpolation\n    def tokenRequestBody = \"client_id=${snow_bot_app_appID}&grant_type=client_credentials&client_secret=${secureToken}&resource=${audience}\"\n    def tokenApiUrl = \"${APIMServerUrl.replace('http://', 'https://')}${TokenAPIURLPath}\"\n\n    def bearerToken = ''\n    HttpURLConnection conn = null\n\n    try {\n        // 1. Setup the HTTP connection using java.net.*\n        URL url = new URL(tokenApiUrl)\n        conn = (HttpURLConnection) url.openConnection()\n        conn.requestMethod = 'POST'\n        conn.doOutput = true\n\n        // 2. Set request headers\n        conn.setRequestProperty('Content-Type', 'application/x-www-form-urlencoded')\n        conn.setRequestProperty('Accept', 'application/x-www-form-urlencoded')\n        conn.setRequestProperty('Ocp-Apim-Subscription-Key', virtusaBusinessPublicSubkey)\n\n        // 3. Write the request body to the output stream\n        conn.outputStream.withWriter(StandardCharsets.UTF_8.name()) { writer ->\n            writer.write(tokenRequestBody)\n        }\n\n        // 4. Process the response\n        def responseCode = conn.responseCode\n        if (responseCode >= 200 && responseCode < 300) {\n            println \"AD Token received successfully.\"\n            \n            // Read response stream using standard Java classes\n            def responseString\n            try (BufferedReader reader = new BufferedReader(new InputStreamReader(conn.inputStream, StandardCharsets.UTF_8))) {\n                responseString = reader.lines().collect(Collectors.joining(\"\\n\"))\n            }\n\n            // Parse response using a standard Java JSON library (org.json)\n            def jsonResponse = new JSONObject(responseString)\n            bearerToken = jsonResponse.getString(\"access_token\")\n\n        } else {\n            println \"Error on getting token. Status code: ${responseCode}\"\n            // Read error stream for more details\n            def errorDetails = \"\"\n            if (conn.errorStream != null) {\n                 try (BufferedReader reader = new BufferedReader(new InputStreamReader(conn.errorStream, StandardCharsets.UTF_8))) {\n                    errorDetails = reader.lines().collect(Collectors.joining(\"\\n\"))\n                }\n            }\n            println \"Error details: ${errorDetails}\"\n        }\n    } catch (Exception e) {\n        println \"An exception occurred while getting the token: ${e.message}\"\n    } finally { // The missing bracket was before this 'finally' block.\n        conn?.disconnect()\n    }\n\n    return bearerToken\n}\n\n\n\ndef aADTokenWithRMAud= getToken(RMPaasResourceId)\n\n    HttpURLConnection conn = null\n    JSONObject employeeMinimalRoot = null\n\n    try {\n        // 1. Construct the final URL, encoding the email parameter\n        def encodedEmail = URLEncoder.encode(email, StandardCharsets.UTF_8.name())\n        def apiUrl = \"${APIMServerUrl}${EmployeeMinimalUrl}?q=WorkEmail=${encodedEmail}\"\n        \n        // 2. Setup the HTTP GET request\n        URL url = new URL(apiUrl)\n        conn = (HttpURLConnection) url.openConnection()\n        conn.requestMethod = 'GET'\n\n        // 3. Set the necessary request headers\n        conn.setRequestProperty('Accept', 'application/json')\n        conn.setRequestProperty('Ocp-Apim-Subscription-Key', subscriptionKey)\n        conn.setRequestProperty('Authorization', \"Bearer ${aADTokenWithRMAud}\")\n\n        // 4. Check the response and parse the result\n        def responseCode = conn.responseCode\n        if (responseCode >= 200 && responseCode < 300) {\n            def responseString\n            try (BufferedReader reader = new BufferedReader(new InputStreamReader(conn.inputStream, StandardCharsets.UTF_8))) {\n                responseString = reader.lines().collect(Collectors.joining(\"\\n\"))\n            }\n\n            if (responseString) {\n                employeeMinimalRoot = new JSONObject(responseString)\n            }\n        }\n    } catch (Exception e) {\n        // Exception occurred, return null as no logging is desired.\n        return null\n    } finally {\n        conn?.disconnect()\n    }\ngetRMAllocationProjectNumbers(employeeMinimalRoot?.items[0].PersonNumber, startDate, endDate,aADTokenWithRMAud)\n\n\ndef userName = email.split('@')[0]\n\n    // 2. Get the list of projects from the V5/Check-in system\n    def v5ProjectList = getV5Projects(startDate, endDate, userName)\n\n    // 3. Extract just the project numbers (equivalent to C# .Select)\n    def v5ProjectNumberList = v5ProjectList.collect { it.projectNumber }\n\n    // 4. Get the list of projects from the RM system\n    def RMProjectNumberList = getRMAllocationProjectNumbers(personNumber, startDate, endDate, aadToken)\n\n    // 5. Compare the two lists to find numbers in RM but not in V5.\n    // Groovy's list subtraction operator is a clean way to do this.\n    def notMatchedProjectNumberList = RMProjectNumberList - v5ProjectNumberList\n\n    // 6. Format the response as a map, similar to the C# ResponseList object\n    return [\"UnAvailableProjectNumberList\": notMatchedProjectNumberList]\n",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"email":"{{ n_6KyoI.outputs.queryParams.email }}",
+					"VirtuBusinessPublicSubKey":"{{ __ENV__.outputs.Virtu-Business-Public-sub-key }}",
+					"RMPaasResourceId":"{{ __ENV__.outputs.RMPaasResourceId }}",
+					"snowBotAppPwd":"{{ __ENV__.outputs.snow-bot-app-pwd }}",
+					"snowBotAppAppID":"{{ __ENV__.outputs.snow-bot-app-appID }}",
+					"APIMServerUrl":"APIMServerUrl",
+					"EmployeeMinimalUrl":"EmployeeMinimalUrl"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"callables",
 				"resourceVersion":812,
 				"resourceName":"callables_call_automation",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Hw4aZ-1",
 			"id":"n_F5m3f",
-			"index":2,
+			"index":3,
 			"inputs":{
 				"automationId":"6878e1d26d8971fb930cc927",
 				"runtimeConnections":{},
@@ -123,7 +223,7 @@
 				"version":"-1",
 				"parameters":{}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Callable",
 			"title":"Call automation",
 			"type":"CALL_WORKFLOW"
@@ -136,16 +236,16 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Hw4aZ-1",
 			"id":"n_R7anI",
-			"index":3,
+			"index":4,
 			"inputs":{
 				"streamingCompleted":true,
 				"responseName":"200_200",
 				"body":{
-					"UnAvailableProjectNumberList":"{{ n_F5m3f.outputs.UnAvailableProjectNumberList }}"
+					"UnAvailableProjectNumberList":"{{ n_OjGJW.outputs.result.UnAvailableProjectNumberList }}"
 				},
 				"status":200
 			},
@@ -173,5 +273,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
