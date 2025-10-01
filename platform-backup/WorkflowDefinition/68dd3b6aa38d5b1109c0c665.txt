@@ -52,7 +52,7 @@
 	"id":"68dd3b6aa38d5b1109c0c665",
 	"lastModifiedBy":49915,
 	"lcName":"adfsvd",
-	"modifiedTime":1759329531780,
+	"modifiedTime":1759329570916,
 	"name":"adfsvd",
 	"nodes":[
 		{
@@ -165,7 +165,7 @@
 						}
 					}
 				},
-				"code":"\n\ndef result = []\n\nfor (user in response.objects) {\n    def userMap = [:]        // create a new map\n    userMap.id = user.id     // add user id\n    userMap.userGroups = user.userGroups  // add userGroups list\n    result << userMap        // append to result list\n}\n\nreturn [\"userVsUserGroup\" : result]\n",
+				"code":"\n\ndef result = []\n\nfor (user in response.objects) {\n    def userMap = [:]        // create a new map\n    userMap.id = user.id     // add user id\n    userMap.userGroup = user.userGroups  // add userGroups list\n    result << userMap        // append to result list\n}\n\nreturn [\"userVsUserGroup\" : result]\n",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
@@ -260,5 +260,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
