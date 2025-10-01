@@ -30,18 +30,18 @@
 			"fromNodeId":"_Hk1SQ",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"_Q6YNw",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_Q6YNw",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_2Ri8b",
 			"type":"next"
 		},
 		{
 			"fromNodeId":"n_2Ri8b",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_ky2Zg",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_ky2Zg",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_bDA1f",
@@ -81,7 +81,7 @@
 	"id":"68dd3b6aa38d5b1109c0c665",
 	"lastModifiedBy":49915,
 	"lcName":"adfsvd",
-	"modifiedTime":1759329762423,
+	"modifiedTime":1759329811329,
 	"name":"adfsvd",
 	"nodes":[
 		{
@@ -231,36 +231,6 @@
 		},
 		{
 			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":884,
-				"resourceName":"variable_by_unifyapps_update_variables",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"n_Vhzct@_sP0Nr-1@l",
-			"id":"n_2Ri8b",
-			"index":5,
-			"inputs":{
-				"variables":[
-					{
-						"source":"{{ n_qC5ua.outputs.userHasMore }}",
-						"value":"{{ _Hk1SQ.outputs.response.hasMore }}"
-					},
-					{
-						"source":"{{ n_qC5ua.outputs.userOffset }}",
-						"value":"=({{ n_qC5ua.outputs.userOffset }} + 20)"
-					}
-				]
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Update variables",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"code_by_unifyapps",
 				"resourceVersion":0,
 				"resourceName":"code_by_unifyapps_groovy",
@@ -270,8 +240,8 @@
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_Vhzct@_sP0Nr-1@l",
-			"id":"n_ky2Zg",
-			"index":6,
+			"id":"_Q6YNw",
+			"index":5,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -301,6 +271,10 @@
 								"required":[]
 							},
 							"title":"User Vs User Group"
+						},
+						"hasMore":{
+							"type":"boolean",
+							"title":"Has More"
 						}
 					}
 				},
@@ -317,7 +291,7 @@
 						}
 					}
 				},
-				"code":"\n\ndef result = []\n\nfor (user in response.objects) {\n    def userMap = [:]        // create a new map\n    userMap.id = user.id     // add user id\n    userMap.userGroup = user.userGroups  // add userGroups list\n    result << userMap        // append to result list\n}\n\nreturn [\"userVsUserGroup\" : result]\n",
+				"code":"\n\ndef result = []\n\nfor (user in response.objects) {\n    def userMap = [:]        // create a new map\n    userMap.id = user.id     // add user id\n    userMap.userGroup = user.userGroups  // add userGroups list\n    result << userMap        // append to result list\n}\n\nreturn [\"userVsUserGroup\" : result, \"hasMore\": response.hasMore]\n",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
@@ -327,6 +301,35 @@
 			"skip":false,
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":884,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_Vhzct@_sP0Nr-1@l",
+			"id":"n_2Ri8b",
+			"index":6,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ n_qC5ua.outputs.userHasMore }}"
+					},
+					{
+						"source":"{{ n_qC5ua.outputs.userOffset }}",
+						"value":"=({{ n_qC5ua.outputs.userOffset }} + 20)"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
 			"type":"ACTION"
 		},
 		{
@@ -412,5 +415,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
