@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759311359596,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_gj9FI",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_BVKVB",
+			"type":"next"
+		}
+	],
+	"id":"68dcf5ffc0a2bc3485d5d7f8",
+	"lastModifiedBy":161875,
+	"lcName":"test jira jql",
+	"modifiedTime":1759311359596,
+	"name":"Test Jira JQL",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_gj9FI-1",
+			"id":"_gj9FI",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_gj9FI-1",
+			"id":"_BVKVB",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":161875,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
