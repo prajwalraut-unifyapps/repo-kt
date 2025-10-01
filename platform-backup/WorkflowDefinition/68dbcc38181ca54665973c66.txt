@@ -4,9 +4,17 @@
 	],
 	"createdTime":1759235128075,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759245441213,
+		"deployedBy":47201,
+		"deployedDefinitionId":"68dbf47fc8ce161f34fe81ec",
+		"status":"DEPLOYED",
+		"version":2,
+		"workflowVersion":3
+	},
 	"edges":[
 		{
-			"fromNodeId":"n_aARoX",
+			"fromNodeId":"n_LCS5m",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_eKsC4",
@@ -16,38 +24,48 @@
 			"fromNodeId":"n_eKsC4",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_3ivnr",
+			"toNodeId":"n_ziX6Z",
 			"type":"next"
 		}
 	],
 	"id":"68dbcc38181ca54665973c66",
-	"lastModifiedBy":47201,
+	"lastModifiedBy":46218,
 	"lcName":"meeting bot test",
-	"modifiedTime":1759235238870,
+	"modifiedTime":1759307990228,
 	"name":"Meeting Bot Test",
 	"nodes":[
 		{
 			"context":{
-				"appName":"webhooks",
-				"resourceVersion":816,
-				"resourceName":"webhooks_default"
+				"appName":"callables",
+				"resourceVersion":921,
+				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_NVKkT-1",
-			"id":"n_aARoX",
+			"id":"n_LCS5m",
 			"index":1,
 			"inputs":{
-				"request":{
-					"contentType":"application/json"
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"success"
+					],
+					"properties":{
+						"success":{
+							"type":"boolean",
+							"title":"Success"
+						}
+					}
 				}
 			},
 			"skip":false,
-			"subTitle":"Webhook",
-			"title":"New event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"WEBHOOK"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
@@ -59,14 +77,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_NVKkT-1",
 			"id":"n_eKsC4",
 			"index":2,
 			"inputs":{
 				"botName":"UnifyApps",
-				"meetingUrl":"https://teams.microsoft.com/meet/4312856952776?p=XYM5rixRolgD4b0adj"
+				"meetingUrl":"https://teams.microsoft.com/meet/4194840392256?p=02OtFBLXdgtxMVsp3G"
 			},
 			"skip":false,
 			"subTitle":"Meeting bot by UnifyApps",
@@ -75,17 +93,25 @@
 		},
 		{
 			"context":{
-				"appName":"stop"
+				"appName":"callables",
+				"resourceVersion":938,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_NVKkT-1",
-			"id":"n_3ivnr",
+			"id":"n_ziX6Z",
 			"index":3,
+			"inputs":{
+				"result":{
+					"success":true
+				}
+			},
 			"skip":false,
-			"subTitle":"Stop",
-			"title":"Stop",
+			"subTitle":"Callable",
+			"title":"Respond to automation",
 			"type":"STOP"
 		}
 	],
@@ -106,5 +132,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":4
 }
