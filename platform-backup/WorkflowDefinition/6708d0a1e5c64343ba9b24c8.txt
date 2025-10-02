@@ -5,12 +5,12 @@
 	"createdTime":1728630945926,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655331563,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f36338757c179b1231cc",
+		"deployedAt":1759243557235,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed259213d707c2d2732c",
 		"status":"DEPLOYED",
-		"version":104,
-		"workflowVersion":134
+		"version":106,
+		"workflowVersion":136
 	},
 	"edges":[
 		{
@@ -1018,7 +1018,7 @@
 	"id":"6708d0a1e5c64343ba9b24c8",
 	"lastModifiedBy":-1,
 	"lcName":"file chunker | knowledge",
-	"modifiedTime":1759243520997,
+	"modifiedTime":1759371878984,
 	"name":"File Chunker | Knowledge",
 	"nodes":[
 		{
@@ -5349,5 +5349,5 @@
 		}
 	},
 	"standard":true,
-	"version":135
+	"version":137
 }
