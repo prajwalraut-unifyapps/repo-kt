@@ -5,12 +5,12 @@
 	"createdTime":1741550596171,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243508145,
+		"deployedAt":1759243546306,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbecf49213d707c2d27296",
+		"deployedDefinitionId":"68dbed1a23e6682b9a51eb17",
 		"status":"DEPLOYED",
-		"version":62,
-		"workflowVersion":93
+		"version":63,
+		"workflowVersion":94
 	},
 	"edges":[
 		{
@@ -62,7 +62,7 @@
 	"id":"67cc63dd47eaf7139dba0fe8",
 	"lastModifiedBy":-1,
 	"lcName":"actionlookup tool",
-	"modifiedTime":1759243546230,
+	"modifiedTime":1759371868473,
 	"name":"ActionLookup Tool",
 	"nodes":[
 		{
@@ -406,5 +406,5 @@
 		"AI Agent",
 		"Internal"
 	],
-	"version":94
+	"version":95
 }
