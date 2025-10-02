@@ -30,7 +30,7 @@
 	"id":"68af1080002c1a1e80fd517c",
 	"lastModifiedBy":44105,
 	"lcName":"sqwfdewfe",
-	"modifiedTime":1759407871762,
+	"modifiedTime":1759408757027,
 	"name":"sqwfdewfe",
 	"nodes":[
 		{
@@ -115,7 +115,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_sHsoD-1",
 			"id":"n_1YL94",
@@ -137,7 +137,7 @@
 				}
 			},
 			"inputs":{
-				"test":"003"
+				"test":"test"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -202,5 +202,5 @@
 	"tags":[
 		"fqwefqew"
 	],
-	"version":62
+	"version":63
 }
