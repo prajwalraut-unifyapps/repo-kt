@@ -5,12 +5,12 @@
 	"createdTime":1744006797503,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646522182,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2d0fa9f85565fb8fa5d78",
+		"deployedAt":1759243566261,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed2e9213d707c2d27350",
 		"status":"DEPLOYED",
-		"version":23,
-		"workflowVersion":50
+		"version":26,
+		"workflowVersion":53
 	},
 	"edges":[
 		{
@@ -309,9 +309,9 @@
 		]
 	},
 	"id":"67f1228744f8912d77f21642",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | stripe | index all products",
-	"modifiedTime":1758655343216,
+	"modifiedTime":1759371887648,
 	"name":"Knowledge Indexer | Stripe | Index all products",
 	"nodes":[
 		{
@@ -1430,5 +1430,5 @@
 		}
 	},
 	"standard":true,
-	"version":51
+	"version":54
 }
