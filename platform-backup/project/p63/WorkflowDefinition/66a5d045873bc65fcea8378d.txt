@@ -5,12 +5,12 @@
 	"createdTime":1722142789530,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655404406,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f3ac38757c179b123df9",
+		"deployedAt":1759243615730,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed5f5e003e08cdeb3045",
 		"status":"DEPLOYED",
-		"version":78,
-		"workflowVersion":115
+		"version":80,
+		"workflowVersion":117
 	},
 	"edges":[
 		{
@@ -62,7 +62,7 @@
 	"id":"66a5d045873bc65fcea8378d",
 	"lastModifiedBy":-1,
 	"lcName":"text_to_workflow_get_payload_for_llm",
-	"modifiedTime":1759243582256,
+	"modifiedTime":1759371933032,
 	"name":"Text_To_workflow_Get_payload_for_LLM",
 	"nodes":[
 		{
@@ -856,5 +856,5 @@
 	"tags":[
 		"Text_to_Workflow"
 	],
-	"version":116
+	"version":118
 }
