@@ -23,7 +23,7 @@
 	"id":"68ddf6602364216c2da9ae2a",
 	"lastModifiedBy":185583,
 	"lcName":"task_pb",
-	"modifiedTime":1759391327557,
+	"modifiedTime":1759391341602,
 	"name":"Task_PB",
 	"nodes":[
 		{
@@ -169,8 +169,8 @@
 				"streamingCompleted":true,
 				"responseName":"200_Success",
 				"body":{
-					"currenttag":{
-						"source":"{{ n_xcwp1.outputs.result.currentTag }}",
+					"currentTagOut":{
+						"source":"{{ n_xcwp1.outputs.result.currentTagOut }}",
 						"ua:type":"mappedArray"
 					}
 				},
@@ -199,5 +199,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
