@@ -11,12 +11,26 @@
 			"skip":false,
 			"toNodeId":"n_n8tZy",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_n8tZy",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_sNbKW",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_sNbKW",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_NZBKM",
+			"type":"next"
 		}
 	],
 	"id":"68de6571ed7fcc6978211a9f",
-	"lastModifiedBy":67744,
+	"lastModifiedBy":602,
 	"lcName":"testdnt",
-	"modifiedTime":1759409895344,
+	"modifiedTime":1759409983532,
 	"name":"testdnt",
 	"nodes":[
 		{
@@ -52,7 +66,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_mf0p7-1",
 			"id":"n_n8tZy",
@@ -60,6 +74,50 @@
 			"skip":false,
 			"subTitle":"Act!",
 			"title":"Create group",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"files_by_unifyapps",
+				"resourceVersion":894,
+				"resourceName":"files_by_unifyapps_create_temp_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_mf0p7-1",
+			"id":"n_sNbKW",
+			"index":3,
+			"inputs":{
+				"isTmp":true,
+				"initialContentType":"plainText",
+				"initialContent":"| Month    | Savings |\n| -------- | ------- |\n| January  | $250    |\n| February | $80     |\n| March    | $420    |",
+				"type":"SINGLE",
+				"fileType":"txt"
+			},
+			"skip":false,
+			"subTitle":"Files by UnifyApps",
+			"title":"Create a file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":399,
+				"resourceName":"utility_by_unifyapps_write_data_to_docx",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_mf0p7-1",
+			"id":"n_NZBKM",
+			"index":4,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Write Data to Docx file",
 			"type":"ACTION"
 		}
 	],
@@ -80,5 +138,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
