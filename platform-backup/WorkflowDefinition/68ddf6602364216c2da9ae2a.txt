@@ -6,46 +6,310 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_RV1ax",
+			"fromNodeId":"n_6l4oG",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_ufVLu",
+			"toNodeId":"n_xcwp1",
 			"type":"next"
 		}
 	],
 	"id":"68ddf6602364216c2da9ae2a",
 	"lastModifiedBy":185583,
 	"lcName":"task_pb",
-	"modifiedTime":1759376992090,
+	"modifiedTime":1759390849426,
 	"name":"Task_PB",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1057,
+				"resourceName":"callables_from_api"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RV1ax-1",
-			"id":"_RV1ax",
-			"index":0,
+			"id":"n_6l4oG",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json",
+					"body":{
+						"type":"object",
+						"properties":{
+							"endDate":{
+								"type":"integer",
+								"title":"endDate"
+							},
+							"RMName":{
+								"type":"string",
+								"title":"RMName"
+							},
+							"cohort":{
+								"type":"string",
+								"title":"cohort"
+							},
+							"PartnerCombinedScore":{
+								"type":"number",
+								"title":"PartnerCombinedScore"
+							},
+							"potentialApe":{
+								"type":"integer",
+								"title":"potentialApe"
+							},
+							"PartnerName":{
+								"type":"string",
+								"title":"PartnerName"
+							},
+							"userId":{
+								"type":"integer",
+								"title":"userId"
+							},
+							"tags":{
+								"type":"array",
+								"items":{
+									"type":"object",
+									"properties":{
+										"properties":{
+											"type":"object",
+											"properties":{
+												"tag":{
+													"type":"string",
+													"title":"tag"
+												}
+											},
+											"title":"properties",
+											"additionalProperties":false
+										}
+									},
+									"additionalProperties":false
+								},
+								"title":"tags"
+							},
+							"NoOfTasks":{
+								"type":"integer",
+								"title":"NoOfTasks"
+							},
+							"ape":{
+								"type":"integer",
+								"title":"ape"
+							},
+							"RM_ID":{
+								"type":"string",
+								"title":"RM_ID"
+							},
+							"userPartnerStatus":{
+								"type":"string",
+								"title":"userPartnerStatus"
+							},
+							"partnerId":{
+								"type":"string",
+								"title":"partnerId"
+							},
+							"ID":{
+								"type":"string",
+								"title":"ID"
+							},
+							"startDate":{
+								"type":"integer",
+								"title":"startDate"
+							},
+							"currentTag":{
+								"type":"array",
+								"title":"currentTag"
+							}
+						},
+						"additionalProperties":false
+					}
+				},
+				"endpointType":"REST",
+				"response":[
+					{
+						"name":"Success",
+						"status":200,
+						"contentType":"application/json",
+						"textBody":{
+							"type":"string"
+						},
+						"body":{
+							"type":"object",
+							"properties":{
+								"currenttag":{
+									"type":"array",
+									"title":"currenttag"
+								}
+							},
+							"additionalProperties":false,
+							"required":[]
+						},
+						"namespaces":[]
+					}
+				],
+				"streamingResponse":false
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via API",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":931,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RV1ax-1",
-			"id":"_ufVLu",
-			"index":0,
+			"id":"n_xcwp1",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"currentTag"
+					],
+					"properties":{
+						"currentTag":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Current Tag"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"ua:__linkedVariable__":"n_6l4oG.outputs.body",
+					"properties":{
+						"endDate":{
+							"type":"integer",
+							"title":"endDate"
+						},
+						"RMName":{
+							"type":"string",
+							"title":"RMName"
+						},
+						"cohort":{
+							"type":"string",
+							"title":"cohort"
+						},
+						"PartnerCombinedScore":{
+							"type":"number",
+							"title":"PartnerCombinedScore"
+						},
+						"potentialApe":{
+							"type":"integer",
+							"title":"potentialApe"
+						},
+						"PartnerName":{
+							"type":"string",
+							"title":"PartnerName"
+						},
+						"userId":{
+							"type":"integer",
+							"title":"userId"
+						},
+						"tags":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"properties":{
+										"type":"object",
+										"properties":{
+											"tag":{
+												"type":"string",
+												"title":"tag"
+											}
+										},
+										"title":"properties",
+										"additionalProperties":false
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"tags"
+						},
+						"NoOfTasks":{
+							"type":"integer",
+							"title":"NoOfTasks"
+						},
+						"ape":{
+							"type":"integer",
+							"title":"ape"
+						},
+						"RM_ID":{
+							"type":"string",
+							"title":"RM_ID"
+						},
+						"userPartnerStatus":{
+							"type":"string",
+							"title":"userPartnerStatus"
+						},
+						"partnerId":{
+							"type":"string",
+							"title":"partnerId"
+						},
+						"ID":{
+							"type":"string",
+							"title":"ID"
+						},
+						"startDate":{
+							"type":"integer",
+							"title":"startDate"
+						},
+						"currentTag":{
+							"type":"array",
+							"title":"currentTag",
+							"items":{}
+						}
+					}
+				},
+				"code":"        // Initial array of strings\n        String[] arr = currentTag\n\n        // Convert array to list for easier modifications\n        def list = arr.toList()\n\n        // 1. Add an element\n        list.add(\"date\")\n        //println \"After adding 'date': ${list}\"\n\n        // // 2. Delete an element\n        // list.remove(\"banana\")   // removes by value\n        // println \"After deleting: ${list}\"\n\n        // // 3. Find an element\n        // def elementToFind = \"cherry\"\n        // if (list.contains(elementToFind)) {\n        //     println \"'${elementToFind}' found in the list at index ${list.indexOf(elementToFind)}\"\n        // } else {\n        //     println \"'${elementToFind}' not found\"\n        // }\n\n        // // (Optional) convert back to array if needed\n        arr = list as String[]\n        return [currentTag:arr]",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"endDate":"{{ n_6l4oG.outputs.body.endDate }}",
+					"RMName":"{{ n_6l4oG.outputs.body.RMName }}",
+					"cohort":"{{ n_6l4oG.outputs.body.cohort }}",
+					"PartnerCombinedScore":"{{ n_6l4oG.outputs.body.PartnerCombinedScore }}",
+					"potentialApe":"{{ n_6l4oG.outputs.body.potentialApe }}",
+					"PartnerName":"{{ n_6l4oG.outputs.body.PartnerName }}",
+					"userId":"{{ n_6l4oG.outputs.body.userId }}",
+					"NoOfTasks":"{{ n_6l4oG.outputs.body.NoOfTasks }}",
+					"ape":"{{ n_6l4oG.outputs.body.ape }}",
+					"RM_ID":"{{ n_6l4oG.outputs.body.RM_ID }}",
+					"userPartnerStatus":"{{ n_6l4oG.outputs.body.userPartnerStatus }}",
+					"partnerId":"{{ n_6l4oG.outputs.body.partnerId }}",
+					"ID":"{{ n_6l4oG.outputs.body.ID }}",
+					"startDate":"{{ n_6l4oG.outputs.body.startDate }}",
+					"currentTag":{
+						"source":"{{ n_6l4oG.outputs.body.currentTag }}",
+						"ua:type":"mappedArray"
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":185583,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +323,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
