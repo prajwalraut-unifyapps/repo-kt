@@ -6,46 +6,162 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_GtA7g",
+			"fromNodeId":"n_ryyiU",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_BlZmc",
+			"toNodeId":"n_ikzCd",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_ikzCd",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_1PEoZ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_1PEoZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_86VKD",
 			"type":"next"
 		}
 	],
 	"id":"68de641fed7fcc6978211234",
 	"lastModifiedBy":45771,
 	"lcName":"grandchildautomation",
-	"modifiedTime":1759405087628,
+	"modifiedTime":1759405119399,
 	"name":"grandChildAutomation",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":969,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_GtA7g-1",
-			"id":"_GtA7g",
-			"index":0,
+			"id":"n_ryyiU",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"success":{
+							"type":"boolean",
+							"title":"Success"
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_GtA7g-1",
-			"id":"_BlZmc",
-			"index":0,
+			"id":"n_ikzCd",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"hello":{
+							"type":"string",
+							"title":"Hello"
+						}
+					}
+				},
+				"code":"return [\"hello\" : \"hello\"]",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_GtA7g-1",
+			"id":"_1PEoZ",
+			"index":3,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"hello":{
+							"type":"string",
+							"title":"Hello"
+						}
+					}
+				},
+				"code":"return [\"hello\" : \"hello\"]",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":807,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_GtA7g-1",
+			"id":"n_86VKD",
+			"index":4,
+			"inputs":{
+				"result":{
+					"success":true
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":45771,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +175,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
