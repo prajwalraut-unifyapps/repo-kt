@@ -5,12 +5,12 @@
 	"createdTime":1757480395157,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243508859,
+		"deployedAt":1759243546927,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbecf45e003e08cdeb2e29",
+		"deployedDefinitionId":"68dbed1a5e003e08cdeb2eae",
 		"status":"DEPLOYED",
-		"version":6,
-		"workflowVersion":54
+		"version":7,
+		"workflowVersion":55
 	},
 	"edges":[
 		{
@@ -98,7 +98,7 @@
 	"id":"687f52502e31997e2514a1e4",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge downloader | confluence | space blogs",
-	"modifiedTime":1759243546770,
+	"modifiedTime":1759371868934,
 	"name":"Knowledge Downloader | Confluence | Space blogs",
 	"nodes":[
 		{
@@ -935,5 +935,5 @@
 	"tags":[
 		"knowledge_v2"
 	],
-	"version":55
+	"version":56
 }
