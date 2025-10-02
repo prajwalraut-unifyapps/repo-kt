@@ -5,12 +5,12 @@
 	"createdTime":1756991712259,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655414565,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f3b638757c179b123f94",
+		"deployedAt":1759243624519,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed689213d707c2d274d2",
 		"status":"DEPLOYED",
-		"version":10,
-		"workflowVersion":18
+		"version":12,
+		"workflowVersion":20
 	},
 	"edges":[
 		{
@@ -71,7 +71,7 @@
 	"id":"689afc3b57622b440a8820e3",
 	"lastModifiedBy":-1,
 	"lcName":"get user details | zendesk",
-	"modifiedTime":1759243592358,
+	"modifiedTime":1759371941845,
 	"name":"Get User Details | Zendesk",
 	"nodes":[
 		{
@@ -320,5 +320,5 @@
 	"tags":[
 		
 	],
-	"version":19
+	"version":21
 }
