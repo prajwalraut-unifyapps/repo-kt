@@ -1,0 +1,1611 @@
+{
+	"appsUsed":[
+		"github"
+	],
+	"createdTime":1742929041827,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759243647924,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed7f5e003e08cdeb30e9",
+		"status":"DEPLOYED",
+		"version":49,
+		"workflowVersion":163
+	},
+	"edges":[
+		{
+			"fromNodeId":"qAC0c",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"CELiN",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"CELiN",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"scIHn",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"scIHn",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"3ZRYI",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"3ZRYI",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"mbSvZ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"mbSvZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"BLbJ0",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"BLbJ0",
+			"name":"1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"BLbJ0@1",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"BLbJ0@1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Btm9H",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"Btm9H",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"HJpKH",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"HJpKH",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"xlfFT",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"xlfFT",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"JVOlT",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"JVOlT",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Nibkd",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"BLbJ0",
+			"name":"2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"BLbJ0@2",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"BLbJ0@2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"z1E0g",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"z1E0g",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"NhZZf",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"NhZZf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Zx4rZ",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"Zx4rZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"FQgt0",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"FQgt0",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"WLa9d",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"WLa9d",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"GW5r1",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"GW5r1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"JVond",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"JVond",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"NhZZf",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"Nibkd",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"t4nd2",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"NhZZf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"t4nd2",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"BLbJ0",
+			"name":"default",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"t4nd2",
+			"type":"branch"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"67e2fc917ba59b2ce6eed284",
+	"lastModifiedBy":-1,
+	"lcName":"knowledge indexer | github pr",
+	"modifiedTime":1759371965288,
+	"name":"Knowledge Indexer | Github PR",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":411,
+				"resourceName":"callables_from_interface"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"X7g2l-1",
+			"id":"qAC0c",
+			"index":0,
+			"inputs":{
+				"result":{
+					"additionalProperties":false,
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
+					"type":"object",
+					"properties":{
+						"cursorObject":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"cursorObject"
+						},
+						"success":{
+							"type":"boolean",
+							"title":"Success"
+						},
+						"lastSyncTime":{
+							"type":"string",
+							"title":"Last Sync Time"
+						}
+					},
+					"required":[]
+				},
+				"callableInterfaceId":"674855d2634d220ea5dd2d71",
+				"setup":{
+					"additionalProperties":false,
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
+					"type":"object",
+					"properties":{
+						"knowledgeId":{
+							"type":"string",
+							"title":"knowledgeId"
+						},
+						"aiAgentId":{
+							"type":"string",
+							"title":"aiAgentId"
+						},
+						"knowledge":{
+							"type":"object",
+							"properties":{
+								"readVersion":{
+									"type":"integer",
+									"title":"readVersion"
+								},
+								"lastSyncTime":{
+									"type":"integer",
+									"title":"lastSyncTime"
+								},
+								"cursorObject":{
+									"type":"object",
+									"title":"cursorObject"
+								},
+								"applicationInfo":{
+									"type":"object",
+									"properties":{
+										"context":{
+											"type":"object",
+											"properties":{
+												"connectionId":{
+													"type":"string",
+													"title":"Connection Id"
+												}
+											},
+											"additionalProperties":false,
+											"title":"Context",
+											"required":[]
+										}
+									},
+									"additionalProperties":false,
+									"title":"Application Info",
+									"required":[]
+								}
+							},
+							"title":"knowledge",
+							"additionalProperties":false,
+							"required":[]
+						},
+						"inputs":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Inputs"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger interface",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":435,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"X7g2l-1",
+			"id":"CELiN",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"owner":{
+							"type":"string",
+							"title":"Owner"
+						},
+						"repo":{
+							"type":"string",
+							"title":"Repo"
+						},
+						"pr_number":{
+							"type":"integer",
+							"title":"Pull Number"
+						},
+						"type":{
+							"type":"string",
+							"title":"Type"
+						},
+						"created":{
+							"type":"string",
+							"title":"Created"
+						},
+						"updated":{
+							"type":"string",
+							"title":"Updated"
+						},
+						"merged":{
+							"type":"string",
+							"title":"Merged"
+						},
+						"closed":{
+							"type":"string",
+							"title":"Closed"
+						},
+						"state":{
+							"type":"string",
+							"title":"State"
+						},
+						"review":{
+							"type":"string",
+							"title":"Review"
+						},
+						"author":{
+							"type":"string",
+							"title":"Author"
+						},
+						"assignee":{
+							"type":"string",
+							"title":"Assignee"
+						},
+						"labels":{
+							"type":"string",
+							"title":"Labels"
+						},
+						"milestones":{
+							"type":"string",
+							"title":"Milestones"
+						},
+						"retrieval_type":{
+							"type":"string",
+							"title":"Retrieval Type"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"owner",
+						"repo"
+					]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"inputs":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Inputs"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"inputs"
+					]
+				},
+				"compile_static":false,
+				"code":"def result = [:]\n\nif (!binding.hasVariable('inputs')) {\n    return result\n}\n\nif (inputs.owner) result << [\"owner\": inputs.owner]\nif (inputs.repo) result << [\"repo\": inputs.repo]\nif (inputs.pr_number) result << [\"pr_number\": inputs.pr_number]\nif (inputs.type) result << [\"type\": inputs.type]\nif (inputs.retrieval_type) result << [\"retrieval_type\": inputs.retrieval_type]\nif (inputs.created) result << [\"created\": inputs.created]\nif (inputs.updated) result << [\"updated\": inputs.updated]\nif (inputs.merged) result << [\"merged\": inputs.merged]\nif (inputs.closed) result << [\"closed\": inputs.closed]\nif (inputs.state) result << [\"state\": inputs.state]\nif (inputs.review) result << [\"review\": inputs.review]\nif (inputs.author) result << [\"author\": inputs.author]\nif (inputs.assignee) result << [\"assignee\": inputs.assignee]\n\n\nif (inputs.labels && inputs.labels instanceof List) {\n    result << [\"labels\": inputs.labels.join(\",\")]\n}\n\nif (inputs.milestones && inputs.milestones instanceof List) {\n    result << [\"milestones\": inputs.milestones.join(\",\")]\n}\n\n\nreturn result\n",
+				"parameters":{
+					"inputs":"{{ qAC0c.outputs.inputs }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Parse Input",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"github",
+				"resourceVersion":2638,
+				"connectionId":"672853b321446a2ac8d12d50",
+				"resourceName":"github_get_user",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"X7g2l-1",
+			"id":"scIHn",
+			"index":0,
+			"skip":false,
+			"subTitle":"Github",
+			"title":"Get User details",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":450,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"X7g2l-1",
+			"id":"3ZRYI",
+			"index":0,
+			"inputs":{
+				"automationId":"67e390229982b026deebbee1",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"fileId":"{{ scIHn.outputs.email }}",
+					"userEmailAddress":"{{ scIHn.outputs.email }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"sharedWithIds",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":440,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"X7g2l-1",
+			"id":"mbSvZ",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"is_single":{
+							"type":"boolean",
+							"title":"Is Single"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"is_single":{
+							"type":"string",
+							"title":"Is Single"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"compile_static":false,
+				"code":"def result = false;\n\nif(binding.hasVariable(\"is_single\") && is_single.equals(\"SINGLE\"))\n{\n  result = true;\n  return [\"is_single\":result];\n}\n\nreturn [\"is_single\":result]",
+				"parameters":{
+					"is_single":"{{ CELiN.outputs.result.retrieval_type }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"is single?",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"branch",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"X7g2l-1",
+			"id":"BLbJ0",
+			"index":0,
+			"inputs":{
+				"branches":[
+					{
+						"id":"1",
+						"inputs":{
+							"name":"Single PR",
+							"conditions":{
+								"filters":[
+									{
+										"property":"{{ mbSvZ.outputs.result.is_single }}",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"true"
+										}
+									}
+								],
+								"operator":"AND"
+							}
+						}
+					},
+					{
+						"id":"2",
+						"inputs":{
+							"conditions":{
+								"filters":[
+									{
+										"property":"{{ mbSvZ.outputs.result.is_single }}",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"false"
+										}
+									}
+								],
+								"operator":"AND"
+							},
+							"name":"All PRs"
+						}
+					},
+					{
+						"id":"default"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Branch",
+			"title":"",
+			"type":"BRANCH"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":427,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"BLbJ0@X7g2l-1@1",
+			"id":"BLbJ0@1",
+			"index":0,
+			"inputs":{
+				"name":"Single PR",
+				"conditions":{
+					"filters":[
+						{
+							"property":"{{ mbSvZ.outputs.result.is_single }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"true"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"subTitle":"Branch Condition",
+			"title":"Branch Condition",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"github",
+				"resourceVersion":3700,
+				"connectionId":"672853b321446a2ac8d12d50",
+				"resourceName":"github_get_pull_request",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"BLbJ0@X7g2l-1@1",
+			"id":"Btm9H",
+			"index":0,
+			"inputs":{
+				"owner":"{{ CELiN.outputs.result.owner }}",
+				"pull_number":"{{ CELiN.outputs.result.pr_number }}",
+				"repo":"{{ CELiN.outputs.result.repo }}"
+			},
+			"skip":false,
+			"subTitle":"Github",
+			"title":"Get pull request (PR)",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.parameters.req_reviewers.items"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":435,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"BLbJ0@X7g2l-1@1",
+			"id":"HJpKH",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"total_comments":{
+							"type":"integer",
+							"title":"Total Comments"
+						},
+						"req_reviewers":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Requested Reviewers"
+						},
+						"final_chunks":{
+							"type":"object",
+							"properties":{
+								"body":{
+									"type":"string",
+									"title":"Body"
+								},
+								"comments":{
+									"type":"array",
+									"items":{
+										"type":"string"
+									},
+									"title":"Comments"
+								},
+								"review_comments":{
+									"type":"array",
+									"items":{
+										"type":"string"
+									},
+									"title":"Review Comments"
+								},
+								"pr_number":{
+									"type":"integer",
+									"title":"Pr Number"
+								},
+								"pr_title":{
+									"type":"string",
+									"title":"Pr Title"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Chunks",
+							"required":[]
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"final_chunks"
+					]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"comments_url":{
+							"type":"string",
+							"title":"Comments Url"
+						},
+						"comments":{
+							"type":"integer",
+							"title":"Comments"
+						},
+						"review_comments":{
+							"type":"integer",
+							"title":"Review Comments"
+						},
+						"review_comments_url":{
+							"type":"string",
+							"title":"Review Comments Url"
+						},
+						"body":{
+							"type":"string",
+							"title":"Body"
+						},
+						"req_reviewers":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Requested Reviewers"
+						},
+						"pr_number":{
+							"type":"integer",
+							"title":"Pr Number"
+						},
+						"pr_title":{
+							"type":"string",
+							"title":"Pr Title"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"compile_static":false,
+				"code":"import com.unifyapps.infra.utils.JsonUtils\n\ndef output = [:]\ndef chunksMap = [:]\ndef total_comments = 0\ndef comments_url_arg = binding.hasVariable('comments_url') && comments_url ? comments_url : null\ndef review_comments_url_arg = binding.hasVariable('review_comments_url') && review_comments_url ? review_comments_url : null\ndef comments = binding.hasVariable('comments') && comments ? comments : null\ndef review_comments = binding.hasVariable('review_comments') && review_comments ? review_comments : null\ndef body = binding.hasVariable('body') && body ? body : null\ndef requested_reviewers_arg = binding.hasVariable('req_reviewers') && req_reviewers ? req_reviewers : null\ndef pr_number = binding.hasVariable('pr_number') && pr_number ? pr_number : null\ndef pr_title = binding.hasVariable('pr_title') && pr_title ? pr_title : null\ndef req_reviewers = []\n\nif(binding.hasVariable(\"comments\") && binding.hasVariable(\"review_comments\"))\n{\n   if(comments!=null && review_comments!=null)\n   {\n      total_comments = comments + review_comments\n   }    \n}\n\ndef processUrl(url)\n{\n  def response = []\n  def result = []\n\n  if(url == null)\n  {\n    return result\n  }\n\ndef content = new URL(url).text\nresponse = JsonUtils.fromJson(content, List.class)\n\nfor(item in response)\n{\n  result << item.get(\"body\")\n}\n\nreturn result\n}\n\nfor(reviewer in requested_reviewers_arg)\n{\n  req_reviewers << reviewer.login\n}\n\n\nchunksMap.put(\"comments\", processUrl(comments_url_arg))\nchunksMap.put(\"review_comments\", processUrl(review_comments_url_arg))\nchunksMap.put(\"body\", body)\nchunksMap.put(\"pr_number\", pr_number)\nchunksMap.put(\"pr_title\", pr_title)\noutput.put(\"final_chunks\", chunksMap)\noutput.put(\"total_comments\", total_comments)\noutput.put(\"req_reviewers\", req_reviewers)\n\nreturn output",
+				"parameters":{
+					"comments":"{{ Btm9H.outputs.comments }}",
+					"review_comments":"{{ Btm9H.outputs.review_comments }}",
+					"review_comments_url":"{{ Btm9H.outputs.review_comments_url }}",
+					"comments_url":"{{ Btm9H.outputs.comments_url }}",
+					"body":"{{ Btm9H.outputs.body }}",
+					"req_reviewers":{
+						"source":"{{ Btm9H.outputs.requested_reviewers }}",
+						"ua:type":"mappedArray",
+						"items":"{{ Btm9H.outputs.requested_reviewers[0] }}"
+					},
+					"pr_number":"{{ Btm9H.outputs.number }}",
+					"pr_title":"{{ Btm9H.outputs.title }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Parse Output",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":435,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"BLbJ0@X7g2l-1@1",
+			"id":"xlfFT",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"chunkMetadata":{
+							"type":"object",
+							"properties":{
+								"url":{
+									"type":"string",
+									"title":"Url"
+								},
+								"node_id":{
+									"type":"string",
+									"title":"Node Id"
+								},
+								"author":{
+									"type":"string",
+									"title":"Author"
+								},
+								"total_comments":{
+									"type":"integer",
+									"title":"Total Comments"
+								},
+								"status":{
+									"type":"string",
+									"title":"Status"
+								},
+								"pr_number":{
+									"type":"string",
+									"title":"Pr Number"
+								},
+								"created_at":{
+									"type":"string",
+									"title":"Created At"
+								},
+								"last_modified":{
+									"type":"string",
+									"title":"Last Modified"
+								},
+								"closed_at":{
+									"type":"string",
+									"title":"Closed At"
+								},
+								"merged_at":{
+									"type":"string",
+									"title":"Merged At"
+								},
+								"req_reviewers":{
+									"type":"array",
+									"items":{
+										"type":"string"
+									},
+									"title":"Requested Reviewers"
+								},
+								"assignees":{
+									"type":"array",
+									"items":{
+										"type":"string"
+									},
+									"title":"Assignees"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Chunk Metadata",
+							"required":[
+								"url",
+								"node_id",
+								"author",
+								"total_comments",
+								"status",
+								"pr_number",
+								"created_at",
+								"last_modified",
+								"closed_at",
+								"merged_at",
+								"req_reviewers"
+							]
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"chunkMetadata"
+					]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"created_at":{
+							"type":"string",
+							"title":"Created At"
+						},
+						"last_modified":{
+							"type":"string",
+							"title":"Last Modified"
+						},
+						"closed_at":{
+							"type":"string",
+							"title":"Closed At"
+						},
+						"merged_at":{
+							"type":"string",
+							"title":"Merged At"
+						},
+						"pr_number":{
+							"type":"integer",
+							"title":"Pr Number"
+						},
+						"url":{
+							"type":"string",
+							"title":"Url"
+						},
+						"node_id":{
+							"type":"string",
+							"title":"Node Id"
+						},
+						"status":{
+							"type":"string",
+							"title":"Status"
+						},
+						"author":{
+							"type":"string",
+							"title":"Author"
+						},
+						"total_comments":{
+							"type":"integer",
+							"title":"Total Comments"
+						},
+						"req_reviewers":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Requested Reviewers"
+						},
+						"assignees":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Assignees"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"created_at",
+						"last_modified",
+						"closed_at",
+						"merged_at",
+						"pr_number",
+						"url",
+						"node_id",
+						"status",
+						"author",
+						"total_comments",
+						"req_reviewers",
+						"assignees"
+					]
+				},
+				"compile_static":false,
+				"code":"import java.text.SimpleDateFormat\nimport java.util.TimeZone\n\ndef chunkMetadata = [:]\n\nstatic long convertToMillis(String timestamp) {\n    def format = new SimpleDateFormat(\"yyyy-MM-dd'T'HH:mm:ssX\")\n    format.setTimeZone(TimeZone.getTimeZone(\"UTC\"))\n    def date = format.parse(timestamp)\n    return date.getTime()\n}\n\nchunkMetadata << [\"appName\" : \"github\"]\nchunkMetadata << (binding.hasVariable('created_at') && created_at ? [\"created_at\": convertToMillis(created_at)] : [:])\nchunkMetadata << (binding.hasVariable('updated_at') && updated_at ? [\"updated_at\": convertToMillis(updated_at)] : [:])\nchunkMetadata << (binding.hasVariable('closed_at') && closed_at ? [\"closed_at\": convertToMillis(closed_at)] : [:])\nchunkMetadata << (binding.hasVariable('merged_at') && merged_at ? [\"merged_at\": convertToMillis(merged_at)] : [:])\nchunkMetadata << (binding.hasVariable('author') && author ? [\"author\": author] : [:])\nchunkMetadata << (binding.hasVariable('assignees') && assignees ? [\"assignees\": assignees] : [:])\nchunkMetadata << (binding.hasVariable('req_reviewers') && req_reviewers ? [\"req_reviewers\": req_reviewers] : [:])\nchunkMetadata << (binding.hasVariable('pr_number') && pr_number ? [\"pr_number\": pr_number] : [:])\nchunkMetadata << (binding.hasVariable('node_id') && node_id ? [\"node_id\": node_id] : [:])\nchunkMetadata << (binding.hasVariable('status') && status ? [\"status\": status] : [:])\nchunkMetadata << (binding.hasVariable('total_comments') && total_comments ? [\"total_comments\": total_comments] : [:])\n\n\n\n\nreturn [\"chunkMetadata\":chunkMetadata]",
+				"parameters":{
+					"created_at":"{{ Btm9H.outputs.created_at }}",
+					"last_modified":"{{ Btm9H.outputs.updated_at }}",
+					"closed_at":"{{ Btm9H.outputs.milestone.closed_at }}",
+					"merged_at":"{{ Btm9H.outputs.merged_at }}",
+					"pr_number":"{{ Btm9H.outputs.number }}",
+					"url":"{{ Btm9H.outputs.url }}",
+					"node_id":"{{ Btm9H.outputs.node_id }}",
+					"status":"{{ Btm9H.outputs.state }}",
+					"author":"{{ Btm9H.outputs.user.login }}",
+					"total_comments":"{{ HJpKH.outputs.result.total_comments }}",
+					"req_reviewers":{
+						"ua:type":"mappedArray",
+						"source":"{{ HJpKH.outputs.result.req_reviewers }}",
+						"items":"{{ HJpKH.outputs.result.req_reviewers[0] }}"
+					},
+					"assignees":{
+						"source":"{{ Btm9H.outputs.assignees }}",
+						"ua:type":"mappedArray",
+						"items":"{{ Btm9H.outputs.assignees[0].login }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Chunk Metadata",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":450,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"BLbJ0@X7g2l-1@1",
+			"id":"JVOlT",
+			"index":0,
+			"inputs":{
+				"automationId":"67091f09c6db330cf5b08ead",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"knowledgeId":"{{ qAC0c.outputs.knowledgeId }}",
+					"text":"{{ HJpKH.outputs.result.final_chunks }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Text Chunker",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":450,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"BLbJ0@X7g2l-1@1",
+			"id":"Nibkd",
+			"index":0,
+			"inputs":{
+				"automationId":"66af3ff4cd79b321cb478a37",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"chunks":{
+						"source":"{{ JVOlT.outputs.chunks }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"data":"{{ JVOlT.outputs.chunks[0] }}",
+							"sharedWithIds":{
+								"source":"{{ 3ZRYI.outputs.sharedWithIds }}",
+								"ua:type":"mappedArray",
+								"items":"{{ 3ZRYI.outputs.sharedWithIds[0] }}"
+							}
+						}
+					},
+					"knowledgeId":"{{ qAC0c.outputs.knowledgeId }}",
+					"knowledgeVersion":"{{ qAC0c.outputs.knowledge.readVersion }}",
+					"uniqueEntityId":"{{ scIHn.outputs.node_id }}",
+					"chunkMetadata":"{{ xlfFT.outputs.result.chunkMetadata }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Index Body and Conversations",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":427,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"BLbJ0@X7g2l-1@2",
+			"id":"BLbJ0@2",
+			"index":0,
+			"inputs":{
+				"name":"All PRs",
+				"conditions":{
+					"filters":[
+						{
+							"property":"{{ mbSvZ.outputs.result.is_single }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"false"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"github",
+				"resourceVersion":786,
+				"connectionId":"672853b321446a2ac8d12d50",
+				"resourceName":"github_search_issues_and_pull_requests",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"BLbJ0@X7g2l-1@2",
+			"id":"z1E0g",
+			"index":0,
+			"inputs":{
+				"owner":"{{ CELiN.outputs.result.owner }}",
+				"author":"{{ CELiN.outputs.result.author }}",
+				"created":"{{ CELiN.outputs.result.created }}",
+				"repo":"{{ CELiN.outputs.result.repo }}",
+				"merged":"{{ CELiN.outputs.result.merged }}",
+				"type":"pr",
+				"labels":"{{ CELiN.outputs.result.labels }}",
+				"review":"{{ CELiN.outputs.result.review }}",
+				"closed":"{{ CELiN.outputs.result.closed }}",
+				"assignee":"{{ CELiN.outputs.result.assignee }}",
+				"state":"{{ CELiN.outputs.result.state }}",
+				"milestones":"{{ CELiN.outputs.result.milestones }}",
+				"updated":"{{ CELiN.outputs.result.updated }}"
+			},
+			"skip":false,
+			"subTitle":"Github",
+			"title":"Search issues and pull requests",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":467,
+				"resourceName":"loop_for_each",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"BLbJ0@X7g2l-1@2",
+			"id":"NhZZf",
+			"index":0,
+			"inputs":{
+				"repeatMode":"SINGLE",
+				"listSource":"{{ z1E0g.outputs.records }}",
+				"captureIterations":false
+			},
+			"skip":false,
+			"subTitle":"Loop",
+			"title":"For loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"github",
+				"resourceVersion":3750,
+				"connectionId":"672853b321446a2ac8d12d50",
+				"resourceName":"github_get_pull_request",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"NhZZf@BLbJ0@X7g2l-1@2@l",
+			"id":"Zx4rZ",
+			"index":0,
+			"inputs":{
+				"owner":"{{ CELiN.outputs.result.owner }}",
+				"pull_number":"{{ NhZZf.outputs.item.number }}",
+				"repo":"{{ CELiN.outputs.result.repo }}"
+			},
+			"skip":false,
+			"subTitle":"Github",
+			"title":"Get pull request (PR)",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":435,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"NhZZf@BLbJ0@X7g2l-1@2@l",
+			"id":"FQgt0",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"total_comments":{
+							"type":"integer",
+							"title":"Total Comments"
+						},
+						"req_reviewers":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Requested Reviewers"
+						},
+						"final_chunks":{
+							"type":"object",
+							"properties":{
+								"comments":{
+									"type":"array",
+									"items":{
+										"type":"string"
+									},
+									"title":"Comments"
+								},
+								"review_comments":{
+									"type":"array",
+									"items":{
+										"type":"string"
+									},
+									"title":"Review Comments"
+								},
+								"body":{
+									"type":"string",
+									"title":"Body"
+								},
+								"pr_number":{
+									"type":"number",
+									"title":"Pr Number"
+								},
+								"pr_title":{
+									"type":"string",
+									"title":"Pr Title"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Chunks",
+							"required":[]
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"final_chunks"
+					]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"comments_url":{
+							"type":"string",
+							"title":"Comments Url"
+						},
+						"comments":{
+							"type":"integer",
+							"title":"Comments"
+						},
+						"review_comments":{
+							"type":"integer",
+							"title":"Review Comments"
+						},
+						"review_comments_url":{
+							"type":"string",
+							"title":"Review Comments Url"
+						},
+						"body":{
+							"type":"string",
+							"title":"Body"
+						},
+						"req_reviewers":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Requested Reviewers"
+						},
+						"pr_number":{
+							"type":"number",
+							"title":"Pr Number"
+						},
+						"pr_title":{
+							"type":"string",
+							"title":"Pr Title"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"body",
+						"req_reviewers"
+					]
+				},
+				"compile_static":false,
+				"code":"import com.unifyapps.infra.utils.JsonUtils\n\ndef output = [:]\ndef chunksMap = [:]\ndef total_comments = 0\ndef comments_url_arg = binding.hasVariable('comments_url') && comments_url ? comments_url : null\ndef review_comments_url_arg = binding.hasVariable('review_comments_url') && review_comments_url ? review_comments_url : null\ndef comments = binding.hasVariable('comments') && comments ? comments : null\ndef review_comments = binding.hasVariable('review_comments') && review_comments ? review_comments : null\ndef body = binding.hasVariable('body') && body ? body : null\ndef requested_reviewers_arg = binding.hasVariable('req_reviewers') && req_reviewers ? req_reviewers : null\ndef pr_number = binding.hasVariable('pr_number') && pr_number ? pr_number : null\ndef pr_title = binding.hasVariable('pr_title') && pr_title ? pr_title : null\ndef req_reviewers = []\n\nif(binding.hasVariable(\"comments\") && binding.hasVariable(\"review_comments\"))\n{\n   if(comments!=null && review_comments!=null)\n   {\n      total_comments = comments + review_comments\n   }    \n}\n\ndef processUrl(url)\n{\n  def response = []\n  def result = []\n\n  if(url == null)\n  {\n    return result\n  }\n\ndef content = new URL(url).text\nresponse = JsonUtils.fromJson(content, List.class)\n\nfor(item in response)\n{\n  result << item.get(\"body\")\n}\n\nreturn result\n}\n\nfor(reviewer in requested_reviewers_arg)\n{\n  req_reviewers << reviewer.login\n}\n\n\nchunksMap.put(\"comments\", processUrl(comments_url_arg))\nchunksMap.put(\"review_comments\", processUrl(review_comments_url_arg))\nchunksMap.put(\"body\", body)\nchunksMap.put(\"pr_number\", pr_number)\nchunksMap.put(\"pr_title\", pr_title)\noutput.put(\"final_chunks\", chunksMap)\noutput.put(\"total_comments\", total_comments)\noutput.put(\"req_reviewers\", req_reviewers)\n\nreturn output",
+				"parameters":{
+					"comments_url":"{{ Zx4rZ.outputs.comments_url }}",
+					"comments":"{{ Zx4rZ.outputs.comments }}",
+					"review_comments":"{{ Zx4rZ.outputs.review_comments }}",
+					"review_comments_url":"{{ Zx4rZ.outputs.review_comments_url }}",
+					"body":"{{ Zx4rZ.outputs.body }}",
+					"req_reviewers":{
+						"source":"{{ Zx4rZ.outputs.requested_reviewers }}",
+						"ua:type":"mappedArray",
+						"items":"{{ Zx4rZ.outputs.requested_reviewers[0] }}"
+					},
+					"pr_number":"{{ NhZZf.outputs.item.number }}",
+					"pr_title":"{{ NhZZf.outputs.item.title }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Parse Output",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":435,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"NhZZf@BLbJ0@X7g2l-1@2@l",
+			"id":"WLa9d",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"chunkMetadata":{
+							"type":"object",
+							"properties":{
+								"url":{
+									"type":"string",
+									"title":"Url"
+								},
+								"node_id":{
+									"type":"string",
+									"title":"Node Id"
+								},
+								"author":{
+									"type":"string",
+									"title":"Author"
+								},
+								"total_comments":{
+									"type":"integer",
+									"title":"Total Comments"
+								},
+								"status":{
+									"type":"string",
+									"title":"Status"
+								},
+								"pr_number":{
+									"type":"string",
+									"title":"Pr Number"
+								},
+								"created_at":{
+									"type":"string",
+									"title":"Created At"
+								},
+								"last_modified":{
+									"type":"string",
+									"title":"Last Modified"
+								},
+								"closed_at":{
+									"type":"string",
+									"title":"Closed At"
+								},
+								"merged_at":{
+									"type":"string",
+									"title":"Merged At"
+								},
+								"req_reviewers":{
+									"type":"array",
+									"items":{
+										"type":"string"
+									},
+									"title":"Requested Reviewers"
+								},
+								"assignees":{
+									"type":"array",
+									"items":{
+										"type":"string"
+									},
+									"title":"Assignees"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Chunk Metadata",
+							"required":[
+								"url",
+								"node_id",
+								"author",
+								"total_comments",
+								"status",
+								"pr_number",
+								"created_at",
+								"last_modified",
+								"closed_at",
+								"merged_at",
+								"req_reviewers",
+								"assignees"
+							]
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"chunkMetadata"
+					]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"created_at":{
+							"type":"string",
+							"title":"Created At"
+						},
+						"last_modified":{
+							"type":"string",
+							"title":"Last Modified"
+						},
+						"closed_at":{
+							"type":"string",
+							"title":"Closed At"
+						},
+						"merged_at":{
+							"type":"string",
+							"title":"Merged At"
+						},
+						"pr_number":{
+							"type":"integer",
+							"title":"Pr Number"
+						},
+						"url":{
+							"type":"string",
+							"title":"Url"
+						},
+						"node_id":{
+							"type":"string",
+							"title":"Node Id"
+						},
+						"status":{
+							"type":"string",
+							"title":"Status"
+						},
+						"author":{
+							"type":"string",
+							"title":"Author"
+						},
+						"total_comments":{
+							"type":"integer",
+							"title":"Total Comments"
+						},
+						"req_reviewers":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Requested Reviewers"
+						},
+						"assignees":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Assignees"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"created_at",
+						"last_modified",
+						"closed_at",
+						"merged_at",
+						"pr_number",
+						"url",
+						"node_id",
+						"status",
+						"author",
+						"total_comments",
+						"req_reviewers",
+						"assignees"
+					]
+				},
+				"compile_static":false,
+				"code":"import java.text.SimpleDateFormat\nimport java.util.TimeZone\n\ndef chunkMetadata = [:]\n\nstatic long convertToMillis(String timestamp) {\n    def format = new SimpleDateFormat(\"yyyy-MM-dd'T'HH:mm:ssX\")\n    format.setTimeZone(TimeZone.getTimeZone(\"UTC\"))\n    def date = format.parse(timestamp)\n    return date.getTime()\n}\n\nchunkMetadata << [\"appName\" : \"github\"]\nchunkMetadata << (binding.hasVariable('created_at') && created_at ? [\"created_at\": convertToMillis(created_at)] : [:])\nchunkMetadata << (binding.hasVariable('updated_at') && updated_at ? [\"updated_at\": convertToMillis(updated_at)] : [:])\nchunkMetadata << (binding.hasVariable('closed_at') && closed_at ? [\"closed_at\": convertToMillis(closed_at)] : [:])\nchunkMetadata << (binding.hasVariable('merged_at') && merged_at ? [\"merged_at\": convertToMillis(merged_at)] : [:])\nchunkMetadata << (binding.hasVariable('author') && author ? [\"author\": author] : [:])\nchunkMetadata << (binding.hasVariable('assignees') && assignees ? [\"assignees\": assignees] : [:])\nchunkMetadata << (binding.hasVariable('req_reviewers') && req_reviewers ? [\"req_reviewers\": req_reviewers] : [:])\nchunkMetadata << (binding.hasVariable('pr_number') && pr_number ? [\"pr_number\": pr_number] : [:])\nchunkMetadata << (binding.hasVariable('node_id') && node_id ? [\"node_id\": node_id] : [:])\nchunkMetadata << (binding.hasVariable('status') && status ? [\"status\": status] : [:])\nchunkMetadata << (binding.hasVariable('total_comments') && total_comments ? [\"total_comments\": total_comments] : [:])\n\n\nreturn [\"chunkMetadata\":chunkMetadata]",
+				"parameters":{
+					"created_at":"{{ Zx4rZ.outputs.created_at }}",
+					"last_modified":"{{ Zx4rZ.outputs.updated_at }}",
+					"closed_at":"{{ Zx4rZ.outputs.closed_at }}",
+					"merged_at":"{{ Zx4rZ.outputs.merged_at }}",
+					"pr_number":"{{ Zx4rZ.outputs.number }}",
+					"url":"{{ Zx4rZ.outputs.url }}",
+					"node_id":"{{ Zx4rZ.outputs.node_id }}",
+					"status":"{{ Zx4rZ.outputs.state }}",
+					"author":"{{ Zx4rZ.outputs.user.login }}",
+					"total_comments":"{{ FQgt0.outputs.result.total_comments }}",
+					"req_reviewers":{
+						"source":"{{ FQgt0.outputs.result.req_reviewers }}",
+						"ua:type":"mappedArray",
+						"items":"{{ FQgt0.outputs.result.req_reviewers[0] }}"
+					},
+					"assignees":{
+						"source":"{{ Zx4rZ.outputs.assignees }}",
+						"ua:type":"mappedArray",
+						"items":"{{ Zx4rZ.outputs.assignees[0].login }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Chunk Metadata",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":450,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"NhZZf@BLbJ0@X7g2l-1@2@l",
+			"id":"GW5r1",
+			"index":0,
+			"inputs":{
+				"automationId":"67091f09c6db330cf5b08ead",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"knowledgeId":"{{ qAC0c.outputs.knowledgeId }}",
+					"text":"{{ FQgt0.outputs.result.final_chunks }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Text Chunker",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":450,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"NhZZf@BLbJ0@X7g2l-1@2@l",
+			"id":"JVond",
+			"index":0,
+			"inputs":{
+				"automationId":"66af3ff4cd79b321cb478a37",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"chunks":{
+						"source":"{{ GW5r1.outputs.chunks }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"data":"{{ GW5r1.outputs.chunks[0] }}",
+							"sharedWithIds":{
+								"source":"{{ 3ZRYI.outputs.sharedWithIds }}",
+								"ua:type":"mappedArray",
+								"items":"{{ 3ZRYI.outputs.sharedWithIds[0] }}"
+							}
+						}
+					},
+					"knowledgeId":"{{ qAC0c.outputs.knowledgeId }}",
+					"knowledgeVersion":"{{ qAC0c.outputs.knowledge.readVersion }}",
+					"uniqueEntityId":"{{ scIHn.outputs.node_id }}",
+					"chunkMetadata":"{{ WLa9d.outputs.result.chunkMetadata }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Index Body and Conversations",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":432,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"X7g2l-1",
+			"id":"t4nd2",
+			"index":0,
+			"inputs":{
+				"result":{
+					"cursorObject":"{{ qAC0c.outputs.knowledge.cursorObject }}",
+					"success":true,
+					"lastSyncTime":"{{ zl6kv.outputs.lastSyncTime }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":411,
+	"runtimeConnectionAppNames":[
+		"github"
+	],
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		
+	],
+	"version":164
+}
