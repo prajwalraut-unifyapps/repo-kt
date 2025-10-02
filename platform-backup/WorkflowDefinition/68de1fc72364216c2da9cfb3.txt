@@ -18,7 +18,7 @@
 	"id":"68de1fc72364216c2da9cfb3",
 	"lastModifiedBy":2721,
 	"lcName":"sampletreggertest",
-	"modifiedTime":1759388738970,
+	"modifiedTime":1759388824580,
 	"name":"sampletreggertest",
 	"nodes":[
 		{
@@ -29,13 +29,13 @@
 				"resourceName":"gcloud_storage_on_new_object_polling"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_uBreN-1",
 			"id":"n_rmqek",
 			"index":1,
 			"inputs":{
-				"bucketName":"gcst-virtu-eag-integrationcloudstorage-dev2",
+				"bucketName":"qa_bucket_02",
 				"interval":5,
 				"from":"2025-10-01T06:46:00.000Z",
 				"batchSize":100
@@ -66,5 +66,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
