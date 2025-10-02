@@ -5,12 +5,12 @@
 	"createdTime":1745560662317,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655398763,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f3a638757c179b123d16",
+		"deployedAt":1759243610615,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed5a23e6682b9a51ec89",
 		"status":"DEPLOYED",
-		"version":67,
-		"workflowVersion":82
+		"version":69,
+		"workflowVersion":84
 	},
 	"edges":[
 		{
@@ -151,7 +151,7 @@
 	"id":"680b2456c1a5ea436052c2bc",
 	"lastModifiedBy":-1,
 	"lcName":"ai eval | metrics | sql generation ",
-	"modifiedTime":1759243577630,
+	"modifiedTime":1759371928395,
 	"name":"AI Eval | Metrics | SQL Generation ",
 	"nodes":[
 		{
@@ -1011,5 +1011,5 @@
 		}
 	},
 	"standard":true,
-	"version":83
+	"version":85
 }
