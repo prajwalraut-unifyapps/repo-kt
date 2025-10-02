@@ -16,7 +16,7 @@
 	"id":"68def59eaa7c7b4f21f84119",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa21759442334060xwaspggzsy",
-	"modifiedTime":1759442334184,
+	"modifiedTime":1759442366197,
 	"name":"changeSetQA21759442334060XWASPggZSy",
 	"nodes":[
 		{
@@ -26,7 +26,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"5stgo-1",
 			"id":"7pKsG",
@@ -87,7 +87,7 @@
 			"index":0,
 			"inputs":{
 				"result":{
-					"c":"=SUM({{ 7pKsG.outputs.a }},{{ 7pKsG.outputs.b }})"
+					"c":"= MIN({{ 7pKsG.outputs.a }},{{ 7pKsG.outputs.b }})"
 				}
 			},
 			"skip":false,
@@ -109,5 +109,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
