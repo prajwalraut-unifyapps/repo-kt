@@ -1,21 +1,76 @@
 {
 	"appsUsed":[
-		
+		"slack"
 	],
 	"createdTime":1759443491527,
 	"deleted":false,
 	"edges":[
-		
+		{
+			"fromNodeId":"n_1GOIj",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_6w9od",
+			"type":"next"
+		}
 	],
 	"id":"68defa23c1d0495424eb139b",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa2trdmqqgiam",
-	"modifiedTime":1759443491527,
+	"modifiedTime":1759443492506,
 	"name":"changeSetQA2tRDmQqGIAM",
 	"nodes":[
-		
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":49,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_l5XqK-1",
+			"id":"n_1GOIj",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"slack",
+				"resourceVersion":165,
+				"connectionId":"68defa2166c9a62606e7a0bc",
+				"resourceName":"slack_list_conversations",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_l5XqK-1",
+			"id":"n_6w9od",
+			"index":2,
+			"inputs":{
+				"limit":100
+			},
+			"skip":false,
+			"subTitle":"Slack",
+			"title":"List conversations",
+			"type":"ACTION"
+		}
 	],
 	"ownerUserId":175325,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -26,5 +81,8 @@
 		}
 	},
 	"standard":false,
-	"version":0
+	"tags":[
+		
+	],
+	"version":1
 }
