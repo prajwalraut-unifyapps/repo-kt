@@ -23,7 +23,7 @@
 	"id":"68de4d08e862b935378447ef",
 	"lastModifiedBy":185583,
 	"lcName":"task_pb (copy)",
-	"modifiedTime":1759399463425,
+	"modifiedTime":1759399624804,
 	"name":"Task_PB (copy)",
 	"nodes":[
 		{
@@ -153,7 +153,7 @@
 						}
 					}
 				},
-				"code":"\ndef list = tag.toList()\nlist.add(\"date\")\nlist.add(\"rat\")\nlist.remove(\"rat\")\n\n\n\nreturn [currentTagOut:list as String[]]",
+				"code":"\ndef list = tag.toList()\nlist.add(\"date\")\nlist.add(\"rat\")\nlist.remove(\"rat\")\n\n\nString[] arr = list as String[]\nreturn [\"currentTagOut\":arr]",
 				"compile_static":false,
 				"captureStdOutput":true,
 				"parameters":{
@@ -217,5 +217,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
