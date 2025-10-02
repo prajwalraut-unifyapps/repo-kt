@@ -5,12 +5,12 @@
 	"createdTime":1740110518836,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243536754,
+		"deployedAt":1759243571027,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed1023e6682b9a51eada",
+		"deployedDefinitionId":"68dbed339213d707c2d2736a",
 		"status":"DEPLOYED",
-		"version":32,
-		"workflowVersion":64
+		"version":33,
+		"workflowVersion":65
 	},
 	"edges":[
 		{
@@ -86,7 +86,7 @@
 	"id":"67aca2dc4b96261af99a565b",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer |  ms teams | message replies",
-	"modifiedTime":1759243570969,
+	"modifiedTime":1759371892370,
 	"name":"Knowledge Indexer |  MS Teams | Message Replies",
 	"nodes":[
 		{
@@ -604,5 +604,5 @@
 		"AI Agent",
 		"AI Agent Deployment"
 	],
-	"version":65
+	"version":66
 }
