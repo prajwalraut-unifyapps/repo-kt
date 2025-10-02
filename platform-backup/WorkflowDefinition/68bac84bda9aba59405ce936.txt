@@ -6,6 +6,14 @@
 	],
 	"createdTime":1759405181722,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759405193694,
+		"deployedBy":39713,
+		"deployedDefinitionId":"68de6489ed7fcc6978211568",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":88
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_uTqRM",
@@ -391,11 +399,25 @@
 			"type":"next"
 		}
 	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"VIEW_RUNS",
+					"V"
+				],
+				"principalIds":[
+					"39713"
+				],
+				"principalType":"USER"
+			}
+		]
+	},
 	"id":"68bac84bda9aba59405ce936",
 	"lastModifiedBy":39713,
-	"lcName":"delivery-refresh-prod",
-	"modifiedTime":1759405181722,
-	"name":"delivery-refresh-prod",
+	"lcName":"test",
+	"modifiedTime":1759405228017,
+	"name":"test",
 	"nodes":[
 		{
 			"context":{
@@ -2755,5 +2777,8 @@
 		}
 	},
 	"standard":false,
-	"version":88
+	"tags":[
+		
+	],
+	"version":90
 }
