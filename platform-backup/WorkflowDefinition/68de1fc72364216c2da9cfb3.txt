@@ -5,12 +5,12 @@
 	"createdTime":1759387591917,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759392475872,
+		"deployedAt":1759396889766,
 		"deployedBy":2721,
-		"deployedDefinitionId":"68de32dbbdbc7b3b7b2d5bd0",
+		"deployedDefinitionId":"68de4419b335db610563d3d9",
 		"status":"DEPLOYED",
-		"version":5,
-		"workflowVersion":11
+		"version":6,
+		"workflowVersion":12
 	},
 	"edges":[
 		
@@ -18,14 +18,14 @@
 	"id":"68de1fc72364216c2da9cfb3",
 	"lastModifiedBy":2721,
 	"lcName":"sampletreggertest",
-	"modifiedTime":1759396886835,
+	"modifiedTime":1759405219669,
 	"name":"sampletreggertest",
 	"nodes":[
 		{
 			"context":{
 				"appName":"gcloud_storage",
 				"resourceVersion":4446,
-				"connectionId":"68de2d976c347068ae827b75",
+				"connectionId":"68ac666caa52965d63249026",
 				"resourceName":"gcloud_storage_on_new_object_polling"
 			},
 			"debug":false,
@@ -67,5 +67,5 @@
 	"tags":[
 		
 	],
-	"version":12
+	"version":13
 }
