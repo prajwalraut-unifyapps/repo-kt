@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759443392138,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759443392467,
+		"deployedBy":175325,
+		"deployedDefinitionId":"68def9c0aa7c7b4f21f84170",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"7pKsG",
@@ -16,7 +24,7 @@
 	"id":"68def9c0aa7c7b4f21f8416f",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa2nanhvhoclfgs",
-	"modifiedTime":1759443392310,
+	"modifiedTime":1759443417783,
 	"name":"changeSetQA2nAnHVHoCLfgs",
 	"nodes":[
 		{
@@ -87,7 +95,7 @@
 			"index":0,
 			"inputs":{
 				"result":{
-					"c":"=SUM({{ 7pKsG.outputs.a }},{{ 7pKsG.outputs.b }})"
+					"c":"=PRODUCT({{ 7pKsG.outputs.a }},{{ 7pKsG.outputs.b }})"
 				}
 			},
 			"skip":false,
@@ -109,5 +117,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
