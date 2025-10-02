@@ -5,12 +5,12 @@
 	"createdTime":1736604441914,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243507629,
+		"deployedAt":1759243545871,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbecf35e003e08cdeb2e22",
+		"deployedDefinitionId":"68dbed195e003e08cdeb2ea6",
 		"status":"DEPLOYED",
-		"version":55,
-		"workflowVersion":76
+		"version":56,
+		"workflowVersion":77
 	},
 	"edges":[
 		{
@@ -48,7 +48,7 @@
 	"id":"67827b19b1872e2090e870d0",
 	"lastModifiedBy":-1,
 	"lcName":"assign knowledge sets to ai agent",
-	"modifiedTime":1759243545813,
+	"modifiedTime":1759371868045,
 	"name":"Assign Knowledge Sets to AI Agent",
 	"nodes":[
 		{
@@ -249,5 +249,5 @@
 	"tags":[
 		
 	],
-	"version":77
+	"version":78
 }
