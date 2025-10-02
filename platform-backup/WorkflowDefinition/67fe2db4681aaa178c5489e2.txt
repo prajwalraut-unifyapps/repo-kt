@@ -5,12 +5,12 @@
 	"createdTime":1744711534258,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646571418,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2d12bbd00df618e363d69",
+		"deployedAt":1759243607314,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed575e003e08cdeb3021",
 		"status":"DEPLOYED",
-		"version":51,
-		"workflowVersion":85
+		"version":54,
+		"workflowVersion":88
 	},
 	"edges":[
 		{
@@ -92,9 +92,9 @@
 		]
 	},
 	"id":"67fe2db4681aaa178c5489e2",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"deploy agent",
-	"modifiedTime":1758655394184,
+	"modifiedTime":1759371925376,
 	"name":"Deploy agent",
 	"nodes":[
 		{
@@ -422,5 +422,5 @@
 		"AI Agent",
 		"Internal"
 	],
-	"version":86
+	"version":89
 }
