@@ -5,12 +5,12 @@
 	"createdTime":1744095047048,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243519845,
+		"deployedAt":1759243555958,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbecff9213d707c2d272bb",
+		"deployedDefinitionId":"68dbed2323e6682b9a51eb4c",
 		"status":"DEPLOYED",
-		"version":71,
-		"workflowVersion":140
+		"version":72,
+		"workflowVersion":141
 	},
 	"edges":[
 		{
@@ -439,7 +439,7 @@
 	"id":"67f4c7477c1d3e26449abd13",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | microsoft entra id | index users",
-	"modifiedTime":1759243555781,
+	"modifiedTime":1759371877863,
 	"name":"Knowledge Indexer | Microsoft Entra ID | Index Users",
 	"nodes":[
 		{
@@ -2753,5 +2753,5 @@
 	"tags":[
 		
 	],
-	"version":141
+	"version":142
 }
