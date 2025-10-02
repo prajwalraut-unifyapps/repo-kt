@@ -5,12 +5,12 @@
 	"createdTime":1723188386695,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646533335,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2d1059f85565fb8fa5d9f",
+		"deployedAt":1759243575889,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed379213d707c2d2738c",
 		"status":"DEPLOYED",
-		"version":79,
-		"workflowVersion":731
+		"version":82,
+		"workflowVersion":734
 	},
 	"edges":[
 		{
@@ -419,9 +419,9 @@
 		]
 	},
 	"id":"66b5c4a2fee60c71fbe0cc1e",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | website ",
-	"modifiedTime":1758655355297,
+	"modifiedTime":1759371897024,
 	"name":"Knowledge Indexer | Website ",
 	"nodes":[
 		{
@@ -2602,5 +2602,5 @@
 		"AI Agent",
 		"Knowledge"
 	],
-	"version":732
+	"version":735
 }
