@@ -6,46 +6,117 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_GyWfp",
+			"fromNodeId":"n_S7lr4",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_QtK8o",
+			"toNodeId":"n_qyhDO",
 			"type":"next"
 		}
 	],
 	"id":"68de2e73bdbc7b3b7b2d4155",
-	"lastModifiedBy":2721,
+	"lastModifiedBy":31268,
 	"lcName":"smapler",
-	"modifiedTime":1759391347035,
+	"modifiedTime":1759394227192,
 	"name":"smapler",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1057,
+				"resourceName":"callables_from_api"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_GyWfp-1",
-			"id":"_GyWfp",
-			"index":0,
+			"id":"n_S7lr4",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"multipart/form-data",
+					"multipartBody":{
+						"type":"object",
+						"properties":{
+							"tesitng":{
+								"type":"string",
+								"title":"Tesitng"
+							}
+						},
+						"additionalProperties":false,
+						"required":[
+							"tesitng"
+						]
+					}
+				},
+				"endpointType":"REST",
+				"streamingResponse":false
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via API",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":987,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_GyWfp-1",
-			"id":"_QtK8o",
-			"index":0,
+			"id":"n_qyhDO",
+			"index":2,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"test":{
+							"type":"string",
+							"title":"Test"
+						}
+					},
+					"required":[
+						"test"
+					]
+				}
+			},
+			"inputs":{},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"test":{
+							"type":"string",
+							"title":"Test"
+						}
+					},
+					"required":[
+						"test"
+					]
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":2721,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +130,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
