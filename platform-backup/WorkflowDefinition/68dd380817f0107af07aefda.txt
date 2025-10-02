@@ -45,7 +45,7 @@
 	"id":"68dd380817f0107af07aefda",
 	"lastModifiedBy":44103,
 	"lcName":"test11111",
-	"modifiedTime":1759392310674,
+	"modifiedTime":1759392367303,
 	"name":"test11111",
 	"nodes":[
 		{
@@ -121,6 +121,11 @@
 			"type":"ACTION"
 		},
 		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.parameters.slotList.items"
+				]
+			},
 			"context":{
 				"appName":"code_by_unifyapps",
 				"resourceVersion":931,
@@ -150,9 +155,16 @@
 						}
 					}
 				},
-				"code":"return [:]",
+				"code":"return [slotList : slotList]",
 				"compile_static":false,
-				"captureStdOutput":false
+				"captureStdOutput":false,
+				"parameters":{
+					"slotList":{
+						"source":"{{ n_UlFPc.outputs.result.slotList }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_UlFPc.outputs.result.slotList[0] }}"
+					}
+				}
 			},
 			"skip":false,
 			"subTitle":"Code by UnifyApps",
@@ -300,5 +312,5 @@
 		"enableVariableLogging":true
 	},
 	"standard":false,
-	"version":20
+	"version":21
 }
