@@ -5,12 +5,12 @@
 	"createdTime":1743153433360,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655379659,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f39338757c179b1239fd",
+		"deployedAt":1759243595297,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed4b23e6682b9a51ec2d",
 		"status":"DEPLOYED",
-		"version":51,
-		"workflowVersion":69
+		"version":53,
+		"workflowVersion":71
 	},
 	"edges":[
 		{
@@ -41,7 +41,7 @@
 	"id":"67e669196b919460b368dce2",
 	"lastModifiedBy":-1,
 	"lcName":"mask knowledge chunk via regex",
-	"modifiedTime":1759243562829,
+	"modifiedTime":1759371914676,
 	"name":"Mask Knowledge Chunk via Regex",
 	"nodes":[
 		{
@@ -251,5 +251,5 @@
 	"tags":[
 		"PII"
 	],
-	"version":70
+	"version":72
 }
