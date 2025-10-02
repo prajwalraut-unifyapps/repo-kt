@@ -5,12 +5,12 @@
 	"createdTime":1732173328683,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243557713,
+		"deployedAt":1759243590472,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed2523e6682b9a51eb5b",
+		"deployedDefinitionId":"68dbed4623e6682b9a51ec17",
 		"status":"DEPLOYED",
-		"version":112,
-		"workflowVersion":147
+		"version":113,
+		"workflowVersion":148
 	},
 	"edges":[
 		{
@@ -383,7 +383,7 @@
 	"id":"673ede10befa5e1573509632",
 	"lastModifiedBy":-1,
 	"lcName":"single lang common response publisher",
-	"modifiedTime":1759243590341,
+	"modifiedTime":1759371909864,
 	"name":"Single Lang Common Response Publisher",
 	"nodes":[
 		{
@@ -401,6 +401,8 @@
 			"inputs":{
 				"result":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"success":{
 							"type":"boolean",
@@ -410,12 +412,16 @@
 							"type":"string",
 							"title":"Message Id"
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				},
 				"setup":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"coPilotBlocks",
+						"publishToEndUser",
+						"fromCustomerUserId"
+					],
 					"properties":{
 						"attachments":{
 							"type":"array",
@@ -517,14 +523,12 @@
 						"internalMessageType":{
 							"type":"string",
 							"title":"Internal Message Type"
+						},
+						"deepResearchEnabled":{
+							"type":"boolean",
+							"title":"Deep Research Enabled"
 						}
-					},
-					"additionalProperties":false,
-					"required":[
-						"coPilotBlocks",
-						"publishToEndUser",
-						"fromCustomerUserId"
-					]
+					}
 				}
 			},
 			"skip":false,
@@ -883,6 +887,7 @@
 					"toCustomerUserId":"{{ n_ZfA3j.outputs.properties.fromCustomerUserId }}",
 					"internalMessageType":"{{ 3p5Mz.outputs.internalMessageType }}",
 					"temporaryMessage":"=IF(ISBLANK({{ 3p5Mz.outputs.internalMessageType }}), FALSE(), TRUE())",
+					"deepResearchEnabled":"{{ ysaHW.outputs.deepResearchEnabled }}",
 					"attachments":{
 						"source":"{{ ysaHW.outputs.attachments }}",
 						"ua:type":"mappedArray",
@@ -1079,6 +1084,17 @@
 				"fallbackWorkflowId":"6761573aaaaee539c340ccab",
 				"parameters":{
 					"endConversation":"{{ ysaHW.outputs.endConversation }}",
+					"content":"{{ ysaHW.outputs.content }}",
+					"url":"{{ ysaHW.outputs.url }}",
+					"caseId":"{{ ysaHW.outputs.caseId }}",
+					"lang":"{{ ysaHW.outputs.lang }}",
+					"input":{
+						"triggerInput":"{{ _iPA5U.outputs.result.triggerInput }}"
+					},
+					"publishToEndUser":"{{ ysaHW.outputs.publishToEndUser }}",
+					"fromCustomerUserId":"{{ n_FMsQt.outputs.fromCustomerUserId }}",
+					"internalMessageType":"{{ 3p5Mz.outputs.internalMessageType }}",
+					"deepResearchEnabled":"{{ ysaHW.outputs.deepResearchEnabled }}",
 					"choices":{
 						"source":"{{ ysaHW.outputs.choices }}",
 						"ua:type":"mappedArray",
@@ -1087,10 +1103,6 @@
 							"title":"{{ ysaHW.outputs.choices[0].title }}"
 						}
 					},
-					"content":"{{ ysaHW.outputs.content }}",
-					"url":"{{ ysaHW.outputs.url }}",
-					"caseId":"{{ ysaHW.outputs.caseId }}",
-					"lang":"{{ ysaHW.outputs.lang }}",
 					"attachments":{
 						"source":"{{ ysaHW.outputs.attachments }}",
 						"ua:type":"mappedArray",
@@ -1101,17 +1113,11 @@
 							"mimeType":"{{ ysaHW.outputs.attachments[0].mimeType }}"
 						}
 					},
-					"publishToEndUser":"{{ ysaHW.outputs.publishToEndUser }}",
 					"coPilotBlocks":{
 						"source":"{{ ysaHW.outputs.coPilotBlocks }}",
 						"ua:type":"mappedArray",
 						"items":"{{ ysaHW.outputs.coPilotBlocks[0] }}"
-					},
-					"input":{
-						"triggerInput":"{{ _iPA5U.outputs.result.triggerInput }}"
-					},
-					"fromCustomerUserId":"{{ n_FMsQt.outputs.fromCustomerUserId }}",
-					"internalMessageType":"{{ 3p5Mz.outputs.internalMessageType }}"
+					}
 				}
 			},
 			"skip":false,
@@ -1598,6 +1604,14 @@
 				"fallbackWorkflowId":"67401fb6a28c4a295d14cd30",
 				"parameters":{
 					"endConversation":"{{ ysaHW.outputs.endConversation }}",
+					"content":"{{ ysaHW.outputs.content }}",
+					"url":"{{ ysaHW.outputs.url }}",
+					"caseId":"{{ ysaHW.outputs.caseId }}",
+					"lang":"{{ ysaHW.outputs.lang }}",
+					"temporaryMessage":"{{ ysaHW.outputs.temporaryMessage }}",
+					"fromCustomerUserId":"{{ n_FMsQt.outputs.fromCustomerUserId }}",
+					"internalMessageType":"{{ 3p5Mz.outputs.internalMessageType }}",
+					"deepResearchEnabled":"{{ ysaHW.outputs.deepResearchEnabled }}",
 					"choices":{
 						"source":"{{ ysaHW.outputs.choices }}",
 						"ua:type":"mappedArray",
@@ -1606,10 +1620,6 @@
 							"title":"{{ ysaHW.outputs.choices[0].title }}"
 						}
 					},
-					"content":"{{ ysaHW.outputs.content }}",
-					"url":"{{ ysaHW.outputs.url }}",
-					"caseId":"{{ ysaHW.outputs.caseId }}",
-					"lang":"{{ ysaHW.outputs.lang }}",
 					"attachments":{
 						"source":"{{ ysaHW.outputs.attachments }}",
 						"ua:type":"mappedArray",
@@ -1620,19 +1630,16 @@
 							"mimeType":"{{ ysaHW.outputs.attachments[0].mimeType }}"
 						}
 					},
-					"temporaryMessage":"{{ ysaHW.outputs.temporaryMessage }}",
 					"chunkMetadata":{
 						"source":"{{ Oqpz0.outputs.result.references }}",
 						"ua:type":"mappedArray",
 						"items":"{{ Oqpz0.outputs.result.references[0] }}"
 					},
-					"fromCustomerUserId":"{{ n_FMsQt.outputs.fromCustomerUserId }}",
 					"coPilotBlocks":{
 						"source":"{{ ysaHW.outputs.coPilotBlocks }}",
 						"ua:type":"mappedArray",
 						"items":"{{ ysaHW.outputs.coPilotBlocks[0] }}"
-					},
-					"internalMessageType":"{{ 3p5Mz.outputs.internalMessageType }}"
+					}
 				}
 			},
 			"skip":false,
@@ -1681,6 +1688,7 @@
 				"object_type":"ai_agent_deployment",
 				"includeRoleMappings":false,
 				"includeCurrentUserPermissions":false,
+				"translationsOption":"DEFAULT",
 				"id":"{{ _7P5h5.outputs.properties.triggerDetails.triggerDeploymentId }}",
 				"readThroughSessionVariables":true
 			},
@@ -1763,6 +1771,11 @@
 			"inputs":{
 				"output":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"connectionOverrides",
+						"combinedInput"
+					],
 					"properties":{
 						"connectionOverrides":{
 							"type":"object",
@@ -1776,15 +1789,15 @@
 							"additionalProperties":false,
 							"title":"Combined Input"
 						}
-					},
-					"additionalProperties":false,
-					"required":[
-						"connectionOverrides",
-						"combinedInput"
-					]
+					}
 				},
 				"input":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"connectionId",
+						"appName"
+					],
 					"properties":{
 						"connectionId":{
 							"type":"string",
@@ -1800,16 +1813,12 @@
 							"type":"string",
 							"title":"App Name"
 						}
-					},
-					"additionalProperties":false,
-					"required":[
-						"connectionId",
-						"appName"
-					]
+					}
 				},
-				"compile_static":false,
 				"code":"def toReturn = [:]\nif(binding.hasVariable('connectionId')) {\n  def resp = [:]\n  resp[appName] = connectionId\n  toReturn += [\"connectionOverrides\": resp]\n}\ndef combinedInput = [:]\nif(binding.hasVariable('inputs')){\n   Map inputMap = inputs \n    inputMap.each { String key, value ->\n        if (key != null && value != null) { \n            combinedInput.put(key, value)\n        }\n    }\n}\ntoReturn.put(\"combinedInput\", combinedInput)\nreturn toReturn",
+				"compile_static":false,
 				"isAsync":false,
+				"captureStdOutput":false,
 				"parameters":{
 					"connectionId":"{{ _iLLS7.outputs.properties.trigger.context.connectionId }}",
 					"inputs":"{{ _iLLS7.outputs.properties.trigger.inputs }}",
@@ -1925,6 +1934,7 @@
 					"operator":"AND"
 				},
 				"object_type":"service_hub_case",
+				"skipIfBlank":false,
 				"updateFields":[
 					{
 						"fieldName":"properties.additional.lastAssociatedMassageType",
@@ -1936,7 +1946,8 @@
 				"page":{
 					"offset":0,
 					"limit":20
-				}
+				},
+				"unsetIfNull":false
 			},
 			"skip":false,
 			"subTitle":"Storage by UnifyApps",
@@ -2077,22 +2088,23 @@
 				"synchronous":true,
 				"version":"-1",
 				"parameters":{
+					"channelName":"{{ n_ZfA3j.outputs.properties.customProperties.channelName }}",
+					"text":"{{ ysaHW.outputs.content }}",
 					"caseAssociationType":"PREVIOUS_FAN_MESSAGE",
-					"triggeredFromAutomationId":"{{ __RUN__.outputs.workflowId }}",
 					"messageType":"BOT",
 					"caseId":"{{ ysaHW.outputs.caseId }}",
-					"text":"{{ ysaHW.outputs.content }}",
+					"triggeredFromAutomationId":"{{ __RUN__.outputs.workflowId }}",
+					"fromCustomerUserId":"{{ n_FMsQt.outputs.fromCustomerUserId }}",
+					"toCustomerUserId":"{{ n_ZfA3j.outputs.properties.fromCustomerUserId }}",
+					"internalMessageType":"{{ 3p5Mz.outputs.internalMessageType }}",
+					"temporaryMessage":"{{ ysaHW.outputs.temporaryMessage }}",
+					"channelSpecificMessageId":"{{ _WmfU5.outputs.messageId }}",
+					"deepResearchEnabled":"{{ ysaHW.outputs.deepResearchEnabled }}",
 					"attachments":{
 						"source":"{{ ysaHW.outputs.attachments }}",
 						"ua:type":"mappedArray",
 						"items":"{{ ysaHW.outputs.attachments[0] }}"
-					},
-					"fromCustomerUserId":"{{ n_FMsQt.outputs.fromCustomerUserId }}",
-					"temporaryMessage":"{{ ysaHW.outputs.temporaryMessage }}",
-					"internalMessageType":"{{ 3p5Mz.outputs.internalMessageType }}",
-					"channelSpecificMessageId":"{{ _WmfU5.outputs.messageId }}",
-					"channelName":"{{ n_ZfA3j.outputs.properties.customProperties.channelName }}",
-					"toCustomerUserId":"{{ n_ZfA3j.outputs.properties.fromCustomerUserId }}"
+					}
 				}
 			},
 			"skip":false,
@@ -2169,5 +2181,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":148
+	"version":149
 }
