@@ -5,12 +5,12 @@
 	"createdTime":1742216457782,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655415215,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f3b738757c179b123fac",
+		"deployedAt":1759243625120,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed6923e6682b9a51ecfd",
 		"status":"DEPLOYED",
-		"version":40,
-		"workflowVersion":55
+		"version":42,
+		"workflowVersion":57
 	},
 	"edges":[
 		{
@@ -48,7 +48,7 @@
 	"id":"67d81d092884637fa6f992ed",
 	"lastModifiedBy":-1,
 	"lcName":"[mcp server] toggle mcp server",
-	"modifiedTime":1759243592981,
+	"modifiedTime":1759371942431,
 	"name":"[MCP Server] Toggle MCP Server",
 	"nodes":[
 		{
@@ -214,5 +214,5 @@
 		}
 	},
 	"standard":true,
-	"version":56
+	"version":58
 }
