@@ -5,12 +5,12 @@
 	"createdTime":1721803434047,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243532359,
+		"deployedAt":1759243567261,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed0c23e6682b9a51eac5",
+		"deployedDefinitionId":"68dbed2f5e003e08cdeb2f29",
 		"status":"DEPLOYED",
-		"version":61,
-		"workflowVersion":81
+		"version":62,
+		"workflowVersion":82
 	},
 	"description":"",
 	"edges":[
@@ -65,7 +65,7 @@
 	"id":"66a0a2aa0d68db0b4c80d220",
 	"lastModifiedBy":-1,
 	"lcName":"fetch attachment from messageid automation",
-	"modifiedTime":1759243567204,
+	"modifiedTime":1759371888709,
 	"name":"Fetch Attachment From MessageId Automation",
 	"nodes":[
 		{
@@ -280,5 +280,5 @@
 	"tags":[
 		"Text_to_Workflow"
 	],
-	"version":82
+	"version":83
 }
