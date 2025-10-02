@@ -5,12 +5,12 @@
 	"createdTime":1753185948416,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655401972,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f3a938757c179b123da1",
+		"deployedAt":1759243613466,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed5d9213d707c2d27483",
 		"status":"DEPLOYED",
-		"version":29,
-		"workflowVersion":43
+		"version":31,
+		"workflowVersion":45
 	},
 	"description":"Takes in a single url and indexes it and also extracts the urls from the html.",
 	"edges":[
@@ -132,7 +132,7 @@
 	"id":"6878ec5162d7239e6110c84f",
 	"lastModifiedBy":-1,
 	"lcName":"website or file indexing | page indexer (wrapper)",
-	"modifiedTime":1759243580448,
+	"modifiedTime":1759371931305,
 	"name":"Website or File Indexing | Page Indexer (Wrapper)",
 	"nodes":[
 		{
@@ -765,5 +765,5 @@
 	"tags":[
 		
 	],
-	"version":44
+	"version":46
 }
