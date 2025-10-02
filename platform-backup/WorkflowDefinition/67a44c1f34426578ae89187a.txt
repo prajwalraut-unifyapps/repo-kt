@@ -5,12 +5,12 @@
 	"createdTime":1738820639862,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655364116,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f38438757c179b123759",
+		"deployedAt":1759243582544,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed3e5e003e08cdeb2f7a",
 		"status":"DEPLOYED",
-		"version":65,
-		"workflowVersion":84
+		"version":67,
+		"workflowVersion":86
 	},
 	"edges":[
 		{
@@ -106,7 +106,7 @@
 	"id":"67a44c1f34426578ae89187a",
 	"lastModifiedBy":-1,
 	"lcName":"step converter ",
-	"modifiedTime":1759243549922,
+	"modifiedTime":1759371902861,
 	"name":"Step Converter ",
 	"nodes":[
 		{
@@ -761,5 +761,5 @@
 	"tags":[
 		
 	],
-	"version":85
+	"version":87
 }
