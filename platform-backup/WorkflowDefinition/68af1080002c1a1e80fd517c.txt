@@ -37,7 +37,7 @@
 	"id":"68af1080002c1a1e80fd517c",
 	"lastModifiedBy":44105,
 	"lcName":"sqwfdewfe",
-	"modifiedTime":1759405798995,
+	"modifiedTime":1759406241686,
 	"name":"sqwfdewfe",
 	"nodes":[
 		{
@@ -47,7 +47,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_sHsoD-1",
 			"id":"n_T9D0G",
@@ -73,7 +73,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_sHsoD-1",
 			"id":"n_EvgmC",
@@ -122,7 +122,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_sHsoD-1",
 			"id":"_sB69Y",
@@ -170,7 +170,7 @@
 				}
 			},
 			"inputs":{
-				"test":"003x"
+				"test":"003"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -208,7 +208,7 @@
 				"variables":[
 					{
 						"source":"{{ n_EvgmC.outputs.str }}",
-						"value":"=CONCATENATE(\"003\", Text(2, \"0\"))"
+						"value":"{{ n_1YL94.outputs.test }}"
 					}
 				]
 			},
@@ -235,5 +235,5 @@
 	"tags":[
 		"fqwefqew"
 	],
-	"version":54
+	"version":58
 }
