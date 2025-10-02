@@ -6,12 +6,12 @@
 	"createdTime":1742466584828,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655380244,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f39438757c179b123a0c",
+		"deployedAt":1759243595579,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed4b5e003e08cdeb2fd8",
 		"status":"DEPLOYED",
-		"version":43,
-		"workflowVersion":110
+		"version":45,
+		"workflowVersion":112
 	},
 	"edges":[
 		{
@@ -627,7 +627,7 @@
 	"id":"67d7b1a40e701762ade776b2",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | slack | index specific chat",
-	"modifiedTime":1759243562952,
+	"modifiedTime":1759371914785,
 	"name":"Knowledge Indexer | Slack | Index specific chat",
 	"nodes":[
 		{
@@ -4228,5 +4228,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":111
+	"version":113
 }
