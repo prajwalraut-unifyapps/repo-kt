@@ -1,51 +1,84 @@
 {
 	"appsUsed":[
-		
+		"gcloud_storage"
 	],
 	"createdTime":1759390389495,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_X811Y",
+			"fromNodeId":"n_u7CBu",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_LI3SS",
+			"toNodeId":"n_nO8EC",
 			"type":"next"
 		}
 	],
 	"id":"68de2ab5bdbc7b3b7b2d2a6b",
 	"lastModifiedBy":2721,
 	"lcName":"test",
-	"modifiedTime":1759390389495,
+	"modifiedTime":1759390438357,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":820,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_X811Y-1",
-			"id":"_X811Y",
-			"index":0,
+			"id":"n_u7CBu",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"gcloud_storage",
+				"resourceVersion":5697,
+				"connectionId":"68de2a896c347068ae826e3a",
+				"resourceName":"gcloud_storage_create_bucket",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_X811Y-1",
-			"id":"_LI3SS",
-			"index":0,
+			"id":"n_nO8EC",
+			"index":2,
+			"inputs":{
+				"storageClass":"STANDARD",
+				"name":"Testing-bucket",
+				"project":"airy-bit-445114-i0",
+				"iamConfiguration":{
+					"uniformBucketLevelAccess":{
+						"enabled":true
+					}
+				},
+				"location":"ASIA-EAST1"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Google Cloud Storage",
+			"title":"Create a bucket",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":2721,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +92,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
