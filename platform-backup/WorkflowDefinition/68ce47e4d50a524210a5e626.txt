@@ -5,12 +5,12 @@
 	"createdTime":1758646589543,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655410481,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f3b238757c179b123ee7",
+		"deployedAt":1759243620564,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed645e003e08cdeb305b",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":29
+		"version":4,
+		"workflowVersion":31
 	},
 	"edges":[
 		{
@@ -92,7 +92,7 @@
 	"id":"68ce47e4d50a524210a5e626",
 	"lastModifiedBy":-1,
 	"lcName":"resync entire knowledge",
-	"modifiedTime":1759243587938,
+	"modifiedTime":1759371938144,
 	"name":"Resync Entire Knowledge",
 	"nodes":[
 		{
@@ -550,5 +550,5 @@
 	"tags":[
 		"knowledge_v2"
 	],
-	"version":30
+	"version":32
 }
