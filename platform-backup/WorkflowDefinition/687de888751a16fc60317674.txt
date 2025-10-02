@@ -5,12 +5,12 @@
 	"createdTime":1758877612567,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758877612866,
-		"deployedBy":161877,
-		"deployedDefinitionId":"68d657ac71be8d53fc02a97d",
+		"deployedAt":1759303671703,
+		"deployedBy":185277,
+		"deployedDefinitionId":"68dcd7f76405035097db781f",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":12
+		"version":2,
+		"workflowVersion":19
 	},
 	"edges":[
 		{
@@ -117,9 +117,9 @@
 		}
 	],
 	"id":"687de888751a16fc60317674",
-	"lastModifiedBy":185277,
+	"lastModifiedBy":188507,
 	"lcName":"newiterateintegervaluesusingwhileloop_dnd",
-	"modifiedTime":1759303671611,
+	"modifiedTime":1759391541661,
 	"name":"NewIterateIntegerValuesUsingWhileLoop_DND",
 	"nodes":[
 		{
@@ -274,7 +274,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ZQtgN-1",
 			"id":"n_u5NuJ",
@@ -292,7 +292,7 @@
 					],
 					"operator":"AND"
 				},
-				"captureIterations":false
+				"captureIterations":true
 			},
 			"skip":false,
 			"subTitle":"i < iterations",
@@ -358,7 +358,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_u5NuJ@_ZQtgN-1@l",
 			"id":"n_9nKC2",
@@ -376,7 +376,7 @@
 					],
 					"operator":"AND"
 				},
-				"captureIterations":false
+				"captureIterations":true
 			},
 			"skip":false,
 			"subTitle":"j < iterations",
@@ -442,7 +442,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_9nKC2@n_u5NuJ@_ZQtgN-1@l@l",
 			"id":"n_dmVtP",
@@ -454,6 +454,66 @@
 						"value":"=CONCATENATE({{ n_EpX2e.outputs.str }},{{ n_CERrh.outputs.i }},{{ n_4iHsg.outputs.j }},\" \")"
 					}
 				]
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"global":false
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":true,
+					"logPolicies":[
+						{
+							"level":"INFO",
+							"maskedFields":[
+								
+							],
+							"message":"i = {{ n_CERrh.outputs.i }}\nj = {{ n_4iHsg.outputs.j }}",
+							"onlyOnFailure":false
+						}
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"STOP",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				},
+				"timeoutConfig":{
+					"enabled":false
+				}
 			},
 			"skip":false,
 			"subTitle":"updateStr",
@@ -553,5 +613,5 @@
 	"tags":[
 		
 	],
-	"version":19
+	"version":20
 }
