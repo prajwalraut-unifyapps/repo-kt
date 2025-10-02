@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759423013847,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_XJSnJ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_BrU5V",
+			"type":"next"
+		}
+	],
+	"id":"68deaa2530196a1e837fea1f",
+	"lastModifiedBy":6701,
+	"lcName":"test_gmeet",
+	"modifiedTime":1759423013847,
+	"name":"test_gmeet",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_XJSnJ-1",
+			"id":"_XJSnJ",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_XJSnJ-1",
+			"id":"_BrU5V",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":6701,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
