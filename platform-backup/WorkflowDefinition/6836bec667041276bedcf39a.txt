@@ -5,13 +5,12 @@
 	"createdTime":1748530221625,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759331951692,
+		"deployedAt":1759332579011,
 		"deployedBy":44109,
-		"deployedDefinitionId":"68dd466ff72d3041d70bf325",
-		"deploymentTag":"mqtts",
+		"deployedDefinitionId":"68dd48e21771724d5d255daf",
 		"status":"DEPLOYED",
-		"version":55,
-		"workflowVersion":70
+		"version":56,
+		"workflowVersion":71
 	},
 	"edges":[
 		{
@@ -111,9 +110,9 @@
 		]
 	},
 	"id":"6836bec667041276bedcf39a",
-	"lastModifiedBy":44109,
+	"lastModifiedBy":-1,
 	"lcName":"handle stream completion",
-	"modifiedTime":1759332577189,
+	"modifiedTime":1759371984281,
 	"name":"Handle Stream Completion",
 	"nodes":[
 		{
@@ -491,6 +490,7 @@
 				"recordId":"{{ rxnB9.outputs.caseId }}",
 				"writeThroughSessionVariables":false,
 				"object_type":"service_hub_case",
+				"skipIfBlank":false,
 				"skipPermissionCheck":false,
 				"updateFields":[
 					{
@@ -498,7 +498,8 @@
 						"actionType":"SET",
 						"setValue":"false"
 					}
-				]
+				],
+				"unsetIfNull":false
 			},
 			"skip":false,
 			"subTitle":"generatingResponse=false",
@@ -513,7 +514,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"2bVVx-1",
 			"id":"n_40NgC",
@@ -532,7 +533,7 @@
 						}
 					}
 				},
-				"code":"return [ 'payload': [\n  \"responseGenerationStatus\": \"completed\"\n] ]",
+				"code":"return [ 'payload': [\n  \"responseGenerationCompleted\": true\n] ]",
 				"compile_static":false,
 				"captureStdOutput":false
 			},
@@ -606,5 +607,5 @@
 	"tags":[
 		
 	],
-	"version":71
+	"version":72
 }
