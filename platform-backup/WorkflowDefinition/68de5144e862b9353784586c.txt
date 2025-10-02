@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759400260313,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759400306184,
+		"deployedBy":46030,
+		"deployedDefinitionId":"68de5172e862b9353784591a",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_7SAdR",
@@ -23,7 +31,7 @@
 	"id":"68de5144e862b9353784586c",
 	"lastModifiedBy":46030,
 	"lcName":"customworkflowtest1204",
-	"modifiedTime":1759400304291,
+	"modifiedTime":1759405983548,
 	"name":"customWorkflowTest1204",
 	"nodes":[
 		{
@@ -70,7 +78,7 @@
 						}
 					}
 				},
-				"callableInterfaceId":"681231940b718a3745699669",
+				"callableInterfaceId":"__ua__custom_workflow_authentication_interface",
 				"setup":{
 					"required":[],
 					"ua:modal":{
@@ -115,7 +123,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_gFuT3-1",
 			"id":"n_qhWZS",
@@ -170,7 +178,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_gFuT3-1",
 			"id":"n_OcJ5p",
@@ -206,5 +214,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
