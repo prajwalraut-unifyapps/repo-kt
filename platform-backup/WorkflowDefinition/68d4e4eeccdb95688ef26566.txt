@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759243593504,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759243625545,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed695e003e08cdeb3071",
+		"status":"DEPLOYED",
+		"version":2,
+		"workflowVersion":4
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_DfOJ5",
@@ -40,7 +48,7 @@
 	"id":"68d4e4eeccdb95688ef26566",
 	"lastModifiedBy":-1,
 	"lcName":"web scraping | scarpper api",
-	"modifiedTime":1759243593504,
+	"modifiedTime":1759371942928,
 	"name":"Web Scraping | Scarpper API",
 	"nodes":[
 		{
@@ -283,5 +291,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":5
 }
