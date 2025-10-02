@@ -16,7 +16,7 @@
 	"id":"68de61b9ed7fcc69782102cb",
 	"lastModifiedBy":602,
 	"lcName":"testing",
-	"modifiedTime":1759404485093,
+	"modifiedTime":1759404490940,
 	"name":"testing",
 	"nodes":[
 		{
@@ -31,7 +31,21 @@
 			"groupId":"_xPFee-1",
 			"id":"n_Wji6H",
 			"index":1,
-			"inputs":{},
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"output"
+					],
+					"properties":{
+						"output":{
+							"type":"string",
+							"title":"Output"
+						}
+					}
+				}
+			},
 			"skip":false,
 			"subTitle":"Callable",
 			"title":"Trigger via automation",
@@ -69,5 +83,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
