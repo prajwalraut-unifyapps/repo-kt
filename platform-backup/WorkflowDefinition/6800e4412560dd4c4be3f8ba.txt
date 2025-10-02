@@ -5,12 +5,12 @@
 	"createdTime":1744888897247,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655383025,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f39738757c179b123a84",
+		"deployedAt":1759243598031,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed4e9213d707c2d2741d",
 		"status":"DEPLOYED",
-		"version":36,
-		"workflowVersion":57
+		"version":38,
+		"workflowVersion":59
 	},
 	"edges":[
 		{
@@ -91,7 +91,7 @@
 	"id":"6800e4412560dd4c4be3f8ba",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | power bi | index datasets",
-	"modifiedTime":1759243565590,
+	"modifiedTime":1759371917175,
 	"name":"Knowledge Indexer | Power BI | Index Datasets",
 	"nodes":[
 		{
@@ -570,5 +570,5 @@
 		}
 	},
 	"standard":true,
-	"version":58
+	"version":60
 }
