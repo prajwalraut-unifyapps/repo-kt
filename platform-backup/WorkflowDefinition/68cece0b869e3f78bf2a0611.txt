@@ -1,0 +1,328 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1758646534659,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759243576964,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed389213d707c2d27396",
+		"status":"DEPLOYED",
+		"version":4,
+		"workflowVersion":7
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_22Rgu",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_9i7y2",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_9i7y2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_u3krS",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_u3krS",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_o1Si4",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_o1Si4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_LhnfG",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_LhnfG",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_9wRuJ",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"68cece0b869e3f78bf2a0611",
+	"lastModifiedBy":-1,
+	"lcName":"create pdf file",
+	"modifiedTime":1759371898330,
+	"name":"Create PDF File",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":441,
+				"resourceName":"callables_from_interface"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_zY9lR-1",
+			"id":"n_22Rgu",
+			"index":1,
+			"inputs":{
+				"result":{
+					"additionalProperties":false,
+					"type":"object",
+					"required":[],
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
+					"properties":{
+						"toolOutput":{
+							"type":"string",
+							"title":"toolOutput"
+						},
+						"success":{
+							"type":"boolean",
+							"title":"Success"
+						},
+						"error":{
+							"type":"string",
+							"title":"Error"
+						}
+					}
+				},
+				"callableInterfaceId":"679484ef9c8ab5620dca9609",
+				"setup":{
+					"additionalProperties":false,
+					"type":"object",
+					"required":[],
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
+					"properties":{
+						"toolId":{
+							"type":"string",
+							"title":"toolId"
+						},
+						"toolInputs":{
+							"type":"object",
+							"title":"toolInputs"
+						},
+						"triggeredByAgentId":{
+							"type":"string",
+							"title":"Triggered By Agent Id"
+						},
+						"agentResponseMessageId":{
+							"type":"string",
+							"title":"Agent Response Message Id"
+						},
+						"caseId":{
+							"type":"string",
+							"title":"Case Id"
+						},
+						"executeUsingModel":{
+							"type":"string",
+							"title":"Execute Using Model"
+						},
+						"toolName":{
+							"type":"string",
+							"title":"Tool Name"
+						},
+						"actionId":{
+							"type":"string",
+							"title":"Action Id"
+						},
+						"toolAdditional":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Tool Additional"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger interface",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":463,
+				"resourceName":"utility_by_unifyapps_convert_html_to_pdf",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_zY9lR-1",
+			"id":"n_9i7y2",
+			"index":2,
+			"inputs":{
+				"multiLingualContent":false,
+				"htmlString":"=MAPGET({{ n_22Rgu.outputs.toolInputs }},\"htmlContent\")"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Convert HTML to PDF",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":465,
+				"resourceName":"utility_by_unifyapps_create_unifyapps_path_for_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_zY9lR-1",
+			"id":"n_u3krS",
+			"index":3,
+			"inputs":{
+				"file":"{{ n_9i7y2.outputs.fileDetails }}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Create UnifyApps path for file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":456,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_zY9lR-1",
+			"id":"n_o1Si4",
+			"index":4,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"copilotBlock":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Copilot Block"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"url":{
+							"type":"string",
+							"title":"Url"
+						}
+					}
+				},
+				"code":"return [\n  \"copilotBlock\": [\n    \"blockType\": \"Media\",\n    \"data\": [\n      [\n        \"fileType\": \"application/pdf\",\n        \"mimeType\": \"application/pdf\",\n        \"url\": url,\n        \"source\": \"workflow_uploads/147/chunkImg_1491c4a5-f05e-412a-b111-89d494ccfabc.png\",\n        \"sourceType\": \"CLOUD_STORAGE\",\n        \"ua:type\": \"FILE\",\n        \"name\": \"chunkImg_1491c4a5-f05e-412a-b111-89d494ccfabc.png\",\n        \"id\": \"24858cc4-6007-46b0-a539-8c634d13fa36\",\n      ]\n    ]\n  ]\n]",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"url":"{{ n_u3krS.outputs.path }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":471,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_zY9lR-1",
+			"id":"n_LhnfG",
+			"index":5,
+			"inputs":{
+				"automationId":"67bddfb5ac77be6d502052c7",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"coPilotBlock":"{{ n_o1Si4.outputs.result.copilotBlock }}",
+					"messageId":"{{ n_22Rgu.outputs.agentResponseMessageId }}",
+					"caseId":"{{ n_22Rgu.outputs.caseId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Add copilot Block",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":460,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_zY9lR-1",
+			"id":"n_9wRuJ",
+			"index":6,
+			"inputs":{
+				"result":{
+					"toolOutput":"PDF File published",
+					"success":true
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":0,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		
+	],
+	"version":8
+}
