@@ -1,12 +1,19 @@
 {
 	"appsUsed":[
-		
+		"gmail"
 	],
 	"createdTime":1759404473884,
 	"deleted":false,
 	"edges":[
 		{
 			"fromNodeId":"n_Wji6H",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_SsGRZ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_SsGRZ",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_igWjj",
@@ -16,7 +23,7 @@
 	"id":"68de61b9ed7fcc69782102cb",
 	"lastModifiedBy":602,
 	"lcName":"testing",
-	"modifiedTime":1759404503649,
+	"modifiedTime":1759404534519,
 	"name":"testing",
 	"nodes":[
 		{
@@ -26,7 +33,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_xPFee-1",
 			"id":"n_Wji6H",
@@ -56,17 +63,36 @@
 		},
 		{
 			"context":{
-				"appName":"callables",
-				"resourceVersion":994,
-				"resourceName":"callables_return_to_automation",
+				"appName":"gmail",
+				"resourceVersion":5511,
+				"resourceName":"gmail_send_email",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_xPFee-1",
-			"id":"n_igWjj",
+			"id":"n_SsGRZ",
 			"index":2,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Gmail",
+			"title":"Send email",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":994,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_xPFee-1",
+			"id":"n_igWjj",
+			"index":3,
 			"inputs":{
 				"result":{
 					"output":"abcd"
@@ -95,5 +121,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
