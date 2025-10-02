@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759388738749,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_kS6s2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_qv1Mh",
+			"type":"next"
+		}
+	],
+	"id":"68de24422364216c2da9d549",
+	"lastModifiedBy":161908,
+	"lcName":"branchloop",
+	"modifiedTime":1759388738749,
+	"name":"branchloop",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_kS6s2-1",
+			"id":"_kS6s2",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_kS6s2-1",
+			"id":"_qv1Mh",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":161908,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
