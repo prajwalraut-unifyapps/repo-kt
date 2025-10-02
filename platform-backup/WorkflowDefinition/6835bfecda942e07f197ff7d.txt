@@ -5,12 +5,12 @@
 	"createdTime":1750490480200,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655345423,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f37138757c179b123419",
+		"deployedAt":1759243567755,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed2f23e6682b9a51ebab",
 		"status":"DEPLOYED",
-		"version":43,
-		"workflowVersion":69
+		"version":45,
+		"workflowVersion":71
 	},
 	"edges":[
 		{
@@ -64,7 +64,7 @@
 	"id":"6835bfecda942e07f197ff7d",
 	"lastModifiedBy":-1,
 	"lcName":"graphrag | entity extraction | signal wrapper",
-	"modifiedTime":1759243532847,
+	"modifiedTime":1759371889212,
 	"name":"GraphRAG | Entity Extraction | Signal Wrapper",
 	"nodes":[
 		{
@@ -339,5 +339,5 @@
 	"tags":[
 		
 	],
-	"version":70
+	"version":72
 }
