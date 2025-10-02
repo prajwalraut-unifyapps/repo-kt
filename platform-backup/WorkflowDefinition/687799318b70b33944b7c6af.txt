@@ -5,12 +5,12 @@
 	"createdTime":1753185843401,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243505617,
+		"deployedAt":1759243543924,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbecf19213d707c2d2728b",
+		"deployedDefinitionId":"68dbed179213d707c2d272fb",
 		"status":"DEPLOYED",
-		"version":30,
-		"workflowVersion":49
+		"version":31,
+		"workflowVersion":50
 	},
 	"edges":[
 		{
@@ -287,7 +287,7 @@
 	"id":"687799318b70b33944b7c6af",
 	"lastModifiedBy":-1,
 	"lcName":"[strands] prompt builder",
-	"modifiedTime":1759243543779,
+	"modifiedTime":1759371866252,
 	"name":"[Strands] Prompt Builder",
 	"nodes":[
 		{
@@ -2344,5 +2344,5 @@
 		}
 	},
 	"standard":true,
-	"version":50
+	"version":51
 }
