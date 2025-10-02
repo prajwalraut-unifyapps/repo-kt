@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		"sqlserver"
+		
 	],
 	"createdTime":1759405425345,
 	"deleted":false,
@@ -26,19 +26,12 @@
 			"skip":false,
 			"toNodeId":"n_3F9Im",
 			"type":"next"
-		},
-		{
-			"fromNodeId":"n_3F9Im",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_SfEaL",
-			"type":"next"
 		}
 	],
 	"id":"68de6571ed7fcc6978211a9f",
 	"lastModifiedBy":13,
 	"lcName":"testdnt",
-	"modifiedTime":1759423283056,
+	"modifiedTime":1759423405248,
 	"name":"testdnt",
 	"nodes":[
 		{
@@ -186,40 +179,6 @@
 			"subTitle":"Analytics by UnifyApps",
 			"title":"Export SQL Query Result",
 			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"sqlserver",
-				"resourceVersion":5967,
-				"connectionId":"68b5309e0a619530af5c674d",
-				"resourceName":"sqlserver_execute_sql",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_mf0p7-1",
-			"id":"n_SfEaL",
-			"index":4,
-			"inputs":{
-				"performAsync":false,
-				"objectSourceResourceName":"sqlserver_execute_sql_metadata",
-				"params":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[],
-					"properties":{
-						"sdasa":{
-							"type":"string",
-							"title":"Sdasa"
-						}
-					}
-				}
-			},
-			"skip":false,
-			"subTitle":"Microsoft SQL Server",
-			"title":"Execute a SQL statement",
-			"type":"ACTION"
 		}
 	],
 	"ownerUserId":426,
@@ -239,5 +198,5 @@
 	"tags":[
 		
 	],
-	"version":14
+	"version":15
 }
