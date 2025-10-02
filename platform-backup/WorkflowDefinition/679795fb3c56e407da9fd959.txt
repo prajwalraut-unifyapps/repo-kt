@@ -5,12 +5,12 @@
 	"createdTime":1737987579428,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655337535,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f36938757c179b1232d2",
+		"deployedAt":1759243562068,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed2a23e6682b9a51eb7d",
 		"status":"DEPLOYED",
-		"version":40,
-		"workflowVersion":59
+		"version":42,
+		"workflowVersion":61
 	},
 	"edges":[
 		{
@@ -85,7 +85,7 @@
 	"id":"679795fb3c56e407da9fd959",
 	"lastModifiedBy":-1,
 	"lcName":"cgb | clustering | generate and store embeddings - batch",
-	"modifiedTime":1759243526417,
+	"modifiedTime":1759371883716,
 	"name":"CGB | Clustering | Generate and Store Embeddings - Batch",
 	"nodes":[
 		{
@@ -673,5 +673,5 @@
 	"tags":[
 		"Clustering"
 	],
-	"version":60
+	"version":62
 }
