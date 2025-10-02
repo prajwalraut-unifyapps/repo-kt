@@ -46,7 +46,7 @@
 	"id":"68dbe8be1bd93f17d9aa6254",
 	"lastModifiedBy":43498,
 	"lcName":"test-scheduler-connection-deletion",
-	"modifiedTime":1759395434153,
+	"modifiedTime":1759395466178,
 	"name":"test-scheduler-connection-deletion",
 	"nodes":[
 		{
@@ -107,12 +107,12 @@
 			"context":{
 				"appName":"teamwork",
 				"resourceVersion":2541,
-				"connectionId":"68dcf1bd7c0f300749d02367",
+				"connectionId":"68de3e8510de3b36582fe467",
 				"resourceName":"teamwork_get_projects",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_oKLjG-1",
 			"id":"n_KAsDL",
@@ -192,5 +192,5 @@
 	"tags":[
 		
 	],
-	"version":17
+	"version":18
 }
