@@ -5,12 +5,12 @@
 	"createdTime":1745399922962,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655403069,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f3ab38757c179b123dc7",
+		"deployedAt":1759243614617,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed5e9213d707c2d27492",
 		"status":"DEPLOYED",
-		"version":32,
-		"workflowVersion":48
+		"version":34,
+		"workflowVersion":50
 	},
 	"edges":[
 		{
@@ -442,7 +442,7 @@
 	"id":"6801f6ad709d645d7c774e38",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | zoho inventory | index shipments",
-	"modifiedTime":1759243581460,
+	"modifiedTime":1759371932295,
 	"name":"Knowledge Indexer | Zoho inventory | Index shipments",
 	"nodes":[
 		{
@@ -2181,5 +2181,5 @@
 		}
 	},
 	"standard":true,
-	"version":49
+	"version":51
 }
