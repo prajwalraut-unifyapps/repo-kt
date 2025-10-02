@@ -30,7 +30,7 @@
 	"id":"68de4d08e862b935378447ef",
 	"lastModifiedBy":602,
 	"lcName":"task_pb (copy)",
-	"modifiedTime":1759404364229,
+	"modifiedTime":1759404456717,
 	"name":"Task_PB (copy)",
 	"nodes":[
 		{
@@ -43,67 +43,19 @@
 			},
 			"context":{
 				"appName":"callables",
-				"resourceVersion":1057,
-				"resourceName":"callables_from_api"
+				"resourceVersion":969,
+				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RV1ax-1",
 			"id":"n_6l4oG",
 			"index":1,
-			"inputs":{
-				"request":{
-					"contentType":"application/json",
-					"body":{
-						"type":"object",
-						"properties":{
-							"tag":{
-								"type":"array",
-								"items":{
-									"type":"string"
-								},
-								"title":"Tag"
-							}
-						},
-						"additionalProperties":false,
-						"required":[
-							"tag"
-						]
-					}
-				},
-				"endpointType":"REST",
-				"response":[
-					{
-						"name":"Success",
-						"status":200,
-						"contentType":"application/json",
-						"textBody":{
-							"type":"string"
-						},
-						"body":{
-							"type":"object",
-							"properties":{
-								"tagOutput":{
-									"type":"array",
-									"items":{
-										"type":"string"
-									},
-									"title":"Tag Output"
-								}
-							},
-							"additionalProperties":false,
-							"required":[
-								"tagOutput"
-							]
-						}
-					}
-				],
-				"streamingResponse":true
-			},
+			"inputs":{},
 			"skip":false,
 			"subTitle":"Callable",
-			"title":"Trigger via API",
+			"title":"Trigger via automation",
 			"trigger":{
 				"type":"CALLABLE"
 			},
@@ -117,7 +69,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_RV1ax-1",
 			"id":"n_UB67z",
@@ -241,5 +193,5 @@
 	"tags":[
 		
 	],
-	"version":10
+	"version":11
 }
