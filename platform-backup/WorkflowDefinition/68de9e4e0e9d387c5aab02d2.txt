@@ -1,0 +1,359 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759419982346,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_EOY36",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_6a9km",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_6a9km",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_d5lsD",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_d5lsD",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_vqt0t",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_vqt0t",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_6HtcA",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"_6HtcA",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_QL5ZP",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_vqt0t",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_QL5ZP",
+			"type":"next"
+		}
+	],
+	"id":"68de9e4e0e9d387c5aab02d2",
+	"lastModifiedBy":59995,
+	"lcName":"partition size",
+	"modifiedTime":1759419982346,
+	"name":"partition size",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
+			"id":"_EOY36",
+			"index":0,
+			"inputs":{
+				"setup":{}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"custom_http_endpoint",
+				"resourceVersion":871,
+				"resourceName":"custom_http_endpoint_execute",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
+			"id":"n_6a9km",
+			"index":28,
+			"inputs":{
+				"isAsync":false,
+				"enableProxy":false,
+				"requestTimeoutInSecs":-1,
+				"httpMethod":"POST",
+				"body":{
+					"sql":"SELECT * FROM information_schema.partitions_meta \nWHERE DB_NAME = '{{ n_WOcYr.outputs.item.DbName }}'\nAND TABLE_NAME = '{{ n_WOcYr.outputs.item.TableName }}' \nAND (\nCASE \nWHEN RIGHT(DATA_SIZE, 1) = 'B' AND RIGHT(DATA_SIZE, 2) NOT IN ('KB','MB','GB','TB') \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'B', 1) AS DECIMAL(15,2))\nWHEN RIGHT(DATA_SIZE, 2) = 'KB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'K', 1) AS DECIMAL(15,2)) * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'MB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'M', 1) AS DECIMAL(15,2)) * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'GB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'G', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'TB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'T', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024 * 1024\nELSE 0\nEND < {{ _auxBn.outputs.result.minimumStorageSizeGB }} * 1024 * 1024 * 1024\n)\nORDER BY \nCASE \nWHEN RIGHT(DATA_SIZE, 1) = 'B' AND RIGHT(DATA_SIZE, 2) NOT IN ('KB','MB','GB','TB') \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'B', 1) AS DECIMAL(15,2))\nWHEN RIGHT(DATA_SIZE, 2) = 'KB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'K', 1) AS DECIMAL(15,2)) * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'MB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'M', 1) AS DECIMAL(15,2)) * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'GB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'G', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'TB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'T', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024 * 1024\nELSE 0\nEND DESC;"
+				},
+				"connectionType":"DIRECT",
+				"sslVerify":false,
+				"path":"/internal/sql-report/runSQL/query/{{ n_A4kqi.outputs.customerId }}",
+				"responseSchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"objects":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"DATA_SIZE":{
+										"type":"string",
+										"title":"DATA SIZE"
+									},
+									"PARTITION_NAME":{
+										"type":"string",
+										"title":"PARTITION NAME"
+									},
+									"TABLE_NAME":{
+										"type":"string",
+										"title":"TABLE NAME"
+									},
+									"DB_NAME":{
+										"type":"string",
+										"title":"DB NAME"
+									}
+								},
+								"additionalProperties":false,
+								"required":[
+									"DATA_SIZE",
+									"PARTITION_NAME",
+									"TABLE_NAME",
+									"DB_NAME"
+								]
+							},
+							"title":"objects"
+						}
+					}
+				},
+				"baseUrl":"{{ n_96ZBq.outputs.baseInternalUrl }}",
+				"httpVersion":"HTTP_2",
+				"bodySchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"sql":{
+							"type":"string",
+							"title":"Sql"
+						}
+					}
+				},
+				"queryParamsList":[
+					{
+						"key":"sqlResourceType",
+						"value":"PLATFORM"
+					}
+				],
+				"responseContentType":"application/json",
+				"authType":"CUSTOM",
+				"requestContentType":"application/json",
+				"ignoreTrailingSlashes":false,
+				"certificateType":"CERT_STRING"
+			},
+			"skip":false,
+			"subTitle":"Get Partitions with size < threshold",
+			"title":"Execute REST request",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":111,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
+			"id":"n_d5lsD",
+			"index":29,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"slackMessage",
+						"alertPartitions"
+					],
+					"properties":{
+						"slackMessage":{
+							"type":"string",
+							"title":"Slack Message"
+						},
+						"alertPartitions":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"partitionName":{
+										"type":"string",
+										"title":"Partition Name"
+									},
+									"partitionSize":{
+										"type":"string",
+										"title":"Partition Size"
+									}
+								},
+								"additionalProperties":false,
+								"required":[
+									"partitionName",
+									"partitionSize"
+								]
+							},
+							"title":"Alert Partitions"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"partitions"
+					],
+					"properties":{
+						"partitions":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Partitions"
+						}
+					}
+				},
+				"compile_static":false,
+				"code":"if (!binding.hasVariable('partitions')) {\n    return [\"slackMessage\": \"\", \"alertPartitions\": []]\n}\n\ndef slackMessage = new StringBuilder()\nslackMessage << \"\\n\\n\"\nalertPartitions = []\n\ndef items = []\ndef now = System.currentTimeMillis()\n\ndef timestamps = []\n\npartitions.each { partition ->\n    def pv = partition.PARTITION_VALUE\n    long start\n    long end\n    if (pv.contains(\"DATETIME\")) {\n        def matchesDate = (pv =~ /\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}/)\n        if (matchesDate.size() >= 2) {\n            if (matchesDate[0] == \"0000-00-00 00:00:00\") {\n                // This is an invalid or uninitialized partition, skip it\n            } else {\n                start = java.sql.Timestamp.valueOf(matchesDate[0]).time\n                end = java.sql.Timestamp.valueOf(matchesDate[1]).time\n            }\n        } \n    } else {\n        def matchesMillis = (pv =~ /\\d{13}/)\n        if (matchesMillis.size() >= 2) {\n            start = matchesMillis[0] as Long\n            end = matchesMillis[1] as Long\n        }\n    }\n    if (start != null && end != null && now >= start && now < end) {\n        items << partition\n    }\n}\n\nitems.each { partition ->\n    slackMessage << \"*DB:* `${partition.DB_NAME}`\\n\"\n    slackMessage << \"*Table:* `${partition.TABLE_NAME}`\\n\"\n    slackMessage << \"*Partition:* `${partition.PARTITION_NAME}`\\n\"\n    slackMessage << \"*Size:* `${partition.DATA_SIZE}`\\n\"\n    slackMessage << \"-----------------------------\\n\"\n    alertPartitions << [\"partitionName\": partition.PARTITION_NAME, \"size\": partition.DATA_SIZE]\n}\n\nreturn [\"slackMessage\": slackMessage ,\"stamps\":timestamps, \"alertPartitions\": alertPartitions]",
+				"captureStdOutput":false,
+				"parameters":{
+					"partitions":{
+						"source":"{{ n_6a9km.outputs.result.objects }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_6a9km.outputs.result.objects[0] }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Generate Slack message",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":2,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
+			"id":"_vqt0t",
+			"index":30,
+			"inputs":{
+				"filters":[
+					{
+						"property":"=LEN({{ n_d5lsD.outputs.result.alertPartitions }})",
+						"filter":{
+							"operator":"GT",
+							"value":"0"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":2,
+				"resourceName":"variable_by_unifyapps_add_item_to_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_vqt0t@n_nST1M@n_WOcYr@_jMFmS-1@l@3@y",
+			"id":"_6HtcA",
+			"index":31,
+			"inputs":{
+				"itemToAdd":{
+					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
+					"tableName":"{{ n_WOcYr.outputs.item.TableName }}",
+					"routineLoadName":"{{ n_WOcYr.outputs.item.Name }}",
+					"buckets":{
+						"items":" ",
+						"ua:type":"mappedArray"
+					},
+					"partitionSizes":{
+						"ua:type":"mappedArray",
+						"items":{
+							"partitionSize":"{{ n_d5lsD.outputs.result.alertPartitions[0].partitionSize }}",
+							"partitionName":"{{ n_d5lsD.outputs.result.alertPartitions[0].partitionName }}"
+						},
+						"source":"{{ n_d5lsD.outputs.result.alertPartitions }}"
+					}
+				},
+				"insertLocation":"END",
+				"listName":"{{ _6VeEl.outputs.items[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Add item to list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
+			"id":"_QL5ZP",
+			"index":0,
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":59995,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
