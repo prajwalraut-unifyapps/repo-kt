@@ -5,12 +5,12 @@
 	"createdTime":1721133408389,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243501332,
+		"deployedAt":1759243540655,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbeced9213d707c2d27279",
+		"deployedDefinitionId":"68dbed1423e6682b9a51eaee",
 		"status":"DEPLOYED",
-		"version":210,
-		"workflowVersion":933
+		"version":211,
+		"workflowVersion":934
 	},
 	"description":"",
 	"edges":[
@@ -655,7 +655,7 @@
 	"id":"66966960e8797a59f4a46292",
 	"lastModifiedBy":-1,
 	"lcName":"trigger ai agent",
-	"modifiedTime":1759243540551,
+	"modifiedTime":1759371862764,
 	"name":"Trigger AI Agent",
 	"nodes":[
 		{
@@ -3870,5 +3870,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":934
+	"version":935
 }
