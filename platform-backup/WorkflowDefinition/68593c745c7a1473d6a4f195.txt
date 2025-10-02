@@ -5,12 +5,12 @@
 	"createdTime":1751469916314,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243556353,
+		"deployedAt":1759243589085,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed245e003e08cdeb2ef0",
+		"deployedDefinitionId":"68dbed455e003e08cdeb2faf",
 		"status":"DEPLOYED",
-		"version":39,
-		"workflowVersion":67
+		"version":40,
+		"workflowVersion":68
 	},
 	"edges":[
 		{
@@ -121,7 +121,7 @@
 	"id":"68593c745c7a1473d6a4f195",
 	"lastModifiedBy":-1,
 	"lcName":"schedule knowledge indexer",
-	"modifiedTime":1759243589026,
+	"modifiedTime":1759371908663,
 	"name":"Schedule Knowledge Indexer",
 	"nodes":[
 		{
@@ -649,5 +649,5 @@
 	"tags":[
 		"knowledge_v2"
 	],
-	"version":68
+	"version":69
 }
