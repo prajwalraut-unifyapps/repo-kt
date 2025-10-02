@@ -5,12 +5,12 @@
 	"createdTime":1726322930162,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243501113,
+		"deployedAt":1759243540451,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbeced9213d707c2d27278",
+		"deployedDefinitionId":"68dbed149213d707c2d272e5",
 		"status":"DEPLOYED",
-		"version":81,
-		"workflowVersion":116
+		"version":82,
+		"workflowVersion":117
 	},
 	"edges":[
 		{
@@ -161,7 +161,7 @@
 	"id":"66e598f208d0f101e7cd4734",
 	"lastModifiedBy":-1,
 	"lcName":"get message attachments",
-	"modifiedTime":1759243540333,
+	"modifiedTime":1759371862548,
 	"name":"Get Message Attachments",
 	"nodes":[
 		{
@@ -1128,5 +1128,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":117
+	"version":118
 }
