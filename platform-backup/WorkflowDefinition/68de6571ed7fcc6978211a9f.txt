@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759405425345,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759423242601,
+		"deployedBy":13,
+		"deployedDefinitionId":"68deab0830196a1e837fee6a",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":13
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_Is8vp",
@@ -30,7 +38,7 @@
 	"id":"68de6571ed7fcc6978211a9f",
 	"lastModifiedBy":13,
 	"lcName":"testdnt",
-	"modifiedTime":1759423198311,
+	"modifiedTime":1759423283056,
 	"name":"testdnt",
 	"nodes":[
 		{
@@ -40,7 +48,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_mf0p7-1",
 			"id":"n_Is8vp",
@@ -71,7 +79,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_mf0p7-1",
 			"id":"n_O2qv8",
@@ -130,7 +138,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_mf0p7-1",
 			"id":"n_3F9Im",
@@ -188,7 +196,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_mf0p7-1",
 			"id":"n_SfEaL",
@@ -231,5 +239,5 @@
 	"tags":[
 		
 	],
-	"version":13
+	"version":14
 }
