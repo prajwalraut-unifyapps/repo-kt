@@ -4,13 +4,21 @@
 	],
 	"createdTime":1759421328136,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759421648518,
+		"deployedBy":132116,
+		"deployedDefinitionId":"68dea4ce0e9d387c5aab15e9",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		
 	],
 	"id":"68dea3900e9d387c5aab12bb",
 	"lastModifiedBy":132116,
 	"lcName":"dfghj",
-	"modifiedTime":1759421644599,
+	"modifiedTime":1759421860597,
 	"name":"dfghj",
 	"nodes":[
 		{
@@ -20,7 +28,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_YkHCG-1",
 			"id":"n_wzgH3",
@@ -56,5 +64,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
