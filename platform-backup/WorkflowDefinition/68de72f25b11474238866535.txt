@@ -30,29 +30,6 @@
 			"fromNodeId":"n_ab9zj",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_bY8K0",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_bY8K0",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_jqjfO",
-			"type":"if"
-		},
-		{
-			"fromNodeId":"n_jqjfO",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_iwAqH",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_bY8K0",
-			"name":"no",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"_iwAqH",
 			"type":"next"
 		}
@@ -60,7 +37,7 @@
 	"id":"68de72f25b11474238866535",
 	"lastModifiedBy":59995,
 	"lcName":"buckets number",
-	"modifiedTime":1759413674216,
+	"modifiedTime":1759417919082,
 	"name":"Buckets Number",
 	"nodes":[
 		{
@@ -75,6 +52,60 @@
 			"id":"_YXJy5",
 			"index":1,
 			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"bucketWarnings":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"dbName":{
+										"type":"string",
+										"title":"dbName"
+									},
+									"tableName":{
+										"type":"string",
+										"title":"tableName"
+									},
+									"partitions":{
+										"type":"array",
+										"items":{
+											"type":"object",
+											"properties":{
+												"buckets":{
+													"type":"integer",
+													"title":"buckets"
+												},
+												"distributionKey":{
+													"type":"string",
+													"title":"distributionKey"
+												},
+												"paritionId":{
+													"type":"integer",
+													"title":"paritionId"
+												},
+												"partitionName":{
+													"type":"string",
+													"title":"partitionName"
+												},
+												"dataSize":{
+													"type":"string",
+													"title":"dataSize"
+												}
+											},
+											"additionalProperties":false
+										},
+										"title":"partitions"
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"bucketWarnings"
+						}
+					}
+				},
 				"setup":{
 					"type":"object",
 					"additionalProperties":false,
@@ -197,7 +228,7 @@
 				"requestTimeoutInSecs":-1,
 				"httpMethod":"POST",
 				"body":{
-					"sql":"SELECT DB_NAME, TABLE_NAME, PARTITION_NAME, PARTITION_ID, BUCKETS, DISTRIBUTION_KEY, DATA_SIZE FROM information_schema.partitions_meta WHERE BUCKETS < {{ _YXJy5.outputs.minimumBucketCount }};"
+					"sql":"SELECT DB_NAME, TABLE_NAME, PARTITION_NAME, PARTITION_ID, BUCKETS, DISTRIBUTION_KEY, DATA_SIZE FROM information_schema.partitions_meta WHERE BUCKETS < {{ _YXJy5.outputs.minimumBucketCount }} ORDER BY DB_NAME, TABLE_NAME;"
 				},
 				"connectionType":"DIRECT",
 				"sslVerify":false,
@@ -215,89 +246,33 @@
 							"items":{
 								"type":"object",
 								"properties":{
-									"DistributionKey":{
-										"type":"string",
-										"title":"DistributionKey"
+									"PARTITION_ID":{
+										"type":"integer",
+										"title":"PARTITION_ID"
 									},
-									"StorageSize":{
+									"TABLE_NAME":{
 										"type":"string",
-										"title":"StorageSize"
+										"title":"TABLE_NAME"
 									},
-									"AvgCS":{
-										"type":"string",
-										"title":"AvgCS"
+									"BUCKETS":{
+										"type":"integer",
+										"title":"BUCKETS"
 									},
-									"PartitionId":{
+									"PARTITION_NAME":{
 										"type":"string",
-										"title":"PartitionId"
+										"title":"PARTITION_NAME"
 									},
-									"Range":{
+									"DATA_SIZE":{
 										"type":"string",
-										"title":"Range"
+										"title":"DATA_SIZE"
 									},
-									"AsyncWrite":{
+									"DISTRIBUTION_KEY":{
 										"type":"string",
-										"title":"AsyncWrite"
+										"title":"DISTRIBUTION_KEY"
 									},
-									"Buckets":{
+									"DB_NAME":{
 										"type":"string",
-										"title":"Buckets"
-									},
-									"VersionEpoch":{
-										"type":"string",
-										"title":"VersionEpoch"
-									},
-									"PartitionName":{
-										"type":"string",
-										"title":"PartitionName"
-									},
-									"VersionTxnType":{
-										"type":"string",
-										"title":"VersionTxnType"
-									},
-									"State":{
-										"type":"string",
-										"title":"State"
-									},
-									"NextVersion":{
-										"type":"string",
-										"title":"NextVersion"
-									},
-									"DataSize":{
-										"type":"string",
-										"title":"DataSize"
-									},
-									"EnableDataCache":{
-										"type":"string",
-										"title":"EnableDataCache"
-									},
-									"PartitionKey":{
-										"type":"string",
-										"title":"PartitionKey"
-									},
-									"CompactVersion":{
-										"type":"string",
-										"title":"CompactVersion"
-									},
-									"P50CS":{
-										"type":"string",
-										"title":"P50CS"
-									},
-									"DataVersion":{
-										"type":"string",
-										"title":"DataVersion"
-									},
-									"VisibleVersion":{
-										"type":"string",
-										"title":"VisibleVersion"
-									},
-									"RowCount":{
-										"type":"string",
-										"title":"RowCount"
-									},
-									"MaxCS":{
-										"type":"string",
-										"title":"MaxCS"
+										"title":"DB_NAME"
 									}
 								},
 								"additionalProperties":false
@@ -391,6 +366,9 @@
 		},
 		{
 			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				},
 				"visibleOptionalFields":[
 					"root.parameters.tablePartitions.items.DistributionKey",
 					"root.parameters.tablePartitions.items.PartitionId",
@@ -408,7 +386,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@2",
 			"id":"n_ab9zj",
@@ -420,6 +398,50 @@
 					"properties":{
 						"bucketWarnings":{
 							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"dbName":{
+										"type":"string",
+										"title":"dbName"
+									},
+									"tableName":{
+										"type":"string",
+										"title":"tableName"
+									},
+									"partitions":{
+										"type":"array",
+										"items":{
+											"type":"object",
+											"properties":{
+												"buckets":{
+													"type":"integer",
+													"title":"buckets"
+												},
+												"distributionKey":{
+													"type":"string",
+													"title":"distributionKey"
+												},
+												"paritionId":{
+													"type":"integer",
+													"title":"paritionId"
+												},
+												"partitionName":{
+													"type":"string",
+													"title":"partitionName"
+												},
+												"dataSize":{
+													"type":"string",
+													"title":"dataSize"
+												}
+											},
+											"additionalProperties":false
+										},
+										"title":"partitions"
+									}
+								},
+								"additionalProperties":false
+							},
 							"title":"bucketWarnings"
 						}
 					}
@@ -452,17 +474,24 @@
 										"type":"string",
 										"title":"PartitionName"
 									},
-									"State":{
-										"type":"string",
-										"title":"State"
-									},
 									"DataSize":{
 										"type":"string",
 										"title":"DataSize"
+									},
+									"tableName":{
+										"type":"string",
+										"title":"Table Name"
+									},
+									"dbName":{
+										"type":"string",
+										"title":"Db Name"
 									}
 								},
 								"additionalProperties":false,
-								"required":[]
+								"required":[
+									"tableName",
+									"dbName"
+								]
 							},
 							"title":"tablePartitions"
 						},
@@ -472,22 +501,23 @@
 						}
 					}
 				},
-				"code":"if (!binding.hasVariable(\"tablePartitions\") || tablePartitions == null) {\n  return [\"bucketWarnings\": []]\n}\n\nbucketWarnings = []\ntablePartitions.each { item -> \n  def bucketNum = Integer.parseInt(item.Buckets ?: \"0\")\n  if (bucketNum < minBuckets) {\n    bucketWarnings << item\n  }\n}\nreturn [\"bucketWarnings\": bucketWarnings]",
+				"code":"if (!binding.hasVariable(\"tablePartitions\") || tablePartitions == null) {\n  return [\"bucketWarnings\": []]\n}\n\ndef bucketWarnings = []\ndef tableSet = [] as Set\ntablePartitions.each { item -> \n  def bucketNum = item.Buckets\n  if (bucketNum < minBuckets) {\n    if (!(tableSet.contains(item.tableName) && tableSet.contains(item.dbName))) {\n    tableSet = [item.dbName, item.tableName] as Set\n       bucketWarnings << [dbName: item.dbName, tableName: item.tableName, partitions: [[buckets: item.Buckets, distributionKey: item.DistributionKey, paritionId: item.PartitionId, partitionName: item.PartitionName, dataSize: item.DataSize]]]\n  } else {\n    bucketWarnings.last()[\"partitions\"].add([buckets: item.Buckets, distributionKey: item.DistributionKey, paritionId: item.PartitionId, partitionName: item.PartitionName, dataSize: item.DataSize])\n  }\n  }\n}\nreturn [\"bucketWarnings\": bucketWarnings]",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
-					"minBuckets":"{{ _auxBn.outputs.result.minimumBucketCount }}",
+					"minBuckets":"{{ _YXJy5.outputs.minimumBucketCount }}",
 					"tablePartitions":{
-						"source":"{{ _zNca6.outputs.result.objects }}",
 						"ua:type":"mappedArray",
 						"items":{
-							"DistributionKey":"{{ _zNca6.outputs.result.objects[0].DistributionKey }}",
-							"PartitionId":"{{ _zNca6.outputs.result.objects[0].PartitionId }}",
-							"Buckets":"{{ _zNca6.outputs.result.objects[0].Buckets }}",
-							"PartitionName":"{{ _zNca6.outputs.result.objects[0].PartitionName }}",
-							"State":"{{ _zNca6.outputs.result.objects[0].State }}",
-							"DataSize":"{{ _zNca6.outputs.result.objects[0].DataSize }}"
-						}
+							"DistributionKey":"{{ _zNca6.outputs.result.objects[0].DISTRIBUTION_KEY }}",
+							"PartitionId":"{{ _zNca6.outputs.result.objects[0].PARTITION_ID }}",
+							"Buckets":"{{ _zNca6.outputs.result.objects[0].BUCKETS }}",
+							"PartitionName":"{{ _zNca6.outputs.result.objects[0].PARTITION_NAME }}",
+							"DataSize":"{{ _zNca6.outputs.result.objects[0].DATA_SIZE }}",
+							"tableName":"{{ _zNca6.outputs.result.objects[0].TABLE_NAME }}",
+							"dbName":"{{ _zNca6.outputs.result.objects[0].DB_NAME }}"
+						},
+						"source":"{{ _zNca6.outputs.result.objects }}"
 					}
 				}
 			},
@@ -498,78 +528,39 @@
 		},
 		{
 			"context":{
-				"appName":"if_else",
-				"resourceVersion":2,
-				"resourceName":"if_else_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@2",
-			"id":"n_bY8K0",
-			"index":5,
-			"inputs":{
-				"filters":[
-					{
-						"property":"=LEN({{ n_ab9zj.outputs.result.bucketWarnings }})",
-						"filter":{
-							"operator":"GT",
-							"value":"0"
-						}
-					}
-				],
-				"operator":"AND"
-			},
-			"skip":false,
-			"subTitle":"Condition",
-			"title":"Condition",
-			"type":"IF_ELSE"
-		},
-		{
-			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":2,
-				"resourceName":"variable_by_unifyapps_add_item_to_list",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_bY8K0@n_nST1M@n_WOcYr@_jMFmS-1@l@2@y",
-			"id":"n_jqjfO",
-			"index":6,
-			"inputs":{
-				"itemToAdd":{
-					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
-					"tableName":"{{ n_WOcYr.outputs.item.TableName }}",
-					"routineLoadName":"{{ n_WOcYr.outputs.item.Name }}",
-					"buckets":{
-						"source":"{{ n_ab9zj.outputs.result.bucketWarnings }}",
-						"ua:type":"mappedArray",
-						"items":"{{ n_ab9zj.outputs.result.bucketWarnings }}"
-					}
-				},
-				"insertLocation":"END",
-				"listName":"{{ n_CWqg9.outputs.items[0] }}"
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Add item to list",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"callables",
 				"resourceName":"callables_return_to_automation",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@2",
 			"id":"_iwAqH",
-			"index":7,
+			"index":5,
+			"inputs":{
+				"result":{
+					"bucketWarnings":{
+						"source":"{{ n_ab9zj.outputs.result.bucketWarnings }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"dbName":"{{ n_ab9zj.outputs.result.bucketWarnings[0].dbName }}",
+							"tableName":"{{ n_ab9zj.outputs.result.bucketWarnings[0].tableName }}",
+							"partitions":{
+								"source":"{{ n_ab9zj.outputs.result.bucketWarnings[0].partitions }}",
+								"ua:type":"mappedArray",
+								"items":{
+									"buckets":"{{ n_ab9zj.outputs.result.bucketWarnings[0].partitions[0].buckets }}",
+									"distributionKey":"{{ n_ab9zj.outputs.result.bucketWarnings[0].partitions[0].distributionKey }}",
+									"paritionId":"{{ n_ab9zj.outputs.result.bucketWarnings[0].partitions[0].paritionId }}",
+									"partitionName":"{{ n_ab9zj.outputs.result.bucketWarnings[0].partitions[0].partitionName }}",
+									"dataSize":"{{ n_ab9zj.outputs.result.bucketWarnings[0].partitions[0].dataSize }}"
+								}
+							}
+						}
+					}
+				}
+			},
 			"skip":false,
 			"subTitle":"Callable",
 			"title":"Respond to automation",
@@ -593,5 +584,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
