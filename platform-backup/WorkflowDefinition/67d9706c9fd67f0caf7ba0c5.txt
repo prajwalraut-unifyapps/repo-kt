@@ -5,12 +5,12 @@
 	"createdTime":1742303340082,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243515396,
+		"deployedAt":1759243552554,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbecfb9213d707c2d272a9",
+		"deployedDefinitionId":"68dbed205e003e08cdeb2eda",
 		"status":"DEPLOYED",
-		"version":28,
-		"workflowVersion":44
+		"version":29,
+		"workflowVersion":45
 	},
 	"edges":[
 		{
@@ -48,7 +48,7 @@
 	"id":"67d9706c9fd67f0caf7ba0c5",
 	"lastModifiedBy":-1,
 	"lcName":"execute oracle query",
-	"modifiedTime":1759243552484,
+	"modifiedTime":1759371874556,
 	"name":"Execute oracle query",
 	"nodes":[
 		{
@@ -256,5 +256,5 @@
 		}
 	},
 	"standard":true,
-	"version":45
+	"version":46
 }
