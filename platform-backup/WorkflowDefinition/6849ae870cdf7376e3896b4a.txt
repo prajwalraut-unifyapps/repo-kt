@@ -5,12 +5,12 @@
 	"createdTime":1749669086318,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655383307,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f39738757c179b123a93",
+		"deployedAt":1759243598135,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed4e9213d707c2d2741e",
 		"status":"DEPLOYED",
-		"version":29,
-		"workflowVersion":68
+		"version":31,
+		"workflowVersion":70
 	},
 	"edges":[
 		{
@@ -178,7 +178,7 @@
 	"id":"6849ae870cdf7376e3896b4a",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | gong | index calls",
-	"modifiedTime":1759243565752,
+	"modifiedTime":1759371917283,
 	"name":"Knowledge Indexer | Gong | Index calls",
 	"nodes":[
 		{
@@ -1794,5 +1794,5 @@
 	"tags":[
 		
 	],
-	"version":69
+	"version":71
 }
