@@ -6,46 +6,142 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_n6eLp",
+			"fromNodeId":"n_jK7u0",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_uZIiQ",
+			"toNodeId":"n_gzrDg",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_gzrDg",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_thvPw",
+			"type":"scope"
+		},
+		{
+			"fromNodeId":"n_thvPw",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_IEOin",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_IEOin",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_thvPw",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_thvPw",
+			"name":"scope-loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_gzrDg",
 			"type":"next"
 		}
 	],
 	"id":"68de4f19e862b93537845133",
 	"lastModifiedBy":39713,
 	"lcName":"test",
-	"modifiedTime":1759399705493,
+	"modifiedTime":1759399749178,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":820,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_n6eLp-1",
-			"id":"_n6eLp",
-			"index":0,
+			"id":"n_jK7u0",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"scope",
+				"resourceVersion":277,
+				"resourceName":"scope_trigger_scope",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_n6eLp-1",
-			"id":"_uZIiQ",
-			"index":0,
+			"id":"n_gzrDg",
+			"index":2,
+			"inputs":{},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Scope",
+			"title":"Trigger Scope",
+			"type":"SCOPE"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":22,
+				"resourceName":"loop_for",
+				"type":"APPLICATION",
+				"scopeNodeId":"n_gzrDg"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_gzrDg@_n6eLp-1@s",
+			"id":"n_thvPw",
+			"index":3,
+			"inputs":{
+				"start":0,
+				"limit":2,
+				"step":1,
+				"captureIterations":true
+			},
+			"skip":false,
+			"subTitle":"Loop",
+			"title":"For loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":987,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION",
+				"scopeNodeId":"n_gzrDg"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_thvPw@n_gzrDg@_n6eLp-1@s@l",
+			"id":"n_IEOin",
+			"index":4,
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":39713,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +155,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
