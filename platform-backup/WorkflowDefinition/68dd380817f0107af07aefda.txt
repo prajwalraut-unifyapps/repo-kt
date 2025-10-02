@@ -4,9 +4,17 @@
 	],
 	"createdTime":1759328264773,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759389631629,
+		"deployedBy":44103,
+		"deployedDefinitionId":"68de27bc4cd5cd4be39eb873",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
-			"fromNodeId":"n_6qe13",
+			"fromNodeId":"n_RVU3x",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_UlFPc",
@@ -23,38 +31,34 @@
 			"fromNodeId":"n_q0ZqT",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_VORBw",
+			"toNodeId":"n_oDYcJ",
 			"type":"next"
 		}
 	],
 	"id":"68dd380817f0107af07aefda",
 	"lastModifiedBy":44103,
 	"lcName":"test11111",
-	"modifiedTime":1759389626490,
+	"modifiedTime":1759390088738,
 	"name":"test11111",
 	"nodes":[
 		{
 			"context":{
-				"appName":"webhooks",
-				"resourceVersion":820,
-				"resourceName":"webhooks_default"
+				"appName":"callables",
+				"resourceVersion":969,
+				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_LL6zY-1",
-			"id":"n_6qe13",
+			"id":"n_RVU3x",
 			"index":1,
-			"inputs":{
-				"request":{
-					"contentType":"application/json"
-				}
-			},
+			"inputs":{},
 			"skip":false,
-			"subTitle":"Webhook",
-			"title":"New event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"WEBHOOK"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
@@ -66,7 +70,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_LL6zY-1",
 			"id":"n_UlFPc",
@@ -120,7 +124,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_LL6zY-1",
 			"id":"n_q0ZqT",
@@ -162,17 +166,23 @@
 		},
 		{
 			"context":{
-				"appName":"stop"
+				"appName":"callables",
+				"resourceVersion":0,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_LL6zY-1",
-			"id":"n_VORBw",
+			"id":"n_oDYcJ",
 			"index":4,
+			"inputs":{
+				"result":"true"
+			},
 			"skip":false,
-			"subTitle":"Stop",
-			"title":"Stop",
+			"subTitle":"Callable",
+			"title":"Respond to automation",
 			"type":"STOP"
 		}
 	],
@@ -193,5 +203,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
