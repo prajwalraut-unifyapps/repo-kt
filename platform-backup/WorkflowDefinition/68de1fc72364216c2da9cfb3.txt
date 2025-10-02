@@ -5,18 +5,12 @@
 	"createdTime":1759387591917,
 	"deleted":false,
 	"edges":[
-		{
-			"fromNodeId":"n_rmqek",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_xDPm6",
-			"type":"next"
-		}
+		
 	],
 	"id":"68de1fc72364216c2da9cfb3",
 	"lastModifiedBy":2721,
 	"lcName":"sampletreggertest",
-	"modifiedTime":1759387639315,
+	"modifiedTime":1759387644147,
 	"name":"sampletreggertest",
 	"nodes":[
 		{
@@ -45,17 +39,6 @@
 				"type":"EVENT"
 			},
 			"type":"START"
-		},
-		{
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_uBreN-1",
-			"id":"_xDPm6",
-			"index":2,
-			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
 		}
 	],
 	"ownerUserId":2721,
@@ -75,5 +58,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
