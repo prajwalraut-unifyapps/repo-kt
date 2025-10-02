@@ -1,19 +1,12 @@
 {
 	"appsUsed":[
-		"act!"
+		
 	],
 	"createdTime":1759405425345,
 	"deleted":false,
 	"edges":[
 		{
 			"fromNodeId":"n_Is8vp",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_n8tZy",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_n8tZy",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_sNbKW",
@@ -30,7 +23,7 @@
 	"id":"68de6571ed7fcc6978211a9f",
 	"lastModifiedBy":602,
 	"lcName":"testdnt",
-	"modifiedTime":1759409983532,
+	"modifiedTime":1759410005660,
 	"name":"testdnt",
 	"nodes":[
 		{
@@ -60,24 +53,6 @@
 		},
 		{
 			"context":{
-				"appName":"act!",
-				"resourceVersion":3704,
-				"resourceName":"act!_create_group",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_mf0p7-1",
-			"id":"n_n8tZy",
-			"index":2,
-			"skip":false,
-			"subTitle":"Act!",
-			"title":"Create group",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"files_by_unifyapps",
 				"resourceVersion":894,
 				"resourceName":"files_by_unifyapps_create_temp_file",
@@ -88,7 +63,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_mf0p7-1",
 			"id":"n_sNbKW",
-			"index":3,
+			"index":2,
 			"inputs":{
 				"isTmp":true,
 				"initialContentType":"plainText",
@@ -113,8 +88,12 @@
 			"fallbackMode":"STOP",
 			"groupId":"_mf0p7-1",
 			"id":"n_NZBKM",
-			"index":4,
-			"inputs":{},
+			"index":3,
+			"inputs":{
+				"fileDetails":"{{ n_sNbKW.outputs.fileDetails }}",
+				"dataType":"MARKDOWN",
+				"content":"| Month    | Savings |\n| -------- | ------- |\n| January  | $250    |\n| February | $80     |\n| March    | $420    |"
+			},
 			"skip":false,
 			"subTitle":"Utility by UnifyApps",
 			"title":"Write Data to Docx file",
@@ -138,5 +117,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
