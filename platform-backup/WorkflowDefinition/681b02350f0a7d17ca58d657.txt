@@ -5,12 +5,12 @@
 	"createdTime":1746600500972,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243515837,
+		"deployedAt":1759243552955,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbecfb5e003e08cdeb2e4a",
+		"deployedDefinitionId":"68dbed205e003e08cdeb2ede",
 		"status":"DEPLOYED",
-		"version":28,
-		"workflowVersion":40
+		"version":29,
+		"workflowVersion":41
 	},
 	"edges":[
 		{
@@ -48,7 +48,7 @@
 	"id":"681b02350f0a7d17ca58d657",
 	"lastModifiedBy":-1,
 	"lcName":"[hibob] get user sharedwithids",
-	"modifiedTime":1759243552900,
+	"modifiedTime":1759371874949,
 	"name":"[HiBob] Get User SharedWithIds",
 	"nodes":[
 		{
@@ -431,5 +431,5 @@
 	"tags":[
 		
 	],
-	"version":41
+	"version":42
 }
