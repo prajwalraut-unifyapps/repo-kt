@@ -6,12 +6,12 @@
 	"createdTime":1757066141855,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646517811,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2d0f5bd00df618e363cbe",
+		"deployedAt":1759243562535,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed2a5e003e08cdeb2f13",
 		"status":"DEPLOYED",
-		"version":9,
-		"workflowVersion":22
+		"version":12,
+		"workflowVersion":25
 	},
 	"edges":[
 		{
@@ -271,9 +271,9 @@
 		]
 	},
 	"id":"68906e15f85dafc40095552a",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"knowledge downloader | asana | all workspace",
-	"modifiedTime":1758655338099,
+	"modifiedTime":1759371884179,
 	"name":"Knowledge Downloader | Asana | All workspace",
 	"nodes":[
 		{
@@ -1703,5 +1703,5 @@
 	"tags":[
 		"knowledge_v2"
 	],
-	"version":23
+	"version":26
 }
