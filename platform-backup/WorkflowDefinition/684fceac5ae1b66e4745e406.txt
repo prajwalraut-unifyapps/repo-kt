@@ -5,12 +5,12 @@
 	"createdTime":1750926680777,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655320057,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f35838757c179b123004",
+		"deployedAt":1759243549226,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed1d9213d707c2d27312",
 		"status":"DEPLOYED",
-		"version":42,
-		"workflowVersion":60
+		"version":44,
+		"workflowVersion":62
 	},
 	"edges":[
 		{
@@ -64,7 +64,7 @@
 	"id":"684fceac5ae1b66e4745e406",
 	"lastModifiedBy":-1,
 	"lcName":"simple call llm | signal wrapper",
-	"modifiedTime":1759243511437,
+	"modifiedTime":1759371871346,
 	"name":"Simple Call LLM | Signal Wrapper",
 	"nodes":[
 		{
@@ -386,5 +386,5 @@
 		}
 	},
 	"standard":true,
-	"version":61
+	"version":63
 }
