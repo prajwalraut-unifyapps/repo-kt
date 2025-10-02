@@ -6,16 +6,16 @@
 	"createdTime":1759242430527,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759310278054,
+		"deployedAt":1759395468485,
 		"deployedBy":43498,
-		"deployedDefinitionId":"68dcf1c58f5c720c982cf8ca",
+		"deployedDefinitionId":"68de3e8c5f912f1368e29b87",
 		"status":"DEPLOYED",
-		"version":10,
-		"workflowVersion":16
+		"version":11,
+		"workflowVersion":18
 	},
 	"edges":[
 		{
-			"fromNodeId":"n_HIJXc",
+			"fromNodeId":"n_kd82b",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_plNsj",
@@ -27,51 +27,32 @@
 			"skip":false,
 			"toNodeId":"n_KAsDL",
 			"type":"next"
-		},
-		{
-			"fromNodeId":"n_KAsDL",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_UvOki",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_UvOki",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_Q13id",
-			"type":"next"
 		}
 	],
 	"id":"68dbe8be1bd93f17d9aa6254",
 	"lastModifiedBy":43498,
 	"lcName":"test-scheduler-connection-deletion",
-	"modifiedTime":1759395466178,
+	"modifiedTime":1759407692137,
 	"name":"test-scheduler-connection-deletion",
 	"nodes":[
 		{
 			"context":{
-				"appName":"schedule",
-				"resourceVersion":814,
-				"resourceName":"schedule_default"
+				"appName":"callables",
+				"resourceVersion":969,
+				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_oKLjG-1",
-			"id":"n_HIJXc",
+			"id":"n_kd82b",
 			"index":1,
-			"inputs":{
-				"cron":"INTERVAL",
-				"sequential":false,
-				"interval":1,
-				"frequency":"MINUTES"
-			},
+			"inputs":{},
 			"skip":false,
-			"subTitle":"Schedule",
-			"title":"New recurring event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"SCHEDULED"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
@@ -107,7 +88,7 @@
 			"context":{
 				"appName":"teamwork",
 				"resourceVersion":2541,
-				"connectionId":"68de3e8510de3b36582fe467",
+				"connectionId":"68de6e4a953b7316d9d7555a",
 				"resourceName":"teamwork_get_projects",
 				"type":"APPLICATION"
 			},
@@ -131,48 +112,6 @@
 			"subTitle":"Teamwork",
 			"title":"Get all projects",
 			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"streams_by_unifyapps",
-				"resourceVersion":1586,
-				"resourceName":"streams_by_unifyapps_publish_event",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_oKLjG-1",
-			"id":"n_UvOki",
-			"index":4,
-			"inputs":{
-				"streamId":"e_68d66079793bfd127f1b3372",
-				"skipInputValidation":false,
-				"event":{
-					"tesaitn":"wdefgr",
-					"tesigng":"ewfrgt"
-				},
-				"key":"w"
-			},
-			"skip":false,
-			"subTitle":"Streams by UnifyApps",
-			"title":"Publish event to stream",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"stop"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_oKLjG-1",
-			"id":"n_Q13id",
-			"index":5,
-			"skip":false,
-			"subTitle":"Stop",
-			"title":"Stop",
-			"type":"STOP"
 		}
 	],
 	"ownerUserId":569,
@@ -192,5 +131,5 @@
 	"tags":[
 		
 	],
-	"version":18
+	"version":19
 }
