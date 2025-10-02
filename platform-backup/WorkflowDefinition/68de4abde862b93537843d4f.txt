@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759398589982,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_XK56e",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_vpczw",
+			"type":"next"
+		}
+	],
+	"id":"68de4abde862b93537843d4f",
+	"lastModifiedBy":21,
+	"lcName":"sda",
+	"modifiedTime":1759398589982,
+	"name":"sda",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_XK56e-1",
+			"id":"_XK56e",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_XK56e-1",
+			"id":"_vpczw",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":21,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
