@@ -5,12 +5,12 @@
 	"createdTime":1759388738749,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759389310330,
-		"deployedBy":161908,
-		"deployedDefinitionId":"68de267e86bbd11455220496",
+		"deployedAt":1759389395866,
+		"deployedBy":426,
+		"deployedDefinitionId":"68de26d3e6ccb546f4467a20",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":5
+		"version":2,
+		"workflowVersion":6
 	},
 	"edges":[
 		{
@@ -127,7 +127,7 @@
 	"id":"68de24422364216c2da9d549",
 	"lastModifiedBy":426,
 	"lcName":"branchloop",
-	"modifiedTime":1759389389960,
+	"modifiedTime":1759389420704,
 	"name":"branchloop",
 	"nodes":[
 		{
@@ -342,7 +342,7 @@
 			"index":7,
 			"inputs":{
 				"listSource":"{{ n_Tjmb5.outputs.objects }}",
-				"captureIterations":false
+				"captureIterations":true
 			},
 			"skip":false,
 			"subTitle":"Loop",
@@ -357,7 +357,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_MYhE4@n_I42Hn@n_ikdIO@_kS6s2-1@1@l@l",
 			"id":"n_8M4qq",
@@ -507,5 +507,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
