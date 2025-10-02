@@ -53,7 +53,7 @@
 	"id":"68de60a5ed7fcc697820fd0e",
 	"lastModifiedBy":24420,
 	"lcName":"test upload",
-	"modifiedTime":1759408928601,
+	"modifiedTime":1759408950018,
 	"name":"Test upload",
 	"nodes":[
 		{
@@ -114,7 +114,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_B028j-1",
 			"id":"n_WxU2M",
@@ -359,13 +359,7 @@
 			},
 			"inputs":{
 				"createList":{
-					"ua:type":"mappedArray",
-					"items":{
-						"a":"{{ n_jWX85.outputs.item.A }}",
-						"b":"{{ n_jWX85.outputs.item.B }}",
-						"c":"{{ n_jWX85.outputs.item.C }}",
-						"d":"{{ n_jWX85.outputs.item.D }}"
-					}
+					"ua:type":"mappedArray"
 				},
 				"ua:title":"List",
 				"ua:list_type":"OBJECT"
@@ -454,16 +448,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_jWX85@_B028j-1@l",
 			"id":"n_FpgKU",
 			"index":4,
 			"inputs":{
 				"itemToAdd":{
-					"a":"{{ n_jWX85.outputs.item.A }}",
 					"b":"{{ n_jWX85.outputs.item.B }}",
-					"c":"{{ n_jWX85.outputs.item.C }}",
 					"d":"{{ n_jWX85.outputs.item.D }}"
 				},
 				"insertLocation":"START",
@@ -515,5 +507,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
