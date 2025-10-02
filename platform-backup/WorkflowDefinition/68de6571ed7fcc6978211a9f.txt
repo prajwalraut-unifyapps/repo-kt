@@ -9,14 +9,14 @@
 			"fromNodeId":"n_Is8vp",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_rXipi",
+			"toNodeId":"n_n8tZy",
 			"type":"next"
 		}
 	],
 	"id":"68de6571ed7fcc6978211a9f",
-	"lastModifiedBy":426,
+	"lastModifiedBy":67744,
 	"lcName":"testdnt",
-	"modifiedTime":1759408529574,
+	"modifiedTime":1759409895344,
 	"name":"testdnt",
 	"nodes":[
 		{
@@ -26,7 +26,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_mf0p7-1",
 			"id":"n_Is8vp",
@@ -47,21 +47,19 @@
 		{
 			"context":{
 				"appName":"act!",
-				"resourceVersion":3778,
-				"connectionId":"67bcec9955fa3158a0f852f1",
-				"resourceName":"act!_create_contact",
+				"resourceVersion":3704,
+				"resourceName":"act!_create_group",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_mf0p7-1",
-			"id":"n_rXipi",
+			"id":"n_n8tZy",
 			"index":2,
-			"inputs":{},
 			"skip":false,
 			"subTitle":"Act!",
-			"title":"Create contact",
+			"title":"Create group",
 			"type":"ACTION"
 		}
 	],
@@ -82,5 +80,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
