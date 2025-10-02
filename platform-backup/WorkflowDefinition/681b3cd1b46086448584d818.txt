@@ -5,12 +5,12 @@
 	"createdTime":1747641657176,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655386020,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f39938757c179b123b1c",
+		"deployedAt":1759243600386,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed509213d707c2d2742f",
 		"status":"DEPLOYED",
-		"version":47,
-		"workflowVersion":65
+		"version":49,
+		"workflowVersion":67
 	},
 	"edges":[
 		{
@@ -41,7 +41,7 @@
 	"id":"681b3cd1b46086448584d818",
 	"lastModifiedBy":-1,
 	"lcName":"text to workflow v2 | update trigger",
-	"modifiedTime":1759243567954,
+	"modifiedTime":1759371919489,
 	"name":"Text to Workflow v2 | Update Trigger",
 	"nodes":[
 		{
@@ -243,5 +243,5 @@
 	"tags":[
 		
 	],
-	"version":66
+	"version":68
 }
