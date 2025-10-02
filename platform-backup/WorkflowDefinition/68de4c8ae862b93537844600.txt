@@ -30,7 +30,7 @@
 	"id":"68de4c8ae862b93537844600",
 	"lastModifiedBy":161165,
 	"lcName":"fileupload",
-	"modifiedTime":1759399162036,
+	"modifiedTime":1759399278838,
 	"name":"fileUpload",
 	"nodes":[
 		{
@@ -359,68 +359,15 @@
 			"index":3,
 			"inputs":{
 				"writeThroughSessionVariables":false,
-				"object_type":"indus_ind_g_idatabase",
+				"object_type":"virtusa_file_upload",
 				"skipIfBlank":false,
 				"record":{
-					"FrontZoneDamaged":[
-						{
-							"source":"{{ n_lV1Ee.outputs.FrontZoneDamaged[0] }}",
-							"ua:type":"mappedArray"
-						}
-					],
-					"LeftZoneDamage":[
-						{
-							"source":"{{ n_lV1Ee.outputs.LeftZoneDamage[0] }}",
-							"ua:type":"mappedArray"
-						}
-					],
-					"AccidentSummary":"{{ n_lV1Ee.outputs.AccidentSummary }}",
-					"AiSummary":"{{ n_lV1Ee.outputs.AiSummary }}",
-					"CarCompany":"{{ n_lV1Ee.outputs.CarCompany }}",
-					"DamageZones":{
-						"source":"{{ n_lV1Ee.outputs.DamageZones }}",
-						"ua:type":"mappedArray",
-						"items":"{{ n_lV1Ee.outputs.DamageZones[0] }}"
-					},
-					"DentSize":"{{ n_lV1Ee.outputs.DentSize }}",
-					"FrontZoneDamagedSeverity":"{{ n_lV1Ee.outputs.FrontZoneDamagedSeverity }}",
-					"LabourCost":"{{ n_lV1Ee.outputs.LabourCost }}",
-					"LeftSidemirror":"{{ n_lV1Ee.outputs.LeftSidemirror }}",
-					"LeftZoneDamageSeverity":"{{ n_lV1Ee.outputs.LeftZoneDamageSeverity }}",
-					"PrimaryDamage":"{{ n_lV1Ee.outputs.PrimaryDamage }}",
-					"RearZoneDamageSeverity":"{{ n_lV1Ee.outputs.RearZoneDamageSeverity }}",
-					"RightSidemirror":"{{ n_lV1Ee.outputs.RightSidemirror }}",
-					"RightZoneDamageSeverity":"{{ n_lV1Ee.outputs.RightZoneDamageSeverity }}",
-					"Severity":"{{ n_lV1Ee.outputs.Severity }}",
-					"VehicleType":"{{ n_lV1Ee.outputs.VehicleType }}",
-					"Windshield":"{{ n_lV1Ee.outputs.Windshield }}",
-					"aiJustification":"{{ n_lV1Ee.outputs.aiJustification }}",
-					"airbagDeployed":"{{ n_lV1Ee.outputs.airbagDeployed }}",
-					"airbagSummary":"{{ n_lV1Ee.outputs.airbagSummary }}",
-					"parts_cost":"{{ n_lV1Ee.outputs.parts_cost }}",
-					"status":"{{ n_lV1Ee.outputs.status }}",
-					"totalCost":"{{ n_lV1Ee.outputs.totalCost }}",
-					"userCommentConsistency":"{{ n_lV1Ee.outputs.userCommentConsistency }}",
 					"file":{
 						"ua:type":"mappedArray",
 						"source":"{{ n_zObZD.outputs.items }}",
 						"items":{
 							"url":"{{ n_zObZD.outputs.items[0] }}"
 						}
-					},
-					"RightSideDamage":"{{ n_lV1Ee.outputs.RightSideDamage }}",
-					"LeftSideDamage":"{{ n_lV1Ee.outputs.LeftSideDamage }}",
-					"RearSideDamage":"{{ n_lV1Ee.outputs.RearSideDamage }}",
-					"FrontSideDamage":"{{ n_lV1Ee.outputs.FrontSideDamage }}",
-					"AverageDamage":"{{ n_lV1Ee.outputs.AverageDamage }}",
-					"comment":"{{ n_lV1Ee.outputs.comment }}",
-					"RearZoneDamage":{
-						"source":"{{ n_lV1Ee.outputs.RearZoneDamage }}",
-						"ua:type":"mappedArray"
-					},
-					"RightZoneDamage":{
-						"source":"{{ n_lV1Ee.outputs.RightZoneDamage[0] }}",
-						"ua:type":"mappedArray"
 					}
 				}
 			},
@@ -477,5 +424,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
