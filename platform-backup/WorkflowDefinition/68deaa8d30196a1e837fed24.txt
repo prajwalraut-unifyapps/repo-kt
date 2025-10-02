@@ -4,13 +4,27 @@
 	],
 	"createdTime":1759423117694,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759423128745,
+		"deployedBy":132116,
+		"deployedDefinitionId":"68deaa9630196a1e837fed46",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
-		
+		{
+			"fromNodeId":"n_HEAhc",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_xAVBf",
+			"type":"next"
+		}
 	],
 	"id":"68deaa8d30196a1e837fed24",
 	"lastModifiedBy":132116,
 	"lcName":"test1",
-	"modifiedTime":1759423123698,
+	"modifiedTime":1759423153932,
 	"name":"test1",
 	"nodes":[
 		{
@@ -20,7 +34,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_bGZ0y-1",
 			"id":"n_HEAhc",
@@ -37,6 +51,24 @@
 				"type":"WEBHOOK"
 			},
 			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":992,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_bGZ0y-1",
+			"id":"n_xAVBf",
+			"index":2,
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
 		}
 	],
 	"ownerUserId":132116,
@@ -56,5 +88,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
