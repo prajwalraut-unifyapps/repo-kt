@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		
+		"salesforce"
 	],
 	"createdTime":1759394982947,
 	"deleted":false,
@@ -9,14 +9,14 @@
 			"fromNodeId":"_wsh47",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_PJoZ3",
+			"toNodeId":"n_kswaT",
 			"type":"next"
 		}
 	],
 	"id":"68de3ca6eb63715bd6d15be5",
 	"lastModifiedBy":161860,
 	"lcName":"divyam salesfroce ",
-	"modifiedTime":1759394982947,
+	"modifiedTime":1759395033570,
 	"name":"divyam salesfroce ",
 	"nodes":[
 		{
@@ -25,7 +25,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_wsh47-1",
 			"id":"_wsh47",
-			"index":0,
+			"index":1,
 			"skip":false,
 			"title":"Select a trigger event",
 			"trigger":{
@@ -34,18 +34,28 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"salesforce",
+				"resourceVersion":6664,
+				"resourceName":"salesforce_execute_soql",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_wsh47-1",
-			"id":"_PJoZ3",
-			"index":0,
+			"id":"n_kswaT",
+			"index":2,
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Salesforce",
+			"title":"Execute SOQL",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":161860,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +69,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
