@@ -30,7 +30,7 @@
 	"id":"68af1080002c1a1e80fd517c",
 	"lastModifiedBy":44105,
 	"lcName":"sqwfdewfe",
-	"modifiedTime":1759403134560,
+	"modifiedTime":1759403148644,
 	"name":"sqwfdewfe",
 	"nodes":[
 		{
@@ -124,7 +124,7 @@
 				"variables":[
 					{
 						"source":"{{ n_EvgmC.outputs.str }}",
-						"value":"=TEXT(01, \"0\")"
+						"value":"=TEXT(00001, \"0\")"
 					}
 				]
 			},
@@ -177,5 +177,5 @@
 	"tags":[
 		"fqwefqew"
 	],
-	"version":26
+	"version":27
 }
