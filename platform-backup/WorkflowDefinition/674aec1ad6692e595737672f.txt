@@ -5,12 +5,12 @@
 	"createdTime":1732963354901,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655393020,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f3a138757c179b123c37",
+		"deployedAt":1759243606385,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed569213d707c2d27453",
 		"status":"DEPLOYED",
-		"version":20,
-		"workflowVersion":66
+		"version":22,
+		"workflowVersion":68
 	},
 	"edges":[
 		{
@@ -71,7 +71,7 @@
 	"id":"674aec1ad6692e595737672f",
 	"lastModifiedBy":-1,
 	"lcName":"azure bot publisher (ai agent)",
-	"modifiedTime":1759243573505,
+	"modifiedTime":1759371924367,
 	"name":"Azure Bot Publisher (AI Agent)",
 	"nodes":[
 		{
@@ -591,5 +591,5 @@
 		"AI Agent",
 		"Publish"
 	],
-	"version":67
+	"version":69
 }
