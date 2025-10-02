@@ -5,12 +5,12 @@
 	"createdTime":1742538780983,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655356411,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f37c38757c179b123605",
+		"deployedAt":1759243576635,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed3823e6682b9a51ebe4",
 		"status":"DEPLOYED",
-		"version":78,
-		"workflowVersion":108
+		"version":80,
+		"workflowVersion":110
 	},
 	"edges":[
 		{
@@ -48,7 +48,7 @@
 	"id":"67dd081c8445037d9b06b119",
 	"lastModifiedBy":-1,
 	"lcName":"ai eval | ai as judge evaluator",
-	"modifiedTime":1759243542966,
+	"modifiedTime":1759371897838,
 	"name":"AI Eval | AI As Judge Evaluator",
 	"nodes":[
 		{
@@ -738,5 +738,5 @@
 	"tags":[
 		
 	],
-	"version":109
+	"version":111
 }
