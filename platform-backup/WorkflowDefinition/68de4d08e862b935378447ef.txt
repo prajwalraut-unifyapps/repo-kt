@@ -23,7 +23,7 @@
 	"id":"68de4d08e862b935378447ef",
 	"lastModifiedBy":185583,
 	"lcName":"task_pb (copy)",
-	"modifiedTime":1759399680179,
+	"modifiedTime":1759399692031,
 	"name":"Task_PB (copy)",
 	"nodes":[
 		{
@@ -188,8 +188,7 @@
 				"body":{
 					"tagOutput":{
 						"source":"{{ n_xcwp1.outputs.result.currentTagOut }}",
-						"ua:type":"mappedArray",
-						"items":"{{ n_xcwp1.outputs.result.currentTagOut[0] }}"
+						"ua:type":"mappedArray"
 					}
 				},
 				"status":200
@@ -217,5 +216,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
