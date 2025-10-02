@@ -1,0 +1,377 @@
+{
+	"appsUsed":[
+		"google_big_query"
+	],
+	"createdTime":1746006556658,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759243620651,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed645e003e08cdeb305c",
+		"status":"DEPLOYED",
+		"version":33,
+		"workflowVersion":73
+	},
+	"edges":[
+		{
+			"fromNodeId":"bugyk",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"FCCvW",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"FCCvW",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"ZgU6I",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"ZgU6I",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Is4e8",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"Is4e8",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"INSbU",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"INSbU",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"EVdeU",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"6811f21cfc1fa91bfcc0012f",
+	"lastModifiedBy":-1,
+	"lcName":"execute google big query",
+	"modifiedTime":1759371938229,
+	"name":"Execute Google Big Query",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":625,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"gZqSf-1",
+			"id":"bugyk",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"columnNames":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Column Names"
+						},
+						"rows":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Rows"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"columnNames",
+						"rows"
+					]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"sqlQuery":{
+							"type":"string",
+							"title":"Sql Query"
+						},
+						"connectionId":{
+							"type":"string",
+							"title":"Connection Id"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"sqlQuery",
+						"connectionId"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":71,
+				"resourceName":"standard_entities_get_connection_details",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"gZqSf-1",
+			"id":"FCCvW",
+			"index":0,
+			"inputs":{
+				"connectionIds":"{{ bugyk.outputs.connectionId }}"
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Get connection details",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":643,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"gZqSf-1",
+			"id":"ZgU6I",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"projectId":{
+							"type":"string",
+							"title":"Project Id"
+						},
+						"datasetId":{
+							"type":"string",
+							"title":"Dataset Id"
+						},
+						"convertedQuery":{
+							"type":"string",
+							"title":"Converted Query"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"projectId",
+						"datasetId",
+						"convertedQuery"
+					]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"userInput":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"User Input"
+						},
+						"sqlQuery":{
+							"type":"string",
+							"title":"Sql Query"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"userInput",
+						"sqlQuery"
+					]
+				},
+				"compile_static":false,
+				"code":"def convertQuery(String sqlQuery, String projectId, String datasetId) {\n    // Pattern to match table names in FROM and JOIN clauses\n    def pattern = ~/(?i)(FROM|JOIN)\\s+([a-zA-Z_][a-zA-Z0-9_]*)/\n\n    // Replace all matches with fully qualified names\n    def convertedQuery = sqlQuery.replaceAll(pattern) { fullMatch, clause, tableName ->\n        \"${clause} ${projectId}.${datasetId}.${tableName}\"\n    }\n\n    return convertedQuery\n}\n\nif (binding.hasVariable('userInput')) {\n    return [\n        projectId: userInput.project_id,\n        datasetId: userInput.dataset_id,\n        convertedQuery: convertQuery(sqlQuery, userInput.project_id, userInput.dataset_id)\n    ]\n}\n",
+				"parameters":{
+					"userInput":"{{ FCCvW.outputs.connectionDetails[0].userInput }}",
+					"sqlQuery":"{{ bugyk.outputs.sqlQuery }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"google_big_query",
+				"resourceVersion":46,
+				"connectionId":"6809e57a38944418b5e6480c",
+				"resourceName":"google_big_query_execute_sql",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"gZqSf-1",
+			"id":"Is4e8",
+			"index":0,
+			"inputs":{
+				"project_id":"{{ ZgU6I.outputs.result.projectId }}",
+				"timeoutMs":1000,
+				"maxResults":1000,
+				"query":"{{ ZgU6I.outputs.result.convertedQuery }}"
+			},
+			"skip":false,
+			"subTitle":"Google Big Query",
+			"title":"Execute SQL query",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":642,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"gZqSf-1",
+			"id":"INSbU",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"rowData":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Row Data"
+						},
+						"columnNames":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Column Names"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"rowData",
+						"columnNames"
+					]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"rows":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Rows"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"rows"
+					]
+				},
+				"compile_static":false,
+				"code":"if(!binding.hasVariable('rows')){\n  return [\"columnNames\":[], \"rowData\":[]]\n}\nreturn [\"columnNames\" : rows?.get(0)?.keySet()?.toList(), \"rowData\": rows]",
+				"parameters":{
+					"rows":{
+						"source":"{{ Is4e8.outputs.rows }}",
+						"ua:type":"mappedArray",
+						"items":"{{ Is4e8.outputs.rows[0] }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":634,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"gZqSf-1",
+			"id":"EVdeU",
+			"index":0,
+			"inputs":{
+				"result":{
+					"columnNames":{
+						"source":"{{ INSbU.outputs.result.columnNames }}",
+						"ua:type":"mappedArray",
+						"items":"{{ INSbU.outputs.result.columnNames[0] }}"
+					},
+					"rows":{
+						"source":"{{ INSbU.outputs.result.rowData }}",
+						"ua:type":"mappedArray",
+						"items":"{{ INSbU.outputs.result.rowData[0] }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":45010,
+	"runtimeConnectionAppNames":[
+		"google_big_query"
+	],
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		
+	],
+	"version":74
+}
