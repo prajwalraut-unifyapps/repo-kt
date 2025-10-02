@@ -1,0 +1,474 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1752511076728,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759243616441,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed6023e6682b9a51ecba",
+		"status":"DEPLOYED",
+		"version":33,
+		"workflowVersion":56
+	},
+	"edges":[
+		{
+			"fromNodeId":"ub1OO",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_ukEyP",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_ukEyP",
+			"name":"success",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_aWs4W",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_ukEyP",
+			"name":"error",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_a0hcc",
+			"type":"error"
+		},
+		{
+			"fromNodeId":"n_aWs4W",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"2892Q",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_a0hcc",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"2892Q",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"686e503200482541b65b8b2b",
+	"lastModifiedBy":-1,
+	"lcName":"storagebyua indexing wrapper",
+	"modifiedTime":1759371934150,
+	"name":"StorageByUA indexing Wrapper",
+	"nodes":[
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"callables",
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"AdoDF-1",
+			"id":"ub1OO",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"status":{
+							"type":"string",
+							"title":"Status"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"signalProperties":{
+							"type":"object",
+							"properties":{
+								"signalId":{
+									"type":"string",
+									"title":"signalId"
+								},
+								"waitingInstanceId":{
+									"type":"string",
+									"title":"waitingInstanceId"
+								},
+								"waitingInstanceRunTimeType":{
+									"type":"string",
+									"title":"waitingInstanceRunTimeType"
+								}
+							},
+							"title":"signalProperties",
+							"additionalProperties":false
+						},
+						"filterable":{
+							"type":"boolean",
+							"title":"filterable"
+						},
+						"agentId":{
+							"type":"string",
+							"title":"agentId"
+						},
+						"skippedFromReporting":{
+							"type":"boolean",
+							"title":"skippedFromReporting"
+						},
+						"modelId":{
+							"type":"string",
+							"title":"modelId"
+						},
+						"displayName":{
+							"type":"string",
+							"title":"displayName"
+						},
+						"entityType":{
+							"type":"string",
+							"title":"entityType"
+						},
+						"nameField":{
+							"type":"boolean",
+							"title":"nameField"
+						},
+						"sortable":{
+							"type":"boolean",
+							"title":"sortable"
+						},
+						"searchable":{
+							"type":"boolean",
+							"title":"searchable"
+						},
+						"knowledgeId":{
+							"type":"string",
+							"title":"knowledgeId"
+						},
+						"aggregationFieldType":{
+							"type":"string",
+							"title":"aggregationFieldType"
+						},
+						"tableNameUI":{
+							"type":"string",
+							"title":"tableNameUI"
+						},
+						"field":{
+							"type":"string",
+							"title":"field"
+						},
+						"array":{
+							"type":"boolean",
+							"title":"array"
+						},
+						"foreignKeyConstraintEnforced":{
+							"type":"boolean",
+							"title":"foreignKeyConstraintEnforced"
+						},
+						"name":{
+							"type":"string",
+							"title":"name"
+						},
+						"tableId":{
+							"type":"string",
+							"title":"tableId"
+						},
+						"tablePK":{
+							"type":"string",
+							"title":"tablePK"
+						},
+						"updatable":{
+							"type":"boolean",
+							"title":"updatable"
+						},
+						"fieldType":{
+							"type":"string",
+							"title":"fieldType"
+						},
+						"dependsOn":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Depends On"
+						},
+						"desc":{
+							"type":"string",
+							"title":"Desc"
+						},
+						"format":{
+							"type":"string",
+							"title":"Format"
+						},
+						"tableDesc":{
+							"type":"string",
+							"title":"Table Desc"
+						},
+						"embModel":{
+							"type":"string",
+							"title":"Emb Model"
+						},
+						"lookup":{
+							"type":"string",
+							"title":"Lookup"
+						},
+						"generateDescUsingLLM":{
+							"type":"boolean",
+							"title":"Generate Desc Using LLM"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.parameters.aggregationFieldType",
+					"root.parameters.array",
+					"root.parameters.displayName",
+					"root.parameters.entityType",
+					"root.parameters.field",
+					"root.parameters.fieldType",
+					"root.parameters.filterable",
+					"root.parameters.foreignKeyConstraintEnforced",
+					"root.parameters.name",
+					"root.parameters.nameField",
+					"root.parameters.searchable",
+					"root.parameters.skippedFromReporting",
+					"root.parameters.sortable",
+					"root.parameters.updatable",
+					"root.parameters.tableId",
+					"root.parameters.modelId",
+					"root.parameters.tablePK",
+					"root.parameters.tableNameUI",
+					"root.parameters.knowledgeId",
+					"root.parameters.agentId"
+				]
+			},
+			"context":{
+				"appName":"callables",
+				"resourceVersion":460,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"MANUAL",
+			"groupId":"AdoDF-1",
+			"id":"n_ukEyP",
+			"index":0,
+			"inputs":{
+				"automationId":"686e04d3c92a3538c99188b0",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"aggregationFieldType":"{{ ub1OO.outputs.aggregationFieldType }}",
+					"array":"{{ ub1OO.outputs.array }}",
+					"displayName":"{{ ub1OO.outputs.displayName }}",
+					"entityType":"{{ ub1OO.outputs.entityType }}",
+					"field":"{{ ub1OO.outputs.field }}",
+					"fieldType":"{{ ub1OO.outputs.fieldType }}",
+					"filterable":"{{ ub1OO.outputs.filterable }}",
+					"foreignKeyConstraintEnforced":"{{ ub1OO.outputs.foreignKeyConstraintEnforced }}",
+					"name":"{{ ub1OO.outputs.name }}",
+					"nameField":"{{ ub1OO.outputs.nameField }}",
+					"searchable":"{{ ub1OO.outputs.searchable }}",
+					"skippedFromReporting":"{{ ub1OO.outputs.skippedFromReporting }}",
+					"sortable":"{{ ub1OO.outputs.sortable }}",
+					"updatable":"{{ ub1OO.outputs.updatable }}",
+					"tableId":"{{ ub1OO.outputs.tableId }}",
+					"modelId":"{{ ub1OO.outputs.modelId }}",
+					"tablePK":"{{ ub1OO.outputs.tablePK }}",
+					"tableNameUI":"{{ ub1OO.outputs.tableNameUI }}",
+					"knowledgeId":"{{ ub1OO.outputs.knowledgeId }}",
+					"agentId":"{{ ub1OO.outputs.agentId }}",
+					"dependsOn":{
+						"source":"{{ ub1OO.outputs.dependsOn }}",
+						"ua:type":"mappedArray",
+						"items":"{{ ub1OO.outputs.dependsOn[0] }}"
+					},
+					"description":"{{ ub1OO.outputs.desc }}",
+					"format":"{{ ub1OO.outputs.format }}",
+					"embModel":"{{ ub1OO.outputs.embModel }}",
+					"tableDesc":"{{ ub1OO.outputs.tableDesc }}",
+					"lookup":"{{ ub1OO.outputs.lookup }}",
+					"generateDescUsingLLM":"{{ ub1OO.outputs.generateDescUsingLLM }}"
+				}
+			},
+			"options":{
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false,
+					"slidingWindowType":"COUNT_BASED"
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"unit":"MINUTES",
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"MANUAL",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"signals_by_unifyapps",
+				"resourceVersion":454,
+				"resourceName":"signals_by_unifyapps_emit_signal",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_ukEyP@AdoDF-1@success",
+			"id":"n_aWs4W",
+			"index":0,
+			"inputs":{
+				"automation_id":"686d21e028dbd215486bb6f7",
+				"with_signal_id":true,
+				"waitingInstanceRuntimeType":"{{ ub1OO.outputs.signalProperties.waitingInstanceRunTimeType }}",
+				"waitingInstanceId":"{{ ub1OO.outputs.signalProperties.waitingInstanceId }}",
+				"signal_id":"{{ ub1OO.outputs.signalProperties.signalId }}",
+				"signal_payload":{
+					"success":true,
+					"fieldName":"{{ ub1OO.outputs.name }}"
+				},
+				"nodeId":"n_iSpSU"
+			},
+			"skip":false,
+			"subTitle":"Signals by UnifyApps",
+			"title":"Emit signal",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"signals_by_unifyapps",
+				"resourceVersion":454,
+				"resourceName":"signals_by_unifyapps_emit_signal",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_ukEyP@AdoDF-1@error",
+			"id":"n_a0hcc",
+			"index":0,
+			"inputs":{
+				"automation_id":"686d21e028dbd215486bb6f7",
+				"with_signal_id":true,
+				"waitingInstanceRuntimeType":"{{ ub1OO.outputs.signalProperties.waitingInstanceRunTimeType }}",
+				"waitingInstanceId":"{{ ub1OO.outputs.signalProperties.waitingInstanceId }}",
+				"signal_id":"{{ ub1OO.outputs.signalProperties.signalId }}",
+				"signal_payload":{
+					"success":false,
+					"fieldName":"{{ ub1OO.outputs.name }}"
+				},
+				"nodeId":"n_iSpSU"
+			},
+			"skip":false,
+			"subTitle":"Signals by UnifyApps",
+			"title":"Emit signal",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"AdoDF-1",
+			"id":"2892Q",
+			"index":0,
+			"inputs":{
+				"result":{
+					"status":"OK"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":32562,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		
+	],
+	"version":57
+}
