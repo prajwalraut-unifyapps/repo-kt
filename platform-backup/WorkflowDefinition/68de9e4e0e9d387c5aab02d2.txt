@@ -23,29 +23,6 @@
 			"fromNodeId":"n_d5lsD",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_vqt0t",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_vqt0t",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_6HtcA",
-			"type":"if"
-		},
-		{
-			"fromNodeId":"_6HtcA",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_QL5ZP",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_vqt0t",
-			"name":"no",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"_QL5ZP",
 			"type":"next"
 		}
@@ -53,7 +30,7 @@
 	"id":"68de9e4e0e9d387c5aab02d2",
 	"lastModifiedBy":59995,
 	"lcName":"partition size",
-	"modifiedTime":1759445829916,
+	"modifiedTime":1759446108550,
 	"name":"partition size",
 	"nodes":[
 		{
@@ -68,6 +45,62 @@
 			"id":"_EOY36",
 			"index":1,
 			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"slackMessage":{
+							"type":"string",
+							"title":"Slack Message"
+						},
+						"alertPartitions":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"dbName":{
+										"type":"string",
+										"title":"Db Name"
+									},
+									"tableName":{
+										"type":"string",
+										"title":"Table Name"
+									},
+									"partitions":{
+										"type":"array",
+										"items":{
+											"type":"object",
+											"properties":{
+												"partitionName":{
+													"type":"string",
+													"title":"Partition Name"
+												},
+												"partitionSize":{
+													"type":"string",
+													"title":"Partition Size"
+												}
+											},
+											"additionalProperties":false,
+											"required":[
+												"partitionName",
+												"partitionSize"
+											]
+										},
+										"title":"Partitions"
+									}
+								},
+								"additionalProperties":false,
+								"required":[
+									"dbName",
+									"tableName",
+									"partitions"
+								]
+							},
+							"title":"Alert Partitions"
+						}
+					}
+				},
 				"setup":{
 					"type":"object",
 					"additionalProperties":false,
@@ -223,19 +256,42 @@
 							"items":{
 								"type":"object",
 								"properties":{
-									"partitionName":{
+									"DB_NAME":{
 										"type":"string",
-										"title":"Partition Name"
+										"title":"DB NAME"
 									},
-									"partitionSize":{
+									"TABLE_NAME":{
 										"type":"string",
-										"title":"Partition Size"
+										"title":"TABLE NAME"
+									},
+									"partitions":{
+										"type":"array",
+										"items":{
+											"type":"object",
+											"properties":{
+												"PARTITION_NAME":{
+													"type":"string",
+													"title":"PARTITION NAME"
+												},
+												"DATA_SIZE":{
+													"type":"string",
+													"title":"DATA SIZE"
+												}
+											},
+											"additionalProperties":false,
+											"required":[
+												"PARTITION_NAME",
+												"DATA_SIZE"
+											]
+										},
+										"title":"Partitions"
 									}
 								},
 								"additionalProperties":false,
 								"required":[
-									"partitionName",
-									"partitionSize"
+									"DB_NAME",
+									"TABLE_NAME",
+									"partitions"
 								]
 							},
 							"title":"Alert Partitions"
@@ -278,85 +334,37 @@
 		},
 		{
 			"context":{
-				"appName":"if_else",
-				"resourceVersion":2,
-				"resourceName":"if_else_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
-			"id":"_vqt0t",
-			"index":4,
-			"inputs":{
-				"filters":[
-					{
-						"property":"=LEN({{ n_d5lsD.outputs.result.alertPartitions }})",
-						"filter":{
-							"operator":"GT",
-							"value":"0"
-						}
-					}
-				],
-				"operator":"AND"
-			},
-			"skip":false,
-			"subTitle":"Condition",
-			"title":"Condition",
-			"type":"IF_ELSE"
-		},
-		{
-			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":2,
-				"resourceName":"variable_by_unifyapps_add_item_to_list",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_vqt0t@n_nST1M@n_WOcYr@_jMFmS-1@l@3@y",
-			"id":"_6HtcA",
-			"index":5,
-			"inputs":{
-				"itemToAdd":{
-					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
-					"tableName":"{{ n_WOcYr.outputs.item.TableName }}",
-					"routineLoadName":"{{ n_WOcYr.outputs.item.Name }}",
-					"buckets":{
-						"items":" ",
-						"ua:type":"mappedArray"
-					},
-					"partitionSizes":{
-						"ua:type":"mappedArray",
-						"items":{
-							"partitionSize":"{{ n_d5lsD.outputs.result.alertPartitions[0].partitionSize }}",
-							"partitionName":"{{ n_d5lsD.outputs.result.alertPartitions[0].partitionName }}"
-						},
-						"source":"{{ n_d5lsD.outputs.result.alertPartitions }}"
-					}
-				},
-				"insertLocation":"END",
-				"listName":"{{ _6VeEl.outputs.items[0] }}"
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Add item to list",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"callables",
 				"resourceName":"callables_return_to_automation",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"_QL5ZP",
-			"index":6,
+			"index":4,
+			"inputs":{
+				"result":{
+					"slackMessage":"{{ n_d5lsD.outputs.result.slackMessage }}",
+					"alertPartitions":{
+						"source":"{{ n_d5lsD.outputs.result.alertPartitions }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"dbName":"{{ n_d5lsD.outputs.result.alertPartitions[0].DB_NAME }}",
+							"tableName":"{{ n_d5lsD.outputs.result.alertPartitions[0].TABLE_NAME }}",
+							"partitions":{
+								"source":"{{ n_d5lsD.outputs.result.alertPartitions[0].partitions }}",
+								"ua:type":"mappedArray",
+								"items":{
+									"partitionName":"{{ n_d5lsD.outputs.result.alertPartitions[0].partitions[0].PARTITION_NAME }}",
+									"partitionSize":"{{ n_d5lsD.outputs.result.alertPartitions[0].partitions[0].DATA_SIZE }}"
+								}
+							}
+						}
+					}
+				}
+			},
 			"skip":false,
 			"subTitle":"Callable",
 			"title":"Respond to automation",
@@ -380,5 +388,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
