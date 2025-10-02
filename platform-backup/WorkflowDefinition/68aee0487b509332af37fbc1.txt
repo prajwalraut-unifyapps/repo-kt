@@ -5,12 +5,12 @@
 	"createdTime":1756473929006,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655402535,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f3aa38757c179b123db4",
+		"deployedAt":1759243614064,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed5e9213d707c2d2748b",
 		"status":"DEPLOYED",
-		"version":17,
-		"workflowVersion":24
+		"version":19,
+		"workflowVersion":26
 	},
 	"edges":[
 		{
@@ -187,7 +187,7 @@
 	"id":"68aee0487b509332af37fbc1",
 	"lastModifiedBy":-1,
 	"lcName":"fetch referred knowledges",
-	"modifiedTime":1759243581079,
+	"modifiedTime":1759371931924,
 	"name":"Fetch referred Knowledges",
 	"nodes":[
 		{
@@ -1439,5 +1439,5 @@
 	"tags":[
 		
 	],
-	"version":25
+	"version":27
 }
