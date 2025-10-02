@@ -5,12 +5,12 @@
 	"createdTime":1750490316349,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655391344,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f39f38757c179b123be4",
+		"deployedAt":1759243604844,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed549213d707c2d27449",
 		"status":"DEPLOYED",
-		"version":60,
-		"workflowVersion":81
+		"version":62,
+		"workflowVersion":83
 	},
 	"edges":[
 		{
@@ -194,7 +194,7 @@
 	"id":"6846f16737a4d938a3f8cc03",
 	"lastModifiedBy":-1,
 	"lcName":"ai eval | metrics | conversation completeness",
-	"modifiedTime":1759243572155,
+	"modifiedTime":1759371923090,
 	"name":"AI Eval | Metrics | Conversation Completeness",
 	"nodes":[
 		{
@@ -1295,5 +1295,5 @@
 	"tags":[
 		
 	],
-	"version":82
+	"version":84
 }
