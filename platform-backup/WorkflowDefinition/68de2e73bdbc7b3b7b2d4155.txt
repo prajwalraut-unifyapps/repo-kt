@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759391347035,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_GyWfp",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_QtK8o",
+			"type":"next"
+		}
+	],
+	"id":"68de2e73bdbc7b3b7b2d4155",
+	"lastModifiedBy":2721,
+	"lcName":"smapler",
+	"modifiedTime":1759391347035,
+	"name":"smapler",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_GyWfp-1",
+			"id":"_GyWfp",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_GyWfp-1",
+			"id":"_QtK8o",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":2721,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
