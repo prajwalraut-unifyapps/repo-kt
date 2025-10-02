@@ -1,17 +1,16 @@
 {
 	"appsUsed":[
-		"slack",
 		"storage_by_unifyapps"
 	],
 	"createdTime":1757817215003,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758168486486,
-		"deployedBy":59995,
-		"deployedDefinitionId":"68cb85a6a2df044ca76f7d64",
-		"status":"DEPLOYED",
-		"version":12,
-		"workflowVersion":53
+		"deployedAt":1758718644236,
+		"deployedBy":33,
+		"deployedDefinitionId":"68d3eab30cb8e01403f411e8",
+		"status":"PAUSED",
+		"version":13,
+		"workflowVersion":93
 	},
 	"edges":[
 		{
@@ -153,22 +152,7 @@
 			"name":"yes",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_cBONm",
-			"type":"if"
-		},
-		{
-			"fromNodeId":"n_cBONm",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_9wOXJ",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_9wOXJ",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_duhUX",
+			"toNodeId":"_z0WSp",
 			"type":"if"
 		},
 		{
@@ -380,16 +364,8 @@
 			"type":"if"
 		},
 		{
-			"fromNodeId":"n_duhUX",
+			"fromNodeId":"_z0WSp",
 			"name":"loopback",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_WOcYr",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_9wOXJ",
-			"name":"no",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_WOcYr",
@@ -511,64 +487,6 @@
 			"fromNodeId":"n_WOcYr",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_MK3U9",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_MK3U9",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_ZnT6t",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_ZnT6t",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_U9KDk",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_U9KDk",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_voSlU",
-			"type":"if"
-		},
-		{
-			"fromNodeId":"_voSlU",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_M9dnB",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_M9dnB",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_6MWgY",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_U9KDk",
-			"name":"no",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_1bbcz",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_6MWgY",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_aXMZM",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_1bbcz",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"_aXMZM",
 			"type":"next"
 		},
@@ -603,6 +521,13 @@
 			"type":"next"
 		},
 		{
+			"fromNodeId":"_EQKPq",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_HmRJS",
+			"type":"next"
+		},
+		{
 			"fromNodeId":"_Ed4F0",
 			"priority":0,
 			"skip":false,
@@ -610,7 +535,7 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"_EQKPq",
+			"fromNodeId":"_HmRJS",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"_9xKNR",
@@ -647,6 +572,13 @@
 			"type":"next"
 		},
 		{
+			"fromNodeId":"_ODwaO",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_PA7QE",
+			"type":"next"
+		},
+		{
 			"fromNodeId":"_xe7MC",
 			"priority":0,
 			"skip":false,
@@ -654,7 +586,7 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"_ODwaO",
+			"fromNodeId":"_PA7QE",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"_DKDTU",
@@ -691,6 +623,13 @@
 			"type":"next"
 		},
 		{
+			"fromNodeId":"_izaqB",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Wv2bW",
+			"type":"next"
+		},
+		{
 			"fromNodeId":"_ANDa3",
 			"priority":0,
 			"skip":false,
@@ -698,7 +637,7 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"_izaqB",
+			"fromNodeId":"_Wv2bW",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"_3dH62",
@@ -735,6 +674,13 @@
 			"type":"next"
 		},
 		{
+			"fromNodeId":"_7DI3g",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_nHiIA",
+			"type":"next"
+		},
+		{
 			"fromNodeId":"_TNCsd",
 			"priority":0,
 			"skip":false,
@@ -742,7 +688,7 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"_7DI3g",
+			"fromNodeId":"_nHiIA",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"_oSfM0",
@@ -779,6 +725,13 @@
 			"type":"next"
 		},
 		{
+			"fromNodeId":"_XAGCp",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Ul4xT",
+			"type":"next"
+		},
+		{
 			"fromNodeId":"_axNoi",
 			"priority":0,
 			"skip":false,
@@ -786,7 +739,7 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"_XAGCp",
+			"fromNodeId":"_Ul4xT",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"_mTnAB",
@@ -811,13 +764,6 @@
 			"fromNodeId":"_jP4zx",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_y1ErV",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_y1ErV",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"_9P9Co",
 			"type":"next"
 		},
@@ -830,6 +776,13 @@
 			"type":"next"
 		},
 		{
+			"fromNodeId":"_mK9Cz",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_OvB0j",
+			"type":"next"
+		},
+		{
 			"fromNodeId":"_9P9Co",
 			"priority":0,
 			"skip":false,
@@ -837,7 +790,7 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"_mK9Cz",
+			"fromNodeId":"_OvB0j",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"_Xc40g",
@@ -862,13 +815,6 @@
 			"fromNodeId":"_wwCEw",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_TbzdC",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_TbzdC",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"_A4qEN",
 			"type":"next"
 		},
@@ -881,25 +827,18 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"_A4qEN",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_uDcFp",
-			"type":"next"
-		},
-		{
 			"fromNodeId":"_VKHcU",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_uDcFp",
+			"toNodeId":"_wR0DC",
 			"type":"next"
 		}
 	],
 	"id":"68c6239b79f7e65c8a16452f",
-	"lastModifiedBy":33,
-	"lcName":"test table health copy",
-	"modifiedTime":1758717767967,
-	"name":"Test table health copy",
+	"lastModifiedBy":59995,
+	"lcName":"infra | starrocks | alert |  table health",
+	"modifiedTime":1759407196165,
+	"name":"INFRA | STARROCKS | ALERT |  Table health",
 	"nodes":[
 		{
 			"context":{
@@ -908,7 +847,7 @@
 				"resourceName":"schedule_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"n_LMBIr",
@@ -918,7 +857,7 @@
 				"sequential":false,
 				"timezone":"America/Toronto",
 				"interval":15,
-				"frequency":"DAYS"
+				"frequency":"HOURS"
 			},
 			"skip":false,
 			"subTitle":"Schedule",
@@ -936,7 +875,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"n_96ZBq",
@@ -947,6 +886,57 @@
 				"synchronous":true,
 				"version":"-1",
 				"parameters":{}
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"global":false
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":true,
+					"timeToLive":"3600",
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"STOP",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
 			},
 			"skip":false,
 			"subTitle":"Callable",
@@ -961,7 +951,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"n_cd79r",
@@ -973,7 +963,7 @@
 							"property":"id",
 							"filter":{
 								"operator":"EQUAL",
-								"value":"starrocks_table_health_alert"
+								"value":"STARROCKS_TABLE_HEALTH_table_health"
 							}
 						}
 					],
@@ -1012,7 +1002,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_auxBn",
@@ -1058,7 +1048,7 @@
 					}
 				},
 				"compile_static":false,
-				"code":"def starrocksConfig = objects?.find { it.id == \"starrocks_table_health_alert\" }\ndef compactionMin = starrocksConfig?.properties?.config?.minimumCompactionScore\nif (compactionMin != null) {\n  compactionMin = Double.parseDouble(compactionMin.toString())\n}\n\ndef routineLoadLagThreshold = starrocksConfig?.properties?.config?.routineLoadLagThreshold\nif (routineLoadLagThreshold != null) {\n  routineLoadLagThreshold = Double.parseDouble(routineLoadLagThreshold.toString())\n}\n\ndef minimumBucketCount = starrocksConfig?.properties?.config?.minimumBucketCount\nif (minimumBucketCount != null) {\n  minimumBucketCount = Integer.parseInt(minimumBucketCount.toString())\n}\n\ndef minimumStorageSizeGB = starrocksConfig?.properties?.config?.minimumStorageSizeGB\nif (minimumStorageSizeGB != null) {\n  minimumStorageSizeGB = Double.parseDouble(minimumStorageSizeGB.toString())\n}\n\nreturn [\"compactionMin\": compactionMin, \"lagThreshold\": routineLoadLagThreshold, \"minimumBucketCount\": minimumBucketCount, \"minimumStorageSizeGB\": minimumStorageSizeGB]",
+				"code":"if(!binding.hasVariable('objects')) return [:];\n\ndef starrocksConfig = objects?.find { it.id == \"STARROCKS_TABLE_HEALTH_table_health\" }?.properties?.config\n\ndef compactionMin = Double.parseDouble(\n    (starrocksConfig?.minimumCompactionScore ?: \"100\").toString()\n)\n\ndef routineLoadLagThreshold = Double.parseDouble(\n    (starrocksConfig?.routineLoadLagThreshold ?: \"100000\").toString()\n)\n\ndef minimumBucketCount = Integer.parseInt(\n    (starrocksConfig?.minimumBucketCount ?: \"10\").toString()\n)\n\ndef minimumStorageSizeGB = Double.parseDouble(\n    (starrocksConfig?.minimumStorageSizeGB ?: \"55\").toString()\n)\n\nreturn [\n    \"compactionMin\": compactionMin, \n    \"lagThreshold\": routineLoadLagThreshold, \n    \"minimumBucketCount\": minimumBucketCount, \n    \"minimumStorageSizeGB\": minimumStorageSizeGB\n]",
 				"captureStdOutput":false,
 				"parameters":{
 					"objects":{
@@ -1081,7 +1071,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"n_A4kqi",
@@ -1180,7 +1170,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_fimnV",
@@ -1191,7 +1181,7 @@
 				"requestTimeoutInSecs":-1,
 				"httpMethod":"POST",
 				"body":{
-					"sql":"show routine load limit 15;"
+					"sql":"show routine load;"
 				},
 				"connectionType":"DIRECT",
 				"sslVerify":false,
@@ -1408,7 +1398,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"n_U8Jua",
@@ -1727,7 +1717,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"n_CWqg9",
@@ -2040,7 +2030,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_6VeEl",
@@ -2379,7 +2369,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_Bfd6E",
@@ -2712,7 +2702,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_D05iT",
@@ -3061,7 +3051,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_cAiLs",
@@ -3364,7 +3354,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_gVB1y",
@@ -3677,7 +3667,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"n_WOcYr",
@@ -3698,7 +3688,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_WOcYr@_jMFmS-1@l",
 			"id":"n_nST1M",
@@ -3765,7 +3755,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@1",
 			"id":"n_nST1M@1",
@@ -3790,7 +3780,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@1",
 			"id":"_PLMxF",
@@ -3919,7 +3909,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@1",
 			"id":"n_I1uNl",
@@ -4036,7 +4026,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@1",
 			"id":"_BWkSS",
@@ -4113,7 +4103,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@1",
 			"id":"n_1v1ta",
@@ -4137,77 +4127,17 @@
 		},
 		{
 			"context":{
-				"appName":"callables",
-				"resourceVersion":458,
-				"resourceName":"callables_call_automation",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"n_1v1ta@n_nST1M@n_WOcYr@_jMFmS-1@l@1@y",
-			"id":"n_cBONm",
-			"index":21,
-			"inputs":{
-				"automationId":"6856aef9e774677ae6ae7ff5",
-				"runtimeConnections":{},
-				"synchronous":true,
-				"version":"-1",
-				"parameters":{
-					"reportGroup":"PLATFORM",
-					"reportType":"{{ n_WOcYr.outputs.item.TableName }}",
-					"customerId":"{{ __RUN__.outputs.customerId }}",
-					"sendAlertOnly":true
-				}
-			},
-			"skip":false,
-			"subTitle":"Callable",
-			"title":"Call automation",
-			"type":"CALL_WORKFLOW"
-		},
-		{
-			"context":{
-				"appName":"if_else",
-				"resourceVersion":767,
-				"resourceName":"if_else_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"n_1v1ta@n_nST1M@n_WOcYr@_jMFmS-1@l@1@y",
-			"id":"n_9wOXJ",
-			"index":22,
-			"inputs":{
-				"filters":[
-					{
-						"property":"{{ n_cBONm.outputs.success }}",
-						"filter":{
-							"operator":"EQUAL",
-							"value":"false"
-						}
-					}
-				],
-				"operator":"AND"
-			},
-			"skip":false,
-			"subTitle":"Condition",
-			"title":"Condition",
-			"type":"IF_ELSE"
-		},
-		{
-			"context":{
 				"appName":"variable_by_unifyapps",
 				"resourceVersion":814,
 				"resourceName":"variable_by_unifyapps_add_item_to_list",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
-			"groupId":"n_9wOXJ@n_1v1ta@n_nST1M@n_WOcYr@_jMFmS-1@l@1@y@y",
-			"id":"n_duhUX",
-			"index":23,
+			"groupId":"n_1v1ta@n_nST1M@n_WOcYr@_jMFmS-1@l@1@y",
+			"id":"_z0WSp",
+			"index":21,
 			"inputs":{
 				"itemToAdd":{
 					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
@@ -4240,11 +4170,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@2",
 			"id":"n_nST1M@2",
-			"index":24,
+			"index":22,
 			"inputs":{
 				"name":"Bucket "
 			},
@@ -4265,11 +4195,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@2",
 			"id":"_zNca6",
-			"index":25,
+			"index":23,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -4463,7 +4393,7 @@
 				}
 			},
 			"skip":false,
-			"subTitle":"Routine Load for Table",
+			"subTitle":"Get Partitions ",
 			"title":"Execute REST request",
 			"type":"ACTION"
 		},
@@ -4486,11 +4416,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@2",
 			"id":"n_ab9zj",
-			"index":26,
+			"index":24,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -4582,11 +4512,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@2",
 			"id":"n_bY8K0",
-			"index":27,
+			"index":25,
 			"inputs":{
 				"filters":[
 					{
@@ -4612,11 +4542,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_bY8K0@n_nST1M@n_WOcYr@_jMFmS-1@l@2@y",
 			"id":"n_jqjfO",
-			"index":28,
+			"index":26,
 			"inputs":{
 				"itemToAdd":{
 					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
@@ -4644,11 +4574,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"n_nST1M@3",
-			"index":29,
+			"index":27,
 			"inputs":{
 				"name":"Storage Size"
 			},
@@ -4664,11 +4594,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"n_6a9km",
-			"index":30,
+			"index":28,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -4756,11 +4686,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"n_d5lsD",
-			"index":31,
+			"index":29,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -4816,8 +4746,8 @@
 						}
 					}
 				},
-				"code":"if (!binding.hasVariable('partitions')) {\n    return [\"slackMessage\": \"\", \"alertPartitions\": []]\n}\n\ndef slackMessage = new StringBuilder()\nslackMessage << \"\\n\\n\"\nalertPartitions = []\n\ndef items = []\ndef now = System.currentTimeMillis()\n\ndef timestamps = []\n\npartitions.each { partition ->\n    def pv = partition.PARTITION_VALUE\n    long start\n    long end\n    if (pv.contains(\"DATETIME\")) {\n        def matchesDate = (pv =~ /\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}/)\n        if (matchesDate.size() >= 2) {\n            start = java.sql.Timestamp.valueOf(matchesDate[0]).time\n            end = java.sql.Timestamp.valueOf(matchesDate[1]).time\n        } \n    } else {\n        def matchesMillis = (pv =~ /\\d{13}/)\n        if (matchesMillis.size() >= 2) {\n            start = matchesMillis[0] as Long\n            end = matchesMillis[1] as Long\n        }\n    }\n    if (now >= start && now < end) {\n        items << partition\n    }\n}\n\nitems.each { partition ->\n    slackMessage << \"*DB:* `${partition.DB_NAME}`\\n\"\n    slackMessage << \"*Table:* `${partition.TABLE_NAME}`\\n\"\n    slackMessage << \"*Partition:* `${partition.PARTITION_NAME}`\\n\"\n    slackMessage << \"*Size:* `${partition.DATA_SIZE}`\\n\"\n    slackMessage << \"-----------------------------\\n\"\n    alertPartitions << [\"partitionName\": partition.PARTITION_NAME, \"size\": partition.DATA_SIZE]\n}\n\nreturn [\"slackMessage\": slackMessage ,\"stamps\":timestamps, \"alertPartitions\": alertPartitions]\n",
 				"compile_static":false,
+				"code":"if (!binding.hasVariable('partitions')) {\n    return [\"slackMessage\": \"\", \"alertPartitions\": []]\n}\n\ndef slackMessage = new StringBuilder()\nslackMessage << \"\\n\\n\"\nalertPartitions = []\n\ndef items = []\ndef now = System.currentTimeMillis()\n\ndef timestamps = []\n\npartitions.each { partition ->\n    def pv = partition.PARTITION_VALUE\n    long start\n    long end\n    if (pv.contains(\"DATETIME\")) {\n        def matchesDate = (pv =~ /\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}/)\n        if (matchesDate.size() >= 2) {\n            if (matchesDate[0] == \"0000-00-00 00:00:00\") {\n                // This is an invalid or uninitialized partition, skip it\n            } else {\n                start = java.sql.Timestamp.valueOf(matchesDate[0]).time\n                end = java.sql.Timestamp.valueOf(matchesDate[1]).time\n            }\n        } \n    } else {\n        def matchesMillis = (pv =~ /\\d{13}/)\n        if (matchesMillis.size() >= 2) {\n            start = matchesMillis[0] as Long\n            end = matchesMillis[1] as Long\n        }\n    }\n    if (start != null && end != null && now >= start && now < end) {\n        items << partition\n    }\n}\n\nitems.each { partition ->\n    slackMessage << \"*DB:* `${partition.DB_NAME}`\\n\"\n    slackMessage << \"*Table:* `${partition.TABLE_NAME}`\\n\"\n    slackMessage << \"*Partition:* `${partition.PARTITION_NAME}`\\n\"\n    slackMessage << \"*Size:* `${partition.DATA_SIZE}`\\n\"\n    slackMessage << \"-----------------------------\\n\"\n    alertPartitions << [\"partitionName\": partition.PARTITION_NAME, \"size\": partition.DATA_SIZE]\n}\n\nreturn [\"slackMessage\": slackMessage ,\"stamps\":timestamps, \"alertPartitions\": alertPartitions]",
 				"captureStdOutput":false,
 				"parameters":{
 					"partitions":{
@@ -4840,11 +4770,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"_vqt0t",
-			"index":32,
+			"index":30,
 			"inputs":{
 				"filters":[
 					{
@@ -4870,11 +4800,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_vqt0t@n_nST1M@n_WOcYr@_jMFmS-1@l@3@y",
 			"id":"_6HtcA",
-			"index":33,
+			"index":31,
 			"inputs":{
 				"itemToAdd":{
 					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
@@ -4909,11 +4839,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@4",
 			"id":"n_nST1M@4",
-			"index":34,
+			"index":32,
 			"inputs":{
 				"name":"persistent index"
 			},
@@ -4934,11 +4864,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@4",
 			"id":"_j3OdX",
-			"index":35,
+			"index":33,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -5057,7 +4987,7 @@
 				}
 			},
 			"skip":false,
-			"subTitle":"Routine Load for Table",
+			"subTitle":"Get table create ",
 			"title":"Execute REST request",
 			"type":"ACTION"
 		},
@@ -5069,11 +4999,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@4",
 			"id":"_6AG7s",
-			"index":36,
+			"index":34,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -5124,11 +5054,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@4",
 			"id":"n_LEVUH",
-			"index":37,
+			"index":35,
 			"inputs":{
 				"filters":[
 					{
@@ -5154,11 +5084,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_LEVUH@n_nST1M@n_WOcYr@_jMFmS-1@l@4@y",
 			"id":"n_NSutB",
-			"index":38,
+			"index":36,
 			"inputs":{
 				"itemToAdd":{
 					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
@@ -5185,11 +5115,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@5",
 			"id":"n_nST1M@5",
-			"index":39,
+			"index":37,
 			"inputs":{
 				"name":"compaction score"
 			},
@@ -5210,11 +5140,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@5",
 			"id":"_BuzLR",
-			"index":40,
+			"index":38,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -5437,7 +5367,7 @@
 				}
 			},
 			"skip":false,
-			"subTitle":"Routine Load for Table",
+			"subTitle":"Get partitions compaction score",
 			"title":"Execute REST request",
 			"type":"ACTION"
 		},
@@ -5449,11 +5379,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@5",
 			"id":"n_OsTze",
-			"index":41,
+			"index":39,
 			"inputs":{
 				"filters":[
 					{
@@ -5479,11 +5409,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_OsTze@n_nST1M@n_WOcYr@_jMFmS-1@l@5@y",
 			"id":"n_fIxNz",
-			"index":42,
+			"index":40,
 			"inputs":{
 				"itemToAdd":{
 					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
@@ -5515,11 +5445,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@6",
 			"id":"n_nST1M@6",
-			"index":43,
+			"index":41,
 			"inputs":{
 				"name":"routine load ingestion lag"
 			},
@@ -5540,11 +5470,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@6",
 			"id":"n_KMp2i",
-			"index":44,
+			"index":42,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -5635,11 +5565,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@6",
 			"id":"n_5tffR",
-			"index":45,
+			"index":43,
 			"inputs":{
 				"filters":[
 					{
@@ -5665,11 +5595,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_5tffR@n_nST1M@n_WOcYr@_jMFmS-1@l@6@y",
 			"id":"n_HYspD",
-			"index":46,
+			"index":44,
 			"inputs":{
 				"itemToAdd":{
 					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
@@ -5693,11 +5623,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@7",
 			"id":"n_nST1M@7",
-			"index":47,
+			"index":45,
 			"inputs":{
 				"name":"missing next partition"
 			},
@@ -5713,11 +5643,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@7",
 			"id":"_1fTuQ",
-			"index":48,
+			"index":46,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -5793,7 +5723,7 @@
 				"certificateType":"CERT_STRING"
 			},
 			"skip":false,
-			"subTitle":"Get Partitions with size > threshold",
+			"subTitle":"get partitions",
 			"title":"Execute REST request",
 			"type":"ACTION"
 		},
@@ -5810,11 +5740,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@7",
 			"id":"_Y9MIK",
-			"index":49,
+			"index":47,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -5902,11 +5832,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@7",
 			"id":"n_h8mwo",
-			"index":50,
+			"index":48,
 			"inputs":{
 				"filters":[
 					{
@@ -5932,11 +5862,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_h8mwo@n_nST1M@n_WOcYr@_jMFmS-1@l@7@y",
 			"id":"n_cFMH1",
-			"index":51,
+			"index":49,
 			"inputs":{
 				"itemToAdd":{
 					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
@@ -5957,423 +5887,6 @@
 			"type":"ACTION"
 		},
 		{
-			"context":{
-				"appName":"custom_http_endpoint",
-				"resourceVersion":871,
-				"resourceName":"custom_http_endpoint_execute",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_jMFmS-1",
-			"id":"_MK3U9",
-			"index":52,
-			"inputs":{
-				"isAsync":false,
-				"enableProxy":false,
-				"requestTimeoutInSecs":-1,
-				"httpMethod":"POST",
-				"body":{
-					"sql":"SELECT table_name, table_schema\nFROM information_schema.tables\nWHERE table_schema LIKE 'REPORTING_%' limit 15;"
-				},
-				"connectionType":"DIRECT",
-				"sslVerify":false,
-				"path":"/internal/sql-report/runSQL/query/{{ n_A4kqi.outputs.customerId }}",
-				"responseSchema":{
-					"type":"object",
-					"additionalProperties":false,
-					"properties":{
-						"hasMore":{
-							"type":"boolean",
-							"title":"hasMore"
-						},
-						"objects":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"table_schema":{
-										"type":"string",
-										"title":"table_schema"
-									},
-									"table_name":{
-										"type":"string",
-										"title":"table_name"
-									}
-								},
-								"additionalProperties":false
-							},
-							"title":"objects"
-						}
-					}
-				},
-				"baseUrl":"{{ n_96ZBq.outputs.baseInternalUrl }}",
-				"httpVersion":"HTTP_2",
-				"bodySchema":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[],
-					"properties":{
-						"sql":{
-							"type":"string",
-							"title":"Sql"
-						}
-					}
-				},
-				"queryParamsList":[
-					{
-						"key":"sqlResourceType",
-						"value":"PLATFORM"
-					}
-				],
-				"responseContentType":"application/json",
-				"authType":"CUSTOM",
-				"requestContentType":"application/json",
-				"ignoreTrailingSlashes":false,
-				"certificateType":"CERT_STRING"
-			},
-			"skip":false,
-			"subTitle":"Get All Reporting Tables",
-			"title":"Execute REST request",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":0,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_jMFmS-1",
-			"id":"n_ZnT6t",
-			"index":53,
-			"inputs":{
-				"output":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"message",
-						"inputs",
-						"outputs"
-					],
-					"properties":{
-						"message":{
-							"type":"string",
-							"title":"Message"
-						},
-						"inputs":{
-							"type":"object",
-							"properties":{
-								"missingCount":{
-									"type":"integer",
-									"title":"Missing Count"
-								}
-							},
-							"additionalProperties":false,
-							"title":"Inputs",
-							"required":[
-								"missingCount"
-							]
-						},
-						"outputs":{
-							"type":"object",
-							"properties":{
-								"missingRoutineLoads":{
-									"type":"array",
-									"items":{
-										"type":"object",
-										"properties":{
-											"dbName":{
-												"type":"string",
-												"title":"Db Name"
-											},
-											"tableName":{
-												"type":"string",
-												"title":"Table Name"
-											}
-										},
-										"additionalProperties":false,
-										"required":[
-											"dbName",
-											"tableName"
-										]
-									},
-									"title":"Missing Routine Loads"
-								}
-							},
-							"additionalProperties":false,
-							"title":"Outputs",
-							"required":[
-								"missingRoutineLoads"
-							]
-						}
-					}
-				},
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"tables",
-						"routines"
-					],
-					"properties":{
-						"tables":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"tableName":{
-										"type":"string",
-										"title":"Table Name"
-									},
-									"dbName":{
-										"type":"string",
-										"title":"Db Name"
-									}
-								},
-								"additionalProperties":false,
-								"required":[
-									"tableName",
-									"dbName"
-								]
-							},
-							"title":"Tables"
-						},
-						"routines":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"tableName":{
-										"type":"string",
-										"title":"Table Name"
-									},
-									"dbName":{
-										"type":"string",
-										"title":"Db Name"
-									}
-								},
-								"additionalProperties":false,
-								"required":[
-									"tableName",
-									"dbName"
-								]
-							},
-							"title":"Routines"
-						}
-					}
-				},
-				"code":"if (!(binding.hasVariable(\"tables\") && tables)) {\n  return [\"missingRoutineLoads\": []]\n}\nif (!(binding.hasVariable(\"routines\") && routines)) {\n  return [\"missingRoutineLoads\": tables]\n}\ndef missingRoutineLoads = [:]\nfor (table in tables) {\n  missingRoutineLoads[table.dbName+\".\"+table.tableName] = [dbName: table.dbName, tableName: table.tableName]\n}\n\ndef messages = [\"The following tables have no routine loads:\\n\\n\"]\n\nfor (routine in routines) {\n  def key = routine.dbName + \".\" + routine.tableName\n  if (missingRoutineLoads.containsKey(key)) {\n    missingRoutineLoads.remove(key)\n  }\n}\nif (missingRoutineLoads.size() > 0) {\n  missingRoutineLoads = missingRoutineLoads.values().toList()\n  for (item in missingRoutineLoads) {\n    messages << \"• Database = \" + item.dbName + \", tableName =  \" + item.tableName + \"\\n\"\n  }\n} else {\n  missingRoutineLoads = []\n}\nreturn [outputs: [missingRoutineLoads: missingRoutineLoads], inputs: [\"missingCount\": missingRoutineLoads.size()], message: messages.join()]",
-				"compile_static":false,
-				"captureStdOutput":false,
-				"parameters":{
-					"tables":{
-						"source":"{{ _MK3U9.outputs.result.objects }}",
-						"ua:type":"mappedArray",
-						"items":{
-							"tableName":"{{ _MK3U9.outputs.result.objects[0].table_name }}",
-							"dbName":"{{ _MK3U9.outputs.result.objects[0].table_schema }}"
-						}
-					},
-					"routines":{
-						"source":"{{ _fimnV.outputs.result.objects }}",
-						"ua:type":"mappedArray",
-						"items":{
-							"tableName":"{{ _fimnV.outputs.result.objects[0].TableName }}",
-							"dbName":"{{ _fimnV.outputs.result.objects[0].DbName }}"
-						}
-					}
-				}
-			},
-			"skip":false,
-			"subTitle":"Get missing routine loads ouptut",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"if_else",
-				"resourceVersion":767,
-				"resourceName":"if_else_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_jMFmS-1",
-			"id":"n_U9KDk",
-			"index":54,
-			"inputs":{
-				"filters":[
-					{
-						"property":"{{ n_ZnT6t.outputs.result.inputs.missingCount }}",
-						"filter":{
-							"operator":"GT",
-							"value":"0"
-						}
-					}
-				],
-				"operator":"AND"
-			},
-			"skip":true,
-			"subTitle":"Condition",
-			"title":"Condition",
-			"type":"IF_ELSE"
-		},
-		{
-			"additional":{
-				"visibleOptionalFields":[
-					"root.record.steps.inputs",
-					"root.record.steps.outputs"
-				]
-			},
-			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":3226,
-				"resourceName":"storage_by_unifyapps_create_record",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"n_U9KDk@_jMFmS-1@y",
-			"id":"_voSlU",
-			"index":55,
-			"inputs":{
-				"writeThroughSessionVariables":false,
-				"object_type":"infra_alert_steps",
-				"skipIfBlank":false,
-				"record":{
-					"alertType":"starrocks_table_health",
-					"rootAutomationId":"{{ __RUN__.outputs.workflowId }}",
-					"rootExecutionId":"{{ __RUN__.outputs.rootExecutionId }}",
-					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
-					"alertCategory":"starrocks",
-					"alertSubType":"missing_routine_loads",
-					"stepsOrder":5,
-					"summary":"Check for missing routine loads",
-					"steps":{
-						"inputs":"{{ n_ZnT6t.outputs.result.inputs }}",
-						"outputs":"{{ n_ZnT6t.outputs.result.outputs }}"
-					},
-					"status":"CRITICAL",
-					"stepDescription":"Check if there are any reporting tables in starrocks that do not have an associated routine load",
-					"resolved":false
-				}
-			},
-			"skip":false,
-			"subTitle":"Create Alert Step",
-			"title":"Create record",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"slack",
-				"resourceVersion":6076,
-				"connectionId":"67ebb703e145e219420dadfc",
-				"resourceName":"slack_post_message_in_channel",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"n_U9KDk@_jMFmS-1@y",
-			"id":"n_M9dnB",
-			"index":56,
-			"inputs":{
-				"link_names":true,
-				"messageType":"text",
-				"channel":"C08LJ2NQ5C1",
-				"text":"For customer {{ __RUN__.outputs.customerId }}:\n{{ n_ZnT6t.outputs.result.message }}",
-				"mrkdwn":true
-			},
-			"skip":false,
-			"subTitle":"Slack",
-			"title":"Post message",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"callables",
-				"resourceVersion":3,
-				"resourceName":"callables_call_automation",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"n_U9KDk@_jMFmS-1@y",
-			"id":"n_6MWgY",
-			"index":57,
-			"inputs":{
-				"automationId":"68721bd4feea003f6a9cb688",
-				"runtimeConnections":{},
-				"synchronous":true,
-				"version":"-1",
-				"parameters":{
-					"env":"{{ n_t5eD3.outputs.result.env }}",
-					"alertCategory":"starrocks",
-					"alertType":"starrocks_table_health",
-					"alertTitle":"🚨 Missing Routine Loads Detected",
-					"alertDescription":"For customer {{ __RUN__.outputs.customerId }}:\n{{ n_ZnT6t.outputs.result.message }}"
-				}
-			},
-			"skip":true,
-			"subTitle":"Callable",
-			"title":"Call automation",
-			"type":"CALL_WORKFLOW"
-		},
-		{
-			"additional":{
-				"visibleOptionalFields":[
-					"root.record.steps.inputs",
-					"root.record.steps.outputs"
-				]
-			},
-			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":3226,
-				"resourceName":"storage_by_unifyapps_create_record",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"n_U9KDk@_jMFmS-1@n",
-			"id":"_1bbcz",
-			"index":58,
-			"inputs":{
-				"writeThroughSessionVariables":false,
-				"object_type":"infra_alert_steps",
-				"skipIfBlank":false,
-				"record":{
-					"alertType":"starrocks_table_health",
-					"rootAutomationId":"{{ __RUN__.outputs.workflowId }}",
-					"rootExecutionId":"{{ __RUN__.outputs.rootExecutionId }}",
-					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
-					"alertCategory":"starrocks",
-					"alertSubType":"missing_routine_loads",
-					"stepsOrder":5,
-					"summary":"Check for missing routine loads",
-					"steps":{
-						"inputs":"{{ n_ZnT6t.outputs.result.inputs }}",
-						"outputs":"{{ n_ZnT6t.outputs.result.outputs }}"
-					},
-					"status":"OK",
-					"stepDescription":"Check if there are any reporting tables in starrocks that do not have an associated routine load",
-					"resolved":true
-				}
-			},
-			"skip":false,
-			"subTitle":"Create Alert Step",
-			"title":"Create record",
-			"type":"ACTION"
-		},
-		{
 			"additional":{
 				"xsdSchemaConfig":{
 					"root":{}
@@ -6386,11 +5899,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_aXMZM",
-			"index":59,
+			"index":50,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -6492,8 +6005,8 @@
 						}
 					}
 				},
-				"code":"if (!(binding.hasVariable(\"columnsMismatch\") && columnsMismatch)) {\n  return [message: \"\", inputs: [mismatchCount: 0], outputs: [columnsMismatch: []]]\n}\n\ndef messages = [\"The following routine loads have a columns mismatch:\\n\\n\"]\n\nif (columnsMismatch.size() > 0) {\n  for (item in columnsMismatch) {\n    messages << \"• Database = \" + item.dbName + \", tableName =  \" + item.tableName + \", routineLoadName = \" + item.routineLoadName + \", columnsFromConfig = [\" + item.columnsFromConfig.join(\", \") + \"], columnsFromRoutineLoad = [\" + item.columnsFromRoutineLoad.join(\", \") + \"]\" + \"\\n\"\n  }\n}\nreturn [outputs: [columnsMismatch: columnsMismatch], inputs: [\"mismatchCount\": columnsMismatch.size()], message: messages.join()]",
 				"compile_static":false,
+				"code":"if (!(binding.hasVariable(\"columnsMismatch\") && columnsMismatch)) {\n  return [message: \"\", inputs: [mismatchCount: 0], outputs: [columnsMismatch: []]]\n}\n\ndef messages = [\"The following routine loads have a columns mismatch:\\n\\n\"]\n\nif (columnsMismatch.size() > 0) {\n  for (item in columnsMismatch) {\n    // FIX: Use the Elvis operator (?:) to handle potential null lists\n    def configCols = (item.columnsFromConfig ?: []).join(\", \")\n    def routineCols = (item.columnsFromRoutineLoad ?: []).join(\", \")\n    \n    messages << \"• Database = \" + item.dbName + \", tableName =  \" + item.tableName + \", routineLoadName = \" + item.routineLoadName + \", columnsFromConfig = [\" + configCols + \"], columnsFromRoutineLoad = [\" + routineCols + \"]\" + \"\\n\"\n  }\n}\n\nreturn [outputs: [columnsMismatch: columnsMismatch], inputs: [\"mismatchCount\": columnsMismatch.size()], message: messages.join()]",
 				"captureStdOutput":false,
 				"parameters":{
 					"columnsMismatch":{
@@ -6530,11 +6043,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_RG5N7",
-			"index":60,
+			"index":51,
 			"inputs":{
 				"filters":[
 					{
@@ -6566,23 +6079,23 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_RG5N7@_jMFmS-1@y",
 			"id":"_WBvio",
-			"index":61,
+			"index":52,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
 				"skipIfBlank":false,
 				"record":{
+					"resolved":false,
 					"alertType":"starrocks_table_health",
 					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
 					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
 					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
 					"alertCategory":"starrocks",
 					"alertSubType":"routine_load_columns_mismatch",
-					"stepsOrder":1,
 					"summary":"Check for mismatch between routine load columns and table columns",
 					"steps":{
 						"inputs":"{{ _aXMZM.outputs.result.inputs }}",
@@ -6590,7 +6103,7 @@
 					},
 					"status":"CRITICAL",
 					"stepDescription":"Check if the columns and their order in routine load is the exact same as what is expected/defined in the tables config",
-					"resolved":false
+					"stepsOrder":5
 				}
 			},
 			"skip":false,
@@ -6606,11 +6119,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_RG5N7@_jMFmS-1@y",
 			"id":"_Ed4F0",
-			"index":62,
+			"index":53,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -6643,23 +6156,23 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_RG5N7@_jMFmS-1@n",
 			"id":"_EQKPq",
-			"index":63,
+			"index":54,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
 				"skipIfBlank":false,
 				"record":{
+					"resolved":true,
 					"alertType":"starrocks_table_health",
 					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
 					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
 					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
 					"alertCategory":"starrocks",
 					"alertSubType":"routine_load_columns_mismatch",
-					"stepsOrder":1,
 					"summary":"Check for mismatch between routine load columns and table columns",
 					"steps":{
 						"inputs":"{{ _aXMZM.outputs.result.inputs }}",
@@ -6667,13 +6180,45 @@
 					},
 					"status":"OK",
 					"stepDescription":"Check if the columns and their order in routine load is the exact same as what is expected/defined in the tables config",
-					"resolved":true
+					"stepsOrder":5
 				}
 			},
 			"skip":false,
 			"subTitle":"Create Alert Step",
 			"title":"Create record",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":3,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_RG5N7@_jMFmS-1@n",
+			"id":"_HmRJS",
+			"index":55,
+			"inputs":{
+				"automationId":"68721bd4feea003f6a9cb688",
+				"runtimeConnections":{},
+				"synchronous":false,
+				"version":"-1",
+				"parameters":{
+					"sendAlert":false,
+					"env":"{{ n_96ZBq.outputs.env }}",
+					"alertCategory":"starrocks",
+					"alertType":"starrocks_table_health",
+					"alertTitle":"🚨 Table and Routine Load Mismatch Detected",
+					"alertDescription":"For customer {{ __RUN__.outputs.customerId }}, the following tables and routine loads have mismatched columns, and auto-fixer could not fix:\n{{ _aXMZM.outputs.result.message }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
 		},
 		{
 			"additional":{
@@ -6688,11 +6233,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_9xKNR",
-			"index":64,
+			"index":56,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -6827,11 +6372,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_6H2OQ",
-			"index":65,
+			"index":57,
 			"inputs":{
 				"filters":[
 					{
@@ -6863,23 +6408,23 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_6H2OQ@_jMFmS-1@y",
 			"id":"_CeBOO",
-			"index":66,
+			"index":58,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
 				"skipIfBlank":false,
 				"record":{
+					"resolved":false,
 					"alertType":"starrocks_table_health",
 					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
 					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
 					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
 					"alertCategory":"starrocks",
 					"alertSubType":"routine_load_partition_buckets",
-					"stepsOrder":2,
 					"summary":"Check whether the partition of a routine load has a healthy bucket size",
 					"steps":{
 						"inputs":"{{ _9xKNR.outputs.result.inputs }}",
@@ -6887,7 +6432,7 @@
 					},
 					"status":"CRITICAL",
 					"stepDescription":"Check whether each partition of a routine load is < {{ _auxBn.outputs.result.minimumBucketCount }} , which is too small",
-					"resolved":false
+					"stepsOrder":6
 				}
 			},
 			"skip":false,
@@ -6903,11 +6448,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_6H2OQ@_jMFmS-1@y",
 			"id":"_xe7MC",
-			"index":67,
+			"index":59,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -6940,23 +6485,23 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_6H2OQ@_jMFmS-1@n",
 			"id":"_ODwaO",
-			"index":68,
+			"index":60,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
 				"skipIfBlank":false,
 				"record":{
+					"resolved":true,
 					"alertType":"starrocks_table_health",
 					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
 					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
 					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
 					"alertCategory":"starrocks",
 					"alertSubType":"routine_load_partition_buckets",
-					"stepsOrder":2,
 					"summary":"Check whether the partition of a routine load has a healthy bucket size",
 					"steps":{
 						"inputs":"{{ _9xKNR.outputs.result.inputs }}",
@@ -6964,13 +6509,45 @@
 					},
 					"status":"OK",
 					"stepDescription":"Check whether each partition of a routine load is < {{ _auxBn.outputs.result.minimumBucketCount }} , which is too small",
-					"resolved":true
+					"stepsOrder":6
 				}
 			},
 			"skip":false,
 			"subTitle":"Create Alert Step",
 			"title":"Create record",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":3,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_6H2OQ@_jMFmS-1@n",
+			"id":"_PA7QE",
+			"index":61,
+			"inputs":{
+				"automationId":"68721bd4feea003f6a9cb688",
+				"runtimeConnections":{},
+				"synchronous":false,
+				"version":"-1",
+				"parameters":{
+					"sendAlert":false,
+					"env":"{{ n_t5eD3.outputs.result.env }}",
+					"alertCategory":"starrocks",
+					"alertType":"starrocks_table_health",
+					"alertTitle":"🚨 Small Buckets in Routine Load Partitions (<{{ n_t5eD3.outputs.result.minimumBucketCount }})",
+					"alertDescription":"For customer {{ __RUN__.outputs.customerId }}, the following routine load partitions have buckets < {{ n_t5eD3.outputs.result.minimumBucketCount }}:\n{{ _9xKNR.outputs.result.message }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
 		},
 		{
 			"additional":{
@@ -6985,11 +6562,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_DKDTU",
-			"index":69,
+			"index":62,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -7124,11 +6701,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_PaFnz",
-			"index":70,
+			"index":63,
 			"inputs":{
 				"filters":[
 					{
@@ -7160,23 +6737,23 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_PaFnz@_jMFmS-1@y",
 			"id":"_zFyJ8",
-			"index":71,
+			"index":64,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
 				"skipIfBlank":false,
 				"record":{
+					"resolved":false,
 					"alertType":"starrocks_table_health",
 					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
 					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
 					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
 					"alertCategory":"starrocks",
 					"alertSubType":"routine_load_parition_sizes",
-					"stepsOrder":3,
 					"summary":"Check whether the partition of a routine load has a small data size",
 					"steps":{
 						"inputs":"{{ _DKDTU.outputs.result.inputs }}",
@@ -7184,7 +6761,7 @@
 					},
 					"status":"CRITICAL",
 					"stepDescription":"Check whether each partition of a routine load has < {{ _auxBn.outputs.result.minimumStorageSizeGB }}GB storage, which is too small",
-					"resolved":false
+					"stepsOrder":7
 				}
 			},
 			"skip":false,
@@ -7200,11 +6777,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_PaFnz@_jMFmS-1@y",
 			"id":"_ANDa3",
-			"index":72,
+			"index":65,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -7237,23 +6814,23 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_PaFnz@_jMFmS-1@n",
 			"id":"_izaqB",
-			"index":73,
+			"index":66,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
 				"skipIfBlank":false,
 				"record":{
+					"resolved":true,
 					"alertType":"starrocks_table_health",
 					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
 					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
 					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
 					"alertCategory":"starrocks",
 					"alertSubType":"routine_load_parition_sizes",
-					"stepsOrder":3,
 					"summary":"Check whether the partition of a routine load has a small data size",
 					"steps":{
 						"inputs":"{{ _DKDTU.outputs.result.inputs }}",
@@ -7261,13 +6838,45 @@
 					},
 					"status":"OK",
 					"stepDescription":"Check whether each partition of a routine load has < {{ _auxBn.outputs.result.minimumStorageSizeGB }}GB storage, which is too small",
-					"resolved":true
+					"stepsOrder":7
 				}
 			},
 			"skip":false,
 			"subTitle":"Create Alert Step",
 			"title":"Create record",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":3,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_PaFnz@_jMFmS-1@n",
+			"id":"_Wv2bW",
+			"index":67,
+			"inputs":{
+				"automationId":"68721bd4feea003f6a9cb688",
+				"runtimeConnections":{},
+				"synchronous":false,
+				"version":"-1",
+				"parameters":{
+					"sendAlert":false,
+					"env":"{{ n_96ZBq.outputs.env }}",
+					"alertCategory":"starrocks",
+					"alertType":"starrocks_table_health",
+					"alertTitle":"🚨 Small Data Size in Routine Load Partitions (<{{ _auxBn.outputs.result.minimumStorageSizeGB }}GB)",
+					"alertDescription":"For customer {{ __RUN__.outputs.customerId }}, the following routine load partitions have data size < {{ _auxBn.outputs.result.minimumStorageSizeGB }}GB:\n{{ _DKDTU.outputs.result.message }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
 		},
 		{
 			"additional":{
@@ -7282,11 +6891,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_3dH62",
-			"index":74,
+			"index":68,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -7415,11 +7024,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_wcAiW",
-			"index":75,
+			"index":69,
 			"inputs":{
 				"filters":[
 					{
@@ -7451,23 +7060,23 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_wcAiW@_jMFmS-1@y",
 			"id":"_7hrr3",
-			"index":76,
+			"index":70,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
 				"skipIfBlank":false,
 				"record":{
+					"resolved":false,
 					"alertType":"starrocks_table_health",
 					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
 					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
 					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
 					"alertCategory":"starrocks",
 					"alertSubType":"routine_load_missing_next_partition",
-					"stepsOrder":4,
 					"summary":"Check whether a routine load has it's next partition setup",
 					"steps":{
 						"inputs":"{{ _3dH62.outputs.result.inputs }}",
@@ -7475,7 +7084,7 @@
 					},
 					"status":"CRITICAL",
 					"stepDescription":"Check whether a routine load has it's next partition setup",
-					"resolved":false
+					"stepsOrder":8
 				}
 			},
 			"skip":false,
@@ -7491,11 +7100,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_wcAiW@_jMFmS-1@y",
 			"id":"_TNCsd",
-			"index":77,
+			"index":71,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -7528,23 +7137,23 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_wcAiW@_jMFmS-1@n",
 			"id":"_7DI3g",
-			"index":78,
+			"index":72,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
 				"skipIfBlank":false,
 				"record":{
+					"resolved":true,
 					"alertType":"starrocks_table_health",
 					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
 					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
 					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
 					"alertCategory":"starrocks",
 					"alertSubType":"routine_load_missing_next_partition",
-					"stepsOrder":4,
 					"summary":"Check whether a routine load has it's next partition setup",
 					"steps":{
 						"inputs":"{{ _3dH62.outputs.result.inputs }}",
@@ -7552,13 +7161,45 @@
 					},
 					"status":"OK",
 					"stepDescription":"Check whether a routine load has it's next partition setup",
-					"resolved":true
+					"stepsOrder":8
 				}
 			},
 			"skip":false,
 			"subTitle":"Create Alert Step",
 			"title":"Create record",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":3,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_wcAiW@_jMFmS-1@n",
+			"id":"_nHiIA",
+			"index":73,
+			"inputs":{
+				"automationId":"68721bd4feea003f6a9cb688",
+				"runtimeConnections":{},
+				"synchronous":false,
+				"version":"-1",
+				"parameters":{
+					"sendAlert":false,
+					"env":"{{ n_96ZBq.outputs.env }}",
+					"alertCategory":"starrocks",
+					"alertType":"starrocks_table_health",
+					"alertTitle":"🚨 Missing Current Partitions for Routine Loads",
+					"alertDescription":"For customer {{ n_A4kqi.outputs.customerId }}, the following routine loads are missing their next partition:\n{{ _3dH62.outputs.result.message }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
 		},
 		{
 			"additional":{
@@ -7573,11 +7214,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_oSfM0",
-			"index":79,
+			"index":74,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -7712,11 +7353,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_sbw6Y",
-			"index":80,
+			"index":75,
 			"inputs":{
 				"filters":[
 					{
@@ -7748,31 +7389,31 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_sbw6Y@_jMFmS-1@y",
 			"id":"_W50DB",
-			"index":81,
+			"index":76,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
 				"skipIfBlank":false,
 				"record":{
+					"resolved":false,
 					"alertType":"starrocks_table_health",
 					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
 					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
 					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
 					"alertCategory":"starrocks",
 					"alertSubType":"routine_load_small_compaction_score",
-					"stepsOrder":6,
 					"summary":"Check whether a routine load partition has a small compaction score",
 					"steps":{
 						"inputs":"{{ _oSfM0.outputs.result.inputs }}",
 						"outputs":"{{ _oSfM0.outputs.result.outputs }}"
 					},
 					"status":"CRITICAL",
-					"stepDescription":"Check whether a routine load's partition has compaction score < {{ n_t5eD3.outputs.result.compactionMin }} ",
-					"resolved":false
+					"stepDescription":"Check whether a routine load's partition has compaction score < {{ _auxBn.outputs.result.compactionMin }}",
+					"stepsOrder":9
 				}
 			},
 			"skip":false,
@@ -7788,11 +7429,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_sbw6Y@_jMFmS-1@y",
 			"id":"_axNoi",
-			"index":82,
+			"index":77,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -7825,23 +7466,23 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_sbw6Y@_jMFmS-1@n",
 			"id":"_XAGCp",
-			"index":83,
+			"index":78,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
 				"skipIfBlank":false,
 				"record":{
+					"resolved":true,
 					"alertType":"starrocks_table_health",
 					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
 					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
 					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
 					"alertCategory":"starrocks",
 					"alertSubType":"routine_load_small_compaction_score",
-					"stepsOrder":6,
 					"summary":"Check whether a routine load partition has a small compaction score",
 					"steps":{
 						"inputs":"{{ _oSfM0.outputs.result.inputs }}",
@@ -7849,13 +7490,45 @@
 					},
 					"status":"OK",
 					"stepDescription":"Check whether a routine load's partition has compaction score < {{ _auxBn.outputs.result.compactionMin }}",
-					"resolved":true
+					"stepsOrder":9
 				}
 			},
 			"skip":false,
 			"subTitle":"Create Alert Step",
 			"title":"Create record",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":3,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_sbw6Y@_jMFmS-1@n",
+			"id":"_Ul4xT",
+			"index":79,
+			"inputs":{
+				"automationId":"68721bd4feea003f6a9cb688",
+				"runtimeConnections":{},
+				"synchronous":false,
+				"version":"-1",
+				"parameters":{
+					"sendAlert":false,
+					"env":"{{ n_96ZBq.outputs.env }}",
+					"alertCategory":"starrocks",
+					"alertType":"starrocks_table_health",
+					"alertTitle":"🚨 Small Compactions in Routine Load Partitions (< {{ _auxBn.outputs.result.compactionMin }})",
+					"alertDescription":"For customer {{ n_A4kqi.outputs.customerId }}, the following routine loads and their partitions have a small compaction score (< {{ _auxBn.outputs.result.compactionMin }}):\n{{ _oSfM0.outputs.result.message }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
 		},
 		{
 			"additional":{
@@ -7870,11 +7543,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_mTnAB",
-			"index":84,
+			"index":80,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -8012,11 +7685,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_sd49N",
-			"index":85,
+			"index":81,
 			"inputs":{
 				"filters":[
 					{
@@ -8048,23 +7721,23 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_sd49N@_jMFmS-1@y",
 			"id":"_jP4zx",
-			"index":86,
+			"index":82,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
 				"skipIfBlank":false,
 				"record":{
+					"resolved":false,
 					"alertType":"starrocks_table_health",
-					"rootAutomationId":"{{ __RUN__.outputs.workflowId }}",
-					"rootExecutionId":"{{ __RUN__.outputs.rootExecutionId }}",
+					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
+					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
 					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
 					"alertCategory":"starrocks",
 					"alertSubType":"routine_load_no_persistent_index",
-					"stepsOrder":8,
 					"summary":"Check whether a routine load table has persistent index enabled on it",
 					"steps":{
 						"inputs":"{{ _mTnAB.outputs.result.inputs }}",
@@ -8072,38 +7745,12 @@
 					},
 					"status":"CRITICAL",
 					"stepDescription":"Check whether a routine load's table has a persistent index enabled on it",
-					"resolved":false
+					"stepsOrder":10
 				}
 			},
 			"skip":false,
 			"subTitle":"Create Alert Step",
 			"title":"Create record",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"slack",
-				"resourceVersion":6076,
-				"connectionId":"67ebb703e145e219420dadfc",
-				"resourceName":"slack_post_message_in_channel",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_sd49N@_jMFmS-1@y",
-			"id":"_y1ErV",
-			"index":87,
-			"inputs":{
-				"link_names":true,
-				"messageType":"text",
-				"channel":"C08LJ2NQ5C1",
-				"text":"For customer {{ __RUN__.outputs.customerId }}, the following routine load's tables do not have persistent index enabled on it:\n{{ _mTnAB.outputs.result.message }}",
-				"mrkdwn":true
-			},
-			"skip":false,
-			"subTitle":"Slack",
-			"title":"Post message",
 			"type":"ACTION"
 		},
 		{
@@ -8114,25 +7761,25 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_sd49N@_jMFmS-1@y",
 			"id":"_9P9Co",
-			"index":88,
+			"index":83,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
-				"synchronous":true,
+				"synchronous":false,
 				"version":"-1",
 				"parameters":{
-					"env":"{{ n_t5eD3.outputs.result.env }}",
+					"env":"{{ n_96ZBq.outputs.env }}",
 					"alertCategory":"starrocks",
 					"alertType":"starrocks_table_health",
 					"alertTitle":"🚨 No Persistent Indexes For Routine Loads",
-					"alertDescription":"For customer {{ __RUN__.outputs.customerId }}, the following routine load's tables do not have persistent index enabled on it:\n{{ _mTnAB.outputs.result.message }}"
+					"alertDescription":"For customer {{ n_A4kqi.outputs.customerId }}, the following routine load's tables do not have persistent index enabled on it:\n{{ _mTnAB.outputs.result.message }}"
 				}
 			},
-			"skip":true,
+			"skip":false,
 			"subTitle":"Callable",
 			"title":"Call automation",
 			"type":"CALL_WORKFLOW"
@@ -8151,23 +7798,23 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_sd49N@_jMFmS-1@n",
 			"id":"_mK9Cz",
-			"index":89,
+			"index":84,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
 				"skipIfBlank":false,
 				"record":{
+					"resolved":true,
 					"alertType":"starrocks_table_health",
-					"rootAutomationId":"{{ __RUN__.outputs.workflowId }}",
-					"rootExecutionId":"{{ __RUN__.outputs.rootExecutionId }}",
+					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
+					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
 					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
 					"alertCategory":"starrocks",
 					"alertSubType":"routine_load_no_persistent_index",
-					"stepsOrder":8,
 					"summary":"Check whether a routine load table has persistent index enabled on it",
 					"steps":{
 						"inputs":"{{ _mTnAB.outputs.result.inputs }}",
@@ -8175,13 +7822,45 @@
 					},
 					"status":"OK",
 					"stepDescription":"Check whether a routine load's table has a persistent index enabled on it",
-					"resolved":true
+					"stepsOrder":10
 				}
 			},
 			"skip":false,
 			"subTitle":"Create Alert Step",
 			"title":"Create record",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":3,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_sd49N@_jMFmS-1@n",
+			"id":"_OvB0j",
+			"index":85,
+			"inputs":{
+				"automationId":"68721bd4feea003f6a9cb688",
+				"runtimeConnections":{},
+				"synchronous":false,
+				"version":"-1",
+				"parameters":{
+					"sendAlert":false,
+					"env":"{{ n_96ZBq.outputs.env }}",
+					"alertCategory":"starrocks",
+					"alertType":"starrocks_table_health",
+					"alertTitle":"🚨 No Persistent Indexes For Routine Loads",
+					"alertDescription":"For customer {{ n_A4kqi.outputs.customerId }}, the following routine load's tables do not have persistent index enabled on it:\n{{ _mTnAB.outputs.result.message }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
 		},
 		{
 			"additional":{
@@ -8196,11 +7875,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_Xc40g",
-			"index":90,
+			"index":86,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -8300,7 +7979,7 @@
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
-					"lagThreshold":"{{ n_t5eD3.outputs.result.lagThreshold }}",
+					"lagThreshold":"{{ _auxBn.outputs.result.lagThreshold }}",
 					"lagRoutineLoads":{
 						"source":"{{ _cAiLs.outputs.items }}",
 						"ua:type":"mappedArray",
@@ -8326,11 +8005,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_3i0XI",
-			"index":91,
+			"index":87,
 			"inputs":{
 				"filters":[
 					{
@@ -8362,62 +8041,36 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_3i0XI@_jMFmS-1@y",
 			"id":"_wwCEw",
-			"index":92,
+			"index":88,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
 				"skipIfBlank":false,
 				"record":{
+					"resolved":false,
 					"alertType":"starrocks_table_health",
-					"rootAutomationId":"{{ __RUN__.outputs.workflowId }}",
-					"rootExecutionId":"{{ __RUN__.outputs.rootExecutionId }}",
+					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
+					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
 					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
 					"alertCategory":"starrocks",
 					"alertSubType":"routine_load_large_ingestion_lag",
-					"stepsOrder":7,
 					"summary":"Check whether a routine load  has a large amount of ingestion lag",
 					"steps":{
 						"inputs":"{{ _Xc40g.outputs.result.inputs }}",
 						"outputs":"{{ _Xc40g.outputs.result.outputs }}"
 					},
 					"status":"CRITICAL",
-					"stepDescription":"Check whether a routine load has a large amount of ingestion lag (> {{ n_t5eD3.outputs.result.lagThreshold }}) from it's partitions combined",
-					"resolved":false
+					"stepDescription":"Check whether a routine load has a large amount of ingestion lag (> {{ _auxBn.outputs.result.lagThreshold }}) from it's partitions combined",
+					"stepsOrder":11
 				}
 			},
 			"skip":false,
 			"subTitle":"Create Alert Step",
 			"title":"Create record",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"slack",
-				"resourceVersion":6076,
-				"connectionId":"67ebb703e145e219420dadfc",
-				"resourceName":"slack_post_message_in_channel",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_3i0XI@_jMFmS-1@y",
-			"id":"_TbzdC",
-			"index":93,
-			"inputs":{
-				"link_names":true,
-				"messageType":"text",
-				"channel":"C08LJ2NQ5C1",
-				"text":"For customer {{ __RUN__.outputs.customerId }}, the following routine loads have exceeded their lag threshold:\n{{ _Xc40g.outputs.result.message }}",
-				"mrkdwn":true
-			},
-			"skip":false,
-			"subTitle":"Slack",
-			"title":"Post message",
 			"type":"ACTION"
 		},
 		{
@@ -8428,25 +8081,26 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_3i0XI@_jMFmS-1@y",
 			"id":"_A4qEN",
-			"index":94,
+			"index":89,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
-				"synchronous":true,
+				"synchronous":false,
 				"version":"-1",
 				"parameters":{
-					"env":"{{ n_t5eD3.outputs.result.env }}",
+					"sendAlert":"true",
+					"env":"{{ n_96ZBq.outputs.env }}",
 					"alertCategory":"starrocks",
 					"alertType":"starrocks_table_health",
 					"alertTitle":"🚨 High Ingestion Lag in Routine Loads",
-					"alertDescription":"For customer {{ __RUN__.outputs.customerId }}, the following routine loads have exceeded their lag threshold:\n{{ _Xc40g.outputs.result.message }}"
+					"alertDescription":"For customer {{ n_A4kqi.outputs.customerId }}, the following routine loads have exceeded their lag threshold:\n{{ _Xc40g.outputs.result.message }}"
 				}
 			},
-			"skip":true,
+			"skip":false,
 			"subTitle":"Callable",
 			"title":"Call automation",
 			"type":"CALL_WORKFLOW"
@@ -8465,23 +8119,23 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_3i0XI@_jMFmS-1@n",
 			"id":"_VKHcU",
-			"index":95,
+			"index":90,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
 				"skipIfBlank":false,
 				"record":{
+					"resolved":true,
 					"alertType":"starrocks_table_health",
-					"rootAutomationId":"{{ __RUN__.outputs.workflowId }}",
-					"rootExecutionId":"{{ __RUN__.outputs.rootExecutionId }}",
+					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
+					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
 					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
 					"alertCategory":"starrocks",
 					"alertSubType":"routine_load_large_ingestion_lag",
-					"stepsOrder":7,
 					"summary":"Check whether a routine load  has a large amount of ingestion lag",
 					"steps":{
 						"inputs":"{{ _Xc40g.outputs.result.inputs }}",
@@ -8489,7 +8143,7 @@
 					},
 					"status":"OK",
 					"stepDescription":"Check whether a routine load has a large amount of ingestion lag from it's partitions combined",
-					"resolved":true
+					"stepsOrder":11
 				}
 			},
 			"skip":false,
@@ -8500,48 +8154,34 @@
 		{
 			"context":{
 				"appName":"callables",
-				"resourceVersion":2,
-				"resourceName":"callables_return_to_automation",
+				"resourceVersion":3,
+				"resourceName":"callables_call_automation",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
-			"groupId":"_jMFmS-1",
-			"id":"n_uDcFp",
-			"index":96,
+			"groupId":"_3i0XI@_jMFmS-1@n",
+			"id":"_wR0DC",
+			"index":91,
 			"inputs":{
-				"result":{
-					"result":{
-						"source":"{{ n_U8Jua.outputs.items }}",
-						"ua:type":"mappedArray",
-						"items":{
-							"outputs":{
-								"dbName":"{{ n_U8Jua.outputs.items[0].outputs.dbName }}",
-								"tableName":"{{ n_U8Jua.outputs.items[0].outputs.tableName }}",
-								"missingInRoutineLoad":{
-									"source":"{{ n_U8Jua.outputs.items[0].outputs.missingInRoutineLoad }}",
-									"ua:type":"mappedArray"
-								},
-								"missingInTable":{
-									"source":"{{ n_U8Jua.outputs.items[0].outputs.missingInTable }}",
-									"ua:type":"mappedArray"
-								},
-								"missingRoutineLoadCount":"{{ n_U8Jua.outputs.items[0].outputs.missingRoutineLoadCount }}",
-								"missingTableCount":"{{ n_U8Jua.outputs.items[0].outputs.missingTableCount }}"
-							},
-							"messages":{
-								"missingInRoutineLoadMessage":"{{ n_U8Jua.outputs.items[0].messages.missingInRoutineLoadMessage }}",
-								"missingInTableMessage":"{{ n_U8Jua.outputs.items[0].messages.missingInTableMessage }}"
-							}
-						}
-					}
+				"automationId":"68721bd4feea003f6a9cb688",
+				"runtimeConnections":{},
+				"synchronous":false,
+				"version":"-1",
+				"parameters":{
+					"sendAlert":false,
+					"env":"{{ n_96ZBq.outputs.env }}",
+					"alertCategory":"starrocks",
+					"alertType":"starrocks_table_health",
+					"alertTitle":"🚨 High Ingestion Lag in Routine Loads",
+					"alertDescription":"For customer {{ n_A4kqi.outputs.customerId }}, the following routine loads have exceeded their lag threshold:\n{{ _Xc40g.outputs.result.message }}"
 				}
 			},
 			"skip":false,
 			"subTitle":"Callable",
-			"title":"Respond to automation",
-			"type":"STOP"
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
 		}
 	],
 	"ownerUserId":59995,
@@ -8549,14 +8189,18 @@
 		
 	],
 	"settings":{
-		"enableNodeLevelLogging":true,
+		"enableNodeLevelLogging":false,
 		"enableRunLogging":true,
-		"enableVariableLogging":true,
+		"enableVariableLogging":false,
 		"route":{
 			"default":false,
+			"headerValueTierMap":{},
 			"tierName":"global"
 		}
 	},
 	"standard":false,
-	"version":84
+	"tags":[
+		
+	],
+	"version":94
 }
