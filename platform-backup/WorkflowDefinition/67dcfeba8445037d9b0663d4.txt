@@ -5,12 +5,12 @@
 	"createdTime":1742536378097,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655415963,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f3b738757c179b123fca",
+		"deployedAt":1759243625695,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed695e003e08cdeb3073",
 		"status":"DEPLOYED",
-		"version":26,
-		"workflowVersion":41
+		"version":28,
+		"workflowVersion":43
 	},
 	"edges":[
 		{
@@ -48,7 +48,7 @@
 	"id":"67dcfeba8445037d9b0663d4",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | servicenow | getusersharedwith (email)",
-	"modifiedTime":1759243593670,
+	"modifiedTime":1759371943086,
 	"name":"Knowledge Indexer | ServiceNow | getUserSharedWith (email)",
 	"nodes":[
 		{
@@ -425,5 +425,5 @@
 		}
 	},
 	"standard":true,
-	"version":42
+	"version":44
 }
