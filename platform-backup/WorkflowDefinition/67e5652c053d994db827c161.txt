@@ -5,12 +5,12 @@
 	"createdTime":1743401846903,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655323757,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f35b38757c179b123080",
+		"deployedAt":1759243551490,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed1f23e6682b9a51eb28",
 		"status":"DEPLOYED",
-		"version":26,
-		"workflowVersion":55
+		"version":28,
+		"workflowVersion":57
 	},
 	"edges":[
 		{
@@ -267,7 +267,7 @@
 	"id":"67e5652c053d994db827c161",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | ms excel | get sharedwithids",
-	"modifiedTime":1759243514111,
+	"modifiedTime":1759371873536,
 	"name":"Knowledge Indexer | MS Excel | Get sharedWithIds",
 	"nodes":[
 		{
@@ -1571,5 +1571,5 @@
 		}
 	},
 	"standard":true,
-	"version":56
+	"version":58
 }
