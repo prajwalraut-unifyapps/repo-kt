@@ -5,12 +5,12 @@
 	"createdTime":1759399705493,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759400825120,
+		"deployedAt":1759401004109,
 		"deployedBy":39713,
-		"deployedDefinitionId":"68de53772cc9f04fd0a34e62",
+		"deployedDefinitionId":"68de542a2cc9f04fd0a350f7",
 		"status":"DEPLOYED",
-		"version":3,
-		"workflowVersion":4
+		"version":4,
+		"workflowVersion":5
 	},
 	"edges":[
 		{
@@ -59,13 +59,6 @@
 			"fromNodeId":"n_BibHh",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_p6m36",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_p6m36",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_lQlVV",
 			"type":"next"
 		},
@@ -101,23 +94,29 @@
 		},
 		{
 			"fromNodeId":"n_73jZk",
-			"name":"loopback",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_thvPw",
+			"toNodeId":"_aVaQP",
 			"type":"next"
 		},
 		{
 			"fromNodeId":"n_P9kWg",
-			"name":"loopback",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_thvPw",
+			"toNodeId":"_aVaQP",
 			"type":"next"
 		},
 		{
 			"fromNodeId":"n_lQlVV",
 			"name":"default",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_aVaQP",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"_aVaQP",
+			"name":"loopback",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_thvPw",
@@ -188,7 +187,7 @@
 	"id":"68de4f19e862b93537845133",
 	"lastModifiedBy":39713,
 	"lcName":"test",
-	"modifiedTime":1759400996344,
+	"modifiedTime":1759401705560,
 	"name":"test",
 	"nodes":[
 		{
@@ -441,33 +440,6 @@
 		},
 		{
 			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":910,
-				"resourceName":"variable_by_unifyapps_update_variables",
-				"type":"APPLICATION",
-				"scopeNodeId":"n_gzrDg"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_thvPw@n_gzrDg@_n6eLp-1@s@l",
-			"id":"n_p6m36",
-			"index":8,
-			"inputs":{
-				"variables":[
-					{
-						"source":"{{ n_dq0YO.outputs.a }}",
-						"value":"=SUM({{ n_dq0YO.outputs.a }},-1)"
-					}
-				]
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Update variables",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"branch",
 				"type":"APPLICATION",
 				"scopeNodeId":"n_gzrDg"
@@ -477,7 +449,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_thvPw@n_gzrDg@_n6eLp-1@s@l",
 			"id":"n_lQlVV",
-			"index":9,
+			"index":8,
 			"inputs":{
 				"branches":[
 					{
@@ -539,7 +511,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_lQlVV@n_thvPw@n_gzrDg@_n6eLp-1@s@l@1",
 			"id":"n_lQlVV@1",
-			"index":10,
+			"index":9,
 			"inputs":{
 				"name":"Branch 1",
 				"conditions":{
@@ -572,7 +544,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_lQlVV@n_thvPw@n_gzrDg@_n6eLp-1@s@l@1",
 			"id":"n_73jZk",
-			"index":11,
+			"index":10,
 			"skip":false,
 			"subTitle":"Variable by UnifyApps",
 			"title":"Create variables",
@@ -591,7 +563,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_lQlVV@n_thvPw@n_gzrDg@_n6eLp-1@s@l@2",
 			"id":"n_lQlVV@2",
-			"index":12,
+			"index":11,
 			"inputs":{
 				"name":"Branch 2",
 				"conditions":{
@@ -624,10 +596,37 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_lQlVV@n_thvPw@n_gzrDg@_n6eLp-1@s@l@2",
 			"id":"n_P9kWg",
-			"index":13,
+			"index":12,
 			"skip":false,
 			"subTitle":"Variable by UnifyApps",
 			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":910,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION",
+				"scopeNodeId":"n_gzrDg"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_thvPw@n_gzrDg@_n6eLp-1@s@l",
+			"id":"_aVaQP",
+			"index":13,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ n_dq0YO.outputs.a }}",
+						"value":"=SUM({{ n_dq0YO.outputs.a }},-1)"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
 			"type":"ACTION"
 		},
 		{
@@ -750,5 +749,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
