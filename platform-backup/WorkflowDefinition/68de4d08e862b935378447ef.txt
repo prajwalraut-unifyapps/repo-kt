@@ -23,7 +23,7 @@
 	"id":"68de4d08e862b935378447ef",
 	"lastModifiedBy":185583,
 	"lcName":"task_pb (copy)",
-	"modifiedTime":1759399176354,
+	"modifiedTime":1759399263352,
 	"name":"Task_PB (copy)",
 	"nodes":[
 		{
@@ -36,52 +36,67 @@
 			},
 			"context":{
 				"appName":"callables",
-				"resourceVersion":969,
-				"resourceName":"callables_from_automation"
+				"resourceVersion":1057,
+				"resourceName":"callables_from_api"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RV1ax-1",
 			"id":"n_6l4oG",
 			"index":1,
 			"inputs":{
-				"result":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"currentTagOut"
-					],
-					"properties":{
-						"currentTagOut":{
-							"type":"array",
-							"items":{
-								"type":"string"
-							},
-							"title":"Current Tag Out"
-						}
+				"request":{
+					"contentType":"application/json",
+					"body":{
+						"type":"object",
+						"properties":{
+							"tag":{
+								"type":"array",
+								"items":{
+									"type":"string"
+								},
+								"title":"Tag"
+							}
+						},
+						"additionalProperties":false,
+						"required":[
+							"tag"
+						]
 					}
 				},
-				"setup":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"Tag"
-					],
-					"properties":{
-						"Tag":{
-							"type":"array",
-							"items":{
-								"type":"string"
+				"endpointType":"REST",
+				"response":[
+					{
+						"name":"Success",
+						"status":200,
+						"contentType":"application/json",
+						"textBody":{
+							"type":"string"
+						},
+						"body":{
+							"type":"object",
+							"properties":{
+								"tagOutput":{
+									"type":"array",
+									"items":{
+										"type":"string"
+									},
+									"title":"Tag Output"
+								}
 							},
-							"title":"Tag"
+							"additionalProperties":false,
+							"required":[
+								"tagOutput"
+							]
 						}
 					}
-				}
+				],
+				"streamingResponse":false
 			},
 			"skip":false,
 			"subTitle":"Callable",
-			"title":"Trigger via automation",
+			"title":"Trigger via API",
 			"trigger":{
 				"type":"CALLABLE"
 			},
@@ -100,7 +115,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RV1ax-1",
 			"id":"n_xcwp1",
@@ -143,9 +158,9 @@
 				"captureStdOutput":true,
 				"parameters":{
 					"tag":{
-						"source":"{{ n_6l4oG.outputs.Tag }}",
 						"ua:type":"mappedArray",
-						"items":"{{ n_6l4oG.outputs.Tag[0] }}"
+						"source":"{{ n_6l4oG.outputs.body.tag }}",
+						"items":"{{ n_6l4oG.outputs.body.tag[0] }}"
 					}
 				}
 			},
@@ -199,5 +214,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
