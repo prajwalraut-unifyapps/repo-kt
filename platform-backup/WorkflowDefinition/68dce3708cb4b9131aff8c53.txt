@@ -1,51 +1,78 @@
 {
 	"appsUsed":[
-		
+		"gcloud_storage"
 	],
 	"createdTime":1759306608479,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_yx0yD",
+			"fromNodeId":"n_fS4mY",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_o0oio",
+			"toNodeId":"n_lNcTZ",
 			"type":"next"
 		}
 	],
 	"id":"68dce3708cb4b9131aff8c53",
 	"lastModifiedBy":2721,
 	"lcName":"test",
-	"modifiedTime":1759306608479,
+	"modifiedTime":1759386884537,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"gcloud_storage",
+				"resourceVersion":4446,
+				"connectionId":"685bcc2c65e872673cb8718e",
+				"resourceName":"gcloud_storage_on_new_object_polling"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_yx0yD-1",
-			"id":"_yx0yD",
-			"index":0,
+			"id":"n_fS4mY",
+			"index":1,
+			"inputs":{
+				"interval":5,
+				"batchSize":100
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Google Cloud Storage",
+			"title":"New object",
 			"trigger":{
 				"type":"EVENT"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"gcloud_storage",
+				"resourceVersion":5677,
+				"connectionId":"685bcc2c65e872673cb8718e",
+				"resourceName":"gcloud_storage_upload_object",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_yx0yD-1",
-			"id":"_o0oio",
-			"index":0,
+			"id":"n_lNcTZ",
+			"index":2,
+			"inputs":{
+				"attachment":{
+					"attachment_option":"use_file_binary_content"
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Google Cloud Storage",
+			"title":"Upload an object",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":2721,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +86,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
