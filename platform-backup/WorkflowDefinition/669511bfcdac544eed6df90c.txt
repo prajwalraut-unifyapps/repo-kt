@@ -6,12 +6,12 @@
 	"createdTime":1721045439293,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243536953,
+		"deployedAt":1759243571213,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed1023e6682b9a51eadb",
+		"deployedDefinitionId":"68dbed339213d707c2d2736c",
 		"status":"DEPLOYED",
-		"version":65,
-		"workflowVersion":103
+		"version":66,
+		"workflowVersion":104
 	},
 	"description":"",
 	"edges":[
@@ -94,7 +94,7 @@
 	"id":"669511bfcdac544eed6df90c",
 	"lastModifiedBy":-1,
 	"lcName":"text to workflow v2 | add vectors to store",
-	"modifiedTime":1759243571135,
+	"modifiedTime":1759371892531,
 	"name":"Text to Workflow v2 | Add Vectors to Store",
 	"nodes":[
 		{
@@ -445,5 +445,5 @@
 	"tags":[
 		"Text_to_Workflow_v2"
 	],
-	"version":104
+	"version":105
 }
