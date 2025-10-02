@@ -5,12 +5,12 @@
 	"createdTime":1732516216158,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655412382,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f3b438757c179b123f41",
+		"deployedAt":1759243622261,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed6623e6682b9a51ece9",
 		"status":"DEPLOYED",
-		"version":68,
-		"workflowVersion":81
+		"version":70,
+		"workflowVersion":83
 	},
 	"edges":[
 		{
@@ -455,7 +455,7 @@
 	"id":"67441978abf4e43abae6d811",
 	"lastModifiedBy":-1,
 	"lcName":"ocr document details extraction (generic)",
-	"modifiedTime":1759243590102,
+	"modifiedTime":1759371939842,
 	"name":"OCR Document Details Extraction (Generic)",
 	"nodes":[
 		{
@@ -2459,5 +2459,5 @@
 		}
 	},
 	"standard":true,
-	"version":82
+	"version":84
 }
