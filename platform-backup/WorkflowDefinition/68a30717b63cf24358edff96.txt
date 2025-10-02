@@ -5,12 +5,12 @@
 	"createdTime":1755514647013,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655329255,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f36138757c179b12317a",
+		"deployedAt":1759243555636,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed2323e6682b9a51eb48",
 		"status":"DEPLOYED",
-		"version":25,
-		"workflowVersion":32
+		"version":27,
+		"workflowVersion":34
 	},
 	"edges":[
 		{
@@ -34,7 +34,7 @@
 	"id":"68a30717b63cf24358edff96",
 	"lastModifiedBy":-1,
 	"lcName":"[a2a] on a2a skill updated",
-	"modifiedTime":1759243519405,
+	"modifiedTime":1759371877675,
 	"name":"[A2A] On A2A Skill Updated",
 	"nodes":[
 		{
@@ -105,5 +105,5 @@
 	"tags":[
 		"a2a"
 	],
-	"version":33
+	"version":35
 }
