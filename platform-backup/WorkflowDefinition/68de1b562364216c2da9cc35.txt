@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759386454863,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759390625351,
+		"deployedBy":175325,
+		"deployedDefinitionId":"68de2ba1bdbc7b3b7b2d312c",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_qZPXj",
@@ -16,7 +24,7 @@
 	"id":"68de1b562364216c2da9cc35",
 	"lastModifiedBy":175325,
 	"lcName":"ijhg",
-	"modifiedTime":1759390623483,
+	"modifiedTime":1759391751713,
 	"name":"ijhg",
 	"nodes":[
 		{
@@ -87,7 +95,7 @@
 			"index":2,
 			"inputs":{
 				"result":{
-					"r":"=CONCATENATE({{ n_qZPXj.outputs.a }},{{ n_qZPXj.outputs.b }})"
+					"r":"=CONCATENATE({{ n_qZPXj.outputs.a }},{{ n_qZPXj.outputs.b }},\" \")"
 				}
 			},
 			"skip":false,
@@ -113,5 +121,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
