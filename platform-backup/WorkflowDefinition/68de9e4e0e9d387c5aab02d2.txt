@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759419982346,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759446519953,
+		"deployedBy":59995,
+		"deployedDefinitionId":"68df05f7c1d0495424eb14e4",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":3
+	},
 	"edges":[
 		{
 			"fromNodeId":"_EOY36",
@@ -30,7 +38,7 @@
 	"id":"68de9e4e0e9d387c5aab02d2",
 	"lastModifiedBy":59995,
 	"lcName":"partition size",
-	"modifiedTime":1759446108550,
+	"modifiedTime":1759448450890,
 	"name":"partition size",
 	"nodes":[
 		{
@@ -39,7 +47,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"_EOY36",
@@ -136,7 +144,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"n_6a9km",
@@ -233,7 +241,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"n_d5lsD",
@@ -339,7 +347,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"_QL5ZP",
@@ -388,5 +396,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
