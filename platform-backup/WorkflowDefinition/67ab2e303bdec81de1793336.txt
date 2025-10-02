@@ -5,12 +5,12 @@
 	"createdTime":1740144870999,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243524866,
+		"deployedAt":1759243560460,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed045e003e08cdeb2e63",
+		"deployedDefinitionId":"68dbed289213d707c2d27336",
 		"status":"DEPLOYED",
-		"version":27,
-		"workflowVersion":143
+		"version":28,
+		"workflowVersion":144
 	},
 	"edges":[
 		{
@@ -189,7 +189,7 @@
 	"id":"67ab2e303bdec81de1793336",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | microsoft sentinel | get all incidents",
-	"modifiedTime":1759243560354,
+	"modifiedTime":1759371882218,
 	"name":"Knowledge Indexer | Microsoft Sentinel | Get all incidents",
 	"nodes":[
 		{
@@ -1116,5 +1116,5 @@
 	"tags":[
 		
 	],
-	"version":144
+	"version":145
 }
