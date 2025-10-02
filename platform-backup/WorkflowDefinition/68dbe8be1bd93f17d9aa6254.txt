@@ -15,7 +15,7 @@
 	},
 	"edges":[
 		{
-			"fromNodeId":"n_kd82b",
+			"fromNodeId":"n_5dKRb",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_plNsj",
@@ -27,39 +27,37 @@
 			"skip":false,
 			"toNodeId":"n_KAsDL",
 			"type":"next"
-		},
-		{
-			"fromNodeId":"n_KAsDL",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_fYZTD",
-			"type":"next"
 		}
 	],
 	"id":"68dbe8be1bd93f17d9aa6254",
 	"lastModifiedBy":43498,
 	"lcName":"test-scheduler-connection-deletion",
-	"modifiedTime":1759409405243,
+	"modifiedTime":1759409414143,
 	"name":"test-scheduler-connection-deletion",
 	"nodes":[
 		{
 			"context":{
-				"appName":"callables",
-				"resourceVersion":969,
-				"resourceName":"callables_from_automation"
+				"appName":"schedule",
+				"resourceVersion":818,
+				"resourceName":"schedule_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_oKLjG-1",
-			"id":"n_kd82b",
+			"id":"n_5dKRb",
 			"index":1,
-			"inputs":{},
+			"inputs":{
+				"cron":"INTERVAL",
+				"sequential":false,
+				"interval":1,
+				"frequency":"MINUTES"
+			},
 			"skip":false,
-			"subTitle":"Callable",
-			"title":"Trigger via automation",
+			"subTitle":"Schedule",
+			"title":"New recurring event",
 			"trigger":{
-				"type":"CALLABLE"
+				"type":"SCHEDULED"
 			},
 			"type":"START"
 		},
@@ -119,27 +117,6 @@
 			"subTitle":"Teamwork",
 			"title":"Get all projects",
 			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"callables",
-				"resourceVersion":994,
-				"resourceName":"callables_return_to_automation",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_oKLjG-1",
-			"id":"n_fYZTD",
-			"index":4,
-			"inputs":{
-				"result":"asdcfb"
-			},
-			"skip":false,
-			"subTitle":"Callable",
-			"title":"Respond to automation",
-			"type":"STOP"
 		}
 	],
 	"ownerUserId":569,
@@ -159,5 +136,5 @@
 	"tags":[
 		
 	],
-	"version":21
+	"version":22
 }
