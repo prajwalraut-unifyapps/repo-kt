@@ -5,12 +5,12 @@
 	"createdTime":1756411336918,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646561459,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2d1219f85565fb8fa5df1",
+		"deployedAt":1759243598549,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed4e9213d707c2d27421",
 		"status":"DEPLOYED",
-		"version":23,
-		"workflowVersion":62
+		"version":26,
+		"workflowVersion":65
 	},
 	"edges":[
 		{
@@ -125,9 +125,9 @@
 		]
 	},
 	"id":"6889070f297b02c59d617cca",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"workflow agent | scheduled deployment",
-	"modifiedTime":1758655383850,
+	"modifiedTime":1759371917667,
 	"name":"Workflow Agent | Scheduled deployment",
 	"nodes":[
 		{
@@ -814,5 +814,5 @@
 	"tags":[
 		
 	],
-	"version":63
+	"version":66
 }
