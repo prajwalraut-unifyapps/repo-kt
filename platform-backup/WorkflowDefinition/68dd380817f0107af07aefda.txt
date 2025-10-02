@@ -5,12 +5,12 @@
 	"createdTime":1759328264773,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759390716116,
+		"deployedAt":1759390738183,
 		"deployedBy":44103,
-		"deployedDefinitionId":"68de2bfbbdbc7b3b7b2d342a",
+		"deployedDefinitionId":"68de2c12bdbc7b3b7b2d34bf",
 		"status":"DEPLOYED",
-		"version":3,
-		"workflowVersion":10
+		"version":4,
+		"workflowVersion":11
 	},
 	"edges":[
 		{
@@ -38,7 +38,7 @@
 	"id":"68dd380817f0107af07aefda",
 	"lastModifiedBy":44103,
 	"lcName":"test11111",
-	"modifiedTime":1759390736809,
+	"modifiedTime":1759391600395,
 	"name":"test11111",
 	"nodes":[
 		{
@@ -48,7 +48,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_LL6zY-1",
 			"id":"n_RVU3x",
@@ -82,7 +82,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_LL6zY-1",
 			"id":"n_UlFPc",
@@ -126,7 +126,18 @@
 					"root.slots.name.responses.items.choices.items.id",
 					"root.slots.name.responses.items.choices.items.title",
 					"root.slots.name.responses.items.choices.items.url",
-					"root.slots.name.responses.items.choices.items.description"
+					"root.slots.name.responses.items.choices.items.description",
+					"root.slots.age.description",
+					"root.slots.age.isAttachment",
+					"root.slots.age.responses.items.language",
+					"root.slots.age.responses.items.question",
+					"root.slots.age.responses.items.headerText",
+					"root.slots.age.responses.items.buttonText",
+					"root.slots.age.responses.items.titleText",
+					"root.slots.age.responses.items.choices.items.id",
+					"root.slots.age.responses.items.choices.items.title",
+					"root.slots.age.responses.items.choices.items.url",
+					"root.slots.age.responses.items.choices.items.description"
 				]
 			},
 			"context":{
@@ -136,7 +147,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_LL6zY-1",
 			"id":"n_q0ZqT",
@@ -149,6 +160,15 @@
 						"responses":[
 							{
 								"question":"what is your name?"
+							}
+						]
+					},
+					"age":{
+						"description":"age ",
+						"isAttachment":false,
+						"responses":[
+							{
+								"question":"what is your age"
 							}
 						]
 					}
@@ -166,6 +186,10 @@
 						"name":{
 							"type":"string",
 							"title":"Name"
+						},
+						"age":{
+							"type":"integer",
+							"title":"Age"
 						}
 					}
 				},
@@ -184,7 +208,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_LL6zY-1",
 			"id":"n_oDYcJ",
@@ -210,5 +234,5 @@
 		"enableVariableLogging":true
 	},
 	"standard":false,
-	"version":11
+	"version":12
 }
