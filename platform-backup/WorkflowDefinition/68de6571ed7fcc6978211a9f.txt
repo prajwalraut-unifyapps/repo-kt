@@ -24,6 +24,13 @@
 			"fromNodeId":"n_O2qv8",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_Coys1",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Coys1",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_3F9Im",
 			"type":"next"
 		}
@@ -31,7 +38,7 @@
 	"id":"68de6571ed7fcc6978211a9f",
 	"lastModifiedBy":13,
 	"lcName":"testdnt",
-	"modifiedTime":1759429327821,
+	"modifiedTime":1759430318169,
 	"name":"testdnt",
 	"nodes":[
 		{
@@ -72,7 +79,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_mf0p7-1",
 			"id":"n_O2qv8",
@@ -119,6 +126,28 @@
 			"type":"ACTION"
 		},
 		{
+			"context":{
+				"appName":"analytics_by_unifyapps",
+				"resourceVersion":849,
+				"resourceName":"analytics_by_unifyapps_execute_query",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_mf0p7-1",
+			"id":"n_Coys1",
+			"index":3,
+			"inputs":{
+				"query":"SELECT * FROM ENTITY_npci_data \nWHERE _pr_txnId = 3\n  AND _pr_beneficiaryFlag = true",
+				"group":"ENTITY_REPORTING"
+			},
+			"skip":false,
+			"subTitle":"Analytics by UnifyApps",
+			"title":"Execute Analytics SQL Query",
+			"type":"ACTION"
+		},
+		{
 			"additional":{
 				"xsdSchemaConfig":{
 					"root":{}
@@ -135,7 +164,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_mf0p7-1",
 			"id":"n_3F9Im",
-			"index":3,
+			"index":4,
 			"inputs":{
 				"outputSchema":{
 					"type":"object",
@@ -198,5 +227,5 @@
 	"tags":[
 		
 	],
-	"version":18
+	"version":19
 }
