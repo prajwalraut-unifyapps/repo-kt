@@ -30,7 +30,7 @@
 	"id":"68de4d08e862b935378447ef",
 	"lastModifiedBy":602,
 	"lcName":"task_pb (copy)",
-	"modifiedTime":1759404456717,
+	"modifiedTime":1759404460961,
 	"name":"Task_PB (copy)",
 	"nodes":[
 		{
@@ -47,7 +47,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_RV1ax-1",
 			"id":"n_6l4oG",
@@ -193,5 +193,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":12
 }
