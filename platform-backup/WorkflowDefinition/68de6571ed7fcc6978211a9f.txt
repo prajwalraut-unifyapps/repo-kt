@@ -16,7 +16,7 @@
 	"id":"68de6571ed7fcc6978211a9f",
 	"lastModifiedBy":426,
 	"lcName":"testdnt",
-	"modifiedTime":1759406755763,
+	"modifiedTime":1759407492676,
 	"name":"testdnt",
 	"nodes":[
 		{
@@ -24,7 +24,7 @@
 				"appName":"webhooks"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_mf0p7-1",
 			"id":"n_Is8vp",
@@ -41,7 +41,6 @@
 			"context":{
 				"appName":"act!",
 				"resourceVersion":3778,
-				"connectionId":"67bcec9955fa3158a0f852f1",
 				"resourceName":"act!_create_contact",
 				"type":"APPLICATION"
 			},
@@ -75,5 +74,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
