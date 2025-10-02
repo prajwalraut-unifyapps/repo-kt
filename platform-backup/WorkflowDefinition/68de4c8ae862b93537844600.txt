@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		
+		"storage_by_unifyapps"
 	],
 	"createdTime":1759399050988,
 	"deleted":false,
@@ -9,14 +9,28 @@
 			"fromNodeId":"n_UcSUx",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_NywCg",
+			"toNodeId":"n_zObZD",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_zObZD",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Zmt8y",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Zmt8y",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_HPBH8",
 			"type":"next"
 		}
 	],
 	"id":"68de4c8ae862b93537844600",
 	"lastModifiedBy":161165,
 	"lcName":"fileupload",
-	"modifiedTime":1759399131298,
+	"modifiedTime":1759399162036,
 	"name":"fileUpload",
 	"nodes":[
 		{
@@ -64,15 +78,386 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":105,
+				"resourceName":"variable_by_unifyapps_create_list",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_kdzrB-1",
-			"id":"_NywCg",
+			"id":"n_zObZD",
 			"index":2,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{
+					"createList":{
+						"ui:title":"",
+						"ua:type":{
+							"ui:widget":"hidden"
+						},
+						"items":{
+							"ui:title":"Initial list items",
+							"ui:description":"Set the initial values of the list (defaults to empty)"
+						},
+						"ui:order":[
+							"*",
+							"items"
+						]
+					},
+					"ua:title":{
+						"ui:widget":"hidden"
+					},
+					"ua:list_type":{
+						"ui:widget":"hidden"
+					}
+				},
+				"schema":{
+					"allOf":[
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"OBJECT"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"items":{
+												"type":"object",
+												"properties":{}
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"STRING"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of String"
+											},
+											"items":{
+												"type":"string"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"INTEGER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Integers"
+											},
+											"items":{
+												"type":"integer"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"NUMBER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Numbers"
+											},
+											"items":{
+												"type":"number"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"BOOLEAN"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Booleans"
+											},
+											"items":{
+												"type":"boolean"
+											}
+										}
+									}
+								}
+							}
+						}
+					],
+					"format":"ua:list",
+					"type":"object",
+					"properties":{
+						"ua:title":{
+							"type":"string"
+						},
+						"ua:list_type":{
+							"type":"string",
+							"title":"List Type",
+							"oneOf":[
+								{
+									"const":"OBJECT",
+									"title":"Object"
+								},
+								{
+									"const":"STRING",
+									"title":"String"
+								},
+								{
+									"const":"NUMBER",
+									"title":"Number"
+								},
+								{
+									"const":"INTEGER",
+									"title":"Integer"
+								},
+								{
+									"const":"BOOLEAN",
+									"title":"Boolean"
+								}
+							],
+							"default":"OBJECT"
+						},
+						"createList":{
+							"type":"object",
+							"properties":{
+								"ua:type":{
+									"type":"string",
+									"default":"mappedArray"
+								},
+								"source":{
+									"type":"string",
+									"format":"ua:source",
+									"title":"List Item Source"
+								},
+								"items":{
+									"additionalProperties":false,
+									"type":[
+										"object",
+										"string",
+										"number",
+										"boolean",
+										"integer"
+									],
+									"properties":{}
+								}
+							}
+						}
+					}
+				}
+			},
+			"inputs":{
+				"createList":{
+					"ua:type":"mappedArray",
+					"source":"{{ n_UcSUx.outputs.file }}",
+					"items":"{{ n_UcSUx.outputs.file[0].url }}"
+				},
+				"ua:title":"List",
+				"ua:list_type":"STRING"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"type":"object",
+					"properties":{
+						"items":{
+							"type":"array",
+							"title":"List",
+							"disableActions":true,
+							"items":{
+								"type":"string"
+							}
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create list",
 			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.record.DamageZones.items",
+					"root.record.FrontZoneDamaged.items",
+					"root.record.LeftZoneDamage.items",
+					"root.record.costBreakDown.items",
+					"root.record.file.items.url"
+				]
+			},
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":11027,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_kdzrB-1",
+			"id":"n_Zmt8y",
+			"index":3,
+			"inputs":{
+				"writeThroughSessionVariables":false,
+				"object_type":"indus_ind_g_idatabase",
+				"skipIfBlank":false,
+				"record":{
+					"FrontZoneDamaged":[
+						{
+							"source":"{{ n_lV1Ee.outputs.FrontZoneDamaged[0] }}",
+							"ua:type":"mappedArray"
+						}
+					],
+					"LeftZoneDamage":[
+						{
+							"source":"{{ n_lV1Ee.outputs.LeftZoneDamage[0] }}",
+							"ua:type":"mappedArray"
+						}
+					],
+					"AccidentSummary":"{{ n_lV1Ee.outputs.AccidentSummary }}",
+					"AiSummary":"{{ n_lV1Ee.outputs.AiSummary }}",
+					"CarCompany":"{{ n_lV1Ee.outputs.CarCompany }}",
+					"DamageZones":{
+						"source":"{{ n_lV1Ee.outputs.DamageZones }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_lV1Ee.outputs.DamageZones[0] }}"
+					},
+					"DentSize":"{{ n_lV1Ee.outputs.DentSize }}",
+					"FrontZoneDamagedSeverity":"{{ n_lV1Ee.outputs.FrontZoneDamagedSeverity }}",
+					"LabourCost":"{{ n_lV1Ee.outputs.LabourCost }}",
+					"LeftSidemirror":"{{ n_lV1Ee.outputs.LeftSidemirror }}",
+					"LeftZoneDamageSeverity":"{{ n_lV1Ee.outputs.LeftZoneDamageSeverity }}",
+					"PrimaryDamage":"{{ n_lV1Ee.outputs.PrimaryDamage }}",
+					"RearZoneDamageSeverity":"{{ n_lV1Ee.outputs.RearZoneDamageSeverity }}",
+					"RightSidemirror":"{{ n_lV1Ee.outputs.RightSidemirror }}",
+					"RightZoneDamageSeverity":"{{ n_lV1Ee.outputs.RightZoneDamageSeverity }}",
+					"Severity":"{{ n_lV1Ee.outputs.Severity }}",
+					"VehicleType":"{{ n_lV1Ee.outputs.VehicleType }}",
+					"Windshield":"{{ n_lV1Ee.outputs.Windshield }}",
+					"aiJustification":"{{ n_lV1Ee.outputs.aiJustification }}",
+					"airbagDeployed":"{{ n_lV1Ee.outputs.airbagDeployed }}",
+					"airbagSummary":"{{ n_lV1Ee.outputs.airbagSummary }}",
+					"parts_cost":"{{ n_lV1Ee.outputs.parts_cost }}",
+					"status":"{{ n_lV1Ee.outputs.status }}",
+					"totalCost":"{{ n_lV1Ee.outputs.totalCost }}",
+					"userCommentConsistency":"{{ n_lV1Ee.outputs.userCommentConsistency }}",
+					"file":{
+						"ua:type":"mappedArray",
+						"source":"{{ n_zObZD.outputs.items }}",
+						"items":{
+							"url":"{{ n_zObZD.outputs.items[0] }}"
+						}
+					},
+					"RightSideDamage":"{{ n_lV1Ee.outputs.RightSideDamage }}",
+					"LeftSideDamage":"{{ n_lV1Ee.outputs.LeftSideDamage }}",
+					"RearSideDamage":"{{ n_lV1Ee.outputs.RearSideDamage }}",
+					"FrontSideDamage":"{{ n_lV1Ee.outputs.FrontSideDamage }}",
+					"AverageDamage":"{{ n_lV1Ee.outputs.AverageDamage }}",
+					"comment":"{{ n_lV1Ee.outputs.comment }}",
+					"RearZoneDamage":{
+						"source":"{{ n_lV1Ee.outputs.RearZoneDamage }}",
+						"ua:type":"mappedArray"
+					},
+					"RightZoneDamage":{
+						"source":"{{ n_lV1Ee.outputs.RightZoneDamage[0] }}",
+						"ua:type":"mappedArray"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.result.aiJustification",
+					"root.result.status",
+					"root.result.userCommentConsistency"
+				]
+			},
+			"context":{
+				"appName":"callables",
+				"resourceVersion":106,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_kdzrB-1",
+			"id":"n_HPBH8",
+			"index":4,
+			"inputs":{
+				"result":{
+					"result":"200"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":161165,
@@ -92,5 +477,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
