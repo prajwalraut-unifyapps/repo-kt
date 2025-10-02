@@ -9,21 +9,21 @@
 			"fromNodeId":"n_Is8vp",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_sNbKW",
+			"toNodeId":"n_O2qv8",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_sNbKW",
+			"fromNodeId":"n_O2qv8",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_NZBKM",
+			"toNodeId":"n_3F9Im",
 			"type":"next"
 		}
 	],
 	"id":"68de6571ed7fcc6978211a9f",
-	"lastModifiedBy":602,
+	"lastModifiedBy":13,
 	"lcName":"testdnt",
-	"modifiedTime":1759410005660,
+	"modifiedTime":1759422310776,
 	"name":"testdnt",
 	"nodes":[
 		{
@@ -33,7 +33,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_mf0p7-1",
 			"id":"n_Is8vp",
@@ -53,50 +53,62 @@
 		},
 		{
 			"context":{
-				"appName":"files_by_unifyapps",
-				"resourceVersion":894,
-				"resourceName":"files_by_unifyapps_create_temp_file",
+				"appName":"analytics_by_unifyapps",
+				"resourceVersion":827,
+				"resourceName":"analytics_by_unifyapps_execute_query",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_mf0p7-1",
-			"id":"n_sNbKW",
+			"id":"n_O2qv8",
 			"index":2,
 			"inputs":{
-				"isTmp":true,
-				"initialContentType":"plainText",
-				"initialContent":"| Month    | Savings |\n| -------- | ------- |\n| January  | $250    |\n| February | $80     |\n| March    | $420    |",
-				"type":"SINGLE",
-				"fileType":"txt"
+				"outputSchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"sadas"
+					],
+					"properties":{
+						"sadas":{
+							"type":"string",
+							"title":"Sadas"
+						}
+					}
+				},
+				"query":"select * from ENTITY_npci_data",
+				"group":"ENTITY_REPORTING"
 			},
 			"skip":false,
-			"subTitle":"Files by UnifyApps",
-			"title":"Create a file",
+			"subTitle":"Analytics by UnifyApps",
+			"title":"Execute Analytics SQL Query",
 			"type":"ACTION"
 		},
 		{
 			"context":{
-				"appName":"utility_by_unifyapps",
-				"resourceVersion":399,
-				"resourceName":"utility_by_unifyapps_write_data_to_docx",
+				"appName":"analytics_by_unifyapps",
+				"resourceVersion":403,
+				"resourceName":"analytics_by_unifyapps_export_sql",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_mf0p7-1",
-			"id":"n_NZBKM",
+			"id":"n_3F9Im",
 			"index":3,
 			"inputs":{
-				"fileDetails":"{{ n_sNbKW.outputs.fileDetails }}",
-				"dataType":"MARKDOWN",
-				"content":"| Month    | Savings |\n| -------- | ------- |\n| January  | $250    |\n| February | $80     |\n| March    | $420    |"
+				"sheetName":"Sheet_0",
+				"query":"select * from ENTITY ",
+				"keepExactFileName":false,
+				"fileType":"CSV",
+				"group":"ENTITY_REPORTING"
 			},
 			"skip":false,
-			"subTitle":"Utility by UnifyApps",
-			"title":"Write Data to Docx file",
+			"subTitle":"Analytics by UnifyApps",
+			"title":"Export SQL Query Result",
 			"type":"ACTION"
 		}
 	],
@@ -117,5 +129,5 @@
 	"tags":[
 		
 	],
-	"version":10
+	"version":11
 }
