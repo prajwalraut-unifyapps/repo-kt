@@ -5,12 +5,12 @@
 	"createdTime":1756411297532,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243506600,
+		"deployedAt":1759243544828,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbecf29213d707c2d27291",
+		"deployedDefinitionId":"68dbed1823e6682b9a51eb0d",
 		"status":"DEPLOYED",
-		"version":26,
-		"workflowVersion":56
+		"version":27,
+		"workflowVersion":57
 	},
 	"edges":[
 		{
@@ -76,7 +76,7 @@
 	"id":"684d1e098dcb8a7a205cfe99",
 	"lastModifiedBy":-1,
 	"lcName":"workflow agent | web search",
-	"modifiedTime":1759243544773,
+	"modifiedTime":1759371867149,
 	"name":"Workflow Agent | Web Search",
 	"nodes":[
 		{
@@ -401,5 +401,5 @@
 	"tags":[
 		
 	],
-	"version":57
+	"version":58
 }
