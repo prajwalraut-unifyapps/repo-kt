@@ -5,12 +5,12 @@
 	"createdTime":1759399705493,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759399856163,
+		"deployedAt":1759400825120,
 		"deployedBy":39713,
-		"deployedDefinitionId":"68de4fade862b93537845376",
+		"deployedDefinitionId":"68de53772cc9f04fd0a34e62",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":2
+		"version":3,
+		"workflowVersion":4
 	},
 	"edges":[
 		{
@@ -164,14 +164,6 @@
 		},
 		{
 			"fromNodeId":"n_gzrDg",
-			"name":"success",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_pvvlU",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_gzrDg",
 			"name":"error",
 			"priority":0,
 			"skip":false,
@@ -179,7 +171,7 @@
 			"type":"error"
 		},
 		{
-			"fromNodeId":"n_pvvlU",
+			"fromNodeId":"n_gzrDg",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_Ug7k9",
@@ -196,7 +188,7 @@
 	"id":"68de4f19e862b93537845133",
 	"lastModifiedBy":39713,
 	"lcName":"test",
-	"modifiedTime":1759400821489,
+	"modifiedTime":1759400996344,
 	"name":"test",
 	"nodes":[
 		{
@@ -206,7 +198,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_n6eLp-1",
 			"id":"n_jK7u0",
@@ -232,7 +224,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_n6eLp-1",
 			"id":"n_dq0YO",
@@ -283,7 +275,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"MANUAL",
 			"groupId":"_n6eLp-1",
 			"id":"n_gzrDg",
@@ -356,7 +348,7 @@
 				"scopeNodeId":"n_gzrDg"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_gzrDg@_n6eLp-1@s",
 			"id":"n_thvPw",
@@ -390,7 +382,7 @@
 				"scopeNodeId":"n_gzrDg"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_thvPw@n_gzrDg@_n6eLp-1@s@l",
 			"id":"n_hVt0B",
@@ -414,7 +406,7 @@
 				"scopeNodeId":"n_gzrDg"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_thvPw@n_gzrDg@_n6eLp-1@s@l",
 			"id":"n_IEOin",
@@ -433,7 +425,7 @@
 				"scopeNodeId":"n_gzrDg"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_thvPw@n_gzrDg@_n6eLp-1@s@l",
 			"id":"n_BibHh",
@@ -456,7 +448,7 @@
 				"scopeNodeId":"n_gzrDg"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_thvPw@n_gzrDg@_n6eLp-1@s@l",
 			"id":"n_p6m36",
@@ -481,7 +473,7 @@
 				"scopeNodeId":"n_gzrDg"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_thvPw@n_gzrDg@_n6eLp-1@s@l",
 			"id":"n_lQlVV",
@@ -543,7 +535,7 @@
 				"scopeNodeId":"n_gzrDg"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_lQlVV@n_thvPw@n_gzrDg@_n6eLp-1@s@l@1",
 			"id":"n_lQlVV@1",
@@ -576,7 +568,7 @@
 				"scopeNodeId":"n_gzrDg"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_lQlVV@n_thvPw@n_gzrDg@_n6eLp-1@s@l@1",
 			"id":"n_73jZk",
@@ -595,7 +587,7 @@
 				"scopeNodeId":"n_gzrDg"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_lQlVV@n_thvPw@n_gzrDg@_n6eLp-1@s@l@2",
 			"id":"n_lQlVV@2",
@@ -628,7 +620,7 @@
 				"scopeNodeId":"n_gzrDg"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_lQlVV@n_thvPw@n_gzrDg@_n6eLp-1@s@l@2",
 			"id":"n_P9kWg",
@@ -647,7 +639,7 @@
 				"scopeNodeId":"n_gzrDg"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_gzrDg@_n6eLp-1@s",
 			"id":"n_6IlNv",
@@ -678,7 +670,7 @@
 				"scopeNodeId":"n_gzrDg"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_6IlNv@n_gzrDg@_n6eLp-1@s@y",
 			"id":"n_oP9AH",
@@ -697,7 +689,7 @@
 				"scopeNodeId":"n_gzrDg"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_6IlNv@n_gzrDg@_n6eLp-1@s@n",
 			"id":"n_9kTcj",
@@ -712,7 +704,7 @@
 				"appName":"stop"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_n6eLp-1",
 			"id":"n_Ug7k9",
@@ -730,29 +722,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"n_gzrDg@_n6eLp-1@success",
-			"id":"n_pvvlU",
-			"index":18,
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Create variables",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":987,
-				"resourceName":"variable_by_unifyapps_create_variables",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_gzrDg@_n6eLp-1@error",
 			"id":"n_DrQb6",
-			"index":19,
+			"index":18,
 			"skip":false,
 			"subTitle":"Variable by UnifyApps",
 			"title":"Create variables",
@@ -776,5 +750,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
