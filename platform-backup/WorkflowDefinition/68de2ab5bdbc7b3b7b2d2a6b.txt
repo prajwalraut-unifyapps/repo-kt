@@ -11,12 +11,19 @@
 			"skip":false,
 			"toNodeId":"n_nO8EC",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_nO8EC",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_iFUTx",
+			"type":"next"
 		}
 	],
 	"id":"68de2ab5bdbc7b3b7b2d2a6b",
-	"lastModifiedBy":2721,
+	"lastModifiedBy":31268,
 	"lcName":"test",
-	"modifiedTime":1759390438357,
+	"modifiedTime":1759397223992,
 	"name":"test",
 	"nodes":[
 		{
@@ -26,7 +33,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_X811Y-1",
 			"id":"n_u7CBu",
@@ -53,7 +60,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_X811Y-1",
 			"id":"n_nO8EC",
@@ -72,6 +79,37 @@
 			"skip":false,
 			"subTitle":"Google Cloud Storage",
 			"title":"Create a bucket",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"custom_http_endpoint",
+				"resourceVersion":1000,
+				"resourceName":"custom_http_endpoint_execute",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_X811Y-1",
+			"id":"n_iFUTx",
+			"index":3,
+			"inputs":{
+				"httpVersion":"HTTP_2",
+				"responseContentType":"application/json",
+				"isAsync":false,
+				"enableProxy":false,
+				"requestTimeoutInSecs":-1,
+				"authType":"CUSTOM",
+				"requestContentType":"application/json",
+				"ignoreTrailingSlashes":false,
+				"connectionType":"DIRECT",
+				"sslVerify":false,
+				"certificateType":"CERT_STRING"
+			},
+			"skip":false,
+			"subTitle":"Custom HTTP Endpoint",
+			"title":"Execute REST request",
 			"type":"ACTION"
 		}
 	],
@@ -92,5 +130,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
