@@ -6,7 +6,7 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_BdHTh",
+			"fromNodeId":"n_HyNzo",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_svgZI",
@@ -16,20 +16,31 @@
 	"id":"68de1d3a2364216c2da9cdab",
 	"lastModifiedBy":2721,
 	"lcName":"gcs_trigger_tesdt",
-	"modifiedTime":1759386978689,
+	"modifiedTime":1759386989551,
 	"name":"gcs_trigger_tesdt",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":820,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_BdHTh-1",
-			"id":"_BdHTh",
+			"id":"n_HyNzo",
 			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
@@ -71,5 +82,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
