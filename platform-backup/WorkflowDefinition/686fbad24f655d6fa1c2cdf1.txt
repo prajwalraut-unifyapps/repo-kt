@@ -5,12 +5,12 @@
 	"createdTime":1752152786513,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655414902,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f3b638757c179b123f9f",
+		"deployedAt":1759243624831,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed6823e6682b9a51ecf9",
 		"status":"DEPLOYED",
-		"version":30,
-		"workflowVersion":44
+		"version":32,
+		"workflowVersion":46
 	},
 	"edges":[
 		{
@@ -117,7 +117,7 @@
 	"id":"686fbad24f655d6fa1c2cdf1",
 	"lastModifiedBy":-1,
 	"lcName":"model libary connector ",
-	"modifiedTime":1759243592669,
+	"modifiedTime":1759371942130,
 	"name":"Model Libary Connector ",
 	"nodes":[
 		{
@@ -591,5 +591,5 @@
 	"tags":[
 		
 	],
-	"version":45
+	"version":47
 }
