@@ -5,12 +5,12 @@
 	"createdTime":1743561705535,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243518488,
+		"deployedAt":1759243554837,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbecfe9213d707c2d272b4",
+		"deployedDefinitionId":"68dbed229213d707c2d27328",
 		"status":"DEPLOYED",
-		"version":60,
-		"workflowVersion":95
+		"version":61,
+		"workflowVersion":96
 	},
 	"edges":[
 		{
@@ -385,7 +385,7 @@
 	"id":"67eca3e96f27204f04d2d699",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | gitlab | index directories & file names",
-	"modifiedTime":1759243554729,
+	"modifiedTime":1759371876859,
 	"name":"Knowledge Indexer | Gitlab | Index directories & file names",
 	"nodes":[
 		{
@@ -2034,5 +2034,5 @@
 	"tags":[
 		
 	],
-	"version":96
+	"version":97
 }
