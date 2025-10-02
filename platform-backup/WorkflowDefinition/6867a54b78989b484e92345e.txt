@@ -5,12 +5,12 @@
 	"createdTime":1754285377704,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243547797,
+		"deployedAt":1759243580398,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed1b23e6682b9a51eb1c",
+		"deployedDefinitionId":"68dbed3c23e6682b9a51ebf8",
 		"status":"DEPLOYED",
-		"version":30,
-		"workflowVersion":49
+		"version":31,
+		"workflowVersion":50
 	},
 	"edges":[
 		{
@@ -62,7 +62,7 @@
 	"id":"6867a54b78989b484e92345e",
 	"lastModifiedBy":-1,
 	"lcName":"store knowledge raw data",
-	"modifiedTime":1759243580346,
+	"modifiedTime":1759371901173,
 	"name":"Store Knowledge Raw Data",
 	"nodes":[
 		{
@@ -370,5 +370,5 @@
 	"tags":[
 		"knowledge_v2"
 	],
-	"version":50
+	"version":51
 }
