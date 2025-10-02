@@ -23,7 +23,7 @@
 	"id":"68ddf6602364216c2da9ae2a",
 	"lastModifiedBy":185583,
 	"lcName":"task_pb",
-	"modifiedTime":1759391513162,
+	"modifiedTime":1759391694265,
 	"name":"Task_PB",
 	"nodes":[
 		{
@@ -139,7 +139,7 @@
 						"type":"string"
 					}
 				},
-				"code":"        // Initial array of strings\n        String[] arr = [\"apple\", \"banana\", \"cherry\"]\n\n        // Convert array to list for easier modifications\n        def list = arr.toList()\n\n        // 1. Add an element\n        list.add(\"date\")\n        //println \"After adding 'date': ${list}\"\n\n        // // 2. Delete an element\n        // list.remove(\"banana\")   // removes by value\n        // println \"After deleting: ${list}\"\n\n        // // 3. Find an element\n        // def elementToFind = \"cherry\"\n        // if (list.contains(elementToFind)) {\n        //     println \"'${elementToFind}' found in the list at index ${list.indexOf(elementToFind)}\"\n        // } else {\n        //     println \"'${elementToFind}' not found\"\n        // }\n\n        // // (Optional) convert back to array if needed\n        arr = list as String[]\n        return [\"currentTagOut\":arr]",
+				"code":"        // Initial array of strings\n        //String[] arr = [\"apple\", \"banana\", \"cherry\"]\n\n        // Convert array to list for easier modifications\n        def list = currentTag.toList()\n\n        // 1. Add an element\n        list.add(\"date\")\n        //println \"After adding 'date': ${list}\"\n\n        // // 2. Delete an element\n        // list.remove(\"banana\")   // removes by value\n        // println \"After deleting: ${list}\"\n\n        // // 3. Find an element\n        // def elementToFind = \"cherry\"\n        // if (list.contains(elementToFind)) {\n        //     println \"'${elementToFind}' found in the list at index ${list.indexOf(elementToFind)}\"\n        // } else {\n        //     println \"'${elementToFind}' not found\"\n        // }\n\n        // // (Optional) convert back to array if needed\n        //arr = list as String[]\n        return [\"currentTagOut\":list as String[]]",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
@@ -199,5 +199,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
