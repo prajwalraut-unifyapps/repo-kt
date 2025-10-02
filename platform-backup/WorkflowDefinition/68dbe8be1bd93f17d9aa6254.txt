@@ -27,12 +27,19 @@
 			"skip":false,
 			"toNodeId":"n_KAsDL",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_KAsDL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_fYZTD",
+			"type":"next"
 		}
 	],
 	"id":"68dbe8be1bd93f17d9aa6254",
 	"lastModifiedBy":43498,
 	"lcName":"test-scheduler-connection-deletion",
-	"modifiedTime":1759407692137,
+	"modifiedTime":1759407711109,
 	"name":"test-scheduler-connection-deletion",
 	"nodes":[
 		{
@@ -112,6 +119,27 @@
 			"subTitle":"Teamwork",
 			"title":"Get all projects",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":994,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_oKLjG-1",
+			"id":"n_fYZTD",
+			"index":4,
+			"inputs":{
+				"result":"asdcfb"
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":569,
@@ -131,5 +159,5 @@
 	"tags":[
 		
 	],
-	"version":19
+	"version":20
 }
