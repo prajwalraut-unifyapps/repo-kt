@@ -5,12 +5,12 @@
 	"createdTime":1745399922374,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243502581,
+		"deployedAt":1759243541598,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbecee5e003e08cdeb2e19",
+		"deployedDefinitionId":"68dbed1523e6682b9a51eaf7",
 		"status":"DEPLOYED",
-		"version":32,
-		"workflowVersion":54
+		"version":33,
+		"workflowVersion":55
 	},
 	"edges":[
 		{
@@ -580,7 +580,7 @@
 	"id":"6800ec7034248534e202839f",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | zoho inventory | index invoices",
-	"modifiedTime":1759243541346,
+	"modifiedTime":1759371863685,
 	"name":"Knowledge Indexer | Zoho inventory | Index invoices",
 	"nodes":[
 		{
@@ -2943,5 +2943,5 @@
 		}
 	},
 	"standard":true,
-	"version":55
+	"version":56
 }
