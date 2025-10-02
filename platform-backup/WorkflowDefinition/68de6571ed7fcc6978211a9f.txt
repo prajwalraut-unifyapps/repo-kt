@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		
+		"sqlserver"
 	],
 	"createdTime":1759405425345,
 	"deleted":false,
@@ -18,12 +18,19 @@
 			"skip":false,
 			"toNodeId":"n_3F9Im",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_3F9Im",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_SfEaL",
+			"type":"next"
 		}
 	],
 	"id":"68de6571ed7fcc6978211a9f",
 	"lastModifiedBy":13,
 	"lcName":"testdnt",
-	"modifiedTime":1759422310776,
+	"modifiedTime":1759423128587,
 	"name":"testdnt",
 	"nodes":[
 		{
@@ -52,6 +59,11 @@
 			"type":"START"
 		},
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
 			"context":{
 				"appName":"analytics_by_unifyapps",
 				"resourceVersion":827,
@@ -78,7 +90,7 @@
 						}
 					}
 				},
-				"query":"select * from ENTITY_npci_data",
+				"query":"SELECT * FROM ENTITY_npci_data \nWHERE _pr_txnId = :txnId \n  AND _pr_beneficiaryFlag = :beneficiaryFlag",
 				"group":"ENTITY_REPORTING"
 			},
 			"skip":false,
@@ -100,8 +112,32 @@
 			"id":"n_3F9Im",
 			"index":3,
 			"inputs":{
+				"outputSchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"test"
+					],
+					"properties":{
+						"test":{
+							"type":"string",
+							"title":"Test"
+						}
+					}
+				},
 				"sheetName":"Sheet_0",
-				"query":"select * from ENTITY ",
+				"query":"SELECT * FROM ENTITY_npci_data WHERE _pr_txnId = '3'",
+				"params":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"test":{
+							"type":"string",
+							"title":"Test"
+						}
+					}
+				},
 				"keepExactFileName":false,
 				"fileType":"CSV",
 				"group":"ENTITY_REPORTING"
@@ -109,6 +145,40 @@
 			"skip":false,
 			"subTitle":"Analytics by UnifyApps",
 			"title":"Export SQL Query Result",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"sqlserver",
+				"resourceVersion":5967,
+				"connectionId":"68b5309e0a619530af5c674d",
+				"resourceName":"sqlserver_execute_sql",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_mf0p7-1",
+			"id":"n_SfEaL",
+			"index":4,
+			"inputs":{
+				"performAsync":false,
+				"objectSourceResourceName":"sqlserver_execute_sql_metadata",
+				"params":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"sdasa":{
+							"type":"string",
+							"title":"Sdasa"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Microsoft SQL Server",
+			"title":"Execute a SQL statement",
 			"type":"ACTION"
 		}
 	],
@@ -129,5 +199,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":12
 }
