@@ -5,12 +5,12 @@
 	"createdTime":1738138496333,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243501210,
+		"deployedAt":1759243540526,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbeced5e003e08cdeb2e16",
+		"deployedDefinitionId":"68dbed1423e6682b9a51eaec",
 		"status":"DEPLOYED",
-		"version":57,
-		"workflowVersion":81
+		"version":58,
+		"workflowVersion":82
 	},
 	"edges":[
 		{
@@ -62,7 +62,7 @@
 	"id":"679921819928be54b16a76ad",
 	"lastModifiedBy":-1,
 	"lcName":"publish fan message to custom chat",
-	"modifiedTime":1759243540470,
+	"modifiedTime":1759371862674,
 	"name":"Publish Fan Message to Custom Chat",
 	"nodes":[
 		{
@@ -339,5 +339,5 @@
 	"tags":[
 		
 	],
-	"version":82
+	"version":83
 }
