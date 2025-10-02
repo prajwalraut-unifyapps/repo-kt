@@ -5,12 +5,12 @@
 	"createdTime":1740110506980,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243505383,
+		"deployedAt":1759243543757,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbecf19213d707c2d2728a",
+		"deployedDefinitionId":"68dbed1723e6682b9a51eb06",
 		"status":"DEPLOYED",
-		"version":26,
-		"workflowVersion":72
+		"version":27,
+		"workflowVersion":73
 	},
 	"edges":[
 		{
@@ -127,7 +127,7 @@
 	"id":"67adb38f85944824b45edc0e",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | outlook | index all tasks",
-	"modifiedTime":1759243543681,
+	"modifiedTime":1759371866152,
 	"name":"Knowledge Indexer | Outlook | Index all tasks",
 	"nodes":[
 		{
@@ -757,5 +757,5 @@
 	"tags":[
 		
 	],
-	"version":73
+	"version":74
 }
