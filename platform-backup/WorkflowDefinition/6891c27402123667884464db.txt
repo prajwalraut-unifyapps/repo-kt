@@ -5,12 +5,12 @@
 	"createdTime":1758646509422,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243518989,
+		"deployedAt":1759243555180,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbecfe9213d707c2d272b7",
+		"deployedDefinitionId":"68dbed235e003e08cdeb2eeb",
 		"status":"DEPLOYED",
-		"version":3,
-		"workflowVersion":13
+		"version":4,
+		"workflowVersion":14
 	},
 	"edges":[
 		{
@@ -41,7 +41,7 @@
 	"id":"6891c27402123667884464db",
 	"lastModifiedBy":-1,
 	"lcName":"deep research tool | answer generator",
-	"modifiedTime":1759243555124,
+	"modifiedTime":1759371877247,
 	"name":"Deep Research Tool | Answer Generator",
 	"nodes":[
 		{
@@ -197,5 +197,5 @@
 	"tags":[
 		
 	],
-	"version":14
+	"version":15
 }
