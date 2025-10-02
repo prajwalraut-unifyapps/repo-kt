@@ -5,12 +5,12 @@
 	"createdTime":1757528317461,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655327020,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f35e38757c179b123119",
+		"deployedAt":1759243553813,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed215e003e08cdeb2ee5",
 		"status":"DEPLOYED",
-		"version":3,
-		"workflowVersion":15
+		"version":5,
+		"workflowVersion":17
 	},
 	"edges":[
 		{
@@ -78,7 +78,7 @@
 	"id":"68bff3bd5cdee71adf0ac578",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge downloader | sharepoint | file wrapper",
-	"modifiedTime":1759243517150,
+	"modifiedTime":1759371875776,
 	"name":"Knowledge Downloader | Sharepoint | File Wrapper",
 	"nodes":[
 		{
@@ -715,5 +715,5 @@
 	"tags":[
 		"knowledge_v2"
 	],
-	"version":16
+	"version":18
 }
