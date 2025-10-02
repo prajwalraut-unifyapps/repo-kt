@@ -5,12 +5,12 @@
 	"createdTime":1752514748890,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646572754,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2d12cbd00df618e363d6c",
+		"deployedAt":1759243608416,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed589213d707c2d27460",
 		"status":"DEPLOYED",
-		"version":45,
-		"workflowVersion":85
+		"version":48,
+		"workflowVersion":88
 	},
 	"edges":[
 		{
@@ -354,9 +354,9 @@
 		]
 	},
 	"id":"6872176cfef791295f36a002",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"executesql tool",
-	"modifiedTime":1758655395178,
+	"modifiedTime":1759371926216,
 	"name":"ExecuteSQL Tool",
 	"nodes":[
 		{
@@ -489,11 +489,9 @@
 							},
 							"title":"Metadata"
 						},
-						"blocks":{
-							"type":"object",
-							"properties":{},
-							"additionalProperties":false,
-							"title":"Blocks"
+						"responsibility_key":{
+							"type":"string",
+							"title":"Responsibility Key"
 						}
 					},
 					"additionalProperties":false,
@@ -519,7 +517,7 @@
 					"required":[]
 				},
 				"compile_static":false,
-				"code":"def sql_query = null\ndef platformName = null\ndef metadata = null\ndef blocks = null\n\nif(binding.hasVariable('toolInputs')){\n  sql_query = toolInputs?.sql_query\n  blocks = toolInputs?.toBlocks\n}\nif(binding.hasVariable('toolAdditional')){\n  platformName = toolAdditional?.platformName\n  metadata = toolAdditional?.metadata\n}\nreturn [sql_query: sql_query, platformName: platformName, metadata: metadata, blocks: blocks]",
+				"code":"def sql_query = null\ndef platformName = null\ndef metadata = null\ndef responsibility_key = null\n\n\nif(binding.hasVariable('toolInputs')){\n  sql_query = toolInputs?.sql_query\n  responsibility_key = toolInputs?.responsibility_key\n\n}\nif(binding.hasVariable('toolAdditional')){\n  platformName = toolAdditional?.platformName\n  metadata = toolAdditional?.metadata\n}\nreturn [sql_query: sql_query, platformName: platformName, metadata: metadata, responsibility_key : responsibility_key]",
 				"parameters":{
 					"toolInputs":"{{ GpPp2.outputs.toolInputs }}",
 					"toolAdditional":"{{ GpPp2.outputs.toolAdditional }}"
@@ -551,6 +549,8 @@
 			"inputs":{
 				"output":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"metadata":{
 							"type":"array",
@@ -599,12 +599,12 @@
 							},
 							"title":"Metadata Reduced"
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				},
 				"input":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"md":{
 							"type":"array",
@@ -613,12 +613,11 @@
 							},
 							"title":"md"
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				},
+				"code":"def tableMap = [:]\n\ndef md = binding.hasVariable(\"md\") ? binding.getVariable(\"md\") : []\n\nmd.each { metadataItem ->\n    def tableName = metadataItem['tableName']\n    if (!tableMap.containsKey(tableName)) {\n        tableMap[tableName] = [\n            'columns': [],\n            'tableDescription': metadataItem['tableDescription'],\n            'tablePrimaryKey': metadataItem['tablePrimaryKey'],\n            'platform_name': metadataItem['platform_name'],\n            'tableNameUI': metadataItem['tableNameUI']\n        ]\n    }    \n    def filteredMetadata = [\n        'column_description': metadataItem?.column_description?.replace(\"\\n\", \"<br>\"),\n        'column_name': metadataItem?.column_name,\n        'column_datatype': metadataItem?.column_datatype,\n        'column_label' : metadataItem?.column_label,\n    ]\n    \n    tableMap[tableName]['columns'] << filteredMetadata\n}\n\ndef resultArray = tableMap.collect { tableName, data ->\n    [\n        'tableName': tableName,\n        'columns': data['columns'],\n        'tableDescription': data['tableDescription'],\n        'tablePrimaryKey': data['tablePrimaryKey'],\n        'platform_name': data['platform_name'],\n        'tableNameUI': data['tableNameUI']\n    ]\n}\ndef reducedResultArray = tableMap.collect { tableName, data ->\n    [\n        'tableName': tableName,\n        'columns': data['columns'].collect { col ->\n            [\n                'column_name': col['column_name'],\n                'column_label': col['column_label']\n                // column_description and column_datatype are not included\n            ]\n        },\n        'tableDescription': data['tableDescription'],\n        'tablePrimaryKey': data['tablePrimaryKey'],\n        'platform_name': data['platform_name'],\n        'tableNameUI': data['tableNameUI']\n    ]\n}\n\nreturn [\n    'metadata': resultArray,\n    'metadata_reduced': reducedResultArray\n]\n\n\nreturn ['metadata': resultArray,'metadata_reduced' : reducedResultArray]",
 				"compile_static":false,
-				"code":"def tableMap = [:]\n\ndef md = binding.hasVariable(\"md\") ? binding.getVariable(\"md\") : []\n\nmd.each { metadataItem ->\n    def tableName = metadataItem['table_name']\n    if (!tableMap.containsKey(tableName)) {\n        tableMap[tableName] = [\n            'columns': [],\n            'tableDescription': metadataItem['tableDescription'],\n            'tablePrimaryKey': metadataItem['tablePrimaryKey'],\n            'platform_name': metadataItem['platform_name'],\n            'tableNameUI': metadataItem['tableNameUI']\n        ]\n    }    \n    def filteredMetadata = [\n        'column_description': metadataItem?.column_description?.replace(\"\\n\", \"<br>\"),\n        'column_name': metadataItem?.column_name,\n        'column_datatype': metadataItem?.column_datatype,\n        'column_label' : metadataItem?.column_label,\n    ]\n    \n    tableMap[tableName]['columns'] << filteredMetadata\n}\n\ndef resultArray = tableMap.collect { tableName, data ->\n    [\n        'tableName': tableName,\n        'columns': data['columns'],\n        'tableDescription': data['tableDescription'],\n        'tablePrimaryKey': data['tablePrimaryKey'],\n        'platform_name': data['platform_name'],\n        'tableNameUI': data['tableNameUI']\n    ]\n}\ndef reducedResultArray = tableMap.collect { tableName, data ->\n    [\n        'tableName': tableName,\n        'columns': data['columns'].collect { col ->\n            [\n                'column_name': col['column_name'],\n                'column_label': col['column_label']\n                // column_description and column_datatype are not included\n            ]\n        },\n        'tableDescription': data['tableDescription'],\n        'tablePrimaryKey': data['tablePrimaryKey'],\n        'platform_name': data['platform_name'],\n        'tableNameUI': data['tableNameUI']\n    ]\n}\n\nreturn [\n    'metadata': resultArray,\n    'metadata_reduced': reducedResultArray\n]\n\n\nreturn ['metadata': resultArray,'metadata_reduced' : reducedResultArray]",
+				"captureStdOutput":false,
 				"parameters":{
 					"md":{
 						"ua:type":"mappedArray",
@@ -653,12 +652,12 @@
 				"parameters":{
 					"caseId":"{{ GpPp2.outputs.caseId }}",
 					"queries":{
-						"items":"{{ Oqpz0.outputs.result.sql_query }}",
+						"items":"{{ _GK3Mq.outputs.result.responsibility_key }} SQL : {{ _GK3Mq.outputs.result.sql_query }}",
 						"ua:type":"mappedArray"
 					}
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"searching",
 			"title":"Call automation",
 			"type":"CALL_WORKFLOW"
@@ -889,8 +888,9 @@
 				"synchronous":true,
 				"version":"-1",
 				"parameters":{
-					"platformName":"{{ Oqpz0.outputs.result.platformName }}",
-					"sqlQuery":"{{ LnUU4.outputs.result.limited_sql }}"
+					"sqlQuery":"{{ LnUU4.outputs.result.limited_sql }}",
+					"platformName":"=IF({{ _GK3Mq.outputs.result.platformName }}=\"custom_api\",{{ _GK3Mq.outputs.result.sql_query }},{{ LnUU4.outputs.result.limited_sql }})",
+					"responsibility_key":"{{ _GK3Mq.outputs.result.responsibility_key }}"
 				}
 			},
 			"options":{
@@ -2065,6 +2065,7 @@
 				"object_type":"citation_store",
 				"record":{
 					"hasMoreData":"{{ nJq8F.outputs.hasMoreData }}",
+					"tableIsPublished":false,
 					"chunkNumber":"{{ SgyMl.outputs.result }}",
 					"columnData":{
 						"source":"{{ o9ReY.outputs.columnNames }}",
@@ -2224,9 +2225,9 @@
 					"chartId":"{{ SgyMl.outputs.result }}",
 					"caseId":"{{ GpPp2.outputs.caseId }}",
 					"metadata":{
-						"source":"{{ Oqpz0.outputs.result.md }}",
 						"ua:type":"mappedArray",
-						"items":"{{ Oqpz0.outputs.result.md[0] }}"
+						"source":"{{ _GK3Mq.outputs.result.metadata }}",
+						"items":"{{ _GK3Mq.outputs.result.metadata[0] }}"
 					}
 				}
 			},
@@ -2298,5 +2299,5 @@
 		}
 	},
 	"standard":true,
-	"version":86
+	"version":89
 }
