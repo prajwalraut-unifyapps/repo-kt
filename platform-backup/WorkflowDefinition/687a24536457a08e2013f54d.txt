@@ -6,12 +6,12 @@
 	"createdTime":1757480395296,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655319599,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f35738757c179b122fe4",
+		"deployedAt":1759243548859,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed1c23e6682b9a51eb20",
 		"status":"DEPLOYED",
-		"version":5,
-		"workflowVersion":65
+		"version":7,
+		"workflowVersion":67
 	},
 	"edges":[
 		{
@@ -208,7 +208,7 @@
 	"id":"687a24536457a08e2013f54d",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge downloader | confluence | all spaces",
-	"modifiedTime":1759243510893,
+	"modifiedTime":1759371870821,
 	"name":"Knowledge Downloader | Confluence | All Spaces",
 	"nodes":[
 		{
@@ -1492,5 +1492,5 @@
 	"tags":[
 		"knowledge_v2"
 	],
-	"version":66
+	"version":68
 }
