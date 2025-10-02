@@ -5,12 +5,12 @@
 	"createdTime":1738691629226,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243555972,
+		"deployedAt":1759243588766,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed235e003e08cdeb2eee",
+		"deployedDefinitionId":"68dbed449213d707c2d273e1",
 		"status":"DEPLOYED",
-		"version":57,
-		"workflowVersion":77
+		"version":58,
+		"workflowVersion":78
 	},
 	"edges":[
 		{
@@ -80,7 +80,7 @@
 	"id":"67a22e0e6ecb5d00edc9123a",
 	"lastModifiedBy":-1,
 	"lcName":"fetch role goal background",
-	"modifiedTime":1759243588709,
+	"modifiedTime":1759371908352,
 	"name":"Fetch role goal background",
 	"nodes":[
 		{
@@ -378,5 +378,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":78
+	"version":79
 }
