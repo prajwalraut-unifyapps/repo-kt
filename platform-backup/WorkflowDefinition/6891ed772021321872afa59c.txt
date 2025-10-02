@@ -5,12 +5,12 @@
 	"createdTime":1756411344544,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655398836,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f3a638757c179b123d1b",
+		"deployedAt":1759243610686,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed5a9213d707c2d2746b",
 		"status":"DEPLOYED",
-		"version":22,
-		"workflowVersion":34
+		"version":24,
+		"workflowVersion":36
 	},
 	"edges":[
 		{
@@ -86,7 +86,7 @@
 	"id":"6891ed772021321872afa59c",
 	"lastModifiedBy":-1,
 	"lcName":"clustering | create record cluster summary vector",
-	"modifiedTime":1759243577715,
+	"modifiedTime":1759371928471,
 	"name":"Clustering | Create Record Cluster Summary Vector",
 	"nodes":[
 		{
@@ -370,5 +370,5 @@
 		}
 	},
 	"standard":true,
-	"version":35
+	"version":37
 }
