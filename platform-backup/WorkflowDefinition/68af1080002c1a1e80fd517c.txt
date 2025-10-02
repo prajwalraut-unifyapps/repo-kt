@@ -23,6 +23,13 @@
 			"fromNodeId":"_sB69Y",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_3XrjI",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_3XrjI",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"_AKgwp",
 			"type":"next"
 		}
@@ -30,7 +37,7 @@
 	"id":"68af1080002c1a1e80fd517c",
 	"lastModifiedBy":44105,
 	"lcName":"sqwfdewfe",
-	"modifiedTime":1759403765636,
+	"modifiedTime":1759403781131,
 	"name":"sqwfdewfe",
 	"nodes":[
 		{
@@ -135,6 +142,28 @@
 		},
 		{
 			"context":{
+				"appName":"delay",
+				"resourceVersion":796,
+				"resourceName":"delay_for",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_sHsoD-1",
+			"id":"n_3XrjI",
+			"index":4,
+			"inputs":{
+				"duration":2,
+				"unit":"SECONDS"
+			},
+			"skip":false,
+			"subTitle":"Delay",
+			"title":"Set delay duration",
+			"type":"DELAY"
+		},
+		{
+			"context":{
 				"appName":"variable_by_unifyapps",
 				"resourceVersion":910,
 				"resourceName":"variable_by_unifyapps_update_variables",
@@ -145,7 +174,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sHsoD-1",
 			"id":"_AKgwp",
-			"index":4,
+			"index":5,
 			"inputs":{
 				"variables":[
 					{
@@ -177,5 +206,5 @@
 	"tags":[
 		"fqwefqew"
 	],
-	"version":38
+	"version":39
 }
