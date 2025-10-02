@@ -5,12 +5,12 @@
 	"createdTime":1742570216594,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243556728,
+		"deployedAt":1759243589488,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed245e003e08cdeb2ef3",
+		"deployedDefinitionId":"68dbed459213d707c2d273e6",
 		"status":"DEPLOYED",
-		"version":45,
-		"workflowVersion":58
+		"version":46,
+		"workflowVersion":59
 	},
 	"edges":[
 		{
@@ -48,7 +48,7 @@
 	"id":"67dd82e8fff6050055bd8f19",
 	"lastModifiedBy":-1,
 	"lcName":"[mcp server] ping",
-	"modifiedTime":1759243589434,
+	"modifiedTime":1759371909044,
 	"name":"[MCP Server] Ping",
 	"nodes":[
 		{
@@ -235,5 +235,5 @@
 	"tags":[
 		"MCP Server"
 	],
-	"version":59
+	"version":60
 }
