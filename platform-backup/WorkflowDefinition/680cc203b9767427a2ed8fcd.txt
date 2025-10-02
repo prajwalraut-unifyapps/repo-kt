@@ -5,12 +5,12 @@
 	"createdTime":1745765236221,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243503225,
+		"deployedAt":1759243542105,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbecef9213d707c2d27280",
+		"deployedDefinitionId":"68dbed1623e6682b9a51eafb",
 		"status":"DEPLOYED",
-		"version":58,
-		"workflowVersion":88
+		"version":59,
+		"workflowVersion":89
 	},
 	"edges":[
 		{
@@ -380,7 +380,7 @@
 	"id":"680cc203b9767427a2ed8fcd",
 	"lastModifiedBy":-1,
 	"lcName":"observability | get traces",
-	"modifiedTime":1759243541886,
+	"modifiedTime":1759371864273,
 	"name":"Observability | Get Traces",
 	"nodes":[
 		{
@@ -2861,5 +2861,5 @@
 		}
 	},
 	"standard":true,
-	"version":89
+	"version":90
 }
