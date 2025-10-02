@@ -5,12 +5,12 @@
 	"createdTime":1722521608224,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655427453,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f3c338757c179b124161",
+		"deployedAt":1759243634860,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed7223e6682b9a51ed32",
 		"status":"DEPLOYED",
-		"version":194,
-		"workflowVersion":315
+		"version":196,
+		"workflowVersion":318
 	},
 	"edges":[
 		{
@@ -221,9 +221,9 @@
 		]
 	},
 	"id":"66ab98083d73300e63962287",
-	"lastModifiedBy":47193,
+	"lastModifiedBy":-1,
 	"lcName":"generic_co_pilot_fetch_case_conversation",
-	"modifiedTime":1759225318580,
+	"modifiedTime":1759371951967,
 	"name":"GENERIC_CO_PILOT_Fetch_Case_Conversation",
 	"nodes":[
 		{
@@ -659,7 +659,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"9jp6m-1",
 			"id":"M2nB3",
@@ -780,7 +780,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"9jp6m-1",
 			"id":"n_sGZQA",
@@ -3021,5 +3021,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":316
+	"version":319
 }
