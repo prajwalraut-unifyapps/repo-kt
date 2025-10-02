@@ -5,12 +5,12 @@
 	"createdTime":1759243526091,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243526150,
+		"deployedAt":1759243561785,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed065e003e08cdeb2e66",
+		"deployedDefinitionId":"68dbed2923e6682b9a51eb7a",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":4
+		"version":2,
+		"workflowVersion":5
 	},
 	"edges":[
 		{
@@ -41,7 +41,7 @@
 	"id":"68d4e25f125eb61e310c5bdd",
 	"lastModifiedBy":-1,
 	"lcName":"web scraping | firecrawl",
-	"modifiedTime":1759243561725,
+	"modifiedTime":1759371883492,
 	"name":"Web Scraping | FireCrawl",
 	"nodes":[
 		{
@@ -370,5 +370,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
