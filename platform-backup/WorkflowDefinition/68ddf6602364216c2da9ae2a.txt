@@ -37,7 +37,7 @@
 	"id":"68ddf6602364216c2da9ae2a",
 	"lastModifiedBy":185583,
 	"lcName":"task_pb",
-	"modifiedTime":1759396619091,
+	"modifiedTime":1759397191092,
 	"name":"Task_PB",
 	"nodes":[
 		{
@@ -50,8 +50,8 @@
 			},
 			"context":{
 				"appName":"callables",
-				"resourceVersion":1057,
-				"resourceName":"callables_from_api"
+				"resourceVersion":969,
+				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
 			"dirty":true,
@@ -60,58 +60,42 @@
 			"id":"n_6l4oG",
 			"index":1,
 			"inputs":{
-				"request":{
-					"contentType":"application/json",
-					"body":{
-						"type":"object",
-						"properties":{
-							"currentTag":{
-								"type":"array",
-								"items":{
-									"type":"string"
-								},
-								"title":"Current Tag"
-							}
-						},
-						"additionalProperties":false,
-						"required":[
-							"currentTag"
-						]
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"currentTagOut"
+					],
+					"properties":{
+						"currentTagOut":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Current Tag Out"
+						}
 					}
 				},
-				"endpointType":"REST",
-				"response":[
-					{
-						"name":"Success",
-						"status":200,
-						"contentType":"application/json",
-						"textBody":{
-							"type":"string"
-						},
-						"body":{
-							"type":"object",
-							"properties":{
-								"currentTagOut":{
-									"type":"array",
-									"items":{
-										"type":"string"
-									},
-									"title":"currentTagOut"
-								}
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"currentTag"
+					],
+					"properties":{
+						"currentTag":{
+							"type":"array",
+							"items":{
+								"type":"string"
 							},
-							"additionalProperties":false,
-							"required":[
-								"currentTagOut"
-							]
-						},
-						"namespaces":[]
+							"title":"Current Tag"
+						}
 					}
-				],
-				"streamingResponse":false
+				}
 			},
 			"skip":false,
 			"subTitle":"Callable",
-			"title":"Trigger via API",
+			"title":"Trigger via automation",
 			"trigger":{
 				"type":"CALLABLE"
 			},
@@ -369,7 +353,7 @@
 					}
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Variable by UnifyApps",
 			"title":"Create list",
 			"type":"ACTION"
@@ -392,7 +376,7 @@
 				"insertLocation":"END",
 				"listName":"{{ n_Hacam.outputs.items[0] }}"
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Variable by UnifyApps",
 			"title":"Add item to list",
 			"type":"ACTION"
@@ -433,32 +417,22 @@
 					}
 				},
 				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"currentTag"
-					],
-					"properties":{
-						"currentTag":{
-							"type":"array",
-							"items":{
-								"type":"string"
-							},
-							"title":"Current Tag"
-						}
+					"type":"array",
+					"title":"Current Tag",
+					"ua:__linkedVariable__":"n_6l4oG.outputs.currentTag",
+					"items":{
+						"type":"string"
 					}
 				},
-				"code":"//def currentTag = [\"apple\",\"banana\"]\n\ndef list = currentTag.toList()\nlist.add(\"date\")\n\n\n\nreturn [currentTagOut:list as String[]]",
+				"code":"//def currentTag = [\"apple\",\"banana\"]\n\ndef updatedArray = []\n    if (currentTag != null) {\n        updatedArray.addAll(currentTag)\n    }\n    updatedArray.add(\"date\")\n\n//def list = currentTag.toList()\n//list.add(\"date\")\n\n\n\nreturn [currentTagOut:updatedArray]",
 				"compile_static":false,
 				"captureStdOutput":true,
 				"parameters":{
-					"currentTag":{
-						"source":"{{ n_6l4oG.outputs.body.currentTag }}",
-						"ua:type":"mappedArray"
-					}
+					"source":"{{ n_6l4oG.outputs.currentTag }}",
+					"ua:type":"mappedArray"
 				}
 			},
-			"skip":true,
+			"skip":false,
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Groovy code",
 			"type":"ACTION"
@@ -510,5 +484,5 @@
 	"tags":[
 		
 	],
-	"version":18
+	"version":19
 }
