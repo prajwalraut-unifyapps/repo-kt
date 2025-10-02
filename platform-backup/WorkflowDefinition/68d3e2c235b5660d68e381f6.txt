@@ -5,12 +5,12 @@
 	"createdTime":1758716610341,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758716724203,
+		"deployedAt":1758716881990,
 		"deployedBy":47806,
-		"deployedDefinitionId":"68d3e3332623ce3ac9631660",
+		"deployedDefinitionId":"68d3e3d1d4bb2140f0ec8cf2",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":1
+		"version":2,
+		"workflowVersion":2
 	},
 	"edges":[
 		{
@@ -107,9 +107,9 @@
 		}
 	],
 	"id":"68d3e2c235b5660d68e381f6",
-	"lastModifiedBy":47806,
+	"lastModifiedBy":132116,
 	"lcName":"conditions_insideloops",
-	"modifiedTime":1758716874564,
+	"modifiedTime":1759419741160,
 	"name":"conditions_insideloops",
 	"nodes":[
 		{
@@ -119,7 +119,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_MXkKD-1",
 			"id":"n_CYsdT",
@@ -145,14 +145,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_MXkKD-1",
 			"id":"n_5B4Wa",
 			"index":2,
 			"inputs":{
 				"start":0,
-				"limit":5,
+				"limit":3,
 				"step":1,
 				"captureIterations":true
 			},
@@ -169,14 +169,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_5B4Wa@_MXkKD-1@l",
 			"id":"n_gf4rW",
 			"index":3,
 			"inputs":{
 				"start":0,
-				"limit":5,
+				"limit":3,
 				"step":1,
 				"captureIterations":true
 			},
@@ -193,7 +193,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_gf4rW@n_5B4Wa@_MXkKD-1@l@l",
 			"id":"n_zgmfG",
@@ -204,7 +204,7 @@
 						"property":"{{ n_gf4rW.outputs.index }}",
 						"filter":{
 							"operator":"EQUAL",
-							"value":"3"
+							"value":"1"
 						}
 					}
 				],
@@ -231,10 +231,10 @@
 			"inputs":{
 				"filters":[
 					{
-						"property":"{{ n_5B4Wa.outputs.index }}",
+						"property":"1",
 						"filter":{
 							"operator":"EQUAL",
-							"value":"3"
+							"value":"1"
 						}
 					}
 				],
@@ -253,7 +253,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nXscF@n_zgmfG@n_gf4rW@n_5B4Wa@_MXkKD-1@l@l@y@y",
 			"id":"n_Ozinh",
@@ -277,6 +277,63 @@
 				}
 			},
 			"inputs":{},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"global":false
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":true,
+					"logPolicies":[
+						{
+							"level":"INFO",
+							"maskedFields":[
+								
+							],
+							"message":"Loop[2] - {{ n_5B4Wa.outputs.index }}\nLoop[3] - {{ n_gf4rW.outputs.index }}",
+							"onlyOnFailure":false
+						}
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"STOP",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
+			},
 			"outputSchema":{
 				"dynamic":false,
 				"schema":{
@@ -306,7 +363,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nXscF@n_zgmfG@n_gf4rW@n_5B4Wa@_MXkKD-1@l@l@y@n",
 			"id":"n_wjN67",
@@ -359,7 +416,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_zgmfG@n_gf4rW@n_5B4Wa@_MXkKD-1@l@l@n",
 			"id":"n_8Lfmj",
@@ -384,6 +441,63 @@
 			},
 			"inputs":{
 				"input":"unify1"
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"global":false
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":true,
+					"logPolicies":[
+						{
+							"level":"INFO",
+							"maskedFields":[
+								
+							],
+							"message":"loop[2] index - {{ n_5B4Wa.outputs.index }}\nloop[3] index - {{ n_gf4rW.outputs.index }}",
+							"onlyOnFailure":false
+						}
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"STOP",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -411,7 +525,7 @@
 				"appName":"stop"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_MXkKD-1",
 			"id":"n_F7z2G",
@@ -439,5 +553,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":11
 }
