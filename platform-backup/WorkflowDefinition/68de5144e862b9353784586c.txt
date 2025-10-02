@@ -6,46 +6,193 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_gFuT3",
+			"fromNodeId":"n_7SAdR",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_hI9Ni",
+			"toNodeId":"n_qhWZS",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_qhWZS",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_OcJ5p",
 			"type":"next"
 		}
 	],
 	"id":"68de5144e862b9353784586c",
 	"lastModifiedBy":46030,
 	"lcName":"customworkflowtest1204",
-	"modifiedTime":1759400260313,
+	"modifiedTime":1759400304291,
 	"name":"customWorkflowTest1204",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":938,
+				"resourceName":"callables_from_interface"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_gFuT3-1",
-			"id":"_gFuT3",
-			"index":0,
+			"id":"n_7SAdR",
+			"index":1,
+			"inputs":{
+				"result":{
+					"required":[],
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
+					"properties":{
+						"body":{
+							"type":"object",
+							"properties":{
+								"authenticated":{
+									"type":"boolean",
+									"title":"Authenticated"
+								},
+								"userDetails":{
+									"type":"object",
+									"properties":{},
+									"additionalProperties":false,
+									"title":"User Details"
+								},
+								"returnTo":{
+									"type":"string",
+									"title":"Return To"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Body",
+							"required":[]
+						}
+					}
+				},
+				"callableInterfaceId":"681231940b718a3745699669",
+				"setup":{
+					"required":[],
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
+					"properties":{
+						"body":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Body"
+						},
+						"queryParams":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Query Params"
+						},
+						"headers":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Headers"
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger interface",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":987,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_gFuT3-1",
-			"id":"_hI9Ni",
-			"index":0,
+			"id":"n_qhWZS",
+			"index":2,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"msg":{
+							"type":"string",
+							"title":"Msg"
+						}
+					},
+					"required":[
+						"msg"
+					]
+				}
+			},
+			"inputs":{
+				"msg":"This is a testing Workflow."
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"msg":{
+							"type":"string",
+							"title":"Msg"
+						}
+					},
+					"required":[
+						"msg"
+					]
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":994,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_gFuT3-1",
+			"id":"n_OcJ5p",
+			"index":3,
+			"inputs":{
+				"result":{
+					"body":{
+						"authenticated":true,
+						"returnTo":"fsdlfkjs"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":46030,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +206,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
