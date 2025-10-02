@@ -5,12 +5,12 @@
 	"createdTime":1750508117166,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243539800,
+		"deployedAt":1759243573722,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed135e003e08cdeb2e90",
+		"deployedDefinitionId":"68dbed355e003e08cdeb2f4b",
 		"status":"DEPLOYED",
-		"version":9,
-		"workflowVersion":23
+		"version":10,
+		"workflowVersion":24
 	},
 	"edges":[
 		{
@@ -55,7 +55,7 @@
 	"id":"68567e4763c02c4a43e05ec7",
 	"lastModifiedBy":-1,
 	"lcName":"people indexer | ms entra id (batch)",
-	"modifiedTime":1759243573659,
+	"modifiedTime":1759371894910,
 	"name":"People Indexer | MS Entra ID (Batch)",
 	"nodes":[
 		{
@@ -319,5 +319,5 @@
 	"tags":[
 		
 	],
-	"version":24
+	"version":25
 }
