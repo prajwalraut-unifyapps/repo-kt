@@ -37,7 +37,7 @@
 	"id":"68ddf6602364216c2da9ae2a",
 	"lastModifiedBy":185583,
 	"lcName":"task_pb",
-	"modifiedTime":1759397191092,
+	"modifiedTime":1759397269507,
 	"name":"Task_PB",
 	"nodes":[
 		{
@@ -109,7 +109,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_RV1ax-1",
 			"id":"n_Hacam",
@@ -366,7 +366,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_RV1ax-1",
 			"id":"n_89WHa",
@@ -440,8 +440,8 @@
 		{
 			"context":{
 				"appName":"callables",
-				"resourceVersion":1016,
-				"resourceName":"callables_return_response_to_api",
+				"resourceVersion":994,
+				"resourceName":"callables_return_to_automation",
 				"type":"APPLICATION"
 			},
 			"debug":false,
@@ -451,19 +451,16 @@
 			"id":"n_ot4MS",
 			"index":5,
 			"inputs":{
-				"streamingCompleted":true,
-				"responseName":"200_Success",
-				"body":{
+				"result":{
 					"currentTagOut":{
-						"source":"{{ n_Hacam.outputs.items }}",
+						"source":"{{ n_xcwp1.outputs.result.currentTagOut }}",
 						"ua:type":"mappedArray"
 					}
-				},
-				"status":200
+				}
 			},
 			"skip":false,
 			"subTitle":"Callable",
-			"title":"Respond to API request",
+			"title":"Respond to automation",
 			"type":"STOP"
 		}
 	],
@@ -484,5 +481,5 @@
 	"tags":[
 		
 	],
-	"version":19
+	"version":20
 }
