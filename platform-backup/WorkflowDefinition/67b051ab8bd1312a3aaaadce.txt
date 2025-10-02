@@ -5,12 +5,12 @@
 	"createdTime":1740110511153,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655377769,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f39138757c179b1239be",
+		"deployedAt":1759243594162,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed4a23e6682b9a51ec26",
 		"status":"DEPLOYED",
-		"version":32,
-		"workflowVersion":92
+		"version":34,
+		"workflowVersion":94
 	},
 	"edges":[
 		{
@@ -378,7 +378,7 @@
 	"id":"67b051ab8bd1312a3aaaadce",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | meisterplan | index project details",
-	"modifiedTime":1759243561429,
+	"modifiedTime":1759371913501,
 	"name":"Knowledge Indexer | Meisterplan | Index project details",
 	"nodes":[
 		{
@@ -3071,5 +3071,5 @@
 	"tags":[
 		
 	],
-	"version":93
+	"version":95
 }
