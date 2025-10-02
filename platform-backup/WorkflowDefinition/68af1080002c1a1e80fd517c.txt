@@ -23,7 +23,7 @@
 	"id":"68af1080002c1a1e80fd517c",
 	"lastModifiedBy":44105,
 	"lcName":"sqwfdewfe",
-	"modifiedTime":1759402045211,
+	"modifiedTime":1759402069876,
 	"name":"sqwfdewfe",
 	"nodes":[
 		{
@@ -117,7 +117,7 @@
 				"variables":[
 					{
 						"source":"{{ n_EvgmC.outputs.str }}",
-						"value":"=CONCATENATE({{ n_EvgmC.outputs.str }}, 00, 01)"
+						"value":"=CONCATENATE({{ n_EvgmC.outputs.str }}, 00, 12)"
 					}
 				]
 			},
@@ -144,5 +144,5 @@
 	"tags":[
 		"fqwefqew"
 	],
-	"version":7
+	"version":8
 }
