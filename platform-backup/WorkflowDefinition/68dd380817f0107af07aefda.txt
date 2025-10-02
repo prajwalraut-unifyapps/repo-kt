@@ -45,7 +45,7 @@
 	"id":"68dd380817f0107af07aefda",
 	"lastModifiedBy":44103,
 	"lcName":"test11111",
-	"modifiedTime":1759392299083,
+	"modifiedTime":1759392310674,
 	"name":"test11111",
 	"nodes":[
 		{
@@ -150,6 +150,7 @@
 						}
 					}
 				},
+				"code":"return [:]",
 				"compile_static":false,
 				"captureStdOutput":false
 			},
@@ -299,5 +300,5 @@
 		"enableVariableLogging":true
 	},
 	"standard":false,
-	"version":19
+	"version":20
 }
