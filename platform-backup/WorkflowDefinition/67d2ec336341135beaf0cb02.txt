@@ -5,12 +5,12 @@
 	"createdTime":1741883465932,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655381266,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f39538757c179b123a2c",
+		"deployedAt":1759243596248,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed4c9213d707c2d27413",
 		"status":"DEPLOYED",
-		"version":61,
-		"workflowVersion":98
+		"version":63,
+		"workflowVersion":100
 	},
 	"edges":[
 		{
@@ -102,6 +102,28 @@
 		},
 		{
 			"fromNodeId":"wPMti",
+			"name":"4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"wPMti@4",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"wPMti@4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_k8KVB",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_k8KVB",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_syVHe",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"wPMti",
 			"name":"default",
 			"priority":0,
 			"skip":false,
@@ -144,6 +166,13 @@
 			"type":"next"
 		},
 		{
+			"fromNodeId":"n_syVHe",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"IdZ63",
+			"type":"next"
+		},
+		{
 			"fromNodeId":"ysc6C",
 			"priority":0,
 			"skip":false,
@@ -171,7 +200,7 @@
 	"id":"67d2ec336341135beaf0cb02",
 	"lastModifiedBy":-1,
 	"lcName":"get schema for action",
-	"modifiedTime":1759243563791,
+	"modifiedTime":1759371915418,
 	"name":"Get Schema For Action",
 	"nodes":[
 		{
@@ -188,7 +217,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"EYldh-1",
 			"id":"FlNb6",
-			"index":0,
+			"index":1,
 			"inputs":{
 				"result":{
 					"type":"object",
@@ -244,7 +273,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"EYldh-1",
 			"id":"T0gif",
-			"index":0,
+			"index":2,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -511,7 +540,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"EYldh-1",
 			"id":"urx6T",
-			"index":0,
+			"index":3,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -562,7 +591,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"EYldh-1",
 			"id":"wPMti",
-			"index":0,
+			"index":4,
 			"inputs":{
 				"branches":[
 					{
@@ -620,6 +649,24 @@
 						}
 					},
 					{
+						"id":"4",
+						"inputs":{
+							"name":"Is A2A Server",
+							"conditions":{
+								"filters":[
+									{
+										"property":"{{ urx6T.outputs.result.resourceName }}",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"a2a_by_unifyapps_invoke_server"
+										}
+									}
+								],
+								"operator":"AND"
+							}
+						}
+					},
+					{
 						"id":"default"
 					}
 				]
@@ -641,7 +688,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"wPMti@EYldh-1@1",
 			"id":"wPMti@1",
-			"index":0,
+			"index":5,
 			"inputs":{
 				"name":"customHttpEndpoint",
 				"conditions":{
@@ -673,7 +720,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"wPMti@EYldh-1@1",
 			"id":"_eBej0",
-			"index":0,
+			"index":6,
 			"inputs":{
 				"input":"{{ FlNb6.outputs.input }}",
 				"context":"{{ FlNb6.outputs.context }}"
@@ -695,7 +742,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"wPMti@EYldh-1@1",
 			"id":"uApZQ",
-			"index":0,
+			"index":7,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -762,7 +809,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"wPMti@EYldh-1@1",
 			"id":"Gn5Of",
-			"index":0,
+			"index":8,
 			"inputs":{
 				"result":{
 					"schema":"{{ uApZQ.outputs.result.schema }}",
@@ -786,7 +833,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"wPMti@EYldh-1@2",
 			"id":"wPMti@2",
-			"index":0,
+			"index":9,
 			"inputs":{
 				"name":"dummy",
 				"conditions":{
@@ -819,7 +866,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"wPMti@EYldh-1@3",
 			"id":"wPMti@3",
-			"index":0,
+			"index":10,
 			"inputs":{
 				"name":"Branch 3",
 				"conditions":{
@@ -852,7 +899,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"wPMti@EYldh-1@3",
 			"id":"fgWtq",
-			"index":0,
+			"index":11,
 			"inputs":{
 				"input":"{{ FlNb6.outputs.input }}",
 				"context":"{{ FlNb6.outputs.context }}"
@@ -874,7 +921,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"wPMti@EYldh-1@3",
 			"id":"9Wf4a",
-			"index":0,
+			"index":12,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -941,11 +988,102 @@
 			"fallbackMode":"STOP",
 			"groupId":"wPMti@EYldh-1@3",
 			"id":"tHMH8",
-			"index":0,
+			"index":13,
 			"inputs":{
 				"result":{
 					"schema":"{{ 9Wf4a.outputs.result.schema }}",
 					"instructionsToAdd":"{{ 9Wf4a.outputs.result.instructionsToAdd }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":0,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"wPMti@EYldh-1@4",
+			"id":"wPMti@4",
+			"index":14,
+			"inputs":{
+				"name":"Is A2A Server",
+				"conditions":{
+					"filters":[
+						{
+							"property":"{{ urx6T.outputs.result.resourceName }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"a2a_by_unifyapps_invoke_server"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"wPMti@EYldh-1@4",
+			"id":"n_k8KVB",
+			"index":15,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"schema":{
+							"type":"string",
+							"title":"Schema"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"schema"
+					]
+				},
+				"code":"return [\"schema\" : \"{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"text\\\":{\\\"type\\\":\\\"string\\\"},\\\"contextId\\\":{\\\"type\\\":\\\"string\\\"}}}\"]",
+				"compile_static":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":457,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"wPMti@EYldh-1@4",
+			"id":"n_syVHe",
+			"index":16,
+			"inputs":{
+				"result":{
+					"schema":"{{ n_k8KVB.outputs.result.schema }}",
+					"instructionsToAdd":"Provide a unique contextId when initiating a new conversation. Provide same contextId if you want to continue the conversation. You can use different contextId if you want to start a new unrelated conversation"
 				}
 			},
 			"skip":false,
@@ -962,13 +1100,66 @@
 			},
 			"debug":false,
 			"dirty":false,
-			"fallbackMode":"STOP",
+			"fallbackMode":"CONTINUE",
 			"groupId":"wPMti@EYldh-1@default",
 			"id":"pvSaH",
-			"index":0,
+			"index":17,
 			"inputs":{
 				"input":"{{ FlNb6.outputs.input }}",
 				"context":"{{ FlNb6.outputs.context }}"
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"global":false
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"CONTINUE",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				},
+				"timeoutConfig":{
+					"enabled":false
+				}
 			},
 			"skip":false,
 			"subTitle":"Custom Application",
@@ -984,13 +1175,15 @@
 			},
 			"debug":false,
 			"dirty":false,
-			"fallbackMode":"STOP",
+			"fallbackMode":"CONTINUE",
 			"groupId":"wPMti@EYldh-1@default",
 			"id":"hNgBE",
-			"index":0,
+			"index":18,
 			"inputs":{
 				"output":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"schema":{
 							"type":"object",
@@ -1002,12 +1195,12 @@
 							"type":"string",
 							"title":"Instructions To Add"
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				},
 				"input":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"nodeSchema":{
 							"type":"object",
@@ -1019,15 +1212,67 @@
 							"type":"string",
 							"title":"Resource Name"
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				},
-				"compile_static":false,
 				"code":"Map inputSchema = null;\nString instructionsToAdd = null;\nif(binding.hasVariable('nodeSchema')){\n    inputSchema = com.unifyapps.infra.utils.JsonUtils.fromJson(com.unifyapps.infra.utils.JsonUtils.toJson(nodeSchema), Map.class)\n}\nMap schema = inputSchema.get(\"schema\")\n\nimport com.alibaba.fastjson2.JSONArray\n\nif (schema?.containsKey(\"oneOf\") || schema?.containsKey(\"allOf\")) {\n    def outputSchema = [:]\n    if(schema?.containsKey(\"\\$schema\")){\n        outputSchema[\"\\$schema\"]=schema[\"\\$schema\"]\n        schema.remove(\"\\$schema\")\n    }\n    outputSchema[\"type\"] = \"object\"\n\n    // Function to update $ref values\n    updateRefs = { obj ->\n        if (obj instanceof Map) {\n            obj.each { key, value ->\n                if (key == \"\\$ref\" && value instanceof String && value.startsWith(\"#/\")) {\n                    obj[key] = value.replaceFirst(\"#/\", \"#/properties/_ua_schema_override_/\")\n                } else if (value instanceof Map || value instanceof List) {\n                    updateRefs(value) \n                }\n            }\n        } else if (obj instanceof List) {\n            obj.each { element ->\n                if (element instanceof Map) {\n                    updateRefs(element) // Only update maps inside lists\n                }\n            }\n        }\n    }\n    def temp=[:]\n    temp[\"schema\"]=schema\n\n    // Update references in schema\n    updateRefs(temp)\n\n    // Wrap the modified schema inside _ua_schema_override_\n    outputSchema[\"properties\"] = [\n        \"_ua_schema_override_\": temp.schema\n    ]\n    outputSchema[\"required\"] = [\"_ua_schema_override_\"]\n\n    inputSchema[\"schema\"] = outputSchema\n}\n\nif (resourceName?.equals(\"custom_http_application_execute\")){\n    // temporary fix for required fields, will remove them after next build\n    inputSchema.schema.properties._ua_schema_override_.properties.pathParamsList.items[\"required\"] = [\"key\", \"value\"]\n    inputSchema.schema.properties._ua_schema_override_.properties.queryParamsList.items[\"required\"] = [\"key\", \"value\"]\n\n    instructionsToAdd = \" Do not resolve the path field by yourself, keep it as per the user input.\"\n}\n\nreturn [\"schema\": inputSchema,\"instructionsToAdd\":instructionsToAdd]",
+				"compile_static":false,
+				"captureStdOutput":false,
 				"parameters":{
 					"nodeSchema":"{{ pvSaH.outputs.inputSchema }}",
 					"resourceName":"{{ urx6T.outputs.result.resourceName }}"
+				}
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"global":false
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"CONTINUE",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				},
+				"timeoutConfig":{
+					"enabled":false
 				}
 			},
 			"skip":false,
@@ -1047,7 +1292,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"wPMti@EYldh-1@default",
 			"id":"ysc6C",
-			"index":0,
+			"index":19,
 			"inputs":{
 				"result":{
 					"schema":"{{ hNgBE.outputs.result.schema }}",
@@ -1071,7 +1316,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"EYldh-1",
 			"id":"IdZ63",
-			"index":0,
+			"index":20,
 			"inputs":{
 				"result":{
 					"schema":"true"
@@ -1091,7 +1336,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"EYldh-1",
 			"id":"BgfCF",
-			"index":0,
+			"index":21,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -1105,10 +1350,11 @@
 	],
 	"settings":{
 		"enableNodeLevelLogging":true,
-		"enableRunLogging":true,
-		"enableVariableLogging":true,
+		"enableRunLogging":false,
+		"enableVariableLogging":false,
 		"route":{
 			"default":false,
+			"headerValueTierMap":{},
 			"tierName":"global"
 		}
 	},
@@ -1116,5 +1362,5 @@
 	"tags":[
 		
 	],
-	"version":99
+	"version":101
 }
