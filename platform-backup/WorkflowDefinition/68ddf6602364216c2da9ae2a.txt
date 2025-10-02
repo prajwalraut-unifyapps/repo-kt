@@ -23,7 +23,7 @@
 	"id":"68ddf6602364216c2da9ae2a",
 	"lastModifiedBy":185583,
 	"lcName":"task_pb",
-	"modifiedTime":1759391830310,
+	"modifiedTime":1759394503495,
 	"name":"Task_PB",
 	"nodes":[
 		{
@@ -86,7 +86,9 @@
 								}
 							},
 							"additionalProperties":false,
-							"required":[]
+							"required":[
+								"currentTagOut"
+							]
 						},
 						"namespaces":[]
 					}
@@ -102,6 +104,11 @@
 			"type":"START"
 		},
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
 			"context":{
 				"appName":"code_by_unifyapps",
 				"resourceVersion":931,
@@ -132,29 +139,19 @@
 					}
 				},
 				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"currentTag"
-					],
-					"ua:__linkedVariable__":"n_6l4oG.outputs.body",
-					"properties":{
-						"currentTag":{
-							"type":"array",
-							"items":{
-								"type":"string"
-							},
-							"title":"Current Tag"
-						}
+					"type":"array",
+					"title":"Current Tag",
+					"ua:__linkedVariable__":"n_6l4oG.outputs.body.currentTag",
+					"items":{
+						"type":"string"
 					}
 				},
-				"code":"        // Initial array of strings\n        //String[] arr = [\"apple\", \"banana\", \"cherry\"]\n\n        // Convert array to list for easier modifications\n        def list = currentTag.toList()\n\n        // 1. Add an element\n        list.add(\"date\")\n        //println \"After adding 'date': ${list}\"\n\n        // // 2. Delete an element\n        // list.remove(\"banana\")   // removes by value\n        // println \"After deleting: ${list}\"\n\n        // // 3. Find an element\n        // def elementToFind = \"cherry\"\n        // if (list.contains(elementToFind)) {\n        //     println \"'${elementToFind}' found in the list at index ${list.indexOf(elementToFind)}\"\n        // } else {\n        //     println \"'${elementToFind}' not found\"\n        // }\n\n        // // (Optional) convert back to array if needed\n        //arr = list as String[]\n        return [\"currentTagOut\":list as String[]]",
+				"code":"        // Initial array of strings\n        //String[] arr = [\"apple\", \"banana\", \"cherry\"]\n        //def parsed = new JsonSlurper().parseText(body)\n        // Convert array to list for easier modifications\n        //String arr[] = currentTag\n        def list = currentTag.toList()\n\n        // 1. Add an element\n        list.add(\"date\")\n        //println \"After adding 'date': ${list}\"\n\n        // // 2. Delete an element\n        // list.remove(\"banana\")   // removes by value\n        // println \"After deleting: ${list}\"\n\n        // // 3. Find an element\n        // def elementToFind = \"cherry\"\n        // if (list.contains(elementToFind)) {\n        //     println \"'${elementToFind}' found in the list at index ${list.indexOf(elementToFind)}\"\n        // } else {\n        //     println \"'${elementToFind}' not found\"\n        // }\n\n        // // (Optional) convert back to array if needed\n        //arr = list as String[]\n        return [\"currentTagOut\":list as String[]]",
 				"compile_static":false,
-				"captureStdOutput":false,
+				"captureStdOutput":true,
 				"parameters":{
-					"currentTag":[
-						"{{ n_6l4oG.outputs.body.currentTag }}"
-					]
+					"source":"{{ n_6l4oG.outputs.body.currentTag }}",
+					"ua:type":"mappedArray"
 				}
 			},
 			"skip":false,
@@ -209,5 +206,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":12
 }
