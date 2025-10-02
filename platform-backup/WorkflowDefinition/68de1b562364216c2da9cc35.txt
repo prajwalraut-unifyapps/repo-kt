@@ -45,7 +45,7 @@
 	"id":"68de1b562364216c2da9cc35",
 	"lastModifiedBy":175325,
 	"lcName":"ijhg",
-	"modifiedTime":1759394625978,
+	"modifiedTime":1759394750638,
 	"name":"ijhg",
 	"nodes":[
 		{
@@ -250,7 +250,7 @@
 			"index":5,
 			"inputs":{
 				"result":{
-					"r":"=CONCATENATE({{ n_FbSkd.outputs.i }},{{ n_HPwxT.outputs.str }})"
+					"r":"=CONCATENATE({{ n_HPwxT.outputs.str }},{{ n_FbSkd.outputs.i }})"
 				}
 			},
 			"skip":false,
@@ -276,5 +276,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
