@@ -23,7 +23,7 @@
 	"id":"68ddf6602364216c2da9ae2a",
 	"lastModifiedBy":185583,
 	"lcName":"task_pb",
-	"modifiedTime":1759391747059,
+	"modifiedTime":1759391799509,
 	"name":"Task_PB",
 	"nodes":[
 		{
@@ -152,10 +152,9 @@
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
-					"currentTag":{
-						"source":"{{ n_6l4oG.outputs.body.currentTag }}",
-						"ua:type":"mappedArray"
-					}
+					"currentTag":[
+						"{{ n_6l4oG.outputs.body.currentTag }}"
+					]
 				}
 			},
 			"skip":false,
@@ -210,5 +209,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
