@@ -5,12 +5,12 @@
 	"createdTime":1731130835583,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243503955,
+		"deployedAt":1759243542619,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbecef9213d707c2d27282",
+		"deployedDefinitionId":"68dbed1623e6682b9a51eaff",
 		"status":"DEPLOYED",
-		"version":79,
-		"workflowVersion":104
+		"version":80,
+		"workflowVersion":105
 	},
 	"edges":[
 		{
@@ -121,7 +121,7 @@
 	"id":"672ef5d39d0e461f4f99c43d",
 	"lastModifiedBy":-1,
 	"lcName":"publish data rag response",
-	"modifiedTime":1759243542556,
+	"modifiedTime":1759371864978,
 	"name":"Publish Data RAG response",
 	"nodes":[
 		{
@@ -725,5 +725,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":105
+	"version":106
 }
