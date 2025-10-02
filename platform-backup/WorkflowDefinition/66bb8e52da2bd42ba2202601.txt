@@ -5,12 +5,12 @@
 	"createdTime":1723567698022,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243510408,
+		"deployedAt":1759243548352,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbecf69213d707c2d2729d",
+		"deployedDefinitionId":"68dbed1c5e003e08cdeb2eb9",
 		"status":"DEPLOYED",
-		"version":82,
-		"workflowVersion":106
+		"version":83,
+		"workflowVersion":107
 	},
 	"edges":[
 		{
@@ -150,7 +150,7 @@
 	"id":"66bb8e52da2bd42ba2202601",
 	"lastModifiedBy":-1,
 	"lcName":"code rag",
-	"modifiedTime":1759243548276,
+	"modifiedTime":1759371870353,
 	"name":"Code RAG",
 	"nodes":[
 		{
@@ -730,5 +730,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":107
+	"version":108
 }
