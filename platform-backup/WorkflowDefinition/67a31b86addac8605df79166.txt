@@ -1,0 +1,1179 @@
+{
+	"appsUsed":[
+		"storage_by_unifyapps"
+	],
+	"createdTime":1738759826099,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759243665024,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed915e003e08cdeb3139",
+		"status":"DEPLOYED",
+		"version":72,
+		"workflowVersion":113
+	},
+	"edges":[
+		{
+			"fromNodeId":"FTC3Q",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"eTnok",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"eTnok",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_ZMnyY",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_ZMnyY",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"eP8jx",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"eP8jx",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_DJaOp",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_DJaOp",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"NlhVg",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"NlhVg",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Pki0l",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"Pki0l",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"aAK6V",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"aAK6V",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"grr6j",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"Pki0l",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"3j69G",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"3j69G",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"1GZhm",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"1GZhm",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_h9VEQ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_h9VEQ",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_w3G2S",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_w3G2S",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_YErmN",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"_YErmN",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_zCgm6",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"_YErmN",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Hj5Im",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_Hj5Im",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Y1Lnk",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_Y1Lnk",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_uVxav",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_h9VEQ",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_i4ws5",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_zCgm6",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"RJ9ve",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_uVxav",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"RJ9ve",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_Y1Lnk",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"RJ9ve",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_w3G2S",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"RJ9ve",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_i4ws5",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"RJ9ve",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"grr6j",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"APSb2",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"RJ9ve",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"APSb2",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"3j69G",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"APSb2",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"67a31b86addac8605df79166",
+	"lastModifiedBy":-1,
+	"lcName":"add context to agent",
+	"modifiedTime":1759371982579,
+	"name":"Add Context To Agent",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":52,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"O1Yki-1",
+			"id":"FTC3Q",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"messageId":{
+							"type":"string",
+							"title":"Message Id"
+						},
+						"messageCreatedTime":{
+							"type":"string",
+							"title":"Message Created Time"
+						},
+						"fromCustomerUserId":{
+							"type":"string",
+							"title":"From Customer User Id"
+						},
+						"additional":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Additional"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"caseId":{
+							"type":"string",
+							"title":"Case Id"
+						},
+						"messageId":{
+							"type":"string",
+							"title":"Message Id"
+						},
+						"createMessageIfAbsent":{
+							"type":"boolean",
+							"title":"Create Message If Absent"
+						},
+						"executionOutput":{
+							"type":"string",
+							"title":"Execution Output"
+						},
+						"rawLLMResponse":{
+							"type":"string",
+							"title":"Raw LLM Response"
+						},
+						"aiAgentId":{
+							"type":"string",
+							"title":"Ai Agent Id"
+						},
+						"streamingInProgress":{
+							"type":"boolean",
+							"title":"Streaming In Progress"
+						},
+						"internalMessageType":{
+							"type":"string",
+							"title":"Internal Message Type"
+						},
+						"toolUseDetails":{
+							"type":"object",
+							"properties":{
+								"toolId":{
+									"type":"string",
+									"title":"toolId"
+								},
+								"toolName":{
+									"type":"string",
+									"title":"toolName"
+								},
+								"toolInput":{
+									"type":"object",
+									"title":"toolInput"
+								},
+								"toolOutput":{
+									"type":"string",
+									"title":"toolOutput"
+								}
+							},
+							"additionalProperties":false
+						},
+						"messageType":{
+							"type":"string",
+							"title":"Message Type"
+						},
+						"messageContent":{
+							"type":"string",
+							"title":"Message Content"
+						},
+						"slotInstructionMessage":{
+							"type":"boolean",
+							"title":"Slot Instruction Message"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":55,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"O1Yki-1",
+			"id":"eTnok",
+			"index":2,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"messageId":{
+							"type":"string",
+							"title":"Message Id"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"messageId":"{{ FTC3Q.outputs.messageId }}"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"messageId":{
+							"type":"string",
+							"title":"Message Id"
+						},
+						"_ua_variableDetails":{
+							"items":{
+								"type":"object",
+								"properties":{
+									"dataType":{
+										"type":"string",
+										"description":"Data type of the variable"
+									},
+									"name":{
+										"type":"string",
+										"description":"Name of the variable"
+									},
+									"description":{
+										"type":"string",
+										"description":"Description of the variable"
+									}
+								}
+							},
+							"type":"array",
+							"title":"Variable Details"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"messageId",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":458,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"O1Yki-1",
+			"id":"n_ZMnyY",
+			"index":3,
+			"inputs":{
+				"automationId":"6853f632c629c934b666a01d",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"caseId":"{{ FTC3Q.outputs.caseId }}",
+					"forceLoadFromStorage":false
+				}
+			},
+			"skip":false,
+			"subTitle":"case",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":2,
+				"resourceName":"storage_by_unifyapps_get_record_by_id",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"O1Yki-1",
+			"id":"eP8jx",
+			"index":4,
+			"inputs":{
+				"object_type":"e_ai_agent_conversation_state",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"translationsOption":"DEFAULT",
+				"id":"{{ FTC3Q.outputs.caseId }}",
+				"readThroughSessionVariables":false
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Fetch record by ID",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":453,
+				"resourceName":"variable_by_unifyapps_get_session_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"O1Yki-1",
+			"id":"n_DJaOp",
+			"index":5,
+			"inputs":{
+				"variableSchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"agentExecutorCurrentExecutionId":{
+							"type":"string",
+							"title":"Agent Executor Current Execution Id"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Agent Executor Current ExecutionId",
+			"title":"Get Session Variables",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":10,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"O1Yki-1",
+			"id":"NlhVg",
+			"index":6,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"messageId":{
+							"type":"string",
+							"title":"Message Id"
+						},
+						"creationEpoch":{
+							"type":"string",
+							"title":"Creation Epoch"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"compile_static":false,
+				"code":"return [\n  \"messageId\": UUID.randomUUID().toString(),\n  \"creationEpoch\": System.currentTimeMillis()\n];",
+				"isAsync":false,
+				"parameters":{}
+			},
+			"skip":false,
+			"subTitle":"Generate Message Id",
+			"title":"Execute Groovy Code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":52,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"O1Yki-1",
+			"id":"Pki0l",
+			"index":7,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ FTC3Q.outputs.messageId }}",
+						"filter":{
+							"operator":"EXISTS"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"messageId present ?",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":323,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Pki0l@O1Yki-1@y",
+			"id":"aAK6V",
+			"index":8,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"toolUseDetailsModified":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Tool Use Details Modified"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"toolUseDetails":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Tool Use Details"
+						},
+						"agentExecutorCurrentExecutionId":{
+							"type":"string",
+							"title":"Agent Executor Current Execution Id"
+						}
+					}
+				},
+				"code":"if(!binding.hasVariable('toolUseDetails')) {\n  return [:]\n}\ntoolUseDetails.put(\"toolExecutionStatus\", false)\n\nif(binding.hasVariable('agentExecutorCurrentExecutionId')) {\n  toolUseDetails.put(\"agentExecutorExecutionId\", agentExecutorCurrentExecutionId)\n}\n\nreturn [\"toolUseDetailsModified\": toolUseDetails]",
+				"compile_static":false,
+				"parameters":{
+					"toolUseDetails":"{{ FTC3Q.outputs.toolUseDetails }}",
+					"agentExecutorCurrentExecutionId":"{{ n_DJaOp.outputs.agentExecutorCurrentExecutionId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":11,
+				"resourceName":"storage_by_unifyapps_update_record_fields_by_id",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Pki0l@O1Yki-1@y",
+			"id":"grr6j",
+			"index":9,
+			"inputs":{
+				"recordId":"{{ FTC3Q.outputs.messageId }}",
+				"writeThroughSessionVariables":false,
+				"object_type":"service_hub_message",
+				"skipPermissionCheck":false,
+				"updateFields":[
+					{
+						"fieldName":"properties.content.agentResponse.rawLLMResponse",
+						"actionType":"SET",
+						"setValue":"{{ FTC3Q.outputs.rawLLMResponse }}"
+					},
+					{
+						"actionType":"SET",
+						"setValue":"{{ FTC3Q.outputs.executionOutput }}",
+						"fieldName":"properties.content.agentResponse.observation"
+					},
+					{
+						"fieldName":"properties.content.agentResponse.toolUseDetails",
+						"actionType":"SET",
+						"setValue":"{{ aAK6V.outputs.result.toolUseDetailsModified }}"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"tool failure feedback",
+			"title":"Update an existing record's fields",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":54,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Pki0l@O1Yki-1@n",
+			"id":"3j69G",
+			"index":10,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ FTC3Q.outputs.createMessageIfAbsent }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"true"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"crtMsg if absent?",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.record.cc.items.name",
+					"root.record.cc.items.email",
+					"root.record.bcc.items.name",
+					"root.record.bcc.items.email",
+					"root.record.content.text",
+					"root.record.content.type",
+					"root.record.content.html",
+					"root.record.content.choices.items",
+					"root.record.content.coPilotBlocks.blocks.items",
+					"root.record.content.coPilotBlocks.role",
+					"root.record.content.choiceList.items.id",
+					"root.record.content.choiceList.items.title",
+					"root.record.content.choiceList.items.url",
+					"root.record.content.interfaceDetails.interfaceId",
+					"root.record.content.interfaceDetails.pageId",
+					"root.record.content.interfaceDetails.slug",
+					"root.record.content.interfaceDetails.pageInputs",
+					"root.record.content.interfaceDetails.interfaceDescription",
+					"root.record.content.agentResponse.toolUseDetails.toolId",
+					"root.record.content.agentResponse.toolUseDetails.toolName",
+					"root.record.content.agentResponse.toolUseDetails.toolInput",
+					"root.record.content.agentResponse.toolUseDetails.toolOutput",
+					"root.record.content.agentResponse.toolUseDetails.toolResponseTime",
+					"root.record.content.agentResponse.toolUseDetails.toolExecutionStatus",
+					"root.record.content.agentResponse.toolUseDetails.agentExecutorExecutionId",
+					"root.record.content.agentResponse.rawLLMResponse",
+					"root.record.content.agentResponse.observation",
+					"root.record.content.agentResponse.thinkingSignature",
+					"root.record.content.citations.items",
+					"root.record.to.items.name",
+					"root.record.to.items.email",
+					"root.record.feedback.userFeedback",
+					"root.record.feedback.feedbackCategories.items",
+					"root.record.feedback.reaction",
+					"root.record.additional.rephrasedUserMessage",
+					"root.record.additional.sqlQuery",
+					"root.record.additional.platformUserId",
+					"root.record.additional.temporaryMessage",
+					"root.record.additional.internalMessageType",
+					"root.record.additional.streamingInProgress",
+					"root.record.additional.ttsDetails.fileUrl",
+					"root.record.additional.parentMessageId",
+					"root.record.additional.platformName",
+					"root.record.additional.hasMoreData",
+					"root.record.additional.triggeredFromApplicationId",
+					"root.record.additional.IsDataRAGExecuted",
+					"root.record.additional.deepResearch",
+					"root.record.additional.messageSubType",
+					"root.record.additional.inReplyToMessageId",
+					"root.record.additional.isRead",
+					"root.record.additional.parallelToolCallEnabled",
+					"root.record.additional.relativeCallTime",
+					"root.record.additional.messageDeliveryStatus",
+					"root.record.customProperties.topicName",
+					"root.record.customProperties.toolName",
+					"root.record.content.agentResponse.executionError",
+					"root.record.additional.firstResponseMessageId",
+					"root.record.additional.firstResponseMessageTime",
+					"root.record.additional.responseTime",
+					"root.record.additional.usedMetadata.items",
+					"root.record.customProperties.slotInstructionMessage"
+				]
+			},
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":54,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"3j69G@Pki0l@O1Yki-1@n@y",
+			"id":"1GZhm",
+			"index":11,
+			"inputs":{
+				"writeThroughSessionVariables":false,
+				"object_type":"service_hub_message",
+				"record":{
+					"additional":{
+						"IsDataRAGExecuted":false,
+						"parallelToolCallEnabled":false,
+						"temporaryMessage":true,
+						"internalMessageType":"=IF(ISBLANK({{ FTC3Q.outputs.internalMessageType }}),\"AGENT_INTERNAL_RESPONSE\", {{ FTC3Q.outputs.internalMessageType }})",
+						"streamingInProgress":"{{ FTC3Q.outputs.streamingInProgress }}",
+						"parentMessageId":"{{ n_ZMnyY.outputs.properties.lastFanMessageId }}"
+					},
+					"customProperties":{
+						"slotInstructionMessage":"{{ FTC3Q.outputs.slotInstructionMessage }}"
+					},
+					"type":"=IF(ISBLANK({{ FTC3Q.outputs.messageType }}), \"bot\", {{ FTC3Q.outputs.messageType }})",
+					"content":{
+						"text":"{{ FTC3Q.outputs.messageContent }}",
+						"agentResponse":{
+							"toolUseDetails":{
+								"toolId":"{{ FTC3Q.outputs.toolUseDetails.toolId }}",
+								"toolName":"{{ FTC3Q.outputs.toolUseDetails.toolName }}",
+								"toolInput":"{{ FTC3Q.outputs.toolUseDetails.toolInput }}",
+								"toolOutput":"{{ FTC3Q.outputs.toolUseDetails.toolOutput }}",
+								"toolExecutionStatus":false,
+								"agentExecutorExecutionId":"{{ n_DJaOp.outputs.agentExecutorCurrentExecutionId }}"
+							},
+							"rawLLMResponse":"{{ FTC3Q.outputs.rawLLMResponse }}",
+							"observation":"{{ FTC3Q.outputs.executionOutput }}"
+						}
+					},
+					"accountId":"{{ __RUN__.outputs.executionId }}",
+					"fromCustomerUserIdentityId":"{{ FTC3Q.outputs.aiAgentId }}",
+					"toCustomerUserIdentityId":"{{ n_ZMnyY.outputs.properties.fromCustomerUserId }}",
+					"caseId":"{{ FTC3Q.outputs.caseId }}",
+					"fromCustomerUserId":"=IF(ISBLANK({{ eP8jx.outputs.properties.currentAIAgentId }}),{{ n_ZMnyY.outputs.properties.additional.aiAgentId }},{{ eP8jx.outputs.properties.currentAIAgentId }})",
+					"channelName":"{{ n_ZMnyY.outputs.properties.channelName }}",
+					"uniqueId":"{{ __RUN__.outputs.executionId }}",
+					"toCustomerUserId":"{{ n_ZMnyY.outputs.properties.fromCustomerUserId }}",
+					"channelCreatedTime":"{{ NlhVg.outputs.result.creationEpoch }}",
+					"messageId":"{{ NlhVg.outputs.result.messageId }}",
+					"channelModifiedTime":"{{ NlhVg.outputs.result.creationEpoch }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"create",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":439,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"3j69G@Pki0l@O1Yki-1@n@y",
+			"id":"n_h9VEQ",
+			"index":12,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ 1GZhm.outputs.properties.type }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"fan"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"messageType = FAN?",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":439,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_h9VEQ@3j69G@Pki0l@O1Yki-1@n@y@y",
+			"id":"n_w3G2S",
+			"index":13,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ 1GZhm.outputs.properties.additional.internalMessageType }}",
+						"filter":{
+							"operator":"NOT_EQUAL",
+							"value":"AGENT_INTERNAL_RESPONSE"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"internalMessageType != \"AGENT_INTERNAL_RESPONSE\"",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":439,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_w3G2S@n_h9VEQ@3j69G@Pki0l@O1Yki-1@n@y@y@y",
+			"id":"_YErmN",
+			"index":14,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_ZMnyY.outputs.properties.additional.firstFanMessageId }}",
+						"filter":{
+							"operator":"MISSING"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"firstFanMessageId not present?",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.updateFields.items.fieldName",
+					"root.updateFields.items.actionType"
+				]
+			},
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":509,
+				"resourceName":"storage_by_unifyapps_update_record_fields_by_id",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_YErmN@n_w3G2S@n_h9VEQ@3j69G@Pki0l@O1Yki-1@n@y@y@y@y",
+			"id":"_zCgm6",
+			"index":15,
+			"inputs":{
+				"recordId":"{{ n_ZMnyY.outputs.id }}",
+				"writeThroughSessionVariables":false,
+				"object_type":"service_hub_case",
+				"skipPermissionCheck":false,
+				"updateFields":[
+					{
+						"fieldName":"properties.additional.firstFanMessageId",
+						"actionType":"SET",
+						"setValue":"{{ 1GZhm.outputs.id }}"
+					},
+					{
+						"fieldName":"properties.additional.firstFanMessageCreatedTime",
+						"actionType":"SET",
+						"setValue":"{{ 1GZhm.outputs.createdTime }}"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Update firstFanMessageId",
+			"title":"Update an existing record's fields",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.updateFields.items.fieldName",
+					"root.updateFields.items.actionType"
+				]
+			},
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":509,
+				"resourceName":"storage_by_unifyapps_update_record_fields_by_id",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_YErmN@n_w3G2S@n_h9VEQ@3j69G@Pki0l@O1Yki-1@n@y@y@y@n",
+			"id":"_Hj5Im",
+			"index":16,
+			"inputs":{
+				"recordId":"{{ n_ZMnyY.outputs.id }}",
+				"writeThroughSessionVariables":false,
+				"object_type":"service_hub_case",
+				"skipPermissionCheck":false,
+				"updateFields":[
+					{
+						"fieldName":"properties.lastFanMessageId",
+						"actionType":"SET",
+						"setValue":"{{ 1GZhm.outputs.id }}"
+					},
+					{
+						"fieldName":"properties.lastFanMessageTime",
+						"actionType":"SET",
+						"setValue":"{{ 1GZhm.outputs.createdTime }}"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Update Last Fan Message ID and Time",
+			"title":"Update an existing record's fields",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":439,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_YErmN@n_w3G2S@n_h9VEQ@3j69G@Pki0l@O1Yki-1@n@y@y@y@n",
+			"id":"_Y1Lnk",
+			"index":17,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_ZMnyY.outputs.properties.additional.firstFanMessageCreatedTime }}",
+						"filter":{
+							"operator":"EXISTS"
+						}
+					},
+					{
+						"property":"{{ 1GZhm.outputs.createdTime }}",
+						"filter":{
+							"operator":"EXISTS"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"First Fan Message Present?",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.updateFields.items.fieldName",
+					"root.updateFields.items.actionType"
+				]
+			},
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":509,
+				"resourceName":"storage_by_unifyapps_update_record_fields_by_id",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Y1Lnk@_YErmN@n_w3G2S@n_h9VEQ@3j69G@Pki0l@O1Yki-1@n@y@y@y@n@y",
+			"id":"_uVxav",
+			"index":18,
+			"inputs":{
+				"recordId":"{{ n_ZMnyY.outputs.id }}",
+				"writeThroughSessionVariables":false,
+				"object_type":"service_hub_case",
+				"skipPermissionCheck":false,
+				"updateFields":[
+					{
+						"fieldName":"properties.additional.sessionDuration",
+						"actionType":"SET",
+						"setValue":"={{ 1GZhm.outputs.createdTime }}-{{ n_ZMnyY.outputs.properties.additional.firstFanMessageCreatedTime }}"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Update Session Duration",
+			"title":"Update an existing record's fields",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":465,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_h9VEQ@3j69G@Pki0l@O1Yki-1@n@y@n",
+			"id":"n_i4ws5",
+			"index":19,
+			"inputs":{
+				"automationId":"68b00489de874978c99b01b7",
+				"runtimeConnections":{},
+				"synchronous":false,
+				"version":"-1",
+				"parameters":{
+					"lastFanMessageId":"{{ n_ZMnyY.outputs.properties.lastFanMessageId }}",
+					"lastFanMessageTime":"{{ n_ZMnyY.outputs.properties.lastFanMessageTime }}",
+					"lastBrandMessageId":"{{ n_ZMnyY.outputs.properties.additional.lastBrandMessageId }}",
+					"lastBrandMessageTime":"{{ n_ZMnyY.outputs.properties.additional.lastBrandMessageTime }}",
+					"currentMessageId":"{{ 1GZhm.outputs.id }}",
+					"currentMessageTime":"{{ 1GZhm.outputs.createdTime }}",
+					"caseId":"{{ n_ZMnyY.outputs.id }}",
+					"firstFanMessageCreatedTime":"{{ n_ZMnyY.outputs.properties.additional.firstFanMessageCreatedTime }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":55,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"3j69G@Pki0l@O1Yki-1@n@y",
+			"id":"RJ9ve",
+			"index":20,
+			"inputs":{
+				"result":{
+					"messageId":"{{ 1GZhm.outputs.id }}",
+					"messageCreatedTime":"{{ 1GZhm.outputs.createdTime }}",
+					"fromCustomerUserId":"{{ 1GZhm.outputs.properties.fromCustomerUserId }}",
+					"additional":"{{ 1GZhm.outputs.properties.additional }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":55,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"O1Yki-1",
+			"id":"APSb2",
+			"index":21,
+			"inputs":{
+				"result":{
+					"messageId":"{{ eTnok.outputs.messageId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":635,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		"AI Agent",
+		"Team"
+	],
+	"version":114
+}
