@@ -4,27 +4,100 @@
 	],
 	"createdTime":1759312069076,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759312069362,
+		"deployedBy":175325,
+		"deployedDefinitionId":"68dcf8c5c0a2bc3485d5e554",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
-		
+		{
+			"fromNodeId":"7TfjY",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"VWCT6",
+			"type":"next"
+		}
 	],
 	"id":"68dcf8c5c0a2bc3485d5e551",
-	"lastModifiedBy":175325,
+	"lastModifiedBy":132116,
 	"lcName":"changesetqa27881782415",
-	"modifiedTime":1759312069076,
+	"modifiedTime":1759420543994,
 	"name":"changeSetQA27881782415",
 	"nodes":[
-		
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":193,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"DTRvj-1",
+			"id":"7TfjY",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"b":{
+							"type":"string",
+							"title":"B"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"b"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":193,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"DTRvj-1",
+			"id":"VWCT6",
+			"index":2,
+			"inputs":{
+				"result":{
+					"b":"{{ __ENV__.outputs.changeSetQA24336411810 }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
 	],
 	"ownerUserId":175325,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
-		"enableVariableLogging":true,
-		"route":{
-			"default":false,
-			"tierName":"global"
-		}
+		"enableVariableLogging":true
 	},
 	"standard":false,
-	"version":0
+	"tags":[
+		
+	],
+	"version":2
 }
