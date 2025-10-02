@@ -5,12 +5,12 @@
 	"createdTime":1746727896221,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655319031,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f35738757c179b122fbf",
+		"deployedAt":1759243548439,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed1c9213d707c2d2730d",
 		"status":"DEPLOYED",
-		"version":50,
-		"workflowVersion":68
+		"version":52,
+		"workflowVersion":70
 	},
 	"edges":[
 		{
@@ -62,7 +62,7 @@
 	"id":"681c81e891321b2f5fc0983c",
 	"lastModifiedBy":-1,
 	"lcName":"publish tool app block",
-	"modifiedTime":1759243510431,
+	"modifiedTime":1759371870446,
 	"name":"Publish Tool App Block",
 	"nodes":[
 		{
@@ -396,5 +396,5 @@
 		}
 	},
 	"standard":true,
-	"version":69
+	"version":71
 }
