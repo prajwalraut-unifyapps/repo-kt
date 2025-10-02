@@ -5,12 +5,12 @@
 	"createdTime":1746095812048,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655396887,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f3a438757c179b123cd5",
+		"deployedAt":1759243609334,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed5923e6682b9a51ec80",
 		"status":"DEPLOYED",
-		"version":47,
-		"workflowVersion":77
+		"version":49,
+		"workflowVersion":79
 	},
 	"edges":[
 		{
@@ -85,7 +85,7 @@
 	"id":"6801f34a8136c62fb3014199",
 	"lastModifiedBy":-1,
 	"lcName":"web search add sources",
-	"modifiedTime":1759243576365,
+	"modifiedTime":1759371927178,
 	"name":"Web Search Add Sources",
 	"nodes":[
 		{
@@ -103,17 +103,19 @@
 			"inputs":{
 				"result":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"Success":{
 							"type":"boolean",
 							"title":"Success"
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				},
 				"setup":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"aiAgentId":{
 							"type":"string",
@@ -136,10 +138,12 @@
 								"additionalProperties":false
 							},
 							"title":"Favicon"
+						},
+						"deepResearchEnabled":{
+							"type":"boolean",
+							"title":"Deep Research Enabled"
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				}
 			},
 			"skip":false,
@@ -269,7 +273,8 @@
 		{
 			"additional":{
 				"visibleOptionalFields":[
-					"root.parameters.citationData.items"
+					"root.parameters.citationData.items",
+					"root.parameters.favicon.items"
 				]
 			},
 			"context":{
@@ -324,10 +329,17 @@
 						"translatedText":{
 							"type":"string",
 							"title":"Translated Text"
+						},
+						"favicon":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Favicon"
 						}
 					}
 				},
-				"code":"if (!binding.hasVariable('translatedText')) {\n    translatedText = 'Reading'\n}\n\ndef coPilotBlocks = []\n def readingBlock = [\n        \"blockType\": \"Typography\",\n        \"data\": [\n            \"text\": translatedText,\n            \"animate\": true\n        ],\n        \"appearance\":[\n            \"variant\": \"text-xs\",\n            \"color\": \"text-quaternary\",\n            \"styles\": [\n                \"margin\": [\n                    \"t\": \"mt-xs\"\n                ]\n            ]\n        ],\n    ]\ncoPilotBlocks.add(readingBlock)\n\ndef citationBlock = [:]\ndef data = (binding.hasVariable('citationData') && citationData.size() != 0 && citationData instanceof List) ? citationData : []\n\ncitationBlock = [\n    \"blockType\": \"Citation\",\n    \"data\": [\n        \"citations\": data\n    ]\n]\ncoPilotBlocks.add(citationBlock)\n\n\nreturn [\"coPilotBlocks\": coPilotBlocks, \"citationBlock\": citationBlock]\n",
+				"code":"if (!binding.hasVariable('translatedText')) {\n    translatedText = 'Reading'\n}\n\ndef coPilotBlocks = []\n def readingBlock = [\n        \"blockType\": \"Typography\",\n        \"data\": [\n            \"text\": translatedText,\n            \"animate\": true\n        ],\n        \"appearance\":[\n            \"variant\": \"text-xs\",\n            \"color\": \"text-quaternary\",\n            \"styles\": [\n                \"margin\": [\n                    \"t\": \"mt-xs\"\n                ]\n            ]\n        ],\n    ]\ncoPilotBlocks.add(readingBlock)\n\ndef citationBlock = [:]\ndef data = (binding.hasVariable('citationData') && citationData.size() != 0 && citationData instanceof List) ? citationData : []\n\ndef favicon = binding.hasVariable(\"favicon\") ? binding.favicon : []\nfor (int i = 0; i < data.size(); i++) {\n    def c = data[i]\n    if (i < favicon.size() && favicon[i] instanceof Map && favicon[i].containsKey(\"favicon\")) {\n        c[\"iconUrl\"] = favicon[i][\"favicon\"]\n    } else {\n        c[\"iconUrl\"] = \"\"\n    }\n}\n\ncitationBlock = [\n    \"blockType\": \"Citation\",\n    \"data\": [\n        \"citations\": data\n    ]\n]\ncoPilotBlocks.add(citationBlock)\n\n\nreturn [\"coPilotBlocks\": coPilotBlocks, \"citationBlock\": citationBlock]\n",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
@@ -336,6 +348,11 @@
 						"ua:type":"mappedArray",
 						"source":"{{ n_AbkBi.outputs.citationData }}",
 						"items":"{{ n_AbkBi.outputs.citationData[0] }}"
+					},
+					"favicon":{
+						"source":"{{ oUx2Z.outputs.favicon }}",
+						"ua:type":"mappedArray",
+						"items":"{{ oUx2Z.outputs.favicon[0] }}"
 					}
 				}
 			},
@@ -420,6 +437,7 @@
 					"publishToEndUser":true,
 					"temporaryMessage":true,
 					"fromCustomerUserId":"{{ oUx2Z.outputs.aiAgentId }}",
+					"deepResearchEnabled":"{{ oUx2Z.outputs.deepResearchEnabled }}",
 					"coPilotBlocks":{
 						"ua:type":"mappedArray",
 						"source":"{{ KP9cp.outputs.result.coPilotBlocks }}",
@@ -473,5 +491,5 @@
 	"tags":[
 		
 	],
-	"version":78
+	"version":80
 }
