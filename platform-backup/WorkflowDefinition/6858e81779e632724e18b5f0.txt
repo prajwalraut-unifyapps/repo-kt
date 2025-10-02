@@ -5,12 +5,12 @@
 	"createdTime":1750673226809,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655379472,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f39338757c179b1239f9",
+		"deployedAt":1759243595170,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed4b9213d707c2d2740c",
 		"status":"DEPLOYED",
-		"version":27,
-		"workflowVersion":52
+		"version":29,
+		"workflowVersion":54
 	},
 	"edges":[
 		{
@@ -177,7 +177,7 @@
 	"id":"6858e81779e632724e18b5f0",
 	"lastModifiedBy":-1,
 	"lcName":"fetch recent searches",
-	"modifiedTime":1759243562691,
+	"modifiedTime":1759371914564,
 	"name":"Fetch Recent Searches",
 	"nodes":[
 		{
@@ -1655,5 +1655,5 @@
 	"tags":[
 		
 	],
-	"version":53
+	"version":55
 }
