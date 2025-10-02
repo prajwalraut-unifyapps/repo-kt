@@ -5,12 +5,12 @@
 	"createdTime":1727849688223,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243544638,
+		"deployedAt":1759243577920,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed1823e6682b9a51eb0b",
+		"deployedDefinitionId":"68dbed395e003e08cdeb2f5e",
 		"status":"DEPLOYED",
-		"version":61,
-		"workflowVersion":80
+		"version":62,
+		"workflowVersion":81
 	},
 	"edges":[
 		{
@@ -129,7 +129,7 @@
 	"id":"66fce4d883726c045fb6263b",
 	"lastModifiedBy":-1,
 	"lcName":"ai agents multimodality image processing",
-	"modifiedTime":1759243577866,
+	"modifiedTime":1759371899035,
 	"name":"AI Agents MultiModality Image Processing",
 	"nodes":[
 		{
@@ -665,5 +665,5 @@
 		"AI Agent",
 		"Knowledge"
 	],
-	"version":81
+	"version":82
 }
