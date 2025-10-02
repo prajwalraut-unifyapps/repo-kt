@@ -1,0 +1,1352 @@
+{
+	"appsUsed":[
+		"storage_by_unifyapps"
+	],
+	"createdTime":1740599063975,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759243630044,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed6e9213d707c2d274ef",
+		"status":"DEPLOYED",
+		"version":83,
+		"workflowVersion":131
+	},
+	"edges":[
+		{
+			"fromNodeId":"GJmH0",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"7TbGa",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"7TbGa",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"IUdKh",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"IUdKh",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Cv4iw",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"Cv4iw",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"4fj0g",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"4fj0g",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"4Oaru",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"4Oaru",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"aGHss",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"aGHss",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"mSSo4",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"mSSo4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_UqxyN",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"aGHss",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_xaIPv",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_UqxyN",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_xaIPv",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_xaIPv",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_O6Uzu",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_O6Uzu",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_yjzTx",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_O6Uzu",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_CKMC3",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_yjzTx",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Rk2bL",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_CKMC3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Rk2bL",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"Rk2bL",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_VAY8l",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"_VAY8l",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_kASXa",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_kASXa",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_2USRG",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_2USRG",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"SHlhb",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"bmRsZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"SHlhb",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"Rk2bL",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"SHlhb",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"SHlhb",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"MbaR4",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"MbaR4",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"qmcv4",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"qmcv4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"kqWK8",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"kqWK8",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"bmRsZ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"MbaR4",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"bmRsZ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"SHlhb",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"244Pq",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"244Pq",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"m5FeP",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"67bdf597ba32d908560a680f",
+	"lastModifiedBy":-1,
+	"lcName":"generic create case (streaming response)",
+	"modifiedTime":1759371947243,
+	"name":"Generic Create Case (Streaming Response)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":57,
+				"resourceName":"callables_from_automation_streaming"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"oZEgn-1",
+			"id":"GJmH0",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"messageId":{
+							"type":"string",
+							"title":"messageId"
+						},
+						"delta":{
+							"type":"object",
+							"properties":{
+								"path":{
+									"type":"string",
+									"title":"path"
+								},
+								"data":{
+									"type":"object",
+									"title":"data"
+								},
+								"op":{
+									"type":"string",
+									"title":"Op"
+								}
+							},
+							"title":"delta",
+							"additionalProperties":false,
+							"required":[]
+						},
+						"deepResearchEnabled":{
+							"type":"boolean",
+							"title":"Deep Research Enabled"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"messageContentType",
+						"formData"
+					],
+					"properties":{
+						"message":{
+							"type":"string",
+							"title":"Message"
+						},
+						"caseId":{
+							"type":"string",
+							"title":"Case Id"
+						},
+						"userId":{
+							"type":"string",
+							"title":"User Id"
+						},
+						"promptContent":{
+							"type":"string",
+							"title":"Prompt Content"
+						},
+						"promptVariables":{
+							"type":"string",
+							"title":"Prompt Variables"
+						},
+						"aiAgentId":{
+							"type":"string",
+							"title":"Ai Agent Id"
+						},
+						"copilotType":{
+							"type":"string",
+							"title":"Copilot Type"
+						},
+						"contextMessageId":{
+							"type":"string",
+							"title":"Context Message Id"
+						},
+						"attachments":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"id":{
+										"type":"string",
+										"title":"Id"
+									},
+									"url":{
+										"type":"string",
+										"title":"Url"
+									},
+									"name":{
+										"type":"string",
+										"title":"Name"
+									},
+									"fileType":{
+										"type":"string",
+										"title":"File Type"
+									},
+									"mimeType":{
+										"type":"string",
+										"title":"Mime Type"
+									},
+									"temporaryUrl":{
+										"type":"string",
+										"title":"Temporary Url"
+									},
+									"key":{
+										"type":"string",
+										"title":"Key"
+									},
+									"source":{
+										"type":"string",
+										"title":"Source"
+									},
+									"sourceType":{
+										"type":"string",
+										"title":"Source Type"
+									},
+									"size":{
+										"type":"string",
+										"title":"Size"
+									}
+								},
+								"additionalProperties":false,
+								"required":[
+									"size"
+								]
+							},
+							"title":"Attachments",
+							"required":[]
+						},
+						"workflowJson":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Workflow Json"
+						},
+						"messageContentType":{
+							"type":"string",
+							"title":"Message Content Type"
+						},
+						"internalMessageType":{
+							"type":"string",
+							"title":"Internal Message Type"
+						},
+						"preFilledChatMessage":{
+							"type":"string",
+							"title":"Pre Filled Chat Message"
+						},
+						"messageId":{
+							"type":"string",
+							"title":"Message Id"
+						},
+						"filter":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Filter"
+						},
+						"settings":{
+							"type":"object",
+							"properties":{
+								"taskExecutionModel":{
+									"type":"string",
+									"title":"Task Execution Model"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Settings",
+							"required":[]
+						},
+						"defaultTools":{
+							"type":"object",
+							"properties":{
+								"webSearch":{
+									"type":"boolean",
+									"title":"Web Search"
+								},
+								"deepResearch":{
+									"type":"boolean",
+									"title":"Deep Research"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Default Tools",
+							"required":[]
+						},
+						"formData":{
+							"type":"object",
+							"properties":{
+								"brandMessageId":{
+									"type":"string",
+									"title":"Brand Message Id"
+								},
+								"data":{
+									"type":"object",
+									"properties":{},
+									"additionalProperties":false,
+									"title":"Data"
+								},
+								"id":{
+									"type":"string",
+									"title":"id"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Form Data",
+							"required":[
+								"brandMessageId",
+								"data",
+								"id"
+							]
+						},
+						"reference":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Reference"
+						},
+						"workflowInputs":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Workflow Inputs"
+						},
+						"spaceId":{
+							"type":"string",
+							"title":"Space Id"
+						},
+						"runtimeContext":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Runtime Context"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation (Streaming responses)",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.parameters.message",
+					"root.parameters.caseId",
+					"root.parameters.userId",
+					"root.parameters.promptContent",
+					"root.parameters.promptVariables",
+					"root.parameters.aiAgentId",
+					"root.parameters.copilotType",
+					"root.parameters.contextMessageId",
+					"root.parameters.attachments.source",
+					"root.parameters.attachments.ua:type",
+					"root.parameters.attachments.items.id",
+					"root.parameters.attachments.items.url",
+					"root.parameters.attachments.items.name",
+					"root.parameters.attachments.items.fileType",
+					"root.parameters.attachments.items.mimeType",
+					"root.parameters.attachments.items.temporaryUrl",
+					"root.parameters.attachments.items.key",
+					"root.parameters.messageContentType",
+					"root.parameters.internalMessageType",
+					"root.parameters.preFilledChatMessage"
+				]
+			},
+			"context":{
+				"appName":"callables",
+				"resourceVersion":82,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"oZEgn-1",
+			"id":"7TbGa",
+			"index":2,
+			"inputs":{
+				"automationId":"66ab81a6a1c8b020e8374956",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"message":"{{ GJmH0.outputs.message }}",
+					"caseId":"{{ GJmH0.outputs.caseId }}",
+					"promptContent":"{{ GJmH0.outputs.promptContent }}",
+					"promptVariables":"{{ GJmH0.outputs.promptVariables }}",
+					"aiAgentId":"{{ GJmH0.outputs.aiAgentId }}",
+					"copilotType":"{{ GJmH0.outputs.copilotType }}",
+					"contextMessageId":"{{ GJmH0.outputs.contextMessageId }}",
+					"workflowJson":"{{ GJmH0.outputs.workflowJson }}",
+					"messageContentType":"{{ GJmH0.outputs.messageContentType }}",
+					"internalMessageType":"{{ GJmH0.outputs.internalMessageType }}",
+					"preFilledChatMessage":"{{ GJmH0.outputs.preFilledChatMessage }}",
+					"messageId":"{{ GJmH0.outputs.messageId }}",
+					"filter":"{{ GJmH0.outputs.filter }}",
+					"settings":{
+						"taskExecutionModel":"{{ GJmH0.outputs.settings.taskExecutionModel }}"
+					},
+					"defaultTools":{
+						"webSearch":"{{ GJmH0.outputs.defaultTools.webSearch }}",
+						"deepResearch":"{{ GJmH0.outputs.defaultTools.deepResearch }}"
+					},
+					"formData":{
+						"id":"{{ GJmH0.outputs.formData.id }}",
+						"data":"{{ GJmH0.outputs.formData.data }}",
+						"brandMessageId":"{{ GJmH0.outputs.formData.brandMessageId }}"
+					},
+					"reference":"{{ GJmH0.outputs.reference }}",
+					"workflowInputs":"{{ GJmH0.outputs.workflowInputs }}",
+					"spaceId":"{{ GJmH0.outputs.spaceId }}",
+					"runtimeContext":"{{ GJmH0.outputs.runtimeContext }}",
+					"attachments":{
+						"source":"{{ GJmH0.outputs.attachments }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"id":"{{ GJmH0.outputs.attachments[0].id }}",
+							"url":"{{ GJmH0.outputs.attachments[0].url }}",
+							"name":"{{ GJmH0.outputs.attachments[0].name }}",
+							"fileType":"{{ GJmH0.outputs.attachments[0].fileType }}",
+							"mimeType":"{{ GJmH0.outputs.attachments[0].mimeType }}",
+							"temporaryUrl":"{{ GJmH0.outputs.attachments[0].temporaryUrl }}",
+							"key":"{{ GJmH0.outputs.attachments[0].key }}",
+							"sourceType":"{{ GJmH0.outputs.attachments[0].sourceType }}",
+							"source":"{{ GJmH0.outputs.attachments[0].source }}",
+							"size":"{{ GJmH0.outputs.attachments[0].size }}"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Create case",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":2,
+				"resourceName":"storage_by_unifyapps_get_record_by_id",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"oZEgn-1",
+			"id":"IUdKh",
+			"index":3,
+			"inputs":{
+				"object_type":"service_hub_message",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"id":"{{ 7TbGa.outputs.messageId }}",
+				"readThroughSessionVariables":false
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Fetch record by ID",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":78,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"oZEgn-1",
+			"id":"Cv4iw",
+			"index":4,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"fanMessage":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Fan Message"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"messageId":{
+							"type":"string",
+							"title":"Message Id"
+						},
+						"caseId":{
+							"type":"string",
+							"title":"Case Id"
+						},
+						"createdTime":{
+							"type":"string",
+							"title":"Created Time"
+						},
+						"fromCustomerUserId":{
+							"type":"string",
+							"title":"From Customer User Id"
+						},
+						"additional":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Additional"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"messageId",
+						"caseId"
+					]
+				},
+				"compile_static":false,
+				"code":"def text = \"\"\ndef messages = []\n\ndef fanMessage = [\"messageType\":\"Fan\",\"messageId\": messageId, \"caseId\": caseId, \"createdTime\": createdTime,\"fromCustomerUserId\":fromCustomerUserId, \"message\": messages]\n\nif(binding.hasVariable(\"additional\")&& additional != null  ) {\n  fanMessage << [\"additional\":additional]\n}\n\n\n\nreturn [\"fanMessage\": fanMessage]\n",
+				"parameters":{
+					"messageId":"{{ 7TbGa.outputs.messageId }}",
+					"caseId":"{{ 7TbGa.outputs.caseId }}",
+					"createdTime":"{{ 7TbGa.outputs.messageCreatedTime }}",
+					"fromCustomerUserId":"{{ 7TbGa.outputs.fromCustomerUserId }}",
+					"additional":"{{ IUdKh.outputs.properties.additional }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"create message",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.record.events.items"
+				]
+			},
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":101,
+				"resourceName":"storage_by_unifyapps_update_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"oZEgn-1",
+			"id":"4fj0g",
+			"index":5,
+			"inputs":{
+				"numberOfRecordsToUpdate":"SINGLE",
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"properties_caseId",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ 7TbGa.outputs.caseId }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"debug_agent",
+				"updateFields":[
+					{
+						"fieldName":"properties.events",
+						"actionType":"ADD",
+						"setValue":"ui listener started"
+					}
+				],
+				"skipIfEmpty":false,
+				"page":{
+					"offset":0,
+					"limit":20
+				}
+			},
+			"skip":false,
+			"subTitle":"debugAgent",
+			"title":"Update records by query",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":52,
+				"resourceName":"callables_return_to_automation_streaming",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"oZEgn-1",
+			"id":"4Oaru",
+			"index":6,
+			"inputs":{
+				"result":{
+					"delta":{
+						"path":"*",
+						"data":"{{ Cv4iw.outputs.result.fanMessage }}"
+					},
+					"messageId":"{{ 7TbGa.outputs.messageId }}"
+				},
+				"completed":false
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Add response to automation stream",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":148,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"oZEgn-1",
+			"id":"aGHss",
+			"index":7,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ 7TbGa.outputs.streamingAccumulatorStarted }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"true"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"streaming accumulated?",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":132,
+				"resourceName":"callables_return_to_automation_streaming",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"aGHss@oZEgn-1@n",
+			"id":"mSSo4",
+			"index":8,
+			"inputs":{
+				"completed":true
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Add response to automation stream",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"aGHss@oZEgn-1@n",
+			"id":"n_UqxyN",
+			"index":9,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":535,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"oZEgn-1",
+			"id":"n_xaIPv",
+			"index":10,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"properties_userId_caseId",
+							"filter":{
+								"operator":"CONTAINS",
+								"value":"{{ 7TbGa.outputs.caseId }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"e_ai_agent_streaming_detail",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"sortBy":[
+					{
+						"field":"properties_instanceType",
+						"order":"DESC"
+					}
+				],
+				"translationsOption":"DEFAULT",
+				"page":{
+					"paginateBy":"OFFSET",
+					"limit":20
+				},
+				"numberOfRecordsToFetch":"SINGLE",
+				"readThroughSessionVariables":false,
+				"includeTotalCount":false
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":439,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"oZEgn-1",
+			"id":"n_O6Uzu",
+			"index":11,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_xaIPv.outputs.properties.instanceType }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"UI_LISTENER"
+						}
+					},
+					{
+						"property":"{{ n_xaIPv.outputs.properties.userId_caseId }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"{{ __RUN__.outputs.userId }}_{{ 7TbGa.outputs.caseId }}"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":76,
+				"resourceName":"storage_by_unifyapps_update_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_O6Uzu@oZEgn-1@y",
+			"id":"_yjzTx",
+			"index":12,
+			"inputs":{
+				"numberOfRecordsToUpdate":"SINGLE",
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"id",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ n_xaIPv.outputs.id }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"e_ai_agent_streaming_detail",
+				"updateFields":[
+					{
+						"fieldName":"properties.waitingInstanceId",
+						"actionType":"SET",
+						"setValue":"{{ __RUN__.outputs.executionId }}"
+					},
+					{
+						"actionType":"SET",
+						"setValue":"{{ __RUN__.outputs.workflowRunTimeType }}",
+						"fieldName":"properties.waitingInstanceRunTimeType"
+					}
+				],
+				"skipIfEmpty":false,
+				"page":{
+					"offset":0,
+					"limit":20
+				}
+			},
+			"skip":false,
+			"subTitle":"Update listener",
+			"title":"Update records by query",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":522,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_O6Uzu@oZEgn-1@n",
+			"id":"n_CKMC3",
+			"index":13,
+			"inputs":{
+				"writeThroughSessionVariables":false,
+				"object_type":"e_ai_agent_streaming_detail",
+				"skipIfBlank":false,
+				"record":{
+					"waitingInstanceId":"{{ __RUN__.outputs.executionId }}",
+					"aiAgentId":"{{ n_xaIPv.outputs.properties.aiAgentId }}",
+					"currentMessageId":"{{ n_xaIPv.outputs.properties.currentMessageId }}",
+					"streamingInProgress":"{{ n_xaIPv.outputs.properties.streamingInProgress }}",
+					"currentMessageType":"{{ n_xaIPv.outputs.properties.currentMessageType }}",
+					"userId_caseId":"{{ __RUN__.outputs.userId }}_{{ 7TbGa.outputs.caseId }}",
+					"instanceType":"UI_LISTENER",
+					"waitingInstanceRunTimeType":"=IF(ISBLANK({{ n_xaIPv.outputs.properties.waitingInstanceRunTimeType }}), \"IN_MEMORY\", {{ n_xaIPv.outputs.properties.waitingInstanceRunTimeType }})"
+				}
+			},
+			"skip":false,
+			"subTitle":"Create listener based on accumulator instance id",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":81,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"oZEgn-1",
+			"id":"Rk2bL",
+			"index":14,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ _yjzTx.outputs.result }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"false"
+						}
+					},
+					{
+						"property":"{{ n_CKMC3.outputs.id }}",
+						"filter":{
+							"operator":"MISSING"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":63,
+				"resourceName":"callables_return_to_automation_streaming",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Rk2bL@oZEgn-1@y",
+			"id":"_VAY8l",
+			"index":15,
+			"inputs":{
+				"result":{
+					"delta":{
+						"path":"streaming failed"
+					}
+				},
+				"completed":false
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Add response to automation stream",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":63,
+				"resourceName":"callables_return_to_automation_streaming",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Rk2bL@oZEgn-1@y",
+			"id":"_kASXa",
+			"index":16,
+			"inputs":{
+				"result":{
+					"delta":{
+						"data":"fao"
+					}
+				},
+				"completed":true
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Add response to automation stream",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Rk2bL@oZEgn-1@y",
+			"id":"_2USRG",
+			"index":17,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"signals_by_unifyapps",
+				"resourceVersion":2,
+				"resourceName":"signals_by_unifyapps_wait_for_signals_loop",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"oZEgn-1",
+			"id":"SHlhb",
+			"index":18,
+			"inputs":{
+				"signal_payload":{
+					"payload":{
+						"type":"object",
+						"additionalProperties":false,
+						"required":[],
+						"properties":{
+							"messageId":{
+								"type":"string",
+								"title":"messageId"
+							},
+							"delta":{
+								"type":"object",
+								"properties":{
+									"path":{
+										"type":"string",
+										"title":"path"
+									},
+									"data":{
+										"type":"object",
+										"title":"data"
+									},
+									"op":{
+										"type":"string",
+										"title":"Op"
+									}
+								},
+								"title":"delta",
+								"additionalProperties":false,
+								"required":[]
+							},
+							"deepResearchEnabled":{
+								"type":"boolean",
+								"title":"Deep Research Enabled"
+							}
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Signals by UnifyApps",
+			"title":"Wait for signals In Loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":117,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"SHlhb@oZEgn-1@l",
+			"id":"MbaR4",
+			"index":19,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ SHlhb.outputs.payload.delta.path }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"stream_completed"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":100,
+				"resourceName":"callables_return_to_automation_streaming",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"MbaR4@SHlhb@oZEgn-1@l@y",
+			"id":"qmcv4",
+			"index":20,
+			"inputs":{
+				"completed":true
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Add response to automation stream",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"MbaR4@SHlhb@oZEgn-1@l@y",
+			"id":"kqWK8",
+			"index":21,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":52,
+				"resourceName":"callables_return_to_automation_streaming",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"SHlhb@oZEgn-1@l",
+			"id":"bmRsZ",
+			"index":22,
+			"inputs":{
+				"result":{
+					"messageId":"{{ SHlhb.outputs.payload.messageId }}",
+					"delta":{
+						"path":"{{ SHlhb.outputs.payload.delta.path }}",
+						"data":"{{ SHlhb.outputs.payload.delta.data }}",
+						"op":"{{ SHlhb.outputs.payload.delta.op }}"
+					},
+					"deepResearchEnabled":"{{ SHlhb.outputs.payload.deepResearchEnabled }}"
+				},
+				"completed":false
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Add response to automation stream",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.record.events.items"
+				]
+			},
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":101,
+				"resourceName":"storage_by_unifyapps_update_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"oZEgn-1",
+			"id":"244Pq",
+			"index":23,
+			"inputs":{
+				"numberOfRecordsToUpdate":"SINGLE",
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"properties_caseId",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ 7TbGa.outputs.caseId }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"debug_agent",
+				"skipIfBlank":false,
+				"updateFields":[
+					{
+						"fieldName":"properties.events",
+						"actionType":"ADD",
+						"setValue":"ui listener ended"
+					}
+				],
+				"skipIfEmpty":false,
+				"page":{
+					"offset":0,
+					"limit":20
+				},
+				"unsetIfNull":false
+			},
+			"skip":false,
+			"subTitle":"debugAgent",
+			"title":"Update records by query",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":52,
+				"resourceName":"callables_return_to_automation_streaming",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"oZEgn-1",
+			"id":"m5FeP",
+			"index":24,
+			"inputs":{
+				"completed":true
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Add response to automation stream",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":1866,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		"AI Agent"
+	],
+	"version":132
+}
