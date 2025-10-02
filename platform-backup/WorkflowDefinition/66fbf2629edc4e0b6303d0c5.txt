@@ -5,12 +5,12 @@
 	"createdTime":1727787618418,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243511415,
+		"deployedAt":1759243549147,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbecf75e003e08cdeb2e35",
+		"deployedDefinitionId":"68dbed1d5e003e08cdeb2ebf",
 		"status":"DEPLOYED",
-		"version":55,
-		"workflowVersion":123
+		"version":56,
+		"workflowVersion":124
 	},
 	"edges":[
 		{
@@ -213,7 +213,7 @@
 	"id":"66fbf2629edc4e0b6303d0c5",
 	"lastModifiedBy":-1,
 	"lcName":"ai agents multi modality indexing [ do not touch]",
-	"modifiedTime":1759243549086,
+	"modifiedTime":1759371871199,
 	"name":"Ai Agents Multi Modality Indexing [ DO NOT TOUCH]",
 	"nodes":[
 		{
@@ -1991,5 +1991,5 @@
 		"AI Agent",
 		"Internal"
 	],
-	"version":124
+	"version":125
 }
