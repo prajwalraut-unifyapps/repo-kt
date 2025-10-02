@@ -5,12 +5,12 @@
 	"createdTime":1756128826344,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243540006,
+		"deployedAt":1759243573893,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed135e003e08cdeb2e91",
+		"deployedDefinitionId":"68dbed355e003e08cdeb2f4d",
 		"status":"DEPLOYED",
-		"version":19,
-		"workflowVersion":34
+		"version":20,
+		"workflowVersion":35
 	},
 	"edges":[
 		{
@@ -98,7 +98,7 @@
 	"id":"6893b9776d55f6cd075575eb",
 	"lastModifiedBy":-1,
 	"lcName":"fetch trending documents ",
-	"modifiedTime":1759243573829,
+	"modifiedTime":1759371895095,
 	"name":"Fetch Trending Documents ",
 	"nodes":[
 		{
@@ -683,5 +683,5 @@
 		}
 	},
 	"standard":true,
-	"version":35
+	"version":36
 }
