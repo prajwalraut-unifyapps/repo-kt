@@ -5,12 +5,12 @@
 	"createdTime":1757072344559,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646521155,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2d0f9bd00df618e363cce",
+		"deployedAt":1759243565417,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed2d23e6682b9a51eb98",
 		"status":"DEPLOYED",
-		"version":8,
-		"workflowVersion":24
+		"version":11,
+		"workflowVersion":27
 	},
 	"edges":[
 		{
@@ -89,9 +89,9 @@
 		]
 	},
 	"id":"68891bb5297b02c59d61c1c7",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"knowledge downloader | google drive | folder - ctm",
-	"modifiedTime":1758655342345,
+	"modifiedTime":1759371886927,
 	"name":"Knowledge Downloader | Google Drive | Folder - CTM",
 	"nodes":[
 		{
@@ -720,5 +720,5 @@
 	"tags":[
 		"knowledge_v2"
 	],
-	"version":25
+	"version":28
 }
