@@ -30,7 +30,7 @@
 	"id":"68de6571ed7fcc6978211a9f",
 	"lastModifiedBy":13,
 	"lcName":"testdnt",
-	"modifiedTime":1759423128587,
+	"modifiedTime":1759423198311,
 	"name":"testdnt",
 	"nodes":[
 		{
@@ -91,6 +91,25 @@
 					}
 				},
 				"query":"SELECT * FROM ENTITY_npci_data \nWHERE _pr_txnId = :txnId \n  AND _pr_beneficiaryFlag = :beneficiaryFlag",
+				"record":{
+					"txnId":"3",
+					"beneficiaryFlag":true
+				},
+				"params":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"txnId":{
+							"type":"string",
+							"title":"Txn Id"
+						},
+						"beneficiaryFlag":{
+							"type":"boolean",
+							"title":"Beneficiary Flag"
+						}
+					}
+				},
 				"group":"ENTITY_REPORTING"
 			},
 			"skip":false,
@@ -99,6 +118,11 @@
 			"type":"ACTION"
 		},
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
 			"context":{
 				"appName":"analytics_by_unifyapps",
 				"resourceVersion":403,
@@ -126,15 +150,23 @@
 					}
 				},
 				"sheetName":"Sheet_0",
-				"query":"SELECT * FROM ENTITY_npci_data WHERE _pr_txnId = '3'",
+				"query":"SELECT * FROM ENTITY_npci_data \nWHERE _pr_txnId = :txnId \n  AND _pr_beneficiaryFlag = :beneficiaryFlag",
+				"record":{
+					"txnId":"3",
+					"beneficiaryFlag":true
+				},
 				"params":{
 					"type":"object",
 					"additionalProperties":false,
 					"required":[],
 					"properties":{
-						"test":{
+						"txnId":{
 							"type":"string",
-							"title":"Test"
+							"title":"Txn Id"
+						},
+						"beneficiaryFlag":{
+							"type":"boolean",
+							"title":"Beneficiary Flag"
 						}
 					}
 				},
@@ -199,5 +231,5 @@
 	"tags":[
 		
 	],
-	"version":12
+	"version":13
 }
