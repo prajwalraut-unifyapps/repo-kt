@@ -5,12 +5,12 @@
 	"createdTime":1756991683665,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655376161,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f39038757c179b123976",
+		"deployedAt":1759243592680,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed4823e6682b9a51ec21",
 		"status":"DEPLOYED",
-		"version":11,
-		"workflowVersion":28
+		"version":13,
+		"workflowVersion":30
 	},
 	"edges":[
 		{
@@ -76,7 +76,7 @@
 	"id":"688f8a6413532e088370c512",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge downloader | gong | single call transcript",
-	"modifiedTime":1759243559965,
+	"modifiedTime":1759371912143,
 	"name":"Knowledge Downloader | Gong | Single Call Transcript",
 	"nodes":[
 		{
@@ -649,5 +649,5 @@
 	"tags":[
 		"knowledge_v2"
 	],
-	"version":29
+	"version":31
 }
