@@ -5,12 +5,12 @@
 	"createdTime":1758530320539,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655381882,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f39538757c179b123a51",
+		"deployedAt":1759243596986,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed4c23e6682b9a51ec37",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":19
+		"version":4,
+		"workflowVersion":21
 	},
 	"edges":[
 		{
@@ -76,7 +76,7 @@
 	"id":"6881f6a9423c70d0f4f1d84a",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | hubspot | index contact",
-	"modifiedTime":1759243564564,
+	"modifiedTime":1759371916205,
 	"name":"Knowledge Indexer | Hubspot | Index contact",
 	"nodes":[
 		{
@@ -658,5 +658,5 @@
 	"tags":[
 		"knowledge_v2"
 	],
-	"version":20
+	"version":22
 }
