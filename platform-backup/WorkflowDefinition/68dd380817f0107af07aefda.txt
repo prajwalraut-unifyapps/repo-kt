@@ -5,12 +5,12 @@
 	"createdTime":1759328264773,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759389631629,
+		"deployedAt":1759390090621,
 		"deployedBy":44103,
-		"deployedDefinitionId":"68de27bc4cd5cd4be39eb873",
+		"deployedDefinitionId":"68de298a4cd5cd4be39ec131",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":1
+		"version":2,
+		"workflowVersion":2
 	},
 	"edges":[
 		{
@@ -38,7 +38,7 @@
 	"id":"68dd380817f0107af07aefda",
 	"lastModifiedBy":44103,
 	"lcName":"test11111",
-	"modifiedTime":1759390088738,
+	"modifiedTime":1759390594615,
 	"name":"test11111",
 	"nodes":[
 		{
@@ -70,7 +70,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_LL6zY-1",
 			"id":"n_UlFPc",
@@ -81,14 +81,14 @@
 					"additionalProperties":false,
 					"required":[],
 					"properties":{
-						"sloaList":{
+						"slotList":{
 							"type":"array",
 							"items":{
 								"type":"object",
 								"properties":{},
 								"additionalProperties":false
 							},
-							"title":"Sloa List"
+							"title":"Slot List"
 						}
 					}
 				},
@@ -124,7 +124,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_LL6zY-1",
 			"id":"n_q0ZqT",
@@ -142,9 +142,9 @@
 					}
 				},
 				"slotList":{
-					"source":"{{ n_UlFPc.outputs.result.sloaList }}",
+					"source":"{{ n_UlFPc.outputs.result.slotList }}",
 					"ua:type":"mappedArray",
-					"items":"{{ n_UlFPc.outputs.result.sloaList[0] }}"
+					"items":"{{ n_UlFPc.outputs.result.slotList[0] }}"
 				},
 				"slotSchema":{
 					"type":"object",
@@ -203,5 +203,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
