@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759420405662,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759420415996,
+		"deployedBy":132116,
+		"deployedDefinitionId":"68de9ffd0e9d387c5aab09d6",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_pUzNZ",
@@ -121,7 +129,7 @@
 	"id":"68de9ff50e9d387c5aab09b1",
 	"lastModifiedBy":132116,
 	"lcName":"branches_inside_nestedloops  (2)(1)",
-	"modifiedTime":1759420411814,
+	"modifiedTime":1759420693098,
 	"name":"branches_inside_nestedloops  (2)(1)",
 	"nodes":[
 		{
@@ -492,5 +500,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
