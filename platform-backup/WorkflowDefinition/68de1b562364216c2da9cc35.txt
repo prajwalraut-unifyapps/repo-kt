@@ -24,6 +24,13 @@
 			"fromNodeId":"n_8jN88",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_LPxto",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_LPxto",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_1P5X4",
 			"type":"next"
 		}
@@ -31,7 +38,7 @@
 	"id":"68de1b562364216c2da9cc35",
 	"lastModifiedBy":175325,
 	"lcName":"ijhg",
-	"modifiedTime":1759391816118,
+	"modifiedTime":1759391965442,
 	"name":"ijhg",
 	"nodes":[
 		{
@@ -144,6 +151,32 @@
 		},
 		{
 			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":910,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_sgMJW-1",
+			"id":"n_LPxto",
+			"index":3,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ n_8jN88.outputs.i }}",
+						"value":"=SUM({{ n_8jN88.outputs.i }},1)"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"callables",
 				"resourceVersion":994,
 				"resourceName":"callables_return_to_automation",
@@ -154,7 +187,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sgMJW-1",
 			"id":"n_1P5X4",
-			"index":3,
+			"index":4,
 			"inputs":{
 				"result":{
 					"r":"=CONCATENATE({{ n_qZPXj.outputs.a }},{{ n_qZPXj.outputs.b }},\" \",{{ n_8jN88.outputs.i }})"
@@ -183,5 +216,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
