@@ -1,0 +1,384 @@
+{
+	"appsUsed":[
+		"storage_by_unifyapps"
+	],
+	"createdTime":1757150681814,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759243645081,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed7d23e6682b9a51ed87",
+		"status":"DEPLOYED",
+		"version":7,
+		"workflowVersion":17
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_ibC8F",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_N9m6Z",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_N9m6Z",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Iq9ab",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"Iq9ab",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"fy5V5",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"fy5V5",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_IJ3OW",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_N9m6Z",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_IJ3OW",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_IJ3OW",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_bd348",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"68b827559a4a9d0149caa07d",
+	"lastModifiedBy":-1,
+	"lcName":"throw exception | agent",
+	"modifiedTime":1759371962331,
+	"name":"Throw Exception | Agent",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":447,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Q6V6J-1",
+			"id":"n_ibC8F",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"response":{
+							"type":"string",
+							"title":"Response"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"errorDetails":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Error Details"
+						},
+						"errorMessage":{
+							"type":"string",
+							"title":"Error Message"
+						},
+						"caseId":{
+							"type":"string",
+							"title":"Case Id"
+						},
+						"messageId":{
+							"type":"string",
+							"title":"Message Id"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":439,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Q6V6J-1",
+			"id":"n_N9m6Z",
+			"index":2,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_ibC8F.outputs.caseId }}",
+						"filter":{
+							"operator":"EXISTS"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"case present?",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":325,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_N9m6Z@_Q6V6J-1@y",
+			"id":"Iq9ab",
+			"index":3,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"failure":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Failure"
+						},
+						"errorDetails":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Error Details"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"errorMessage":{
+							"type":"string",
+							"title":"Error Message"
+						},
+						"executionId":{
+							"type":"string",
+							"title":"Execution Id"
+						},
+						"messageId":{
+							"type":"string",
+							"title":"Message Id"
+						},
+						"errorDetails":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Error Details"
+						},
+						"rootExecutionId":{
+							"type":"string",
+							"title":"Root Execution Id"
+						}
+					}
+				},
+				"code":"def failure = [\n    \"messageId\" : binding.hasVariable(\"messageId\") ? messageId : null,\n    \"errorMessage\": binding.hasVariable(\"errorMessage\") ? errorMessage : null,\n    \"executionId\": binding.hasVariable(\"executionId\") ? executionId : null,\n    \"rootExecutionId\": binding.hasVariable(\"rootExecutionId\") ? rootExecutionId : null\n  ]\n\nreturn [\n  \"failure\": failure,\n  \"errorDetails\" : binding.hasVariable(\"errorDetails\") ? errorDetails : failure\n]",
+				"compile_static":false,
+				"parameters":{
+					"errorMessage":"{{ n_ibC8F.outputs.errorMessage }}",
+					"executionId":"{{ __RUN__.outputs.parentExecutionId }}",
+					"messageId":"{{ n_ibC8F.outputs.messageId }}",
+					"errorDetails":"{{ n_ibC8F.outputs.errorDetails }}",
+					"rootExecutionId":"{{ __RUN__.outputs.rootExecutionId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Failure details",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":11,
+				"resourceName":"storage_by_unifyapps_update_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_N9m6Z@_Q6V6J-1@y",
+			"id":"fy5V5",
+			"index":4,
+			"inputs":{
+				"numberOfRecordsToUpdate":"SINGLE",
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"properties_caseId",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ n_ibC8F.outputs.caseId }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"debug_agent",
+				"skipIfBlank":false,
+				"updateFields":[
+					{
+						"fieldName":"properties.events",
+						"actionType":"ADD",
+						"setValue":"Trigger Failed -> Error is -> {{ Iq9ab.outputs.result.errorDetails }}"
+					},
+					{
+						"fieldName":"properties.triggerFailureReason",
+						"actionType":"ADD_TO_SET",
+						"setValue":"{{ Iq9ab.outputs.result.failure }}"
+					}
+				],
+				"skipIfEmpty":false,
+				"page":{
+					"offset":0,
+					"limit":20
+				}
+			},
+			"skip":false,
+			"subTitle":"debugAgent",
+			"title":"Update records by query",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":451,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Q6V6J-1",
+			"id":"n_IJ3OW",
+			"index":5,
+			"inputs":{
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"errorDetails":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Error Details"
+						},
+						"errorMessage":{
+							"type":"string",
+							"title":"Error Message"
+						}
+					}
+				},
+				"code":"def message = \"\"\n\n\nif(!message && binding.hasVariable(\"errorMessage\")){\n  message = errorMessage\n}\nif(!message && binding.hasVariable(\"errorDetails\")){\n  if(errorDetails?.message != null){\n    message = errorDetails.message\n  }\n  else if( errorDetails?.body?.error?.message != null ){\n    message = errorDetails.body.error.message\n  }\n  else{\n    message = com.unifyapps.infra.utils.JsonUtils.toJson(errorDetails)\n  }\n}\nelse {\n  message = \"Agent process failed\"\n}\nthrow new RuntimeException(message)\n",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"errorDetails":"{{ n_ibC8F.outputs.errorDetails }}",
+					"errorMessage":"{{ n_ibC8F.outputs.errorMessage }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Throw Error",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":457,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Q6V6J-1",
+			"id":"n_bd348",
+			"index":6,
+			"inputs":{
+				"result":{
+					"response":"-"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":0,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		
+	],
+	"version":18
+}
