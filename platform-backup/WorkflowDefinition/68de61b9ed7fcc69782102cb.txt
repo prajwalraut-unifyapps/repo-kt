@@ -6,7 +6,7 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_xPFee",
+			"fromNodeId":"n_Wji6H",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"_oOYRE",
@@ -16,20 +16,27 @@
 	"id":"68de61b9ed7fcc69782102cb",
 	"lastModifiedBy":602,
 	"lcName":"testing",
-	"modifiedTime":1759404473884,
+	"modifiedTime":1759404485093,
 	"name":"testing",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":969,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_xPFee-1",
-			"id":"_xPFee",
-			"index":0,
+			"id":"n_Wji6H",
+			"index":1,
+			"inputs":{},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
@@ -39,13 +46,16 @@
 			"fallbackMode":"STOP",
 			"groupId":"_xPFee-1",
 			"id":"_oOYRE",
-			"index":0,
+			"index":2,
 			"skip":false,
 			"title":"Select an app and action",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":602,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +69,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
