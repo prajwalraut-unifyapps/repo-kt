@@ -6,46 +6,177 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_cdzLJ",
+			"fromNodeId":"n_sB0ad",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_0tjPk",
+			"toNodeId":"n_O2qv8",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_O2qv8",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_3F9Im",
 			"type":"next"
 		}
 	],
 	"id":"68deab2030196a1e837fee92",
 	"lastModifiedBy":13,
 	"lcName":"test",
-	"modifiedTime":1759423264199,
+	"modifiedTime":1759423270487,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":822,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_cdzLJ-1",
-			"id":"_cdzLJ",
-			"index":0,
+			"id":"n_sB0ad",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"analytics_by_unifyapps",
+				"resourceVersion":827,
+				"resourceName":"analytics_by_unifyapps_execute_query",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_cdzLJ-1",
-			"id":"_0tjPk",
-			"index":0,
+			"id":"n_O2qv8",
+			"index":2,
+			"inputs":{
+				"outputSchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"sadas"
+					],
+					"properties":{
+						"sadas":{
+							"type":"string",
+							"title":"Sadas"
+						}
+					}
+				},
+				"query":"SELECT * FROM ENTITY_npci_data \nWHERE _pr_txnId = :txnId \n  AND _pr_beneficiaryFlag = :beneficiaryFlag",
+				"record":{
+					"txnId":"3",
+					"beneficiaryFlag":true
+				},
+				"params":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"txnId":{
+							"type":"string",
+							"title":"Txn Id"
+						},
+						"beneficiaryFlag":{
+							"type":"boolean",
+							"title":"Beneficiary Flag"
+						}
+					}
+				},
+				"group":"ENTITY_REPORTING"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Analytics by UnifyApps",
+			"title":"Execute Analytics SQL Query",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"analytics_by_unifyapps",
+				"resourceVersion":403,
+				"resourceName":"analytics_by_unifyapps_export_sql",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_cdzLJ-1",
+			"id":"n_3F9Im",
+			"index":3,
+			"inputs":{
+				"outputSchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"test"
+					],
+					"properties":{
+						"test":{
+							"type":"string",
+							"title":"Test"
+						}
+					}
+				},
+				"sheetName":"Sheet_0",
+				"query":"SELECT * FROM ENTITY_npci_data \nWHERE _pr_txnId = :txnId \n  AND _pr_beneficiaryFlag = :beneficiaryFlag",
+				"record":{
+					"txnId":"3",
+					"beneficiaryFlag":true
+				},
+				"params":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"txnId":{
+							"type":"string",
+							"title":"Txn Id"
+						},
+						"beneficiaryFlag":{
+							"type":"boolean",
+							"title":"Beneficiary Flag"
+						}
+					}
+				},
+				"keepExactFileName":false,
+				"fileType":"CSV",
+				"group":"ENTITY_REPORTING"
+			},
+			"skip":false,
+			"subTitle":"Analytics by UnifyApps",
+			"title":"Export SQL Query Result",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":13,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +190,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
