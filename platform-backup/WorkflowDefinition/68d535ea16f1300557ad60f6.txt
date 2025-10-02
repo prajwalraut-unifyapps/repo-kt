@@ -23,14 +23,14 @@
 			"fromNodeId":"n_8atoe",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_lgn2Z",
+			"toNodeId":"n_TraFo",
 			"type":"next"
 		}
 	],
 	"id":"68d535ea16f1300557ad60f6",
 	"lastModifiedBy":67744,
 	"lcName":"test-variables",
-	"modifiedTime":1759218233521,
+	"modifiedTime":1759397267282,
 	"name":"test-variables",
 	"nodes":[
 		{
@@ -201,81 +201,29 @@
 		},
 		{
 			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":927,
-				"resourceName":"variable_by_unifyapps_create_variables",
+				"appName":"standard_entities",
+				"resourceVersion":1164,
+				"resourceName":"standard_entities_fetch_entities",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_vHKoQ-1",
-			"id":"n_lgn2Z",
+			"id":"n_TraFo",
 			"index":4,
-			"inputSchema":{
-				"type":"SCHEMA_AND_LAYOUT",
-				"dynamic":false,
-				"layout":{},
-				"schema":{
-					"additionalProperties":false,
-					"type":"object",
-					"properties":{
-						"testing":{
-							"type":"array",
-							"items":{
-								"type":"string",
-								"oneOf":[
-									{
-										"const":"dfgh",
-										"title":"ghgjk"
-									}
-								]
-							},
-							"format":"multi-select",
-							"title":"Testing",
-							"minItems":1
-						}
-					},
-					"required":[
-						"testing"
-					]
-				}
-			},
 			"inputs":{
-				"testing":[
-					"dfgh"
-				]
-			},
-			"outputSchema":{
-				"dynamic":false,
-				"schema":{
-					"additionalProperties":false,
-					"type":"object",
-					"properties":{
-						"testing":{
-							"type":"array",
-							"items":{
-								"type":"string",
-								"oneOf":[
-									{
-										"const":"dfgh",
-										"title":"ghgjk"
-									}
-								]
-							},
-							"format":"multi-select",
-							"title":"Testing",
-							"minItems":1
-						}
-					},
-					"required":[
-						"testing"
-					]
-				}
+				"projections":[
+					{
+						"name":"nodes",
+						"aggregationFunction":"GROUP"
+					}
+				],
+				"entityType":"WorkflowDefinition"
 			},
 			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Create variables",
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Fetch entities",
 			"type":"ACTION"
 		}
 	],
@@ -296,5 +244,5 @@
 	"tags":[
 		
 	],
-	"version":20
+	"version":21
 }
