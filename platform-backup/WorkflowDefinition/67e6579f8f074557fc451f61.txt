@@ -5,12 +5,12 @@
 	"createdTime":1743148959982,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243507186,
+		"deployedAt":1759243545478,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbecf35e003e08cdeb2e20",
+		"deployedDefinitionId":"68dbed1923e6682b9a51eb13",
 		"status":"DEPLOYED",
-		"version":28,
-		"workflowVersion":43
+		"version":29,
+		"workflowVersion":44
 	},
 	"edges":[
 		{
@@ -48,7 +48,7 @@
 	"id":"67e6579f8f074557fc451f61",
 	"lastModifiedBy":-1,
 	"lcName":"execute clickhouse query",
-	"modifiedTime":1759243545407,
+	"modifiedTime":1759371867621,
 	"name":"execute clickhouse query",
 	"nodes":[
 		{
@@ -260,5 +260,5 @@
 	"tags":[
 		
 	],
-	"version":44
+	"version":45
 }
