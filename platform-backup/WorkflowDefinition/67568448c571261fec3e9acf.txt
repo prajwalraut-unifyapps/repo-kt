@@ -5,12 +5,12 @@
 	"createdTime":1733723208201,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243550403,
+		"deployedAt":1759243582911,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed1e9213d707c2d2731a",
+		"deployedDefinitionId":"68dbed3e9213d707c2d273c0",
 		"status":"DEPLOYED",
-		"version":44,
-		"workflowVersion":66
+		"version":45,
+		"workflowVersion":67
 	},
 	"edges":[
 		{
@@ -119,7 +119,7 @@
 	"id":"67568448c571261fec3e9acf",
 	"lastModifiedBy":-1,
 	"lcName":"query on mongo",
-	"modifiedTime":1759243582830,
+	"modifiedTime":1759371903230,
 	"name":"Query On Mongo",
 	"nodes":[
 		{
@@ -1165,5 +1165,5 @@
 		"AI Agent",
 		"Knowledge"
 	],
-	"version":67
+	"version":68
 }
