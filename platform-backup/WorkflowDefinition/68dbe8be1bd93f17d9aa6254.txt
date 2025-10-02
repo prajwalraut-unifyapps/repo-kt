@@ -1,28 +1,20 @@
 {
 	"appsUsed":[
-		"gmail",
 		"teamwork"
 	],
 	"createdTime":1759242430527,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759407713055,
+		"deployedAt":1759409417401,
 		"deployedBy":43498,
-		"deployedDefinitionId":"68de6e60ed7fcc697821586e",
+		"deployedDefinitionId":"68de7509adc2a343ddb47a5d",
 		"status":"DEPLOYED",
-		"version":12,
-		"workflowVersion":20
+		"version":13,
+		"workflowVersion":22
 	},
 	"edges":[
 		{
 			"fromNodeId":"n_5dKRb",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_plNsj",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_plNsj",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_KAsDL",
@@ -30,9 +22,9 @@
 		}
 	],
 	"id":"68dbe8be1bd93f17d9aa6254",
-	"lastModifiedBy":43498,
+	"lastModifiedBy":45011,
 	"lcName":"test-scheduler-connection-deletion",
-	"modifiedTime":1759409414143,
+	"modifiedTime":1759413309278,
 	"name":"test-scheduler-connection-deletion",
 	"nodes":[
 		{
@@ -42,7 +34,7 @@
 				"resourceName":"schedule_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_oKLjG-1",
 			"id":"n_5dKRb",
@@ -63,37 +55,9 @@
 		},
 		{
 			"context":{
-				"appName":"gmail",
-				"resourceVersion":5486,
-				"connectionId":"68d7a76153c80144ea6596df",
-				"resourceName":"gmail_send_email",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_oKLjG-1",
-			"id":"n_plNsj",
-			"index":2,
-			"inputs":{
-				"email_type":"text",
-				"subject":"Test",
-				"to":{
-					"items":"krishan.goyal@unifyapps.com",
-					"ua:type":"mappedArray"
-				},
-				"message":"Hi"
-			},
-			"skip":true,
-			"subTitle":"Gmail",
-			"title":"Send email",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"teamwork",
 				"resourceVersion":2541,
-				"connectionId":"68de74fb953b7316d9d76af9",
+				"connectionId":"68de8406953b7316d9d7ffab",
 				"resourceName":"teamwork_get_projects",
 				"type":"APPLICATION"
 			},
@@ -102,7 +66,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_oKLjG-1",
 			"id":"n_KAsDL",
-			"index":3,
+			"index":2,
 			"inputs":{
 				"includeProjectOwner":false,
 				"onlyStarredProjects":false,
@@ -136,5 +100,5 @@
 	"tags":[
 		
 	],
-	"version":22
+	"version":23
 }
