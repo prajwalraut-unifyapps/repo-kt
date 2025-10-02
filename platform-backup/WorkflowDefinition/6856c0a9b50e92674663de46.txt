@@ -5,12 +5,12 @@
 	"createdTime":1750672050996,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243545541,
+		"deployedAt":1759243578688,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed199213d707c2d27300",
+		"deployedDefinitionId":"68dbed3a23e6682b9a51ebef",
 		"status":"DEPLOYED",
-		"version":45,
-		"workflowVersion":70
+		"version":46,
+		"workflowVersion":71
 	},
 	"edges":[
 		{
@@ -136,7 +136,7 @@
 	"id":"6856c0a9b50e92674663de46",
 	"lastModifiedBy":-1,
 	"lcName":"index people from knowledge",
-	"modifiedTime":1759243578610,
+	"modifiedTime":1759371899757,
 	"name":"Index People From Knowledge",
 	"nodes":[
 		{
@@ -958,5 +958,5 @@
 	"tags":[
 		
 	],
-	"version":71
+	"version":72
 }
