@@ -5,12 +5,12 @@
 	"createdTime":1756991652815,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243521788,
+		"deployedAt":1759243557894,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed019213d707c2d272c2",
+		"deployedDefinitionId":"68dbed2523e6682b9a51eb5d",
 		"status":"DEPLOYED",
-		"version":12,
-		"workflowVersion":107
+		"version":13,
+		"workflowVersion":108
 	},
 	"edges":[
 		{
@@ -208,7 +208,7 @@
 	"id":"6879f32cc50a4674d83af49a",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge downloader | jira | project",
-	"modifiedTime":1759243557645,
+	"modifiedTime":1759371879493,
 	"name":"Knowledge Downloader | Jira | Project",
 	"nodes":[
 		{
@@ -1770,5 +1770,5 @@
 	"tags":[
 		"knowledge_v2"
 	],
-	"version":108
+	"version":109
 }
