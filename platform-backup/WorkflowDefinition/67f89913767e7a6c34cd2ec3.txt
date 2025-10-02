@@ -5,12 +5,12 @@
 	"createdTime":1744346440387,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243559725,
+		"deployedAt":1759243592307,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed2723e6682b9a51eb69",
+		"deployedDefinitionId":"68dbed485e003e08cdeb2fc1",
 		"status":"DEPLOYED",
-		"version":62,
-		"workflowVersion":78
+		"version":63,
+		"workflowVersion":79
 	},
 	"edges":[
 		{
@@ -41,7 +41,7 @@
 	"id":"67f89913767e7a6c34cd2ec3",
 	"lastModifiedBy":-1,
 	"lcName":"publish ask connection block",
-	"modifiedTime":1759243592203,
+	"modifiedTime":1759371911856,
 	"name":"Publish Ask Connection Block",
 	"nodes":[
 		{
@@ -202,5 +202,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":79
+	"version":80
 }
