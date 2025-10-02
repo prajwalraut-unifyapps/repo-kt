@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759405087628,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_GtA7g",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_BlZmc",
+			"type":"next"
+		}
+	],
+	"id":"68de641fed7fcc6978211234",
+	"lastModifiedBy":45771,
+	"lcName":"grandchildautomation",
+	"modifiedTime":1759405087628,
+	"name":"grandChildAutomation",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_GtA7g-1",
+			"id":"_GtA7g",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_GtA7g-1",
+			"id":"_BlZmc",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":45771,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
