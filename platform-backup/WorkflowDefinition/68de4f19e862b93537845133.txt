@@ -5,12 +5,12 @@
 	"createdTime":1759399705493,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759399753181,
+		"deployedAt":1759399856163,
 		"deployedBy":39713,
-		"deployedDefinitionId":"68de4f47e862b9353784521f",
+		"deployedDefinitionId":"68de4fade862b93537845376",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":1
+		"version":2,
+		"workflowVersion":2
 	},
 	"edges":[
 		{
@@ -43,6 +43,13 @@
 		},
 		{
 			"fromNodeId":"n_IEOin",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_p6m36",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_p6m36",
 			"name":"loopback",
 			"priority":0,
 			"skip":false,
@@ -61,7 +68,7 @@
 	"id":"68de4f19e862b93537845133",
 	"lastModifiedBy":39713,
 	"lcName":"test",
-	"modifiedTime":1759399851532,
+	"modifiedTime":1759399975227,
 	"name":"test",
 	"nodes":[
 		{
@@ -211,6 +218,33 @@
 			"subTitle":"Variable by UnifyApps",
 			"title":"Create variables",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":910,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION",
+				"scopeNodeId":"n_gzrDg"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_thvPw@n_gzrDg@_n6eLp-1@s@l",
+			"id":"n_p6m36",
+			"index":6,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ n_dq0YO.outputs.a }}",
+						"value":"=SUM({{ n_dq0YO.outputs.a }},-1)"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
 		}
 	],
 	"ownerUserId":39713,
@@ -230,5 +264,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
