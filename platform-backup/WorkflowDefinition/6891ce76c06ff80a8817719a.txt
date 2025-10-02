@@ -5,12 +5,12 @@
 	"createdTime":1758646563823,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655385946,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f39938757c179b123b19",
+		"deployedAt":1759243600313,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed5023e6682b9a51ec50",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":58
+		"version":4,
+		"workflowVersion":60
 	},
 	"edges":[
 		{
@@ -213,7 +213,7 @@
 	"id":"6891ce76c06ff80a8817719a",
 	"lastModifiedBy":-1,
 	"lcName":"deep research tool | plan executor",
-	"modifiedTime":1759243567838,
+	"modifiedTime":1759371919376,
 	"name":"Deep Research Tool | Plan Executor",
 	"nodes":[
 		{
@@ -1698,5 +1698,5 @@
 	"tags":[
 		
 	],
-	"version":59
+	"version":61
 }
