@@ -5,12 +5,12 @@
 	"createdTime":1759404197387,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759405497735,
+		"deployedAt":1759408952325,
 		"deployedBy":24420,
-		"deployedDefinitionId":"68de65b9ed7fcc6978211c08",
+		"deployedDefinitionId":"68de73385b114742388666eb",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":5
+		"version":3,
+		"workflowVersion":8
 	},
 	"edges":[
 		{
@@ -51,9 +51,9 @@
 		}
 	],
 	"id":"68de60a5ed7fcc697820fd0e",
-	"lastModifiedBy":24420,
+	"lastModifiedBy":132116,
 	"lcName":"test upload",
-	"modifiedTime":1759408950018,
+	"modifiedTime":1759420504843,
 	"name":"Test upload",
 	"nodes":[
 		{
@@ -114,7 +114,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_B028j-1",
 			"id":"n_WxU2M",
@@ -417,7 +417,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_B028j-1",
 			"id":"n_jWX85",
@@ -448,7 +448,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_jWX85@_B028j-1@l",
 			"id":"n_FpgKU",
@@ -507,5 +507,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
