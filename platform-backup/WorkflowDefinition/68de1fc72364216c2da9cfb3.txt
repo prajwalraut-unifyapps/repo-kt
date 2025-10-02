@@ -10,7 +10,7 @@
 	"id":"68de1fc72364216c2da9cfb3",
 	"lastModifiedBy":2721,
 	"lcName":"sampletreggertest",
-	"modifiedTime":1759387644147,
+	"modifiedTime":1759387654300,
 	"name":"sampletreggertest",
 	"nodes":[
 		{
@@ -21,7 +21,7 @@
 				"resourceName":"gcloud_storage_on_new_object_polling"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_uBreN-1",
 			"id":"n_rmqek",
@@ -58,5 +58,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
