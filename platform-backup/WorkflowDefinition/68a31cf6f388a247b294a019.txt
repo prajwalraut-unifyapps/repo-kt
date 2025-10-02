@@ -5,12 +5,12 @@
 	"createdTime":1756411343401,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1757441871456,
-		"deployedBy":0,
-		"deployedDefinitionId":"68c06f4f91dbf0016b768a36",
+		"deployedAt":1759243608991,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed585e003e08cdeb302c",
 		"status":"DEPLOYED",
-		"version":20,
-		"workflowVersion":28
+		"version":23,
+		"workflowVersion":38
 	},
 	"edges":[
 		{
@@ -111,9 +111,9 @@
 		]
 	},
 	"id":"68a31cf6f388a247b294a019",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"evaluation | trigger ai agent text2sql",
-	"modifiedTime":1758655396287,
+	"modifiedTime":1759371926948,
 	"name":"Evaluation | Trigger AI Agent Text2SQL",
 	"nodes":[
 		{
@@ -630,5 +630,5 @@
 	"tags":[
 		
 	],
-	"version":36
+	"version":39
 }
