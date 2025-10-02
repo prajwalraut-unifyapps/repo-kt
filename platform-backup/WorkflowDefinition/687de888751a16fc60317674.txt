@@ -103,6 +103,13 @@
 			"fromNodeId":"_T55NA",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"_8eyCm",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_8eyCm",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_l4qac",
 			"type":"next"
 		},
@@ -140,7 +147,7 @@
 	"id":"687de888751a16fc60317674",
 	"lastModifiedBy":44567,
 	"lcName":"newiterateintegervaluesusingwhileloop_dnd",
-	"modifiedTime":1759402001607,
+	"modifiedTime":1759402108453,
 	"name":"NewIterateIntegerValuesUsingWhileLoop_DND",
 	"nodes":[
 		{
@@ -855,7 +862,7 @@
 					"enabled":false
 				}
 			},
-			"skip":true,
+			"skip":false,
 			"subTitle":"updateStr",
 			"title":"Update variables",
 			"type":"ACTION"
@@ -878,7 +885,7 @@
 				"insertLocation":"END",
 				"listName":"{{ n_c219K.outputs.items[0] }}"
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Variable by UnifyApps",
 			"title":"Add item to list",
 			"type":"ACTION"
@@ -901,6 +908,29 @@
 				"insertLocation":"END",
 				"listName":"{{ n_c219K.outputs.items[0] }}"
 			},
+			"skip":true,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Add item to list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":935,
+				"resourceName":"variable_by_unifyapps_add_item_to_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_9nKC2@n_u5NuJ@_ZQtgN-1@l@l",
+			"id":"_8eyCm",
+			"index":13,
+			"inputs":{
+				"itemToAdd":"{{ n_EpX2e.outputs.str }}",
+				"insertLocation":"END",
+				"listName":"{{ n_c219K.outputs.items[0] }}"
+			},
 			"skip":false,
 			"subTitle":"Variable by UnifyApps",
 			"title":"Add item to list",
@@ -918,7 +948,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_9nKC2@n_u5NuJ@_ZQtgN-1@l@l",
 			"id":"n_l4qac",
-			"index":13,
+			"index":14,
 			"inputs":{
 				"variables":[
 					{
@@ -1004,7 +1034,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_u5NuJ@_ZQtgN-1@l",
 			"id":"n_OccvN",
-			"index":14,
+			"index":15,
 			"inputs":{
 				"variables":[
 					{
@@ -1030,7 +1060,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_ZQtgN-1",
 			"id":"n_Xt52M",
-			"index":15,
+			"index":16,
 			"inputs":{
 				"result":{
 					"resultString":"=TRIM({{ n_EpX2e.outputs.str }})"
@@ -1059,5 +1089,5 @@
 	"tags":[
 		
 	],
-	"version":25
+	"version":26
 }
