@@ -6,12 +6,12 @@
 	"createdTime":1759242430527,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759309109678,
+		"deployedAt":1759310278054,
 		"deployedBy":43498,
-		"deployedDefinitionId":"68dced358f5c720c982ccef1",
+		"deployedDefinitionId":"68dcf1c58f5c720c982cf8ca",
 		"status":"DEPLOYED",
-		"version":9,
-		"workflowVersion":15
+		"version":10,
+		"workflowVersion":16
 	},
 	"edges":[
 		{
@@ -34,12 +34,19 @@
 			"skip":false,
 			"toNodeId":"n_UvOki",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_UvOki",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Q13id",
+			"type":"next"
 		}
 	],
 	"id":"68dbe8be1bd93f17d9aa6254",
 	"lastModifiedBy":43498,
 	"lcName":"test-scheduler-connection-deletion",
-	"modifiedTime":1759310276405,
+	"modifiedTime":1759395434153,
 	"name":"test-scheduler-connection-deletion",
 	"nodes":[
 		{
@@ -105,7 +112,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_oKLjG-1",
 			"id":"n_KAsDL",
@@ -151,6 +158,21 @@
 			"subTitle":"Streams by UnifyApps",
 			"title":"Publish event to stream",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_oKLjG-1",
+			"id":"n_Q13id",
+			"index":5,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":569,
@@ -170,5 +192,5 @@
 	"tags":[
 		
 	],
-	"version":16
+	"version":17
 }
