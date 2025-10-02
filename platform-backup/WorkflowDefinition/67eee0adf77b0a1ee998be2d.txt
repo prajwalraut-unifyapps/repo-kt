@@ -5,12 +5,12 @@
 	"createdTime":1743708333875,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655382416,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f39638757c179b123a6a",
+		"deployedAt":1759243597423,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed4d5e003e08cdeb2fe0",
 		"status":"DEPLOYED",
-		"version":19,
-		"workflowVersion":34
+		"version":21,
+		"workflowVersion":36
 	},
 	"edges":[
 		{
@@ -48,7 +48,7 @@
 	"id":"67eee0adf77b0a1ee998be2d",
 	"lastModifiedBy":-1,
 	"lcName":"[zoom] rbac automation details fetcher",
-	"modifiedTime":1759243565083,
+	"modifiedTime":1759371916628,
 	"name":"[Zoom] RBAC Automation Details fetcher",
 	"nodes":[
 		{
@@ -425,5 +425,5 @@
 		}
 	},
 	"standard":true,
-	"version":35
+	"version":37
 }
