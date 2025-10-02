@@ -5,12 +5,12 @@
 	"createdTime":1726642875840,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243547203,
+		"deployedAt":1759243579898,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed1a23e6682b9a51eb1a",
+		"deployedDefinitionId":"68dbed3b9213d707c2d273a8",
 		"status":"DEPLOYED",
-		"version":49,
-		"workflowVersion":64
+		"version":50,
+		"workflowVersion":65
 	},
 	"edges":[
 		{
@@ -34,7 +34,7 @@
 	"id":"66ea7abb54ca115c361af49f",
 	"lastModifiedBy":-1,
 	"lcName":"checkpoint callback (finetune model)",
-	"modifiedTime":1759243579555,
+	"modifiedTime":1759371900694,
 	"name":"CheckPoint Callback (FineTune Model)",
 	"nodes":[
 		{
@@ -103,5 +103,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":65
+	"version":66
 }
