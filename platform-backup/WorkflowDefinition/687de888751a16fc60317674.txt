@@ -31,6 +31,13 @@
 			"fromNodeId":"n_EpX2e",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_c219K",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_c219K",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_u5NuJ",
 			"type":"next"
 		},
@@ -82,6 +89,20 @@
 			"fromNodeId":"n_dmVtP",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_O4ABp",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_O4ABp",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_T55NA",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_T55NA",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_l4qac",
 			"type":"next"
 		},
@@ -119,7 +140,7 @@
 	"id":"687de888751a16fc60317674",
 	"lastModifiedBy":44567,
 	"lcName":"newiterateintegervaluesusingwhileloop_dnd",
-	"modifiedTime":1759401688272,
+	"modifiedTime":1759402001607,
 	"name":"NewIterateIntegerValuesUsingWhileLoop_DND",
 	"nodes":[
 		{
@@ -272,6 +293,261 @@
 		},
 		{
 			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":974,
+				"resourceName":"variable_by_unifyapps_create_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_ZQtgN-1",
+			"id":"n_c219K",
+			"index":4,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{
+					"createList":{
+						"ui:title":"",
+						"ua:type":{
+							"ui:widget":"hidden"
+						},
+						"items":{
+							"ui:title":"Initial list items",
+							"ui:description":"Set the initial values of the list (defaults to empty)"
+						},
+						"ui:order":[
+							"*",
+							"items"
+						]
+					},
+					"ua:title":{
+						"ui:widget":"hidden"
+					},
+					"ua:list_type":{
+						"ui:widget":"hidden"
+					}
+				},
+				"schema":{
+					"allOf":[
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"OBJECT"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"items":{
+												"type":"object",
+												"properties":{}
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"STRING"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of String"
+											},
+											"items":{
+												"type":"string"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"INTEGER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Integers"
+											},
+											"items":{
+												"type":"integer"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"NUMBER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Numbers"
+											},
+											"items":{
+												"type":"number"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"BOOLEAN"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Booleans"
+											},
+											"items":{
+												"type":"boolean"
+											}
+										}
+									}
+								}
+							}
+						}
+					],
+					"format":"ua:list",
+					"type":"object",
+					"properties":{
+						"ua:title":{
+							"type":"string"
+						},
+						"ua:list_type":{
+							"type":"string",
+							"title":"List Type",
+							"oneOf":[
+								{
+									"const":"OBJECT",
+									"title":"Object"
+								},
+								{
+									"const":"STRING",
+									"title":"String"
+								},
+								{
+									"const":"NUMBER",
+									"title":"Number"
+								},
+								{
+									"const":"INTEGER",
+									"title":"Integer"
+								},
+								{
+									"const":"BOOLEAN",
+									"title":"Boolean"
+								}
+							],
+							"default":"OBJECT"
+						},
+						"createList":{
+							"type":"object",
+							"properties":{
+								"ua:type":{
+									"type":"string",
+									"default":"mappedArray"
+								},
+								"source":{
+									"type":"string",
+									"format":"ua:source",
+									"title":"List Item Source"
+								},
+								"items":{
+									"additionalProperties":false,
+									"type":[
+										"object",
+										"string",
+										"number",
+										"boolean",
+										"integer"
+									],
+									"properties":{}
+								}
+							}
+						}
+					}
+				}
+			},
+			"inputs":{
+				"createList":{
+					"ua:type":"mappedArray"
+				},
+				"ua:list_type":"STRING"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"type":"object",
+					"properties":{
+						"items":{
+							"type":"array",
+							"title":"List",
+							"disableActions":true,
+							"items":{
+								"type":"string"
+							}
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"loop",
 				"resourceVersion":55,
 				"resourceName":"loop_while",
@@ -282,7 +558,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_ZQtgN-1",
 			"id":"n_u5NuJ",
-			"index":4,
+			"index":5,
 			"inputs":{
 				"condition":{
 					"filters":[
@@ -315,7 +591,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_u5NuJ@_ZQtgN-1@l",
 			"id":"n_4iHsg",
-			"index":5,
+			"index":6,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -426,7 +702,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_u5NuJ@_ZQtgN-1@l",
 			"id":"n_9nKC2",
-			"index":6,
+			"index":7,
 			"inputs":{
 				"condition":{
 					"filters":[
@@ -459,7 +735,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_9nKC2@n_u5NuJ@_ZQtgN-1@l@l",
 			"id":"n_nzZmA",
-			"index":7,
+			"index":8,
 			"inputs":{
 				"filters":[
 					{
@@ -489,7 +765,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_nzZmA@n_9nKC2@n_u5NuJ@_ZQtgN-1@l@l@y",
 			"id":"n_92TKt",
-			"index":8,
+			"index":9,
 			"inputs":{
 				"loop":"n_9nKC2"
 			},
@@ -510,7 +786,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_9nKC2@n_u5NuJ@_ZQtgN-1@l@l",
 			"id":"n_dmVtP",
-			"index":9,
+			"index":10,
 			"inputs":{
 				"variables":[
 					{
@@ -579,9 +855,55 @@
 					"enabled":false
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"updateStr",
 			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":935,
+				"resourceName":"variable_by_unifyapps_add_item_to_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_9nKC2@n_u5NuJ@_ZQtgN-1@l@l",
+			"id":"n_O4ABp",
+			"index":11,
+			"inputs":{
+				"itemToAdd":"{{ n_CERrh.outputs.i }}",
+				"insertLocation":"END",
+				"listName":"{{ n_c219K.outputs.items[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Add item to list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":935,
+				"resourceName":"variable_by_unifyapps_add_item_to_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_9nKC2@n_u5NuJ@_ZQtgN-1@l@l",
+			"id":"_T55NA",
+			"index":12,
+			"inputs":{
+				"itemToAdd":"{{ n_4iHsg.outputs.j }}",
+				"insertLocation":"END",
+				"listName":"{{ n_c219K.outputs.items[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Add item to list",
 			"type":"ACTION"
 		},
 		{
@@ -596,7 +918,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_9nKC2@n_u5NuJ@_ZQtgN-1@l@l",
 			"id":"n_l4qac",
-			"index":10,
+			"index":13,
 			"inputs":{
 				"variables":[
 					{
@@ -682,7 +1004,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_u5NuJ@_ZQtgN-1@l",
 			"id":"n_OccvN",
-			"index":11,
+			"index":14,
 			"inputs":{
 				"variables":[
 					{
@@ -708,7 +1030,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_ZQtgN-1",
 			"id":"n_Xt52M",
-			"index":12,
+			"index":15,
 			"inputs":{
 				"result":{
 					"resultString":"=TRIM({{ n_EpX2e.outputs.str }})"
@@ -737,5 +1059,5 @@
 	"tags":[
 		
 	],
-	"version":24
+	"version":25
 }
