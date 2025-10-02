@@ -5,12 +5,12 @@
 	"createdTime":1728651017693,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655317945,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f35538757c179b122f8b",
+		"deployedAt":1759243547574,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed1b5e003e08cdeb2eb1",
 		"status":"DEPLOYED",
-		"version":58,
-		"workflowVersion":96
+		"version":60,
+		"workflowVersion":98
 	},
 	"edges":[
 		{
@@ -151,7 +151,7 @@
 	"id":"67091f09c6db330cf5b08ead",
 	"lastModifiedBy":-1,
 	"lcName":"text chunker | knowledge",
-	"modifiedTime":1759243509439,
+	"modifiedTime":1759371869618,
 	"name":"Text Chunker | Knowledge",
 	"nodes":[
 		{
@@ -997,5 +997,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":97
+	"version":99
 }
