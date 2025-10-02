@@ -23,10 +23,17 @@
 	"id":"68ddf6602364216c2da9ae2a",
 	"lastModifiedBy":185583,
 	"lcName":"task_pb",
-	"modifiedTime":1759391148553,
+	"modifiedTime":1759391306758,
 	"name":"Task_PB",
 	"nodes":[
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{
+						"request":{}
+					}
+				}
+			},
 			"context":{
 				"appName":"callables",
 				"resourceVersion":1057,
@@ -44,89 +51,18 @@
 					"body":{
 						"type":"object",
 						"properties":{
-							"endDate":{
-								"type":"integer",
-								"title":"endDate"
-							},
-							"RMName":{
-								"type":"string",
-								"title":"RMName"
-							},
-							"cohort":{
-								"type":"string",
-								"title":"cohort"
-							},
-							"PartnerCombinedScore":{
-								"type":"number",
-								"title":"PartnerCombinedScore"
-							},
-							"potentialApe":{
-								"type":"integer",
-								"title":"potentialApe"
-							},
-							"PartnerName":{
-								"type":"string",
-								"title":"PartnerName"
-							},
-							"userId":{
-								"type":"integer",
-								"title":"userId"
-							},
-							"tags":{
-								"type":"array",
-								"items":{
-									"type":"object",
-									"properties":{
-										"properties":{
-											"type":"object",
-											"properties":{
-												"tag":{
-													"type":"string",
-													"title":"tag"
-												}
-											},
-											"title":"properties",
-											"additionalProperties":false
-										}
-									},
-									"additionalProperties":false
-								},
-								"title":"tags"
-							},
-							"NoOfTasks":{
-								"type":"integer",
-								"title":"NoOfTasks"
-							},
-							"ape":{
-								"type":"integer",
-								"title":"ape"
-							},
-							"RM_ID":{
-								"type":"string",
-								"title":"RM_ID"
-							},
-							"userPartnerStatus":{
-								"type":"string",
-								"title":"userPartnerStatus"
-							},
-							"partnerId":{
-								"type":"string",
-								"title":"partnerId"
-							},
-							"ID":{
-								"type":"string",
-								"title":"ID"
-							},
-							"startDate":{
-								"type":"integer",
-								"title":"startDate"
-							},
 							"currentTag":{
 								"type":"array",
-								"title":"currentTag"
+								"items":{
+									"type":"string"
+								},
+								"title":"Current Tag"
 							}
 						},
-						"additionalProperties":false
+						"additionalProperties":false,
+						"required":[
+							"currentTag"
+						]
 					}
 				},
 				"endpointType":"REST",
@@ -141,9 +77,12 @@
 						"body":{
 							"type":"object",
 							"properties":{
-								"currenttag":{
+								"currentTagOut":{
 									"type":"array",
-									"title":"currenttag"
+									"items":{
+										"type":"string"
+									},
+									"title":"currentTagOut"
 								}
 							},
 							"additionalProperties":false,
@@ -180,132 +119,30 @@
 					"type":"object",
 					"additionalProperties":false,
 					"required":[
-						"currentTag"
+						"currentTagOut"
 					],
 					"properties":{
-						"currentTag":{
+						"currentTagOut":{
 							"type":"array",
 							"items":{
-								"type":"object",
-								"properties":{},
-								"additionalProperties":false
+								"type":"string"
 							},
-							"title":"Current Tag"
+							"title":"Current Tag Out"
 						}
 					}
 				},
 				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"ua:__linkedVariable__":"n_6l4oG.outputs.body",
-					"properties":{
-						"endDate":{
-							"type":"integer",
-							"title":"endDate"
-						},
-						"RMName":{
-							"type":"string",
-							"title":"RMName"
-						},
-						"cohort":{
-							"type":"string",
-							"title":"cohort"
-						},
-						"PartnerCombinedScore":{
-							"type":"number",
-							"title":"PartnerCombinedScore"
-						},
-						"potentialApe":{
-							"type":"integer",
-							"title":"potentialApe"
-						},
-						"PartnerName":{
-							"type":"string",
-							"title":"PartnerName"
-						},
-						"userId":{
-							"type":"integer",
-							"title":"userId"
-						},
-						"tags":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"properties":{
-										"type":"object",
-										"properties":{
-											"tag":{
-												"type":"string",
-												"title":"tag"
-											}
-										},
-										"title":"properties",
-										"additionalProperties":false
-									}
-								},
-								"additionalProperties":false
-							},
-							"title":"tags"
-						},
-						"NoOfTasks":{
-							"type":"integer",
-							"title":"NoOfTasks"
-						},
-						"ape":{
-							"type":"integer",
-							"title":"ape"
-						},
-						"RM_ID":{
-							"type":"string",
-							"title":"RM_ID"
-						},
-						"userPartnerStatus":{
-							"type":"string",
-							"title":"userPartnerStatus"
-						},
-						"partnerId":{
-							"type":"string",
-							"title":"partnerId"
-						},
-						"ID":{
-							"type":"string",
-							"title":"ID"
-						},
-						"startDate":{
-							"type":"integer",
-							"title":"startDate"
-						},
-						"currentTag":{
-							"type":"array",
-							"title":"currentTag",
-							"items":{}
-						}
+					"type":"array",
+					"title":"Current Tag",
+					"ua:__linkedVariable__":"n_6l4oG.outputs.body.currentTag",
+					"items":{
+						"type":"string"
 					}
 				},
-				"code":"        // Initial array of strings\n        String[] arr = currentTag\n\n        // Convert array to list for easier modifications\n        def list = arr.toList()\n\n        // 1. Add an element\n        list.add(\"date\")\n        //println \"After adding 'date': ${list}\"\n\n        // // 2. Delete an element\n        // list.remove(\"banana\")   // removes by value\n        // println \"After deleting: ${list}\"\n\n        // // 3. Find an element\n        // def elementToFind = \"cherry\"\n        // if (list.contains(elementToFind)) {\n        //     println \"'${elementToFind}' found in the list at index ${list.indexOf(elementToFind)}\"\n        // } else {\n        //     println \"'${elementToFind}' not found\"\n        // }\n\n        // // (Optional) convert back to array if needed\n        arr = list as String[]\n        return [\"currentTag\":arr]",
+				"code":"        // Initial array of strings\n        String[] arr = currentTag\n\n        // Convert array to list for easier modifications\n        def list = arr.toList()\n\n        // 1. Add an element\n        list.add(\"date\")\n        //println \"After adding 'date': ${list}\"\n\n        // // 2. Delete an element\n        // list.remove(\"banana\")   // removes by value\n        // println \"After deleting: ${list}\"\n\n        // // 3. Find an element\n        // def elementToFind = \"cherry\"\n        // if (list.contains(elementToFind)) {\n        //     println \"'${elementToFind}' found in the list at index ${list.indexOf(elementToFind)}\"\n        // } else {\n        //     println \"'${elementToFind}' not found\"\n        // }\n\n        // // (Optional) convert back to array if needed\n        arr = list as String[]\n        return [\"currentTagOut\":arr]",
 				"compile_static":false,
 				"captureStdOutput":false,
-				"parameters":{
-					"endDate":"{{ n_6l4oG.outputs.body.endDate }}",
-					"RMName":"{{ n_6l4oG.outputs.body.RMName }}",
-					"cohort":"{{ n_6l4oG.outputs.body.cohort }}",
-					"PartnerCombinedScore":"{{ n_6l4oG.outputs.body.PartnerCombinedScore }}",
-					"potentialApe":"{{ n_6l4oG.outputs.body.potentialApe }}",
-					"PartnerName":"{{ n_6l4oG.outputs.body.PartnerName }}",
-					"userId":"{{ n_6l4oG.outputs.body.userId }}",
-					"NoOfTasks":"{{ n_6l4oG.outputs.body.NoOfTasks }}",
-					"ape":"{{ n_6l4oG.outputs.body.ape }}",
-					"RM_ID":"{{ n_6l4oG.outputs.body.RM_ID }}",
-					"userPartnerStatus":"{{ n_6l4oG.outputs.body.userPartnerStatus }}",
-					"partnerId":"{{ n_6l4oG.outputs.body.partnerId }}",
-					"ID":"{{ n_6l4oG.outputs.body.ID }}",
-					"startDate":"{{ n_6l4oG.outputs.body.startDate }}",
-					"currentTag":{
-						"source":"{{ n_6l4oG.outputs.body.currentTag }}",
-						"ua:type":"mappedArray"
-					}
-				}
+				"parameters":{}
 			},
 			"skip":false,
 			"subTitle":"Code by UnifyApps",
@@ -359,5 +196,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
