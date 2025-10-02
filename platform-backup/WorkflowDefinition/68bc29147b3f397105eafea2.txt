@@ -5,12 +5,12 @@
 	"createdTime":1757441857072,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243559044,
+		"deployedAt":1759243591596,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed275e003e08cdeb2f01",
+		"deployedDefinitionId":"68dbed475e003e08cdeb2fbc",
 		"status":"DEPLOYED",
-		"version":4,
-		"workflowVersion":22
+		"version":5,
+		"workflowVersion":23
 	},
 	"edges":[
 		{
@@ -159,7 +159,7 @@
 	"id":"68bc29147b3f397105eafea2",
 	"lastModifiedBy":-1,
 	"lcName":"user rbac detail fetcher",
-	"modifiedTime":1759243591530,
+	"modifiedTime":1759371911243,
 	"name":"User RBAC Detail Fetcher",
 	"nodes":[
 		{
@@ -1110,5 +1110,5 @@
 		"AI Agent",
 		"RBAC"
 	],
-	"version":23
+	"version":24
 }
