@@ -11,12 +11,19 @@
 			"skip":false,
 			"toNodeId":"n_xcwp1",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_xcwp1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_ot4MS",
+			"type":"next"
 		}
 	],
 	"id":"68ddf6602364216c2da9ae2a",
 	"lastModifiedBy":185583,
 	"lcName":"task_pb",
-	"modifiedTime":1759390849426,
+	"modifiedTime":1759390877877,
 	"name":"Task_PB",
 	"nodes":[
 		{
@@ -304,6 +311,35 @@
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Groovy code",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1016,
+				"resourceName":"callables_return_response_to_api",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_RV1ax-1",
+			"id":"n_ot4MS",
+			"index":3,
+			"inputs":{
+				"streamingCompleted":true,
+				"responseName":"200_Success",
+				"body":{
+					"currenttag":{
+						"source":"{{ n_xcwp1.outputs.result.currentTag }}",
+						"ua:type":"mappedArray"
+					}
+				},
+				"status":200
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to API request",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":185583,
@@ -323,5 +359,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
