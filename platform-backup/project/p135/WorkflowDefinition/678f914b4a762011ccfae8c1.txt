@@ -5,12 +5,12 @@
 	"createdTime":1737462091701,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243512746,
+		"deployedAt":1759243550240,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbecf89213d707c2d272a4",
+		"deployedDefinitionId":"68dbed1e5e003e08cdeb2eca",
 		"status":"DEPLOYED",
-		"version":53,
-		"workflowVersion":69
+		"version":54,
+		"workflowVersion":70
 	},
 	"edges":[
 		{
@@ -48,7 +48,7 @@
 	"id":"678f914b4a762011ccfae8c1",
 	"lastModifiedBy":-1,
 	"lcName":"context aggregator | graphrag",
-	"modifiedTime":1759243550185,
+	"modifiedTime":1759371872266,
 	"name":"Context Aggregator | GraphRAG",
 	"nodes":[
 		{
@@ -274,5 +274,5 @@
 	"tags":[
 		
 	],
-	"version":70
+	"version":71
 }
