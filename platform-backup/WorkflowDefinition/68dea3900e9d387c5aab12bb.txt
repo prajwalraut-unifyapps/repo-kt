@@ -5,47 +5,44 @@
 	"createdTime":1759421328136,
 	"deleted":false,
 	"edges":[
-		{
-			"fromNodeId":"_YkHCG",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_XvZGr",
-			"type":"next"
-		}
+		
 	],
 	"id":"68dea3900e9d387c5aab12bb",
 	"lastModifiedBy":132116,
 	"lcName":"dfghj",
-	"modifiedTime":1759421328136,
+	"modifiedTime":1759421644599,
 	"name":"dfghj",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":822,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_YkHCG-1",
-			"id":"_YkHCG",
-			"index":0,
+			"id":"n_wzgH3",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
-		},
-		{
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_YkHCG-1",
-			"id":"_XvZGr",
-			"index":0,
-			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
 		}
 	],
 	"ownerUserId":132116,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +56,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
