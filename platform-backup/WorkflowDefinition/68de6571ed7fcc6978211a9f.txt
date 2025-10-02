@@ -16,7 +16,7 @@
 	"id":"68de6571ed7fcc6978211a9f",
 	"lastModifiedBy":426,
 	"lcName":"testdnt",
-	"modifiedTime":1759407635189,
+	"modifiedTime":1759408525943,
 	"name":"testdnt",
 	"nodes":[
 		{
@@ -41,6 +41,7 @@
 			"context":{
 				"appName":"act!",
 				"resourceVersion":3778,
+				"connectionId":"67bcec9955fa3158a0f852f1",
 				"resourceName":"act!_create_contact",
 				"type":"APPLICATION"
 			},
@@ -74,5 +75,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
