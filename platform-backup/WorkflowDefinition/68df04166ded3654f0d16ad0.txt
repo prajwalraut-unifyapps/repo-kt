@@ -5,26 +5,106 @@
 	"createdTime":1759446038804,
 	"deleted":false,
 	"edges":[
-		
+		{
+			"fromNodeId":"tU6qw",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"FmWqc",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"FmWqc",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"9gowA",
+			"type":"next"
+		}
 	],
 	"id":"68df04166ded3654f0d16ad0",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa27903626436",
-	"modifiedTime":1759446038804,
+	"modifiedTime":1759446042398,
 	"name":"changeSetQA27903626436",
 	"nodes":[
-		
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":193,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"Hgega-1",
+			"id":"tU6qw",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":212,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"Hgega-1",
+			"id":"FmWqc",
+			"index":0,
+			"inputs":{
+				"automationId":"68df041532f8572ada24c6f0",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1"
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":193,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"Hgega-1",
+			"id":"9gowA",
+			"index":0,
+			"inputs":{
+				"result":"{{ FmWqc.outputs }}"
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
 	],
 	"ownerUserId":175325,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
-		"enableVariableLogging":true,
-		"route":{
-			"default":false,
-			"tierName":"global"
-		}
+		"enableVariableLogging":true
 	},
 	"standard":false,
-	"version":0
+	"tags":[
+		
+	],
+	"version":1
 }
