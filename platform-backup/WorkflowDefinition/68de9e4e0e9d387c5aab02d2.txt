@@ -53,7 +53,7 @@
 	"id":"68de9e4e0e9d387c5aab02d2",
 	"lastModifiedBy":59995,
 	"lcName":"partition size",
-	"modifiedTime":1759419982346,
+	"modifiedTime":1759439145700,
 	"name":"partition size",
 	"nodes":[
 		{
@@ -62,13 +62,30 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"_EOY36",
-			"index":0,
+			"index":1,
 			"inputs":{
-				"setup":{}
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"customerId",
+						"minimumStorageSizeGB"
+					],
+					"properties":{
+						"customerId":{
+							"type":"integer",
+							"title":"Customer Id"
+						},
+						"minimumStorageSizeGB":{
+							"type":"number",
+							"title":"Minimum Storage Size GB"
+						}
+					}
+				}
 			},
 			"skip":false,
 			"subTitle":"Callable",
@@ -86,22 +103,22 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"n_6a9km",
-			"index":28,
+			"index":2,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
 				"requestTimeoutInSecs":-1,
 				"httpMethod":"POST",
 				"body":{
-					"sql":"SELECT * FROM information_schema.partitions_meta \nWHERE DB_NAME = '{{ n_WOcYr.outputs.item.DbName }}'\nAND TABLE_NAME = '{{ n_WOcYr.outputs.item.TableName }}' \nAND (\nCASE \nWHEN RIGHT(DATA_SIZE, 1) = 'B' AND RIGHT(DATA_SIZE, 2) NOT IN ('KB','MB','GB','TB') \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'B', 1) AS DECIMAL(15,2))\nWHEN RIGHT(DATA_SIZE, 2) = 'KB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'K', 1) AS DECIMAL(15,2)) * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'MB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'M', 1) AS DECIMAL(15,2)) * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'GB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'G', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'TB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'T', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024 * 1024\nELSE 0\nEND < {{ _auxBn.outputs.result.minimumStorageSizeGB }} * 1024 * 1024 * 1024\n)\nORDER BY \nCASE \nWHEN RIGHT(DATA_SIZE, 1) = 'B' AND RIGHT(DATA_SIZE, 2) NOT IN ('KB','MB','GB','TB') \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'B', 1) AS DECIMAL(15,2))\nWHEN RIGHT(DATA_SIZE, 2) = 'KB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'K', 1) AS DECIMAL(15,2)) * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'MB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'M', 1) AS DECIMAL(15,2)) * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'GB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'G', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'TB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'T', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024 * 1024\nELSE 0\nEND DESC;"
+					"sql":"SELECT DB_NAME, TABLE_NAME, PARTITION_NAME, DATA_SIZE FROM information_schema.partitions_meta \nWHERE (\nCASE \nWHEN RIGHT(DATA_SIZE, 1) = 'B' AND RIGHT(DATA_SIZE, 2) NOT IN ('KB','MB','GB','TB') \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'B', 1) AS DECIMAL(15,2))\nWHEN RIGHT(DATA_SIZE, 2) = 'KB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'K', 1) AS DECIMAL(15,2)) * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'MB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'M', 1) AS DECIMAL(15,2)) * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'GB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'G', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'TB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'T', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024 * 1024\nELSE 0\nEND < {{ _EOY36.outputs.minimumStorageSizeGB }} * 1024 * 1024 * 1024\n)\nORDER BY DB_NAME, TABLE_NAME,\nCASE \nWHEN RIGHT(DATA_SIZE, 1) = 'B' AND RIGHT(DATA_SIZE, 2) NOT IN ('KB','MB','GB','TB') \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'B', 1) AS DECIMAL(15,2))\nWHEN RIGHT(DATA_SIZE, 2) = 'KB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'K', 1) AS DECIMAL(15,2)) * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'MB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'M', 1) AS DECIMAL(15,2)) * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'GB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'G', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'TB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'T', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024 * 1024\nELSE 0\nEND DESC;"
 				},
 				"connectionType":"DIRECT",
 				"sslVerify":false,
-				"path":"/internal/sql-report/runSQL/query/{{ n_A4kqi.outputs.customerId }}",
+				"path":"/internal/sql-report/runSQL/query/{{ _EOY36.outputs.customerId }}",
 				"responseSchema":{
 					"type":"object",
 					"additionalProperties":false,
@@ -140,7 +157,7 @@
 						}
 					}
 				},
-				"baseUrl":"{{ n_96ZBq.outputs.baseInternalUrl }}",
+				"baseUrl":"http://internal-global-svc:80",
 				"httpVersion":"HTTP_2",
 				"bodySchema":{
 					"type":"object",
@@ -178,11 +195,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"n_d5lsD",
-			"index":29,
+			"index":3,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -262,11 +279,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"_vqt0t",
-			"index":30,
+			"index":4,
 			"inputs":{
 				"filters":[
 					{
@@ -292,11 +309,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_vqt0t@n_nST1M@n_WOcYr@_jMFmS-1@l@3@y",
 			"id":"_6HtcA",
-			"index":31,
+			"index":5,
 			"inputs":{
 				"itemToAdd":{
 					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
@@ -334,7 +351,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"_QL5ZP",
-			"index":0,
+			"index":6,
 			"skip":false,
 			"subTitle":"Callable",
 			"title":"Respond to automation",
@@ -342,6 +359,9 @@
 		}
 	],
 	"ownerUserId":59995,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -355,5 +375,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
