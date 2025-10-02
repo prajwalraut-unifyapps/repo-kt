@@ -4,9 +4,24 @@
 	],
 	"createdTime":1759399705493,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759399753181,
+		"deployedBy":39713,
+		"deployedDefinitionId":"68de4f47e862b9353784521f",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_jK7u0",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_dq0YO",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_dq0YO",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_gzrDg",
@@ -46,7 +61,7 @@
 	"id":"68de4f19e862b93537845133",
 	"lastModifiedBy":39713,
 	"lcName":"test",
-	"modifiedTime":1759399749178,
+	"modifiedTime":1759399851532,
 	"name":"test",
 	"nodes":[
 		{
@@ -76,6 +91,57 @@
 		},
 		{
 			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":987,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_n6eLp-1",
+			"id":"n_dq0YO",
+			"index":2,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"a":{
+							"type":"integer",
+							"title":"A"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"a":5
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"a":{
+							"type":"integer",
+							"title":"A"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"scope",
 				"resourceVersion":277,
 				"resourceName":"scope_trigger_scope",
@@ -86,7 +152,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_n6eLp-1",
 			"id":"n_gzrDg",
-			"index":2,
+			"index":3,
 			"inputs":{},
 			"skip":false,
 			"subTitle":"Scope",
@@ -96,8 +162,8 @@
 		{
 			"context":{
 				"appName":"loop",
-				"resourceVersion":22,
-				"resourceName":"loop_for",
+				"resourceVersion":863,
+				"resourceName":"loop_while",
 				"type":"APPLICATION",
 				"scopeNodeId":"n_gzrDg"
 			},
@@ -106,16 +172,25 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_gzrDg@_n6eLp-1@s",
 			"id":"n_thvPw",
-			"index":3,
+			"index":4,
 			"inputs":{
-				"start":0,
-				"limit":2,
-				"step":1,
+				"condition":{
+					"filters":[
+						{
+							"property":"{{ n_dq0YO.outputs.a }}",
+							"filter":{
+								"operator":"GT",
+								"value":"0"
+							}
+						}
+					],
+					"operator":"AND"
+				},
 				"captureIterations":true
 			},
 			"skip":false,
 			"subTitle":"Loop",
-			"title":"For loop",
+			"title":"While loop",
 			"type":"LOOP"
 		},
 		{
@@ -131,7 +206,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_thvPw@n_gzrDg@_n6eLp-1@s@l",
 			"id":"n_IEOin",
-			"index":4,
+			"index":5,
 			"skip":false,
 			"subTitle":"Variable by UnifyApps",
 			"title":"Create variables",
@@ -155,5 +230,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
