@@ -37,7 +37,7 @@
 	"id":"68ddf6602364216c2da9ae2a",
 	"lastModifiedBy":185583,
 	"lcName":"task_pb",
-	"modifiedTime":1759396471005,
+	"modifiedTime":1759396619091,
 	"name":"Task_PB",
 	"nodes":[
 		{
@@ -388,7 +388,7 @@
 			"id":"n_89WHa",
 			"index":3,
 			"inputs":{
-				"itemToAdd":"\"peach\"",
+				"itemToAdd":"{{ n_Hacam.outputs.items[0] }}",
 				"insertLocation":"END",
 				"listName":"{{ n_Hacam.outputs.items[0] }}"
 			},
@@ -510,5 +510,5 @@
 	"tags":[
 		
 	],
-	"version":17
+	"version":18
 }
