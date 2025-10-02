@@ -23,7 +23,7 @@
 	"id":"68de4d08e862b935378447ef",
 	"lastModifiedBy":185583,
 	"lcName":"task_pb (copy)",
-	"modifiedTime":1759399624804,
+	"modifiedTime":1759399663127,
 	"name":"Task_PB (copy)",
 	"nodes":[
 		{
@@ -92,7 +92,7 @@
 						}
 					}
 				],
-				"streamingResponse":false
+				"streamingResponse":true
 			},
 			"skip":false,
 			"subTitle":"Callable",
@@ -217,5 +217,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
