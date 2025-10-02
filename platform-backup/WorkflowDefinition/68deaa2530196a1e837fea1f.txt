@@ -1,51 +1,66 @@
 {
 	"appsUsed":[
-		
+		"gmeet"
 	],
 	"createdTime":1759423013847,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_XJSnJ",
+			"fromNodeId":"n_GH75D",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_BrU5V",
+			"toNodeId":"n_y87JB",
 			"type":"next"
 		}
 	],
 	"id":"68deaa2530196a1e837fea1f",
 	"lastModifiedBy":6701,
 	"lcName":"test_gmeet",
-	"modifiedTime":1759423013847,
+	"modifiedTime":1759424006991,
 	"name":"test_gmeet",
 	"nodes":[
 		{
+			"context":{
+				"appName":"gmeet",
+				"resourceVersion":6,
+				"connectionId":"68dce7ac3e107e10b8327872",
+				"resourceName":"gmeet_on_new_event"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_XJSnJ-1",
-			"id":"_XJSnJ",
-			"index":0,
+			"id":"n_GH75D",
+			"index":1,
+			"inputs":{},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Google Meet",
+			"title":"On new event",
 			"trigger":{
 				"type":"EVENT"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"stop"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_XJSnJ-1",
-			"id":"_BrU5V",
-			"index":0,
+			"id":"n_y87JB",
+			"index":2,
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":6701,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +74,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":2
 }
