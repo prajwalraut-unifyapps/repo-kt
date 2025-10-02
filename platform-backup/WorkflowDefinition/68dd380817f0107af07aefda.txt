@@ -5,16 +5,30 @@
 	"createdTime":1759328264773,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759392683868,
-		"deployedBy":44103,
-		"deployedDefinitionId":"68de33abbdbc7b3b7b2d5fbb",
+		"deployedAt":1759420524639,
+		"deployedBy":132116,
+		"deployedDefinitionId":"68dea06c0e9d387c5aab0aa8",
 		"status":"DEPLOYED",
-		"version":7,
-		"workflowVersion":22
+		"version":8,
+		"workflowVersion":23
 	},
 	"edges":[
 		{
 			"fromNodeId":"n_RVU3x",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_O2qv8",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_O2qv8",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_3F9Im",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_3F9Im",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_UlFPc",
@@ -43,9 +57,9 @@
 		}
 	],
 	"id":"68dd380817f0107af07aefda",
-	"lastModifiedBy":132116,
+	"lastModifiedBy":13,
 	"lcName":"test11111",
-	"modifiedTime":1759420522877,
+	"modifiedTime":1759423361223,
 	"name":"test11111",
 	"nodes":[
 		{
@@ -82,6 +96,127 @@
 			"type":"START"
 		},
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"analytics_by_unifyapps",
+				"resourceVersion":827,
+				"resourceName":"analytics_by_unifyapps_execute_query",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_LL6zY-1",
+			"id":"n_O2qv8",
+			"index":2,
+			"inputs":{
+				"outputSchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"sadas"
+					],
+					"properties":{
+						"sadas":{
+							"type":"string",
+							"title":"Sadas"
+						}
+					}
+				},
+				"query":"SELECT * FROM ENTITY_npci_data \nWHERE _pr_txnId = :txnId \n  AND _pr_beneficiaryFlag = :beneficiaryFlag",
+				"record":{
+					"txnId":"3",
+					"beneficiaryFlag":true
+				},
+				"params":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"txnId":{
+							"type":"string",
+							"title":"Txn Id"
+						},
+						"beneficiaryFlag":{
+							"type":"boolean",
+							"title":"Beneficiary Flag"
+						}
+					}
+				},
+				"group":"ENTITY_REPORTING"
+			},
+			"skip":false,
+			"subTitle":"Analytics by UnifyApps",
+			"title":"Execute Analytics SQL Query",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"analytics_by_unifyapps",
+				"resourceVersion":403,
+				"resourceName":"analytics_by_unifyapps_export_sql",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_LL6zY-1",
+			"id":"n_3F9Im",
+			"index":3,
+			"inputs":{
+				"outputSchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"test"
+					],
+					"properties":{
+						"test":{
+							"type":"string",
+							"title":"Test"
+						}
+					}
+				},
+				"sheetName":"Sheet_0",
+				"query":"SELECT * FROM ENTITY_npci_data \nWHERE _pr_txnId = :txnId \n  AND _pr_beneficiaryFlag = :beneficiaryFlag",
+				"record":{
+					"txnId":"3",
+					"beneficiaryFlag":true
+				},
+				"params":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"txnId":{
+							"type":"string",
+							"title":"Txn Id"
+						},
+						"beneficiaryFlag":{
+							"type":"boolean",
+							"title":"Beneficiary Flag"
+						}
+					}
+				},
+				"keepExactFileName":false,
+				"fileType":"CSV",
+				"group":"ENTITY_REPORTING"
+			},
+			"skip":false,
+			"subTitle":"Analytics by UnifyApps",
+			"title":"Export SQL Query Result",
+			"type":"ACTION"
+		},
+		{
 			"context":{
 				"appName":"code_by_unifyapps",
 				"resourceVersion":931,
@@ -93,7 +228,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_LL6zY-1",
 			"id":"n_UlFPc",
-			"index":2,
+			"index":4,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -137,7 +272,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_LL6zY-1",
 			"id":"n_fsDVy",
-			"index":3,
+			"index":5,
 			"inputs":{
 				"input":{
 					"type":"object",
@@ -209,7 +344,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_LL6zY-1",
 			"id":"n_q0ZqT",
-			"index":4,
+			"index":6,
 			"inputs":{
 				"slots":{
 					"name":{
@@ -290,7 +425,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_LL6zY-1",
 			"id":"n_oDYcJ",
-			"index":5,
+			"index":7,
 			"inputs":{
 				"result":{
 					"success":true
@@ -312,5 +447,5 @@
 		"enableVariableLogging":true
 	},
 	"standard":false,
-	"version":23
+	"version":24
 }
