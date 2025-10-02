@@ -23,7 +23,7 @@
 	"id":"68ddf6602364216c2da9ae2a",
 	"lastModifiedBy":185583,
 	"lcName":"task_pb",
-	"modifiedTime":1759398199065,
+	"modifiedTime":1759398206263,
 	"name":"Task_PB",
 	"nodes":[
 		{
@@ -135,7 +135,8 @@
 				"captureStdOutput":true,
 				"parameters":{
 					"source":"{{ n_6l4oG.outputs.Tag }}",
-					"ua:type":"mappedArray"
+					"ua:type":"mappedArray",
+					"items":"{{ n_6l4oG.outputs.Tag[0] }}"
 				}
 			},
 			"skip":false,
@@ -188,5 +189,5 @@
 	"tags":[
 		
 	],
-	"version":25
+	"version":26
 }
