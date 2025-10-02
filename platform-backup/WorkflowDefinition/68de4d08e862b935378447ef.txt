@@ -23,7 +23,7 @@
 	"id":"68de4d08e862b935378447ef",
 	"lastModifiedBy":185583,
 	"lcName":"task_pb (copy)",
-	"modifiedTime":1759399263352,
+	"modifiedTime":1759399285526,
 	"name":"Task_PB (copy)",
 	"nodes":[
 		{
@@ -172,28 +172,31 @@
 		{
 			"context":{
 				"appName":"callables",
-				"resourceVersion":994,
-				"resourceName":"callables_return_to_automation",
+				"resourceVersion":1016,
+				"resourceName":"callables_return_response_to_api",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RV1ax-1",
 			"id":"n_ot4MS",
 			"index":3,
 			"inputs":{
-				"result":{
-					"currentTagOut":{
-						"ua:type":"mappedArray",
+				"streamingCompleted":true,
+				"responseName":"200_Success",
+				"body":{
+					"tagOutput":{
 						"source":"{{ n_xcwp1.outputs.result.currentTagOut }}",
+						"ua:type":"mappedArray",
 						"items":"{{ n_xcwp1.outputs.result.currentTagOut[0] }}"
 					}
-				}
+				},
+				"status":200
 			},
 			"skip":false,
 			"subTitle":"Callable",
-			"title":"Respond to automation",
+			"title":"Respond to API request",
 			"type":"STOP"
 		}
 	],
@@ -214,5 +217,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
