@@ -30,7 +30,7 @@
 	"id":"68af1080002c1a1e80fd517c",
 	"lastModifiedBy":44105,
 	"lcName":"sqwfdewfe",
-	"modifiedTime":1759404018339,
+	"modifiedTime":1759404030453,
 	"name":"sqwfdewfe",
 	"nodes":[
 		{
@@ -150,7 +150,7 @@
 				"variables":[
 					{
 						"source":"{{ n_EvgmC.outputs.str }}",
-						"value":"=CONCATENATE(TEXT({{ n_EvgmC.outputs.str }}), Text(0, \"0\"), Text(1, \"0\"))"
+						"value":"=CONCATENATE(TEXT({{ n_EvgmC.outputs.str }}, \"0\"), Text(0, \"0\"), Text(1, \"0\"))"
 					}
 				]
 			},
@@ -177,5 +177,5 @@
 	"tags":[
 		"fqwefqew"
 	],
-	"version":45
+	"version":46
 }
