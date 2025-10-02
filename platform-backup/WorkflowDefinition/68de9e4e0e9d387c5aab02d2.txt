@@ -53,7 +53,7 @@
 	"id":"68de9e4e0e9d387c5aab02d2",
 	"lastModifiedBy":59995,
 	"lcName":"partition size",
-	"modifiedTime":1759439145700,
+	"modifiedTime":1759445829916,
 	"name":"partition size",
 	"nodes":[
 		{
@@ -114,7 +114,7 @@
 				"requestTimeoutInSecs":-1,
 				"httpMethod":"POST",
 				"body":{
-					"sql":"SELECT DB_NAME, TABLE_NAME, PARTITION_NAME, DATA_SIZE FROM information_schema.partitions_meta \nWHERE (\nCASE \nWHEN RIGHT(DATA_SIZE, 1) = 'B' AND RIGHT(DATA_SIZE, 2) NOT IN ('KB','MB','GB','TB') \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'B', 1) AS DECIMAL(15,2))\nWHEN RIGHT(DATA_SIZE, 2) = 'KB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'K', 1) AS DECIMAL(15,2)) * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'MB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'M', 1) AS DECIMAL(15,2)) * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'GB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'G', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'TB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'T', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024 * 1024\nELSE 0\nEND < {{ _EOY36.outputs.minimumStorageSizeGB }} * 1024 * 1024 * 1024\n)\nORDER BY DB_NAME, TABLE_NAME,\nCASE \nWHEN RIGHT(DATA_SIZE, 1) = 'B' AND RIGHT(DATA_SIZE, 2) NOT IN ('KB','MB','GB','TB') \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'B', 1) AS DECIMAL(15,2))\nWHEN RIGHT(DATA_SIZE, 2) = 'KB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'K', 1) AS DECIMAL(15,2)) * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'MB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'M', 1) AS DECIMAL(15,2)) * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'GB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'G', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'TB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'T', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024 * 1024\nELSE 0\nEND DESC;"
+					"sql":"SELECT DB_NAME, TABLE_NAME, PARTITION_NAME, PARTITION_VALUE,  DATA_SIZE FROM information_schema.partitions_meta \nWHERE (\nCASE \nWHEN RIGHT(DATA_SIZE, 1) = 'B' AND RIGHT(DATA_SIZE, 2) NOT IN ('KB','MB','GB','TB') \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'B', 1) AS DECIMAL(15,2))\nWHEN RIGHT(DATA_SIZE, 2) = 'KB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'K', 1) AS DECIMAL(15,2)) * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'MB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'M', 1) AS DECIMAL(15,2)) * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'GB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'G', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'TB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'T', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024 * 1024\nELSE 0\nEND < {{ _EOY36.outputs.minimumStorageSizeGB }} * 1024 * 1024 * 1024\n)\nORDER BY DB_NAME, TABLE_NAME,\nCASE \nWHEN RIGHT(DATA_SIZE, 1) = 'B' AND RIGHT(DATA_SIZE, 2) NOT IN ('KB','MB','GB','TB') \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'B', 1) AS DECIMAL(15,2))\nWHEN RIGHT(DATA_SIZE, 2) = 'KB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'K', 1) AS DECIMAL(15,2)) * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'MB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'M', 1) AS DECIMAL(15,2)) * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'GB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'G', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'TB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'T', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024 * 1024\nELSE 0\nEND DESC;"
 				},
 				"connectionType":"DIRECT",
 				"sslVerify":false,
@@ -143,6 +143,10 @@
 									"DB_NAME":{
 										"type":"string",
 										"title":"DB NAME"
+									},
+									"PARTITION_VALUE":{
+										"type":"string",
+										"title":"PARTITION VALUE"
 									}
 								},
 								"additionalProperties":false,
@@ -150,7 +154,8 @@
 									"DATA_SIZE",
 									"PARTITION_NAME",
 									"TABLE_NAME",
-									"DB_NAME"
+									"DB_NAME",
+									"PARTITION_VALUE"
 								]
 							},
 							"title":"objects"
@@ -255,8 +260,8 @@
 						}
 					}
 				},
+				"code":"if (!binding.hasVariable('partitions')) {\n    return [\"slackMessage\": \"\", \"alertPartitions\": []]\n}\n\ndef slackMessage = new StringBuilder()\nslackMessage << \"\\n\\n\"\n\ndef items = []\ndef now = System.currentTimeMillis()\n\ndef timestamps = []\ndef dbTable = [] as Set\n\npartitions.each { partition ->\n    def pv = partition.PARTITION_VALUE\n    long start\n    long end\n    if (pv.contains(\"DATETIME\")) {\n        def matchesDate = (pv =~ /\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}/)\n        if (matchesDate.size() >= 2) {\n            if (matchesDate[0] == \"0000-00-00 00:00:00\") {\n                // This is an invalid or uninitialized partition, skip it\n            } else {\n                start = java.sql.Timestamp.valueOf(matchesDate[0]).time\n                end = java.sql.Timestamp.valueOf(matchesDate[1]).time\n            }\n        } \n    } else {\n        def matchesMillis = (pv =~ /\\d{13}/)\n        if (matchesMillis.size() >= 2) {\n            start = matchesMillis[0] as Long\n            end = matchesMillis[1] as Long\n        }\n    }\n    if (start != null && end != null && now >= start && now < end) {\n        if (dbTable.contains(partition.DB_NAME) && dbTable.contains(partition.TABLE_NAME)) {\n            items.last()[\"partitions\"].add([PARTITION_NAME: partition.PARTITION_NAME, DATA_SIZE: partition.DATA_SIZE])\n        } else {\n            items << [DB_NAME: partition.DB_NAME, TABLE_NAME: partition.TABLE_NAME, partitions: [[PARTITION_NAME: partition.PARTITION_NAME, DATA_SIZE: partition.DATA_SIZE]]]\n            dbTable = [partition.DB_NAME, partition.TABLE_NAME] as Set\n        }\n    }\n}\n\nitems.each { partition ->\n    slackMessage << \"*DB:* `${partition.DB_NAME}`\\n\"\n    slackMessage << \"*Table:* `${partition.TABLE_NAME}`\\n\"\n    for (part in partition.partitions) {\n        slackMessage << \"*PartitionName:* `${part.PARTITION_NAME}` *Size:* `${part.DATA_SIZE}`\\n\"\n    }\n    slackMessage << \"-----------------------------\\n\"\n}\n\nreturn [\"slackMessage\": slackMessage ,\"stamps\":timestamps, \"alertPartitions\": items]",
 				"compile_static":false,
-				"code":"if (!binding.hasVariable('partitions')) {\n    return [\"slackMessage\": \"\", \"alertPartitions\": []]\n}\n\ndef slackMessage = new StringBuilder()\nslackMessage << \"\\n\\n\"\nalertPartitions = []\n\ndef items = []\ndef now = System.currentTimeMillis()\n\ndef timestamps = []\n\npartitions.each { partition ->\n    def pv = partition.PARTITION_VALUE\n    long start\n    long end\n    if (pv.contains(\"DATETIME\")) {\n        def matchesDate = (pv =~ /\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}/)\n        if (matchesDate.size() >= 2) {\n            if (matchesDate[0] == \"0000-00-00 00:00:00\") {\n                // This is an invalid or uninitialized partition, skip it\n            } else {\n                start = java.sql.Timestamp.valueOf(matchesDate[0]).time\n                end = java.sql.Timestamp.valueOf(matchesDate[1]).time\n            }\n        } \n    } else {\n        def matchesMillis = (pv =~ /\\d{13}/)\n        if (matchesMillis.size() >= 2) {\n            start = matchesMillis[0] as Long\n            end = matchesMillis[1] as Long\n        }\n    }\n    if (start != null && end != null && now >= start && now < end) {\n        items << partition\n    }\n}\n\nitems.each { partition ->\n    slackMessage << \"*DB:* `${partition.DB_NAME}`\\n\"\n    slackMessage << \"*Table:* `${partition.TABLE_NAME}`\\n\"\n    slackMessage << \"*Partition:* `${partition.PARTITION_NAME}`\\n\"\n    slackMessage << \"*Size:* `${partition.DATA_SIZE}`\\n\"\n    slackMessage << \"-----------------------------\\n\"\n    alertPartitions << [\"partitionName\": partition.PARTITION_NAME, \"size\": partition.DATA_SIZE]\n}\n\nreturn [\"slackMessage\": slackMessage ,\"stamps\":timestamps, \"alertPartitions\": alertPartitions]",
 				"captureStdOutput":false,
 				"parameters":{
 					"partitions":{
@@ -375,5 +380,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
