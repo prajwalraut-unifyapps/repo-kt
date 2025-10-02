@@ -5,12 +5,12 @@
 	"createdTime":1741861387212,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243556487,
+		"deployedAt":1759243589195,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed2423e6682b9a51eb51",
+		"deployedDefinitionId":"68dbed4523e6682b9a51ec14",
 		"status":"DEPLOYED",
-		"version":27,
-		"workflowVersion":127
+		"version":28,
+		"workflowVersion":128
 	},
 	"edges":[
 		{
@@ -153,7 +153,7 @@
 	"id":"67d2b20bef05fc12cefc3138",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | salesforce | index a document",
-	"modifiedTime":1759243589104,
+	"modifiedTime":1759371908743,
 	"name":"Knowledge Indexer | salesforce | Index a document",
 	"nodes":[
 		{
@@ -1544,5 +1544,5 @@
 	"tags":[
 		
 	],
-	"version":128
+	"version":129
 }
