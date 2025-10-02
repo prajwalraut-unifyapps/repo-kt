@@ -6,46 +6,180 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_LL6zY",
+			"fromNodeId":"n_6qe13",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_DMK6I",
+			"toNodeId":"n_UlFPc",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_UlFPc",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_q0ZqT",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_q0ZqT",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_VORBw",
 			"type":"next"
 		}
 	],
 	"id":"68dd380817f0107af07aefda",
-	"lastModifiedBy":39714,
+	"lastModifiedBy":44103,
 	"lcName":"test11111",
-	"modifiedTime":1759328264773,
+	"modifiedTime":1759389626490,
 	"name":"test11111",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":820,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_LL6zY-1",
-			"id":"_LL6zY",
-			"index":0,
+			"id":"n_6qe13",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":931,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_LL6zY-1",
-			"id":"_DMK6I",
-			"index":0,
+			"id":"n_UlFPc",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"sloaList":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Sloa List"
+						}
+					}
+				},
+				"code":"def slotList = []\n\nslotList << [\n    description: \"the name of the person\",\n    name       : \"name\",\n    responses  : [\n        [\n            question: \"what is your name?\"\n        ]\n    ],\n    title      : \"Name\",\n    type       : \"string\"\n]\n\nslotList << [\n    description: \"the gender of the person\",\n    name       : \"gender\",\n    responses  : [\n        [\n            choices: [\n                [id: \"male\", title: \"Male\"],\n                [id: \"female\", title: \"Female\"]\n            ],\n            question: \"What is your gender?\"\n        ]\n    ],\n    title      : \"Gender\",\n    type       : \"string\"\n]\n\nslotList << [\n    description: \"the age of the person\",\n    name       : \"age\",\n    responses  : [\n        [\n            question: \"And what is your age?\"\n        ]\n    ],\n    title      : \"Age\",\n    type       : \"integer\"\n]\n\nreturn [slotList : slotList]\n",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
 			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.slots.name.description",
+					"root.slots.name.isAttachment",
+					"root.slots.name.responses.items.language",
+					"root.slots.name.responses.items.question",
+					"root.slots.name.responses.items.headerText",
+					"root.slots.name.responses.items.buttonText",
+					"root.slots.name.responses.items.titleText",
+					"root.slots.name.responses.items.choices.items.id",
+					"root.slots.name.responses.items.choices.items.title",
+					"root.slots.name.responses.items.choices.items.url",
+					"root.slots.name.responses.items.choices.items.description"
+				]
+			},
+			"context":{
+				"appName":"conv_ai_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"conv_ai_by_unifyapps_collect_slots",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_LL6zY-1",
+			"id":"n_q0ZqT",
+			"index":3,
+			"inputs":{
+				"slots":{
+					"name":{
+						"description":"name od p1",
+						"isAttachment":false,
+						"responses":[
+							{
+								"question":"what is your name?"
+							}
+						]
+					}
+				},
+				"slotList":{
+					"source":"{{ n_UlFPc.outputs.result.sloaList }}",
+					"ua:type":"mappedArray",
+					"items":"{{ n_UlFPc.outputs.result.sloaList[0] }}"
+				},
+				"slotSchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"name":{
+							"type":"string",
+							"title":"Name"
+						}
+					}
+				},
+				"skipInitialQuestion":false
+			},
+			"skip":false,
+			"subTitle":"Conversation AI by UnifyApps",
+			"title":"Collect Slots",
+			"type":"CALL_INTERFACE_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_LL6zY-1",
+			"id":"n_VORBw",
+			"index":4,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":39714,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +193,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
