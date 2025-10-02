@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759399050988,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759400014947,
+		"deployedBy":161165,
+		"deployedDefinitionId":"68de504ee862b9353784551b",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":7
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_UcSUx",
@@ -30,7 +38,7 @@
 	"id":"68de4c8ae862b93537844600",
 	"lastModifiedBy":161165,
 	"lcName":"virtusafileupload",
-	"modifiedTime":1759400012333,
+	"modifiedTime":1759400396651,
 	"name":"VirtusafileUpload",
 	"nodes":[
 		{
@@ -40,7 +48,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_kdzrB-1",
 			"id":"n_UcSUx",
@@ -89,7 +97,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_kdzrB-1",
 			"id":"n_zObZD",
@@ -356,14 +364,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_kdzrB-1",
 			"id":"n_Zmt8y",
 			"index":3,
 			"inputs":{
 				"writeThroughSessionVariables":false,
-				"object_type":"virtusa_file_upload",
+				"object_type":"virtusa_fileupload",
 				"skipIfBlank":false,
 				"record":{
 					"fileName":"{{ n_UcSUx.outputs.fileName }}",
@@ -396,7 +404,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_kdzrB-1",
 			"id":"n_HPBH8",
@@ -429,5 +437,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
