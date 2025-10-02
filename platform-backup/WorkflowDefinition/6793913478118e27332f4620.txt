@@ -5,12 +5,12 @@
 	"createdTime":1738309664299,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655346973,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f37238757c179b123456",
+		"deployedAt":1759243569071,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed3123e6682b9a51ebb6",
 		"status":"DEPLOYED",
-		"version":57,
-		"workflowVersion":97
+		"version":59,
+		"workflowVersion":99
 	},
 	"edges":[
 		{
@@ -208,7 +208,7 @@
 	"id":"6793913478118e27332f4620",
 	"lastModifiedBy":-1,
 	"lcName":"session file indexer",
-	"modifiedTime":1759243534321,
+	"modifiedTime":1759371890414,
 	"name":"Session File Indexer",
 	"nodes":[
 		{
@@ -1167,5 +1167,5 @@
 		"AI Agent",
 		"Knowledge"
 	],
-	"version":98
+	"version":100
 }
