@@ -5,12 +5,12 @@
 	"createdTime":1726488351606,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243514627,
+		"deployedAt":1759243551853,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbecfa9213d707c2d272a7",
+		"deployedDefinitionId":"68dbed1f23e6682b9a51eb2c",
 		"status":"DEPLOYED",
-		"version":64,
-		"workflowVersion":87
+		"version":65,
+		"workflowVersion":88
 	},
 	"edges":[
 		{
@@ -48,7 +48,7 @@
 	"id":"66e81f1f97ddc710475bf2ec",
 	"lastModifiedBy":-1,
 	"lcName":"[model_compare] init",
-	"modifiedTime":1759243551779,
+	"modifiedTime":1759371873937,
 	"name":"[MODEL_COMPARE] Init",
 	"nodes":[
 		{
@@ -300,5 +300,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":88
+	"version":89
 }
