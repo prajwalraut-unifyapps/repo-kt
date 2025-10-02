@@ -23,7 +23,7 @@
 	"id":"68ddf6602364216c2da9ae2a",
 	"lastModifiedBy":185583,
 	"lcName":"task_pb",
-	"modifiedTime":1759397377873,
+	"modifiedTime":1759397465715,
 	"name":"Task_PB",
 	"nodes":[
 		{
@@ -123,19 +123,29 @@
 					}
 				},
 				"input":{
-					"type":"array",
-					"title":"Current Tag",
-					"ua:__linkedVariable__":"n_6l4oG.outputs.currentTag",
-					"items":{
-						"type":"string"
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"currentTag"
+					],
+					"properties":{
+						"currentTag":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Current Tag"
+						}
 					}
 				},
 				"code":"//def currentTag = [\"apple\",\"banana\"]\n\ndef list = currentTag.toList()\nlist.add(\"date\")\n\n\n\nreturn [currentTagOut:list as String[]]",
 				"compile_static":false,
 				"captureStdOutput":true,
 				"parameters":{
-					"source":"{{ n_6l4oG.outputs.currentTag }}",
-					"ua:type":"mappedArray"
+					"currentTag":{
+						"source":"{{ n_6l4oG.outputs.currentTag }}",
+						"ua:type":"mappedArray"
+					}
 				}
 			},
 			"skip":false,
@@ -187,5 +197,5 @@
 	"tags":[
 		
 	],
-	"version":22
+	"version":23
 }
