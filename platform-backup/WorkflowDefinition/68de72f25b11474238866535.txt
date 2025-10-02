@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759408882903,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759418073576,
+		"deployedBy":59995,
+		"deployedDefinitionId":"68de96d84361896e3c5f45c0",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
 	"edges":[
 		{
 			"fromNodeId":"_YXJy5",
@@ -37,7 +45,7 @@
 	"id":"68de72f25b11474238866535",
 	"lastModifiedBy":59995,
 	"lcName":"buckets number",
-	"modifiedTime":1759417919082,
+	"modifiedTime":1759449567944,
 	"name":"Buckets Number",
 	"nodes":[
 		{
@@ -110,12 +118,17 @@
 					"type":"object",
 					"additionalProperties":false,
 					"required":[
-						"minimumBucketCount"
+						"minimumBucketCount",
+						"customerId"
 					],
 					"properties":{
 						"minimumBucketCount":{
 							"type":"integer",
 							"title":"Minimum Bucket Count"
+						},
+						"customerId":{
+							"type":"string",
+							"title":"Customer Id"
 						}
 					}
 				}
@@ -232,7 +245,7 @@
 				},
 				"connectionType":"DIRECT",
 				"sslVerify":false,
-				"path":"/internal/sql-report/runSQL/query/{{ __RUN__.outputs.customerId }}",
+				"path":"/internal/sql-report/runSQL/query/{{ _YXJy5.outputs.customerId }}",
 				"responseSchema":{
 					"type":"object",
 					"additionalProperties":false,
@@ -584,5 +597,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
