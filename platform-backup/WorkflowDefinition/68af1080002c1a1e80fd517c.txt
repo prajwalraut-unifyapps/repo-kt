@@ -37,7 +37,7 @@
 	"id":"68af1080002c1a1e80fd517c",
 	"lastModifiedBy":44105,
 	"lcName":"sqwfdewfe",
-	"modifiedTime":1759403781131,
+	"modifiedTime":1759403784099,
 	"name":"sqwfdewfe",
 	"nodes":[
 		{
@@ -154,7 +154,7 @@
 			"id":"n_3XrjI",
 			"index":4,
 			"inputs":{
-				"duration":2,
+				"duration":4,
 				"unit":"SECONDS"
 			},
 			"skip":false,
@@ -206,5 +206,5 @@
 	"tags":[
 		"fqwefqew"
 	],
-	"version":39
+	"version":40
 }
