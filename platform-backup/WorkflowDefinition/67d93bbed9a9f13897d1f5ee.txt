@@ -5,12 +5,12 @@
 	"createdTime":1742293153782,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655388419,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f39c38757c179b123b88",
+		"deployedAt":1759243602450,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed5223e6682b9a51ec59",
 		"status":"DEPLOYED",
-		"version":42,
-		"workflowVersion":65
+		"version":44,
+		"workflowVersion":67
 	},
 	"edges":[
 		{
@@ -124,7 +124,7 @@
 	"id":"67d93bbed9a9f13897d1f5ee",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | servicenow | index attachments",
-	"modifiedTime":1759243570030,
+	"modifiedTime":1759371921482,
 	"name":"Knowledge Indexer | ServiceNow | Index attachments",
 	"nodes":[
 		{
@@ -739,5 +739,5 @@
 		}
 	},
 	"standard":true,
-	"version":66
+	"version":68
 }
