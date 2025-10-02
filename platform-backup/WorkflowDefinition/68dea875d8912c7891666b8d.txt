@@ -1,6 +1,5 @@
 {
 	"appsUsed":[
-		"bill",
 		"netsuite"
 	],
 	"createdTime":1759422581513,
@@ -10,13 +9,6 @@
 			"fromNodeId":"n_okfso",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_tMU4U",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_tMU4U",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_XaotR",
 			"type":"next"
 		}
@@ -24,7 +16,7 @@
 	"id":"68dea875d8912c7891666b8d",
 	"lastModifiedBy":2621,
 	"lcName":"test",
-	"modifiedTime":1759423029234,
+	"modifiedTime":1759423066833,
 	"name":"test",
 	"nodes":[
 		{
@@ -54,26 +46,6 @@
 		},
 		{
 			"context":{
-				"appName":"bill",
-				"resourceVersion":458,
-				"connectionId":"68d6548fdd3bf0752cc11b0f",
-				"resourceName":"bill_create_bill",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_15bCw-1",
-			"id":"n_tMU4U",
-			"index":2,
-			"inputs":{},
-			"skip":false,
-			"subTitle":"Bill",
-			"title":"Create bill",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"netsuite",
 				"resourceVersion":3,
 				"connectionId":"68aed9cc943bd04a2e9ba22a",
@@ -85,7 +57,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_15bCw-1",
 			"id":"n_XaotR",
-			"index":3,
+			"index":2,
 			"inputs":{
 				"comments":"Preferred vendor for office supplies",
 				"phone":"+1-555-0123",
@@ -127,5 +99,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
