@@ -92,12 +92,34 @@
 			"skip":false,
 			"toNodeId":"_zV8iS",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_I42Hn",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_gUgCT",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_zV8iS",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_gUgCT",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_ikdIO",
+			"name":"default",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_gUgCT",
+			"type":"branch"
 		}
 	],
 	"id":"68de24422364216c2da9d549",
 	"lastModifiedBy":161908,
 	"lcName":"branchloop",
-	"modifiedTime":1759389073635,
+	"modifiedTime":1759389084867,
 	"name":"branchloop",
 	"nodes":[
 		{
@@ -417,6 +439,21 @@
 			"subTitle":"Variable by UnifyApps",
 			"title":"Update variables",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_kS6s2-1",
+			"id":"n_gUgCT",
+			"index":12,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":161908,
@@ -436,5 +473,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
