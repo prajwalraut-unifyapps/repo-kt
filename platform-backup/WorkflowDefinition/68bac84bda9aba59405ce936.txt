@@ -16,7 +16,7 @@
 	},
 	"edges":[
 		{
-			"fromNodeId":"n_uTqRM",
+			"fromNodeId":"n_qDY3G",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_SfvVU",
@@ -388,11 +388,18 @@
 			"fromNodeId":"n_nCiyP",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_X8X0p",
+			"toNodeId":"n_fyaw9",
 			"type":"next"
 		},
 		{
 			"fromNodeId":"_t0edP",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_fyaw9",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_fyaw9",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_X8X0p",
@@ -416,20 +423,20 @@
 	"id":"68bac84bda9aba59405ce936",
 	"lastModifiedBy":39713,
 	"lcName":"test",
-	"modifiedTime":1759405228017,
+	"modifiedTime":1759405467226,
 	"name":"test",
 	"nodes":[
 		{
 			"context":{
-				"appName":"callables",
-				"resourceVersion":36,
-				"resourceName":"callables_from_api"
+				"appName":"webhooks",
+				"resourceVersion":820,
+				"resourceName":"webhooks_default"
 			},
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_bi1v1-1",
-			"id":"n_uTqRM",
+			"id":"n_qDY3G",
 			"index":1,
 			"inputs":{
 				"request":{
@@ -437,35 +444,25 @@
 					"body":{
 						"type":"object",
 						"properties":{
-							"ComponentId":{
-								"type":"integer",
-								"title":"ComponentId"
-							},
 							"ProcessType":{
-								"type":"integer",
-								"title":"ProcessType"
+								"type":"string",
+								"title":"Process Type"
+							},
+							"ComponentId":{
+								"type":"string",
+								"title":"Component Id"
 							}
 						},
-						"additionalProperties":false
+						"additionalProperties":false,
+						"required":[]
 					}
-				},
-				"endpointType":"REST",
-				"response":[
-					{
-						"status":200,
-						"contentType":"application/json",
-						"textBody":{
-							"type":"string"
-						}
-					}
-				],
-				"streamingResponse":false
+				}
 			},
 			"skip":false,
-			"subTitle":"Callable",
-			"title":"Trigger via API",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"CALLABLE"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
@@ -2634,6 +2631,21 @@
 		},
 		{
 			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_bi1v1-1",
+			"id":"n_fyaw9",
+			"index":42,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		},
+		{
+			"context":{
 				"appName":"callables",
 				"resourceVersion":37,
 				"resourceName":"callables_return_response_to_api",
@@ -2644,13 +2656,13 @@
 			"fallbackMode":"STOP",
 			"groupId":"_bi1v1-1",
 			"id":"n_X8X0p",
-			"index":42,
+			"index":43,
 			"inputs":{
 				"streamingCompleted":true,
 				"responseName":"200_undefined",
 				"status":200
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Callable",
 			"title":"Respond to API request",
 			"type":"STOP"
@@ -2668,7 +2680,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_nCiyP@_bi1v1-1@error",
 			"id":"_bi76K",
-			"index":43,
+			"index":44,
 			"inputs":{
 				"objectSourceResourceName":"sqlserver_fetch_stored_procedure_metadata",
 				"record":{
@@ -2700,7 +2712,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_nCiyP@_bi1v1-1@error",
 			"id":"_eeocw",
-			"index":44,
+			"index":45,
 			"inputs":{
 				"performAsync":false,
 				"objectSourceResourceName":"sqlserver_execute_sql_metadata",
@@ -2750,7 +2762,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_nCiyP@_bi1v1-1@error",
 			"id":"_t0edP",
-			"index":45,
+			"index":46,
 			"inputs":{
 				"subject":"{{ _eeocw.outputs.rows[0].NOTIFICATION_SUBJECT }}",
 				"body":"Hi Team, \n\n{{ _eeocw.outputs.rows[0].NOTIFICATION }} refresh has been failed for the ETL started as of {{ _eeocw.outputs.rows[0].ETL_START_DATE }}\n\nETL Started Time : {{ _eeocw.outputs.rows[0].ETL_START_DATE }}\nError Message : Logic App Activity Failed\n\nThanks",
@@ -2780,5 +2792,5 @@
 	"tags":[
 		
 	],
-	"version":90
+	"version":92
 }
