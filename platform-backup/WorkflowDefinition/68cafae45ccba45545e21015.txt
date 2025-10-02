@@ -5,12 +5,12 @@
 	"createdTime":1758646567467,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646567523,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2d1279f85565fb8fa5e08",
+		"deployedAt":1759243602980,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed5223e6682b9a51ec5d",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":3
+		"version":4,
+		"workflowVersion":6
 	},
 	"edges":[
 		{
@@ -98,9 +98,9 @@
 		]
 	},
 	"id":"68cafae45ccba45545e21015",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"remove older knowledge version chunks",
-	"modifiedTime":1758655389064,
+	"modifiedTime":1759371921961,
 	"name":"Remove Older Knowledge Version Chunks",
 	"nodes":[
 		{
@@ -421,5 +421,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":7
 }
