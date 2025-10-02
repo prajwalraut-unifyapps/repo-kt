@@ -5,12 +5,12 @@
 	"createdTime":1751469655760,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655318807,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f35638757c179b122fb2",
+		"deployedAt":1759243548255,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed1c9213d707c2d2730b",
 		"status":"DEPLOYED",
-		"version":39,
-		"workflowVersion":79
+		"version":41,
+		"workflowVersion":81
 	},
 	"edges":[
 		{
@@ -156,7 +156,7 @@
 	"id":"68542c75651b6b3df907f38f",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer",
-	"modifiedTime":1759243510199,
+	"modifiedTime":1759371870261,
 	"name":"Knowledge Indexer",
 	"nodes":[
 		{
@@ -901,5 +901,5 @@
 	"tags":[
 		"knowledge_v2"
 	],
-	"version":80
+	"version":82
 }
