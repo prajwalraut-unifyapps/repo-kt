@@ -4,13 +4,21 @@
 	],
 	"createdTime":1759387591917,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759388710017,
+		"deployedBy":2721,
+		"deployedDefinitionId":"68de242586bbd1145521fd4b",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":5
+	},
 	"edges":[
 		
 	],
 	"id":"68de1fc72364216c2da9cfb3",
 	"lastModifiedBy":2721,
 	"lcName":"sampletreggertest",
-	"modifiedTime":1759388558315,
+	"modifiedTime":1759388730072,
 	"name":"sampletreggertest",
 	"nodes":[
 		{
@@ -58,5 +66,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
