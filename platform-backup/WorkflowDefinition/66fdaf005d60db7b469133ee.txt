@@ -5,12 +5,12 @@
 	"createdTime":1727901440078,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243537216,
+		"deployedAt":1759243571485,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed1123e6682b9a51eadc",
+		"deployedDefinitionId":"68dbed335e003e08cdeb2f3b",
 		"status":"DEPLOYED",
-		"version":65,
-		"workflowVersion":172
+		"version":66,
+		"workflowVersion":173
 	},
 	"description":"",
 	"edges":[
@@ -176,7 +176,7 @@
 	"id":"66fdaf005d60db7b469133ee",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | onedrive | index a file",
-	"modifiedTime":1759243571308,
+	"modifiedTime":1759371892707,
 	"name":"Knowledge Indexer | OneDrive | Index a file",
 	"nodes":[
 		{
@@ -1003,5 +1003,5 @@
 		"AI Agent",
 		"Knowledge"
 	],
-	"version":173
+	"version":174
 }
