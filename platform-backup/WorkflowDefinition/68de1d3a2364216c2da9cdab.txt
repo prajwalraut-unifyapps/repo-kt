@@ -14,9 +14,9 @@
 		}
 	],
 	"id":"68de1d3a2364216c2da9cdab",
-	"lastModifiedBy":2721,
+	"lastModifiedBy":161165,
 	"lcName":"gcs_trigger_tesdt",
-	"modifiedTime":1759386989551,
+	"modifiedTime":1759387206789,
 	"name":"gcs_trigger_tesdt",
 	"nodes":[
 		{
@@ -26,7 +26,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_BdHTh-1",
 			"id":"n_HyNzo",
@@ -58,7 +58,9 @@
 			"groupId":"_BdHTh-1",
 			"id":"n_svgZI",
 			"index":2,
-			"inputs":{},
+			"inputs":{
+				"bucketName":"gcst-virtu-eag-integrationcloudstorage-dev2"
+			},
 			"skip":false,
 			"subTitle":"Google Cloud Storage",
 			"title":"Upload an object",
@@ -82,5 +84,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
