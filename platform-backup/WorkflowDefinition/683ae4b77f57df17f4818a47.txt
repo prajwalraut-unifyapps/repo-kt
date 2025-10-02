@@ -5,12 +5,12 @@
 	"createdTime":1748757215303,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243523128,
+		"deployedAt":1759243559016,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed035e003e08cdeb2e5f",
+		"deployedDefinitionId":"68dbed2723e6682b9a51eb63",
 		"status":"DEPLOYED",
-		"version":63,
-		"workflowVersion":95
+		"version":64,
+		"workflowVersion":96
 	},
 	"edges":[
 		{
@@ -62,7 +62,7 @@
 	"id":"683ae4b77f57df17f4818a47",
 	"lastModifiedBy":-1,
 	"lcName":"ai eval | metrics | cosine similarity",
-	"modifiedTime":1759243558952,
+	"modifiedTime":1759371880911,
 	"name":"AI Eval | Metrics | Cosine Similarity",
 	"nodes":[
 		{
@@ -386,5 +386,5 @@
 	"tags":[
 		
 	],
-	"version":96
+	"version":97
 }
