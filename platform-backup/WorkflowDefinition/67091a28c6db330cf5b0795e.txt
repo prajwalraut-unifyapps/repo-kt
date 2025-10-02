@@ -5,12 +5,12 @@
 	"createdTime":1728649768905,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758646554955,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2d11abd00df618e363d2b",
+		"deployedAt":1759243593101,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed499213d707c2d27400",
 		"status":"DEPLOYED",
-		"version":128,
-		"workflowVersion":180
+		"version":131,
+		"workflowVersion":183
 	},
 	"edges":[
 		{
@@ -439,9 +439,9 @@
 		]
 	},
 	"id":"67091a28c6db330cf5b0795e",
-	"lastModifiedBy":0,
+	"lastModifiedBy":-1,
 	"lcName":"document chunker",
-	"modifiedTime":1758655376509,
+	"modifiedTime":1759371912617,
 	"name":"Document Chunker",
 	"nodes":[
 		{
@@ -2867,5 +2867,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":181
+	"version":184
 }
