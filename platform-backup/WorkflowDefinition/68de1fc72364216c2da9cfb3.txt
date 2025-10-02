@@ -5,12 +5,12 @@
 	"createdTime":1759387591917,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759391565880,
+		"deployedAt":1759392475872,
 		"deployedBy":2721,
-		"deployedDefinitionId":"68de2f4dbdbc7b3b7b2d47fc",
+		"deployedDefinitionId":"68de32dbbdbc7b3b7b2d5bd0",
 		"status":"DEPLOYED",
-		"version":4,
-		"workflowVersion":10
+		"version":5,
+		"workflowVersion":11
 	},
 	"edges":[
 		
@@ -18,7 +18,7 @@
 	"id":"68de1fc72364216c2da9cfb3",
 	"lastModifiedBy":2721,
 	"lcName":"sampletreggertest",
-	"modifiedTime":1759392472490,
+	"modifiedTime":1759396886835,
 	"name":"sampletreggertest",
 	"nodes":[
 		{
@@ -36,6 +36,7 @@
 			"index":1,
 			"inputs":{
 				"bucketName":"gcst-virtu-eag-integrationcloudstorage-dev2",
+				"versions":true,
 				"interval":5,
 				"from":"2025-10-01T06:46:00.000Z",
 				"batchSize":100
@@ -66,5 +67,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":12
 }
