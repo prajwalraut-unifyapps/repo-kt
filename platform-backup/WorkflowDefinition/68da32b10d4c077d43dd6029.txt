@@ -1,51 +1,108 @@
 {
 	"appsUsed":[
-		
+		"jms"
 	],
 	"createdTime":1759130289572,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_hJ6cD",
+			"fromNodeId":"n_YoO4c",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_mJAsH",
+			"toNodeId":"n_YeybJ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_YeybJ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_p2K61",
 			"type":"next"
 		}
 	],
 	"id":"68da32b10d4c077d43dd6029",
 	"lastModifiedBy":43498,
 	"lcName":"test-jms",
-	"modifiedTime":1759130289572,
+	"modifiedTime":1759417135441,
 	"name":"test-jms",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":820,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_hJ6cD-1",
-			"id":"_hJ6cD",
-			"index":0,
+			"id":"n_YoO4c",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"jms",
+				"resourceVersion":3801,
+				"connectionId":"67592679b73f613be2e69445",
+				"resourceName":"jms_publish_message",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_hJ6cD-1",
-			"id":"_mJAsH",
-			"index":0,
+			"id":"n_YeybJ",
+			"index":2,
+			"inputs":{
+				"queueName":"unifyapps",
+				"messageFormat":"text",
+				"message":"hii test"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"JMS",
+			"title":"Publish message to queue",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"jms",
+				"resourceVersion":3616,
+				"connectionId":"67592679b73f613be2e69445",
+				"resourceName":"jms_consume_message",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_hJ6cD-1",
+			"id":"n_p2K61",
+			"index":3,
+			"inputs":{
+				"queueName":"unifyapps",
+				"timeout":"1000"
+			},
+			"skip":false,
+			"subTitle":"JMS",
+			"title":"Consume message",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":43498,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +116,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
