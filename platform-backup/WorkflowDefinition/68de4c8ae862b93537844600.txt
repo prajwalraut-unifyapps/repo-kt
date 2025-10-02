@@ -30,7 +30,7 @@
 	"id":"68de4c8ae862b93537844600",
 	"lastModifiedBy":161165,
 	"lcName":"fileupload",
-	"modifiedTime":1759399278838,
+	"modifiedTime":1759399301648,
 	"name":"fileUpload",
 	"nodes":[
 		{
@@ -65,6 +65,10 @@
 								"required":[]
 							},
 							"title":"file"
+						},
+						"fileName":{
+							"type":"string",
+							"title":"File Name"
 						}
 					}
 				}
@@ -362,6 +366,7 @@
 				"object_type":"virtusa_file_upload",
 				"skipIfBlank":false,
 				"record":{
+					"fileName":"{{ n_UcSUx.outputs.fileName }}",
 					"file":{
 						"ua:type":"mappedArray",
 						"source":"{{ n_zObZD.outputs.items }}",
@@ -424,5 +429,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
