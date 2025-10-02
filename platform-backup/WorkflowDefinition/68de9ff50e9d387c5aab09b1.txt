@@ -121,7 +121,7 @@
 	"id":"68de9ff50e9d387c5aab09b1",
 	"lastModifiedBy":132116,
 	"lcName":"branches_inside_nestedloops  (2)(1)",
-	"modifiedTime":1759420405662,
+	"modifiedTime":1759420411814,
 	"name":"branches_inside_nestedloops  (2)(1)",
 	"nodes":[
 		{
@@ -184,7 +184,6 @@
 				"input":"5"
 			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -493,5 +492,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
