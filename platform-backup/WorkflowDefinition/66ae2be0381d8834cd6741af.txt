@@ -5,12 +5,12 @@
 	"createdTime":1722690528916,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243502665,
+		"deployedAt":1759243541670,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbecee9213d707c2d2727d",
+		"deployedDefinitionId":"68dbed159213d707c2d272eb",
 		"status":"DEPLOYED",
-		"version":57,
-		"workflowVersion":79
+		"version":58,
+		"workflowVersion":80
 	},
 	"edges":[
 		{
@@ -106,7 +106,7 @@
 	"id":"66ae2be0381d8834cd6741af",
 	"lastModifiedBy":-1,
 	"lcName":"chunkmetada fetcher",
-	"modifiedTime":1759243541617,
+	"modifiedTime":1759371863989,
 	"name":"ChunkMetada Fetcher",
 	"nodes":[
 		{
@@ -476,5 +476,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":80
+	"version":81
 }
