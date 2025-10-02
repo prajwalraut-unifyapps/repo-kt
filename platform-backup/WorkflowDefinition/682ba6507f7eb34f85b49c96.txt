@@ -5,12 +5,12 @@
 	"createdTime":1747691088278,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655405691,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f3ad38757c179b123e39",
+		"deployedAt":1759243616845,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed609213d707c2d2749e",
 		"status":"DEPLOYED",
-		"version":37,
-		"workflowVersion":64
+		"version":39,
+		"workflowVersion":66
 	},
 	"edges":[
 		{
@@ -312,7 +312,7 @@
 	"id":"682ba6507f7eb34f85b49c96",
 	"lastModifiedBy":-1,
 	"lcName":"knowledge indexer | bitbucket server | index repository (single)",
-	"modifiedTime":1759243584030,
+	"modifiedTime":1759371934417,
 	"name":"Knowledge Indexer | Bitbucket Server | Index repository (single)",
 	"nodes":[
 		{
@@ -2065,5 +2065,5 @@
 	"tags":[
 		
 	],
-	"version":65
+	"version":67
 }
