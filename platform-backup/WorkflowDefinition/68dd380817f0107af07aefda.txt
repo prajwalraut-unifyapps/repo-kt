@@ -38,7 +38,7 @@
 	"id":"68dd380817f0107af07aefda",
 	"lastModifiedBy":44103,
 	"lcName":"test11111",
-	"modifiedTime":1759390594615,
+	"modifiedTime":1759390615827,
 	"name":"test11111",
 	"nodes":[
 		{
@@ -53,7 +53,19 @@
 			"groupId":"_LL6zY-1",
 			"id":"n_RVU3x",
 			"index":1,
-			"inputs":{},
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"success":{
+							"type":"boolean",
+							"title":"Success"
+						}
+					}
+				}
+			},
 			"skip":false,
 			"subTitle":"Callable",
 			"title":"Trigger via automation",
@@ -178,7 +190,9 @@
 			"id":"n_oDYcJ",
 			"index":4,
 			"inputs":{
-				"result":"true"
+				"result":{
+					"success":true
+				}
 			},
 			"skip":false,
 			"subTitle":"Callable",
@@ -203,5 +217,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
