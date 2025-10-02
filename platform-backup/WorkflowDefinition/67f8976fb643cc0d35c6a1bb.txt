@@ -1,0 +1,395 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1744346440169,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759243666136,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed929213d707c2d2756f",
+		"status":"DEPLOYED",
+		"version":59,
+		"workflowVersion":74
+	},
+	"edges":[
+		{
+			"fromNodeId":"JLdqU",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"9yzyr",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"9yzyr",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"4VjWh",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"4VjWh",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"ClBEC",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"ClBEC",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"oqw3h",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"oqw3h",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"rX22P",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"rX22P",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Jdsld",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"67f8976fb643cc0d35c6a1bb",
+	"lastModifiedBy":-1,
+	"lcName":"confirm connection",
+	"modifiedTime":1759371983684,
+	"name":"Confirm Connection",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":187,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"SuY3I-1",
+			"id":"JLdqU",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"response":{
+							"type":"string",
+							"title":"Response"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"appName":{
+							"type":"string",
+							"title":"appName"
+						},
+						"caseId":{
+							"type":"string",
+							"title":"Case Id"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":189,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"SuY3I-1",
+			"id":"9yzyr",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"options":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Options"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"appName":{
+							"type":"string",
+							"title":"App Name"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"compile_static":false,
+				"code":"return [\"options\":[\"appName\":[appName.toLowerCase()]]]",
+				"parameters":{
+					"appName":"{{ JLdqU.outputs.appName }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"options",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":188,
+				"resourceName":"standard_entities_lookup_entities",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"SuY3I-1",
+			"id":"4VjWh",
+			"index":0,
+			"inputs":{
+				"options":"{{ 9yzyr.outputs.result.options }}",
+				"lookupType":"CONNECTION",
+				"page":{
+					"limit":20,
+					"offset":0
+				},
+				"type":"ByQuery"
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Lookup Request",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":188,
+				"resourceName":"standard_entities_lookup_entities",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"SuY3I-1",
+			"id":"ClBEC",
+			"index":0,
+			"inputs":{
+				"keys":[
+					"=LOWER({{ JLdqU.outputs.appName }})"
+				],
+				"options":"{{ 9yzyr.outputs.result.options }}",
+				"lookupType":"APPLICATION_BY_NAME",
+				"page":{
+					"limit":20,
+					"offset":0
+				},
+				"type":"ByKeys"
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Lookup Request",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":189,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"SuY3I-1",
+			"id":"oqw3h",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"connections":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"name":{
+										"type":"string",
+										"title":"Name"
+									},
+									"id":{
+										"type":"string",
+										"title":"Id"
+									}
+								},
+								"additionalProperties":false,
+								"required":[]
+							},
+							"title":"Connections"
+						},
+						"iconUrl":{
+							"type":"string",
+							"title":"Icon Url"
+						},
+						"appDisplayName":{
+							"type":"string",
+							"title":"App Display Name"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"connectionLookupResponse":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Connection Lookup Response"
+						},
+						"applicationLookupResponse":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Application Lookup Response"
+						},
+						"appName":{
+							"type":"string",
+							"title":"App Name"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"compile_static":false,
+				"code":"return [\"connections\": connectionLookupResponse.objects, \"iconUrl\":applicationLookupResponse.objects.get(appName).iconUrl, \"appDisplayName\": applicationLookupResponse.objects.get(appName).name]",
+				"parameters":{
+					"connectionLookupResponse":"{{ 4VjWh.outputs.response }}",
+					"applicationLookupResponse":"{{ ClBEC.outputs.response }}",
+					"appName":"=LOWER({{ JLdqU.outputs.appName }})"
+				}
+			},
+			"skip":false,
+			"subTitle":"response",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":199,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"SuY3I-1",
+			"id":"rX22P",
+			"index":0,
+			"inputs":{
+				"automationId":"67f89913767e7a6c34cd2ec3",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"connections":{
+						"source":"{{ oqw3h.outputs.result.connections }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"id":"{{ oqw3h.outputs.result.connections[0].id }}",
+							"name":"{{ oqw3h.outputs.result.connections[0].name }}"
+						}
+					},
+					"appIconUrl":"{{ oqw3h.outputs.result.iconUrl }}",
+					"caseId":"{{ JLdqU.outputs.caseId }}",
+					"appName":"=LOWER({{ JLdqU.outputs.appName }})",
+					"connectionName":"=CONCATENATE({{ __USER__.outputs.name }},\" \", {{ oqw3h.outputs.result.appDisplayName }})",
+					"authType":"OAUTH",
+					"appNameLabel":"{{ oqw3h.outputs.result.appDisplayName }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"publish ask connection",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":190,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"SuY3I-1",
+			"id":"Jdsld",
+			"index":0,
+			"inputs":{
+				"result":{
+					"response":"Connection Gathered successfully"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":1866,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		
+	],
+	"version":75
+}
