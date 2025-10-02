@@ -1,0 +1,393 @@
+{
+	"appsUsed":[
+		"microsoft_outlook"
+	],
+	"createdTime":1744029243957,
+	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759243652990,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed8423e6682b9a51edb5",
+		"status":"DEPLOYED",
+		"version":30,
+		"workflowVersion":42
+	},
+	"edges":[
+		{
+			"fromNodeId":"aMyxT",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"v18rN",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"v18rN",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"tBNIf",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"tBNIf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"N2Jjp",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"N2Jjp",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"0BQVL",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"0BQVL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"asuZG",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"67f3c63b2342a84cf40b8437",
+	"lastModifiedBy":-1,
+	"lcName":"[outlook] trigger data processing",
+	"modifiedTime":1759371970696,
+	"name":"[Outlook] Trigger Data processing",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":463,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"vv4DM-1",
+			"id":"aMyxT",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"emailObject":{
+							"type":"object",
+							"properties":{
+								"emailContent":{
+									"type":"string",
+									"title":"Email Content"
+								},
+								"emailAttachments":{
+									"type":"array",
+									"items":{
+										"type":"object",
+										"properties":{},
+										"additionalProperties":false
+									},
+									"title":"Email Attachments"
+								},
+								"messageObject":{
+									"type":"object",
+									"properties":{},
+									"additionalProperties":false,
+									"title":"Message Object"
+								},
+								"emailAddresses":{
+									"type":"string",
+									"title":"Email Addresses"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Email Object",
+							"required":[]
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"emailData":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Email Data"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"emailData"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.parameters.emailData.items"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":477,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"vv4DM-1",
+			"id":"v18rN",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"emailId":{
+							"type":"string",
+							"title":"Email ID"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"emailData":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Email Data"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"compile_static":false,
+				"code":"def emailData=binding.hasVariable(\"emailData\")?binding.emailData:[]\nif(!emailData.isEmpty())\n{\n  def email=emailData.get(0);\n  return [\"emailId\":email?.id?:\"\"]\n}\nreturn [\"emailId\":\"\"]\n\n",
+				"parameters":{
+					"emailData":{
+						"source":"{{ aMyxT.outputs.emailData }}",
+						"ua:type":"mappedArray",
+						"items":"{{ aMyxT.outputs.emailData[0] }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"microsoft_outlook",
+				"resourceVersion":1158,
+				"connectionId":"67bc20f086c3312e346556d1",
+				"resourceName":"microsoft_outlook_fetch_message_by_id",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"vv4DM-1",
+			"id":"tBNIf",
+			"index":0,
+			"inputs":{
+				"messageId":"{{ v18rN.outputs.result.emailId }}"
+			},
+			"skip":false,
+			"subTitle":"Microsoft Outlook",
+			"title":"Fetch message by id",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"microsoft_outlook",
+				"resourceVersion":1135,
+				"connectionId":"67bc20f086c3312e346556d1",
+				"resourceName":"microsoft_outlook_get_message_attachments",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"vv4DM-1",
+			"id":"N2Jjp",
+			"index":0,
+			"inputs":{
+				"messageId":"{{ v18rN.outputs.result.emailId }}"
+			},
+			"skip":false,
+			"subTitle":"Microsoft Outlook",
+			"title":"Retrieves list of attachements",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.parameters.attachmentsList.items"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":478,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"vv4DM-1",
+			"id":"0BQVL",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"authorEmail":{
+							"type":"string",
+							"title":"Author Email"
+						},
+						"emailContent":{
+							"type":"string",
+							"title":"Email Content"
+						},
+						"emailAttachments":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Email Attachments"
+						},
+						"messageObject":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Message Object"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"emailData":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Email Data"
+						},
+						"attachmentsList":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Attachments List"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"compile_static":false,
+				"code":"def emailData=binding.hasVariable(\"emailData\")?binding.emailData:null\n\ndef authorEmail=\"\"\ndef emailContent=\"\"\ndef emailAttachments=binding.hasVariable(\"attachmentsList\")?binding.attachmentsList:[]\nif(emailData!=null)\n{\n  authorEmail=emailData?.from?.emailAddress?.address?:\"\";\n  emailContent=emailData?.body?.content?:\"\"\n}\n\nreturn [\"messageObject\":emailData,\"authorEmail\":authorEmail,\"emailContent\":emailContent,\"emailAttachments\":emailAttachments]\n",
+				"parameters":{
+					"emailData":"{{ tBNIf.outputs }}",
+					"attachmentsList":{
+						"source":"{{ N2Jjp.outputs.value }}",
+						"ua:type":"mappedArray",
+						"items":"{{ N2Jjp.outputs.value[0] }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":468,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"vv4DM-1",
+			"id":"asuZG",
+			"index":0,
+			"inputs":{
+				"result":{
+					"emailObject":{
+						"emailContent":"{{ 0BQVL.outputs.result.emailContent }}",
+						"emailAttachments":{
+							"source":"{{ 0BQVL.outputs.result.emailAttachments }}",
+							"ua:type":"mappedArray",
+							"items":"{{ 0BQVL.outputs.result.emailAttachments[0] }}"
+						},
+						"messageObject":"{{ 0BQVL.outputs.result.messageObject }}",
+						"emailAddresses":"{{ 0BQVL.outputs.result.authorEmail }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":39717,
+	"runtimeConnectionAppNames":[
+		"microsoft_outlook"
+	],
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":true,
+	"tags":[
+		
+	],
+	"version":43
+}
