@@ -5,12 +5,12 @@
 	"createdTime":1757441825478,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243520794,
+		"deployedAt":1759243556787,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed009213d707c2d272bf",
+		"deployedDefinitionId":"68dbed2423e6682b9a51eb54",
 		"status":"DEPLOYED",
-		"version":4,
-		"workflowVersion":49
+		"version":5,
+		"workflowVersion":50
 	},
 	"edges":[
 		{
@@ -100,7 +100,7 @@
 	"id":"68792d8465c17d2596366b38",
 	"lastModifiedBy":-1,
 	"lcName":"create knowledge",
-	"modifiedTime":1759243556714,
+	"modifiedTime":1759371878734,
 	"name":"Create Knowledge",
 	"nodes":[
 		{
@@ -1034,5 +1034,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":50
+	"version":51
 }
