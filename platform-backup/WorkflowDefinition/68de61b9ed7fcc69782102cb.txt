@@ -9,14 +9,14 @@
 			"fromNodeId":"n_Wji6H",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_oOYRE",
+			"toNodeId":"n_igWjj",
 			"type":"next"
 		}
 	],
 	"id":"68de61b9ed7fcc69782102cb",
 	"lastModifiedBy":602,
 	"lcName":"testing",
-	"modifiedTime":1759404490940,
+	"modifiedTime":1759404503649,
 	"name":"testing",
 	"nodes":[
 		{
@@ -55,15 +55,27 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":994,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_xPFee-1",
-			"id":"_oOYRE",
+			"id":"n_igWjj",
 			"index":2,
+			"inputs":{
+				"result":{
+					"output":"abcd"
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":602,
@@ -83,5 +95,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
