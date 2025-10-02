@@ -5,12 +5,12 @@
 	"createdTime":1752507528384,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655362925,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f38238757c179b123717",
+		"deployedAt":1759243581515,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed3d9213d707c2d273b8",
 		"status":"DEPLOYED",
-		"version":32,
-		"workflowVersion":45
+		"version":34,
+		"workflowVersion":47
 	},
 	"edges":[
 		{
@@ -34,7 +34,7 @@
 	"id":"686e872d5b3e851f0a9a8065",
 	"lastModifiedBy":-1,
 	"lcName":"co-pilot config on update handler",
-	"modifiedTime":1759243548825,
+	"modifiedTime":1759371902112,
 	"name":"Co-pilot Config on Update Handler",
 	"nodes":[
 		{
@@ -146,5 +146,5 @@
 		}
 	},
 	"standard":true,
-	"version":46
+	"version":48
 }
