@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759449329611,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_BzeUm",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_4IGvm",
+			"type":"next"
+		}
+	],
+	"id":"68df10f132f8572ada24c781",
+	"lastModifiedBy":59995,
+	"lcName":" missing next partition",
+	"modifiedTime":1759449329611,
+	"name":" Missing Next Partition",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_BzeUm-1",
+			"id":"_BzeUm",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_BzeUm-1",
+			"id":"_4IGvm",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":59995,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
