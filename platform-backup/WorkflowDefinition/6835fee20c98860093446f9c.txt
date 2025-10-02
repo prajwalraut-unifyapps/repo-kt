@@ -5,12 +5,12 @@
 	"createdTime":1750490474955,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655411351,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f3b338757c179b123f15",
+		"deployedAt":1759243621333,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dbed659213d707c2d274bd",
 		"status":"DEPLOYED",
-		"version":44,
-		"workflowVersion":69
+		"version":46,
+		"workflowVersion":71
 	},
 	"edges":[
 		{
@@ -64,7 +64,7 @@
 	"id":"6835fee20c98860093446f9c",
 	"lastModifiedBy":-1,
 	"lcName":"generic fetch embeddings (signal wrapper)",
-	"modifiedTime":1759243589017,
+	"modifiedTime":1759371938910,
 	"name":"Generic Fetch Embeddings (Signal Wrapper)",
 	"nodes":[
 		{
@@ -376,5 +376,5 @@
 	"tags":[
 		
 	],
-	"version":70
+	"version":72
 }
