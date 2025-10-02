@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		
+		"gcloud_storage"
 	],
 	"createdTime":1759386938587,
 	"deleted":false,
@@ -9,14 +9,14 @@
 			"fromNodeId":"_BdHTh",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_mXyvv",
+			"toNodeId":"n_svgZI",
 			"type":"next"
 		}
 	],
 	"id":"68de1d3a2364216c2da9cdab",
 	"lastModifiedBy":2721,
 	"lcName":"gcs_trigger_tesdt",
-	"modifiedTime":1759386938587,
+	"modifiedTime":1759386978689,
 	"name":"gcs_trigger_tesdt",
 	"nodes":[
 		{
@@ -25,7 +25,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_BdHTh-1",
 			"id":"_BdHTh",
-			"index":0,
+			"index":1,
 			"skip":false,
 			"title":"Select a trigger event",
 			"trigger":{
@@ -34,18 +34,30 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"gcloud_storage",
+				"resourceVersion":5677,
+				"connectionId":"68ac666caa52965d63249026",
+				"resourceName":"gcloud_storage_upload_object",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_BdHTh-1",
-			"id":"_mXyvv",
-			"index":0,
+			"id":"n_svgZI",
+			"index":2,
+			"inputs":{},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Google Cloud Storage",
+			"title":"Upload an object",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":2721,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +71,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
