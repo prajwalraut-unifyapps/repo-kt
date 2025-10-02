@@ -23,7 +23,7 @@
 	"id":"68ddf6602364216c2da9ae2a",
 	"lastModifiedBy":185583,
 	"lcName":"task_pb",
-	"modifiedTime":1759398206263,
+	"modifiedTime":1759398966645,
 	"name":"Task_PB",
 	"nodes":[
 		{
@@ -123,20 +123,30 @@
 					}
 				},
 				"input":{
-					"type":"array",
-					"title":"Tag",
-					"ua:__linkedVariable__":"n_6l4oG.outputs.Tag",
-					"items":{
-						"type":"string"
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"tag"
+					],
+					"properties":{
+						"tag":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Tag"
+						}
 					}
 				},
-				"code":"//def currentTag = [\"apple\",\"banana\"]\nString arr[] = tag\ndef list = arr.toList()\nlist.add(\"date\")\nlist.add(\"rat\")\n\n\n\nreturn [currentTagOut:list as String[]]",
+				"code":"\ndef list = tag.toList()\nlist.add(\"date\")\nlist.add(\"rat\")\nlist.remove(\"rat\")\n\n\n\nreturn [currentTagOut:list as String[]]",
 				"compile_static":false,
 				"captureStdOutput":true,
 				"parameters":{
-					"source":"{{ n_6l4oG.outputs.Tag }}",
-					"ua:type":"mappedArray",
-					"items":"{{ n_6l4oG.outputs.Tag[0] }}"
+					"tag":{
+						"source":"{{ n_6l4oG.outputs.Tag }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_6l4oG.outputs.Tag[0] }}"
+					}
 				}
 			},
 			"skip":false,
@@ -160,8 +170,8 @@
 			"inputs":{
 				"result":{
 					"currentTagOut":{
-						"source":"{{ n_xcwp1.outputs.result.currentTagOut }}",
 						"ua:type":"mappedArray",
+						"source":"{{ n_xcwp1.outputs.result.currentTagOut }}",
 						"items":"{{ n_xcwp1.outputs.result.currentTagOut[0] }}"
 					}
 				}
@@ -189,5 +199,5 @@
 	"tags":[
 		
 	],
-	"version":26
+	"version":27
 }
