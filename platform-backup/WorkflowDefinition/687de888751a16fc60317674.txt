@@ -119,7 +119,7 @@
 	"id":"687de888751a16fc60317674",
 	"lastModifiedBy":44567,
 	"lcName":"newiterateintegervaluesusingwhileloop_dnd",
-	"modifiedTime":1759401234760,
+	"modifiedTime":1759401688272,
 	"name":"NewIterateIntegerValuesUsingWhileLoop_DND",
 	"nodes":[
 		{
@@ -129,7 +129,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ZQtgN-1",
 			"id":"n_tJdwj",
@@ -137,25 +137,29 @@
 			"inputs":{
 				"result":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"resultString":{
 							"type":"string",
 							"title":"resultString"
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				},
 				"setup":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"iterations":{
 							"type":"integer",
 							"title":"iterations"
+						},
+						"itrj":{
+							"type":"integer",
+							"title":"Itrj"
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				}
 			},
 			"skip":false,
@@ -174,7 +178,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ZQtgN-1",
 			"id":"n_CERrh",
@@ -225,7 +229,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ZQtgN-1",
 			"id":"n_EpX2e",
@@ -274,7 +278,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ZQtgN-1",
 			"id":"n_u5NuJ",
@@ -307,7 +311,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_u5NuJ@_ZQtgN-1@l",
 			"id":"n_4iHsg",
@@ -418,7 +422,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_u5NuJ@_ZQtgN-1@l",
 			"id":"n_9nKC2",
@@ -430,7 +434,7 @@
 							"property":"{{ n_4iHsg.outputs.j }}",
 							"filter":{
 								"operator":"LT",
-								"value":"{{ n_tJdwj.outputs.iterations }}"
+								"value":"{{ n_tJdwj.outputs.itrj }}"
 							}
 						}
 					],
@@ -451,7 +455,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_9nKC2@n_u5NuJ@_ZQtgN-1@l@l",
 			"id":"n_nzZmA",
@@ -481,7 +485,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_nzZmA@n_9nKC2@n_u5NuJ@_ZQtgN-1@l@l@y",
 			"id":"n_92TKt",
@@ -588,7 +592,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_9nKC2@n_u5NuJ@_ZQtgN-1@l@l",
 			"id":"n_l4qac",
@@ -674,7 +678,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_u5NuJ@_ZQtgN-1@l",
 			"id":"n_OccvN",
@@ -700,7 +704,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ZQtgN-1",
 			"id":"n_Xt52M",
@@ -733,5 +737,5 @@
 	"tags":[
 		
 	],
-	"version":23
+	"version":24
 }
