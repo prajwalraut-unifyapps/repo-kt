@@ -119,7 +119,7 @@
 	"id":"687de888751a16fc60317674",
 	"lastModifiedBy":44567,
 	"lcName":"newiterateintegervaluesusingwhileloop_dnd",
-	"modifiedTime":1759400946565,
+	"modifiedTime":1759401234760,
 	"name":"NewIterateIntegerValuesUsingWhileLoop_DND",
 	"nodes":[
 		{
@@ -502,7 +502,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_9nKC2@n_u5NuJ@_ZQtgN-1@l@l",
 			"id":"n_dmVtP",
@@ -511,7 +511,7 @@
 				"variables":[
 					{
 						"source":"{{ n_EpX2e.outputs.str }}",
-						"value":"=CONCATENATE({{ n_EpX2e.outputs.str }},{{ n_CERrh.outputs.i }}, {{ n_4iHsg.outputs.j }},\" \")"
+						"value":"=CONCATENATE({{ n_EpX2e.outputs.str }},TEXT({{ n_CERrh.outputs.i }}, \"0\"), TEXT({{ n_4iHsg.outputs.j }}, \"0\"),\" \")"
 					}
 				]
 			},
@@ -733,5 +733,5 @@
 	"tags":[
 		
 	],
-	"version":22
+	"version":23
 }
