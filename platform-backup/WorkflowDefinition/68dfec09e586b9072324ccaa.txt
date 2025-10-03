@@ -109,12 +109,19 @@
 			"skip":false,
 			"toNodeId":"n_aCJ22",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_aCJ22",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_m4SoU",
+			"type":"next"
 		}
 	],
 	"id":"68dfec09e586b9072324ccaa",
 	"lastModifiedBy":132116,
 	"lcName":"testing_condition_branch",
-	"modifiedTime":1759505848349,
+	"modifiedTime":1759505858370,
 	"name":"testing_condition_branch",
 	"nodes":[
 		{
@@ -437,6 +444,21 @@
 			"subTitle":"Standard entities by UnifyApps",
 			"title":"Fetch User",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_6W84T-1",
+			"id":"n_m4SoU",
+			"index":11,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":132116,
@@ -456,5 +478,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
