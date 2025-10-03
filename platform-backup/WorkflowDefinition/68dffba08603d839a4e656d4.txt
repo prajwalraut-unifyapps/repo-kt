@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759509408292,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_XdKvh",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_SLwko",
+			"type":"next"
+		}
+	],
+	"id":"68dffba08603d839a4e656d4",
+	"lastModifiedBy":517,
+	"lcName":"testing stream automation",
+	"modifiedTime":1759509408292,
+	"name":"testing stream automation",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_XdKvh-1",
+			"id":"_XdKvh",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_XdKvh-1",
+			"id":"_SLwko",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":517,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
