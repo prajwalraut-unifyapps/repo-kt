@@ -28,9 +28,9 @@
 		}
 	],
 	"id":"68af1080002c1a1e80fd517c",
-	"lastModifiedBy":44105,
+	"lastModifiedBy":44567,
 	"lcName":"sqwfdewfe",
-	"modifiedTime":1759408757027,
+	"modifiedTime":1759471273879,
 	"name":"sqwfdewfe",
 	"nodes":[
 		{
@@ -137,7 +137,7 @@
 				}
 			},
 			"inputs":{
-				"test":"test"
+				"test":"003"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -175,7 +175,7 @@
 				"variables":[
 					{
 						"source":"{{ n_EvgmC.outputs.str }}",
-						"value":"=CONCATENATE({{ n_1YL94.outputs.test }}, \"9\")"
+						"value":"=CONCATENATE({{ n_1YL94.outputs.test }}, \"99\")"
 					}
 				]
 			},
@@ -202,5 +202,5 @@
 	"tags":[
 		"fqwefqew"
 	],
-	"version":63
+	"version":64
 }
