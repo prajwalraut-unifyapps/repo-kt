@@ -5,12 +5,12 @@
 	"createdTime":1759432706383,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759432714079,
+		"deployedAt":1759517591207,
 		"deployedBy":161958,
-		"deployedDefinitionId":"68ded009fe740e380539ac80",
-		"status":"PAUSED",
-		"version":1,
-		"workflowVersion":0
+		"deployedDefinitionId":"68e01b97e72ac6143038ae07",
+		"status":"DEPLOYED",
+		"version":2,
+		"workflowVersion":1
 	},
 	"edges":[
 		{
@@ -24,7 +24,7 @@
 	"id":"68ded00285b54155e643c0eb",
 	"lastModifiedBy":161958,
 	"lcName":"ritiksubscriber2",
-	"modifiedTime":1759517588546,
+	"modifiedTime":1759518275324,
 	"name":"ritikSubscriber2",
 	"nodes":[
 		{
@@ -34,7 +34,7 @@
 				"resourceName":"streams_by_unifyapps_on_event"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_cNPyl-1",
 			"id":"n_dpgPR",
@@ -85,5 +85,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
