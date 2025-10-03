@@ -100,7 +100,7 @@
 	"id":"68dfde9ef5d9ee32ff9a764f",
 	"lastModifiedBy":132116,
 	"lcName":"loop_testing_new",
-	"modifiedTime":1759502439834,
+	"modifiedTime":1759502448112,
 	"name":"loop_testing_new",
 	"nodes":[
 		{
@@ -296,7 +296,7 @@
 				}
 			},
 			"inputs":{
-				"input":"successfull"
+				"input":"sucessfull"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -470,5 +470,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
