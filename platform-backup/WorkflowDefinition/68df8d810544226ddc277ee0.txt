@@ -1,51 +1,70 @@
 {
 	"appsUsed":[
-		
+		"hamsa"
 	],
 	"createdTime":1759481217601,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_ExpZJ",
+			"fromNodeId":"n_stSDJ",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_XV9Pc",
+			"toNodeId":"n_tj6Ko",
 			"type":"next"
 		}
 	],
 	"id":"68df8d810544226ddc277ee0",
 	"lastModifiedBy":43523,
 	"lcName":"hamsa test",
-	"modifiedTime":1759481217601,
+	"modifiedTime":1759493543440,
 	"name":"hamsa test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":827,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ExpZJ-1",
-			"id":"_ExpZJ",
-			"index":0,
+			"id":"n_stSDJ",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"hamsa",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ExpZJ-1",
-			"id":"_XV9Pc",
-			"index":0,
+			"id":"n_tj6Ko",
+			"index":2,
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Hamsa",
+			"title":"Select an action",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":43523,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +78,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
