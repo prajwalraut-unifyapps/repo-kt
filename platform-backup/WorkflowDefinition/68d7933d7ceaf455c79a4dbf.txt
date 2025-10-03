@@ -5,12 +5,12 @@
 	"createdTime":1758977661374,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759310038513,
-		"deployedBy":44096,
-		"deployedDefinitionId":"68dcf0d6540c41747763380b",
+		"deployedAt":1759501792822,
+		"deployedBy":23949,
+		"deployedDefinitionId":"68dfdde0f5d9ee32ff9a70b2",
 		"status":"DEPLOYED",
-		"version":8,
-		"workflowVersion":16
+		"version":9,
+		"workflowVersion":17
 	},
 	"edges":[
 		{
@@ -55,7 +55,7 @@
 	"id":"68d7933d7ceaf455c79a4dbf",
 	"lastModifiedBy":23949,
 	"lcName":"lookup form test by query",
-	"modifiedTime":1759501791011,
+	"modifiedTime":1759502025589,
 	"name":"Lookup Form Test By Query",
 	"nodes":[
 		{
@@ -83,18 +83,22 @@
 						"is_optional":true
 					},
 					"properties":{
-						"response":{
-							"type":"object",
-							"properties":{},
-							"additionalProperties":false,
-							"title":"Response"
+						"objects":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Objects"
 						}
 					}
 				},
-				"callableInterfaceId":"workflow_lookup_by_keys",
+				"callableInterfaceId":"workflow_lookup_by_query",
 				"setup":{
 					"required":[
 						"type",
+						"lookupType",
 						"options"
 					],
 					"ua:modal":{
@@ -106,16 +110,42 @@
 							"type":"string",
 							"title":"Type"
 						},
-						"keys":{
+						"fields":{
 							"type":"array",
 							"items":{
 								"type":"string"
 							},
-							"title":"Keys"
+							"title":"Fields"
+						},
+						"query":{
+							"type":"string",
+							"title":"Query"
 						},
 						"lookupType":{
 							"type":"string",
 							"title":"Lookup Type"
+						},
+						"page":{
+							"type":"object",
+							"properties":{
+								"limit":{
+									"type":"integer",
+									"title":"Limit"
+								},
+								"offset":{
+									"type":"integer",
+									"title":"Offset"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Page",
+							"required":[]
+						},
+						"filter":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Filter"
 						},
 						"options":{
 							"type":"object",
@@ -129,9 +159,7 @@
 									"title":"Runtime Type"
 								},
 								"runtimeConnections":{
-									"type":"object",
-									"properties":{},
-									"additionalProperties":false,
+									"type":"string",
 									"title":"Runtime Connections"
 								},
 								"timeoutInMillis":{
@@ -150,13 +178,6 @@
 							"required":[
 								"workflowId"
 							]
-						},
-						"fields":{
-							"type":"array",
-							"items":{
-								"type":"string"
-							},
-							"title":"Fields"
 						}
 					}
 				}
@@ -249,5 +270,5 @@
 	"tags":[
 		
 	],
-	"version":17
+	"version":18
 }
