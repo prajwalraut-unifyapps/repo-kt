@@ -60,7 +60,7 @@
 	"id":"68df6a13507dcf3211f43753",
 	"lastModifiedBy":161877,
 	"lcName":"dep-graph",
-	"modifiedTime":1759473150139,
+	"modifiedTime":1759473156441,
 	"name":"dep-graph",
 	"nodes":[
 		{
@@ -233,7 +233,9 @@
 			"groupId":"_0aXnR-1",
 			"id":"n_kDZe5",
 			"index":8,
-			"inputs":{},
+			"inputs":{
+				"result":"s"
+			},
 			"skip":false,
 			"subTitle":"Callable",
 			"title":"Respond to automation",
@@ -257,5 +259,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
