@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759481871631,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_sfizo",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_uaqDL",
+			"type":"next"
+		}
+	],
+	"id":"68df900fbbaeb52d532511f6",
+	"lastModifiedBy":124029,
+	"lcName":"netsuite new trigger",
+	"modifiedTime":1759481871631,
+	"name":"netsuite new trigger",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_sfizo-1",
+			"id":"_sfizo",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_sfizo-1",
+			"id":"_uaqDL",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":124029,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
