@@ -1,51 +1,74 @@
 {
 	"appsUsed":[
-		
+		"fillout",
+		"gcalendar"
 	],
 	"createdTime":1759471764355,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_0XdSq",
+			"fromNodeId":"n_eVXnz",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_StUGN",
+			"toNodeId":"n_isHdH",
 			"type":"next"
 		}
 	],
 	"id":"68df6894507dcf3211f43599",
 	"lastModifiedBy":44105,
 	"lcName":"test",
-	"modifiedTime":1759471764355,
+	"modifiedTime":1759483587869,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"gcalendar",
+				"resourceVersion":5767,
+				"connectionId":"68d3a3bff5127209905f7738",
+				"resourceName":"gcalendar_on_event_changes"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_0XdSq-1",
-			"id":"_0XdSq",
-			"index":0,
+			"id":"n_eVXnz",
+			"index":1,
+			"inputs":{
+				"calendarId":"en.indian%23holiday%40group.v.calendar.google.com"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Google Calendar",
+			"title":"Event changed (Google Calendar)",
 			"trigger":{
 				"type":"EVENT"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"fillout",
+				"resourceVersion":2496,
+				"connectionId":"68c2a7c20c48cd5eea95307b",
+				"resourceName":"fillout_get_forms",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_0XdSq-1",
-			"id":"_StUGN",
-			"index":0,
+			"id":"n_isHdH",
+			"index":2,
+			"inputs":{},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Fillout",
+			"title":"Get forms",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":44105,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +82,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
