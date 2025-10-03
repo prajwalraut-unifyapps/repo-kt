@@ -39,33 +39,12 @@
 			"skip":false,
 			"toNodeId":"n_HlZyL",
 			"type":"next"
-		},
-		{
-			"fromNodeId":"n_HlZyL",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_Gxt0B",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_Gxt0B",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_efRv4",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_efRv4",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_PhZGR",
-			"type":"next"
 		}
 	],
 	"id":"6888d1d1b95c1d15621d3ae2",
 	"lastModifiedBy":44567,
 	"lcName":"test",
-	"modifiedTime":1759490528308,
+	"modifiedTime":1759494474524,
 	"name":"test",
 	"nodes":[
 		{
@@ -101,7 +80,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_qerKn-1",
 			"id":"n_LXk07",
@@ -119,7 +98,8 @@
 				"responseContentType":"application/json",
 				"authType":"CUSTOM",
 				"requestContentType":"application/json",
-				"ignoreTrailingSlashes":false
+				"ignoreTrailingSlashes":false,
+				"certificateType":"CERT_STRING"
 			},
 			"skip":false,
 			"subTitle":"Custom HTTP Endpoint",
@@ -289,7 +269,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_qerKn-1",
 			"id":"n_HlZyL",
@@ -315,128 +295,6 @@
 			"subTitle":"Custom HTTP Endpoint",
 			"title":"internal request",
 			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"custom_http_endpoint",
-				"resourceVersion":18,
-				"resourceName":"custom_http_endpoint_execute",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_qerKn-1",
-			"id":"n_Gxt0B",
-			"index":7,
-			"inputs":{
-				"isAsync":false,
-				"enableProxy":false,
-				"requestTimeoutInSecs":-1,
-				"httpMethod":"GET",
-				"connectionType":"DIRECT",
-				"sslVerify":false,
-				"path":"internal/api-platform-admin-token/get-tokens/1",
-				"baseUrl":"http://internal-global-svc:80/",
-				"httpVersion":"HTTP_2",
-				"responseContentType":"application/json",
-				"authType":"CUSTOM",
-				"requestContentType":"application/json",
-				"ignoreTrailingSlashes":false,
-				"certificateType":"CERT_STRING"
-			},
-			"skip":false,
-			"subTitle":"Custom HTTP Endpoint",
-			"title":"Execute REST request",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"custom_http_endpoint",
-				"resourceVersion":18,
-				"resourceName":"custom_http_endpoint_execute",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_qerKn-1",
-			"id":"_efRv4",
-			"index":8,
-			"inputs":{
-				"isAsync":false,
-				"enableProxy":false,
-				"requestTimeoutInSecs":-1,
-				"httpMethod":"POST",
-				"connectionType":"DIRECT",
-				"sslVerify":false,
-				"path":"internal/api-platform-admin-token/refresh/26",
-				"baseUrl":"http://internal-global-svc:80/",
-				"httpVersion":"HTTP_2",
-				"queryParamsList":[
-					{
-						"key":"invalidateExisting",
-						"value":"false"
-					},
-					{
-						"key":"expiryMillis",
-						"value":"1762159075000"
-					},
-					{
-						"key":"enableCrossCustomerActions",
-						"value":"false"
-					}
-				],
-				"responseContentType":"application/json",
-				"authType":"CUSTOM",
-				"requestContentType":"application/json",
-				"ignoreTrailingSlashes":false,
-				"certificateType":"CERT_STRING"
-			},
-			"skip":false,
-			"subTitle":"Custom HTTP Endpoint",
-			"title":"Execute REST request",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"custom_http_endpoint",
-				"resourceVersion":18,
-				"resourceName":"custom_http_endpoint_execute",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_qerKn-1",
-			"id":"_PhZGR",
-			"index":9,
-			"inputs":{
-				"isAsync":false,
-				"enableProxy":false,
-				"requestTimeoutInSecs":-1,
-				"httpMethod":"POST",
-				"connectionType":"DIRECT",
-				"sslVerify":false,
-				"path":"internal/api-platform-admin-token/invalidate",
-				"baseUrl":"http://internal-global-svc:80/",
-				"httpVersion":"HTTP_2",
-				"queryParamsList":[
-					{
-						"key":"token",
-						"value":"68df8e24f501fd2fd306cbe4"
-					}
-				],
-				"responseContentType":"application/json",
-				"authType":"CUSTOM",
-				"requestContentType":"application/json",
-				"ignoreTrailingSlashes":false,
-				"certificateType":"CERT_STRING"
-			},
-			"skip":false,
-			"subTitle":"Custom HTTP Endpoint",
-			"title":"Execute REST request",
-			"type":"ACTION"
 		}
 	],
 	"ownerUserId":3546,
@@ -457,5 +315,5 @@
 	"tags":[
 		
 	],
-	"version":16
+	"version":17
 }
