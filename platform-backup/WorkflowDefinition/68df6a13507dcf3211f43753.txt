@@ -53,19 +53,21 @@
 			"fromNodeId":"n_kMXFh",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_yENQO",
+			"toNodeId":"n_kDZe5",
 			"type":"next"
 		}
 	],
 	"id":"68df6a13507dcf3211f43753",
 	"lastModifiedBy":161877,
 	"lcName":"dep-graph",
-	"modifiedTime":1759473057347,
+	"modifiedTime":1759473150139,
 	"name":"dep-graph",
 	"nodes":[
 		{
 			"context":{
-				"appName":"callables"
+				"appName":"callables",
+				"resourceVersion":976,
+				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
 			"dirty":true,
@@ -73,9 +75,10 @@
 			"groupId":"_0aXnR-1",
 			"id":"n_7CuSI",
 			"index":1,
+			"inputs":{},
 			"skip":false,
 			"subTitle":"Callable",
-			"title":"Select a trigger event",
+			"title":"Trigger via automation",
 			"trigger":{
 				"type":"CALLABLE"
 			},
@@ -220,26 +223,21 @@
 		{
 			"context":{
 				"appName":"callables",
-				"resourceVersion":1026,
-				"resourceName":"callables_call_automation",
+				"resourceVersion":1001,
+				"resourceName":"callables_return_to_automation",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
-			"id":"n_yENQO",
+			"id":"n_kDZe5",
 			"index":8,
-			"inputs":{
-				"runtimeConnections":{},
-				"synchronous":true,
-				"version":"-1",
-				"parameters":{}
-			},
+			"inputs":{},
 			"skip":false,
 			"subTitle":"Callable",
-			"title":"Call automation",
-			"type":"CALL_WORKFLOW"
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":161877,
@@ -259,5 +257,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
