@@ -16,12 +16,14 @@
 	"id":"68dfc747ee7bed4bfee9071c",
 	"lastModifiedBy":155543,
 	"lcName":"dwaesrg",
-	"modifiedTime":1759496048667,
+	"modifiedTime":1759496053445,
 	"name":"dwaesrg",
 	"nodes":[
 		{
 			"context":{
-				"appName":"webhooks"
+				"appName":"webhooks",
+				"resourceVersion":829,
+				"resourceName":"webhooks_default"
 			},
 			"debug":false,
 			"dirty":true,
@@ -29,9 +31,14 @@
 			"groupId":"_7GtmI-1",
 			"id":"n_ews39",
 			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
 			"subTitle":"Webhook",
-			"title":"Select a trigger event",
+			"title":"New event",
 			"trigger":{
 				"type":"WEBHOOK"
 			},
@@ -87,5 +94,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
