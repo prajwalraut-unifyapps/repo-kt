@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759481217601,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_ExpZJ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_XV9Pc",
+			"type":"next"
+		}
+	],
+	"id":"68df8d810544226ddc277ee0",
+	"lastModifiedBy":43523,
+	"lcName":"hamsa test",
+	"modifiedTime":1759481217601,
+	"name":"hamsa test",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_ExpZJ-1",
+			"id":"_ExpZJ",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_ExpZJ-1",
+			"id":"_XV9Pc",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":43523,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
