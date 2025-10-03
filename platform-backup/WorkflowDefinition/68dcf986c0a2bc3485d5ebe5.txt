@@ -5,12 +5,12 @@
 	"createdTime":1759312262413,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759312286273,
+		"deployedAt":1759476623242,
 		"deployedBy":44096,
-		"deployedDefinitionId":"68dcf99ec0a2bc3485d5eca8",
+		"deployedDefinitionId":"68df7b8f870cd8428097d9be",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":1
+		"version":2,
+		"workflowVersion":3
 	},
 	"edges":[
 		{
@@ -31,7 +31,7 @@
 	"id":"68dcf986c0a2bc3485d5ebe5",
 	"lastModifiedBy":44096,
 	"lcName":"lookup by keys",
-	"modifiedTime":1759476621853,
+	"modifiedTime":1759476688086,
 	"name":"Lookup by keys",
 	"nodes":[
 		{
@@ -41,7 +41,7 @@
 				"resourceName":"callables_from_interface"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_XZYP1-1",
 			"id":"n_6ryMx",
@@ -182,14 +182,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_XZYP1-1",
 			"id":"n_Gpm39",
 			"index":3,
 			"inputs":{
 				"result":{
-					"response":"{{ n_ZMSAj.outputs.result[0] }}"
+					"response":"{{ n_ZMSAj.outputs.result }}"
 				}
 			},
 			"skip":false,
@@ -215,5 +215,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
