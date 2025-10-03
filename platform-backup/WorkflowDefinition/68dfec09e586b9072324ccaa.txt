@@ -121,7 +121,7 @@
 	"id":"68dfec09e586b9072324ccaa",
 	"lastModifiedBy":132116,
 	"lcName":"testing_condition_branch",
-	"modifiedTime":1759505858370,
+	"modifiedTime":1759506004208,
 	"name":"testing_condition_branch",
 	"nodes":[
 		{
@@ -296,7 +296,7 @@
 							"conditions":{
 								"filters":[
 									{
-										"property":"{{ n_aCJ22.outputs.index }}",
+										"property":"{{ n_d0AsG.outputs.index }}",
 										"filter":{
 											"operator":"EQUAL",
 											"value":"4"
@@ -353,7 +353,7 @@
 				"conditions":{
 					"filters":[
 						{
-							"property":"{{ n_aCJ22.outputs.index }}",
+							"property":"{{ n_d0AsG.outputs.index }}",
 							"filter":{
 								"operator":"EQUAL",
 								"value":"4"
@@ -478,5 +478,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
