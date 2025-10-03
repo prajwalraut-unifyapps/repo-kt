@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759493691433,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_n9eR2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_4VAZv",
+			"type":"next"
+		}
+	],
+	"id":"68dfbe3b1324bc07f73d93fc",
+	"lastModifiedBy":45012,
+	"lcName":"fas",
+	"modifiedTime":1759493691433,
+	"name":"fas",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_n9eR2-1",
+			"id":"_n9eR2",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_n9eR2-1",
+			"id":"_4VAZv",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":45012,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
