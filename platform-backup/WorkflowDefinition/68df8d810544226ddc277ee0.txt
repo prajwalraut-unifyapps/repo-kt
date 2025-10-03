@@ -16,7 +16,7 @@
 	"id":"68df8d810544226ddc277ee0",
 	"lastModifiedBy":43523,
 	"lcName":"hamsa test",
-	"modifiedTime":1759493543440,
+	"modifiedTime":1759493652969,
 	"name":"hamsa test",
 	"nodes":[
 		{
@@ -47,6 +47,9 @@
 		{
 			"context":{
 				"appName":"hamsa",
+				"resourceVersion":2,
+				"connectionId":"68dfbdf52d8fd835bedb2bf6",
+				"resourceName":"hamsa_transcribe",
 				"type":"APPLICATION"
 			},
 			"debug":false,
@@ -55,9 +58,14 @@
 			"groupId":"_ExpZJ-1",
 			"id":"n_tj6Ko",
 			"index":2,
+			"inputs":{
+				"mediaUrl":"http://nbad.learnoasis.com/wp-content/uploads/2014/03/05-Unit-05-Discussing-our-plans.mp3",
+				"model":"Hamsa-Conversational-V1.0",
+				"language":"ar"
+			},
 			"skip":false,
 			"subTitle":"Hamsa",
-			"title":"Select an action",
+			"title":"Transcribe audio",
 			"type":"ACTION"
 		}
 	],
@@ -78,5 +86,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
