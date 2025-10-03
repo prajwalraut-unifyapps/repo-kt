@@ -5,16 +5,16 @@
 	"createdTime":1759496007833,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759502125691,
+		"deployedAt":1759502792525,
 		"deployedBy":46030,
-		"deployedDefinitionId":"68dfdf2df5d9ee32ff9a7b2b",
+		"deployedDefinitionId":"68dfe1c8f5d9ee32ff9a9704",
 		"status":"DEPLOYED",
-		"version":9,
-		"workflowVersion":12
+		"version":10,
+		"workflowVersion":13
 	},
 	"edges":[
 		{
-			"fromNodeId":"n_ews39",
+			"fromNodeId":"n_aUn4Z",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_slGxt",
@@ -33,36 +33,66 @@
 			"skip":false,
 			"toNodeId":"n_3fXiC",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_3fXiC",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_fRU8U",
+			"type":"next"
 		}
 	],
 	"id":"68dfc747ee7bed4bfee9071c",
 	"lastModifiedBy":46030,
 	"lcName":"dwaesrg",
-	"modifiedTime":1759502788163,
+	"modifiedTime":1759506075127,
 	"name":"dwaesrg",
 	"nodes":[
 		{
 			"context":{
-				"appName":"webhooks",
-				"resourceVersion":829,
-				"resourceName":"webhooks_default"
+				"appName":"callables",
+				"resourceVersion":1003,
+				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7GtmI-1",
-			"id":"n_ews39",
+			"id":"n_aUn4Z",
 			"index":1,
 			"inputs":{
-				"request":{
-					"contentType":"application/json"
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"ok"
+					],
+					"properties":{
+						"ok":{
+							"type":"string",
+							"title":"Ok"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"fsdf"
+					],
+					"properties":{
+						"fsdf":{
+							"type":"string",
+							"title":"Fsdf"
+						}
+					}
 				}
 			},
 			"skip":false,
-			"subTitle":"Webhook",
-			"title":"New event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"WEBHOOK"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
@@ -106,7 +136,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7GtmI-1",
 			"id":"n_mffa7",
@@ -129,7 +159,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7GtmI-1",
 			"id":"n_3fXiC",
@@ -145,6 +175,29 @@
 			"subTitle":"Slack",
 			"title":"Post message",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1039,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_7GtmI-1",
+			"id":"n_fRU8U",
+			"index":5,
+			"inputs":{
+				"result":{
+					"ok":"200"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":155543,
@@ -164,5 +217,5 @@
 	"tags":[
 		
 	],
-	"version":13
+	"version":14
 }
