@@ -5,12 +5,12 @@
 	"createdTime":1759496007833,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759496823476,
+		"deployedAt":1759496988838,
 		"deployedBy":155543,
-		"deployedDefinitionId":"68dfca7506b2c755a7f53cd4",
+		"deployedDefinitionId":"68dfcb1c06b2c755a7f53dbc",
 		"status":"DEPLOYED",
-		"version":3,
-		"workflowVersion":5
+		"version":4,
+		"workflowVersion":6
 	},
 	"edges":[
 		{
@@ -36,9 +36,9 @@
 		}
 	],
 	"id":"68dfc747ee7bed4bfee9071c",
-	"lastModifiedBy":155543,
+	"lastModifiedBy":46030,
 	"lcName":"dwaesrg",
-	"modifiedTime":1759496987023,
+	"modifiedTime":1759500328402,
 	"name":"dwaesrg",
 	"nodes":[
 		{
@@ -88,7 +88,6 @@
 				"exportType":"PDF",
 				"page":{
 					"format":"a4",
-					"layout":"portrait",
 					"scale":1,
 					"timeout":5000
 				}
@@ -106,7 +105,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_7GtmI-1",
 			"id":"n_mffa7",
@@ -129,7 +128,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_7GtmI-1",
 			"id":"n_3fXiC",
@@ -164,5 +163,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
