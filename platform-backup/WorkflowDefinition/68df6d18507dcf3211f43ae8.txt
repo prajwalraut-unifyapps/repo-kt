@@ -5,12 +5,12 @@
 	"createdTime":1759472920813,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759476463624,
+		"deployedAt":1759476506088,
 		"deployedBy":132116,
-		"deployedDefinitionId":"68df7aef870cd8428097d882",
+		"deployedDefinitionId":"68df7b1a870cd8428097d8d3",
 		"status":"DEPLOYED",
-		"version":6,
-		"workflowVersion":13
+		"version":7,
+		"workflowVersion":14
 	},
 	"edges":[
 		{
@@ -103,12 +103,19 @@
 			"skip":false,
 			"toNodeId":"n_WjLrf",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_WjLrf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_qohW6",
+			"type":"next"
 		}
 	],
 	"id":"68df6d18507dcf3211f43ae8",
 	"lastModifiedBy":132116,
 	"lcName":"nestedloops_insideconditions_testing",
-	"modifiedTime":1759476504459,
+	"modifiedTime":1759476553622,
 	"name":"nestedloops_insideconditions_testing",
 	"nodes":[
 		{
@@ -459,6 +466,21 @@
 			"subTitle":"Callable",
 			"title":"Respond to automation",
 			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_BH9kr-1",
+			"id":"n_qohW6",
+			"index":10,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":132116,
@@ -478,5 +500,5 @@
 	"tags":[
 		
 	],
-	"version":14
+	"version":15
 }
