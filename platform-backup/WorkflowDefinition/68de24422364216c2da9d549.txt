@@ -134,7 +134,7 @@
 	"id":"68de24422364216c2da9d549",
 	"lastModifiedBy":161908,
 	"lcName":"branchloop",
-	"modifiedTime":1759509047637,
+	"modifiedTime":1759509107092,
 	"name":"branchloop",
 	"nodes":[
 		{
@@ -149,7 +149,18 @@
 			"groupId":"_kS6s2-1",
 			"id":"n_BIvEP",
 			"index":1,
-			"inputs":{},
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"result":{
+							"type":"string",
+							"title":"result"
+						}
+					}
+				}
+			},
 			"skip":false,
 			"subTitle":"Callable",
 			"title":"Trigger via automation",
@@ -491,7 +502,9 @@
 			"id":"n_yRzol",
 			"index":12,
 			"inputs":{
-				"result":"r2tw"
+				"result":{
+					"result":"rwg"
+				}
 			},
 			"skip":false,
 			"subTitle":"Callable",
@@ -531,5 +544,5 @@
 	"tags":[
 		
 	],
-	"version":12
+	"version":13
 }
