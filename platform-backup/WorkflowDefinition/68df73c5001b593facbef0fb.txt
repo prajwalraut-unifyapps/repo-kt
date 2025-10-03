@@ -1,51 +1,143 @@
 {
 	"appsUsed":[
-		
+		"gmeet"
 	],
 	"createdTime":1759474629737,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_avp9N",
+			"fromNodeId":"n_sfDvz",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_6C3M9",
+			"toNodeId":"n_JftCd",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_JftCd",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_JtfZY",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_JtfZY",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_iVbrQ",
 			"type":"next"
 		}
 	],
 	"id":"68df73c5001b593facbef0fb",
 	"lastModifiedBy":6701,
 	"lcName":"test",
-	"modifiedTime":1759474629737,
+	"modifiedTime":1759475695054,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"gmeet",
+				"resourceVersion":24,
+				"connectionId":"68dce7ac3e107e10b8327872",
+				"resourceName":"gmeet_on_new_event"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_avp9N-1",
-			"id":"_avp9N",
-			"index":0,
+			"id":"n_sfDvz",
+			"index":1,
+			"inputs":{},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Google Meet",
+			"title":"On new event",
 			"trigger":{
 				"type":"EVENT"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"gmeet",
+				"resourceVersion":25,
+				"connectionId":"68dce7ac3e107e10b8327872",
+				"resourceName":"gmeet_create_subscription",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_avp9N-1",
-			"id":"_6C3M9",
-			"index":0,
+			"id":"n_JftCd",
+			"index":2,
+			"inputs":{
+				"targetResource":"//meet.googleapis.com/spaces/-ADpkXr5aYIB",
+				"eventTypes":[
+					"google.workspace.meet.conference.v2.started",
+					"google.workspace.meet.conference.v2.ended"
+				],
+				"pubsubTopic":"projects/project-1-439404/topics/workspace-events-topic"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Google Meet",
+			"title":"Create pub/sub subscription",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gmeet",
+				"resourceVersion":1652,
+				"connectionId":"66a8f17d8884121e190ca9b5",
+				"resourceName":"gmeet_list_meetings",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_avp9N-1",
+			"id":"n_JtfZY",
+			"index":3,
+			"inputs":{
+				"calendarId":"c_98ad01de4dc6eaeb90e5ef25b6f630d5f3a4e3ca3a2b3c5fdc87da0f64f7640b%40group.calendar.google.com"
+			},
+			"skip":false,
+			"subTitle":"Google Meet",
+			"title":"List meetings",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"gmeet",
+				"resourceVersion":23,
+				"connectionId":"68dce7ac3e107e10b8327872",
+				"resourceName":"gmeet_update_subscription",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_avp9N-1",
+			"id":"n_iVbrQ",
+			"index":4,
+			"inputs":{
+				"subscription_id":"meet-spaces-4ed8d1d5-f2dd-4957-813e-d67883e7ee66",
+				"updateMask":"eventTypes",
+				"eventTypes":[
+					"google.workspace.meet.conference.v2.started",
+					"google.workspace.meet.conference.v2.ended",
+					"google.workspace.meet.recording.v2.fileGenerated",
+					"google.workspace.meet.transcript.v2.fileGenerated"
+				]
+			},
+			"skip":false,
+			"subTitle":"Google Meet",
+			"title":"Update pub/sub subscription",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":6701,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +151,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
