@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759413249779,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759413250096,
+		"deployedBy":44108,
+		"deployedDefinitionId":"68de84014361896e3c5edeea",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":21
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_xhkMq",
@@ -133,9 +141,9 @@
 		}
 	],
 	"id":"68da40154720c96ec691592e",
-	"lastModifiedBy":44108,
+	"lastModifiedBy":25809,
 	"lcName":"localisation | translate single text ",
-	"modifiedTime":1759413249779,
+	"modifiedTime":1759478125526,
 	"name":"Localisation | Translate Single Text ",
 	"nodes":[
 		{
@@ -278,19 +286,7 @@
 					{
 						"id":"2",
 						"inputs":{
-							"name":"Branch 2",
-							"conditions":{
-								"filters":[
-									{
-										"property":"{{ __ENV__.outputs.TRANSLATION_SERVICE_SUPPORTED }}",
-										"filter":{
-											"operator":"EQUAL",
-											"value":"false"
-										}
-									}
-								],
-								"operator":"AND"
-							}
+							"name":"Branch 2"
 						}
 					},
 					{
@@ -474,25 +470,13 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_6zYQ7@_EdyGr-1@2",
 			"id":"n_6zYQ7@2",
 			"index":8,
 			"inputs":{
-				"name":"Branch 2",
-				"conditions":{
-					"filters":[
-						{
-							"property":"{{ __ENV__.outputs.TRANSLATION_SERVICE_SUPPORTED }}",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"false"
-							}
-						}
-					],
-					"operator":"AND"
-				}
+				"name":"Branch 2"
 			},
 			"skip":false,
 			"title":"",
@@ -730,5 +714,5 @@
 		}
 	},
 	"standard":false,
-	"version":21
+	"version":22
 }
