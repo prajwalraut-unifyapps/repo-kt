@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759499077794,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_8i96Y",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_zwxWQ",
+			"type":"next"
+		}
+	],
+	"id":"68dfd345ff54bc77a8a18d10",
+	"lastModifiedBy":188507,
+	"lcName":"hyttgrf",
+	"modifiedTime":1759499077794,
+	"name":"hyttgrf",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_8i96Y-1",
+			"id":"_8i96Y",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_8i96Y-1",
+			"id":"_zwxWQ",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":188507,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
