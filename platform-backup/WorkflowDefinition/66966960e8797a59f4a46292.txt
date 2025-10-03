@@ -5,12 +5,12 @@
 	"createdTime":1721133408389,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243540655,
+		"deployedAt":1759371862844,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed1423e6682b9a51eaee",
+		"deployedDefinitionId":"68dde256d3636c7f14535d69",
 		"status":"DEPLOYED",
-		"version":211,
-		"workflowVersion":934
+		"version":212,
+		"workflowVersion":935
 	},
 	"description":"",
 	"edges":[
@@ -653,9 +653,9 @@
 		]
 	},
 	"id":"66966960e8797a59f4a46292",
-	"lastModifiedBy":-1,
+	"lastModifiedBy":44109,
 	"lcName":"trigger ai agent",
-	"modifiedTime":1759371862764,
+	"modifiedTime":1759495180166,
 	"name":"Trigger AI Agent",
 	"nodes":[
 		{
@@ -956,14 +956,21 @@
 				"recordId":"{{ vBzOH.outputs.caseId }}",
 				"writeThroughSessionVariables":false,
 				"object_type":"service_hub_case",
+				"skipIfBlank":false,
 				"skipPermissionCheck":false,
 				"updateFields":[
 					{
 						"fieldName":"properties.additional.generatingResponse",
 						"actionType":"SET",
 						"setValue":"true"
+					},
+					{
+						"fieldName":"properties.additional.responseGenerationStatus",
+						"actionType":"SET",
+						"setValue":"pending"
 					}
-				]
+				],
+				"unsetIfNull":false
 			},
 			"skip":false,
 			"subTitle":"generating = true",
@@ -1077,6 +1084,7 @@
 				"recordId":"{{ vBzOH.outputs.caseId }}",
 				"writeThroughSessionVariables":true,
 				"object_type":"service_hub_case",
+				"skipIfBlank":false,
 				"skipPermissionCheck":false,
 				"updateFields":[
 					{
@@ -1084,7 +1092,8 @@
 						"actionType":"SET",
 						"setValue":"{{ __RUN__.outputs.executionId }}"
 					}
-				]
+				],
+				"unsetIfNull":false
 			},
 			"skip":false,
 			"subTitle":"Setting Execution Id",
@@ -3866,9 +3875,9 @@
 			"tierName":"global"
 		}
 	},
-	"standard":true,
+	"standard":false,
 	"tags":[
 		"AI Agent"
 	],
-	"version":935
+	"version":936
 }
