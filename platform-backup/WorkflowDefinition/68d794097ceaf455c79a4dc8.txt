@@ -5,12 +5,12 @@
 	"createdTime":1758977331611,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758977399643,
+		"deployedAt":1759056179243,
 		"deployedBy":23949,
-		"deployedDefinitionId":"68d7dd77f1a8bd727046ed27",
+		"deployedDefinitionId":"68d9113325faaf2646235507",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":15
+		"version":3,
+		"workflowVersion":16
 	},
 	"edges":[
 		{
@@ -90,7 +90,7 @@
 	"id":"68d794097ceaf455c79a4dc8",
 	"lastModifiedBy":23949,
 	"lcName":"publish lookup form test",
-	"modifiedTime":1759056176669,
+	"modifiedTime":1759502010051,
 	"name":"Publish lookup form test",
 	"nodes":[
 		{
@@ -100,7 +100,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_j6UZQ-1",
 			"id":"n_U5Ovv",
@@ -134,7 +134,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_j6UZQ-1",
 			"id":"n_7LPwF",
@@ -199,7 +199,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_j6UZQ-1",
 			"id":"n_uNvzq",
@@ -250,10 +250,10 @@
 					"limit":20,
 					"offset":0
 				},
+				"type":"ByQuery",
 				"fields":[
 					"effectiveDate"
-				],
-				"type":"ByKeys"
+				]
 			},
 			"skip":false,
 			"subTitle":"Standard entities by UnifyApps",
@@ -278,7 +278,11 @@
 					"knowledge"
 				],
 				"lookupType":"ENTITY_SNAPSHOT",
-				"type":"ByKeys"
+				"page":{
+					"limit":20,
+					"offset":0
+				},
+				"type":"ByQuery"
 			},
 			"skip":false,
 			"subTitle":"Standard entities by UnifyApps",
@@ -293,7 +297,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_j6UZQ-1",
 			"id":"n_Gc29u",
@@ -434,7 +438,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_j6UZQ-1",
 			"id":"n_bUtSk",
@@ -474,7 +478,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_j6UZQ-1",
 			"id":"n_UWJrg",
@@ -507,5 +511,5 @@
 	"tags":[
 		
 	],
-	"version":16
+	"version":17
 }
