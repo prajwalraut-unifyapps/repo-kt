@@ -1,51 +1,91 @@
 {
 	"appsUsed":[
-		
+		"firebase"
 	],
 	"createdTime":1759478839670,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_YFlwP",
+			"fromNodeId":"n_Lo1Ft",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_VtwgI",
+			"toNodeId":"n_EpDPV",
 			"type":"next"
 		}
 	],
 	"id":"68df8437fb8ac33ad255ae29",
 	"lastModifiedBy":178541,
 	"lcName":"not test",
-	"modifiedTime":1759478839670,
+	"modifiedTime":1759479064685,
 	"name":"Not test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":825,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_YFlwP-1",
-			"id":"_YFlwP",
-			"index":0,
+			"id":"n_Lo1Ft",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"firebase",
+				"resourceVersion":5470,
+				"connectionId":"68df828114112770321f997e",
+				"resourceName":"firebase_send",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_YFlwP-1",
-			"id":"_VtwgI",
-			"index":0,
+			"id":"n_EpDPV",
+			"index":2,
+			"inputs":{
+				"validate_only":true,
+				"message":{
+					"target":"Topic",
+					"android":{
+						"notification":{
+							"light_settings":{
+								"color":{
+									"blue":1
+								},
+								"light_on_duration":"3s",
+								"light_off_duration":"3s"
+							}
+						}
+					},
+					"topic":"Dummy mail"
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Firebase",
+			"title":"Send a message to a device",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":178541,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +99,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
