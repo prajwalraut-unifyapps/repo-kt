@@ -5,12 +5,12 @@
 	"createdTime":1730998141049,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243550981,
+		"deployedAt":1759371873106,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed1e5e003e08cdeb2ecf",
+		"deployedDefinitionId":"68dde261421ec34d10d66bd3",
 		"status":"DEPLOYED",
-		"version":64,
-		"workflowVersion":94
+		"version":65,
+		"workflowVersion":95
 	},
 	"edges":[
 		{
@@ -141,9 +141,9 @@
 		]
 	},
 	"id":"671250dbc3a6281db1ab47af",
-	"lastModifiedBy":-1,
+	"lastModifiedBy":44109,
 	"lcName":"trigger interface and get user inputs",
-	"modifiedTime":1759371873041,
+	"modifiedTime":1759495180342,
 	"name":"Trigger Interface and Get User Inputs",
 	"nodes":[
 		{
@@ -690,9 +690,9 @@
 			"tierName":"global"
 		}
 	},
-	"standard":true,
+	"standard":false,
 	"tags":[
 		
 	],
-	"version":95
+	"version":96
 }
