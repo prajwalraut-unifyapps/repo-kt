@@ -33,12 +33,19 @@
 			"skip":false,
 			"toNodeId":"n_4TUYW",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_4TUYW",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_fXodb",
+			"type":"next"
 		}
 	],
 	"id":"68dfa9de3b82f62c61f62548",
 	"lastModifiedBy":44109,
 	"lcName":"tesing stream",
-	"modifiedTime":1759489456242,
+	"modifiedTime":1759489473408,
 	"name":"tesing stream",
 	"nodes":[
 		{
@@ -354,6 +361,24 @@
 			"subTitle":"Variable by UnifyApps",
 			"title":"Create variables",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":1011,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Dnj9y-1",
+			"id":"n_fXodb",
+			"index":5,
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
 		}
 	],
 	"ownerUserId":517,
@@ -373,5 +398,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
