@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759499077794,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759499174576,
+		"deployedBy":188507,
+		"deployedDefinitionId":"68dfd3a6ff54bc77a8a18f88",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_okgoJ",
@@ -30,7 +38,7 @@
 	"id":"68dfd345ff54bc77a8a18d10",
 	"lastModifiedBy":188507,
 	"lcName":"hyttgrf",
-	"modifiedTime":1759499172906,
+	"modifiedTime":1759499219992,
 	"name":"hyttgrf",
 	"nodes":[
 		{
@@ -175,7 +183,7 @@
 			"index":4,
 			"inputs":{
 				"result":{
-					"r":"=CONCATENATE({{ n_jto5e.outputs.i }},\"032\")"
+					"r":"=CONCATENATE(\"35\",{{ n_jto5e.outputs.i }},\"03200\")"
 				}
 			},
 			"skip":false,
@@ -201,5 +209,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
