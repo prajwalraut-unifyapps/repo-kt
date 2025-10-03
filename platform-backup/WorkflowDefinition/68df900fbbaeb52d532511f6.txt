@@ -5,18 +5,12 @@
 	"createdTime":1759481871631,
 	"deleted":false,
 	"edges":[
-		{
-			"fromNodeId":"n_AjMX2",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_uaqDL",
-			"type":"next"
-		}
+		
 	],
 	"id":"68df900fbbaeb52d532511f6",
 	"lastModifiedBy":124029,
 	"lcName":"netsuite new trigger",
-	"modifiedTime":1759481910490,
+	"modifiedTime":1759481917888,
 	"name":"netsuite new trigger",
 	"nodes":[
 		{
@@ -44,17 +38,6 @@
 				"type":"EVENT"
 			},
 			"type":"START"
-		},
-		{
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_sfizo-1",
-			"id":"_uaqDL",
-			"index":2,
-			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
 		}
 	],
 	"ownerUserId":124029,
@@ -74,5 +57,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
