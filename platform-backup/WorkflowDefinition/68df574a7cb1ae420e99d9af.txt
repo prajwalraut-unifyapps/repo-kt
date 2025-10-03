@@ -77,7 +77,7 @@
 	"id":"68df574a7cb1ae420e99d9af",
 	"lastModifiedBy":185277,
 	"lcName":"newconditions_insideloops_dnd",
-	"modifiedTime":1759475143899,
+	"modifiedTime":1759475559677,
 	"name":"Newconditions_insideloops_DND",
 	"nodes":[
 		{
@@ -87,7 +87,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_MXkKD-1",
 			"id":"n_eyapo",
@@ -110,12 +110,23 @@
 					"type":"object",
 					"additionalProperties":false,
 					"required":[
-						"Input"
+						"input1",
+						"Input2"
 					],
 					"properties":{
-						"Input":{
-							"type":"integer",
-							"title":"Input"
+						"input1":{
+							"type":"array",
+							"items":{
+								"type":"integer"
+							},
+							"title":"Input 1"
+						},
+						"Input2":{
+							"type":"array",
+							"items":{
+								"type":"integer"
+							},
+							"title":"Input2"
 						}
 					}
 				}
@@ -136,14 +147,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_MXkKD-1",
 			"id":"n_5B4Wa",
 			"index":2,
 			"inputs":{
 				"start":0,
-				"limit":"{{ n_eyapo.outputs.Input }}",
+				"limit":"{{ n_eyapo.outputs.input1 }}",
 				"step":1,
 				"captureIterations":true
 			},
@@ -160,14 +171,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_5B4Wa@_MXkKD-1@l",
 			"id":"n_gf4rW",
 			"index":3,
 			"inputs":{
 				"start":0,
-				"limit":"{{ n_eyapo.outputs.Input }}",
+				"limit":"{{ n_eyapo.outputs.Input2 }}",
 				"step":1,
 				"captureIterations":true
 			},
@@ -192,10 +203,10 @@
 			"inputs":{
 				"filters":[
 					{
-						"property":"=power({{ n_5B4Wa.outputs.index }}+{{ n_gf4rW.outputs.index }},2)",
+						"property":"{{ n_eyapo.outputs.input1 }}",
 						"filter":{
 							"operator":"EQUAL",
-							"value":"0"
+							"value":"{{ n_eyapo.outputs.Input2 }}"
 						}
 					}
 				],
@@ -237,9 +248,7 @@
 					]
 				}
 			},
-			"inputs":{
-				"num":"=SUM({{ n_5B4Wa.outputs.index }},{{ n_gf4rW.outputs.index }})"
-			},
+			"inputs":{},
 			"outputSchema":{
 				"dynamic":false,
 				"schema":{
@@ -269,7 +278,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_zgmfG@n_gf4rW@n_5B4Wa@_MXkKD-1@l@l@n",
 			"id":"n_8Lfmj",
@@ -388,7 +397,7 @@
 			"index":7,
 			"inputs":{
 				"result":{
-					"output":"{{ n_5B4Wa.outputs.index }}{{ n_gf4rW.outputs.index }}{{ n_jOhCa.outputs.num }}{{ n_8Lfmj.outputs.error }}"
+					"output":"{{ n_zgmfG.outputs.result }}"
 				}
 			},
 			"skip":false,
@@ -414,5 +423,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
