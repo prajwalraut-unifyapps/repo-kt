@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		
+		"jms"
 	],
 	"createdTime":1759417154509,
 	"deleted":false,
@@ -9,14 +9,21 @@
 			"fromNodeId":"_5jWnf",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_L46sy",
+			"toNodeId":"n_zF6S5",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_zF6S5",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_W3v9k",
 			"type":"next"
 		}
 	],
 	"id":"68de93424361896e3c5f3ac2",
 	"lastModifiedBy":43498,
 	"lcName":"jms-trigger",
-	"modifiedTime":1759417154509,
+	"modifiedTime":1759474581075,
 	"name":"jms-trigger",
 	"nodes":[
 		{
@@ -25,7 +32,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_5jWnf-1",
 			"id":"_5jWnf",
-			"index":0,
+			"index":1,
 			"skip":false,
 			"title":"Select a trigger event",
 			"trigger":{
@@ -34,18 +41,57 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"jms",
+				"resourceVersion":3815,
+				"connectionId":"67592679b73f613be2e69445",
+				"resourceName":"jms_publish_message",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_5jWnf-1",
-			"id":"_L46sy",
-			"index":0,
+			"id":"n_zF6S5",
+			"index":2,
+			"inputs":{
+				"queueName":"unifyapps",
+				"messageFormat":"text",
+				"message":"adi"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"JMS",
+			"title":"Publish message to queue",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"jms",
+				"resourceVersion":3630,
+				"connectionId":"67592679b73f613be2e69445",
+				"resourceName":"jms_consume_message",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_5jWnf-1",
+			"id":"n_W3v9k",
+			"index":3,
+			"inputs":{
+				"queueName":"unifyapps",
+				"timeout":"1000"
+			},
+			"skip":false,
+			"subTitle":"JMS",
+			"title":"Consume message",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":43498,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +105,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
