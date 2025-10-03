@@ -5,12 +5,12 @@
 	"createdTime":1758977331611,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759502012393,
+		"deployedAt":1759502272597,
 		"deployedBy":23949,
-		"deployedDefinitionId":"68dfdebcf5d9ee32ff9a775c",
+		"deployedDefinitionId":"68dfdfc0f5d9ee32ff9a816e",
 		"status":"DEPLOYED",
-		"version":4,
-		"workflowVersion":17
+		"version":5,
+		"workflowVersion":18
 	},
 	"edges":[
 		{
@@ -83,7 +83,7 @@
 	"id":"68d794097ceaf455c79a4dc8",
 	"lastModifiedBy":23949,
 	"lcName":"publish lookup form test",
-	"modifiedTime":1759502270358,
+	"modifiedTime":1759502552874,
 	"name":"Publish lookup form test",
 	"nodes":[
 		{
@@ -402,7 +402,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_j6UZQ-1",
 			"id":"n_bUtSk",
@@ -411,6 +411,7 @@
 				"automationId":"685c4cf7a57e530c22e9639a",
 				"runtimeConnections":{},
 				"synchronous":true,
+				"triggerWorkflowWithRuntimeType":"IN_MEMORY",
 				"version":"-1",
 				"parameters":{
 					"description":"{{ n_7LPwF.outputs.result.description }}",
@@ -475,5 +476,5 @@
 	"tags":[
 		
 	],
-	"version":18
+	"version":19
 }
