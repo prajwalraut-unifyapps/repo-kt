@@ -6,46 +6,138 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_0aXnR",
+			"fromNodeId":"n_naH8m",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_l5RZy",
+			"toNodeId":"n_sdWBH",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_sdWBH",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_taqdm",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_taqdm",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_VOYYJ",
 			"type":"next"
 		}
 	],
 	"id":"68df6a13507dcf3211f43753",
 	"lastModifiedBy":161877,
 	"lcName":"dep-graph",
-	"modifiedTime":1759472147968,
+	"modifiedTime":1759472206911,
 	"name":"dep-graph",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":822,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
-			"id":"_0aXnR",
-			"index":0,
+			"id":"n_naH8m",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1026,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
-			"id":"_l5RZy",
-			"index":0,
+			"id":"n_sdWBH",
+			"index":2,
+			"inputs":{
+				"automationId":"68defa11d6d230107d495d5d",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{}
+			},
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1026,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_0aXnR-1",
+			"id":"n_taqdm",
+			"index":3,
+			"inputs":{
+				"automationId":"68de641fed7fcc6978211234",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"1",
+				"parameters":{}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1026,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_0aXnR-1",
+			"id":"n_VOYYJ",
+			"index":4,
+			"inputs":{
+				"automationId":"6868e50ed1ed1e08253fa172",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
 		}
 	],
 	"ownerUserId":161877,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +151,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
