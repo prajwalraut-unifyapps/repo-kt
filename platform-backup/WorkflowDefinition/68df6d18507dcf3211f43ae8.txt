@@ -5,12 +5,12 @@
 	"createdTime":1759472920813,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759475945688,
+		"deployedAt":1759476363675,
 		"deployedBy":132116,
-		"deployedDefinitionId":"68df78e9cc4fa27aaf20e0c2",
+		"deployedDefinitionId":"68df7a8b870cd8428097d7e4",
 		"status":"DEPLOYED",
-		"version":4,
-		"workflowVersion":10
+		"version":5,
+		"workflowVersion":12
 	},
 	"edges":[
 		{
@@ -108,7 +108,7 @@
 	"id":"68df6d18507dcf3211f43ae8",
 	"lastModifiedBy":132116,
 	"lcName":"nestedloops_insideconditions_testing",
-	"modifiedTime":1759476329950,
+	"modifiedTime":1759476461196,
 	"name":"nestedloops_insideconditions_testing",
 	"nodes":[
 		{
@@ -118,7 +118,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_BH9kr-1",
 			"id":"n_iSjux",
@@ -141,12 +141,17 @@
 					"type":"object",
 					"additionalProperties":false,
 					"required":[
-						"input_number"
+						"input_number",
+						"input_number2"
 					],
 					"properties":{
 						"input_number":{
 							"type":"number",
 							"title":"Input Number"
+						},
+						"input_number2":{
+							"type":"number",
+							"title":"Input Number 2"
 						}
 					}
 				}
@@ -167,7 +172,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_BH9kr-1",
 			"id":"n_hM9Xn",
@@ -178,7 +183,7 @@
 						"property":"{{ n_iSjux.outputs.input_number }}",
 						"filter":{
 							"operator":"EQUAL",
-							"value":"1"
+							"value":"{{ n_iSjux.outputs.input_number2 }}"
 						}
 					}
 				],
@@ -197,7 +202,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_hM9Xn@_BH9kr-1@y",
 			"id":"n_fnth2",
@@ -221,7 +226,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_fnth2@n_hM9Xn@_BH9kr-1@y@l",
 			"id":"n_yB1nW",
@@ -245,7 +250,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_yB1nW@n_fnth2@n_hM9Xn@_BH9kr-1@y@l@l",
 			"id":"n_fY1zp",
@@ -275,7 +280,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_fY1zp@n_yB1nW@n_fnth2@n_hM9Xn@_BH9kr-1@y@l@l@y",
 			"id":"n_HKpwf",
@@ -330,7 +335,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_fY1zp@n_yB1nW@n_fnth2@n_hM9Xn@_BH9kr-1@y@l@l@n",
 			"id":"n_5qNOH",
@@ -385,7 +390,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_hM9Xn@_BH9kr-1@n",
 			"id":"n_yiTD2",
@@ -473,5 +478,5 @@
 	"tags":[
 		
 	],
-	"version":12
+	"version":13
 }
