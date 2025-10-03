@@ -5,12 +5,12 @@
 	"createdTime":1758977661374,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759501792822,
+		"deployedAt":1759502027145,
 		"deployedBy":23949,
-		"deployedDefinitionId":"68dfdde0f5d9ee32ff9a70b2",
+		"deployedDefinitionId":"68dfdecbf5d9ee32ff9a77f4",
 		"status":"DEPLOYED",
-		"version":9,
-		"workflowVersion":17
+		"version":10,
+		"workflowVersion":18
 	},
 	"edges":[
 		{
@@ -55,7 +55,7 @@
 	"id":"68d7933d7ceaf455c79a4dbf",
 	"lastModifiedBy":23949,
 	"lcName":"lookup form test by query",
-	"modifiedTime":1759502025589,
+	"modifiedTime":1759502619662,
 	"name":"Lookup Form Test By Query",
 	"nodes":[
 		{
@@ -191,6 +191,11 @@
 			"type":"START"
 		},
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
 			"context":{
 				"appName":"utility_by_unifyapps",
 				"resourceVersion":74,
@@ -198,7 +203,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RrDve-1",
 			"id":"n_ZMSAj",
@@ -209,15 +214,19 @@
 					"items":{
 						"type":"object",
 						"properties":{
-							"a":{
+							"id":{
 								"type":"integer",
-								"title":"a"
+								"title":"id"
+							},
+							"name":{
+								"type":"string",
+								"title":"name"
 							}
 						},
 						"additionalProperties":false
 					}
 				},
-				"jsonString":"[{\"a\":1}]"
+				"jsonString":"[{\"id\":1,\"name\":\"abc\"}]"
 			},
 			"skip":false,
 			"subTitle":"Utility by Sirion",
@@ -270,5 +279,5 @@
 	"tags":[
 		
 	],
-	"version":18
+	"version":19
 }
