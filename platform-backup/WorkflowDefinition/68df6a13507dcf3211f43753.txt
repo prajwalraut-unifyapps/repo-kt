@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759472147968,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_0aXnR",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_l5RZy",
+			"type":"next"
+		}
+	],
+	"id":"68df6a13507dcf3211f43753",
+	"lastModifiedBy":161877,
+	"lcName":"dep-graph",
+	"modifiedTime":1759472147968,
+	"name":"dep-graph",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_0aXnR-1",
+			"id":"_0aXnR",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_0aXnR-1",
+			"id":"_l5RZy",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":161877,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
