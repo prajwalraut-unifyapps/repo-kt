@@ -1,51 +1,77 @@
 {
 	"appsUsed":[
-		
+		"microsoft_outlook"
 	],
 	"createdTime":1759494457668,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_HRu5G",
+			"fromNodeId":"n_fGhYu",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_FUKPB",
+			"toNodeId":"n_Nh5xb",
 			"type":"next"
 		}
 	],
 	"id":"68dfc1391324bc07f73da085",
 	"lastModifiedBy":161165,
 	"lcName":"outlook test",
-	"modifiedTime":1759494457668,
+	"modifiedTime":1759494841759,
 	"name":"outlook test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"microsoft_outlook",
+				"resourceVersion":2850,
+				"connectionId":"687e269e7a11d1b61a44a208",
+				"resourceName":"microsoft_outlook_on_new_mail_polling"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_HRu5G-1",
-			"id":"_HRu5G",
-			"index":0,
+			"id":"n_fGhYu",
+			"index":1,
+			"inputs":{
+				"interval":1
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Microsoft Outlook",
+			"title":"New email",
 			"trigger":{
 				"type":"EVENT"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"microsoft_outlook",
+				"resourceVersion":16,
+				"connectionId":"68dd4c0d12547e4cdcf2751c",
+				"resourceName":"microsoft_outlook_update_message",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_HRu5G-1",
-			"id":"_FUKPB",
-			"index":0,
+			"id":"n_Nh5xb",
+			"index":2,
+			"inputs":{
+				"flag":{
+					"flagStatus":"notFlagged"
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Microsoft Outlook",
+			"title":"Update message",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":161165,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +85,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
