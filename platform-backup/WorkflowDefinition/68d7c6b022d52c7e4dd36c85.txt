@@ -5,12 +5,12 @@
 	"createdTime":1758971568419,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759504643010,
+		"deployedAt":1759505236682,
 		"deployedBy":182775,
-		"deployedDefinitionId":"68dfe902f640481f196fb4b6",
+		"deployedDefinitionId":"68dfeb54e586b9072324c9b4",
 		"status":"DEPLOYED",
-		"version":19,
-		"workflowVersion":23
+		"version":20,
+		"workflowVersion":24
 	},
 	"edges":[
 		{
@@ -46,7 +46,7 @@
 	"id":"68d7c6b022d52c7e4dd36c85",
 	"lastModifiedBy":182775,
 	"lcName":"sub-streamconcurrencytest (copy)",
-	"modifiedTime":1759505233963,
+	"modifiedTime":1759505336623,
 	"name":"sub-streamConcurrencyTest (copy)",
 	"nodes":[
 		{
@@ -108,13 +108,13 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_gyMnk@_HwF2P-1@l",
 			"id":"n_r5ScI",
 			"index":3,
 			"inputs":{
-				"duration":15,
+				"duration":0,
 				"unit":"SECONDS",
 				"streamId":"e_68dfd29adc6c2b4d40587037",
 				"skipInputValidation":false,
@@ -162,5 +162,5 @@
 	"tags":[
 		
 	],
-	"version":24
+	"version":25
 }
