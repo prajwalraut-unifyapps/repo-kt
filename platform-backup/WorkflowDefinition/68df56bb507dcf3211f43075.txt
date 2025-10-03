@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759467194997,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_Y7PHT",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_xRPpb",
+			"type":"next"
+		}
+	],
+	"id":"68df56bb507dcf3211f43075",
+	"lastModifiedBy":161958,
+	"lcName":"ritiksubscriber3",
+	"modifiedTime":1759467194997,
+	"name":"ritikSubscriber3",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Y7PHT-1",
+			"id":"_Y7PHT",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Y7PHT-1",
+			"id":"_xRPpb",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":161958,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
