@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759512274453,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_GrZXV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_cBBRN",
+			"type":"next"
+		}
+	],
+	"id":"68e006d22064aa1f095220db",
+	"lastModifiedBy":33418,
+	"lcName":"weqq",
+	"modifiedTime":1759512274453,
+	"name":"weqq",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_GrZXV-1",
+			"id":"_GrZXV",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_GrZXV-1",
+			"id":"_cBBRN",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":33418,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
