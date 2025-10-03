@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759480306910,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_CsUiP",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_VBWl7",
+			"type":"next"
+		}
+	],
+	"id":"68df89f2c35d3f66219ee063",
+	"lastModifiedBy":517,
+	"lcName":"testing jms",
+	"modifiedTime":1759480306910,
+	"name":"testing jms",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_CsUiP-1",
+			"id":"_CsUiP",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_CsUiP-1",
+			"id":"_VBWl7",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":517,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
