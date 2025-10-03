@@ -41,12 +41,34 @@
 			"skip":false,
 			"toNodeId":"n_ovMso",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_YMNeF",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Dvgqq",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_ovMso",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Dvgqq",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_B3qwY",
+			"name":"default",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Dvgqq",
+			"type":"branch"
 		}
 	],
 	"id":"68e005918603d839a4e67960",
 	"lastModifiedBy":308,
 	"lcName":"testbranch",
-	"modifiedTime":1759512008359,
+	"modifiedTime":1759512029766,
 	"name":"testbranch",
 	"nodes":[
 		{
@@ -242,6 +264,21 @@
 			"subTitle":"Standard entities by UnifyApps",
 			"title":"Fetch User",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_t9ESd-1",
+			"id":"n_Dvgqq",
+			"index":7,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":308,
@@ -261,5 +298,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
