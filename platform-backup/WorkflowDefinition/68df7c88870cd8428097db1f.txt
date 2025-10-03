@@ -1,51 +1,111 @@
 {
 	"appsUsed":[
-		
+		"jms",
+		"teamwork"
 	],
 	"createdTime":1759476872082,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_Ax4Te",
+			"fromNodeId":"n_q3XNF",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_NVgwG",
+			"toNodeId":"n_KLRSG",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_KLRSG",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_hMxmf",
 			"type":"next"
 		}
 	],
 	"id":"68df7c88870cd8428097db1f",
 	"lastModifiedBy":43498,
 	"lcName":"sasdf",
-	"modifiedTime":1759476872082,
+	"modifiedTime":1759493734261,
 	"name":"sasdf",
 	"nodes":[
 		{
+			"context":{
+				"appName":"jms",
+				"resourceVersion":0,
+				"connectionId":"67592679b73f613be2e69445",
+				"resourceName":"jms_on_event_received"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Ax4Te-1",
-			"id":"_Ax4Te",
-			"index":0,
+			"id":"n_q3XNF",
+			"index":1,
+			"inputs":{
+				"queueName":"unifyapps"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"JMS",
+			"title":"On event received",
 			"trigger":{
 				"type":"EVENT"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"teamwork",
+				"resourceVersion":2611,
+				"connectionId":"682dc94eddb04d7c722c2c69",
+				"resourceName":"teamwork_getall_tasks",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Ax4Te-1",
-			"id":"_NVgwG",
-			"index":0,
+			"id":"n_KLRSG",
+			"index":2,
+			"inputs":{
+				"includeCompletedPredecessors":false,
+				"includeReminders":false,
+				"pageSize":250,
+				"includeLoggedTime":false,
+				"includeArchivedProjects":false,
+				"getFiles":false,
+				"ignore-start-dates":false,
+				"includeTasksFromDeletedLists":false,
+				"includeToday":false,
+				"includeCompletedSubtasks":false,
+				"includeCompletedTasks":false,
+				"includeTasksWithoutDueDates":true,
+				"includeTaskId":false,
+				"includeUntaggedTasks":false
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Teamwork",
+			"title":"Get all tasks",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Ax4Te-1",
+			"id":"n_hMxmf",
+			"index":3,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":43498,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +119,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
