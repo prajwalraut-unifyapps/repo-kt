@@ -5,18 +5,12 @@
 	"createdTime":1759491758751,
 	"deleted":false,
 	"edges":[
-		{
-			"fromNodeId":"n_hajkI",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_nfes2",
-			"type":"next"
-		}
+		
 	],
 	"id":"68dfb6aec468410dfdc68ae2",
 	"lastModifiedBy":6701,
 	"lcName":"gts",
-	"modifiedTime":1759492124628,
+	"modifiedTime":1759492149537,
 	"name":"gts",
 	"nodes":[
 		{
@@ -44,28 +38,6 @@
 				"type":"EVENT"
 			},
 			"type":"START"
-		},
-		{
-			"context":{
-				"appName":"gmeet",
-				"resourceVersion":1867,
-				"connectionId":"68dfb7a92d8fd835bedb131e",
-				"resourceName":"gmeet_list_conference_record_participants",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_eMnEq-1",
-			"id":"n_nfes2",
-			"index":2,
-			"inputs":{
-				"name":"tets"
-			},
-			"skip":false,
-			"subTitle":"Google Meet",
-			"title":"List conference record participants",
-			"type":"ACTION"
 		}
 	],
 	"ownerUserId":6701,
@@ -85,5 +57,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
