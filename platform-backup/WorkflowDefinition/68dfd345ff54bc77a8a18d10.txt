@@ -25,24 +25,19 @@
 			"skip":false,
 			"toNodeId":"n_cJqW9",
 			"type":"next"
-		},
-		{
-			"fromNodeId":"n_cJqW9",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_zwxWQ",
-			"type":"next"
 		}
 	],
 	"id":"68dfd345ff54bc77a8a18d10",
 	"lastModifiedBy":188507,
 	"lcName":"hyttgrf",
-	"modifiedTime":1759499098543,
+	"modifiedTime":1759499172906,
 	"name":"hyttgrf",
 	"nodes":[
 		{
 			"context":{
-				"appName":"callables"
+				"appName":"callables",
+				"resourceVersion":1001,
+				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
 			"dirty":true,
@@ -50,9 +45,37 @@
 			"groupId":"_8i96Y-1",
 			"id":"n_okgoJ",
 			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"r"
+					],
+					"properties":{
+						"r":{
+							"type":"string",
+							"title":"r"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"a"
+					],
+					"properties":{
+						"a":{
+							"type":"string",
+							"title":"a"
+						}
+					}
+				}
+			},
 			"skip":false,
 			"subTitle":"Callable",
-			"title":"Select a trigger event",
+			"title":"Trigger via automation",
 			"trigger":{
 				"type":"CALLABLE"
 			},
@@ -159,17 +182,6 @@
 			"subTitle":"Callable",
 			"title":"Respond to automation",
 			"type":"STOP"
-		},
-		{
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_8i96Y-1",
-			"id":"_zwxWQ",
-			"index":5,
-			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
 		}
 	],
 	"ownerUserId":188507,
@@ -189,5 +201,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
