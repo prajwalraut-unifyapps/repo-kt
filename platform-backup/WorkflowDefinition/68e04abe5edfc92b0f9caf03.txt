@@ -1,0 +1,93 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759529662614,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"dxBaL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"wyhGO",
+			"type":"next"
+		}
+	],
+	"id":"68e04abe5edfc92b0f9caf03",
+	"lastModifiedBy":175325,
+	"lcName":"changesetqa25002772471",
+	"modifiedTime":1759529662676,
+	"name":"changeSetQA25002772471",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":530,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ITCN5-1",
+			"id":"dxBaL",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"custom_http_endpoint",
+				"resourceVersion":626,
+				"resourceName":"custom_http_endpoint_execute",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ITCN5-1",
+			"id":"wyhGO",
+			"index":0,
+			"inputs":{
+				"path":"/api-endpoint/trigger-workflow/68e04abb5edfc92b0f9caf01",
+				"baseUrl":"{{ __ENV__.outputs.changeSetQA20777860170 }}",
+				"responseContentType":"application/json",
+				"isAsync":false,
+				"enableProxy":false,
+				"requestTimeoutInSecs":-1,
+				"authType":"CUSTOM",
+				"httpMethod":"POST",
+				"requestContentType":"application/json",
+				"ignoreTrailingSlashes":false,
+				"sslVerify":false
+			},
+			"skip":false,
+			"subTitle":"Custom HTTP Endpoint",
+			"title":"Execute REST request",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
