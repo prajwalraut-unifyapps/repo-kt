@@ -127,9 +127,9 @@
 		}
 	],
 	"id":"68d43549ccf6c74b9692a674",
-	"lastModifiedBy":308,
+	"lastModifiedBy":39713,
 	"lcName":"branches_inside_nestedloops  (1)",
-	"modifiedTime":1759441002027,
+	"modifiedTime":1759497466672,
 	"name":"branches_inside_nestedloops  (1)",
 	"nodes":[
 		{
@@ -322,7 +322,7 @@
 							"conditions":{
 								"filters":[
 									{
-										"property":"1",
+										"property":"{{ n_Olbk1.outputs.index }}",
 										"filter":{
 											"operator":"EQUAL",
 											"value":"1"
@@ -406,7 +406,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_asutQ@n_Olbk1@n_1tCQd@n_CQHT3@_wb2Vn-1@l@l@l@2",
 			"id":"n_asutQ@2",
@@ -416,7 +416,7 @@
 				"conditions":{
 					"filters":[
 						{
-							"property":"1",
+							"property":"{{ n_Olbk1.outputs.index }}",
 							"filter":{
 								"operator":"EQUAL",
 								"value":"1"
@@ -479,5 +479,5 @@
 		"enableVariableLogging":true
 	},
 	"standard":false,
-	"version":34
+	"version":35
 }
