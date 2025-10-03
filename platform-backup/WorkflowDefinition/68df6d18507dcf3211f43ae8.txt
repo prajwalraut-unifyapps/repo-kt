@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759472920813,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759473368271,
+		"deployedBy":132116,
+		"deployedDefinitionId":"68df6ed8507dcf3211f43c4a",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_iSjux",
@@ -100,7 +108,7 @@
 	"id":"68df6d18507dcf3211f43ae8",
 	"lastModifiedBy":132116,
 	"lcName":"nestedloops_insideconditions_testing",
-	"modifiedTime":1759473368253,
+	"modifiedTime":1759473777923,
 	"name":"nestedloops_insideconditions_testing",
 	"nodes":[
 		{
@@ -110,7 +118,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_BH9kr-1",
 			"id":"n_iSjux",
@@ -170,7 +178,7 @@
 						"property":"{{ n_iSjux.outputs.input_number }}",
 						"filter":{
 							"operator":"EQUAL",
-							"value":"1"
+							"value":"0"
 						}
 					}
 				],
@@ -189,7 +197,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_hM9Xn@_BH9kr-1@y",
 			"id":"n_fnth2",
@@ -213,7 +221,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_fnth2@n_hM9Xn@_BH9kr-1@y@l",
 			"id":"n_yB1nW",
@@ -237,7 +245,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_yB1nW@n_fnth2@n_hM9Xn@_BH9kr-1@y@l@l",
 			"id":"n_fY1zp",
@@ -267,7 +275,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_fY1zp@n_yB1nW@n_fnth2@n_hM9Xn@_BH9kr-1@y@l@l@y",
 			"id":"n_HKpwf",
@@ -322,7 +330,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_fY1zp@n_yB1nW@n_fnth2@n_hM9Xn@_BH9kr-1@y@l@l@n",
 			"id":"n_5qNOH",
@@ -377,7 +385,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_hM9Xn@_BH9kr-1@n",
 			"id":"n_yiTD2",
@@ -432,7 +440,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_BH9kr-1",
 			"id":"n_WjLrf",
@@ -465,5 +473,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
