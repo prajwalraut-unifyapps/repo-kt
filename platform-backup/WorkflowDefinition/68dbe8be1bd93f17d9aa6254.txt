@@ -5,12 +5,12 @@
 	"createdTime":1759242430527,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759409417401,
-		"deployedBy":43498,
-		"deployedDefinitionId":"68de7509adc2a343ddb47a5d",
+		"deployedAt":1759413369665,
+		"deployedBy":45011,
+		"deployedDefinitionId":"68de84794361896e3c5ee259",
 		"status":"DEPLOYED",
-		"version":13,
-		"workflowVersion":22
+		"version":14,
+		"workflowVersion":24
 	},
 	"edges":[
 		{
@@ -19,12 +19,19 @@
 			"skip":false,
 			"toNodeId":"n_KAsDL",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_KAsDL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_li6IJ",
+			"type":"next"
 		}
 	],
 	"id":"68dbe8be1bd93f17d9aa6254",
 	"lastModifiedBy":45011,
 	"lcName":"test-scheduler-connection-deletion",
-	"modifiedTime":1759413335043,
+	"modifiedTime":1759478361372,
 	"name":"test-scheduler-connection-deletion",
 	"nodes":[
 		{
@@ -34,7 +41,7 @@
 				"resourceName":"schedule_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_oKLjG-1",
 			"id":"n_5dKRb",
@@ -57,7 +64,7 @@
 			"context":{
 				"appName":"teamwork",
 				"resourceVersion":2541,
-				"connectionId":"68de8406953b7316d9d7ffab",
+				"connectionId":"68de840e953b7316d9d800e7",
 				"resourceName":"teamwork_get_projects",
 				"type":"APPLICATION"
 			},
@@ -81,6 +88,21 @@
 			"subTitle":"Teamwork",
 			"title":"Get all projects",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_oKLjG-1",
+			"id":"n_li6IJ",
+			"index":3,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":569,
@@ -100,5 +122,5 @@
 	"tags":[
 		
 	],
-	"version":24
+	"version":25
 }
