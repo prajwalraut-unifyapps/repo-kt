@@ -100,7 +100,7 @@
 	"id":"68dfde9ef5d9ee32ff9a764f",
 	"lastModifiedBy":132116,
 	"lcName":"loop_testing_new",
-	"modifiedTime":1759502275719,
+	"modifiedTime":1759502375632,
 	"name":"loop_testing_new",
 	"nodes":[
 		{
@@ -340,18 +340,18 @@
 					"additionalProperties":false,
 					"type":"object",
 					"properties":{
-						"input":{
+						"input2":{
 							"type":"string",
-							"title":"Input"
+							"title":"Input2"
 						}
 					},
 					"required":[
-						"input"
+						"input2"
 					]
 				}
 			},
 			"inputs":{
-				"input":"not successfull"
+				"input2":"not successfull"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -359,13 +359,13 @@
 					"additionalProperties":false,
 					"type":"object",
 					"properties":{
-						"input":{
+						"input2":{
 							"type":"string",
-							"title":"Input"
+							"title":"Input2"
 						}
 					},
 					"required":[
-						"input"
+						"input2"
 					]
 				}
 			},
@@ -444,7 +444,7 @@
 			"index":9,
 			"inputs":{
 				"result":{
-					"Output":"{{ n_HKpwf.outputs.input }}{{ n_5qNOH.outputs.input }}{{ n_yiTD2.outputs.input }}"
+					"Output":"{{ n_HKpwf.outputs.input }}{{ n_5qNOH.outputs.input2 }}{{ n_yiTD2.outputs.input }}"
 				}
 			},
 			"skip":false,
@@ -470,5 +470,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
