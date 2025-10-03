@@ -5,12 +5,12 @@
 	"createdTime":1740110521560,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759495179975,
+		"deployedAt":1759495332725,
 		"deployedBy":44109,
-		"deployedDefinitionId":"68dfc40bee7bed4bfee8f63a",
+		"deployedDefinitionId":"68dfc4a4ee7bed4bfee8f953",
 		"status":"DEPLOYED",
-		"version":80,
-		"workflowVersion":108
+		"version":81,
+		"workflowVersion":110
 	},
 	"edges":[
 		{
@@ -159,41 +159,18 @@
 			"fromNodeId":"_3Ymme",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_UYeLm",
+			"toNodeId":"n_CvMDZ",
 			"type":"next"
 		},
 		{
 			"fromNodeId":"_eRcrD",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_UYeLm",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"DLqxP",
-			"name":"no",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_UYeLm",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_UYeLm",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_5FOAF",
-			"type":"if"
-		},
-		{
-			"fromNodeId":"_5FOAF",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_CvMDZ",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_UYeLm",
+			"fromNodeId":"DLqxP",
 			"name":"no",
 			"priority":0,
 			"skip":false,
@@ -348,7 +325,7 @@
 	"id":"67b4908aaffe713b4ced2d83",
 	"lastModifiedBy":44109,
 	"lcName":"stream content",
-	"modifiedTime":1759495251750,
+	"modifiedTime":1759528630248,
 	"name":"Stream content",
 	"nodes":[
 		{
@@ -1025,106 +1002,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"DLqxP@5xhIJ@CGqMR-1@n@y",
 			"id":"_eRcrD",
 			"index":17,
-			"inputs":{
-				"recordId":"{{ UdOSt.outputs.caseId }}",
-				"writeThroughSessionVariables":false,
-				"object_type":"service_hub_case",
-				"skipIfBlank":false,
-				"skipPermissionCheck":false,
-				"updateFields":[
-					{
-						"fieldName":"properties.additional.generatingResponse",
-						"actionType":"SET",
-						"setValue":"false"
-					},
-					{
-						"fieldName":"properties.additional.responseGenerationStatus",
-						"actionType":"SET",
-						"setValue":"completed"
-					}
-				],
-				"unsetIfNull":false
-			},
-			"skip":false,
-			"subTitle":"generatingResponse=false",
-			"title":"Update an existing record's fields",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"if_else",
-				"resourceVersion":442,
-				"resourceName":"if_else_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"CGqMR-1",
-			"id":"n_UYeLm",
-			"index":18,
-			"inputs":{
-				"filters":[
-					{
-						"property":"{{ UdOSt.outputs.eventType }}",
-						"filter":{
-							"operator":"EQUAL",
-							"value":"message_end"
-						}
-					},
-					{
-						"property":"{{ UdOSt.outputs.eventType }}",
-						"filter":{
-							"operator":"EQUAL",
-							"value":"CLARIFICATION_FROM_USER"
-						}
-					},
-					{
-						"property":"{{ UdOSt.outputs.eventType }}",
-						"filter":{
-							"operator":"EQUAL",
-							"value":"stream_completed"
-						}
-					},
-					{
-						"property":"{{ UdOSt.outputs.eventType }}",
-						"filter":{
-							"operator":"EQUAL",
-							"value":"PUBLISH_INTERFACE_WAIT_FOR_USER_INPUT"
-						}
-					}
-				],
-				"operator":"OR"
-			},
-			"skip":false,
-			"subTitle":"message_end",
-			"title":"Condition",
-			"type":"IF_ELSE"
-		},
-		{
-			"additional":{
-				"visibleOptionalFields":[
-					"root.updateFields.items.fieldName",
-					"root.updateFields.items.actionType"
-				]
-			},
-			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":232,
-				"resourceName":"storage_by_unifyapps_update_record_fields_by_id",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_UYeLm@CGqMR-1@y",
-			"id":"_5FOAF",
-			"index":19,
 			"inputs":{
 				"recordId":"{{ UdOSt.outputs.caseId }}",
 				"writeThroughSessionVariables":false,
@@ -1162,7 +1044,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"CGqMR-1",
 			"id":"n_CvMDZ",
-			"index":20,
+			"index":18,
 			"inputs":{
 				"filters":[
 					{
@@ -1192,7 +1074,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_CvMDZ@CGqMR-1@y",
 			"id":"n_b3smu",
-			"index":21,
+			"index":19,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -1279,7 +1161,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_CvMDZ@CGqMR-1@y",
 			"id":"n_HjpDd",
-			"index":22,
+			"index":20,
 			"inputs":{
 				"filters":[
 					{
@@ -1309,7 +1191,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_HjpDd@n_CvMDZ@CGqMR-1@y@y",
 			"id":"n_ce3Fu",
-			"index":23,
+			"index":21,
 			"inputs":{
 				"automationId":"67a48d37f8f1744841dabb63",
 				"runtimeConnections":{},
@@ -1336,7 +1218,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_HjpDd@n_CvMDZ@CGqMR-1@y@y",
 			"id":"n_DSBNX",
-			"index":24,
+			"index":22,
 			"inputs":{
 				"filters":[
 					{
@@ -1366,7 +1248,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_DSBNX@n_HjpDd@n_CvMDZ@CGqMR-1@y@y@n",
 			"id":"_zDe3X",
-			"index":25,
+			"index":23,
 			"inputs":{
 				"automationId":"67a31b86addac8605df79166",
 				"runtimeConnections":{},
@@ -1397,7 +1279,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_DSBNX@n_HjpDd@n_CvMDZ@CGqMR-1@y@y@n",
 			"id":"n_GFrRh",
-			"index":26,
+			"index":24,
 			"inputs":{
 				"variables":[
 					{
@@ -1435,7 +1317,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_DSBNX@n_HjpDd@n_CvMDZ@CGqMR-1@y@y@n",
 			"id":"QV4MH",
-			"index":27,
+			"index":25,
 			"inputs":{
 				"numberOfRecordsToUpdate":"MULTIPLE",
 				"triggerInputCondition":{
@@ -1495,7 +1377,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_HjpDd@n_CvMDZ@CGqMR-1@y@n",
 			"id":"LM5jC",
-			"index":28,
+			"index":26,
 			"inputs":{
 				"object_type":"e_ai_agent_conversation_state",
 				"includeRoleMappings":false,
@@ -1521,7 +1403,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_HjpDd@n_CvMDZ@CGqMR-1@y@n",
 			"id":"xk94J",
-			"index":29,
+			"index":27,
 			"inputs":{
 				"filters":[
 					{
@@ -1550,7 +1432,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"xk94J@n_HjpDd@n_CvMDZ@CGqMR-1@y@n@n",
 			"id":"_wteED",
-			"index":30,
+			"index":28,
 			"inputs":{
 				"automationId":"67a31b86addac8605df79166",
 				"runtimeConnections":{},
@@ -1581,7 +1463,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"xk94J@n_HjpDd@n_CvMDZ@CGqMR-1@y@n@n",
 			"id":"_WdXHr",
-			"index":31,
+			"index":29,
 			"inputs":{
 				"variables":[
 					{
@@ -1619,7 +1501,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"xk94J@n_HjpDd@n_CvMDZ@CGqMR-1@y@n@n",
 			"id":"_tdRYR",
-			"index":32,
+			"index":30,
 			"inputs":{
 				"numberOfRecordsToUpdate":"MULTIPLE",
 				"triggerInputCondition":{
@@ -1692,7 +1574,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"CGqMR-1",
 			"id":"DLbDb",
-			"index":33,
+			"index":31,
 			"inputs":{
 				"automation_id":"67b7748b4372d31da7c2e130",
 				"with_signal_id":false,
@@ -1734,7 +1616,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"CGqMR-1",
 			"id":"UWCkX",
-			"index":34,
+			"index":32,
 			"inputs":{
 				"result":{
 					"success":"true"
@@ -1764,5 +1646,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":109
+	"version":111
 }
