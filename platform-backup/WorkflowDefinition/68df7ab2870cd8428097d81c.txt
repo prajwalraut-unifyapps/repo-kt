@@ -1,51 +1,74 @@
 {
 	"appsUsed":[
-		
+		"sap_rfc"
 	],
 	"createdTime":1759476402190,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_WXLHI",
+			"fromNodeId":"n_mrq5P",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_Gb5eA",
+			"toNodeId":"n_S7HcZ",
 			"type":"next"
 		}
 	],
 	"id":"68df7ab2870cd8428097d81c",
 	"lastModifiedBy":687,
 	"lcName":"xsxsx",
-	"modifiedTime":1759476402190,
+	"modifiedTime":1759476417061,
 	"name":"xsxsx",
 	"nodes":[
 		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":826,
+				"resourceName":"schedule_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_WXLHI-1",
-			"id":"_WXLHI",
-			"index":0,
+			"id":"n_mrq5P",
+			"index":1,
+			"inputs":{
+				"cron":"INTERVAL",
+				"sequential":false,
+				"interval":15,
+				"frequency":"MINUTES"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Schedule",
+			"title":"New recurring event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"SCHEDULED"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"sap_rfc",
+				"resourceVersion":3546,
+				"connectionId":"687a64a4facc271e5be3a0a9",
+				"resourceName":"sap_rfc_list_all_idoc_types",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_WXLHI-1",
-			"id":"_Gb5eA",
-			"index":0,
+			"id":"n_S7HcZ",
+			"index":2,
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"SAP RFC",
+			"title":"List all idoc types",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":687,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +82,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
