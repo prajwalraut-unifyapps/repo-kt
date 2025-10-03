@@ -45,7 +45,7 @@
 	"id":"68de6571ed7fcc6978211a9f",
 	"lastModifiedBy":13,
 	"lcName":"testdnt",
-	"modifiedTime":1759478120387,
+	"modifiedTime":1759478155250,
 	"name":"testdnt",
 	"nodes":[
 		{
@@ -86,7 +86,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_mf0p7-1",
 			"id":"n_O2qv8",
@@ -107,7 +107,7 @@
 				},
 				"query":"SELECT \n  _pr_txnId,\n  _pr_Composite_Key,\n  _pr_dateInEpoch,\n  _pr_beneficiaryFlag\nFROM ENTITY_npci_data \nWHERE _pr_beneficiaryFlag = :beneficiaryFlag\n  AND _pr_dateInEpoch > :minDate\n  AND _pr_Composite_Key = :compositeKey\nORDER BY _pr_dateInEpoch DESC",
 				"record":{
-					"beneficiaryFlag":false,
+					"beneficiaryFlag":true,
 					"minDate":1758000000000,
 					"compositeKey":"3"
 				},
@@ -145,7 +145,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_mf0p7-1",
 			"id":"n_Coys1",
@@ -264,5 +264,5 @@
 	"tags":[
 		
 	],
-	"version":23
+	"version":24
 }
