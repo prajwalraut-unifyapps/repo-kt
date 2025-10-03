@@ -1,51 +1,49 @@
 {
 	"appsUsed":[
-		
+		"gmeet"
 	],
 	"createdTime":1759493332690,
 	"deleted":false,
 	"edges":[
-		{
-			"fromNodeId":"_p0Wy5",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_WJUFI",
-			"type":"next"
-		}
+		
 	],
 	"id":"68dfbcd4c468410dfdc6a9bb",
 	"lastModifiedBy":6701,
 	"lcName":"test",
-	"modifiedTime":1759493332690,
+	"modifiedTime":1759493369395,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"gmeet",
+				"resourceVersion":35,
+				"connectionId":"68dfb7a92d8fd835bedb131e",
+				"resourceName":"gmeet_on_new_event"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_p0Wy5-1",
-			"id":"_p0Wy5",
-			"index":0,
+			"id":"n_nWurf",
+			"index":1,
+			"inputs":{
+				"project_id":"project-1-439404",
+				"subscription_name":"testoct32",
+				"topic_id":"workspace-events-topic"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Google Meet",
+			"title":"On new event",
 			"trigger":{
 				"type":"EVENT"
 			},
 			"type":"START"
-		},
-		{
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_p0Wy5-1",
-			"id":"_WJUFI",
-			"index":0,
-			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
 		}
 	],
 	"ownerUserId":6701,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +57,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
