@@ -6,46 +6,248 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_t9ESd",
+			"fromNodeId":"n_LjQfW",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_WAKMm",
+			"toNodeId":"n_B3qwY",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_B3qwY",
+			"name":"1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_B3qwY@1",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"n_B3qwY@1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_YMNeF",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_B3qwY",
+			"name":"2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_B3qwY@2",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"n_B3qwY@2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_ovMso",
 			"type":"next"
 		}
 	],
 	"id":"68e005918603d839a4e67960",
 	"lastModifiedBy":308,
 	"lcName":"testbranch",
-	"modifiedTime":1759511953497,
+	"modifiedTime":1759512008359,
 	"name":"testbranch",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":830,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_t9ESd-1",
-			"id":"_t9ESd",
-			"index":0,
+			"id":"n_LjQfW",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"branch",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_t9ESd-1",
-			"id":"_WAKMm",
-			"index":0,
+			"id":"n_B3qwY",
+			"index":2,
+			"inputs":{
+				"branches":[
+					{
+						"id":"1",
+						"inputs":{
+							"name":"Branch 1",
+							"conditions":{
+								"filters":[
+									{
+										"property":"1",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"4"
+										}
+									}
+								],
+								"operator":"AND"
+							}
+						}
+					},
+					{
+						"id":"2",
+						"inputs":{
+							"name":"Branch 2",
+							"conditions":{
+								"filters":[
+									{
+										"property":"1",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"1"
+										}
+									}
+								],
+								"operator":"AND"
+							}
+						}
+					},
+					{
+						"id":"default"
+					}
+				]
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Branch",
+			"title":"",
+			"type":"BRANCH"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":0,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_B3qwY@_t9ESd-1@1",
+			"id":"n_B3qwY@1",
+			"index":3,
+			"inputs":{
+				"name":"Branch 1",
+				"conditions":{
+					"filters":[
+						{
+							"property":"1",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"4"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":1262,
+				"resourceName":"standard_entities_fetch_user",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_B3qwY@_t9ESd-1@1",
+			"id":"n_YMNeF",
+			"index":4,
+			"inputs":{
+				"fetchBy":"id",
+				"applicationId":"",
+				"user":"79246"
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Fetch User",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":0,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_B3qwY@_t9ESd-1@2",
+			"id":"n_B3qwY@2",
+			"index":5,
+			"inputs":{
+				"name":"Branch 2",
+				"conditions":{
+					"filters":[
+						{
+							"property":"1",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"1"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":1262,
+				"resourceName":"standard_entities_fetch_user",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_B3qwY@_t9ESd-1@2",
+			"id":"n_ovMso",
+			"index":6,
+			"inputs":{
+				"fetchBy":"id",
+				"applicationId":"",
+				"user":"79246"
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Fetch User",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":308,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +261,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
