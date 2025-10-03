@@ -23,7 +23,7 @@
 	"id":"68da32b10d4c077d43dd6029",
 	"lastModifiedBy":43498,
 	"lcName":"test-jms",
-	"modifiedTime":1759417135441,
+	"modifiedTime":1759503960922,
 	"name":"test-jms",
 	"nodes":[
 		{
@@ -33,7 +33,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_hJ6cD-1",
 			"id":"n_YoO4c",
@@ -68,7 +68,7 @@
 			"inputs":{
 				"queueName":"unifyapps",
 				"messageFormat":"text",
-				"message":"hii test"
+				"message":"hii testbnm"
 			},
 			"skip":false,
 			"subTitle":"JMS",
@@ -84,7 +84,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_hJ6cD-1",
 			"id":"n_p2K61",
@@ -116,5 +116,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
