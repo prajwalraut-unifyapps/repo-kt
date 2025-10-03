@@ -1,20 +1,20 @@
 {
 	"appsUsed":[
-		"slack"
+		"storage_by_unifyapps"
 	],
 	"createdTime":1759496007833,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759502792525,
+		"deployedAt":1759506077065,
 		"deployedBy":46030,
-		"deployedDefinitionId":"68dfe1c8f5d9ee32ff9a9704",
+		"deployedDefinitionId":"68dfee9ce586b9072324da0a",
 		"status":"DEPLOYED",
-		"version":10,
-		"workflowVersion":13
+		"version":11,
+		"workflowVersion":14
 	},
 	"edges":[
 		{
-			"fromNodeId":"n_aUn4Z",
+			"fromNodeId":"n_3snC2",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_slGxt",
@@ -31,68 +31,38 @@
 			"fromNodeId":"n_mffa7",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_3fXiC",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_3fXiC",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_fRU8U",
+			"toNodeId":"n_qF03j",
 			"type":"next"
 		}
 	],
 	"id":"68dfc747ee7bed4bfee9071c",
-	"lastModifiedBy":46030,
+	"lastModifiedBy":155543,
 	"lcName":"dwaesrg",
-	"modifiedTime":1759506075127,
+	"modifiedTime":1759519277376,
 	"name":"dwaesrg",
 	"nodes":[
 		{
 			"context":{
-				"appName":"callables",
-				"resourceVersion":1003,
-				"resourceName":"callables_from_automation"
+				"appName":"webhooks",
+				"resourceVersion":830,
+				"resourceName":"webhooks_default"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7GtmI-1",
-			"id":"n_aUn4Z",
+			"id":"n_3snC2",
 			"index":1,
 			"inputs":{
-				"result":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"ok"
-					],
-					"properties":{
-						"ok":{
-							"type":"string",
-							"title":"Ok"
-						}
-					}
-				},
-				"setup":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"fsdf"
-					],
-					"properties":{
-						"fsdf":{
-							"type":"string",
-							"title":"Fsdf"
-						}
-					}
+				"request":{
+					"contentType":"application/json"
 				}
 			},
 			"skip":false,
-			"subTitle":"Callable",
-			"title":"Trigger via automation",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"CALLABLE"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
@@ -104,7 +74,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_7GtmI-1",
 			"id":"n_slGxt",
@@ -136,7 +106,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_7GtmI-1",
 			"id":"n_mffa7",
@@ -152,52 +122,29 @@
 		},
 		{
 			"context":{
-				"appName":"slack",
-				"resourceVersion":6277,
-				"connectionId":"68120aad96195b6ae3580731",
-				"resourceName":"slack_post_message_in_channel",
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":4520,
+				"resourceName":"storage_by_unifyapps_create_record",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7GtmI-1",
-			"id":"n_3fXiC",
+			"id":"n_qF03j",
 			"index":4,
 			"inputs":{
-				"link_names":true,
-				"messageType":"text",
-				"channel":"C08MGHNDMHS",
-				"text":"{{ n_mffa7.outputs.url }}",
-				"mrkdwn":true
-			},
-			"skip":false,
-			"subTitle":"Slack",
-			"title":"Post message",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"callables",
-				"resourceVersion":1039,
-				"resourceName":"callables_return_to_automation",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_7GtmI-1",
-			"id":"n_fRU8U",
-			"index":5,
-			"inputs":{
-				"result":{
-					"ok":"200"
+				"writeThroughSessionVariables":false,
+				"object_type":"testlink",
+				"skipIfBlank":false,
+				"record":{
+					"link":"{{ n_mffa7.outputs.url }}"
 				}
 			},
 			"skip":false,
-			"subTitle":"Callable",
-			"title":"Respond to automation",
-			"type":"STOP"
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create record",
+			"type":"ACTION"
 		}
 	],
 	"ownerUserId":155543,
@@ -217,5 +164,5 @@
 	"tags":[
 		
 	],
-	"version":14
+	"version":15
 }
