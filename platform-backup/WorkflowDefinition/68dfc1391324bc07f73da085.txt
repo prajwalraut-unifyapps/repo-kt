@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759494457668,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_HRu5G",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_FUKPB",
+			"type":"next"
+		}
+	],
+	"id":"68dfc1391324bc07f73da085",
+	"lastModifiedBy":161165,
+	"lcName":"outlook test",
+	"modifiedTime":1759494457668,
+	"name":"outlook test",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_HRu5G-1",
+			"id":"_HRu5G",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_HRu5G-1",
+			"id":"_FUKPB",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":161165,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
