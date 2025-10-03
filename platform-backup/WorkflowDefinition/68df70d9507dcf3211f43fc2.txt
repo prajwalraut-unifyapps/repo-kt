@@ -6,46 +6,80 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_Aqckp",
+			"fromNodeId":"n_Bikn2",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_cWVLj",
+			"toNodeId":"n_0x2yl",
 			"type":"next"
 		}
 	],
 	"id":"68df70d9507dcf3211f43fc2",
-	"lastModifiedBy":175510,
+	"lastModifiedBy":44096,
 	"lcName":"tets",
-	"modifiedTime":1759473881233,
+	"modifiedTime":1759477318787,
 	"name":"tets",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":982,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Aqckp-1",
-			"id":"_Aqckp",
-			"index":0,
+			"id":"n_Bikn2",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"b":{
+							"type":"boolean",
+							"title":"B"
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1007,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Aqckp-1",
-			"id":"_cWVLj",
-			"index":0,
+			"id":"n_0x2yl",
+			"index":2,
+			"inputs":{
+				"result":{
+					"b":true
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":175510,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +93,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
