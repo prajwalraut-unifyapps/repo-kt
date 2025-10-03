@@ -5,12 +5,12 @@
 	"createdTime":1740110526906,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1758655345874,
-		"deployedBy":0,
-		"deployedDefinitionId":"68d2f37138757c179b12342b",
+		"deployedAt":1759371889641,
+		"deployedBy":-1,
+		"deployedDefinitionId":"68dde271421ec34d10d66c42",
 		"status":"DEPLOYED",
-		"version":62,
-		"workflowVersion":114
+		"version":65,
+		"workflowVersion":117
 	},
 	"edges":[
 		{
@@ -76,8 +76,15 @@
 			"name":"yes",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"qmcv4",
+			"toNodeId":"_DeOaH",
 			"type":"if"
+		},
+		{
+			"fromNodeId":"_DeOaH",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"qmcv4",
+			"type":"next"
 		},
 		{
 			"fromNodeId":"qmcv4",
@@ -135,9 +142,9 @@
 		]
 	},
 	"id":"67b45c506083d2071be3d528",
-	"lastModifiedBy":-1,
+	"lastModifiedBy":44109,
 	"lcName":"resume stream",
-	"modifiedTime":1759243533384,
+	"modifiedTime":1759495180015,
 	"name":"Resume Stream",
 	"nodes":[
 		{
@@ -155,6 +162,8 @@
 			"inputs":{
 				"result":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"messageId":{
 							"type":"string",
@@ -179,20 +188,27 @@
 							"title":"delta",
 							"additionalProperties":false,
 							"required":[]
+						},
+						"deepResearchEnabled":{
+							"type":"boolean",
+							"title":"Deep Research Enabled"
+						},
+						"responseGenerationStatus":{
+							"type":"string",
+							"title":"Response Generation Status"
 						}
-					},
-					"additionalProperties":false
+					}
 				},
 				"setup":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"caseId":{
 							"type":"string",
 							"title":"Case Id"
 						}
-					},
-					"additionalProperties":false,
-					"required":[]
+					}
 				}
 			},
 			"skip":false,
@@ -408,6 +424,7 @@
 					"operator":"AND"
 				},
 				"object_type":"debug_agent",
+				"skipIfBlank":false,
 				"updateFields":[
 					{
 						"fieldName":"properties.events",
@@ -419,7 +436,8 @@
 				"page":{
 					"offset":0,
 					"limit":20
-				}
+				},
+				"unsetIfNull":false
 			},
 			"skip":false,
 			"subTitle":"debug Agent",
@@ -443,6 +461,8 @@
 				"signal_payload":{
 					"payload":{
 						"type":"object",
+						"additionalProperties":false,
+						"required":[],
 						"properties":{
 							"messageId":{
 								"type":"string",
@@ -467,9 +487,16 @@
 								"title":"delta",
 								"additionalProperties":false,
 								"required":[]
+							},
+							"deepResearchEnabled":{
+								"type":"boolean",
+								"title":"Deep Research Enabled"
+							},
+							"responseGenerationStatus":{
+								"type":"string",
+								"title":"Response Generation Status"
 							}
-						},
-						"additionalProperties":false
+						}
 					}
 				}
 			},
@@ -519,8 +546,32 @@
 			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"MbaR4@SHlhb@jwOnm-1@l@y",
-			"id":"qmcv4",
+			"id":"_DeOaH",
 			"index":9,
+			"inputs":{
+				"result":{
+					"responseGenerationStatus":"completed"
+				},
+				"completed":false
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Add response to automation stream",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":100,
+				"resourceName":"callables_return_to_automation_streaming",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"MbaR4@SHlhb@jwOnm-1@l@y",
+			"id":"qmcv4",
+			"index":10,
 			"inputs":{
 				"completed":true
 			},
@@ -538,7 +589,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"MbaR4@SHlhb@jwOnm-1@l@y",
 			"id":"pEYHc",
-			"index":10,
+			"index":11,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -556,15 +607,17 @@
 			"fallbackMode":"STOP",
 			"groupId":"SHlhb@jwOnm-1@l",
 			"id":"bmRsZ",
-			"index":11,
+			"index":12,
 			"inputs":{
 				"result":{
+					"messageId":"{{ SHlhb.outputs.payload.messageId }}",
 					"delta":{
 						"path":"{{ SHlhb.outputs.payload.delta.path }}",
 						"data":"{{ SHlhb.outputs.payload.delta.data }}",
 						"op":"{{ SHlhb.outputs.payload.delta.op }}"
 					},
-					"messageId":"{{ SHlhb.outputs.payload.messageId }}"
+					"deepResearchEnabled":"{{ SHlhb.outputs.payload.deepResearchEnabled }}",
+					"responseGenerationStatus":"pending"
 				},
 				"completed":false
 			},
@@ -585,7 +638,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"jwOnm-1",
 			"id":"EKXDi",
-			"index":12,
+			"index":13,
 			"inputs":{
 				"numberOfRecordsToUpdate":"SINGLE",
 				"triggerInputCondition":{
@@ -601,6 +654,7 @@
 					"operator":"AND"
 				},
 				"object_type":"debug_agent",
+				"skipIfBlank":false,
 				"updateFields":[
 					{
 						"fieldName":"properties.events",
@@ -612,7 +666,8 @@
 				"page":{
 					"offset":0,
 					"limit":20
-				}
+				},
+				"unsetIfNull":false
 			},
 			"skip":false,
 			"subTitle":"debug Agent",
@@ -631,7 +686,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"jwOnm-1",
 			"id":"m5FeP",
-			"index":13,
+			"index":14,
 			"inputs":{
 				"completed":true
 			},
@@ -654,9 +709,9 @@
 			"tierName":"global"
 		}
 	},
-	"standard":true,
+	"standard":false,
 	"tags":[
 		"AI Agent"
 	],
-	"version":115
+	"version":118
 }
