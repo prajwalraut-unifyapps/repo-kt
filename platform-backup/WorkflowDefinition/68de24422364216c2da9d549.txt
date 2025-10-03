@@ -134,7 +134,7 @@
 	"id":"68de24422364216c2da9d549",
 	"lastModifiedBy":161908,
 	"lcName":"branchloop",
-	"modifiedTime":1759509107092,
+	"modifiedTime":1759509137641,
 	"name":"branchloop",
 	"nodes":[
 		{
@@ -144,7 +144,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_kS6s2-1",
 			"id":"n_BIvEP",
@@ -348,7 +348,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_I42Hn@n_ikdIO@_kS6s2-1@1@l",
 			"id":"n_MYhE4",
@@ -356,7 +356,7 @@
 			"inputs":{
 				"repeatMode":"SINGLE",
 				"listSource":"{{ n_Tjmb5.outputs.objects }}",
-				"captureIterations":true
+				"captureIterations":false
 			},
 			"skip":false,
 			"subTitle":"Loop",
@@ -496,7 +496,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_kS6s2-1",
 			"id":"n_yRzol",
@@ -544,5 +544,5 @@
 	"tags":[
 		
 	],
-	"version":13
+	"version":14
 }
