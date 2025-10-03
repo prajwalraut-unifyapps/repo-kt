@@ -16,7 +16,7 @@
 	"id":"68dfc1391324bc07f73da085",
 	"lastModifiedBy":161165,
 	"lcName":"outlook test",
-	"modifiedTime":1759494841759,
+	"modifiedTime":1759494873796,
 	"name":"outlook test",
 	"nodes":[
 		{
@@ -59,8 +59,9 @@
 			"index":2,
 			"inputs":{
 				"flag":{
-					"flagStatus":"notFlagged"
-				}
+					"flagStatus":"flagged"
+				},
+				"messageId":"{{ n_fGhYu.outputs.id }}"
 			},
 			"skip":false,
 			"subTitle":"Microsoft Outlook",
@@ -85,5 +86,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
