@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759495754010,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_bsi2T",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_3jq1b",
+			"type":"next"
+		}
+	],
+	"id":"68dfc64aee7bed4bfee901a5",
+	"lastModifiedBy":124029,
+	"lcName":"netsuite",
+	"modifiedTime":1759495754010,
+	"name":"NETSUITE",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_bsi2T-1",
+			"id":"_bsi2T",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_bsi2T-1",
+			"id":"_3jq1b",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":124029,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
