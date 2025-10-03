@@ -11,12 +11,19 @@
 			"skip":false,
 			"toNodeId":"n_tj6Ko",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_tj6Ko",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_oa6Xm",
+			"type":"next"
 		}
 	],
 	"id":"68df8d810544226ddc277ee0",
 	"lastModifiedBy":43523,
 	"lcName":"hamsa test",
-	"modifiedTime":1759493906900,
+	"modifiedTime":1759493913449,
 	"name":"hamsa test",
 	"nodes":[
 		{
@@ -68,6 +75,21 @@
 			"subTitle":"Hamsa",
 			"title":"Transcribe audio",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_ExpZJ-1",
+			"id":"n_oa6Xm",
+			"index":3,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":43523,
@@ -87,5 +109,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
