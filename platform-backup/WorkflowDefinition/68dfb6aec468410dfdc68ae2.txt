@@ -1,51 +1,77 @@
 {
 	"appsUsed":[
-		
+		"gmeet"
 	],
 	"createdTime":1759491758751,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_eMnEq",
+			"fromNodeId":"n_hajkI",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_Z3faE",
+			"toNodeId":"n_nfes2",
 			"type":"next"
 		}
 	],
 	"id":"68dfb6aec468410dfdc68ae2",
 	"lastModifiedBy":6701,
 	"lcName":"gts",
-	"modifiedTime":1759491758751,
+	"modifiedTime":1759492124628,
 	"name":"gts",
 	"nodes":[
 		{
+			"context":{
+				"appName":"gmeet",
+				"resourceVersion":30,
+				"connectionId":"68dfb7a92d8fd835bedb131e",
+				"resourceName":"gmeet_on_new_event"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_eMnEq-1",
-			"id":"_eMnEq",
-			"index":0,
+			"id":"n_hajkI",
+			"index":1,
+			"inputs":{
+				"project_id":"project-1-439404",
+				"subscription_name":"testoct3",
+				"topic_id":"workspace-events-topic"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Google Meet",
+			"title":"On new event",
 			"trigger":{
 				"type":"EVENT"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"gmeet",
+				"resourceVersion":1867,
+				"connectionId":"68dfb7a92d8fd835bedb131e",
+				"resourceName":"gmeet_list_conference_record_participants",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_eMnEq-1",
-			"id":"_Z3faE",
-			"index":0,
+			"id":"n_nfes2",
+			"index":2,
+			"inputs":{
+				"name":"tets"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Google Meet",
+			"title":"List conference record participants",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":6701,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +85,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
