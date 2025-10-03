@@ -6,46 +6,64 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_XdKvh",
+			"fromNodeId":"n_HwWVq",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_SLwko",
+			"toNodeId":"n_oVJsl",
 			"type":"next"
 		}
 	],
 	"id":"68dffba08603d839a4e656d4",
 	"lastModifiedBy":517,
 	"lcName":"testing stream automation",
-	"modifiedTime":1759509408292,
+	"modifiedTime":1759510172037,
 	"name":"testing stream automation",
 	"nodes":[
 		{
+			"context":{
+				"appName":"streams_by_unifyapps",
+				"resourceVersion":1636,
+				"resourceName":"streams_by_unifyapps_on_event"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_XdKvh-1",
-			"id":"_XdKvh",
-			"index":0,
+			"id":"n_HwWVq",
+			"index":1,
+			"inputs":{
+				"triggerAfterCompletion":false,
+				"messageLimit":1,
+				"streamId":"e_68dffb82c1a56b41a0426659"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Streams by UnifyApps",
+			"title":"Triggers on new event from stream",
 			"trigger":{
 				"type":"EVENT"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"stop"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_XdKvh-1",
-			"id":"_SLwko",
-			"index":0,
+			"id":"n_oVJsl",
+			"index":2,
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":517,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +77,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
