@@ -37,7 +37,7 @@
 	"id":"68df10f132f8572ada24c781",
 	"lastModifiedBy":59995,
 	"lcName":" missing next partition",
-	"modifiedTime":1759449963944,
+	"modifiedTime":1759451759759,
 	"name":" Missing Next Partition",
 	"nodes":[
 		{
@@ -53,6 +53,50 @@
 			"id":"n_aHG9Z",
 			"index":1,
 			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"missingPartitions":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"DB_NAME":{
+										"type":"string",
+										"title":"DB_NAME"
+									},
+									"TABLE_NAME":{
+										"type":"string",
+										"title":"TABLE_NAME"
+									},
+									"PARTITION_NAME":{
+										"type":"string",
+										"title":"PARTITION_NAME"
+									},
+									"LATEST_PARTITION_END_DATE":{
+										"type":"string",
+										"title":"LATEST_PARTITION_END_DATE"
+									},
+									"DAYS_REMAINING":{
+										"type":"integer",
+										"title":"DAYS_REMAINING"
+									},
+									"DATA_SIZE":{
+										"type":"string",
+										"title":"DATA_SIZE"
+									},
+									"ROW_COUNT":{
+										"type":"integer",
+										"title":"ROW_COUNT"
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"missingPartitions"
+						}
+					}
+				},
 				"setup":{
 					"type":"object",
 					"additionalProperties":false,
@@ -354,7 +398,21 @@
 			"id":"n_v5jm5",
 			"index":5,
 			"inputs":{
-				"result":"{{ _Y9MIK.outputs.result }}"
+				"result":{
+					"missingPartitions":{
+						"source":"{{ _Y9MIK.outputs.result.result }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"DB_NAME":"{{ _Y9MIK.outputs.result.result[0].DB_NAME }}",
+							"TABLE_NAME":"{{ _Y9MIK.outputs.result.result[0].TABLE_NAME }}",
+							"PARTITION_NAME":"{{ _Y9MIK.outputs.result.result[0].PARTITION_NAME }}",
+							"LATEST_PARTITION_END_DATE":"{{ _Y9MIK.outputs.result.result[0].LATEST_PARTITION_END_DATE }}",
+							"DAYS_REMAINING":"{{ _Y9MIK.outputs.result.result[0].DAYS_REMAINING }}",
+							"DATA_SIZE":"{{ _Y9MIK.outputs.result.result[0].DATA_SIZE }}",
+							"ROW_COUNT":"{{ _Y9MIK.outputs.result.result[0].ROW_COUNT }}"
+						}
+					}
+				}
 			},
 			"skip":false,
 			"subTitle":"Callable",
@@ -379,5 +437,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
