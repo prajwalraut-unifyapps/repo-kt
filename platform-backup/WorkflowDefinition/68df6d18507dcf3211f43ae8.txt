@@ -108,7 +108,7 @@
 	"id":"68df6d18507dcf3211f43ae8",
 	"lastModifiedBy":132116,
 	"lcName":"nestedloops_insideconditions_testing",
-	"modifiedTime":1759497759261,
+	"modifiedTime":1759497773456,
 	"name":"nestedloops_insideconditions_testing",
 	"nodes":[
 		{
@@ -390,7 +390,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_hM9Xn@_BH9kr-1@n",
 			"id":"n_yiTD2",
@@ -414,7 +414,7 @@
 				}
 			},
 			"inputs":{
-				"input":"false input"
+				"input":"both inputs are not equal"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -471,5 +471,5 @@
 		"enableVariableLogging":true
 	},
 	"standard":false,
-	"version":27
+	"version":28
 }
