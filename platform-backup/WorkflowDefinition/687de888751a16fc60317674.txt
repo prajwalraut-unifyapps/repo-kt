@@ -147,7 +147,7 @@
 	"id":"687de888751a16fc60317674",
 	"lastModifiedBy":44567,
 	"lcName":"newiterateintegervaluesusingwhileloop_dnd",
-	"modifiedTime":1759402108453,
+	"modifiedTime":1759474303959,
 	"name":"NewIterateIntegerValuesUsingWhileLoop_DND",
 	"nodes":[
 		{
@@ -157,7 +157,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_ZQtgN-1",
 			"id":"n_tJdwj",
@@ -206,7 +206,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_ZQtgN-1",
 			"id":"n_CERrh",
@@ -257,7 +257,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_ZQtgN-1",
 			"id":"n_EpX2e",
@@ -306,7 +306,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_ZQtgN-1",
 			"id":"n_c219K",
@@ -548,7 +548,7 @@
 					}
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Variable by UnifyApps",
 			"title":"Create list",
 			"type":"ACTION"
@@ -561,7 +561,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_ZQtgN-1",
 			"id":"n_u5NuJ",
@@ -594,7 +594,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_u5NuJ@_ZQtgN-1@l",
 			"id":"n_4iHsg",
@@ -705,7 +705,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_u5NuJ@_ZQtgN-1@l",
 			"id":"n_9nKC2",
@@ -738,7 +738,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_9nKC2@n_u5NuJ@_ZQtgN-1@l@l",
 			"id":"n_nzZmA",
@@ -768,7 +768,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nzZmA@n_9nKC2@n_u5NuJ@_ZQtgN-1@l@l@y",
 			"id":"n_92TKt",
@@ -798,7 +798,7 @@
 				"variables":[
 					{
 						"source":"{{ n_EpX2e.outputs.str }}",
-						"value":"=CONCATENATE({{ n_EpX2e.outputs.str }},TEXT({{ n_CERrh.outputs.i }}, \"0\"), TEXT({{ n_4iHsg.outputs.j }}, \"0\"),\" \")"
+						"value":"=CONCATENATE({{ n_EpX2e.outputs.str }},{{ n_CERrh.outputs.i }}, {{ n_4iHsg.outputs.j }},\" \")"
 					}
 				]
 			},
@@ -875,7 +875,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_9nKC2@n_u5NuJ@_ZQtgN-1@l@l",
 			"id":"n_O4ABp",
@@ -898,7 +898,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_9nKC2@n_u5NuJ@_ZQtgN-1@l@l",
 			"id":"_T55NA",
@@ -921,7 +921,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_9nKC2@n_u5NuJ@_ZQtgN-1@l@l",
 			"id":"_8eyCm",
@@ -931,7 +931,7 @@
 				"insertLocation":"END",
 				"listName":"{{ n_c219K.outputs.items[0] }}"
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Variable by UnifyApps",
 			"title":"Add item to list",
 			"type":"ACTION"
@@ -944,7 +944,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_9nKC2@n_u5NuJ@_ZQtgN-1@l@l",
 			"id":"n_l4qac",
@@ -1030,7 +1030,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_u5NuJ@_ZQtgN-1@l",
 			"id":"n_OccvN",
@@ -1056,7 +1056,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_ZQtgN-1",
 			"id":"n_Xt52M",
@@ -1089,5 +1089,5 @@
 	"tags":[
 		
 	],
-	"version":26
+	"version":28
 }
