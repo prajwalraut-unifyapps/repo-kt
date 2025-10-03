@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759471287885,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759471316548,
+		"deployedBy":44103,
+		"deployedDefinitionId":"68df66d4507dcf3211f43447",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":0
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_RVU3x",
@@ -37,7 +45,7 @@
 	"id":"68df66b77cb1ae420e9a6c7f",
 	"lastModifiedBy":44103,
 	"lcName":"slot dynamic mapping",
-	"modifiedTime":1759471287885,
+	"modifiedTime":1759500277479,
 	"name":"Slot Dynamic mapping",
 	"nodes":[
 		{
@@ -308,5 +316,5 @@
 		}
 	},
 	"standard":false,
-	"version":0
+	"version":1
 }
