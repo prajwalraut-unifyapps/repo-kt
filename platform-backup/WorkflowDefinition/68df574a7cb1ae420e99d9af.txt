@@ -77,7 +77,7 @@
 	"id":"68df574a7cb1ae420e99d9af",
 	"lastModifiedBy":185277,
 	"lcName":"newconditions_insideloops_dnd",
-	"modifiedTime":1759474379285,
+	"modifiedTime":1759474540683,
 	"name":"Newconditions_insideloops_DND",
 	"nodes":[
 		{
@@ -87,7 +87,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_MXkKD-1",
 			"id":"n_eyapo",
@@ -136,7 +136,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_MXkKD-1",
 			"id":"n_5B4Wa",
@@ -160,7 +160,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_5B4Wa@_MXkKD-1@l",
 			"id":"n_gf4rW",
@@ -184,7 +184,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_gf4rW@n_5B4Wa@_MXkKD-1@l@l",
 			"id":"n_zgmfG",
@@ -214,7 +214,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_zgmfG@n_gf4rW@n_5B4Wa@_MXkKD-1@l@l@y",
 			"id":"n_jOhCa",
@@ -269,7 +269,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_zgmfG@n_gf4rW@n_5B4Wa@_MXkKD-1@l@l@n",
 			"id":"n_8Lfmj",
@@ -388,7 +388,7 @@
 			"index":7,
 			"inputs":{
 				"result":{
-					"output":"{{ n_5B4Wa.outputs.result }},{{ n_gf4rW.outputs.result }},{{ n_zgmfG.outputs.result }},{{ n_8Lfmj.outputs.error }}"
+					"output":"{{ n_5B4Wa.outputs.index }}{{ n_gf4rW.outputs.index }}{{ n_jOhCa.outputs.num }}{{ n_8Lfmj.outputs.error }}"
 				}
 			},
 			"skip":false,
@@ -414,5 +414,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
