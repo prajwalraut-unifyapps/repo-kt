@@ -26,6 +26,13 @@
 			"fromNodeId":"n_sdWBH",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_0RhwL",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_0RhwL",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_taqdm",
 			"type":"next"
 		},
@@ -75,7 +82,7 @@
 	"id":"68df6a13507dcf3211f43753",
 	"lastModifiedBy":161877,
 	"lcName":"dep-graph",
-	"modifiedTime":1759493095302,
+	"modifiedTime":1759493110743,
 	"name":"dep-graph",
 	"nodes":[
 		{
@@ -126,6 +133,59 @@
 		},
 		{
 			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":1012,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_0aXnR-1",
+			"id":"n_0RhwL",
+			"index":3,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"s":{
+							"type":"string",
+							"title":"S"
+						}
+					},
+					"required":[
+						"s"
+					]
+				}
+			},
+			"inputs":{},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"s":{
+							"type":"string",
+							"title":"S"
+						}
+					},
+					"required":[
+						"s"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"callables",
 				"resourceVersion":1026,
 				"resourceName":"callables_call_automation",
@@ -136,7 +196,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_taqdm",
-			"index":3,
+			"index":4,
 			"inputs":{
 				"automationId":"68de641fed7fcc6978211234",
 				"runtimeConnections":{},
@@ -161,7 +221,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_VOYYJ",
-			"index":4,
+			"index":5,
 			"inputs":{
 				"automationId":"6868e50ed1ed1e08253fa172",
 				"runtimeConnections":{},
@@ -187,7 +247,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_YQUx4",
-			"index":5,
+			"index":6,
 			"inputs":{},
 			"skip":false,
 			"subTitle":"Gmail",
@@ -207,7 +267,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_v76xa",
-			"index":6,
+			"index":7,
 			"inputs":{},
 			"skip":false,
 			"subTitle":"Github",
@@ -226,7 +286,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_kMXFh",
-			"index":7,
+			"index":8,
 			"inputs":{
 				"object_type":"trial1"
 			},
@@ -247,7 +307,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_3Ltb2",
-			"index":8,
+			"index":9,
 			"inputs":{
 				"automationId":"68df6a13507dcf3211f43753",
 				"runtimeConnections":{},
@@ -272,7 +332,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_kDZe5",
-			"index":9,
+			"index":10,
 			"inputs":{
 				"result":"s"
 			},
@@ -299,5 +359,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
