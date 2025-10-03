@@ -52,7 +52,7 @@
 	"id":"68a0621ce2145a693b0a5877",
 	"lastModifiedBy":44096,
 	"lcName":"testlookup",
-	"modifiedTime":1759476585566,
+	"modifiedTime":1759476795584,
 	"name":"testLookup",
 	"nodes":[
 		{
@@ -132,7 +132,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_lUik9-1",
 			"id":"n_7xTUy",
@@ -152,7 +152,7 @@
 				],
 				"type":"ByKeys"
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Standard entities by UnifyApps",
 			"title":"Lookup Request",
 			"type":"ACTION"
@@ -265,5 +265,5 @@
 	"tags":[
 		
 	],
-	"version":25
+	"version":26
 }
