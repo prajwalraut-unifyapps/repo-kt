@@ -134,7 +134,7 @@
 	"id":"68de24422364216c2da9d549",
 	"lastModifiedBy":161908,
 	"lcName":"branchloop",
-	"modifiedTime":1759509044351,
+	"modifiedTime":1759509047637,
 	"name":"branchloop",
 	"nodes":[
 		{
@@ -490,7 +490,9 @@
 			"groupId":"_kS6s2-1",
 			"id":"n_yRzol",
 			"index":12,
-			"inputs":{},
+			"inputs":{
+				"result":"r2tw"
+			},
 			"skip":false,
 			"subTitle":"Callable",
 			"title":"Respond to automation",
@@ -529,5 +531,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":12
 }
