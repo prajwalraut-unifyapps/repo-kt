@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759492439500,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_Yoj22",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Z0t2A",
+			"type":"next"
+		}
+	],
+	"id":"68dfb957c468410dfdc696e7",
+	"lastModifiedBy":678,
+	"lcName":"dvvs",
+	"modifiedTime":1759492439500,
+	"name":"dvvs",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Yoj22-1",
+			"id":"_Yoj22",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Yoj22-1",
+			"id":"_Z0t2A",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":678,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
