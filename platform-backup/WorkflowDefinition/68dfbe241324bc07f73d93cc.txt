@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759493668707,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759493705212,
+		"deployedBy":43523,
+		"deployedDefinitionId":"68dfbe461324bc07f73d9422",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_jIdtg",
@@ -23,7 +31,7 @@
 	"id":"68dfbe241324bc07f73d93cc",
 	"lastModifiedBy":43523,
 	"lcName":"hamsa test2",
-	"modifiedTime":1759493701145,
+	"modifiedTime":1759494534021,
 	"name":"hamsa test2",
 	"nodes":[
 		{
@@ -33,7 +41,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_ul8gS-1",
 			"id":"n_jIdtg",
@@ -71,7 +79,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_ul8gS-1",
 			"id":"n_UNFRX",
@@ -89,7 +97,7 @@
 				"appName":"stop"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_ul8gS-1",
 			"id":"n_9Udov",
@@ -117,5 +125,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
