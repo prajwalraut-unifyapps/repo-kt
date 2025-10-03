@@ -5,104 +5,46 @@
 	"createdTime":1759242430527,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759413369665,
+		"deployedAt":1759478364549,
 		"deployedBy":45011,
-		"deployedDefinitionId":"68de84794361896e3c5ee259",
+		"deployedDefinitionId":"68df825c21d3e30b17c178fb",
 		"status":"DEPLOYED",
-		"version":14,
-		"workflowVersion":24
+		"version":15,
+		"workflowVersion":25
 	},
 	"edges":[
-		{
-			"fromNodeId":"n_5dKRb",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_KAsDL",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_KAsDL",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_li6IJ",
-			"type":"next"
-		}
+		
 	],
 	"id":"68dbe8be1bd93f17d9aa6254",
 	"lastModifiedBy":45011,
 	"lcName":"test-scheduler-connection-deletion",
-	"modifiedTime":1759478361372,
+	"modifiedTime":1759513615446,
 	"name":"test-scheduler-connection-deletion",
 	"nodes":[
 		{
 			"context":{
-				"appName":"schedule",
-				"resourceVersion":818,
-				"resourceName":"schedule_default"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_oKLjG-1",
-			"id":"n_5dKRb",
-			"index":1,
-			"inputs":{
-				"cron":"INTERVAL",
-				"sequential":false,
-				"interval":30,
-				"frequency":"SECONDS"
-			},
-			"skip":false,
-			"subTitle":"Schedule",
-			"title":"New recurring event",
-			"trigger":{
-				"type":"SCHEDULED"
-			},
-			"type":"START"
-		},
-		{
-			"context":{
 				"appName":"teamwork",
-				"resourceVersion":2541,
-				"connectionId":"68de840e953b7316d9d800e7",
-				"resourceName":"teamwork_get_projects",
-				"type":"APPLICATION"
+				"resourceVersion":2621,
+				"connectionId":"68de841c953b7316d9d80158",
+				"resourceName":"teamwork_on_create_task_polling"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_oKLjG-1",
-			"id":"n_KAsDL",
-			"index":2,
+			"id":"n_wl2R9",
+			"index":1,
 			"inputs":{
-				"includeProjectOwner":false,
-				"onlyStarredProjects":false,
-				"orderMode":"asc",
-				"getDeleted":false,
-				"includeTags":false,
-				"orderby":"name",
-				"status":"active",
-				"includePeople":false
+				"interval":30,
+				"batchSize":100
 			},
 			"skip":false,
 			"subTitle":"Teamwork",
-			"title":"Get all projects",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"stop"
+			"title":"Task created",
+			"trigger":{
+				"type":"EVENT"
 			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_oKLjG-1",
-			"id":"n_li6IJ",
-			"index":3,
-			"skip":false,
-			"subTitle":"Stop",
-			"title":"Stop",
-			"type":"STOP"
+			"type":"START"
 		}
 	],
 	"ownerUserId":569,
@@ -122,5 +64,5 @@
 	"tags":[
 		
 	],
-	"version":25
+	"version":26
 }
