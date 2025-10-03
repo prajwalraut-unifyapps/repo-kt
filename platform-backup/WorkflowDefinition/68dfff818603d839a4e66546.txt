@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759510401106,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_ZF2IQ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_80l0T",
+			"type":"next"
+		}
+	],
+	"id":"68dfff818603d839a4e66546",
+	"lastModifiedBy":517,
+	"lcName":"testing stream",
+	"modifiedTime":1759510401106,
+	"name":"testing stream",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_ZF2IQ-1",
+			"id":"_ZF2IQ",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_ZF2IQ-1",
+			"id":"_80l0T",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":517,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
