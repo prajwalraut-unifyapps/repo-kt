@@ -5,12 +5,12 @@
 	"createdTime":1759496007833,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759500715842,
+		"deployedAt":1759500748326,
 		"deployedBy":155543,
-		"deployedDefinitionId":"68dfd9a9f5d9ee32ff9a4849",
+		"deployedDefinitionId":"68dfd9ccf5d9ee32ff9a4908",
 		"status":"DEPLOYED",
-		"version":7,
-		"workflowVersion":10
+		"version":8,
+		"workflowVersion":11
 	},
 	"edges":[
 		{
@@ -36,9 +36,9 @@
 		}
 	],
 	"id":"68dfc747ee7bed4bfee9071c",
-	"lastModifiedBy":155543,
+	"lastModifiedBy":46030,
 	"lcName":"dwaesrg",
-	"modifiedTime":1759500746403,
+	"modifiedTime":1759502123963,
 	"name":"dwaesrg",
 	"nodes":[
 		{
@@ -88,6 +88,7 @@
 				"exportType":"PDF",
 				"page":{
 					"format":"a4",
+					"layout":"landscape",
 					"scale":1,
 					"timeout":5000
 				}
@@ -163,5 +164,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":12
 }
