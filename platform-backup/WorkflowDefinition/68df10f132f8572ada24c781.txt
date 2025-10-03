@@ -30,14 +30,14 @@
 			"fromNodeId":"_Y9MIK",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_4IGvm",
+			"toNodeId":"n_v5jm5",
 			"type":"next"
 		}
 	],
 	"id":"68df10f132f8572ada24c781",
 	"lastModifiedBy":59995,
 	"lcName":" missing next partition",
-	"modifiedTime":1759449660829,
+	"modifiedTime":1759449963944,
 	"name":" Missing Next Partition",
 	"nodes":[
 		{
@@ -174,7 +174,7 @@
 				},
 				"connectionType":"DIRECT",
 				"sslVerify":false,
-				"path":"/internal/sql-report/runSQL/query/{{ n_A4kqi.outputs.customerId }}",
+				"path":"/internal/sql-report/runSQL/query/{{ n_aHG9Z.outputs.customerId }}",
 				"responseSchema":{
 					"type":"object",
 					"additionalProperties":false,
@@ -341,15 +341,25 @@
 			"type":"ACTION"
 		},
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1001,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_BzeUm-1",
-			"id":"_4IGvm",
+			"id":"n_v5jm5",
 			"index":5,
+			"inputs":{
+				"result":"{{ _Y9MIK.outputs.result }}"
+			},
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":59995,
@@ -369,5 +379,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
