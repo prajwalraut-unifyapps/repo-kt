@@ -91,13 +91,6 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_yiTD2",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_m2xIT",
-			"type":"next"
-		},
-		{
 			"fromNodeId":"n_fnth2",
 			"priority":0,
 			"skip":false,
@@ -105,7 +98,7 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_m2xIT",
+			"fromNodeId":"n_yiTD2",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_WjLrf",
@@ -115,7 +108,7 @@
 	"id":"68df6d18507dcf3211f43ae8",
 	"lastModifiedBy":132116,
 	"lcName":"nestedloops_insideconditions_testing",
-	"modifiedTime":1759476041250,
+	"modifiedTime":1759476329950,
 	"name":"nestedloops_insideconditions_testing",
 	"nodes":[
 		{
@@ -442,42 +435,19 @@
 		{
 			"context":{
 				"appName":"callables",
-				"resourceVersion":1007,
+				"resourceVersion":1001,
 				"resourceName":"callables_return_to_automation",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
-			"groupId":"n_hM9Xn@_BH9kr-1@n",
-			"id":"n_m2xIT",
+			"groupId":"_BH9kr-1",
+			"id":"n_WjLrf",
 			"index":9,
 			"inputs":{
 				"result":{
-					"output":"{{ n_yiTD2.outputs.input }}"
-				}
-			},
-			"skip":false,
-			"subTitle":"Callable",
-			"title":"Respond to automation",
-			"type":"STOP"
-		},
-		{
-			"context":{
-				"appName":"callables",
-				"resourceVersion":1001,
-				"resourceName":"callables_return_to_automation",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_BH9kr-1",
-			"id":"n_WjLrf",
-			"index":10,
-			"inputs":{
-				"result":{
-					"output":"cool"
+					"output":"{{ n_hM9Xn.outputs.result }}"
 				}
 			},
 			"skip":false,
@@ -503,5 +473,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":12
 }
