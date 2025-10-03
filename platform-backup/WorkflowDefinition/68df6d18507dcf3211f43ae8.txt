@@ -5,12 +5,12 @@
 	"createdTime":1759472920813,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759476649494,
+		"deployedAt":1759476719118,
 		"deployedBy":132116,
-		"deployedDefinitionId":"68df7ba9870cd8428097d9d6",
+		"deployedDefinitionId":"68df7bee870cd8428097da34",
 		"status":"DEPLOYED",
-		"version":10,
-		"workflowVersion":17
+		"version":11,
+		"workflowVersion":18
 	},
 	"edges":[
 		{
@@ -103,19 +103,12 @@
 			"skip":false,
 			"toNodeId":"n_WjLrf",
 			"type":"next"
-		},
-		{
-			"fromNodeId":"n_WjLrf",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_qohW6",
-			"type":"next"
 		}
 	],
 	"id":"68df6d18507dcf3211f43ae8",
 	"lastModifiedBy":132116,
 	"lcName":"nestedloops_insideconditions_testing",
-	"modifiedTime":1759476717314,
+	"modifiedTime":1759476865944,
 	"name":"nestedloops_insideconditions_testing",
 	"nodes":[
 		{
@@ -216,7 +209,7 @@
 			"index":3,
 			"inputs":{
 				"start":0,
-				"limit":5,
+				"limit":"{{ n_iSjux.outputs.input_number }}",
 				"step":1,
 				"captureIterations":true
 			},
@@ -240,7 +233,7 @@
 			"index":4,
 			"inputs":{
 				"start":0,
-				"limit":5,
+				"limit":"{{ n_iSjux.outputs.input_number2 }}",
 				"step":1,
 				"captureIterations":true
 			},
@@ -268,7 +261,7 @@
 						"property":"{{ n_fnth2.outputs.index }}",
 						"filter":{
 							"operator":"EQUAL",
-							"value":"3"
+							"value":"{{ n_iSjux.outputs.input_number }}"
 						}
 					}
 				],
@@ -466,21 +459,6 @@
 			"subTitle":"Callable",
 			"title":"Respond to automation",
 			"type":"STOP"
-		},
-		{
-			"context":{
-				"appName":"stop"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_BH9kr-1",
-			"id":"n_qohW6",
-			"index":10,
-			"skip":false,
-			"subTitle":"Stop",
-			"title":"Stop",
-			"type":"STOP"
 		}
 	],
 	"ownerUserId":132116,
@@ -500,5 +478,5 @@
 	"tags":[
 		
 	],
-	"version":18
+	"version":19
 }
