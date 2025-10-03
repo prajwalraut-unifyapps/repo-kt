@@ -6,46 +6,145 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_ZF2IQ",
+			"fromNodeId":"n_aSzoO",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_80l0T",
+			"toNodeId":"n_sMAgk",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_sMAgk",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_inY9m",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_inY9m",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_sMAgk",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_sMAgk",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_RabHW",
 			"type":"next"
 		}
 	],
 	"id":"68dfff818603d839a4e66546",
 	"lastModifiedBy":517,
 	"lcName":"testing stream",
-	"modifiedTime":1759510401106,
+	"modifiedTime":1759510472434,
 	"name":"testing stream",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":830,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ZF2IQ-1",
-			"id":"_ZF2IQ",
-			"index":0,
+			"id":"n_aSzoO",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"streams_by_unifyapps",
+				"resourceVersion":915,
+				"resourceName":"streams_by_unifyapps_poll_events",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ZF2IQ-1",
-			"id":"_80l0T",
-			"index":0,
+			"id":"n_sMAgk",
+			"index":2,
+			"inputs":{
+				"streamId":"e_68dffb82c1a56b41a0426659",
+				"repeatMode":"SINGLE",
+				"batchSize":1,
+				"consumerGroup":"jryhtegrwfeqtt",
+				"commitOption":"MANUAL_COMMIT"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Streams by UnifyApps",
+			"title":"Polls for new events from stream",
+			"type":"LOOP"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.offsetsToCommit.items.partition",
+					"root.offsetsToCommit.items.offset"
+				]
+			},
+			"context":{
+				"appName":"streams_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"streams_by_unifyapps_commit_offsets",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_sMAgk@_ZF2IQ-1@l",
+			"id":"n_inY9m",
+			"index":3,
+			"inputs":{
+				"streamId":"e_68dffb82c1a56b41a0426659",
+				"consumerGroup":"jryhtegrwfeqtt",
+				"offsetsToCommit":[
+					{
+						"partition":"{{ n_sMAgk.outputs.item.partition }}",
+						"offset":"{{ n_sMAgk.outputs.item.offset }}"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Streams by UnifyApps",
+			"title":"Commits offsets",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_ZF2IQ-1",
+			"id":"n_RabHW",
+			"index":4,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":517,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +158,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
