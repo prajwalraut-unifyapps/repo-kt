@@ -65,6 +65,21 @@
 			"type":"next"
 		},
 		{
+			"fromNodeId":"n_0e8pv",
+			"name":"3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_0e8pv@3",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"n_0e8pv@3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_6upcu",
+			"type":"next"
+		},
+		{
 			"fromNodeId":"n_dqVlO",
 			"name":"loopback",
 			"priority":0,
@@ -74,6 +89,14 @@
 		},
 		{
 			"fromNodeId":"n_qmtzv",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_qcNZk",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_6upcu",
 			"name":"loopback",
 			"priority":0,
 			"skip":false,
@@ -107,7 +130,7 @@
 	"id":"68d6497d041c7212b98ad3af",
 	"lastModifiedBy":39713,
 	"lcName":"test",
-	"modifiedTime":1758965388249,
+	"modifiedTime":1759474466338,
 	"name":"test",
 	"nodes":[
 		{
@@ -233,6 +256,24 @@
 						}
 					},
 					{
+						"id":"3",
+						"inputs":{
+							"name":"Branch 3",
+							"conditions":{
+								"filters":[
+									{
+										"property":"3",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"3"
+										}
+									}
+								],
+								"operator":"AND"
+							}
+						}
+					},
+					{
 						"id":"default"
 					}
 				]
@@ -300,7 +341,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_0e8pv@n_qcNZk@n_V6jVI@_994SS-1@l@l@2",
 			"id":"n_0e8pv@2",
@@ -344,6 +385,49 @@
 		},
 		{
 			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":0,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_0e8pv@n_qcNZk@n_V6jVI@_994SS-1@l@l@3",
+			"id":"n_0e8pv@3",
+			"index":9,
+			"inputs":{
+				"name":"Branch 3",
+				"conditions":{
+					"filters":[
+						{
+							"property":"3",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"3"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_0e8pv@n_qcNZk@n_V6jVI@_994SS-1@l@l@3",
+			"id":"n_6upcu",
+			"index":10,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"stop"
 			},
 			"debug":false,
@@ -351,7 +435,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_994SS-1",
 			"id":"n_HzVkP",
-			"index":9,
+			"index":11,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -375,5 +459,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
