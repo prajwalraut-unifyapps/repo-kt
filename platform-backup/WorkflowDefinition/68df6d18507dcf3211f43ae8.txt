@@ -6,7 +6,7 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"n_7euAQ",
+			"fromNodeId":"n_iSjux",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_hM9Xn",
@@ -86,45 +86,68 @@
 			"fromNodeId":"n_fnth2",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_Xd0FU",
+			"toNodeId":"n_WjLrf",
 			"type":"next"
 		},
 		{
 			"fromNodeId":"n_yiTD2",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_Xd0FU",
+			"toNodeId":"n_WjLrf",
 			"type":"next"
 		}
 	],
 	"id":"68df6d18507dcf3211f43ae8",
 	"lastModifiedBy":132116,
 	"lcName":"nestedloops_insideconditions_testing",
-	"modifiedTime":1759472920813,
+	"modifiedTime":1759473286449,
 	"name":"nestedloops_insideconditions_testing",
 	"nodes":[
 		{
 			"context":{
-				"appName":"webhooks",
-				"resourceVersion":813,
-				"resourceName":"webhooks_default"
+				"appName":"callables",
+				"resourceVersion":976,
+				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_BH9kr-1",
-			"id":"n_7euAQ",
+			"id":"n_iSjux",
 			"index":1,
 			"inputs":{
-				"request":{
-					"contentType":"application/json"
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"output"
+					],
+					"properties":{
+						"output":{
+							"type":"string",
+							"title":"Output"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"input_number"
+					],
+					"properties":{
+						"input_number":{
+							"type":"number",
+							"title":"Input Number"
+						}
+					}
 				}
 			},
 			"skip":false,
-			"subTitle":"Webhook",
-			"title":"New event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"WEBHOOK"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
@@ -136,7 +159,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_BH9kr-1",
 			"id":"n_hM9Xn",
@@ -144,7 +167,7 @@
 			"inputs":{
 				"filters":[
 					{
-						"property":"1",
+						"property":"{{ n_iSjux.outputs.input_number }}",
 						"filter":{
 							"operator":"EQUAL",
 							"value":"1"
@@ -166,7 +189,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_hM9Xn@_BH9kr-1@y",
 			"id":"n_fnth2",
@@ -190,7 +213,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_fnth2@n_hM9Xn@_BH9kr-1@y@l",
 			"id":"n_yB1nW",
@@ -214,7 +237,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_yB1nW@n_fnth2@n_hM9Xn@_BH9kr-1@y@l@l",
 			"id":"n_fY1zp",
@@ -244,7 +267,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_fY1zp@n_yB1nW@n_fnth2@n_hM9Xn@_BH9kr-1@y@l@l@y",
 			"id":"n_HKpwf",
@@ -267,9 +290,10 @@
 					]
 				}
 			},
-			"inputs":{},
+			"inputs":{
+				"input":"successfull"
+			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -298,7 +322,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_fY1zp@n_yB1nW@n_fnth2@n_hM9Xn@_BH9kr-1@y@l@l@n",
 			"id":"n_5qNOH",
@@ -321,9 +345,10 @@
 					]
 				}
 			},
-			"inputs":{},
+			"inputs":{
+				"input":"not successfull"
+			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -352,7 +377,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_hM9Xn@_BH9kr-1@n",
 			"id":"n_yiTD2",
@@ -376,10 +401,9 @@
 				}
 			},
 			"inputs":{
-				"input":"unify"
+				"input":"false input"
 			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -402,17 +426,25 @@
 		},
 		{
 			"context":{
-				"appName":"stop"
+				"appName":"callables",
+				"resourceVersion":1001,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_BH9kr-1",
-			"id":"n_Xd0FU",
+			"id":"n_WjLrf",
 			"index":9,
+			"inputs":{
+				"result":{
+					"output":"cool"
+				}
+			},
 			"skip":false,
-			"subTitle":"Stop",
-			"title":"Stop",
+			"subTitle":"Callable",
+			"title":"Respond to automation",
 			"type":"STOP"
 		}
 	],
@@ -433,5 +465,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
