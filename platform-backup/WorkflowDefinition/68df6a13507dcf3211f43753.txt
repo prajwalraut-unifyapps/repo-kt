@@ -6,6 +6,14 @@
 	],
 	"createdTime":1759472147968,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759482818488,
+		"deployedBy":67744,
+		"deployedDefinitionId":"68df93c23e318d0b8ece8a70",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":7
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_7CuSI",
@@ -65,9 +73,9 @@
 		}
 	],
 	"id":"68df6a13507dcf3211f43753",
-	"lastModifiedBy":67744,
+	"lastModifiedBy":161877,
 	"lcName":"dep-graph",
-	"modifiedTime":1759482812463,
+	"modifiedTime":1759493095302,
 	"name":"dep-graph",
 	"nodes":[
 		{
@@ -99,7 +107,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_sdWBH",
@@ -124,7 +132,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_taqdm",
@@ -149,7 +157,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_VOYYJ",
@@ -235,7 +243,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_3Ltb2",
@@ -291,5 +299,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
