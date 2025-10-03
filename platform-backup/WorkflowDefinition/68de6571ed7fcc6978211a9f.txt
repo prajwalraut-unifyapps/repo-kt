@@ -45,7 +45,7 @@
 	"id":"68de6571ed7fcc6978211a9f",
 	"lastModifiedBy":13,
 	"lcName":"testdnt",
-	"modifiedTime":1759477830455,
+	"modifiedTime":1759477904695,
 	"name":"testdnt",
 	"nodes":[
 		{
@@ -55,7 +55,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_mf0p7-1",
 			"id":"n_Is8vp",
@@ -105,23 +105,28 @@
 						}
 					}
 				},
-				"query":"SELECT * FROM ENTITY_npci_data \nWHERE _pr_txnId = :txnId \n  AND _pr_beneficiaryFlag = :beneficiaryFlag",
+				"query":"SELECT \n  _pr_txnId,\n  _pr_Composite_Key,\n  _pr_dateInEpoch,\n  _pr_beneficiaryFlag\nFROM ENTITY_npci_data \nWHERE _pr_beneficiaryFlag = :beneficiaryFlag\n  AND _pr_dateInEpoch > :minDate\n  AND _pr_Composite_Key = :compositeKey\nORDER BY _pr_dateInEpoch DESC",
 				"record":{
-					"txnId":"3",
-					"beneficiaryFlag":false
+					"beneficiaryFlag":false,
+					"minDate":1758000000000,
+					"compositeKey":"3"
 				},
 				"params":{
 					"type":"object",
 					"additionalProperties":false,
 					"required":[],
 					"properties":{
-						"txnId":{
-							"type":"string",
-							"title":"Txn Id"
-						},
 						"beneficiaryFlag":{
 							"type":"boolean",
 							"title":"Beneficiary Flag"
+						},
+						"minDate":{
+							"type":"number",
+							"title":"Min Date"
+						},
+						"compositeKey":{
+							"type":"string",
+							"title":"Composite Key"
 						}
 					}
 				},
@@ -140,7 +145,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_mf0p7-1",
 			"id":"n_Coys1",
@@ -162,7 +167,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_mf0p7-1",
 			"id":"n_2lP2J",
@@ -192,7 +197,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_mf0p7-1",
 			"id":"n_3F9Im",
@@ -259,5 +264,5 @@
 	"tags":[
 		
 	],
-	"version":21
+	"version":22
 }
