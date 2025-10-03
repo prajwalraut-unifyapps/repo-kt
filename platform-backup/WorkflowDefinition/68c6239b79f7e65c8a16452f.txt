@@ -705,11 +705,18 @@
 			"fromNodeId":"_TNCsd",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_oSfM0",
+			"toNodeId":"n_wIqCh",
 			"type":"next"
 		},
 		{
 			"fromNodeId":"_nHiIA",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_wIqCh",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_wIqCh",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"_oSfM0",
@@ -858,7 +865,7 @@
 	"id":"68c6239b79f7e65c8a16452f",
 	"lastModifiedBy":59995,
 	"lcName":"infra | starrocks | alert |  table health",
-	"modifiedTime":1759453397035,
+	"modifiedTime":1759453759472,
 	"name":"INFRA | STARROCKS | ALERT |  Table health",
 	"nodes":[
 		{
@@ -7315,6 +7322,22 @@
 			"type":"CALL_WORKFLOW"
 		},
 		{
+			"context":{
+				"appName":"callables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_jMFmS-1",
+			"id":"n_wIqCh",
+			"index":77,
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Select an action",
+			"type":"CALL_WORKFLOW"
+		},
+		{
 			"additional":{
 				"xsdSchemaConfig":{
 					"root":{}
@@ -7331,7 +7354,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_oSfM0",
-			"index":77,
+			"index":78,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -7470,7 +7493,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_sbw6Y",
-			"index":78,
+			"index":79,
 			"inputs":{
 				"filters":[
 					{
@@ -7506,7 +7529,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sbw6Y@_jMFmS-1@y",
 			"id":"_W50DB",
-			"index":79,
+			"index":80,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -7546,7 +7569,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sbw6Y@_jMFmS-1@y",
 			"id":"_axNoi",
-			"index":80,
+			"index":81,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -7583,7 +7606,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sbw6Y@_jMFmS-1@n",
 			"id":"_XAGCp",
-			"index":81,
+			"index":82,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -7623,7 +7646,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sbw6Y@_jMFmS-1@n",
 			"id":"_Ul4xT",
-			"index":82,
+			"index":83,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -7660,7 +7683,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_mTnAB",
-			"index":83,
+			"index":84,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -7802,7 +7825,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_sd49N",
-			"index":84,
+			"index":85,
 			"inputs":{
 				"filters":[
 					{
@@ -7838,7 +7861,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sd49N@_jMFmS-1@y",
 			"id":"_jP4zx",
-			"index":85,
+			"index":86,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -7878,7 +7901,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sd49N@_jMFmS-1@y",
 			"id":"_9P9Co",
-			"index":86,
+			"index":87,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -7915,7 +7938,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sd49N@_jMFmS-1@n",
 			"id":"_mK9Cz",
-			"index":87,
+			"index":88,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -7955,7 +7978,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sd49N@_jMFmS-1@n",
 			"id":"_OvB0j",
-			"index":88,
+			"index":89,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -7992,7 +8015,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_Xc40g",
-			"index":89,
+			"index":90,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -8122,7 +8145,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_3i0XI",
-			"index":90,
+			"index":91,
 			"inputs":{
 				"filters":[
 					{
@@ -8158,7 +8181,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_3i0XI@_jMFmS-1@y",
 			"id":"_wwCEw",
-			"index":91,
+			"index":92,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -8198,7 +8221,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_3i0XI@_jMFmS-1@y",
 			"id":"_A4qEN",
-			"index":92,
+			"index":93,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -8236,7 +8259,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_3i0XI@_jMFmS-1@n",
 			"id":"_VKHcU",
-			"index":93,
+			"index":94,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -8276,7 +8299,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_3i0XI@_jMFmS-1@n",
 			"id":"_wR0DC",
-			"index":94,
+			"index":95,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -8315,5 +8338,5 @@
 	"tags":[
 		
 	],
-	"version":95
+	"version":96
 }
