@@ -134,7 +134,7 @@
 	"id":"68de24422364216c2da9d549",
 	"lastModifiedBy":161908,
 	"lcName":"branchloop",
-	"modifiedTime":1759509137641,
+	"modifiedTime":1759509141916,
 	"name":"branchloop",
 	"nodes":[
 		{
@@ -325,7 +325,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_ikdIO@_kS6s2-1@1",
 			"id":"n_I42Hn",
@@ -333,7 +333,7 @@
 			"inputs":{
 				"repeatMode":"SINGLE",
 				"listSource":"{{ n_Tjmb5.outputs.objects }}",
-				"captureIterations":true
+				"captureIterations":false
 			},
 			"skip":false,
 			"subTitle":"Loop",
@@ -544,5 +544,5 @@
 	"tags":[
 		
 	],
-	"version":14
+	"version":15
 }
