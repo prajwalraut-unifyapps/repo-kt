@@ -53,6 +53,13 @@
 			"fromNodeId":"n_kMXFh",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_3Ltb2",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_3Ltb2",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_kDZe5",
 			"type":"next"
 		}
@@ -60,7 +67,7 @@
 	"id":"68df6a13507dcf3211f43753",
 	"lastModifiedBy":161877,
 	"lcName":"dep-graph",
-	"modifiedTime":1759473156441,
+	"modifiedTime":1759473171767,
 	"name":"dep-graph",
 	"nodes":[
 		{
@@ -223,6 +230,31 @@
 		{
 			"context":{
 				"appName":"callables",
+				"resourceVersion":1026,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_0aXnR-1",
+			"id":"n_3Ltb2",
+			"index":8,
+			"inputs":{
+				"automationId":"68df6a13507dcf3211f43753",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
 				"resourceVersion":1001,
 				"resourceName":"callables_return_to_automation",
 				"type":"APPLICATION"
@@ -232,7 +264,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_kDZe5",
-			"index":8,
+			"index":9,
 			"inputs":{
 				"result":"s"
 			},
@@ -259,5 +291,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
