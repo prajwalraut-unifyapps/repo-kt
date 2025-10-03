@@ -8,7 +8,7 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"n_naH8m",
+			"fromNodeId":"n_7CuSI",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_sdWBH",
@@ -48,36 +48,36 @@
 			"skip":false,
 			"toNodeId":"n_kMXFh",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_kMXFh",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_yENQO",
+			"type":"next"
 		}
 	],
 	"id":"68df6a13507dcf3211f43753",
 	"lastModifiedBy":161877,
 	"lcName":"dep-graph",
-	"modifiedTime":1759472699658,
+	"modifiedTime":1759473057347,
 	"name":"dep-graph",
 	"nodes":[
 		{
 			"context":{
-				"appName":"webhooks",
-				"resourceVersion":822,
-				"resourceName":"webhooks_default"
+				"appName":"callables"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
-			"id":"n_naH8m",
+			"id":"n_7CuSI",
 			"index":1,
-			"inputs":{
-				"request":{
-					"contentType":"application/json"
-				}
-			},
 			"skip":false,
-			"subTitle":"Webhook",
-			"title":"New event",
+			"subTitle":"Callable",
+			"title":"Select a trigger event",
 			"trigger":{
-				"type":"WEBHOOK"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
@@ -165,7 +165,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_YQUx4",
@@ -185,7 +185,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_v76xa",
@@ -204,7 +204,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_kMXFh",
@@ -216,6 +216,30 @@
 			"subTitle":"Storage by UnifyApps",
 			"title":"Add translation",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1026,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_0aXnR-1",
+			"id":"n_yENQO",
+			"index":8,
+			"inputs":{
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
 		}
 	],
 	"ownerUserId":161877,
@@ -235,5 +259,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
