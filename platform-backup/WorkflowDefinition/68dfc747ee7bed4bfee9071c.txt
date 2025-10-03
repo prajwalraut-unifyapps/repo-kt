@@ -5,12 +5,12 @@
 	"createdTime":1759496007833,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759496059460,
+		"deployedAt":1759496641555,
 		"deployedBy":155543,
-		"deployedDefinitionId":"68dfc779ee7bed4bfee90a30",
+		"deployedDefinitionId":"68dfc9bf93468b7e6e1c5a26",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":3
+		"version":2,
+		"workflowVersion":4
 	},
 	"edges":[
 		{
@@ -24,6 +24,13 @@
 			"fromNodeId":"n_slGxt",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_mffa7",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_mffa7",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_3fXiC",
 			"type":"next"
 		}
@@ -31,7 +38,7 @@
 	"id":"68dfc747ee7bed4bfee9071c",
 	"lastModifiedBy":155543,
 	"lcName":"dwaesrg",
-	"modifiedTime":1759496637552,
+	"modifiedTime":1759496818790,
 	"name":"dwaesrg",
 	"nodes":[
 		{
@@ -93,6 +100,28 @@
 		},
 		{
 			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":1018,
+				"resourceName":"utility_by_unifyapps_generate_public_url",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_7GtmI-1",
+			"id":"n_mffa7",
+			"index":3,
+			"inputs":{
+				"file":"{{ n_slGxt.outputs.file[0] }}",
+				"expiryTime":1
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Generate public file URL",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"slack",
 				"resourceVersion":6277,
 				"connectionId":"68120aad96195b6ae3580731",
@@ -104,12 +133,12 @@
 			"fallbackMode":"STOP",
 			"groupId":"_7GtmI-1",
 			"id":"n_3fXiC",
-			"index":3,
+			"index":4,
 			"inputs":{
 				"link_names":true,
 				"messageType":"text",
 				"channel":"C08MGHNDMHS",
-				"text":"{{ n_slGxt.outputs.file[0].fileType }}{{ n_slGxt.outputs.file[0].name }}{{ n_slGxt.outputs.file[0].source }}{{ n_slGxt.outputs.file[0].sourceType }}{{ n_slGxt.outputs.file[0].sourceType }}{{ n_slGxt.outputs.file[0].link }}",
+				"text":"{{ n_mffa7.outputs.url }}",
 				"mrkdwn":true
 			},
 			"skip":false,
@@ -135,5 +164,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
