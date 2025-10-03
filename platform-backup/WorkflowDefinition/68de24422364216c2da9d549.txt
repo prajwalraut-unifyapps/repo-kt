@@ -105,14 +105,14 @@
 			"fromNodeId":"n_I42Hn",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_gUgCT",
+			"toNodeId":"n_yRzol",
 			"type":"next"
 		},
 		{
 			"fromNodeId":"_zV8iS",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_gUgCT",
+			"toNodeId":"n_yRzol",
 			"type":"next"
 		},
 		{
@@ -120,14 +120,21 @@
 			"name":"default",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_gUgCT",
+			"toNodeId":"n_yRzol",
 			"type":"branch"
+		},
+		{
+			"fromNodeId":"n_yRzol",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_gUgCT",
+			"type":"next"
 		}
 	],
 	"id":"68de24422364216c2da9d549",
 	"lastModifiedBy":161908,
 	"lcName":"branchloop",
-	"modifiedTime":1759509029343,
+	"modifiedTime":1759509044351,
 	"name":"branchloop",
 	"nodes":[
 		{
@@ -472,6 +479,25 @@
 		},
 		{
 			"context":{
+				"appName":"callables",
+				"resourceVersion":1039,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_kS6s2-1",
+			"id":"n_yRzol",
+			"index":12,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		},
+		{
+			"context":{
 				"appName":"stop"
 			},
 			"debug":false,
@@ -479,7 +505,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_kS6s2-1",
 			"id":"n_gUgCT",
-			"index":12,
+			"index":13,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -503,5 +529,5 @@
 	"tags":[
 		
 	],
-	"version":10
+	"version":11
 }
