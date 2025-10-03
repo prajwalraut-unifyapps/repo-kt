@@ -108,7 +108,7 @@
 	"id":"68df6d18507dcf3211f43ae8",
 	"lastModifiedBy":132116,
 	"lcName":"nestedloops_insideconditions_testing",
-	"modifiedTime":1759475663273,
+	"modifiedTime":1759475724124,
 	"name":"nestedloops_insideconditions_testing",
 	"nodes":[
 		{
@@ -178,7 +178,7 @@
 						"property":"{{ n_iSjux.outputs.input_number }}",
 						"filter":{
 							"operator":"EQUAL",
-							"value":"0"
+							"value":"1"
 						}
 					}
 				],
@@ -473,5 +473,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
