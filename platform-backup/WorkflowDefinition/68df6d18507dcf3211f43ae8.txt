@@ -94,7 +94,7 @@
 			"fromNodeId":"n_yiTD2",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_mQilN",
+			"toNodeId":"n_m2xIT",
 			"type":"next"
 		},
 		{
@@ -105,7 +105,7 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_mQilN",
+			"fromNodeId":"n_m2xIT",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_WjLrf",
@@ -115,7 +115,7 @@
 	"id":"68df6d18507dcf3211f43ae8",
 	"lastModifiedBy":132116,
 	"lcName":"nestedloops_insideconditions_testing",
-	"modifiedTime":1759475853769,
+	"modifiedTime":1759475897530,
 	"name":"nestedloops_insideconditions_testing",
 	"nodes":[
 		{
@@ -441,17 +441,25 @@
 		},
 		{
 			"context":{
-				"appName":"stop"
+				"appName":"callables",
+				"resourceVersion":1007,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_hM9Xn@_BH9kr-1@n",
-			"id":"n_mQilN",
+			"id":"n_m2xIT",
 			"index":9,
+			"inputs":{
+				"result":{
+					"output":"invalid input"
+				}
+			},
 			"skip":false,
-			"subTitle":"Stop",
-			"title":"Stop",
+			"subTitle":"Callable",
+			"title":"Respond to automation",
 			"type":"STOP"
 		},
 		{
@@ -495,5 +503,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
