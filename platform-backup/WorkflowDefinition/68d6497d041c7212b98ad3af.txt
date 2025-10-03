@@ -130,7 +130,7 @@
 	"id":"68d6497d041c7212b98ad3af",
 	"lastModifiedBy":39713,
 	"lcName":"test",
-	"modifiedTime":1759474502612,
+	"modifiedTime":1759474542787,
 	"name":"test",
 	"nodes":[
 		{
@@ -265,7 +265,7 @@
 										"property":"3",
 										"filter":{
 											"operator":"EQUAL",
-											"value":"3"
+											"value":"2"
 										}
 									}
 								],
@@ -391,7 +391,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_0e8pv@n_qcNZk@n_V6jVI@_994SS-1@l@l@3",
 			"id":"n_0e8pv@3",
@@ -404,7 +404,7 @@
 							"property":"3",
 							"filter":{
 								"operator":"EQUAL",
-								"value":"3"
+								"value":"2"
 							}
 						}
 					],
@@ -466,5 +466,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
