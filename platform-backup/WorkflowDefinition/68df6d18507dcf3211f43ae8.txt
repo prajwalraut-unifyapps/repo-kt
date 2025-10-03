@@ -5,12 +5,12 @@
 	"createdTime":1759472920813,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759476555229,
+		"deployedAt":1759476599684,
 		"deployedBy":132116,
-		"deployedDefinitionId":"68df7b4b870cd8428097d941",
+		"deployedDefinitionId":"68df7b77870cd8428097d98c",
 		"status":"DEPLOYED",
-		"version":8,
-		"workflowVersion":15
+		"version":9,
+		"workflowVersion":16
 	},
 	"edges":[
 		{
@@ -115,7 +115,7 @@
 	"id":"68df6d18507dcf3211f43ae8",
 	"lastModifiedBy":132116,
 	"lcName":"nestedloops_insideconditions_testing",
-	"modifiedTime":1759476597918,
+	"modifiedTime":1759476647576,
 	"name":"nestedloops_insideconditions_testing",
 	"nodes":[
 		{
@@ -459,7 +459,7 @@
 			"index":9,
 			"inputs":{
 				"result":{
-					"output":"{{ n_hM9Xn.outputs.result }}"
+					"output":"{{ n_fY1zp.outputs.result }}"
 				}
 			},
 			"skip":false,
@@ -500,5 +500,5 @@
 	"tags":[
 		
 	],
-	"version":16
+	"version":17
 }
