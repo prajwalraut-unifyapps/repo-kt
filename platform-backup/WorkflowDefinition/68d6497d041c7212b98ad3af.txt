@@ -130,7 +130,7 @@
 	"id":"68d6497d041c7212b98ad3af",
 	"lastModifiedBy":39713,
 	"lcName":"test",
-	"modifiedTime":1759474477730,
+	"modifiedTime":1759474502612,
 	"name":"test",
 	"nodes":[
 		{
@@ -247,7 +247,7 @@
 										"property":"0",
 										"filter":{
 											"operator":"EQUAL",
-											"value":"0"
+											"value":"1"
 										}
 									}
 								],
@@ -341,7 +341,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_0e8pv@n_qcNZk@n_V6jVI@_994SS-1@l@l@2",
 			"id":"n_0e8pv@2",
@@ -354,7 +354,7 @@
 							"property":"0",
 							"filter":{
 								"operator":"EQUAL",
-								"value":"0"
+								"value":"1"
 							}
 						}
 					],
@@ -391,7 +391,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_0e8pv@n_qcNZk@n_V6jVI@_994SS-1@l@l@3",
 			"id":"n_0e8pv@3",
@@ -423,7 +423,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_0e8pv@n_qcNZk@n_V6jVI@_994SS-1@l@l@3",
 			"id":"n_60ehp",
@@ -466,5 +466,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
