@@ -52,7 +52,7 @@
 	"id":"68a0621ce2145a693b0a5877",
 	"lastModifiedBy":44096,
 	"lcName":"testlookup",
-	"modifiedTime":1759312296581,
+	"modifiedTime":1759476585566,
 	"name":"testLookup",
 	"nodes":[
 		{
@@ -115,7 +115,7 @@
 						}
 					}
 				},
-				"code":"return [\"options\":[\"workflowId\":\"68dcf986c0a2bc3485d5ebe5\",\"runtimeType\":\"IN_MEMORY\",\"resolvePath\":\"objects\"]]",
+				"code":"return [\"options\":[\"workflowId\":\"68dcf986c0a2bc3485d5ebe5\",\"runtimeType\":\"IN_MEMORY\"]]",
 				"compile_static":false,
 				"captureStdOutput":false
 			},
@@ -132,7 +132,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_lUik9-1",
 			"id":"n_7xTUy",
@@ -184,7 +184,7 @@
 						}
 					}
 				},
-				"code":"return [\"options\":[\"workflowId\":\"68d7933d7ceaf455c79a4dbf\",\"runtimeType\":\"IN_MEMORY\",\"resolvePath\":\"objects\"]]\n",
+				"code":"return [\"options\":[\"workflowId\":\"68d7933d7ceaf455c79a4dbf\",\"runtimeType\":\"IN_MEMORY\"]]\n",
 				"compile_static":false,
 				"captureStdOutput":false
 			},
@@ -265,5 +265,5 @@
 	"tags":[
 		
 	],
-	"version":24
+	"version":25
 }
