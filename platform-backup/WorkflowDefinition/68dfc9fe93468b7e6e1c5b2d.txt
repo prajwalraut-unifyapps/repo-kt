@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759496702931,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_Stqtq",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_YTksz",
+			"type":"next"
+		}
+	],
+	"id":"68dfc9fe93468b7e6e1c5b2d",
+	"lastModifiedBy":43498,
+	"lcName":"jsm-trigger",
+	"modifiedTime":1759496702931,
+	"name":"jsm-trigger",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Stqtq-1",
+			"id":"_Stqtq",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Stqtq-1",
+			"id":"_YTksz",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":43498,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
