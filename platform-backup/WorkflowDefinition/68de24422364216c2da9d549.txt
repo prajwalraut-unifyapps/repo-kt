@@ -14,7 +14,7 @@
 	},
 	"edges":[
 		{
-			"fromNodeId":"n_8dkvE",
+			"fromNodeId":"n_BIvEP",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_Tjmb5",
@@ -125,34 +125,29 @@
 		}
 	],
 	"id":"68de24422364216c2da9d549",
-	"lastModifiedBy":49915,
+	"lastModifiedBy":161908,
 	"lcName":"branchloop",
-	"modifiedTime":1759403453300,
+	"modifiedTime":1759509029343,
 	"name":"branchloop",
 	"nodes":[
 		{
 			"context":{
-				"appName":"schedule",
-				"resourceVersion":818,
-				"resourceName":"schedule_default"
+				"appName":"callables",
+				"resourceVersion":1003,
+				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_kS6s2-1",
-			"id":"n_8dkvE",
+			"id":"n_BIvEP",
 			"index":1,
-			"inputs":{
-				"cron":"INTERVAL",
-				"sequential":false,
-				"interval":15,
-				"frequency":"MINUTES"
-			},
+			"inputs":{},
 			"skip":false,
-			"subTitle":"Schedule",
-			"title":"New recurring event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"SCHEDULED"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
@@ -508,5 +503,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
