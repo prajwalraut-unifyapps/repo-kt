@@ -1,0 +1,137 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759488478642,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_UdjWq",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_nDCjy",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_nDCjy",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_4TUYW",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_4TUYW",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_vYNgW",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_vYNgW",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_4TUYW",
+			"type":"next"
+		}
+	],
+	"id":"68dfa9de3b82f62c61f62548",
+	"lastModifiedBy":44109,
+	"lcName":"tesing stream",
+	"modifiedTime":1759489368927,
+	"name":"tesing stream",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Dnj9y-1",
+			"id":"n_UdjWq",
+			"index":1,
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Dnj9y-1",
+			"id":"n_nDCjy",
+			"index":2,
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Select an action",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"browser_use_by_unifyapps",
+				"resourceVersion":554,
+				"resourceName":"browser_use_by_unifyapps_execute_instructions",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Dnj9y-1",
+			"id":"n_4TUYW",
+			"index":3,
+			"inputs":{
+				"instructions":"a",
+				"modelId":"e_ai_agent_openai_gpt_4.1_mini"
+			},
+			"skip":false,
+			"subTitle":"Browser Use by UnifyApps",
+			"title":"Execute Instructions",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":1011,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_4TUYW@_Dnj9y-1@l",
+			"id":"n_vYNgW",
+			"index":4,
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":517,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
