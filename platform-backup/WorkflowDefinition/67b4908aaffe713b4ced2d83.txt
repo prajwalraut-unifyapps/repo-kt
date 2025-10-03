@@ -5,12 +5,13 @@
 	"createdTime":1740110521560,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759495332725,
+		"deployedAt":1759528643222,
 		"deployedBy":44109,
-		"deployedDefinitionId":"68dfc4a4ee7bed4bfee8f953",
+		"deployedDefinitionId":"68e046c33379c943bfe57364",
+		"deploymentTag":"responseGenerationStatus",
 		"status":"DEPLOYED",
-		"version":81,
-		"workflowVersion":110
+		"version":82,
+		"workflowVersion":111
 	},
 	"edges":[
 		{
@@ -156,6 +157,20 @@
 			"type":"next"
 		},
 		{
+			"fromNodeId":"_eRcrD",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_40NgC",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_40NgC",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_P46DY",
+			"type":"next"
+		},
+		{
 			"fromNodeId":"_3Ymme",
 			"priority":0,
 			"skip":false,
@@ -163,7 +178,7 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"_eRcrD",
+			"fromNodeId":"n_P46DY",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_CvMDZ",
@@ -325,7 +340,7 @@
 	"id":"67b4908aaffe713b4ced2d83",
 	"lastModifiedBy":44109,
 	"lcName":"stream content",
-	"modifiedTime":1759528630248,
+	"modifiedTime":1759530040596,
 	"name":"Stream content",
 	"nodes":[
 		{
@@ -1034,6 +1049,66 @@
 		},
 		{
 			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":488,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"DLqxP@5xhIJ@CGqMR-1@n@y",
+			"id":"n_40NgC",
+			"index":18,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"payload":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Payload"
+						}
+					}
+				},
+				"code":"return [ 'payload': [\n  \"responseGenerationStatus\": \"completed\"\n] ]",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
+			"skip":false,
+			"subTitle":"mqtt payload",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"chat_by_unifyapps",
+				"resourceVersion":482,
+				"resourceName":"chat_by_unifyapps_send_message",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"DLqxP@5xhIJ@CGqMR-1@n@y",
+			"id":"n_P46DY",
+			"index":19,
+			"inputs":{
+				"payload":{
+					"additional":"{{ n_40NgC.outputs.result.payload }}"
+				},
+				"topic":"case_{{ UdOSt.outputs.caseId }}"
+			},
+			"skip":false,
+			"subTitle":"Chat by UnifyApps",
+			"title":"Send message",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"if_else",
 				"resourceVersion":441,
 				"resourceName":"if_else_condition",
@@ -1044,7 +1119,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"CGqMR-1",
 			"id":"n_CvMDZ",
-			"index":18,
+			"index":20,
 			"inputs":{
 				"filters":[
 					{
@@ -1074,7 +1149,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_CvMDZ@CGqMR-1@y",
 			"id":"n_b3smu",
-			"index":19,
+			"index":21,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -1161,7 +1236,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_CvMDZ@CGqMR-1@y",
 			"id":"n_HjpDd",
-			"index":20,
+			"index":22,
 			"inputs":{
 				"filters":[
 					{
@@ -1191,7 +1266,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_HjpDd@n_CvMDZ@CGqMR-1@y@y",
 			"id":"n_ce3Fu",
-			"index":21,
+			"index":23,
 			"inputs":{
 				"automationId":"67a48d37f8f1744841dabb63",
 				"runtimeConnections":{},
@@ -1218,7 +1293,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_HjpDd@n_CvMDZ@CGqMR-1@y@y",
 			"id":"n_DSBNX",
-			"index":22,
+			"index":24,
 			"inputs":{
 				"filters":[
 					{
@@ -1248,7 +1323,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_DSBNX@n_HjpDd@n_CvMDZ@CGqMR-1@y@y@n",
 			"id":"_zDe3X",
-			"index":23,
+			"index":25,
 			"inputs":{
 				"automationId":"67a31b86addac8605df79166",
 				"runtimeConnections":{},
@@ -1279,7 +1354,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_DSBNX@n_HjpDd@n_CvMDZ@CGqMR-1@y@y@n",
 			"id":"n_GFrRh",
-			"index":24,
+			"index":26,
 			"inputs":{
 				"variables":[
 					{
@@ -1317,7 +1392,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_DSBNX@n_HjpDd@n_CvMDZ@CGqMR-1@y@y@n",
 			"id":"QV4MH",
-			"index":25,
+			"index":27,
 			"inputs":{
 				"numberOfRecordsToUpdate":"MULTIPLE",
 				"triggerInputCondition":{
@@ -1377,7 +1452,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_HjpDd@n_CvMDZ@CGqMR-1@y@n",
 			"id":"LM5jC",
-			"index":26,
+			"index":28,
 			"inputs":{
 				"object_type":"e_ai_agent_conversation_state",
 				"includeRoleMappings":false,
@@ -1403,7 +1478,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_HjpDd@n_CvMDZ@CGqMR-1@y@n",
 			"id":"xk94J",
-			"index":27,
+			"index":29,
 			"inputs":{
 				"filters":[
 					{
@@ -1432,7 +1507,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"xk94J@n_HjpDd@n_CvMDZ@CGqMR-1@y@n@n",
 			"id":"_wteED",
-			"index":28,
+			"index":30,
 			"inputs":{
 				"automationId":"67a31b86addac8605df79166",
 				"runtimeConnections":{},
@@ -1463,7 +1538,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"xk94J@n_HjpDd@n_CvMDZ@CGqMR-1@y@n@n",
 			"id":"_WdXHr",
-			"index":29,
+			"index":31,
 			"inputs":{
 				"variables":[
 					{
@@ -1501,7 +1576,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"xk94J@n_HjpDd@n_CvMDZ@CGqMR-1@y@n@n",
 			"id":"_tdRYR",
-			"index":30,
+			"index":32,
 			"inputs":{
 				"numberOfRecordsToUpdate":"MULTIPLE",
 				"triggerInputCondition":{
@@ -1574,7 +1649,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"CGqMR-1",
 			"id":"DLbDb",
-			"index":31,
+			"index":33,
 			"inputs":{
 				"automation_id":"67b7748b4372d31da7c2e130",
 				"with_signal_id":false,
@@ -1616,7 +1691,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"CGqMR-1",
 			"id":"UWCkX",
-			"index":32,
+			"index":34,
 			"inputs":{
 				"result":{
 					"success":"true"
@@ -1646,5 +1721,5 @@
 	"tags":[
 		"AI Agent"
 	],
-	"version":111
+	"version":112
 }
