@@ -1,51 +1,109 @@
 {
 	"appsUsed":[
-		
+		"hamsa"
 	],
 	"createdTime":1759493668707,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_ul8gS",
+			"fromNodeId":"n_jIdtg",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_I5PT7",
+			"toNodeId":"n_UNFRX",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_UNFRX",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_9Udov",
 			"type":"next"
 		}
 	],
 	"id":"68dfbe241324bc07f73d93cc",
 	"lastModifiedBy":43523,
 	"lcName":"hamsa test2",
-	"modifiedTime":1759493668707,
+	"modifiedTime":1759493701145,
 	"name":"hamsa test2",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":828,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ul8gS-1",
-			"id":"_ul8gS",
-			"index":0,
+			"id":"n_jIdtg",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json",
+					"body":{
+						"type":"object",
+						"properties":{
+							"jobId":{
+								"type":"string",
+								"title":"Job Id"
+							}
+						},
+						"additionalProperties":false,
+						"required":[]
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"hamsa",
+				"resourceVersion":5,
+				"connectionId":"68dfbdf52d8fd835bedb2bf6",
+				"resourceName":"hamsa_get_job_details",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ul8gS-1",
-			"id":"_I5PT7",
-			"index":0,
+			"id":"n_UNFRX",
+			"index":2,
+			"inputs":{
+				"jobId":"{{ n_jIdtg.outputs.body.jobId }}"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Hamsa",
+			"title":"Get job details",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_ul8gS-1",
+			"id":"n_9Udov",
+			"index":3,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":43523,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +117,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
