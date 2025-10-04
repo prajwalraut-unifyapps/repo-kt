@@ -31,7 +31,7 @@
 	"id":"6879031962d7239e6111a800",
 	"lastModifiedBy":39713,
 	"lcName":"[virtu-support-checkin-bot-fn]createadaptivecarttableendpoint",
-	"modifiedTime":1759555745617,
+	"modifiedTime":1759560151604,
 	"name":"[virtu-support-checkin-bot-fn]CreateAdaptiveCartTableEndpoint",
 	"nodes":[
 		{
@@ -128,31 +128,12 @@
 						}
 					}
 				},
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[],
-					"properties":{
-						"columnSetSeparator":{
-							"type":"string",
-							"title":"Column Set Separator"
-						},
-						"columnSeparator":{
-							"type":"string",
-							"title":"Column Separator"
-						},
-						"data":{
-							"type":"string",
-							"title":"Data"
-						}
-					}
-				},
-				"code":" using System.Collections.Generic;\n \n \n \n public class Table\n    {\n        public List<Body> body { get; set; }\n    }\n \n \n \nstring[] columnSetListStrArray = data.Split(columnSetSeparator);\nTable tableObject = new Table();\n\nList<Body> BodyList = new List<Body>();\nbool isFirstRow = true;\n// for prevent add more columns thant header keep header size\n            int headerColumnCount=0;\n        foreach (var columnSetStr in columnSetListStrArray)\n        {\n            Body tableBody = new Body();\n            // extract columns string \n            string[] columnStrArray = columnSetStr.Split(columnSeparator);\n            List<Column> columnList = new List<Column>();\n            \n            if(isFirstRow){\n                  headerColumnCount=  columnStrArray.Length;\n                isFirstRow = false;\n            }\n            int count = 0;\n            foreach (var column in columnStrArray)\n            {   \n               \n                Column columnObj = new Column();\n                \n                List<Item> itemList = new List<Item>();\n               Item item = new Item();\n               item.text = column;\n               item.type = \"TextBlock\";\n               item.wrap=true;\n               itemList.Add(item);\n               columnObj.items=itemList;\n               columnObj.type=\"Column\";\n               columnObj.width=\"stretch\";\n               columnList.Add(columnObj);\n               count ++;\n                if(count>=headerColumnCount){\n                        break;\n                }\n    }\n    tableBody.columns = columnList;\n    tableBody.type = \"ColumnSet\";\n    BodyList.Add(tableBody);\n}\ntableObject.body = BodyList;\nvar result = new Dictionary<string, object>\n{\n    { \"tableObject\", tableObject }\n};",
+				"code":"// USING statements must always be at the top.\nusing System.Collections.Generic;\nusing System.Linq;\n\n// --- Hardcoded Test Data ---\nchar columnSetSeparator = ';';\nchar columnSeparator = ',';\nstring data = \"Header 1,Header 2,Header 3;\" +\n              \"Row 2 Cell 1,Row 2 Cell 2,Row 2 Cell 3;\" +\n              \"Row 3 Cell 1,Row 3 Cell 2,Row 3 Cell 3,Extra Data;\" +\n              \"Row 4 Cell 1,Row 4 Cell 2,Row 4 Cell 3\";\n// --- End of Test Data ---\n\nstring[] columnSetListStrArray = data.Split(columnSetSeparator);\n\nvar bodyList = new List<object>();\n\n// string headerRow = columnSetListStrArray.FirstOrDefault();\n// int headerColumnCount = string.IsNullOrEmpty(headerRow) ? 0 : headerRow.Split(columnSeparator).Length;\n\n// if (headerColumnCount > 0)\n// {\n//     foreach (var columnSetStr in columnSetListStrArray)\n//     {\n//         var columnList = new List<object>();\n//         string[] columnStrArray = columnSetStr.Split(columnSeparator).Take(headerColumnCount).ToArray();\n\n//         foreach (var columnText in columnStrArray)\n//         {\n//             var item = new Dictionary<string, object>\n//             {\n//                 { \"text\", columnText },\n//                 { \"type\", \"TextBlock\" },\n//                 { \"wrap\", true }\n//             };\n            \n//             var itemList = new List<object> { item };\n\n//             var columnObj = new Dictionary<string, object>\n//             {\n//                 { \"items\", itemList },\n//                 { \"type\", \"Column\" },\n//                 { \"width\", \"stretch\" }\n//             };\n\n//             columnList.Add(columnObj);\n//         }\n        \n//         var tableBody = new Dictionary<string, object>\n//         {\n//             { \"columns\", columnList },\n//             { \"type\", \"ColumnSet\" }\n//         };\n\n//         bodyList.Add(tableBody);\n//     }\n// }\n\n// var tableObject = new Dictionary<string, object>\n// {\n//     { \"body\", bodyList }\n// };\n\n// var resultObject = new Dictionary<string, object>\n// {\n//     { \"tableObject\", tableObject }\n// };\n\n// resultObject",
 				"isAsync":false,
 				"parameters":{
-					"columnSetSeparator":"{{ n_gP2eI.outputs.queryParams.columnSetSeparator }}",
+					"data":"{{ n_gP2eI.outputs.body }}",
 					"columnSeparator":"{{ n_gP2eI.outputs.queryParams.columnSeparator }}",
-					"data":"{{ n_gP2eI.outputs.body }}"
+					"columnSetSeparator":"{{ n_gP2eI.outputs.queryParams.columnSetSeparator }}"
 				}
 			},
 			"skip":false,
@@ -205,5 +186,5 @@
 	"tags":[
 		
 	],
-	"version":12
+	"version":13
 }
