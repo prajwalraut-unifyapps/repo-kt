@@ -9,6 +9,20 @@
 			"fromNodeId":"n_8oKd7",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"_lsG8h",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_lsG8h",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_R7pAt",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_R7pAt",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_HCfug",
 			"type":"next"
 		},
@@ -17,7 +31,7 @@
 			"name":"yes",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_kwRmK",
+			"toNodeId":"n_vlUZP",
 			"type":"if"
 		},
 		{
@@ -32,7 +46,7 @@
 	"id":"68e0d5541d8bca1f3b958a4b",
 	"lastModifiedBy":1234,
 	"lcName":"azure bot get user token (dnd)",
-	"modifiedTime":1759577053438,
+	"modifiedTime":1759579496834,
 	"name":"Azure Bot Get User Token (DND)",
 	"nodes":[
 		{
@@ -79,6 +93,46 @@
 		},
 		{
 			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":1282,
+				"resourceName":"standard_entities_get_connection_details",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_bU1lL-1",
+			"id":"_lsG8h",
+			"index":2,
+			"inputs":{
+				"connectionIds":[
+					"68cc4f697abc9920a1e3f4f1"
+				],
+				"includeCredentials":true
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Get connection details",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_bU1lL-1",
+			"id":"n_R7pAt",
+			"index":3,
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Select an action",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"if_else",
 				"resourceVersion":791,
 				"resourceName":"if_else_condition",
@@ -89,7 +143,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_bU1lL-1",
 			"id":"n_HCfug",
-			"index":2,
+			"index":4,
 			"inputs":{
 				"filters":[
 					{
@@ -108,14 +162,33 @@
 			"type":"IF_ELSE"
 		},
 		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.headersList.items.key",
+					"root.headersList.items.value",
+					"root.queryParamsList.items.key",
+					"root.queryParamsList.items.value"
+				]
+			},
+			"context":{
+				"appName":"custom_http_endpoint",
+				"resourceVersion":28,
+				"resourceName":"custom_rest_multipart_http_endpoint_execute",
+				"type":"APPLICATION"
+			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_HCfug@_bU1lL-1@y",
-			"id":"n_kwRmK",
-			"index":3,
+			"id":"n_vlUZP",
+			"index":5,
+			"inputs":{
+				"requestTimeoutInSecs":-1,
+				"authType":"CUSTOM"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Custom HTTP Endpoint",
+			"title":"Execute REST Multipart request",
 			"type":"ACTION"
 		},
 		{
@@ -124,7 +197,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_HCfug@_bU1lL-1@n",
 			"id":"n_qigzc",
-			"index":4,
+			"index":6,
 			"skip":false,
 			"title":"Select an app and action",
 			"type":"ACTION"
@@ -147,5 +220,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
