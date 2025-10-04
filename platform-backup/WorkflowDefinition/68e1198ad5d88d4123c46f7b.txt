@@ -1,9 +1,5 @@
 {
-	"appsUsed":[
-		"slack",
-		"storage_by_unifyapps"
-	],
-	"createdTime":1759582744482,
+	"createdTime":1759582843529,
 	"deleted":false,
 	"edges":[
 		{
@@ -31,7 +27,7 @@
 	"id":"68e1198ad5d88d4123c46f7b",
 	"lastModifiedBy":168834,
 	"lcName":"changesetqa2slack1290694928",
-	"modifiedTime":1759582744482,
+	"modifiedTime":1759582843529,
 	"name":"changeSetQA2Slack1290694928",
 	"nodes":[
 		{
@@ -174,5 +170,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":3
 }
