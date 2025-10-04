@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759561264419,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_xXiE0",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_uEVAN",
+			"type":"next"
+		}
+	],
+	"id":"68e0c6304061526795c4a718",
+	"lastModifiedBy":46030,
+	"lcName":"customworkflow2",
+	"modifiedTime":1759561264419,
+	"name":"customworkflow2",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_xXiE0-1",
+			"id":"_xXiE0",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_xXiE0-1",
+			"id":"_uEVAN",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":46030,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
