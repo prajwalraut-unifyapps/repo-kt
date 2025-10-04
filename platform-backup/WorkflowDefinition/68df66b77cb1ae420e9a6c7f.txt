@@ -45,7 +45,7 @@
 	"id":"68df66b77cb1ae420e9a6c7f",
 	"lastModifiedBy":44103,
 	"lcName":"slot dynamic mapping",
-	"modifiedTime":1759555639180,
+	"modifiedTime":1759555664182,
 	"name":"Slot Dynamic mapping",
 	"nodes":[
 		{
@@ -111,7 +111,7 @@
 						}
 					}
 				},
-				"code":"def slotList = []\n\nslotList << [\n    description : \"name1\",\n    isAttachment: false,\n    name        : \"name1\",\n    responses   : [\n        [\n            choices: [\n                [id: \"1\", title: \"Vimal\"],\n                [id: \"2\", title: \"v2\"]\n            ],\n            question: \"what is your name?\"\n        ]\n    ],\n    title       : \"Name\",\n    type        : \"string\"\n]\n\nslotList << [\n    description : \"gendr1\",\n    isAttachment: false,\n    name        : \"gender1\",\n    responses   : [\n        [\n            choices: [\n                [id: \"male\", title: \"Male\"],\n                [id: \"female\", title: \"Female\"]\n            ],\n            question: \"What is your gender?\"\n        ]\n    ],\n    title       : \"Gender\",\n    type        : \"string\"\n]\n\nslotList << [\n    description : \"age1\",\n    isAttachment: false,\n    name        : \"age1\",\n    responses   : [\n        [\n            choices: [\n                [id: \"1\", title: \"10\"],\n                [id: \"2\", title: \"20\"]\n            ],\n            question: \"what is your age\"\n        ]\n    ],\n    title       : \"Age\",\n    type        : \"integer\"\n]\n\nreturn [slotList: slotList]\n",
+				"code":"def slotList = []\n\nslotList << [\n    description : \"name1\",\n    isAttachment: false,\n    name        : \"name1\",\n    responses   : [\n        [\n            choices: [\n                [id: \"1\", title: \"Vimal\"],\n                [id: \"2\", title: \"v2\"]\n            ],\n            question: \"what is your name1?\"\n        ]\n    ],\n    title       : \"Name\",\n    type        : \"string\"\n]\n\nslotList << [\n    description : \"gendr1\",\n    isAttachment: false,\n    name        : \"gender1\",\n    responses   : [\n        [\n            choices: [\n                [id: \"male\", title: \"Male\"],\n                [id: \"female\", title: \"Female\"]\n            ],\n            question: \"What is your gender1?\"\n        ]\n    ],\n    title       : \"Gender\",\n    type        : \"string\"\n]\n\nslotList << [\n    description : \"age1\",\n    isAttachment: false,\n    name        : \"age1\",\n    responses   : [\n        [\n            choices: [\n                [id: \"1\", title: \"10\"],\n                [id: \"2\", title: \"20\"]\n            ],\n            question: \"what is your age1\"\n        ]\n    ],\n    title       : \"Age\",\n    type        : \"integer\"\n]\n\nreturn [slotList: slotList]\n",
 				"compile_static":false,
 				"captureStdOutput":false
 			},
@@ -316,5 +316,5 @@
 		}
 	},
 	"standard":false,
-	"version":3
+	"version":4
 }
