@@ -38,7 +38,7 @@
 	"id":"68e103ef6699145cc61e9297",
 	"lastModifiedBy":30410,
 	"lcName":"api timeout",
-	"modifiedTime":1759583034440,
+	"modifiedTime":1759583041545,
 	"name":"API timeout",
 	"nodes":[
 		{
@@ -103,7 +103,7 @@
 			"id":"n_Y8Ozf",
 			"index":2,
 			"inputs":{
-				"duration":200,
+				"duration":240,
 				"unit":"SECONDS"
 			},
 			"skip":false,
@@ -181,5 +181,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":12
 }
