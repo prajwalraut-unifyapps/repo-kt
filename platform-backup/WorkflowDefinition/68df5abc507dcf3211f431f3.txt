@@ -4,13 +4,21 @@
 	],
 	"createdTime":1759468220948,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759468241675,
+		"deployedBy":132116,
+		"deployedDefinitionId":"68df5ad1f922837435f41351",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		
 	],
 	"id":"68df5abc507dcf3211f431f3",
 	"lastModifiedBy":132116,
 	"lcName":"global_webhook_testing",
-	"modifiedTime":1759468228942,
+	"modifiedTime":1759591429862,
 	"name":"global_webhook_testing",
 	"nodes":[
 		{
@@ -31,7 +39,7 @@
 				}
 			},
 			"skip":false,
-			"subTitle":"Webhook",
+			"subTitle":"Webhook_123",
 			"title":"New event",
 			"trigger":{
 				"type":"WEBHOOK"
@@ -56,5 +64,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
