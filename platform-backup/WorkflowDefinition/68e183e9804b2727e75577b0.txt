@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		
+		"gdrive"
 	],
 	"createdTime":1759609833302,
 	"deleted":false,
@@ -9,11 +9,11 @@
 			"fromNodeId":"n_2de1r",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_GTU3r",
+			"toNodeId":"n_7EG0m",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_GTU3r",
+			"fromNodeId":"n_7EG0m",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_pA4Oo",
@@ -59,7 +59,7 @@
 	"id":"68e183e9804b2727e75577b0",
 	"lastModifiedBy":44096,
 	"lcName":"dfgfrg",
-	"modifiedTime":1759613334384,
+	"modifiedTime":1759613578241,
 	"name":"dfgfrg",
 	"nodes":[
 		{
@@ -69,7 +69,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_yWpNM-1",
 			"id":"n_2de1r",
@@ -97,23 +97,24 @@
 		},
 		{
 			"context":{
-				"appName":"utility_by_unifyapps",
-				"resourceVersion":964,
-				"resourceName":"utility_by_unifyapps_create_unifyapps_file_from_url",
+				"appName":"gdrive",
+				"resourceVersion":6332,
+				"connectionId":"68e1921025862f71a1c024aa",
+				"resourceName":"gdrive_get_file",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_yWpNM-1",
-			"id":"n_GTU3r",
+			"id":"n_7EG0m",
 			"index":2,
 			"inputs":{
-				"url":"https://s3.ap-south-1.amazonaws.com/qa.unifyapps.com.cloudstorage.1/user-uploads/1/1759612979985/NearestExport.csv?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAX6VW4ASV6QX26MK4%2F20251004%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20251004T212328Z&X-Amz-SignedHeaders=host&X-Amz-Expires=36000&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEM3%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCmFwLXNvdXRoLTEiRzBFAiAkldOXyuU9idyAjjyylqgfuUBPrg7QLXY1x8kPV0jW7QIhAK8TdSYeXmTImzy5WV0G%2Bsr8J%2F1LDDYhZ6%2Fi3e5R7s9xKr0FCGYQABoMNTQ2OTE4MTA2MjgzIgwwFsTQxI2r%2FZUI4fUqmgXXHMWAVRWgCtU%2F%2Br2GCOfyiYz26m291LNIcG0VcORND8d2M1P1AWZceUPaNBeXZObra43ioQf9oBkMhNsOEPD%2FRcTVpAfTjzzZIOw9VRRHwFNCyTltmtfW5ztq20bHBNFv8domGjQriNnZjj%2BBvEp7KMXYikE3UQpYF4mgopGRvQ%2FInpgYvvorKk1hADjaJgs9nfxCRVOTBi8D9KDjGs73MHc%2Fbwa34KspaJd2BvWpVwrZlvv2qjRHBvCOx8TDM2nQbbJqVxTD0oQ7FCYWzWEJijBQ8BsKPDLaLxIk5A1IW9cVvsGKRuIMBR97kJDqcOk7LEQ%2FsehYjOGWXzFuum%2FoqAAHrIzSTdLcY3ZRfjA3Q4lFc3IUBqh3h%2F1IzYOr6Xwg04uMZp6WFSYPNX71QPqN4eouxYhRBIRS9FeczZbVkJ3HQPfNqqhMOndswP4l6wHUTG3DfneBt%2FpFaLsBJ9JFhJrbtsVcX6WBDadq1U5LDkb29Y9MJnMRVy4ZWqMMmGkws60kPk85dyHCoMZKZF%2F6dw58DwkS54PwLGaFXaV8cE309i%2F%2BBcScCSvSJkmykdESF4x0vP1woPdn8R4Eb0c85CZJs8FFjeQLCsYlYDEB8cD2cin347osOJWOrrTF5ouyp8pNDUDK6J6AiWQD%2BZqnSKowud4YTs%2Fuh6azofFlXSZzX4D3AYRTjQpDChQvl4mFHLU20181dWQn1EbW5RCgR2HL4C6nsaGJ0%2B0EXjZPPX0It%2BrMRrokgMlPApNE%2FYcmD%2BWFOFXd6v8LpCz0iiJUE5smxOrYkf4y0L20344DSWBlo8ita8bgdig1xQN7Z0RxFe6UYPokRi8rYvIOPthmKPnD5GbNs0D9eiqeeCK7wVpykODFO2Jek2gw0JKGxwY6sQFzS5A2ysHopuNczaWWAk5Qy1euB3e3p3FjImPUk0kDBXs2MMTBuTPD5GbBzbNTG7h%2Bpn1WxcWhK4b6oiE396%2BIkMBWtKqY1MZJxXmY2Ei2uJ%2BnF5M5XEUDmfW5uJSF63V3NARECzQou42O7686LbnvUCef1E8yid%2BYo0YZBI9URNM%2FyrDQyHdje%2BXjnDKWFCh2GAjb14KBs0U%2BemkevgOsmo3Kz7oH37JdSlmh5GZ4GmI%3D&X-Amz-Signature=578e2d7d88a8d4f518e55aa245581dc7d8e32744d476ae85e186788aead8524c"
+				"fileId":"1cy0Adtn7b_Ubs2xS20q5wKnNyZUuoT8G"
 			},
 			"skip":false,
-			"subTitle":"Utility by UnifyApps",
-			"title":"Create UnifyApps file from url",
+			"subTitle":"Google Drive",
+			"title":"Get file",
 			"type":"ACTION"
 		},
 		{
@@ -130,7 +131,7 @@
 			"id":"n_pA4Oo",
 			"index":3,
 			"inputs":{
-				"fileDetails":"{{ n_GTU3r.outputs.file }}",
+				"fileDetails":"{{ n_7EG0m.outputs.file }}",
 				"delimiter":","
 			},
 			"skip":false,
@@ -146,7 +147,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_yWpNM-1",
 			"id":"n_yHrAI",
@@ -426,7 +427,7 @@
 			"index":5,
 			"inputs":{
 				"startFromRow":1,
-				"file":"{{ n_GTU3r.outputs.file }}",
+				"file":"{{ n_7EG0m.outputs.file }}",
 				"quote":"\"",
 				"headerRow":true,
 				"delimiter":",",
@@ -452,7 +453,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_2r5Kp@_yWpNM-1@l",
 			"id":"n_8Dm67",
@@ -477,7 +478,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_yWpNM-1",
 			"id":"n_b1YJa",
@@ -510,5 +511,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
