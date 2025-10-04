@@ -5,12 +5,12 @@
 	"createdTime":1752761113709,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1752761996071,
+		"deployedAt":1759560968686,
 		"deployedBy":39713,
-		"deployedDefinitionId":"6879068b62d7239e6111cfe3",
+		"deployedDefinitionId":"68e0c5084061526795c4a0dc",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":5
+		"version":2,
+		"workflowVersion":15
 	},
 	"edges":[
 		{
@@ -31,7 +31,7 @@
 	"id":"6879031962d7239e6111a800",
 	"lastModifiedBy":39713,
 	"lcName":"[virtu-support-checkin-bot-fn]createadaptivecarttableendpoint",
-	"modifiedTime":1759560959019,
+	"modifiedTime":1759562398986,
 	"name":"[virtu-support-checkin-bot-fn]CreateAdaptiveCartTableEndpoint",
 	"nodes":[
 		{
@@ -41,7 +41,7 @@
 				"resourceName":"callables_from_api"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_iDBfH-1",
 			"id":"n_gP2eI",
@@ -133,7 +133,7 @@
 						}
 					}
 				},
-				"code":"// USING statements must always be at the top.\nusing System.Collections.Generic;\nusing System.Linq;\n\n// --- Hardcoded Test Data ---\nchar columnSetSeparator = ';';\nchar columnSeparator = ',';\nstring data = \"Header 1,Header 2,Header 3;\" +\n              \"Row 2 Cell 1,Row 2 Cell 2,Row 2 Cell 3;\" +\n              \"Row 3 Cell 1,Row 3 Cell 2,Row 3 Cell 3,Extra Data;\" +\n              \"Row 4 Cell 1,Row 4 Cell 2,Row 4 Cell 3\";\n// --- End of Test Data ---\n\nstring[] columnSetListStrArray = data.Split(columnSetSeparator);\n\nvar bodyList = new List<object>();\n\nstring headerRow = columnSetListStrArray.FirstOrDefault();\nint headerColumnCount = string.IsNullOrEmpty(headerRow) ? 0 : headerRow.Split(columnSeparator).Length;\n\nif (headerColumnCount > 0)\n{\n    foreach (var columnSetStr in columnSetListStrArray)\n    {\n        var columnList = new List<object>();\n        string[] columnStrArray = columnSetStr.Split(columnSeparator).Take(headerColumnCount).ToArray();\n\n        foreach (var columnText in columnStrArray)\n        {\n            var item = new Dictionary<string, object>\n            {\n                { \"text\", columnText },\n                { \"type\", \"TextBlock\" },\n                { \"wrap\", true }\n            };\n            \n            var itemList = new List<object> { item };\n\n            var columnObj = new Dictionary<string, object>\n            { { \"items\", itemList }, { \"type\", \"Column\" }, { \"width\", \"stretch\" } };\n\n            columnList.Add(columnObj);\n        }\n        \n        var tableBody = new Dictionary<string, object>\n        { { \"columns\", columnList }, { \"type\", \"ColumnSet\" } };\n\n        bodyList.Add(tableBody);\n    }\n}\n\nvar tableObject = new Dictionary<string, object>\n{ { \"body\", bodyList } };\n\nvar resultObject = new Dictionary<string, object>\n{ { \"tableObject\", tableObject } };\n\nresultObject",
+				"code":"using System.Collections.Generic;\nusing System.Linq;\n\npublic class Body { public string type { get; set; } public List<Column> columns { get; set; } }\n\npublic class Column { public string type { get; set; } public string width { get; set; } public List<Item> items { get; set; } }\n\npublic class Item { public string type { get; set; } public string text { get; set; } public bool wrap { get; set; } }\n\npublic class Table { public List<Body> body { get; set; } }\n\nchar columnSetSeparator = ';';\nchar columnSeparator = ',';\nstring data = \"Header 1,Header 2,Header 3;\" +\n              \"Row 2 Cell 1,Row 2 Cell 2,Row 2 Cell 3;\" +\n              \"Row 3 Cell 1,Row 3 Cell 2,Row 3 Cell 3,Extra Data;\" +\n              \"Row 4 Cell 1,Row 4 Cell 2,Row 4 Cell 3\";\n\n\nstring[] columnSetListStrArray = data.Split(columnSetSeparator);\nTable tableObject = new Table();\n            \nList<Body> BodyList = new List<Body>();\nbool isFirstRow = true;\n// for prevent add more columns thant header keep header size\nint headerColumnCount=0;\nforeach (var columnSetStr in columnSetListStrArray)\n{\n    Body tableBody = new Body();\n    // extract columns string \n    string[] columnStrArray = columnSetStr.Split(columnSeparator);\n    List<Column> columnList = new List<Column>();\n    \n    if(isFirstRow){\n          headerColumnCount=  columnStrArray.Length;\n        isFirstRow = false;\n    }\n    int count = 0;\n    foreach (var column in columnStrArray) {   \n        Column columnObj = new Column(); \n        List<Item> itemList = new List<Item>();\n       Item item = new Item();\n       item.text = column;\n       item.type = \"TextBlock\";\n       item.wrap=true;\n       itemList.Add(item);\n       columnObj.items=itemList;\n       columnObj.type=\"Column\";\n       columnObj.width=\"stretch\";\n       columnList.Add(columnObj);\n       count ++;\n        if(count>=headerColumnCount){ break; } }\n    tableBody.columns = columnList;\n    tableBody.type = \"ColumnSet\";\n    BodyList.Add(tableBody);\n}\ntableObject.body = BodyList;\nvar resultObject = new Dictionary<string, object>\n{ { \"tableObject\", tableObject } };\n\nresultObject",
 				"isAsync":false,
 				"parameters":{}
 			},
@@ -150,7 +150,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_iDBfH-1",
 			"id":"n_vITM5",
@@ -187,5 +187,5 @@
 	"tags":[
 		
 	],
-	"version":15
+	"version":16
 }
