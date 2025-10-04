@@ -129,7 +129,7 @@
 	"id":"68e0e0f4dae53a293265a207",
 	"lastModifiedBy":132116,
 	"lcName":"newnestedloops",
-	"modifiedTime":1759568116094,
+	"modifiedTime":1759568157808,
 	"name":"Newnestedloops",
 	"nodes":[
 		{
@@ -218,7 +218,7 @@
 							"conditions":{
 								"filters":[
 									{
-										"property":"{{ n_m1k5s.outputs.Input }}",
+										"property":"0",
 										"filter":{
 											"operator":"EQUAL",
 											"value":"0"
@@ -384,7 +384,6 @@
 				"input":"Three"
 			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -440,7 +439,6 @@
 				"input2":"_Random"
 			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -469,7 +467,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_j2UnU@_eJDrD-1@2",
 			"id":"n_j2UnU@2",
@@ -479,7 +477,7 @@
 				"conditions":{
 					"filters":[
 						{
-							"property":"{{ n_m1k5s.outputs.Input }}",
+							"property":"0",
 							"filter":{
 								"operator":"EQUAL",
 								"value":"0"
@@ -528,7 +526,6 @@
 				"input3":"Zero"
 			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -584,7 +581,6 @@
 				"OnError":"In_Valid"
 			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -646,5 +642,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
