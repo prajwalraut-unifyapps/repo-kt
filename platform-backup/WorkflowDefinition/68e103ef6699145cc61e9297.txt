@@ -6,46 +6,113 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_ZrUmi",
+			"fromNodeId":"n_7Z6VP",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_rivxA",
+			"toNodeId":"n_Y8Ozf",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Y8Ozf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_CTrMQ",
 			"type":"next"
 		}
 	],
 	"id":"68e103ef6699145cc61e9297",
 	"lastModifiedBy":30410,
 	"lcName":"api timeout",
-	"modifiedTime":1759577071649,
+	"modifiedTime":1759577119046,
 	"name":"API timeout",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1099,
+				"resourceName":"callables_from_api"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ZrUmi-1",
-			"id":"_ZrUmi",
-			"index":0,
+			"id":"n_7Z6VP",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				},
+				"endpointType":"REST",
+				"response":[
+					{
+						"name":"result",
+						"status":200,
+						"contentType":"application/json",
+						"textBody":{
+							"type":"string"
+						}
+					}
+				],
+				"streamingResponse":false
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via API",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"delay",
+				"resourceVersion":809,
+				"resourceName":"delay_for",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ZrUmi-1",
-			"id":"_rivxA",
-			"index":0,
+			"id":"n_Y8Ozf",
+			"index":2,
+			"inputs":{
+				"duration":3,
+				"unit":"MINUTES"
+			},
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"Delay",
+			"title":"Set delay duration",
+			"type":"DELAY"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1068,
+				"resourceName":"callables_return_response_to_api",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_ZrUmi-1",
+			"id":"n_CTrMQ",
+			"index":3,
+			"inputs":{
+				"streamingCompleted":true,
+				"responseName":"200_result",
+				"status":200
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to API request",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":30410,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +126,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
