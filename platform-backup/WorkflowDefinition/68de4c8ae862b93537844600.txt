@@ -31,7 +31,7 @@
 	"id":"68de4c8ae862b93537844600",
 	"lastModifiedBy":161165,
 	"lcName":"virtusafileupload1",
-	"modifiedTime":1759583388036,
+	"modifiedTime":1759583414005,
 	"name":"VirtusafileUpload1",
 	"nodes":[
 		{
@@ -97,11 +97,11 @@
 		{
 			"additional":{
 				"visibleOptionalFields":[
-					"root.record.DamageZones.items",
-					"root.record.FrontZoneDamaged.items",
-					"root.record.LeftZoneDamage.items",
-					"root.record.costBreakDown.items",
-					"root.record.file.items.url"
+					"root.record.fileDetails.name",
+					"root.record.fileDetails.source",
+					"root.record.fileDetails.sourceType",
+					"root.record.fileDetails.fileType",
+					"root.record.fileDetails.size"
 				]
 			},
 			"context":{
@@ -121,6 +121,13 @@
 				"object_type":"e_tcc",
 				"skipIfBlank":false,
 				"record":{
+					"fileDetails":{
+						"name":"{{ n_UcSUx.outputs.fileDetails.name }}",
+						"source":"{{ n_UcSUx.outputs.fileDetails.source }}",
+						"sourceType":"{{ n_UcSUx.outputs.fileDetails.sourceType }}",
+						"fileType":"{{ n_UcSUx.outputs.fileDetails.fileType }}",
+						"size":"{{ n_UcSUx.outputs.fileDetails.size }}"
+					},
 					"id":"{{ n_UcSUx.outputs.file[0].id }}",
 					"name":"{{ n_UcSUx.outputs.file[0].name }}",
 					"url":"{{ n_UcSUx.outputs.file[0].url }}",
@@ -185,5 +192,5 @@
 	"tags":[
 		
 	],
-	"version":13
+	"version":14
 }
