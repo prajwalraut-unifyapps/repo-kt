@@ -5,12 +5,12 @@
 	"createdTime":1759471287885,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759560698049,
-		"deployedBy":46209,
-		"deployedDefinitionId":"68e0c3f94061526795c498de",
+		"deployedAt":1759564649543,
+		"deployedBy":44103,
+		"deployedDefinitionId":"68e0d3691d8bca1f3b9582b9",
 		"status":"DEPLOYED",
-		"version":4,
-		"workflowVersion":5
+		"version":5,
+		"workflowVersion":6
 	},
 	"edges":[
 		{
@@ -45,7 +45,7 @@
 	"id":"68df66b77cb1ae420e9a6c7f",
 	"lastModifiedBy":44103,
 	"lcName":"slot dynamic mapping",
-	"modifiedTime":1759564647327,
+	"modifiedTime":1759564801556,
 	"name":"Slot Dynamic mapping",
 	"nodes":[
 		{
@@ -139,6 +139,22 @@
 			"id":"n_fsDVy",
 			"index":3,
 			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"slotList":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Slot List"
+						}
+					}
+				},
 				"input":{
 					"type":"object",
 					"additionalProperties":false,
@@ -155,7 +171,7 @@
 						}
 					}
 				},
-				"code":"def fucn = com.unifyapps.infra.utils.JsonUtils.fromJson(\n    com.unifyapps.infra.utils.JsonUtils.toJson(slotList),\n    Map.class\n)\n\n\nreturn [\"slotList\" : fucn]",
+				"code":"def slotListJson = com.unifyapps.infra.utils.JsonUtils.toJson(slotList)\n\ndef slotListMap = com.unifyapps.infra.utils.JsonUtils.fromJson(\n    slotListJson,\n    List.class\n)\n\nreturn [\"slotList\" : slotListMap]\n",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
@@ -316,5 +332,5 @@
 		}
 	},
 	"standard":false,
-	"version":6
+	"version":7
 }
