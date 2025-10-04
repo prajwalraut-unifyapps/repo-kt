@@ -18,44 +18,44 @@
 			"fromNodeId":"n_Fz80Z",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_LY8UC",
+			"toNodeId":"n_Fse0O",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_LY8UC",
+			"fromNodeId":"n_Fse0O",
 			"name":"yes",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_BSDaN",
+			"toNodeId":"n_kEn4n",
 			"type":"if"
 		},
 		{
-			"fromNodeId":"n_BSDaN",
+			"fromNodeId":"n_kEn4n",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_Bgza5",
+			"toNodeId":"n_fY79T",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_Bgza5",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_llPJa",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_LY8UC",
+			"fromNodeId":"n_Fse0O",
 			"name":"no",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_HhtY6",
+			"toNodeId":"n_fY79T",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_fY79T",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_5WvrT",
 			"type":"next"
 		}
 	],
 	"id":"68e12e42090f310b0fa680b8",
 	"lastModifiedBy":188567,
 	"lcName":"test",
-	"modifiedTime":1759597247736,
+	"modifiedTime":1759597774643,
 	"name":"test",
 	"nodes":[
 		{
@@ -118,15 +118,15 @@
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_oMFxq-1",
-			"id":"n_LY8UC",
+			"id":"n_Fse0O",
 			"index":3,
 			"inputs":{
 				"filters":[
 					{
-						"property":"{{ n_Fz80Z.outputs.id }}",
+						"property":"{{ n_Fz80Z.outputs }}",
 						"filter":{
-							"operator":"NOT_CONTAINS",
-							"value":"unifyapps.com"
+							"operator":"EQUAL",
+							"value":"false"
 						}
 					}
 				],
@@ -139,6 +139,21 @@
 		},
 		{
 			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_Fse0O@_oMFxq-1@y",
+			"id":"n_kEn4n",
+			"index":4,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		},
+		{
+			"context":{
 				"appName":"salesforce",
 				"resourceVersion":6767,
 				"connectionId":"68de8b42953b7316d9d81c59",
@@ -148,11 +163,11 @@
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
-			"groupId":"n_LY8UC@_oMFxq-1@y",
-			"id":"n_BSDaN",
-			"index":4,
+			"groupId":"_oMFxq-1",
+			"id":"n_fY79T",
+			"index":5,
 			"inputs":{
-				"object":"Custom Cust"
+				"object":"Cust Customer"
 			},
 			"skip":false,
 			"subTitle":"Salesforce",
@@ -163,58 +178,28 @@
 			"context":{
 				"appName":"slack",
 				"resourceVersion":6286,
-				"connectionId":"68d370d851fd1f1d5ac61250",
+				"connectionId":"68b546ce59030f28c8733fb9",
 				"resourceName":"slack_post_message_in_channel",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
-			"groupId":"n_LY8UC@_oMFxq-1@y",
-			"id":"n_Bgza5",
-			"index":5,
+			"groupId":"_oMFxq-1",
+			"id":"n_5WvrT",
+			"index":6,
 			"inputs":{
 				"link_names":true,
 				"messageType":"text",
 				"channel":"C06R3Q36AJU",
-				"text":"\"Contact Sucessfully Saved\"",
+				"text":"\"Customer Info Sucessfully Saved\"",
 				"mrkdwn":true,
-				"username":"Contact_guy"
+				"username":"Customer_Guy"
 			},
 			"skip":false,
 			"subTitle":"Slack",
 			"title":"Post message",
 			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"stop"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"n_LY8UC@_oMFxq-1@y",
-			"id":"n_llPJa",
-			"index":6,
-			"skip":false,
-			"subTitle":"Stop",
-			"title":"Stop",
-			"type":"STOP"
-		},
-		{
-			"context":{
-				"appName":"stop"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"n_LY8UC@_oMFxq-1@n",
-			"id":"n_HhtY6",
-			"index":7,
-			"skip":false,
-			"subTitle":"Stop",
-			"title":"Stop",
-			"type":"STOP"
 		}
 	],
 	"ownerUserId":124519,
@@ -234,5 +219,5 @@
 	"tags":[
 		
 	],
-	"version":13
+	"version":14
 }
