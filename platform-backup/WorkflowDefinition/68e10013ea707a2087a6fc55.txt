@@ -37,11 +37,33 @@
 			"fromNodeId":"n_feENT",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_wG2bz",
+			"toNodeId":"n_ZLnSe",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_wG2bz",
+			"fromNodeId":"n_ZLnSe",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_RmXd9",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_RmXd9",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_bnMsV",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_bnMsV",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_RmXd9",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_RmXd9",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_v7zdl",
@@ -73,7 +95,7 @@
 	"id":"68e10013ea707a2087a6fc55",
 	"lastModifiedBy":23949,
 	"lcName":"multi tenancy | move all applications",
-	"modifiedTime":1759576723501,
+	"modifiedTime":1759577710242,
 	"name":"Multi Tenancy | Move All Applications",
 	"nodes":[
 		{
@@ -83,7 +105,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_tT02q-1",
 			"id":"n_tWXv8",
@@ -131,7 +153,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_tT02q-1",
 			"id":"n_pNNqv",
@@ -421,6 +443,10 @@
 										"assetId":{
 											"type":"string",
 											"title":"Asset Id"
+										},
+										"assetVersion":{
+											"type":"string",
+											"title":"Asset Version"
 										}
 									},
 									"required":[]
@@ -434,7 +460,8 @@
 				"createList":{
 					"ua:type":"mappedArray"
 				},
-				"ua:title":"ApplicationList"
+				"ua:title":"ApplicationList",
+				"ua:list_type":"OBJECT"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -455,6 +482,10 @@
 									"assetId":{
 										"type":"string",
 										"title":"Asset Id"
+									},
+									"assetVersion":{
+										"type":"string",
+										"title":"Asset Version"
 									}
 								},
 								"required":[]
@@ -476,7 +507,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_tT02q-1",
 			"id":"n_pVMhd",
@@ -509,7 +540,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_pVMhd@_tT02q-1@l",
 			"id":"n_feENT",
@@ -539,10 +570,66 @@
 			"type":"ACTION"
 		},
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":872,
+				"resourceName":"callables_call_automation_batch",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_pVMhd@_tT02q-1@l",
+			"id":"n_ZLnSe",
+			"index":6,
+			"inputs":{
+				"automationId":"68e103f86699145cc61e92cb",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"distributeWorkflowLoad":false,
+				"parametersList":{
+					"source":"{{ n_feENT.outputs.objects }}",
+					"ua:type":"mappedArray",
+					"items":{
+						"application_id":"{{ n_feENT.outputs.objects[0].columns.id }}"
+					}
+				},
+				"version":"-1"
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":865,
+				"resourceName":"loop_for_each",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_pVMhd@_tT02q-1@l",
+			"id":"n_RmXd9",
+			"index":7,
+			"inputs":{
+				"repeatMode":"SINGLE",
+				"listSource":"{{ n_ZLnSe.outputs.result }}",
+				"captureIterations":false
+			},
+			"skip":false,
+			"subTitle":"Loop",
+			"title":"For each loop",
+			"type":"LOOP"
+		},
+		{
 			"additional":{
 				"visibleOptionalFields":[
 					"root.itemsToAdd.items.assetClass",
-					"root.itemsToAdd.items.assetId"
+					"root.itemsToAdd.items.assetId",
+					"root.itemsToAdd.items.assetVersion"
 				]
 			},
 			"context":{
@@ -554,17 +641,18 @@
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
-			"groupId":"n_pVMhd@_tT02q-1@l",
-			"id":"n_wG2bz",
-			"index":6,
+			"groupId":"n_RmXd9@n_pVMhd@_tT02q-1@l@l",
+			"id":"n_bnMsV",
+			"index":8,
 			"inputs":{
 				"insertLocation":"END",
 				"itemsToAdd":{
 					"ua:type":"mappedArray",
-					"source":"{{ n_feENT.outputs.objects }}",
+					"source":"{{ n_RmXd9.outputs.item.applicationDependentAssets }}",
 					"items":{
-						"assetClass":"e_interface",
-						"assetId":"{{ n_feENT.outputs.objects[0].columns.id }}"
+						"assetClass":"{{ n_RmXd9.outputs.item.applicationDependentAssets[0].assetClass }}",
+						"assetId":"{{ n_RmXd9.outputs.item.applicationDependentAssets[0].assetId }}",
+						"assetVersion":"{{ n_RmXd9.outputs.item.applicationDependentAssets[0].assetVersion }}"
 					}
 				},
 				"listName":"{{ n_uIfRr.outputs.items[0] }}"
@@ -582,11 +670,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_pVMhd@_tT02q-1@l",
 			"id":"n_v7zdl",
-			"index":7,
+			"index":9,
 			"inputs":{
 				"variables":[
 					{
@@ -612,11 +700,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_tT02q-1",
 			"id":"n_3MQfm",
-			"index":8,
+			"index":10,
 			"inputs":{
 				"assetDetails":{
 					"source":"{{ n_uIfRr.outputs.items }}",
@@ -646,11 +734,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_tT02q-1",
 			"id":"n_1rXuq",
-			"index":9,
+			"index":11,
 			"inputs":{
 				"result":{
 					"success":"Ok"
@@ -679,5 +767,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
