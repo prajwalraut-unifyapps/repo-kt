@@ -5,16 +5,23 @@
 	"createdTime":1741599466974,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759574655119,
+		"deployedAt":1759575197413,
 		"deployedBy":44109,
-		"deployedDefinitionId":"68e0fa7e407fc74fb8ec357c",
+		"deployedDefinitionId":"68e0fc9d407fc74fb8ec44e2",
 		"status":"DEPLOYED",
-		"version":38,
-		"workflowVersion":59
+		"version":39,
+		"workflowVersion":60
 	},
 	"edges":[
 		{
 			"fromNodeId":"B0HXN",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Pif6I",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Pif6I",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"VPXWz",
@@ -38,8 +45,15 @@
 			"fromNodeId":"sHFSN",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"0Kix2",
+			"toNodeId":"n_KlICz",
 			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_KlICz",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"0Kix2",
+			"type":"next"
 		},
 		{
 			"fromNodeId":"0Kix2",
@@ -156,9 +170,9 @@
 		]
 	},
 	"id":"67ceb2ea00f79c0e850dab35",
-	"lastModifiedBy":44109,
+	"lastModifiedBy":1,
 	"lcName":"browser use by unifyapps",
-	"modifiedTime":1759575195836,
+	"modifiedTime":1759610041786,
 	"name":"Browser use by UnifyApps",
 	"nodes":[
 		{
@@ -212,6 +226,262 @@
 		{
 			"context":{
 				"appName":"variable_by_unifyapps",
+				"resourceVersion":1014,
+				"resourceName":"variable_by_unifyapps_create_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"H6jYQ-1",
+			"id":"n_Pif6I",
+			"index":2,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{
+					"createList":{
+						"ui:title":"",
+						"ua:type":{
+							"ui:widget":"hidden"
+						},
+						"items":{
+							"ui:title":"Initial list items",
+							"ui:description":"Set the initial values of the list (defaults to empty)"
+						},
+						"ui:order":[
+							"*",
+							"items"
+						]
+					},
+					"ua:title":{
+						"ui:widget":"hidden"
+					},
+					"ua:list_type":{
+						"ui:widget":"hidden"
+					}
+				},
+				"schema":{
+					"allOf":[
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"OBJECT"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"items":{
+												"type":"object",
+												"properties":{}
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"STRING"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of String"
+											},
+											"items":{
+												"type":"string"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"INTEGER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Integers"
+											},
+											"items":{
+												"type":"integer"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"NUMBER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Numbers"
+											},
+											"items":{
+												"type":"number"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"BOOLEAN"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Booleans"
+											},
+											"items":{
+												"type":"boolean"
+											}
+										}
+									}
+								}
+							}
+						}
+					],
+					"format":"ua:list",
+					"type":"object",
+					"properties":{
+						"ua:title":{
+							"type":"string"
+						},
+						"ua:list_type":{
+							"type":"string",
+							"title":"List Type",
+							"oneOf":[
+								{
+									"const":"OBJECT",
+									"title":"Object"
+								},
+								{
+									"const":"STRING",
+									"title":"String"
+								},
+								{
+									"const":"NUMBER",
+									"title":"Number"
+								},
+								{
+									"const":"INTEGER",
+									"title":"Integer"
+								},
+								{
+									"const":"BOOLEAN",
+									"title":"Boolean"
+								}
+							],
+							"default":"OBJECT"
+						},
+						"createList":{
+							"type":"object",
+							"properties":{
+								"ua:type":{
+									"type":"string",
+									"default":"mappedArray"
+								},
+								"source":{
+									"type":"string",
+									"format":"ua:source",
+									"title":"List Item Source"
+								},
+								"items":{
+									"additionalProperties":false,
+									"type":[
+										"object",
+										"string",
+										"number",
+										"boolean",
+										"integer"
+									],
+									"properties":{}
+								}
+							}
+						}
+					}
+				}
+			},
+			"inputs":{
+				"createList":{
+					"ua:type":"mappedArray"
+				},
+				"ua:title":"updates",
+				"ua:list_type":"STRING"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"type":"object",
+					"properties":{
+						"items":{
+							"type":"array",
+							"title":"updates",
+							"disableActions":true,
+							"items":{
+								"type":"string"
+							}
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
 				"resourceVersion":443,
 				"resourceName":"variable_by_unifyapps_create_variables",
 				"type":"APPLICATION"
@@ -221,7 +491,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"H6jYQ-1",
 			"id":"VPXWz",
-			"index":2,
+			"index":3,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -266,11 +536,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"H6jYQ-1",
 			"id":"zKDB1",
-			"index":3,
+			"index":4,
 			"inputs":{
 				"instructions":"{{ B0HXN.outputs.instructions }}",
 				"modelId":"e_68e0d0ee1862bc5fe3bd49a8"
@@ -292,7 +562,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"zKDB1@H6jYQ-1@l",
 			"id":"sHFSN",
-			"index":4,
+			"index":5,
 			"inputs":{
 				"repeatMode":"SINGLE",
 				"listSource":"{{ zKDB1.outputs.item }}",
@@ -302,6 +572,29 @@
 			"subTitle":"Loop",
 			"title":"For loop",
 			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":978,
+				"resourceName":"variable_by_unifyapps_add_item_to_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"sHFSN@zKDB1@H6jYQ-1@l@l",
+			"id":"n_KlICz",
+			"index":6,
+			"inputs":{
+				"itemToAdd":"{{ zKDB1.outputs.item }}",
+				"insertLocation":"END",
+				"listName":"{{ n_Pif6I.outputs.items[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Add item to list",
+			"type":"ACTION"
 		},
 		{
 			"context":{
@@ -315,7 +608,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"sHFSN@zKDB1@H6jYQ-1@l@l",
 			"id":"0Kix2",
-			"index":5,
+			"index":7,
 			"inputs":{
 				"object":"{{ sHFSN.outputs.item }}"
 			},
@@ -336,7 +629,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"sHFSN@zKDB1@H6jYQ-1@l@l",
 			"id":"VLPo9",
-			"index":6,
+			"index":8,
 			"inputs":{
 				"jsonSchema":{
 					"type":"object",
@@ -467,11 +760,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"sHFSN@zKDB1@H6jYQ-1@l@l",
 			"id":"M0itl",
-			"index":7,
+			"index":9,
 			"inputs":{
 				"filters":[
 					{
@@ -500,7 +793,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"M0itl@sHFSN@zKDB1@H6jYQ-1@l@l@y",
 			"id":"WTaHq",
-			"index":8,
+			"index":10,
 			"inputs":{
 				"variableSchema":{
 					"type":"object",
@@ -531,7 +824,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"M0itl@sHFSN@zKDB1@H6jYQ-1@l@l@y",
 			"id":"sX6kR",
-			"index":9,
+			"index":11,
 			"inputs":{
 				"fileName":"thought_{{ __RUN__.outputs.executionId }}_{{ zKDB1.outputs.index }}_{{ sHFSN.outputs.index }}.png",
 				"content":"{{ VLPo9.outputs.result.update.screenshot }}"
@@ -553,7 +846,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"M0itl@sHFSN@zKDB1@H6jYQ-1@l@l@y",
 			"id":"9URtx",
-			"index":10,
+			"index":12,
 			"inputs":{
 				"file":"{{ sX6kR.outputs.fileDetails }}"
 			},
@@ -574,7 +867,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"M0itl@sHFSN@zKDB1@H6jYQ-1@l@l@y",
 			"id":"qEMtf",
-			"index":11,
+			"index":13,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -639,7 +932,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"M0itl@sHFSN@zKDB1@H6jYQ-1@l@l@y",
 			"id":"vYrEV",
-			"index":12,
+			"index":14,
 			"inputs":{
 				"callableInterfaceId":"__ua__publish_response_interface",
 				"defaultFallbackWorkflowId":"66fbed229edc4e0b6303cefd",
@@ -675,7 +968,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"M0itl@sHFSN@zKDB1@H6jYQ-1@l@l@n",
 			"id":"f34uJ",
-			"index":13,
+			"index":15,
 			"inputs":{
 				"variables":[
 					{
@@ -701,7 +994,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"H6jYQ-1",
 			"id":"DbktG",
-			"index":14,
+			"index":16,
 			"inputs":{
 				"result":{
 					"result":"{{ VPXWz.outputs.result }}"
@@ -730,5 +1023,5 @@
 	"tags":[
 		
 	],
-	"version":60
+	"version":61
 }
