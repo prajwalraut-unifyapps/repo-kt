@@ -67,7 +67,7 @@
 	"id":"68e0fd37ea707a2087a6e8ba",
 	"lastModifiedBy":132116,
 	"lcName":"while_test",
-	"modifiedTime":1759575364051,
+	"modifiedTime":1759575389924,
 	"name":"while_test",
 	"nodes":[
 		{
@@ -169,7 +169,7 @@
 						{
 							"property":"{{ n_WqJuV.outputs.i }}",
 							"filter":{
-								"operator":"EQUAL",
+								"operator":"LT",
 								"value":"60"
 							}
 						}
@@ -319,5 +319,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
