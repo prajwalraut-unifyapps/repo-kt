@@ -38,7 +38,7 @@
 	"id":"68e0b275865c502cde8a64a1",
 	"lastModifiedBy":44109,
 	"lcName":"test",
-	"modifiedTime":1759558723697,
+	"modifiedTime":1759564113598,
 	"name":"test",
 	"nodes":[
 		{
@@ -48,7 +48,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_rG3JE-1",
 			"id":"n_7Wjui",
@@ -80,7 +80,8 @@
 			"id":"n_4TUYW",
 			"index":2,
 			"inputs":{
-				"instructions":"who is ceo of openai"
+				"instructions":"who is ceo of openai",
+				"modelId":"e_68e0d0ee1862bc5fe3bd49a8"
 			},
 			"skip":false,
 			"subTitle":"Browser Use by UnifyApps",
@@ -95,7 +96,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_4TUYW@_rG3JE-1@l",
 			"id":"n_vYNgW",
@@ -113,7 +114,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_rG3JE-1",
 			"id":"n_fXodb",
@@ -141,5 +142,5 @@
 	"tags":[
 		
 	],
-	"version":13
+	"version":14
 }
