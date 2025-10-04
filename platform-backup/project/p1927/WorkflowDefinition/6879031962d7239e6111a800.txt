@@ -45,7 +45,7 @@
 	"id":"6879031962d7239e6111a800",
 	"lastModifiedBy":39713,
 	"lcName":"[virtu-support-checkin-bot-fn]createadaptivecarttableendpoint",
-	"modifiedTime":1759555298270,
+	"modifiedTime":1759555303011,
 	"name":"[virtu-support-checkin-bot-fn]CreateAdaptiveCartTableEndpoint",
 	"nodes":[
 		{
@@ -217,7 +217,7 @@
 					"columnSeparator":"{{ n_3Llvd.outputs.columnSeparator }}"
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Code",
 			"title":"Execute Groovy code",
 			"type":"ACTION"
@@ -289,5 +289,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
