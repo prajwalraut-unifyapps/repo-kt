@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		"storage_by_unifyapps"
+		
 	],
 	"createdTime":1759610232579,
 	"deleted":false,
@@ -30,25 +30,18 @@
 			"fromNodeId":"n_1TiPd",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_MNKL9",
+			"toNodeId":"n_lvXll",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_MNKL9",
+			"fromNodeId":"n_lvXll",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_8TSHY",
+			"toNodeId":"_8aijN",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_8TSHY",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_0qnhA",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_0qnhA",
+			"fromNodeId":"_8aijN",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_umrc9",
@@ -100,7 +93,7 @@
 	"id":"68e18578c05e7f278914dff1",
 	"lastModifiedBy":15430,
 	"lcName":"publish nearest tool ",
-	"modifiedTime":1759610337772,
+	"modifiedTime":1759610530985,
 	"name":"Publish Nearest Tool ",
 	"nodes":[
 		{
@@ -120,25 +113,27 @@
 					"type":"object",
 					"additionalProperties":false,
 					"required":[
-						"storeList"
+						"discount",
+						"distance",
+						"rating",
+						"storeName"
 					],
 					"properties":{
-						"storeList":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"partnerName":{
-										"type":"string",
-										"title":"Partner Name"
-									}
-								},
-								"additionalProperties":false,
-								"required":[
-									"partnerName"
-								]
-							},
-							"title":"Store List"
+						"discount":{
+							"type":"string",
+							"title":"Discount"
+						},
+						"distance":{
+							"type":"string",
+							"title":"Distance"
+						},
+						"rating":{
+							"type":"number",
+							"title":"Rating"
+						},
+						"storeName":{
+							"type":"string",
+							"title":"Store Name"
 						}
 					}
 				}
@@ -269,349 +264,176 @@
 			"type":"ACTION"
 		},
 		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.parameters.location.lat",
+					"root.parameters.location.lon"
+				]
+			},
 			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":52,
-				"resourceName":"variable_by_unifyapps_create_list",
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_CkHE4-1",
-			"id":"n_MNKL9",
+			"id":"n_lvXll",
 			"index":5,
-			"inputSchema":{
-				"type":"SCHEMA_AND_LAYOUT",
-				"dynamic":false,
-				"layout":{
-					"createList":{
-						"ui:title":"",
-						"ua:type":{
-							"ui:widget":"hidden"
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"sort":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Sort"
 						},
-						"items":{
-							"ui:title":"Initial list items",
-							"ui:description":"Set the initial values of the list (defaults to empty)"
-						},
-						"ui:order":[
-							"*",
-							"items"
-						]
-					},
-					"ua:title":{
-						"ui:widget":"hidden"
-					},
-					"ua:list_type":{
-						"ui:widget":"hidden"
+						"query":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Query"
+						}
 					}
 				},
-				"schema":{
-					"allOf":[
-						{
-							"if":{
-								"properties":{
-									"ua:list_type":{
-										"const":"OBJECT"
-									}
-								}
-							},
-							"then":{
-								"properties":{
-									"createList":{
-										"type":"object",
-										"properties":{
-											"items":{
-												"type":"object",
-												"properties":{}
-											}
-										}
-									}
-								}
-							}
-						},
-						{
-							"if":{
-								"properties":{
-									"ua:list_type":{
-										"const":"STRING"
-									}
-								}
-							},
-							"then":{
-								"properties":{
-									"createList":{
-										"type":"object",
-										"properties":{
-											"source":{
-												"type":"string",
-												"format":"ua:source",
-												"title":"List of String"
-											},
-											"items":{
-												"type":"string"
-											}
-										}
-									}
-								}
-							}
-						},
-						{
-							"if":{
-								"properties":{
-									"ua:list_type":{
-										"const":"INTEGER"
-									}
-								}
-							},
-							"then":{
-								"properties":{
-									"createList":{
-										"type":"object",
-										"properties":{
-											"source":{
-												"type":"string",
-												"format":"ua:source",
-												"title":"List of Integers"
-											},
-											"items":{
-												"type":"integer"
-											}
-										}
-									}
-								}
-							}
-						},
-						{
-							"if":{
-								"properties":{
-									"ua:list_type":{
-										"const":"NUMBER"
-									}
-								}
-							},
-							"then":{
-								"properties":{
-									"createList":{
-										"type":"object",
-										"properties":{
-											"source":{
-												"type":"string",
-												"format":"ua:source",
-												"title":"List of Numbers"
-											},
-											"items":{
-												"type":"number"
-											}
-										}
-									}
-								}
-							}
-						},
-						{
-							"if":{
-								"properties":{
-									"ua:list_type":{
-										"const":"BOOLEAN"
-									}
-								}
-							},
-							"then":{
-								"properties":{
-									"createList":{
-										"type":"object",
-										"properties":{
-											"source":{
-												"type":"string",
-												"format":"ua:source",
-												"title":"List of Booleans"
-											},
-											"items":{
-												"type":"boolean"
-											}
-										}
-									}
-								}
-							}
-						}
-					],
-					"format":"ua:list",
+				"input":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[],
 					"properties":{
-						"ua:title":{
-							"type":"string"
-						},
-						"ua:list_type":{
-							"type":"string",
-							"title":"List Type",
-							"oneOf":[
-								{
-									"const":"OBJECT",
-									"title":"Object"
-								},
-								{
-									"const":"STRING",
-									"title":"String"
-								},
-								{
-									"const":"NUMBER",
-									"title":"Number"
-								},
-								{
-									"const":"INTEGER",
-									"title":"Integer"
-								},
-								{
-									"const":"BOOLEAN",
-									"title":"Boolean"
-								}
-							],
-							"default":"OBJECT"
-						},
-						"createList":{
+						"location":{
 							"type":"object",
 							"properties":{
-								"ua:type":{
-									"type":"string",
-									"default":"mappedArray"
+								"lat":{
+									"type":"number",
+									"title":"Lat"
 								},
-								"source":{
-									"type":"string",
-									"format":"ua:source",
-									"title":"List Item Source"
-								},
-								"items":{
-									"additionalProperties":false,
-									"type":[
-										"object",
-										"string",
-										"number",
-										"boolean",
-										"integer"
-									],
-									"properties":{}
+								"lon":{
+									"type":"number",
+									"title":"Lon"
 								}
-							}
+							},
+							"additionalProperties":false,
+							"title":"Location",
+							"required":[]
+						},
+						"discount":{
+							"type":"string",
+							"title":"Discount"
+						},
+						"rating":{
+							"type":"number",
+							"title":"Rating"
+						},
+						"distance":{
+							"type":"string",
+							"title":"Distance"
+						},
+						"storeName":{
+							"type":"string",
+							"title":"Store Name"
 						}
 					}
-				}
-			},
-			"inputs":{
-				"createList":{
-					"ua:type":"mappedArray",
-					"source":"{{ n_P5CXD.outputs.storeList }}",
-					"items":"{{ n_P5CXD.outputs.storeList[0].partnerName }}"
 				},
-				"ua:title":"partnerList",
-				"ua:list_type":"STRING"
-			},
-			"outputSchema":{
-				"dynamic":false,
-				"schema":{
-					"type":"object",
-					"properties":{
-						"items":{
-							"type":"array",
-							"title":"partnerList",
-							"disableActions":true,
-							"items":{
-								"type":"string"
-							}
-						}
-					}
+				"code":"def queryObject = [\n      \"bool\": [\n         \"must\": [\n            [ \"term\": [ \"properties.storeName\": storeName ] ],\n            [ \"range\": [ \"properties.rating\": [ \"gte\": rating ] ] ]\n         ],\n         \"filter\" : [ \"geo_distance\" : [ \"distance\" : distance, \"location\" : [ \"lat\" : location.lat, \"lon\" : location.lon ] ] ]\n      ]\n   ]\n\ndef sortObject = [\n         \"_geo_distance\": [\n            \"properties.location\": [ \"lat\": location.lat, \"lon\": location.lon ],\n            \"order\": \"asc\",\n            \"unit\": \"km\",\n            \"mode\": \"min\",\n            \"distance_type\": \"arc\"\n         ]\n      ]\n\nreturn [\"query\":queryObject,\"sort\":[sortObject]]",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"location":{
+						"lat":"{{ n_l93OP.outputs.lat }}",
+						"lon":"{{ n_l93OP.outputs.long }}"
+					},
+					"discount":"{{ n_P5CXD.outputs.discount }}",
+					"rating":"{{ n_P5CXD.outputs.rating }}",
+					"distance":"{{ n_P5CXD.outputs.distance }}",
+					"storeName":"{{ n_P5CXD.outputs.storeName }}"
 				}
 			},
 			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Create list",
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
 			"type":"ACTION"
 		},
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
 			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":555,
-				"resourceName":"storage_by_unifyapps_fetch_records",
+				"appName":"custom_http_endpoint",
+				"resourceVersion":162,
+				"resourceName":"custom_http_endpoint_execute",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_CkHE4-1",
-			"id":"n_8TSHY",
+			"id":"_8aijN",
 			"index":6,
 			"inputs":{
-				"triggerInputCondition":{
-					"filters":[
-						{
-							"property":"properties_partnerName",
-							"filter":{
-								"operator":"IN",
-								"value":"{{ n_MNKL9.outputs.items }}"
-							}
+				"isAsync":false,
+				"enableProxy":false,
+				"requestTimeoutInSecs":-1,
+				"httpMethod":"POST",
+				"body":{
+					"size":10,
+					"query":"{{ n_lvXll.outputs.result.query }}",
+					"sort":{
+						"source":"{{ n_lvXll.outputs.result.sort }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_lvXll.outputs.result.sort[0] }}"
+					}
+				},
+				"connectionType":"DIRECT",
+				"sslVerify":false,
+				"path":"/geosearch_dda_dnd_1/_search?pretty",
+				"baseUrl":"http://opensearch-app-svc.unifyapps-infra.svc.cluster.local:9200",
+				"httpVersion":"HTTP_2",
+				"bodySchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"size":{
+							"type":"integer",
+							"title":"size"
+						},
+						"query":{
+							"type":"object",
+							"title":"query"
+						},
+						"sort":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"sort"
 						}
-					],
-					"operator":"AND"
-				},
-				"object_type":"dda_nearest_stores",
-				"includeRoleMappings":false,
-				"includeCurrentUserPermissions":false,
-				"sortBy":[
-					{
-						"field":"properties_distanceInt",
-						"order":"ASC"
 					}
-				],
-				"translationsOption":"DEFAULT",
-				"page":{
-					"paginateBy":"OFFSET",
-					"limit":20,
-					"offset":0
 				},
-				"numberOfRecordsToFetch":"MULTIPLE",
-				"readThroughSessionVariables":false,
-				"includeTotalCount":true
+				"responseContentType":"application/json",
+				"followRedirects":"NORMAL",
+				"authType":"CUSTOM",
+				"requestContentType":"application/json",
+				"ignoreTrailingSlashes":false,
+				"certificateType":"CERT_STRING"
 			},
 			"skip":false,
-			"subTitle":"Storage by UnifyApps",
-			"title":"Fetch records",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":555,
-				"resourceName":"storage_by_unifyapps_fetch_records",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_CkHE4-1",
-			"id":"_0qnhA",
-			"index":7,
-			"inputs":{
-				"object_type":"dda_nearest_stores",
-				"includeRoleMappings":false,
-				"includeCurrentUserPermissions":false,
-				"sortBy":[
-					{
-						"field":"properties_distanceInt",
-						"order":"ASC"
-					}
-				],
-				"translationsOption":"DEFAULT",
-				"page":{
-					"paginateBy":"OFFSET",
-					"limit":1,
-					"offset":0
-				},
-				"numberOfRecordsToFetch":"MULTIPLE",
-				"readThroughSessionVariables":false,
-				"includeTotalCount":true
-			},
-			"skip":false,
-			"subTitle":"Storage by UnifyApps",
-			"title":"Fetch records",
+			"subTitle":"Custom HTTP Endpoint",
+			"title":"Execute REST request",
 			"type":"ACTION"
 		},
 		{
@@ -649,7 +471,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_CkHE4-1",
 			"id":"n_umrc9",
-			"index":8,
+			"index":7,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -934,7 +756,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_CkHE4-1",
 			"id":"n_UOBFb",
-			"index":9,
+			"index":8,
 			"inputs":{
 				"callableInterfaceId":"__ua__publish_response_interface",
 				"defaultFallbackWorkflowId":"66fbed229edc4e0b6303cefd",
@@ -965,7 +787,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_CkHE4-1",
 			"id":"n_8hDiA",
-			"index":10,
+			"index":9,
 			"inputs":{
 				"callableInterfaceId":"__ua__trigger_interface_by_unifyapps",
 				"parameters":{
@@ -996,7 +818,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_CkHE4-1",
 			"id":"_dU7U9",
-			"index":11,
+			"index":10,
 			"inputs":{
 				"callableInterfaceId":"__ua__publish_response_interface",
 				"defaultFallbackWorkflowId":"66fbed229edc4e0b6303cefd",
@@ -1027,7 +849,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_CkHE4-1",
 			"id":"n_fpRSM",
-			"index":12,
+			"index":11,
 			"inputs":{
 				"automationId":"68036c6fecbd4a4d19aa7fc2",
 				"runtimeConnections":{},
@@ -1054,7 +876,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_CkHE4-1",
 			"id":"n_zfngo",
-			"index":13,
+			"index":12,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -1312,7 +1134,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_CkHE4-1",
 			"id":"n_oqCHf",
-			"index":14,
+			"index":13,
 			"inputs":{
 				"result":{
 					"result":"##The user was shown the following list of events: {{ n_umrc9.outputs.pageInputs.storeList }}."
@@ -1341,5 +1163,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
