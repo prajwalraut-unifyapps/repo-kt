@@ -54,12 +54,19 @@
 			"skip":false,
 			"toNodeId":"n_pVMhd",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_pVMhd",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_3MQfm",
+			"type":"next"
 		}
 	],
 	"id":"68e10013ea707a2087a6fc55",
 	"lastModifiedBy":23949,
 	"lcName":"multi tenancy | move all applications",
-	"modifiedTime":1759576584684,
+	"modifiedTime":1759576701620,
 	"name":"Multi Tenancy | Move All Applications",
 	"nodes":[
 		{
@@ -74,7 +81,22 @@
 			"groupId":"_tT02q-1",
 			"id":"n_tWXv8",
 			"index":1,
-			"inputs":{},
+			"inputs":{
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"environmentIdList":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Environment Id List"
+						}
+					}
+				}
+			},
 			"skip":false,
 			"subTitle":"Callable",
 			"title":"Trigger via automation",
@@ -563,6 +585,40 @@
 			"subTitle":"Variable by UnifyApps",
 			"title":"Update variables",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":556,
+				"resourceName":"standard_entities_submit_changeset",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_tT02q-1",
+			"id":"n_3MQfm",
+			"index":8,
+			"inputs":{
+				"assetDetails":{
+					"source":"{{ n_uIfRr.outputs.items }}",
+					"ua:type":"mappedArray",
+					"items":{
+						"assetId":"{{ n_uIfRr.outputs.items[0].assetId }}",
+						"assetClass":"{{ n_uIfRr.outputs.items[0].assetClass }}"
+					}
+				},
+				"envIds":{
+					"source":"{{ n_tWXv8.outputs.environmentIdList }}",
+					"ua:type":"mappedArray",
+					"items":"{{ n_tWXv8.outputs.environmentIdList[0] }}"
+				},
+				"name":"Master-Application-Changeset"
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Submit changeset",
+			"type":"ACTION"
 		}
 	],
 	"ownerUserId":23949,
@@ -582,5 +638,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
