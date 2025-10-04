@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759582741886,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_31pyL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_LEikk",
+			"type":"next"
+		}
+	],
+	"id":"68e11a1589e0d1430931aa5d",
+	"lastModifiedBy":30410,
+	"lcName":"api timeout",
+	"modifiedTime":1759582741886,
+	"name":"api timeout",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_31pyL-1",
+			"id":"_31pyL",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_31pyL-1",
+			"id":"_LEikk",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":30410,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
