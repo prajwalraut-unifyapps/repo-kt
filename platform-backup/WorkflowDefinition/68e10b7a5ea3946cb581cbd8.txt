@@ -1,0 +1,30 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759579002594,
+	"deleted":false,
+	"edges":[
+		
+	],
+	"id":"68e10b7a5ea3946cb581cbd8",
+	"lastModifiedBy":175325,
+	"lcName":"changesetqa2130jazal28fl",
+	"modifiedTime":1759579002594,
+	"name":"changeSetQA2130jazal28fL",
+	"nodes":[
+		
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
