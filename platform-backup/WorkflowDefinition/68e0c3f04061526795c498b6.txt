@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759560688497,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759560966208,
+		"deployedBy":511,
+		"deployedDefinitionId":"68e0c5064061526795c4a0cb",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_IBZ4Q",
@@ -100,7 +108,7 @@
 	"id":"68e0c3f04061526795c498b6",
 	"lastModifiedBy":511,
 	"lcName":"looptesting1",
-	"modifiedTime":1759560963895,
+	"modifiedTime":1759560978030,
 	"name":"LoopTesting1",
 	"nodes":[
 		{
@@ -479,5 +487,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
