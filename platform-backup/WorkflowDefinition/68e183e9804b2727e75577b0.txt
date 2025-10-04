@@ -59,7 +59,7 @@
 	"id":"68e183e9804b2727e75577b0",
 	"lastModifiedBy":44096,
 	"lcName":"dfgfrg",
-	"modifiedTime":1759613578241,
+	"modifiedTime":1759613603565,
 	"name":"dfgfrg",
 	"nodes":[
 		{
@@ -147,7 +147,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_yWpNM-1",
 			"id":"n_yHrAI",
@@ -360,14 +360,7 @@
 										"boolean",
 										"integer"
 									],
-									"properties":{
-										"var":{
-											"type":"object",
-											"properties":{},
-											"additionalProperties":false,
-											"title":"Var"
-										}
-									},
+									"properties":{},
 									"required":[]
 								}
 							}
@@ -393,14 +386,7 @@
 							"disableActions":true,
 							"items":{
 								"type":"object",
-								"properties":{
-									"var":{
-										"type":"object",
-										"properties":{},
-										"additionalProperties":false,
-										"title":"Var"
-									}
-								},
+								"properties":{},
 								"required":[]
 							}
 						}
@@ -453,15 +439,13 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_2r5Kp@_yWpNM-1@l",
 			"id":"n_8Dm67",
 			"index":6,
 			"inputs":{
-				"itemToAdd":{
-					"var":"{{ n_2r5Kp.outputs.item }}"
-				},
+				"itemToAdd":"{{ n_2r5Kp.outputs.item }}",
 				"insertLocation":"END",
 				"listName":"{{ n_yHrAI.outputs.items[0] }}"
 			},
@@ -511,5 +495,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
