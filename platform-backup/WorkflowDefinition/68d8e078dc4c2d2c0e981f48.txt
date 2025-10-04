@@ -1,12 +1,28 @@
 {
 	"appsUsed":[
-		"gmeet"
+		"gmeet",
+		"google_task"
 	],
 	"createdTime":1759043704658,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759160115149,
+		"deployedBy":177799,
+		"deployedDefinitionId":"68daa732267fa1677f902cd6",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":7
+	},
 	"edges":[
 		{
-			"fromNodeId":"n_7XyC5",
+			"fromNodeId":"n_EMU2p",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_wigVJ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_wigVJ",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_BgWkV",
@@ -16,34 +32,49 @@
 	"id":"68d8e078dc4c2d2c0e981f48",
 	"lastModifiedBy":177799,
 	"lcName":"google meet trigger testing rishabh",
-	"modifiedTime":1759160112018,
+	"modifiedTime":1759587808189,
 	"name":"google meet trigger testing rishabh",
 	"nodes":[
 		{
 			"context":{
-				"appName":"gmeet",
-				"resourceVersion":13,
-				"connectionId":"68da921d7c4eaf6df8215940",
-				"resourceName":"gmeet_on_new_conference"
+				"appName":"google_task",
+				"resourceVersion":3574,
+				"connectionId":"68d5885cfd866b5d0e3e5611",
+				"resourceName":"google_task_on_new_tasklist_polling"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_dq3Nw-1",
-			"id":"n_7XyC5",
+			"id":"n_EMU2p",
 			"index":1,
 			"inputs":{
-				"interval":1,
-				"from":"2025-09-27T15:30:00Z",
+				"interval":30,
 				"batchSize":100
 			},
 			"skip":false,
-			"subTitle":"Google Meet",
-			"title":"On new conference created",
+			"subTitle":"Google Task",
+			"title":"New task list",
 			"trigger":{
 				"type":"EVENT"
 			},
 			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"gmeet",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_dq3Nw-1",
+			"id":"n_wigVJ",
+			"index":2,
+			"skip":false,
+			"subTitle":"Google Meet",
+			"title":"Select an action",
+			"type":"ACTION"
 		},
 		{
 			"context":{
@@ -54,7 +85,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_dq3Nw-1",
 			"id":"n_BgWkV",
-			"index":2,
+			"index":3,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -78,5 +109,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
