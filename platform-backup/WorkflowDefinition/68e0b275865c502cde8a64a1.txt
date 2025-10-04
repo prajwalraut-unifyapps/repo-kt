@@ -38,7 +38,7 @@
 	"id":"68e0b275865c502cde8a64a1",
 	"lastModifiedBy":44109,
 	"lcName":"test",
-	"modifiedTime":1759556886049,
+	"modifiedTime":1759556923328,
 	"name":"test",
 	"nodes":[
 		{
@@ -80,7 +80,7 @@
 			"id":"n_4TUYW",
 			"index":2,
 			"inputs":{
-				"instructions":"a",
+				"instructions":"tell me about open ai",
 				"modelId":"e_68c1d372b253e8115d419203"
 			},
 			"skip":false,
@@ -142,5 +142,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
