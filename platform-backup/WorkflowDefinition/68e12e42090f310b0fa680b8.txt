@@ -1,5 +1,6 @@
 {
 	"appsUsed":[
+		"gmail",
 		"salesforce",
 		"slack"
 	],
@@ -10,21 +11,51 @@
 			"fromNodeId":"n_CNj4T",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_bo2QC",
+			"toNodeId":"n_Fz80Z",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_bo2QC",
+			"fromNodeId":"n_Fz80Z",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_5KUgE",
+			"toNodeId":"n_LY8UC",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_LY8UC",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_BSDaN",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_BSDaN",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Bgza5",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Bgza5",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_llPJa",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_LY8UC",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_HhtY6",
 			"type":"next"
 		}
 	],
 	"id":"68e12e42090f310b0fa680b8",
 	"lastModifiedBy":188567,
 	"lcName":"test",
-	"modifiedTime":1759595413656,
+	"modifiedTime":1759597057060,
 	"name":"test",
 	"nodes":[
 		{
@@ -53,83 +84,78 @@
 			"type":"START"
 		},
 		{
-			"additional":{
-				"visibleOptionalFields":[
-					"root.record.objects.items.Email"
-				]
-			},
 			"context":{
-				"appName":"salesforce",
-				"resourceVersion":3428,
-				"connectionId":"68de8b42953b7316d9d81c59",
-				"resourceName":"salesforce_create_record_batch",
+				"appName":"gmail",
+				"resourceVersion":3364,
+				"connectionId":"6895d98b89df282e8723428f",
+				"resourceName":"gmail_find_email",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_oMFxq-1",
-			"id":"n_bo2QC",
+			"id":"n_Fz80Z",
 			"index":2,
 			"inputs":{
-				"allOrNone":true,
-				"objectSourceResourceName":"salesforce_fetch_object",
-				"batchSize":200,
-				"objectId":"Custom Contact Details"
+				"toCreate":false,
+				"searchQuery":"from:unifyapps.com",
+				"count":1
 			},
-			"options":{
-				"bulkheadConfig":{
-					"enabled":false,
-					"global":false
-				},
-				"businessHoursConfig":{
-					"enabled":false,
-					"waitForNextWindow":false
-				},
-				"cacheConfig":{
-					"enabled":false,
-					"usagePolicy":"ALWAYS"
-				},
-				"circuitBreakerConfig":{
-					"enabled":false
-				},
-				"disableLogging":false,
-				"enabledForReExecution":false,
-				"hookConfig":{
-					"enabled":false,
-					"postHooks":[
-						
-					],
-					"preHooks":[
-						
-					]
-				},
-				"logConfig":{
-					"enabled":false,
-					"logPolicies":[
-						
-					]
-				},
-				"rateLimitConfig":{
-					"enabled":false,
-					"waitForNextWindow":false
-				},
-				"retryConfig":{
-					"backOffFactor":null,
-					"captureRetries":false,
-					"enabled":false
-				},
-				"stepError":"STOP",
-				"telemetryConfig":{
-					"enableTelemetry":false,
-					"metricConfigs":[
-						
-					]
-				}
+			"skip":false,
+			"subTitle":"Gmail",
+			"title":"Find Email",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":791,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_oMFxq-1",
+			"id":"n_LY8UC",
+			"index":3,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_Fz80Z.outputs.response }}",
+						"filter":{
+							"operator":"MISSING"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"salesforce",
+				"resourceVersion":6767,
+				"connectionId":"68de8b42953b7316d9d81c59",
+				"resourceName":"salesforce_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_LY8UC@_oMFxq-1@y",
+			"id":"n_BSDaN",
+			"index":4,
+			"inputs":{
+				"object":"Custom Cust"
 			},
 			"skip":false,
 			"subTitle":"Salesforce",
-			"title":"Create records in batch",
+			"title":"Create record",
 			"type":"ACTION"
 		},
 		{
@@ -141,23 +167,53 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
-			"groupId":"_oMFxq-1",
-			"id":"n_5KUgE",
-			"index":3,
+			"groupId":"n_LY8UC@_oMFxq-1@y",
+			"id":"n_Bgza5",
+			"index":5,
 			"inputs":{
 				"link_names":true,
 				"messageType":"text",
 				"channel":"C06R3Q36AJU",
-				"text":"\"A UnifyApps Contact is stored\"",
+				"text":"\"Contact Sucessfully Saved\"",
 				"mrkdwn":true,
-				"username":"Customer_ID"
+				"username":"Contact_guy"
 			},
 			"skip":false,
 			"subTitle":"Slack",
 			"title":"Post message",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_LY8UC@_oMFxq-1@y",
+			"id":"n_llPJa",
+			"index":6,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_LY8UC@_oMFxq-1@n",
+			"id":"n_HhtY6",
+			"index":7,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":124519,
@@ -177,5 +233,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":12
 }
