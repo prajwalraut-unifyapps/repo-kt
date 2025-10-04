@@ -88,6 +88,21 @@
 			"type":"next"
 		},
 		{
+			"fromNodeId":"n_6tLoP",
+			"name":"6",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_6tLoP@6",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"n_6tLoP@6",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_9lI53",
+			"type":"next"
+		},
+		{
 			"fromNodeId":"n_ZAAml",
 			"priority":0,
 			"skip":false,
@@ -123,6 +138,13 @@
 			"type":"next"
 		},
 		{
+			"fromNodeId":"_9lI53",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Kzv5a",
+			"type":"next"
+		},
+		{
 			"fromNodeId":"n_6tLoP",
 			"name":"default",
 			"priority":0,
@@ -134,7 +156,7 @@
 	"id":"68e0fc9d407fc74fb8ec44e6",
 	"lastModifiedBy":23949,
 	"lcName":"multi tenancy | move all assets",
-	"modifiedTime":1759580672867,
+	"modifiedTime":1759581022169,
 	"name":"Multi Tenancy | Move All assets",
 	"nodes":[
 		{
@@ -225,6 +247,12 @@
 						"id":"5",
 						"inputs":{
 							"name":"Objects"
+						}
+					},
+					{
+						"id":"6",
+						"inputs":{
+							"name":"Platform Tools"
 						}
 					},
 					{
@@ -464,6 +492,51 @@
 		},
 		{
 			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":0,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_6tLoP@_WUbts-1@6",
+			"id":"n_6tLoP@6",
+			"index":13,
+			"inputs":{
+				"name":"Platform Tools"
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1066,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_6tLoP@_WUbts-1@6",
+			"id":"_9lI53",
+			"index":14,
+			"inputs":{
+				"automationId":"68e11241fb0d68036d56d4a9",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{}
+			},
+			"skip":false,
+			"subTitle":"Platform Tools",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
 				"appName":"callables",
 				"resourceVersion":1046,
 				"resourceName":"callables_return_to_automation",
@@ -474,7 +547,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_WUbts-1",
 			"id":"n_Kzv5a",
-			"index":13,
+			"index":15,
 			"inputs":{
 				"result":{
 					"result":"success"
@@ -503,5 +576,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":12
 }
