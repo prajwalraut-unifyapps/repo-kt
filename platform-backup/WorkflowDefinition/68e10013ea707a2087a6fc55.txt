@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759576083537,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759577748878,
+		"deployedBy":23949,
+		"deployedDefinitionId":"68e106946699145cc61eaaa1",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":7
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_tWXv8",
@@ -81,13 +89,6 @@
 			"fromNodeId":"n_pVMhd",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_3MQfm",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_3MQfm",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_1rXuq",
 			"type":"next"
 		}
@@ -95,17 +96,22 @@
 	"id":"68e10013ea707a2087a6fc55",
 	"lastModifiedBy":23949,
 	"lcName":"multi tenancy | move all applications",
-	"modifiedTime":1759577741480,
+	"modifiedTime":1759578194845,
 	"name":"Multi Tenancy | Move All Applications",
 	"nodes":[
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
 			"context":{
 				"appName":"callables",
 				"resourceVersion":1010,
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_tT02q-1",
 			"id":"n_tWXv8",
@@ -116,23 +122,28 @@
 					"additionalProperties":false,
 					"required":[],
 					"properties":{
-						"success":{
-							"type":"string",
-							"title":"Success"
-						}
-					}
-				},
-				"setup":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[],
-					"properties":{
-						"environmentIdList":{
+						"applicationAssets":{
 							"type":"array",
 							"items":{
-								"type":"string"
+								"type":"object",
+								"properties":{
+									"assetId":{
+										"type":"string",
+										"title":"Asset Id"
+									},
+									"assetClass":{
+										"type":"string",
+										"title":"Asset Class"
+									},
+									"assetVersion":{
+										"type":"string",
+										"title":"Asset Version"
+									}
+								},
+								"additionalProperties":false,
+								"required":[]
 							},
-							"title":"Environment Id List"
+							"title":"Application Assets"
 						}
 					}
 				}
@@ -153,7 +164,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_tT02q-1",
 			"id":"n_pNNqv",
@@ -222,7 +233,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_tT02q-1",
 			"id":"n_uIfRr",
@@ -507,7 +518,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_tT02q-1",
 			"id":"n_pVMhd",
@@ -540,7 +551,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_pVMhd@_tT02q-1@l",
 			"id":"n_feENT",
@@ -670,7 +681,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_pVMhd@_tT02q-1@l",
 			"id":"n_v7zdl",
@@ -693,46 +704,6 @@
 			"type":"ACTION"
 		},
 		{
-			"additional":{
-				"visibleOptionalFields":[
-					"root.assetDetails.items.assetVersion"
-				]
-			},
-			"context":{
-				"appName":"standard_entities",
-				"resourceVersion":556,
-				"resourceName":"standard_entities_submit_changeset",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_tT02q-1",
-			"id":"n_3MQfm",
-			"index":10,
-			"inputs":{
-				"assetDetails":{
-					"source":"{{ n_uIfRr.outputs.items }}",
-					"ua:type":"mappedArray",
-					"items":{
-						"assetId":"{{ n_uIfRr.outputs.items[0].assetId }}",
-						"assetClass":"{{ n_uIfRr.outputs.items[0].assetClass }}",
-						"assetVersion":"{{ n_uIfRr.outputs.items[0].assetVersion }}"
-					}
-				},
-				"envIds":{
-					"source":"{{ n_tWXv8.outputs.environmentIdList }}",
-					"ua:type":"mappedArray",
-					"items":"{{ n_tWXv8.outputs.environmentIdList[0] }}"
-				},
-				"name":"Master-Application-Changeset"
-			},
-			"skip":false,
-			"subTitle":"Standard entities by UnifyApps",
-			"title":"Submit changeset",
-			"type":"ACTION"
-		},
-		{
 			"context":{
 				"appName":"callables",
 				"resourceVersion":1046,
@@ -740,14 +711,22 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_tT02q-1",
 			"id":"n_1rXuq",
-			"index":11,
+			"index":10,
 			"inputs":{
 				"result":{
-					"success":"Ok"
+					"applicationAssets":{
+						"source":"{{ n_uIfRr.outputs.items }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"assetId":"{{ n_uIfRr.outputs.items[0].assetId }}",
+							"assetClass":"{{ n_uIfRr.outputs.items[0].assetClass }}",
+							"assetVersion":"{{ n_uIfRr.outputs.items[0].assetVersion }}"
+						}
+					}
 				}
 			},
 			"skip":false,
@@ -773,5 +752,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
