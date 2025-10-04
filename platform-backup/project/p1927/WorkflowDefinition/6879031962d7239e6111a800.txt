@@ -17,20 +17,6 @@
 			"fromNodeId":"n_gP2eI",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_dcFpM",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_dcFpM",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_SWWyy",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_SWWyy",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_o0TSV",
 			"type":"next"
 		},
@@ -45,7 +31,7 @@
 	"id":"6879031962d7239e6111a800",
 	"lastModifiedBy":39713,
 	"lcName":"[virtu-support-checkin-bot-fn]createadaptivecarttableendpoint",
-	"modifiedTime":1759555712249,
+	"modifiedTime":1759555745617,
 	"name":"[virtu-support-checkin-bot-fn]CreateAdaptiveCartTableEndpoint",
 	"nodes":[
 		{
@@ -117,100 +103,6 @@
 		},
 		{
 			"context":{
-				"appName":"callables",
-				"resourceVersion":812,
-				"resourceName":"callables_call_automation",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_iDBfH-1",
-			"id":"n_dcFpM",
-			"index":2,
-			"inputs":{
-				"automationId":"687904fc62d7239e6111c2d4",
-				"runtimeConnections":{},
-				"synchronous":true,
-				"version":"-1",
-				"parameters":{
-					"tableData":"",
-					"columnSetSeparator":"{{ n_gP2eI.outputs.queryParams.columnSetSeparator }}",
-					"columnSeparator":"{{ n_gP2eI.outputs.queryParams.columnSeparator }}"
-				}
-			},
-			"skip":true,
-			"subTitle":"Callable",
-			"title":"Call automation",
-			"type":"CALL_WORKFLOW"
-		},
-		{
-			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":803,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_iDBfH-1",
-			"id":"n_SWWyy",
-			"index":3,
-			"inputs":{
-				"output":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"body"
-					],
-					"properties":{
-						"body":{
-							"type":"object",
-							"properties":{},
-							"additionalProperties":false,
-							"title":"Body"
-						}
-					}
-				},
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"data",
-						"columnSetSeparator",
-						"columnSeparator"
-					],
-					"properties":{
-						"data":{
-							"type":"string",
-							"title":"Data"
-						},
-						"columnSetSeparator":{
-							"type":"string",
-							"title":"Column Set Separator"
-						},
-						"columnSeparator":{
-							"type":"string",
-							"title":"Column Separator"
-						}
-					}
-				},
-				"code":" def rowStrings = data.split(columnSetSeparator)\n    \n    // Determine the number of columns from the first row (the header)\n    // This ensures subsequent rows do not exceed the header's column count.\n    int headerColumnCount = rowStrings.first().split(columnSeparator).size()\n\n    // Use 'collect' to transform each row string into a map\n    def bodyList = rowStrings.collect { rowStr ->\n        // Split the row into columns and truncate the list to the header's column count\n        def columns = rowStr.split(columnSeparator).take(headerColumnCount)\n\n        // For each column string, create the nested \"Column\" map structure\n        def columnList = columns.collect { colText ->\n            [\n                type: 'Column',\n                width: 'stretch',\n                items: [\n                    [\n                        type: 'TextBlock',\n                        text: colText,\n                        wrap: true\n                    ]\n                ]\n            ]\n        }\n\n        // Return the map for the current row (\"ColumnSet\")\n        [\n            type: 'ColumnSet',\n            columns: columnList\n        ]\n    }\n\n    // Construct and return the final table object\n    return [\"body\": bodyList]",
-				"compile_static":false,
-				"captureStdOutput":false,
-				"parameters":{
-					"columnSetSeparator":"{{ n_3Llvd.outputs.columnSetSeparator }}",
-					"columnSeparator":"{{ n_3Llvd.outputs.columnSeparator }}"
-				}
-			},
-			"skip":true,
-			"subTitle":"Code",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"code_by_unifyapps",
 				"resourceVersion":156,
 				"resourceName":"code_by_unifyapps_csharp",
@@ -221,7 +113,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_iDBfH-1",
 			"id":"n_o0TSV",
-			"index":4,
+			"index":2,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -280,7 +172,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_iDBfH-1",
 			"id":"n_vITM5",
-			"index":5,
+			"index":3,
 			"inputs":{
 				"streamingCompleted":true,
 				"responseName":"200_200",
@@ -313,5 +205,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":12
 }
