@@ -23,6 +23,20 @@
 			"fromNodeId":"_2QA6J",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_uMej7",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_uMej7",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_B4pG8",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_B4pG8",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_Iyzj1",
 			"type":"next"
 		}
@@ -30,7 +44,7 @@
 	"id":"68de53092cc9f04fd0a34cc8",
 	"lastModifiedBy":44567,
 	"lcName":"tst",
-	"modifiedTime":1759584208575,
+	"modifiedTime":1759586835639,
 	"name":"tst",
 	"nodes":[
 		{
@@ -79,7 +93,7 @@
 				"id":"e_68e11f81dc9ad92b3167b3b7",
 				"readThroughSessionVariables":false
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Storage by UnifyApps",
 			"title":"Fetch record by ID",
 			"type":"ACTION"
@@ -105,9 +119,124 @@
 				"id":"e_68e1154b5d0a377446828243",
 				"readThroughSessionVariables":false
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Storage by UnifyApps",
 			"title":"Fetch record by ID",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":1029,
+				"resourceName":"utility_by_unifyapps_to_json_object",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_dYuxR-1",
+			"id":"n_uMej7",
+			"index":4,
+			"inputs":{
+				"jsonSchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"fileDetails":{
+							"type":"object",
+							"properties":{
+								"name":{
+									"type":"string",
+									"title":"name"
+								},
+								"source":{
+									"type":"string",
+									"title":"source"
+								},
+								"sourceType":{
+									"type":"string",
+									"title":"sourceType"
+								},
+								"fileType":{
+									"type":"string",
+									"title":"fileType"
+								},
+								"size":{
+									"type":"number",
+									"title":"size"
+								}
+							},
+							"title":"fileDetails",
+							"additionalProperties":false,
+							"required":[]
+						}
+					}
+				},
+				"jsonString":"{\"fileDetails\": {\n    \"name\": \"TCC.zip\",\n\"source\": \"user-uploads/1/1759586558571/TCC.zip\",\n\"sourceType\": \"CLOUD_STORAGE\",\n\"fileType\": \"zip\",\n\"size\": 109502274\n  }}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Deserialise string to JSON object",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":1029,
+				"resourceName":"utility_by_unifyapps_to_json_object",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_dYuxR-1",
+			"id":"_B4pG8",
+			"index":5,
+			"inputs":{
+				"jsonSchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"fileDetails":{
+							"type":"object",
+							"properties":{
+								"name":{
+									"type":"string",
+									"title":"name"
+								},
+								"source":{
+									"type":"string",
+									"title":"source"
+								},
+								"sourceType":{
+									"type":"string",
+									"title":"sourceType"
+								},
+								"fileType":{
+									"type":"string",
+									"title":"fileType"
+								},
+								"size":{
+									"type":"number",
+									"title":"size"
+								}
+							},
+							"title":"fileDetails",
+							"additionalProperties":false,
+							"required":[]
+						}
+					}
+				},
+				"jsonString":"{\n  \"fileDetails\": {\n\"name\": \"virtu-TaleoToTydyRequisitionWJ-dev3.zip\",\n\"source\": \"user-uploads/1/1759586566728/virtu-TaleoToTydyRequisitionWJ-dev3.zip\",\n\"sourceType\": \"CLOUD_STORAGE\",\n\"fileType\": \"zip\",\n\"size\": 4188178\n  }\n}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Deserialise string to JSON object",
 			"type":"ACTION"
 		},
 		{
@@ -122,7 +251,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_dYuxR-1",
 			"id":"n_Iyzj1",
-			"index":4,
+			"index":6,
 			"inputs":{},
 			"options":{
 				"bulkheadConfig":{
@@ -197,5 +326,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
