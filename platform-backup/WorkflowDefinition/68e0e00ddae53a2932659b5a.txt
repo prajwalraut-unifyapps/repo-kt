@@ -26,12 +26,101 @@
 			"skip":false,
 			"toNodeId":"n_U9j8K",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_U9j8K",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Ywwxe",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Ywwxe",
+			"name":"1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Ywwxe@1",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"n_Ywwxe@1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_hmYtm",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_hmYtm",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_iGKI9",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_iGKI9",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_hmYtm",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Ywwxe",
+			"name":"2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Ywwxe@2",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"n_Ywwxe@2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_k9Djs",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_k9Djs",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_oq5L1",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_oq5L1",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_k9Djs",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_hmYtm",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_eMG9v",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_k9Djs",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_eMG9v",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Ywwxe",
+			"name":"default",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_eMG9v",
+			"type":"branch"
 		}
 	],
 	"id":"68e0e00ddae53a2932659b5a",
 	"lastModifiedBy":39715,
 	"lcName":"testing_branch",
-	"modifiedTime":1759567917901,
+	"modifiedTime":1759568008801,
 	"name":"testing_branch",
 	"nodes":[
 		{
@@ -105,6 +194,238 @@
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Groovy code",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"branch",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_FvSe0-1",
+			"id":"n_Ywwxe",
+			"index":4,
+			"inputs":{
+				"branches":[
+					{
+						"id":"1",
+						"inputs":{
+							"name":"Branch 1",
+							"conditions":{
+								"filters":[
+									{
+										"property":"1",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"1"
+										}
+									}
+								],
+								"operator":"AND"
+							}
+						}
+					},
+					{
+						"id":"2",
+						"inputs":{
+							"name":"Branch 2",
+							"conditions":{
+								"filters":[
+									{
+										"property":"1",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"1"
+										}
+									}
+								],
+								"operator":"AND"
+							}
+						}
+					},
+					{
+						"id":"default"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Branch",
+			"title":"",
+			"type":"BRANCH"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":0,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_Ywwxe@_FvSe0-1@1",
+			"id":"n_Ywwxe@1",
+			"index":5,
+			"inputs":{
+				"name":"Branch 1",
+				"conditions":{
+					"filters":[
+						{
+							"property":"1",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"1"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":36,
+				"resourceName":"loop_for",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_Ywwxe@_FvSe0-1@1",
+			"id":"n_hmYtm",
+			"index":6,
+			"inputs":{
+				"start":0,
+				"limit":2,
+				"step":1,
+				"captureIterations":true
+			},
+			"skip":false,
+			"subTitle":"Loop",
+			"title":"For loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":970,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_hmYtm@n_Ywwxe@_FvSe0-1@1@l",
+			"id":"n_iGKI9",
+			"index":7,
+			"inputs":{
+				"code":"return 3",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":0,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_Ywwxe@_FvSe0-1@2",
+			"id":"n_Ywwxe@2",
+			"index":8,
+			"inputs":{
+				"name":"Branch 2",
+				"conditions":{
+					"filters":[
+						{
+							"property":"1",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"1"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":36,
+				"resourceName":"loop_for",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_Ywwxe@_FvSe0-1@2",
+			"id":"n_k9Djs",
+			"index":9,
+			"inputs":{
+				"start":0,
+				"limit":3,
+				"step":1,
+				"captureIterations":true
+			},
+			"skip":false,
+			"subTitle":"Loop",
+			"title":"For loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":970,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_k9Djs@n_Ywwxe@_FvSe0-1@2@l",
+			"id":"n_oq5L1",
+			"index":10,
+			"inputs":{
+				"code":"return 6",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_FvSe0-1",
+			"id":"n_eMG9v",
+			"index":11,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":39715,
@@ -124,5 +445,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
