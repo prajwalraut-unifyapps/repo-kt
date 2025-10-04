@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759570123491,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_KsuBh",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_72b8x",
+			"type":"next"
+		}
+	],
+	"id":"68e0e8cbdae53a293265de29",
+	"lastModifiedBy":411,
+	"lcName":"ujgiu",
+	"modifiedTime":1759570123491,
+	"name":"ujgiu",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_KsuBh-1",
+			"id":"_KsuBh",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_KsuBh-1",
+			"id":"_72b8x",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":411,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
