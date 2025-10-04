@@ -198,6 +198,20 @@
 			"fromNodeId":"_5eBdm",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_dbGfT",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_dbGfT",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_oMses",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_oMses",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_Kzv5a",
 			"type":"next"
 		}
@@ -205,7 +219,7 @@
 	"id":"68e0fc9d407fc74fb8ec44e6",
 	"lastModifiedBy":23949,
 	"lcName":"multi tenancy | move all assets",
-	"modifiedTime":1759581415435,
+	"modifiedTime":1759582541343,
 	"name":"Multi Tenancy | Move All assets",
 	"nodes":[
 		{
@@ -263,7 +277,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_WUbts-1",
 			"id":"n_T4baR",
@@ -1098,6 +1112,138 @@
 			"type":"ACTION"
 		},
 		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.parameters.assets.items.assetId",
+					"root.parameters.assets.items.assetClass",
+					"root.parameters.assets.items.assetVersion"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":970,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_WUbts-1",
+			"id":"n_dbGfT",
+			"index":22,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"modifiedAssets":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"assetId":{
+										"type":"string",
+										"title":"assetId"
+									},
+									"assetClass":{
+										"type":"string",
+										"title":"assetClass"
+									},
+									"assetVersion":{
+										"type":"string",
+										"title":"assetVersion"
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"modifiedAssets"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"assets":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"assetId":{
+										"type":"string",
+										"title":"assetId"
+									},
+									"assetClass":{
+										"type":"string",
+										"title":"assetClass"
+									},
+									"assetVersion":{
+										"type":"string",
+										"title":"assetVersion"
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"assets"
+						}
+					}
+				},
+				"code":"def deduplicateAssets(List<Map> assetList) {\n    // Group by assetId and assetClass combination\n    def grouped = assetList.groupBy { [it.assetId, it.assetClass] }\n    \n    // Process each group to select the appropriate element\n    def deduplicated = grouped.collect { key, duplicates ->\n        if (duplicates.size() == 1) {\n            // No duplicates, return as is\n            return duplicates[0]\n        }\n        \n        // Check for elements without assetVersion (null or empty)\n        def withoutVersion = duplicates.find { \n            it.assetVersion == null || it.assetVersion == '' || it.assetVersion.trim() == ''\n        }\n        \n        if (withoutVersion) {\n            // Rule 1: Use element without version\n            return withoutVersion\n        } else {\n            // Rule 2: All have versions, select most recent using semantic versioning\n            return duplicates.max { asset ->\n                parseVersion(asset.assetVersion)\n            }\n        }\n    }\n    \n    return deduplicated\n}\n\n// Helper method to parse version string for comparison\ndef parseVersion(String version) {\n    if (!version) return [0]\n    \n    try {\n        return version.tokenize('.').collect { it as Integer }\n    } catch (NumberFormatException e) {\n        // If version contains non-numeric parts, fall back to string comparison\n        return [version]\n    }\n}\n\n// Example usage:\ndef assets = [\n    [assetId: 'A1', assetClass: 'Type1', assetVersion: '1.0'],\n    [assetId: 'A1', assetClass: 'Type1', assetVersion: '2.0'],\n    [assetId: 'A1', assetClass: 'Type1', assetVersion: ''],\n    [assetId: 'A2', assetClass: 'Type1', assetVersion: '1.5'],\n    [assetId: 'A2', assetClass: 'Type1', assetVersion: '10.0'],\n    [assetId: 'A2', assetClass: 'Type1', assetVersion: '3.0'],\n    [assetId: 'A3', assetClass: 'Type2', assetVersion: '1.0'],\n    [assetId: 'A4', assetClass: 'Type3', assetVersion: null]\n]\n\ndef result = deduplicateAssets(assets)\nreturn result [modifiedAssets : result]\n",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"assets":{
+						"source":"{{ n_T4baR.outputs.items }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"assetId":"{{ n_T4baR.outputs.items[0].assetId }}",
+							"assetClass":"{{ n_T4baR.outputs.items[0].assetClass }}",
+							"assetVersion":"{{ n_T4baR.outputs.items[0].assetVersion }}"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"De-Duplicate Asset List",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.assetDetails.items.assetVersion"
+				]
+			},
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":556,
+				"resourceName":"standard_entities_submit_changeset",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_WUbts-1",
+			"id":"n_oMses",
+			"index":23,
+			"inputs":{
+				"assetDetails":{
+					"source":"{{ n_dbGfT.outputs.result.modifiedAssets }}",
+					"ua:type":"mappedArray",
+					"items":{
+						"assetClass":"{{ n_dbGfT.outputs.result.modifiedAssets[0].assetClass }}",
+						"assetId":"{{ n_dbGfT.outputs.result.modifiedAssets[0].assetId }}",
+						"assetVersion":"{{ n_dbGfT.outputs.result.modifiedAssets[0].assetVersion }}"
+					}
+				},
+				"name":"Master Changeset "
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Submit changeset",
+			"type":"ACTION"
+		},
+		{
 			"context":{
 				"appName":"callables",
 				"resourceVersion":1046,
@@ -1109,7 +1255,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_WUbts-1",
 			"id":"n_Kzv5a",
-			"index":22,
+			"index":24,
 			"inputs":{
 				"result":{
 					"result":"success"
@@ -1138,5 +1284,5 @@
 	"tags":[
 		
 	],
-	"version":14
+	"version":16
 }
