@@ -5,12 +5,12 @@
 	"createdTime":1759399050988,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759581281377,
-		"deployedBy":4130,
-		"deployedDefinitionId":"68e11461fb0d68036d56ea6e",
+		"deployedAt":1759583583796,
+		"deployedBy":161165,
+		"deployedDefinitionId":"68e11d5f220086346092fa06",
 		"status":"DEPLOYED",
-		"version":4,
-		"workflowVersion":11
+		"version":5,
+		"workflowVersion":17
 	},
 	"edges":[
 		{
@@ -31,7 +31,7 @@
 	"id":"68de4c8ae862b93537844600",
 	"lastModifiedBy":161165,
 	"lcName":"virtusafileupload1",
-	"modifiedTime":1759583581841,
+	"modifiedTime":1759583979011,
 	"name":"VirtusafileUpload1",
 	"nodes":[
 		{
@@ -55,34 +55,38 @@
 				"setup":{
 					"type":"object",
 					"additionalProperties":false,
+					"required":[],
 					"properties":{
 						"fileDetails":{
-							"type":"object",
-							"properties":{
-								"name":{
-									"type":"string",
-									"title":"name"
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"name":{
+										"type":"string",
+										"title":"name"
+									},
+									"source":{
+										"type":"string",
+										"title":"source"
+									},
+									"sourceType":{
+										"type":"string",
+										"title":"sourceType"
+									},
+									"fileType":{
+										"type":"string",
+										"title":"fileType"
+									},
+									"size":{
+										"type":"number",
+										"title":"size"
+									}
 								},
-								"source":{
-									"type":"string",
-									"title":"source"
-								},
-								"sourceType":{
-									"type":"string",
-									"title":"sourceType"
-								},
-								"fileType":{
-									"type":"string",
-									"title":"fileType"
-								},
-								"size":{
-									"type":"number",
-									"title":"size"
-								}
+								"additionalProperties":false,
+								"required":[]
 							},
-							"title":"fileDetails",
-							"additionalProperties":false,
-							"required":[]
+							"title":"fileDetails"
 						}
 					}
 				}
@@ -184,5 +188,5 @@
 	"tags":[
 		
 	],
-	"version":17
+	"version":18
 }
