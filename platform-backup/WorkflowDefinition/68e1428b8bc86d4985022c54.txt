@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759593099769,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_fis68",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_PlueV",
+			"type":"next"
+		}
+	],
+	"id":"68e1428b8bc86d4985022c54",
+	"lastModifiedBy":185277,
+	"lcName":"43rew",
+	"modifiedTime":1759593099769,
+	"name":"43rew",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_fis68-1",
+			"id":"_fis68",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_fis68-1",
+			"id":"_PlueV",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":185277,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
