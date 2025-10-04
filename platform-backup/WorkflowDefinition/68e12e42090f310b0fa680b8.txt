@@ -10,13 +10,6 @@
 			"fromNodeId":"n_CNj4T",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_tTWt4",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_tTWt4",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_bo2QC",
 			"type":"next"
 		},
@@ -31,7 +24,7 @@
 	"id":"68e12e42090f310b0fa680b8",
 	"lastModifiedBy":188567,
 	"lcName":"test",
-	"modifiedTime":1759591497968,
+	"modifiedTime":1759591837057,
 	"name":"test",
 	"nodes":[
 		{
@@ -61,27 +54,6 @@
 		},
 		{
 			"context":{
-				"appName":"utility_by_unifyapps",
-				"resourceVersion":0,
-				"resourceName":"utility_by_unifyapps_parse_email",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_oMFxq-1",
-			"id":"n_tTWt4",
-			"index":2,
-			"inputs":{
-				"mimeContent":"from:unifyapps.com"
-			},
-			"skip":false,
-			"subTitle":"Utility by UnifyApps",
-			"title":"Parse email",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"salesforce",
 				"resourceVersion":3428,
 				"connectionId":"68de8b42953b7316d9d81c59",
@@ -93,7 +65,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_oMFxq-1",
 			"id":"n_bo2QC",
-			"index":3,
+			"index":2,
 			"inputs":{
 				"allOrNone":true,
 				"objectSourceResourceName":"salesforce_fetch_object",
@@ -127,7 +99,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_oMFxq-1",
 			"id":"n_5KUgE",
-			"index":4,
+			"index":3,
 			"inputs":{
 				"link_names":true,
 				"messageType":"text",
@@ -159,5 +131,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
