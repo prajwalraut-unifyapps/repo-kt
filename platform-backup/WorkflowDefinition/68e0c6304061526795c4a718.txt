@@ -6,46 +6,130 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_xXiE0",
+			"fromNodeId":"n_iULuy",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_uEVAN",
+			"toNodeId":"n_wootd",
 			"type":"next"
 		}
 	],
 	"id":"68e0c6304061526795c4a718",
 	"lastModifiedBy":46030,
 	"lcName":"customworkflow2",
-	"modifiedTime":1759561264419,
+	"modifiedTime":1759561286707,
 	"name":"customworkflow2",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":970,
+				"resourceName":"callables_from_interface"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_xXiE0-1",
-			"id":"_xXiE0",
-			"index":0,
+			"id":"n_iULuy",
+			"index":1,
+			"inputs":{
+				"result":{
+					"required":[],
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
+					"properties":{
+						"body":{
+							"type":"object",
+							"properties":{
+								"authenticated":{
+									"type":"boolean",
+									"title":"Authenticated"
+								},
+								"userDetails":{
+									"type":"object",
+									"properties":{},
+									"additionalProperties":false,
+									"title":"User Details"
+								},
+								"returnTo":{
+									"type":"string",
+									"title":"Return To"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Body",
+							"required":[]
+						}
+					}
+				},
+				"callableInterfaceId":"__ua__custom_workflow_authentication_interface",
+				"setup":{
+					"required":[],
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
+					"properties":{
+						"body":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Body"
+						},
+						"queryParams":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Query Params"
+						},
+						"headers":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Headers"
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger interface",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1039,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_xXiE0-1",
-			"id":"_uEVAN",
-			"index":0,
+			"id":"n_wootd",
+			"index":2,
+			"inputs":{
+				"result":{
+					"body":{
+						"authenticated":true
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":46030,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +143,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
