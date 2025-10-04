@@ -6,46 +6,129 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_Ex8is",
+			"fromNodeId":"n_oKvN1",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_1TEon",
+			"toNodeId":"n_vjo2B",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_vjo2B",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_4fXHw",
 			"type":"next"
 		}
 	],
 	"id":"68e10de05ea3946cb581ed68",
 	"lastModifiedBy":30410,
 	"lcName":"callable api",
-	"modifiedTime":1759579616082,
+	"modifiedTime":1759579665368,
 	"name":"callable api",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1099,
+				"resourceName":"callables_from_api"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Ex8is-1",
-			"id":"_Ex8is",
-			"index":0,
+			"id":"n_oKvN1",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				},
+				"endpointType":"REST",
+				"response":[
+					{
+						"name":"sttus",
+						"status":200,
+						"contentType":"application/json",
+						"textBody":{
+							"type":"string"
+						},
+						"body":{
+							"type":"object",
+							"properties":{
+								"successss":{
+									"type":"string",
+									"title":"Successss"
+								}
+							},
+							"additionalProperties":false,
+							"required":[
+								"successss"
+							]
+						}
+					}
+				],
+				"streamingResponse":false
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via API",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"delay",
+				"resourceVersion":809,
+				"resourceName":"delay_for",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Ex8is-1",
-			"id":"_1TEon",
-			"index":0,
+			"id":"n_vjo2B",
+			"index":2,
+			"inputs":{
+				"duration":3,
+				"unit":"MINUTES"
+			},
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"Delay",
+			"title":"Set delay duration",
+			"type":"DELAY"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1068,
+				"resourceName":"callables_return_response_to_api",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Ex8is-1",
+			"id":"n_4fXHw",
+			"index":3,
+			"inputs":{
+				"streamingCompleted":true,
+				"responseName":"200_sttus",
+				"body":{
+					"successss":"yes"
+				},
+				"status":200
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to API request",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":30410,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +142,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
