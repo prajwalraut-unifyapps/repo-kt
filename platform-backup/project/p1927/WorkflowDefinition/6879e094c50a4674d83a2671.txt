@@ -16,13 +16,6 @@
 			"fromNodeId":"n_jvi3d",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_KeLQs",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_KeLQs",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_eW1fE",
 			"type":"next"
 		}
@@ -30,7 +23,7 @@
 	"id":"6879e094c50a4674d83a2671",
 	"lastModifiedBy":39713,
 	"lcName":"[virtu-support-checkin-bot-fn] createprojectmultioptionlist",
-	"modifiedTime":1759563358147,
+	"modifiedTime":1759563368039,
 	"name":"[virtu-support-checkin-bot-fn] CreateProjectMultiOptionList",
 	"nodes":[
 		{
@@ -94,62 +87,6 @@
 		},
 		{
 			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":803,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_91yYw-1",
-			"id":"n_KeLQs",
-			"index":3,
-			"inputs":{
-				"output":{
-					"type":"object",
-					"properties":{
-						"v5ProjectList":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{},
-								"additionalProperties":false
-							},
-							"title":"V 5 Project List"
-						}
-					},
-					"additionalProperties":false,
-					"required":[
-						"v5ProjectList"
-					]
-				},
-				"input":{
-					"type":"object",
-					"properties":{
-						"body":{
-							"type":"string",
-							"title":"Body"
-						}
-					},
-					"additionalProperties":false,
-					"required":[
-						"body"
-					]
-				},
-				"compile_static":false,
-				"code":"import com.fasterxml.jackson.databind.ObjectMapper\nimport com.fasterxml.jackson.core.type.TypeReference\n\ndef createOptionList(List v5ProjectList) {\n    // Return an empty list if the input is null or empty\n    if (!v5ProjectList) {\n        return []\n    }\n\n    // The 'collect' method iterates through each project and transforms it into a new map.\n    // The result is a new list containing all the transformed maps.\n    v5ProjectList.collect { project ->\n        [\n            title: \"${project.projectName} - (${project.projectNumber})\",\n            value: \"${project.projectNumber}:${project.projectName}:${project.projectManagerName}:${project.projectManagerEmailAddress}:${project.checkinProjectId}\"\n        ]\n    }\n}\n\n// Assume 'requestBody' is a variable holding your JSON string.\ndef objectMapper = new ObjectMapper()\n\n// Define the type for a list of maps using Jackson's TypeReference.\ndef listType = new TypeReference<List<Map<String, Object>>>() {}\n\n// Deserialize the JSON string using ObjectMapper's readValue method.\ndef v5ProjectList = objectMapper.readValue(body, listType)",
-				"parameters":{
-					"body":"{{ n_5dhTu.outputs.body }}"
-				}
-			},
-			"skip":true,
-			"subTitle":"Code",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"callables",
 				"resourceVersion":818,
 				"resourceName":"callables_return_response_to_api",
@@ -160,7 +97,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_91yYw-1",
 			"id":"n_eW1fE",
-			"index":4,
+			"index":3,
 			"inputs":{
 				"streamingCompleted":true,
 				"responseName":"200_200",
@@ -190,5 +127,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
