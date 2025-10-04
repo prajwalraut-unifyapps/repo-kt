@@ -1,51 +1,69 @@
 {
 	"appsUsed":[
-		
+		"amazon_sqs"
 	],
 	"createdTime":1759551474968,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_X6Pe2",
+			"fromNodeId":"n_IPUnG",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_EOiyp",
+			"toNodeId":"n_AvVrm",
 			"type":"next"
 		}
 	],
 	"id":"68e09ff2568e7817abcf40e7",
-	"lastModifiedBy":45012,
+	"lastModifiedBy":43498,
 	"lcName":"fdsa",
-	"modifiedTime":1759551474968,
+	"modifiedTime":1759558495199,
 	"name":"fdsa",
 	"nodes":[
 		{
+			"context":{
+				"appName":"amazon_sqs",
+				"resourceVersion":5301,
+				"connectionId":"68c109c0ad4ba13c5360acfa",
+				"resourceName":"amazon_sqs_on_event_received"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_X6Pe2-1",
-			"id":"_X6Pe2",
-			"index":0,
+			"id":"n_IPUnG",
+			"index":1,
+			"inputs":{
+				"format":"RAW",
+				"queueUrl":"https://sqs.ap-southeast-2.amazonaws.com/471112710789/Test1"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Amazon SQS",
+			"title":"On event received",
 			"trigger":{
 				"type":"EVENT"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"stop"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_X6Pe2-1",
-			"id":"_EOiyp",
-			"index":0,
+			"id":"n_AvVrm",
+			"index":2,
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":45012,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +77,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
