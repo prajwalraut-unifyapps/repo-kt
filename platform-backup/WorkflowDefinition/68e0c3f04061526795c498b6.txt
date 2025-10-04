@@ -60,14 +60,20 @@
 		},
 		{
 			"fromNodeId":"n_HKpwf",
-			"name":"loopback",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_yB1nW",
+			"toNodeId":"n_nuTNL",
 			"type":"next"
 		},
 		{
 			"fromNodeId":"n_5qNOH",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_nuTNL",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_nuTNL",
 			"name":"loopback",
 			"priority":0,
 			"skip":false,
@@ -108,7 +114,7 @@
 	"id":"68e0c3f04061526795c498b6",
 	"lastModifiedBy":511,
 	"lcName":"looptesting1",
-	"modifiedTime":1759561216469,
+	"modifiedTime":1759561298073,
 	"name":"LoopTesting1",
 	"nodes":[
 		{
@@ -226,7 +232,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_fnth2@n_hM9Xn@_ols28-1@y@l",
 			"id":"n_yB1nW",
@@ -393,6 +399,27 @@
 		},
 		{
 			"context":{
+				"appName":"break",
+				"resourceVersion":814,
+				"resourceName":"break",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_yB1nW@n_fnth2@n_hM9Xn@_ols28-1@y@l@l",
+			"id":"n_nuTNL",
+			"index":8,
+			"inputs":{
+				"loop":"n_yB1nW"
+			},
+			"skip":false,
+			"subTitle":"Break",
+			"title":"Break",
+			"type":"BREAK"
+		},
+		{
+			"context":{
 				"appName":"variable_by_unifyapps",
 				"resourceVersion":915,
 				"resourceName":"variable_by_unifyapps_create_variables",
@@ -403,7 +430,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hM9Xn@_ols28-1@n",
 			"id":"n_yiTD2",
-			"index":8,
+			"index":9,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -458,7 +485,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_ols28-1",
 			"id":"n_5DruS",
-			"index":9,
+			"index":10,
 			"inputs":{
 				"result":{
 					"Output":"{{ n_HKpwf.outputs.input }}"
@@ -487,5 +514,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":7
 }
