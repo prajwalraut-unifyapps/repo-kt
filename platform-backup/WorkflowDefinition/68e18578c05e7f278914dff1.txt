@@ -66,7 +66,7 @@
 	"id":"68e18578c05e7f278914dff1",
 	"lastModifiedBy":15430,
 	"lcName":"publish nearest tool ",
-	"modifiedTime":1759614591982,
+	"modifiedTime":1759614609104,
 	"name":"Publish Nearest Tool ",
 	"nodes":[
 		{
@@ -325,10 +325,6 @@
 							"title":"Location",
 							"required":[]
 						},
-						"discount":{
-							"type":"string",
-							"title":"Discount"
-						},
 						"rating":{
 							"type":"number",
 							"title":"Rating"
@@ -351,7 +347,6 @@
 						"lat":"{{ n_l93OP.outputs.lat }}",
 						"lon":"{{ n_l93OP.outputs.long }}"
 					},
-					"discount":"",
 					"rating":"{{ n_P5CXD.outputs.rating }}",
 					"distance":"{{ n_P5CXD.outputs.distance }}",
 					"storeName":"{{ n_P5CXD.outputs.storeName }}"
@@ -734,5 +729,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
