@@ -88,7 +88,7 @@
 	"id":"68e1088c70c2f233effd889c",
 	"lastModifiedBy":23949,
 	"lcName":"multi tenancy | move all automations",
-	"modifiedTime":1759578465174,
+	"modifiedTime":1759578535291,
 	"name":"Multi Tenancy | Move All Automations",
 	"nodes":[
 		{
@@ -595,7 +595,8 @@
 					"ua:type":"mappedArray",
 					"items":{
 						"application_id":"{{ n_feENT.outputs.objects[0].columns.id }}",
-						"assetClass":"WORKFLOW_DEFINITION"
+						"assetClass":"WORKFLOW_DEFINITION",
+						"assetVersion":"LAST_DEPLOYED"
 					}
 				},
 				"version":"-1"
@@ -733,5 +734,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
