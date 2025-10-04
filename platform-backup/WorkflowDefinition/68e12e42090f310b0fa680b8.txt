@@ -1,51 +1,155 @@
 {
 	"appsUsed":[
-		
+		"gmail",
+		"salesforce",
+		"slack"
 	],
 	"createdTime":1759587906681,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_oMFxq",
+			"fromNodeId":"n_CNj4T",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_RW9Ax",
+			"toNodeId":"n_5JPSI",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_5JPSI",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_bo2QC",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_bo2QC",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_5KUgE",
 			"type":"next"
 		}
 	],
 	"id":"68e12e42090f310b0fa680b8",
-	"lastModifiedBy":124519,
+	"lastModifiedBy":188567,
 	"lcName":"test",
-	"modifiedTime":1759587906681,
+	"modifiedTime":1759588496535,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_oMFxq-1",
-			"id":"_oMFxq",
-			"index":0,
+			"id":"n_CNj4T",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"gmail",
+				"resourceVersion":3364,
+				"connectionId":"68c41adb2f7ced1b4fcad217",
+				"resourceName":"gmail_find_email",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_oMFxq-1",
-			"id":"_RW9Ax",
-			"index":0,
+			"id":"n_5JPSI",
+			"index":2,
+			"inputs":{
+				"toCreate":false,
+				"searchQuery":"unifyapps.com",
+				"count":1
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Gmail",
+			"title":"Find Email",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"salesforce",
+				"resourceVersion":3428,
+				"connectionId":"68de8b42953b7316d9d81c59",
+				"resourceName":"salesforce_create_record_batch",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_oMFxq-1",
+			"id":"n_bo2QC",
+			"index":3,
+			"inputs":{
+				"allOrNone":true,
+				"objectSourceResourceName":"salesforce_fetch_object",
+				"record":{
+					"objects":{
+						"source":"Unify Contact",
+						"ua:type":"mappedArray",
+						"items":{
+							"LastName":"Unify"
+						}
+					}
+				},
+				"batchSize":1,
+				"objectId":"Contact"
+			},
+			"skip":false,
+			"subTitle":"Salesforce",
+			"title":"Create records in batch",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"slack",
+				"resourceVersion":6286,
+				"connectionId":"68d370d851fd1f1d5ac61250",
+				"resourceName":"slack_post_message_in_channel",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_oMFxq-1",
+			"id":"n_5KUgE",
+			"index":4,
+			"inputs":{
+				"link_names":true,
+				"messageType":"text",
+				"channel":"C06R3Q36AJU",
+				"text":"\"A UnifyApps Contact is stored\"",
+				"mrkdwn":true,
+				"username":"Customer_ID"
+			},
+			"skip":false,
+			"subTitle":"Slack",
+			"title":"Post message",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":124519,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +163,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
