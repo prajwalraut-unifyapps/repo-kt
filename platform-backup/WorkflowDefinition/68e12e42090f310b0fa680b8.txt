@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		"gmail",
+		"emailoctopus",
 		"salesforce",
 		"slack"
 	],
@@ -11,11 +11,11 @@
 			"fromNodeId":"n_CNj4T",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_5JPSI",
+			"toNodeId":"n_KpgYp",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_5JPSI",
+			"fromNodeId":"n_KpgYp",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_bo2QC",
@@ -32,7 +32,7 @@
 	"id":"68e12e42090f310b0fa680b8",
 	"lastModifiedBy":188567,
 	"lcName":"test",
-	"modifiedTime":1759590610977,
+	"modifiedTime":1759590946800,
 	"name":"test",
 	"nodes":[
 		{
@@ -62,26 +62,20 @@
 		},
 		{
 			"context":{
-				"appName":"gmail",
-				"resourceVersion":3364,
-				"connectionId":"6895d98b89df282e8723428f",
-				"resourceName":"gmail_find_email",
+				"appName":"emailoctopus",
+				"resourceVersion":4063,
+				"resourceName":"emailoctopus_create_contact_of_list",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_oMFxq-1",
-			"id":"n_5JPSI",
+			"id":"n_KpgYp",
 			"index":2,
-			"inputs":{
-				"toCreate":false,
-				"searchQuery":"from:unifyapps.com",
-				"count":1
-			},
 			"skip":false,
-			"subTitle":"Gmail",
-			"title":"Find Email",
+			"subTitle":"EmailOctopus",
+			"title":"Create contact",
 			"type":"ACTION"
 		},
 		{
@@ -163,5 +157,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
