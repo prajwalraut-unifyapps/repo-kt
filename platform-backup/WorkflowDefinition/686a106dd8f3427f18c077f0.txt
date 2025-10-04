@@ -37,7 +37,7 @@
 	"id":"686a106dd8f3427f18c077f0",
 	"lastModifiedBy":161930,
 	"lcName":"[dnt] teams child tenant publisher | update",
-	"modifiedTime":1759575728985,
+	"modifiedTime":1759577399474,
 	"name":"[DNT] Teams Child Tenant Publisher | Update",
 	"nodes":[
 		{
@@ -47,14 +47,17 @@
 				"resourceName":"standard_entities_on_platform_event"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_JkvCF-1",
 			"id":"n_B8frq",
-			"index":0,
+			"index":1,
 			"inputs":{
 				"entityType":"USER_GROUP",
-				"changeType":"UPDATED"
+				"changeType":"UPDATED",
+				"entityTypes":[
+					"USER_GROUP"
+				]
 			},
 			"skip":false,
 			"subTitle":"Standard entities by UnifyApps",
@@ -76,7 +79,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_JkvCF-1",
 			"id":"n_SUHbv",
-			"index":0,
+			"index":2,
 			"inputs":{
 				"projections":[
 					{
@@ -111,7 +114,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_JkvCF-1",
 			"id":"n_Q7kxp",
-			"index":0,
+			"index":3,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -406,7 +409,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_JkvCF-1",
 			"id":"n_T0I17",
-			"index":0,
+			"index":4,
 			"inputs":{
 				"assetDetails":{
 					"source":"{{ n_Q7kxp.outputs.items }}",
@@ -437,7 +440,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_JkvCF-1",
 			"id":"n_zbl7z",
-			"index":0,
+			"index":5,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -458,5 +461,5 @@
 		}
 	},
 	"standard":false,
-	"version":3
+	"version":4
 }
