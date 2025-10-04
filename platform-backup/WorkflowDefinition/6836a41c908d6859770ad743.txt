@@ -1,0 +1,158 @@
+{
+	"appsUsed":[
+		"storage_by_unifyapps"
+	],
+	"createdTime":1748411420243,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_gSWAK",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"HYMN3",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"HYMN3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"7JkPl",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"7JkPl",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"zMO6m",
+			"type":"next"
+		}
+	],
+	"id":"6836a41c908d6859770ad743",
+	"lastModifiedBy":161930,
+	"lcName":"[dnt] ai agent child tenant publisher (with dependency selection)",
+	"modifiedTime":1759575727551,
+	"name":"[DNT] AI Agent Child Tenant Publisher (with dependency selection)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":32,
+				"resourceName":"storage_by_unifyapps_on_entity_deployed"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"MSrFt-1",
+			"id":"n_gSWAK",
+			"index":1,
+			"inputs":{
+				"object_type":"ai_agent"
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Entity deployed",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":2697,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"MSrFt-1",
+			"id":"HYMN3",
+			"index":2,
+			"inputs":{
+				"object_type":"child_tenant",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"page":{
+					"paginateBy":"OFFSET",
+					"limit":20
+				},
+				"numberOfRecordsToFetch":"MULTIPLE",
+				"readThroughSessionVariables":false,
+				"includeTotalCount":false
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":12,
+				"resourceName":"standard_entities_submit_changeset",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"MSrFt-1",
+			"id":"7JkPl",
+			"index":3,
+			"inputs":{
+				"assetDetails":[
+					{
+						"assetClass":"ai_agent",
+						"assetId":"{{ n_gSWAK.outputs.id }}"
+					}
+				],
+				"envIds":{
+					"source":"{{ HYMN3.outputs.objects }}",
+					"ua:type":"mappedArray",
+					"items":"{{ HYMN3.outputs.objects[0].properties.connectedEnvId }}"
+				},
+				"name":"AI Agent Deployment (ai_agent)"
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Submit changeset",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":699,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"MSrFt-1",
+			"id":"zMO6m",
+			"index":4,
+			"inputs":{
+				"result":"{{ 7JkPl.outputs.success }}"
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":517,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":3
+}
