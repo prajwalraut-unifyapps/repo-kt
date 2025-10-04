@@ -60,7 +60,7 @@
 	"id":"68e183e9804b2727e75577b0",
 	"lastModifiedBy":44096,
 	"lcName":"dfgfrg",
-	"modifiedTime":1759614095663,
+	"modifiedTime":1759614209952,
 	"name":"dfgfrg",
 	"nodes":[
 		{
@@ -105,7 +105,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_yWpNM-1",
 			"id":"n_7EG0m",
@@ -126,7 +126,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_yWpNM-1",
 			"id":"n_pA4Oo",
@@ -148,7 +148,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_yWpNM-1",
 			"id":"n_2r5Kp",
@@ -186,7 +186,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_2r5Kp@_yWpNM-1@l",
 			"id":"n_y953c",
@@ -312,7 +312,7 @@
 			},
 			"debug":false,
 			"dirty":true,
-			"fallbackMode":"STOP",
+			"fallbackMode":"CONTINUE",
 			"groupId":"n_2r5Kp@_yWpNM-1@l",
 			"id":"n_g32MW",
 			"index":6,
@@ -328,6 +328,59 @@
 						"lat":"{{ n_y953c.outputs.result.lat }}",
 						"lon":"{{ n_y953c.outputs.result.lon }}"
 					}
+				}
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"global":false
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"CONTINUE",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				},
+				"timeoutConfig":{
+					"enabled":false
 				}
 			},
 			"skip":false,
@@ -376,5 +429,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
