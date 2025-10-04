@@ -96,10 +96,15 @@
 	"id":"68de72f25b11474238866535",
 	"lastModifiedBy":59995,
 	"lcName":"buckets number",
-	"modifiedTime":1759593402256,
+	"modifiedTime":1759593452650,
 	"name":"Buckets Number",
 	"nodes":[
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
 			"context":{
 				"appName":"callables",
 				"resourceName":"callables_from_automation"
@@ -114,54 +119,13 @@
 				"result":{
 					"type":"object",
 					"additionalProperties":false,
+					"required":[
+						"bucketWarningsCount"
+					],
 					"properties":{
-						"bucketWarnings":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"dbName":{
-										"type":"string",
-										"title":"dbName"
-									},
-									"tableName":{
-										"type":"string",
-										"title":"tableName"
-									},
-									"partitions":{
-										"type":"array",
-										"items":{
-											"type":"object",
-											"properties":{
-												"buckets":{
-													"type":"integer",
-													"title":"buckets"
-												},
-												"distributionKey":{
-													"type":"string",
-													"title":"distributionKey"
-												},
-												"paritionId":{
-													"type":"integer",
-													"title":"paritionId"
-												},
-												"partitionName":{
-													"type":"string",
-													"title":"partitionName"
-												},
-												"dataSize":{
-													"type":"string",
-													"title":"dataSize"
-												}
-											},
-											"additionalProperties":false
-										},
-										"title":"partitions"
-									}
-								},
-								"additionalProperties":false
-							},
-							"title":"bucketWarnings"
+						"bucketWarningsCount":{
+							"type":"integer",
+							"title":"Bucket Warnings Count"
 						}
 					}
 				},
@@ -941,25 +905,7 @@
 			"index":11,
 			"inputs":{
 				"result":{
-					"bucketWarnings":{
-						"source":"{{ n_ab9zj.outputs.result.bucketWarnings }}",
-						"ua:type":"mappedArray",
-						"items":{
-							"dbName":"{{ n_ab9zj.outputs.result.bucketWarnings[0].dbName }}",
-							"tableName":"{{ n_ab9zj.outputs.result.bucketWarnings[0].tableName }}",
-							"partitions":{
-								"source":"{{ n_ab9zj.outputs.result.bucketWarnings[0].partitions }}",
-								"ua:type":"mappedArray",
-								"items":{
-									"buckets":"{{ n_ab9zj.outputs.result.bucketWarnings[0].partitions[0].buckets }}",
-									"distributionKey":"{{ n_ab9zj.outputs.result.bucketWarnings[0].partitions[0].distributionKey }}",
-									"paritionId":"{{ n_ab9zj.outputs.result.bucketWarnings[0].partitions[0].paritionId }}",
-									"partitionName":"{{ n_ab9zj.outputs.result.bucketWarnings[0].partitions[0].partitionName }}",
-									"dataSize":"{{ n_ab9zj.outputs.result.bucketWarnings[0].partitions[0].dataSize }}"
-								}
-							}
-						}
-					}
+					"bucketWarningsCount":"=LEN({{ _9xKNR.outputs.result.outputs.criticalBuckets }})"
 				}
 			},
 			"skip":false,
@@ -985,5 +931,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
