@@ -45,7 +45,7 @@
 	"id":"6879031962d7239e6111a800",
 	"lastModifiedBy":39713,
 	"lcName":"[virtu-support-checkin-bot-fn]createadaptivecarttableendpoint",
-	"modifiedTime":1759555588834,
+	"modifiedTime":1759555695561,
 	"name":"[virtu-support-checkin-bot-fn]CreateAdaptiveCartTableEndpoint",
 	"nodes":[
 		{
@@ -62,9 +62,10 @@
 			"index":1,
 			"inputs":{
 				"request":{
-					"contentType":"application/json",
 					"queryParams":{
 						"type":"object",
+						"additionalProperties":false,
+						"required":[],
 						"properties":{
 							"columnSeparator":{
 								"type":"string",
@@ -74,33 +75,19 @@
 								"type":"string",
 								"title":"Column Set Separator"
 							}
-						},
-						"additionalProperties":false,
-						"required":[]
+						}
 					},
-					"body":{
-						"type":"object",
-						"properties":{
-							"tableData":{
-								"type":"string",
-								"title":"Table Data"
-							}
-						},
-						"additionalProperties":false,
-						"required":[
-							"tableData"
-						]
-					}
+					"contentType":"application/json"
 				},
 				"endpointType":"REST",
 				"response":[
 					{
+						"name":"200",
 						"status":200,
 						"contentType":"application/json",
 						"textBody":{
 							"type":"string"
 						},
-						"name":"200",
 						"body":{
 							"type":"object",
 							"properties":{
@@ -147,7 +134,7 @@
 				"synchronous":true,
 				"version":"-1",
 				"parameters":{
-					"tableData":"{{ n_gP2eI.outputs.body.tableData }}",
+					"tableData":"",
 					"columnSetSeparator":"{{ n_gP2eI.outputs.queryParams.columnSetSeparator }}",
 					"columnSeparator":"{{ n_gP2eI.outputs.queryParams.columnSeparator }}"
 				}
@@ -269,7 +256,12 @@
 					}
 				},
 				"code":" using System.Collections.Generic;\n \n \n \n public class Table\n    {\n        public List<Body> body { get; set; }\n    }\n \n \n \nstring[] columnSetListStrArray = data.Split(columnSetSeparator);\nTable tableObject = new Table();\n\nList<Body> BodyList = new List<Body>();\nbool isFirstRow = true;\n// for prevent add more columns thant header keep header size\n            int headerColumnCount=0;\n        foreach (var columnSetStr in columnSetListStrArray)\n        {\n            Body tableBody = new Body();\n            // extract columns string \n            string[] columnStrArray = columnSetStr.Split(columnSeparator);\n            List<Column> columnList = new List<Column>();\n            \n            if(isFirstRow){\n                  headerColumnCount=  columnStrArray.Length;\n                isFirstRow = false;\n            }\n            int count = 0;\n            foreach (var column in columnStrArray)\n            {   \n               \n                Column columnObj = new Column();\n                \n                List<Item> itemList = new List<Item>();\n               Item item = new Item();\n               item.text = column;\n               item.type = \"TextBlock\";\n               item.wrap=true;\n               itemList.Add(item);\n               columnObj.items=itemList;\n               columnObj.type=\"Column\";\n               columnObj.width=\"stretch\";\n               columnList.Add(columnObj);\n               count ++;\n                if(count>=headerColumnCount){\n                        break;\n                }\n    }\n    tableBody.columns = columnList;\n    tableBody.type = \"ColumnSet\";\n    BodyList.Add(tableBody);\n}\ntableObject.body = BodyList;\nvar result = new Dictionary<string, object>\n{\n    { \"tableObject\", tableObject }\n};",
-				"isAsync":false
+				"isAsync":false,
+				"parameters":{
+					"columnSetSeparator":"{{ n_gP2eI.outputs.queryParams.columnSetSeparator }}",
+					"columnSeparator":"{{ n_gP2eI.outputs.queryParams.columnSeparator }}",
+					"data":"{{ n_SWWyy.outputs.result.body }}"
+				}
 			},
 			"skip":false,
 			"subTitle":"Code by UnifyApps",
@@ -321,5 +313,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
