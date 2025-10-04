@@ -31,7 +31,7 @@
 	"id":"68de4c8ae862b93537844600",
 	"lastModifiedBy":161165,
 	"lcName":"virtusafileupload1",
-	"modifiedTime":1759583979011,
+	"modifiedTime":1759583995739,
 	"name":"VirtusafileUpload1",
 	"nodes":[
 		{
@@ -127,11 +127,10 @@
 				"skipIfBlank":false,
 				"record":{
 					"fileDetails":{
-						"name":"{{ n_UcSUx.outputs.fileDetails.name }}",
-						"source":"{{ n_UcSUx.outputs.fileDetails.source }}",
-						"sourceType":"{{ n_UcSUx.outputs.fileDetails.sourceType }}",
-						"fileType":"{{ n_UcSUx.outputs.fileDetails.fileType }}",
-						"size":"{{ n_UcSUx.outputs.fileDetails.size }}"
+						"name":"{{ n_UcSUx.outputs.fileDetails[0].name }}",
+						"source":"{{ n_UcSUx.outputs.fileDetails[0].source }}",
+						"sourceType":"{{ n_UcSUx.outputs.fileDetails[0].sourceType }}",
+						"fileType":"{{ n_UcSUx.outputs.fileDetails[0].fileType }}"
 					}
 				}
 			},
@@ -188,5 +187,5 @@
 	"tags":[
 		
 	],
-	"version":18
+	"version":19
 }
