@@ -199,9 +199,9 @@
 		}
 	],
 	"id":"68df50227cb1ae420e99cbcd",
-	"lastModifiedBy":161912,
+	"lastModifiedBy":132116,
 	"lcName":"hatim-test-automation (copy)",
-	"modifiedTime":1759594342334,
+	"modifiedTime":1759594855016,
 	"name":"hatim-test-automation (copy)",
 	"nodes":[
 		{
@@ -237,7 +237,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"RWDad-1",
 			"id":"3t72z",
@@ -599,7 +599,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"RWDad-1",
 			"id":"a1Yvi",
@@ -1241,6 +1241,14 @@
 							],
 							"message":"variable - {{ Y8gUK.outputs.index }}",
 							"onlyOnFailure":false
+						},
+						{
+							"level":"INFO",
+							"maskedFields":[
+								
+							],
+							"message":"hi",
+							"onlyOnFailure":false
 						}
 					]
 				},
@@ -1340,7 +1348,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"QddYX@qdPZB@Y8gUK@RWDad-1@l@y@l",
 			"id":"wjQD8",
@@ -1485,7 +1493,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"qdPZB@Y8gUK@RWDad-1@l@n",
 			"id":"LG9CW",
@@ -2076,5 +2084,5 @@
 		}
 	},
 	"standard":false,
-	"version":2
+	"version":3
 }
