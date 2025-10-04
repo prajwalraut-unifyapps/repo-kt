@@ -46,7 +46,7 @@
 	"id":"68e0d5541d8bca1f3b958a4b",
 	"lastModifiedBy":1234,
 	"lcName":"azure bot get user token (dnd)",
-	"modifiedTime":1759579496834,
+	"modifiedTime":1759579774943,
 	"name":"Azure Bot Get User Token (DND)",
 	"nodes":[
 		{
@@ -111,13 +111,15 @@
 				"includeCredentials":true
 			},
 			"skip":false,
-			"subTitle":"Standard entities by UnifyApps",
+			"subTitle":"Get bot token",
 			"title":"Get connection details",
 			"type":"ACTION"
 		},
 		{
 			"context":{
 				"appName":"code_by_unifyapps",
+				"resourceVersion":970,
+				"resourceName":"code_by_unifyapps_groovy",
 				"type":"APPLICATION"
 			},
 			"debug":false,
@@ -126,9 +128,13 @@
 			"groupId":"_bU1lL-1",
 			"id":"n_R7pAt",
 			"index":3,
+			"inputs":{
+				"compile_static":false,
+				"captureStdOutput":false
+			},
 			"skip":false,
 			"subTitle":"Code by UnifyApps",
-			"title":"Select an action",
+			"title":"Execute Groovy code",
 			"type":"ACTION"
 		},
 		{
@@ -172,8 +178,8 @@
 			},
 			"context":{
 				"appName":"custom_http_endpoint",
-				"resourceVersion":28,
-				"resourceName":"custom_rest_multipart_http_endpoint_execute",
+				"resourceVersion":943,
+				"resourceName":"custom_http_endpoint_execute_multipart",
 				"type":"APPLICATION"
 			},
 			"debug":false,
@@ -183,12 +189,34 @@
 			"id":"n_vlUZP",
 			"index":5,
 			"inputs":{
+				"httpVersion":"HTTP_2",
+				"bodySchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"file"
+					],
+					"properties":{
+						"file":{
+							"type":"string",
+							"format":"file-input",
+							"title":"File"
+						}
+					}
+				},
+				"responseContentType":"application/json",
+				"isAsync":false,
+				"enableProxy":false,
 				"requestTimeoutInSecs":-1,
-				"authType":"CUSTOM"
+				"authType":"CUSTOM",
+				"requestContentType":"application/json",
+				"ignoreTrailingSlashes":false,
+				"connectionType":"DIRECT",
+				"sslVerify":false
 			},
 			"skip":false,
 			"subTitle":"Custom HTTP Endpoint",
-			"title":"Execute REST Multipart request",
+			"title":"Execute REST multipart request",
 			"type":"ACTION"
 		},
 		{
@@ -220,5 +248,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
