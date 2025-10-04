@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759564502609,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_O7grO",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_DOAbF",
+			"type":"next"
+		}
+	],
+	"id":"68e0d2d61d8bca1f3b957ceb",
+	"lastModifiedBy":124029,
+	"lcName":"netsuite vendor trigger",
+	"modifiedTime":1759564502609,
+	"name":"Netsuite vendor trigger",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_O7grO-1",
+			"id":"_O7grO",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_O7grO-1",
+			"id":"_DOAbF",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":124029,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
