@@ -66,7 +66,7 @@
 	"id":"68e18578c05e7f278914dff1",
 	"lastModifiedBy":44096,
 	"lcName":"publish nearest tool ",
-	"modifiedTime":1759615898539,
+	"modifiedTime":1759616190784,
 	"name":"Publish Nearest Tool ",
 	"nodes":[
 		{
@@ -322,8 +322,20 @@
 							"required":[]
 						},
 						"rating":{
-							"type":"number",
-							"title":"Rating"
+							"type":"object",
+							"properties":{
+								"greaterThanEqualToValue":{
+									"type":"number",
+									"title":"Greater Than Equal To Value"
+								},
+								"lessThanEqualToValue":{
+									"type":"number",
+									"title":"Less Than Equal To Value"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Rating",
+							"required":[]
 						},
 						"distance":{
 							"type":"string",
@@ -343,9 +355,9 @@
 						"lat":"{{ n_l93OP.outputs.lat }}",
 						"lon":"{{ n_l93OP.outputs.long }}"
 					},
-					"rating":"{{ n_P5CXD.outputs.rating }}",
 					"distance":"{{ n_P5CXD.outputs.distance }}",
-					"storeName":"{{ n_P5CXD.outputs.storeName }}"
+					"storeName":"{{ n_P5CXD.outputs.storeName }}",
+					"rating":"{{ n_P5CXD.outputs.rating }}"
 				}
 			},
 			"skip":false,
@@ -725,5 +737,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":12
 }
