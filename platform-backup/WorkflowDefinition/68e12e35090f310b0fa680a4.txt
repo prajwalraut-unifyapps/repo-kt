@@ -6,46 +6,286 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_zB3Qc",
+			"fromNodeId":"n_P7c5B",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_NAdrB",
+			"toNodeId":"n_lvXll",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_lvXll",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_8aijN",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_8aijN",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_W1MrG",
 			"type":"next"
 		}
 	],
 	"id":"68e12e35090f310b0fa680a4",
-	"lastModifiedBy":175510,
+	"lastModifiedBy":44096,
 	"lcName":"bright22",
-	"modifiedTime":1759587893851,
+	"modifiedTime":1759608114557,
 	"name":"bright22",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1010,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_zB3Qc-1",
-			"id":"_zB3Qc",
-			"index":0,
+			"id":"n_P7c5B",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"success":{
+							"type":"boolean",
+							"title":"Success"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"distance":{
+							"type":"string",
+							"title":"Distance"
+						},
+						"discount":{
+							"type":"string",
+							"title":"Discount"
+						},
+						"rating":{
+							"type":"number",
+							"title":"Rating"
+						},
+						"location":{
+							"type":"object",
+							"properties":{
+								"lat":{
+									"type":"number",
+									"title":"Lat"
+								},
+								"lon":{
+									"type":"number",
+									"title":"Lon"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Location",
+							"required":[]
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_zB3Qc-1",
-			"id":"_NAdrB",
-			"index":0,
+			"id":"n_lvXll",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"sort":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Sort"
+						},
+						"query":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Query"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"location":{
+							"type":"object",
+							"properties":{
+								"lat":{
+									"type":"number",
+									"title":"Lat"
+								},
+								"lon":{
+									"type":"number",
+									"title":"Lon"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Location",
+							"required":[]
+						},
+						"discount":{
+							"type":"string",
+							"title":"Discount"
+						},
+						"rating":{
+							"type":"number",
+							"title":"Rating"
+						},
+						"distance":{
+							"type":"string",
+							"title":"Distance"
+						},
+						"storeName":{
+							"type":"string",
+							"title":"Store Name"
+						}
+					}
+				},
+				"code":"def queryObject = [\n      \"bool\": [\n         \"must\": [\n            [ \"term\": [ \"properties.storeName\": storeName ] ],\n            [ \"range\": [ \"properties.rating\": [ \"gte\": rating ] ] ]\n         ],\n         \"filter\" : [ \"geo_distance\" : [ \"distance\" : distance, \"location\" : [ \"lat\" : location.lat, \"lon\" : location.lon ] ] ]\n      ]\n   ]\n\ndef sortObject = [\n         \"_geo_distance\": [\n            \"properties.location\": [ \"lat\": location.lat, \"lon\": location.lon ],\n            \"order\": \"asc\",\n            \"unit\": \"km\",\n            \"mode\": \"min\",\n            \"distance_type\": \"arc\"\n         ]\n      ]\n\nreturn [\"query\":queryObject,\"sort\":[sortObject]]",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
 			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"custom_http_endpoint",
+				"resourceVersion":162,
+				"resourceName":"custom_http_endpoint_execute",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_zB3Qc-1",
+			"id":"_8aijN",
+			"index":3,
+			"inputs":{
+				"isAsync":false,
+				"enableProxy":false,
+				"requestTimeoutInSecs":-1,
+				"httpMethod":"POST",
+				"body":{
+					"size":10,
+					"query":"{{ n_lvXll.outputs.result.query }}",
+					"sort":{
+						"source":"{{ n_lvXll.outputs.result.sort }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_lvXll.outputs.result.sort[0] }}"
+					}
+				},
+				"connectionType":"DIRECT",
+				"sslVerify":false,
+				"path":"/geosearch_dda_dnd_1/_search?pretty",
+				"baseUrl":"http://opensearch-app-svc.unifyapps-infra.svc.cluster.local:9200",
+				"httpVersion":"HTTP_2",
+				"bodySchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"size":{
+							"type":"integer",
+							"title":"size"
+						},
+						"query":{
+							"type":"object",
+							"title":"query"
+						},
+						"sort":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"sort"
+						}
+					}
+				},
+				"responseContentType":"application/json",
+				"followRedirects":"NORMAL",
+				"authType":"CUSTOM",
+				"requestContentType":"application/json",
+				"ignoreTrailingSlashes":false,
+				"certificateType":"CERT_STRING"
+			},
+			"skip":false,
+			"subTitle":"Custom HTTP Endpoint",
+			"title":"Execute REST request",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1046,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_zB3Qc-1",
+			"id":"n_W1MrG",
+			"index":4,
+			"inputs":{
+				"result":{
+					"success":true
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":175510,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +299,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":2
 }
