@@ -32,7 +32,7 @@
 	"id":"68e12e42090f310b0fa680b8",
 	"lastModifiedBy":188567,
 	"lcName":"test",
-	"modifiedTime":1759590103770,
+	"modifiedTime":1759590610977,
 	"name":"test",
 	"nodes":[
 		{
@@ -64,7 +64,7 @@
 			"context":{
 				"appName":"gmail",
 				"resourceVersion":3364,
-				"connectionId":"68d4fddd65f2d01016cfb4b0",
+				"connectionId":"6895d98b89df282e8723428f",
 				"resourceName":"gmail_find_email",
 				"type":"APPLICATION"
 			},
@@ -93,7 +93,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_oMFxq-1",
 			"id":"n_bo2QC",
@@ -110,7 +110,7 @@
 						}
 					}
 				},
-				"batchSize":1,
+				"batchSize":200,
 				"objectId":"Contact"
 			},
 			"skip":false,
@@ -163,5 +163,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
