@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759587893851,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_zB3Qc",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_NAdrB",
+			"type":"next"
+		}
+	],
+	"id":"68e12e35090f310b0fa680a4",
+	"lastModifiedBy":175510,
+	"lcName":"bright22",
+	"modifiedTime":1759587893851,
+	"name":"bright22",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_zB3Qc-1",
+			"id":"_zB3Qc",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_zB3Qc-1",
+			"id":"_NAdrB",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175510,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
