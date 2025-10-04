@@ -5,12 +5,12 @@
 	"createdTime":1759610232579,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759614611205,
-		"deployedBy":15430,
-		"deployedDefinitionId":"68e1969344c0a32bec56c0d8",
+		"deployedAt":1759618435490,
+		"deployedBy":44096,
+		"deployedDefinitionId":"68e1a583a916f42a53576392",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":9
+		"version":3,
+		"workflowVersion":24
 	},
 	"edges":[
 		{
@@ -66,7 +66,7 @@
 	"id":"68e18578c05e7f278914dff1",
 	"lastModifiedBy":44096,
 	"lcName":"publish nearest tool ",
-	"modifiedTime":1759618433302,
+	"modifiedTime":1759618664383,
 	"name":"Publish Nearest Tool ",
 	"nodes":[
 		{
@@ -743,5 +743,5 @@
 	"tags":[
 		
 	],
-	"version":24
+	"version":25
 }
