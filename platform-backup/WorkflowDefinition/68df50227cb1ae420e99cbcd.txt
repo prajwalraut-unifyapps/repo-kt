@@ -201,7 +201,7 @@
 	"id":"68df50227cb1ae420e99cbcd",
 	"lastModifiedBy":132116,
 	"lcName":"hatim-test-automation (copy)",
-	"modifiedTime":1759595889254,
+	"modifiedTime":1759596006190,
 	"name":"hatim-test-automation (copy)",
 	"nodes":[
 		{
@@ -964,7 +964,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"qdPZB@Y8gUK@RWDad-1@l@y",
 			"id":"uumAA",
@@ -1248,6 +1248,14 @@
 								
 							],
 							"message":"hi",
+							"onlyOnFailure":false
+						},
+						{
+							"level":"INFO",
+							"maskedFields":[
+								"3t72z.outputs.items[0]"
+							],
+							"message":"list{{ 3t72z.outputs.items }}",
 							"onlyOnFailure":false
 						}
 					]
@@ -2214,5 +2222,5 @@
 		}
 	},
 	"standard":false,
-	"version":10
+	"version":11
 }
