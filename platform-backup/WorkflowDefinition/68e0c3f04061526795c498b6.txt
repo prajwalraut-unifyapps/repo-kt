@@ -81,12 +81,26 @@
 			"skip":false,
 			"toNodeId":"n_yiTD2",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_fnth2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_5DruS",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_yiTD2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_5DruS",
+			"type":"next"
 		}
 	],
 	"id":"68e0c3f04061526795c498b6",
 	"lastModifiedBy":511,
 	"lcName":"looptesting1",
-	"modifiedTime":1759560942055,
+	"modifiedTime":1759560963895,
 	"name":"LoopTesting1",
 	"nodes":[
 		{
@@ -423,6 +437,29 @@
 			"subTitle":"Variable by UnifyApps",
 			"title":"Create variables",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1039,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_ols28-1",
+			"id":"n_5DruS",
+			"index":9,
+			"inputs":{
+				"result":{
+					"Output":"{{ n_HKpwf.outputs.input }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":511,
@@ -442,5 +479,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
