@@ -129,7 +129,7 @@
 	"id":"68e0c9af1d8bca1f3b953b80",
 	"lastModifiedBy":185277,
 	"lcName":"new_foreach_nestedloops_inside_branches_dnd",
-	"modifiedTime":1759562547596,
+	"modifiedTime":1759562755015,
 	"name":"New_Foreach_nestedloops_inside_branches_DND",
 	"nodes":[
 		{
@@ -286,7 +286,7 @@
 			"index":4,
 			"inputs":{
 				"repeatMode":"SINGLE",
-				"listSource":"{{ n_m1k5s.outputs.Input }}",
+				"listSource":"5",
 				"captureIterations":true
 			},
 			"skip":false,
@@ -309,7 +309,7 @@
 			"index":5,
 			"inputs":{
 				"repeatMode":"SINGLE",
-				"listSource":"{{ n_m1k5s.outputs.Input }}",
+				"listSource":"5",
 				"captureIterations":true
 			},
 			"skip":false,
@@ -325,7 +325,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_x1hbA@n_p0gIq@n_j2UnU@_eJDrD-1@1@l@l",
 			"id":"n_hAJwL",
@@ -640,5 +640,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
