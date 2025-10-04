@@ -60,7 +60,7 @@
 	"id":"68e183e9804b2727e75577b0",
 	"lastModifiedBy":44096,
 	"lcName":"dfgfrg",
-	"modifiedTime":1759614020411,
+	"modifiedTime":1759614095663,
 	"name":"dfgfrg",
 	"nodes":[
 		{
@@ -323,7 +323,7 @@
 				"record":{
 					"storeName":"{{ n_y953c.outputs.result.partnerName }}",
 					"rating":"{{ n_y953c.outputs.result.rating }}",
-					"discount":"{{ n_y953c.outputs.result.tit }}",
+					"discount":"{{ n_y953c.outputs.result.title }}",
 					"location":{
 						"lat":"{{ n_y953c.outputs.result.lat }}",
 						"lon":"{{ n_y953c.outputs.result.lon }}"
@@ -376,5 +376,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
