@@ -18,12 +18,19 @@
 			"skip":false,
 			"toNodeId":"n_tv7p7",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_tv7p7",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_a3rqT",
+			"type":"next"
 		}
 	],
 	"id":"68e0e240dae53a293265ba25",
 	"lastModifiedBy":175131,
 	"lcName":"testsalesforce",
-	"modifiedTime":1759568732344,
+	"modifiedTime":1759568766178,
 	"name":"testsalesforce",
 	"nodes":[
 		{
@@ -136,6 +143,21 @@
 			"subTitle":"Salesforce",
 			"title":"Search records using SOQL query (batch)",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_XdVBe-1",
+			"id":"n_a3rqT",
+			"index":4,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":175131,
@@ -155,5 +177,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
