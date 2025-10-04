@@ -17,11 +17,25 @@
 			"fromNodeId":"WczMp",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_ZdSHv",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_ZdSHv",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_UfDGY",
 			"type":"next"
 		},
 		{
 			"fromNodeId":"n_UfDGY",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_YT87V",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_YT87V",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_nob0I",
@@ -123,7 +137,7 @@
 	"id":"682dd194d4c9d85b9f13dda8",
 	"lastModifiedBy":45771,
 	"lcName":"testdiv",
-	"modifiedTime":1759560233820,
+	"modifiedTime":1759560315983,
 	"name":"testDiv",
 	"nodes":[
 		{
@@ -157,6 +171,43 @@
 		},
 		{
 			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"Y4NGt-1",
+			"id":"n_ZdSHv",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"receivers":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Receivers"
+						}
+					}
+				},
+				"code":"return [receivers : [\"45771\"]]",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"notification_by_unifyapps",
 				"resourceVersion":212,
 				"resourceName":"notification_by_unifyapps_send_push_notifications",
@@ -167,14 +218,14 @@
 			"fallbackMode":"STOP",
 			"groupId":"Y4NGt-1",
 			"id":"n_UfDGY",
-			"index":2,
+			"index":3,
 			"inputs":{
 				"data":{
 					"type":"NOTIFICATION_CLICK",
 					"clickAction":"OPEN_PAGE",
 					"pageId":"e_68e0c15240728a556465cdba"
 				},
-				"receivers":"45771",
+				"receivers":"{{ n_ZdSHv.outputs.result.receivers }}",
 				"receiverType":"USER",
 				"description":"helo notification",
 				"applicationId":"test-notification",
@@ -185,6 +236,21 @@
 			"subTitle":"Notification by UnifyApps",
 			"title":"Send Push Notifications",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"Y4NGt-1",
+			"id":"n_YT87V",
+			"index":4,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		},
 		{
 			"additional":{
@@ -199,11 +265,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"Y4NGt-1",
 			"id":"n_nob0I",
-			"index":3,
+			"index":5,
 			"inputs":{
 				"httpVersion":"HTTP_2",
 				"responseContentType":"file",
@@ -217,7 +283,7 @@
 				"sslVerify":false,
 				"certificateType":"CERT_STRING"
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Custom HTTP Endpoint",
 			"title":"Execute REST request",
 			"type":"ACTION"
@@ -234,7 +300,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"Y4NGt-1",
 			"id":"n_XlMlB",
-			"index":4,
+			"index":6,
 			"inputs":{
 				"query":"WITH daily_aggregated AS (\n    SELECT \n        workflowId,\n        DATE(FROM_UNIXTIME(startTime/1000)) AS start_day,\n        AVG(executionTime) AS avg_daily_executionTime  \n    FROM WORKFLOW_EXECUTION\n    WHERE startTime > 1752863400000\n    AND startTime < 1753036200000\n    GROUP BY workflowId, DATE(FROM_UNIXTIME(startTime/1000))\n),\ndaily_differences AS (\n    SELECT \n        workflowId,\n        start_day,\n        avg_daily_executionTime,\n        LAG(avg_daily_executionTime) OVER (\n            PARTITION BY workflowId \n            ORDER BY start_day ASC \n        ) AS prev_day_executionTime,\n        avg_daily_executionTime - LAG(avg_daily_executionTime) OVER (\n            PARTITION BY workflowId \n            ORDER BY start_day ASC\n        ) AS daily_diff\n    FROM daily_aggregated\n)\nSELECT \n    workflowId,\n    AVG(daily_diff) AS avg_executionTime_difference,\n    COUNT(daily_diff) AS days_compared  \nFROM daily_differences\nWHERE daily_diff IS NOT NULL  \nGROUP BY workflowId\nORDER BY workflowId;\n",
 				"group":"ENTITY_REPORTING"
@@ -256,7 +322,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"Y4NGt-1",
 			"id":"_Jk6nx",
-			"index":5,
+			"index":7,
 			"inputs":{
 				"query":"WITH daily_aggregated AS (\n    SELECT \n        workflowId,\n        DATE(FROM_UNIXTIME(startTime/1000)) AS start_day,\n        AVG(executionTime) AS avg_daily_executionTime,\n        COUNT(*) as executions_per_day\n    FROM WORKFLOW_EXECUTION\n    WHERE startTime > 1752863401001\n    AND startTime < 1753036201000\n    AND workflowId = '687b62da53822c3037cb7a48' \n    GROUP BY workflowId, DATE(FROM_UNIXTIME(startTime/1000))\n)\nSELECT \n    workflowId,\n    start_day,\n    avg_daily_executionTime,\n    executions_per_day,\n    LAG(avg_daily_executionTime) OVER (ORDER BY start_day ASC) as prev_day_avg,\n    avg_daily_executionTime - LAG(avg_daily_executionTime) OVER (ORDER BY start_day ASC) as daily_diff\nFROM daily_aggregated\nORDER BY start_day;\n",
 				"group":"ENTITY_REPORTING"
@@ -278,7 +344,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"Y4NGt-1",
 			"id":"n_S4XXU",
-			"index":6,
+			"index":8,
 			"inputs":{
 				"maxRowsPerFile":1048576,
 				"object_type":"test_divyam",
@@ -312,7 +378,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"Y4NGt-1",
 			"id":"n_ifRgZ",
-			"index":7,
+			"index":9,
 			"inputs":{
 				"startFromRow":1,
 				"file":"{{ n_S4XXU.outputs.file }}",
@@ -347,7 +413,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_ifRgZ@Y4NGt-1@l",
 			"id":"n_KZC0z",
-			"index":8,
+			"index":10,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"test_divyam",
@@ -376,7 +442,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_ifRgZ@Y4NGt-1@l",
 			"id":"n_lghaA",
-			"index":9,
+			"index":11,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -425,7 +491,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"Y4NGt-1",
 			"id":"n_YQxA6",
-			"index":10,
+			"index":12,
 			"inputs":{
 				"fileDetails":"{{ n_S4XXU.outputs.file }}",
 				"delimiter":","
@@ -447,7 +513,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"Y4NGt-1",
 			"id":"n_YSkLU",
-			"index":11,
+			"index":13,
 			"inputs":{
 				"partialUpdate":false,
 				"sourceType":"STORAGE_BY_UNIFYAPPS",
@@ -482,7 +548,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"Y4NGt-1",
 			"id":"n_T0ybZ",
-			"index":12,
+			"index":14,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -517,7 +583,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"Y4NGt-1",
 			"id":"n_UwKcD",
-			"index":13,
+			"index":15,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"dasdasdasdasdasdafds",
@@ -544,7 +610,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"Y4NGt-1",
 			"id":"n_XmNtP",
-			"index":14,
+			"index":16,
 			"inputs":{
 				"jsonString":"{{ n_T0ybZ.outputs.result.result }}"
 			},
@@ -563,7 +629,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"Y4NGt-1",
 			"id":"n_lvhUI",
-			"index":15,
+			"index":17,
 			"skip":false,
 			"subTitle":"Callable",
 			"title":"Select an action",
@@ -583,5 +649,5 @@
 	"tags":[
 		
 	],
-	"version":23
+	"version":24
 }
