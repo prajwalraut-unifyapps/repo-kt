@@ -134,7 +134,7 @@
 	"id":"68e0fc9d407fc74fb8ec44e6",
 	"lastModifiedBy":23949,
 	"lcName":"multi tenancy | move all assets",
-	"modifiedTime":1759580470246,
+	"modifiedTime":1759580672867,
 	"name":"Multi Tenancy | Move All assets",
 	"nodes":[
 		{
@@ -200,31 +200,31 @@
 					{
 						"id":"1",
 						"inputs":{
-							"name":"Branch 1"
+							"name":"Applications "
 						}
 					},
 					{
 						"id":"2",
 						"inputs":{
-							"name":"Branch 2"
+							"name":"Automations"
 						}
 					},
 					{
 						"id":"3",
 						"inputs":{
-							"name":"Branch 3"
+							"name":"Agents"
 						}
 					},
 					{
 						"id":"4",
 						"inputs":{
-							"name":"Branch 4"
+							"name":"API, Groups, Clients, Policy"
 						}
 					},
 					{
 						"id":"5",
 						"inputs":{
-							"name":"Branch 5"
+							"name":"Objects"
 						}
 					},
 					{
@@ -251,7 +251,7 @@
 			"id":"n_6tLoP@1",
 			"index":3,
 			"inputs":{
-				"name":"Branch 1"
+				"name":"Applications "
 			},
 			"skip":false,
 			"title":"",
@@ -296,7 +296,7 @@
 			"id":"n_6tLoP@2",
 			"index":5,
 			"inputs":{
-				"name":"Branch 2"
+				"name":"Automations"
 			},
 			"skip":false,
 			"title":"",
@@ -319,10 +319,11 @@
 				"automationId":"68e1088c70c2f233effd889c",
 				"runtimeConnections":{},
 				"synchronous":true,
-				"version":"-1"
+				"version":"-1",
+				"parameters":{}
 			},
 			"skip":false,
-			"subTitle":"Callable",
+			"subTitle":"Automations",
 			"title":"Call automation",
 			"type":"CALL_WORKFLOW"
 		},
@@ -340,7 +341,7 @@
 			"id":"n_6tLoP@3",
 			"index":7,
 			"inputs":{
-				"name":"Branch 3"
+				"name":"Agents"
 			},
 			"skip":false,
 			"title":"",
@@ -367,7 +368,7 @@
 				"parameters":{}
 			},
 			"skip":false,
-			"subTitle":"Callable",
+			"subTitle":"Agents",
 			"title":"Call automation",
 			"type":"CALL_WORKFLOW"
 		},
@@ -385,7 +386,7 @@
 			"id":"n_6tLoP@4",
 			"index":9,
 			"inputs":{
-				"name":"Branch 4"
+				"name":"API, Groups, Clients, Policy"
 			},
 			"skip":false,
 			"title":"",
@@ -412,7 +413,7 @@
 				"parameters":{}
 			},
 			"skip":false,
-			"subTitle":"Callable",
+			"subTitle":"Api, Api Group, Policy, Client",
 			"title":"Call automation",
 			"type":"CALL_WORKFLOW"
 		},
@@ -430,7 +431,7 @@
 			"id":"n_6tLoP@5",
 			"index":11,
 			"inputs":{
-				"name":"Branch 5"
+				"name":"Objects"
 			},
 			"skip":false,
 			"title":"",
@@ -457,7 +458,7 @@
 				"parameters":{}
 			},
 			"skip":false,
-			"subTitle":"Callable",
+			"subTitle":"Objects",
 			"title":"Call automation",
 			"type":"CALL_WORKFLOW"
 		},
@@ -502,5 +503,5 @@
 	"tags":[
 		
 	],
-	"version":10
+	"version":11
 }
