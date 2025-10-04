@@ -1,51 +1,147 @@
 {
 	"appsUsed":[
-		
+		"salesforce"
 	],
 	"createdTime":1759568448696,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_XdVBe",
+			"fromNodeId":"n_Vs9TR",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_8TVEn",
+			"toNodeId":"n_MHZYy",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_MHZYy",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_tv7p7",
 			"type":"next"
 		}
 	],
 	"id":"68e0e240dae53a293265ba25",
 	"lastModifiedBy":175131,
 	"lcName":"testsalesforce",
-	"modifiedTime":1759568448696,
+	"modifiedTime":1759568732344,
 	"name":"testsalesforce",
 	"nodes":[
 		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":836,
+				"resourceName":"schedule_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_XdVBe-1",
-			"id":"_XdVBe",
-			"index":0,
+			"id":"n_Vs9TR",
+			"index":1,
+			"inputs":{
+				"cron":"INTERVAL",
+				"sequential":false,
+				"interval":15,
+				"frequency":"MINUTES"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Schedule",
+			"title":"New recurring event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"SCHEDULED"
 			},
 			"type":"START"
 		},
 		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.response_schema.ua:modal.ua:nest_under"
+				]
+			},
+			"context":{
+				"appName":"salesforce",
+				"resourceVersion":6698,
+				"connectionId":"68de87b9953b7316d9d81125",
+				"resourceName":"salesforce_search_records_using_SOQL_query_batch",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_XdVBe-1",
-			"id":"_8TVEn",
-			"index":0,
+			"id":"n_MHZYy",
+			"index":2,
+			"inputs":{
+				"objectSourceResourceName":"salesforce_execute_soql_metadata",
+				"query":"Select Id, Name from Account",
+				"response_schema":{
+					"ua:modal":{
+						"field_type":"STRING"
+					},
+					"properties":{
+						"Id":{
+							"type":"string",
+							"title":"Id"
+						},
+						"Name":{
+							"type":"string",
+							"title":"Name"
+						}
+					},
+					"required":[]
+				},
+				"limit":200
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Salesforce",
+			"title":"Search records using SOQL query (batch)",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"salesforce",
+				"resourceVersion":6698,
+				"connectionId":"68de87b9953b7316d9d81125",
+				"resourceName":"salesforce_search_records_using_SOQL_query_batch",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_XdVBe-1",
+			"id":"n_tv7p7",
+			"index":3,
+			"inputs":{
+				"objectSourceResourceName":"salesforce_execute_soql_metadata",
+				"query":"Select Name, Id from Opportunity",
+				"response_schema":{
+					"ua:modal":{
+						"field_type":"STRING"
+					},
+					"properties":{
+						"Name":{
+							"type":"string",
+							"title":"Name"
+						},
+						"Id":{
+							"type":"string",
+							"title":"Id"
+						}
+					},
+					"required":[]
+				},
+				"limit":200
+			},
+			"skip":false,
+			"subTitle":"Salesforce",
+			"title":"Search records using SOQL query (batch)",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":175131,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +155,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
