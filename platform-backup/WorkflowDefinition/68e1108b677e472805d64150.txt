@@ -88,7 +88,7 @@
 	"id":"68e1108b677e472805d64150",
 	"lastModifiedBy":23949,
 	"lcName":"multi tenancy | move all objects",
-	"modifiedTime":1759580299627,
+	"modifiedTime":1759580431359,
 	"name":"Multi Tenancy | Move All Objects",
 	"nodes":[
 		{
@@ -191,7 +191,6 @@
 				"limit":1000
 			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -226,7 +225,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_tT02q-1",
 			"id":"n_uIfRr",
@@ -468,7 +467,6 @@
 				"ua:list_type":"OBJECT"
 			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"type":"object",
@@ -545,7 +543,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_pVMhd@_tT02q-1@l",
 			"id":"n_YrS93",
@@ -557,7 +555,7 @@
 						"aggregationFunction":"GROUP"
 					}
 				],
-				"entityType":"APIEndpoint",
+				"entityType":"EntityType",
 				"page":{
 					"offset":"{{ n_pNNqv.outputs.offset }}",
 					"limit":"{{ n_pNNqv.outputs.limit }}"
@@ -582,7 +580,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_pVMhd@_tT02q-1@l",
 			"id":"n_ZLnSe",
@@ -595,7 +593,7 @@
 				"parametersList":{
 					"ua:type":"mappedArray",
 					"items":{
-						"assetClass":"API_ENDPOINT",
+						"assetClass":"ENTITY_TYPE",
 						"application_id":"{{ n_YrS93.outputs.objects[0].columns.id }}"
 					},
 					"source":"{{ n_YrS93.outputs.objects }}"
@@ -747,5 +745,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
