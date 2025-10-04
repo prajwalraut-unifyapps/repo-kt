@@ -5,12 +5,12 @@
 	"createdTime":1759471287885,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759500279903,
+		"deployedAt":1759555666082,
 		"deployedBy":44103,
-		"deployedDefinitionId":"68dfd7f7f5d9ee32ff9a36ba",
+		"deployedDefinitionId":"68e0b051c8a33e0d26d03d03",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":1
+		"version":3,
+		"workflowVersion":4
 	},
 	"edges":[
 		{
@@ -43,9 +43,9 @@
 		}
 	],
 	"id":"68df66b77cb1ae420e9a6c7f",
-	"lastModifiedBy":44103,
+	"lastModifiedBy":46209,
 	"lcName":"slot dynamic mapping",
-	"modifiedTime":1759555664182,
+	"modifiedTime":1759560695929,
 	"name":"Slot Dynamic mapping",
 	"nodes":[
 		{
@@ -111,7 +111,7 @@
 						}
 					}
 				},
-				"code":"def slotList = []\n\nslotList << [\n    description : \"name1\",\n    isAttachment: false,\n    name        : \"name1\",\n    responses   : [\n        [\n            choices: [\n                [id: \"1\", title: \"Vimal\"],\n                [id: \"2\", title: \"v2\"]\n            ],\n            question: \"what is your name1?\"\n        ]\n    ],\n    title       : \"Name\",\n    type        : \"string\"\n]\n\nslotList << [\n    description : \"gendr1\",\n    isAttachment: false,\n    name        : \"gender1\",\n    responses   : [\n        [\n            choices: [\n                [id: \"male\", title: \"Male\"],\n                [id: \"female\", title: \"Female\"]\n            ],\n            question: \"What is your gender1?\"\n        ]\n    ],\n    title       : \"Gender\",\n    type        : \"string\"\n]\n\nslotList << [\n    description : \"age1\",\n    isAttachment: false,\n    name        : \"age1\",\n    responses   : [\n        [\n            choices: [\n                [id: \"1\", title: \"10\"],\n                [id: \"2\", title: \"20\"]\n            ],\n            question: \"what is your age1\"\n        ]\n    ],\n    title       : \"Age\",\n    type        : \"integer\"\n]\n\nreturn [slotList: slotList]\n",
+				"code":"def slotList = []\n\nslotList << [\n    \"description\" : \"name1\",\n    \"isAttachment\": false,\n    \"name\"        : \"name1\",\n    \"responses\"   : [\n        [\n            \"choices\": [\n                [\"id\": \"1\", \"title\": \"Vimal\"],\n                [\"id\": \"2\", \"title\": \"v2\"]\n            ],\n            \"question\": \"what is your name1?\"\n        ]\n    ],\n    \"title\"       : \"Name\",\n    \"type\"        : \"string\"\n]\n\nslotList << [\n    \"description\" : \"gendr1\",\n    \"isAttachment\": false,\n    \"name\"        : \"gender1\",\n    \"responses\"   : [\n        [\n            \"choices\": [\n                [\"id\": \"male\", \"title\": \"Male\"],\n                [\"id\": \"female\", \"title\": \"Female\"]\n            ],\n            \"question\": \"What is your gender1?\"\n        ]\n    ],\n    \"title\"       : \"Gender\",\n    \"type\"        : \"string\"\n]\n\nslotList << [\n    \"description\" : \"age1\",\n    \"isAttachment\": false,\n    \"name\"        : \"age1\",\n    \"responses\"   : [\n        [\n            \"choices\": [\n                [\"id\": \"1\", \"title\": \"10\"],\n                [id: \"2\", \"title\": \"20\"]\n            ],\n            \"question\": \"what is your age1\"\n        ]\n    ],\n    \"title\"       : \"Age\",\n    \"type\"        : \"integer\"\n]\n\nreturn [\"slotList\": slotList]\n",
 				"compile_static":false,
 				"captureStdOutput":false
 			},
@@ -133,7 +133,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_LL6zY-1",
 			"id":"n_fsDVy",
@@ -155,7 +155,7 @@
 						}
 					}
 				},
-				"code":"return [slotList : slotList]",
+				"code":"return [\"slotList\" : slotList]",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
@@ -316,5 +316,5 @@
 		}
 	},
 	"standard":false,
-	"version":4
+	"version":5
 }
