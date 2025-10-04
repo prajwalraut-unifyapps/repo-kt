@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759585969637,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759585969719,
+		"deployedBy":175325,
+		"deployedDefinitionId":"68e126b15aba4e4a38932652",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
 	"edges":[
 		{
 			"fromNodeId":"7pKsG",
@@ -16,7 +24,7 @@
 	"id":"68e1268dd5d88d4123c6fe4d",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa23kiogipahpjk",
-	"modifiedTime":1759585969637,
+	"modifiedTime":1759586020849,
 	"name":"changeSetQA23KIoGIpaHPJK",
 	"nodes":[
 		{
@@ -113,5 +121,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
