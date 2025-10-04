@@ -32,7 +32,7 @@
 	"id":"68e12e42090f310b0fa680b8",
 	"lastModifiedBy":188567,
 	"lcName":"test",
-	"modifiedTime":1759588496535,
+	"modifiedTime":1759590005871,
 	"name":"test",
 	"nodes":[
 		{
@@ -103,7 +103,7 @@
 				"objectSourceResourceName":"salesforce_fetch_object",
 				"record":{
 					"objects":{
-						"source":"Unify Contact",
+						"source":"Unify_Contact",
 						"ua:type":"mappedArray",
 						"items":{
 							"LastName":"Unify"
@@ -163,5 +163,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
