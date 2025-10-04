@@ -1,20 +1,27 @@
 {
 	"appsUsed":[
-		
+		"storage_by_unifyapps"
 	],
 	"createdTime":1759419982346,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759446519953,
+		"deployedAt":1759448489378,
 		"deployedBy":59995,
-		"deployedDefinitionId":"68df05f7c1d0495424eb14e4",
+		"deployedDefinitionId":"68df0d97d6d230107d4971af",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":3
+		"version":2,
+		"workflowVersion":4
 	},
 	"edges":[
 		{
 			"fromNodeId":"_EOY36",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_96ZBq",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_96ZBq",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_6a9km",
@@ -31,6 +38,57 @@
 			"fromNodeId":"n_d5lsD",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"_DKDTU",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_DKDTU",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_PaFnz",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_PaFnz",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_zFyJ8",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"_zFyJ8",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_ANDa3",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_PaFnz",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_izaqB",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_izaqB",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Wv2bW",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_ANDa3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_QL5ZP",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_Wv2bW",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"_QL5ZP",
 			"type":"next"
 		}
@@ -38,7 +96,7 @@
 	"id":"68de9e4e0e9d387c5aab02d2",
 	"lastModifiedBy":59995,
 	"lcName":"partition size",
-	"modifiedTime":1759448450890,
+	"modifiedTime":1759608785945,
 	"name":"partition size",
 	"nodes":[
 		{
@@ -47,7 +105,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"_EOY36",
@@ -114,7 +172,10 @@
 					"additionalProperties":false,
 					"required":[
 						"customerId",
-						"minimumStorageSizeGB"
+						"minimumStorageSizeGB",
+						"rootAutomationId",
+						"rootExecutionId",
+						"executionTime"
 					],
 					"properties":{
 						"customerId":{
@@ -124,6 +185,18 @@
 						"minimumStorageSizeGB":{
 							"type":"number",
 							"title":"Minimum Storage Size GB"
+						},
+						"rootAutomationId":{
+							"type":"string",
+							"title":"Root Automation Id"
+						},
+						"rootExecutionId":{
+							"type":"string",
+							"title":"Root Execution Id"
+						},
+						"executionTime":{
+							"type":"number",
+							"title":"Execution Time"
 						}
 					}
 				}
@@ -138,17 +211,93 @@
 		},
 		{
 			"context":{
+				"appName":"callables",
+				"resourceVersion":3,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
+			"id":"n_96ZBq",
+			"index":2,
+			"inputs":{
+				"automationId":"68b932d26607f33c4d7f0988",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{}
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"global":false
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":true,
+					"timeToLive":"3600",
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"STOP",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
 				"appName":"custom_http_endpoint",
 				"resourceVersion":871,
 				"resourceName":"custom_http_endpoint_execute",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"n_6a9km",
-			"index":2,
+			"index":3,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -223,6 +372,7 @@
 					}
 				],
 				"responseContentType":"application/json",
+				"followRedirects":"NORMAL",
 				"authType":"CUSTOM",
 				"requestContentType":"application/json",
 				"ignoreTrailingSlashes":false,
@@ -241,11 +391,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"n_d5lsD",
-			"index":3,
+			"index":4,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -341,17 +491,339 @@
 			"type":"ACTION"
 		},
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
+			"id":"_DKDTU",
+			"index":5,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"message",
+						"inputs",
+						"outputs"
+					],
+					"properties":{
+						"message":{
+							"type":"string",
+							"title":"Message"
+						},
+						"inputs":{
+							"type":"object",
+							"properties":{
+								"minimumStorageSize":{
+									"type":"integer",
+									"title":"Minimum Storage Size"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Inputs",
+							"required":[
+								"minimumStorageSize"
+							]
+						},
+						"outputs":{
+							"type":"object",
+							"properties":{
+								"criticalSizeRoutineLoads":{
+									"type":"array",
+									"items":{
+										"type":"object",
+										"properties":{},
+										"additionalProperties":false
+									},
+									"title":"Critical Size Routine Loads"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Outputs",
+							"required":[
+								"criticalSizeRoutineLoads"
+							]
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"criticalSizeRoutineLoads",
+						"minimumStorageSize"
+					],
+					"properties":{
+						"criticalSizeRoutineLoads":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"dbName":{
+										"type":"string",
+										"title":"Db Name"
+									},
+									"tableName":{
+										"type":"string",
+										"title":"Table Name"
+									},
+									"partitions":{
+										"type":"array",
+										"items":{
+											"type":"object",
+											"properties":{},
+											"additionalProperties":false
+										},
+										"title":"Partitions"
+									}
+								},
+								"additionalProperties":false,
+								"required":[
+									"dbName",
+									"tableName",
+									"partitions"
+								]
+							},
+							"title":"Critical Size Routine Loads"
+						},
+						"minimumStorageSize":{
+							"type":"integer",
+							"title":"Minimum Storage Size"
+						}
+					}
+				},
+				"code":"if (!(binding.hasVariable(\"criticalSizeRoutineLoads\") && criticalSizeRoutineLoads)) {\n  return [message: \"\", inputs: [minimumStorageSize: minimumStorageSize], outputs: [criticalSizeRoutineLoads: []]]\n}\ndef messages = []\n\nif (criticalSizeRoutineLoads.size() > 0) {\n  for (item in criticalSizeRoutineLoads) {\n    def storageMessage = [\"[ \"]\n    for (partitions in item.partitions) {\n      storageMessage << \" [ PartitionName = \" + partitions.partitionName + \", PartitionSize = \" + partitions.partitionSize + \" ] , \"\n    }\n    storageMessage << \" ]\"\n    storageMessage = storageMessage.join()\n    messages << \"• Database = \" + item.dbName + \", tableName =  \" + item.tableName + \", partitions = \" + storageMessage + \"\\n\"\n  }\n}\nreturn [outputs: [criticalSizeRoutineLoads: criticalSizeRoutineLoads], inputs: [\"minimumStorageSize\": minimumStorageSize], message: messages.join()]",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"minimumStorageSize":"{{ _EOY36.outputs.minimumStorageSizeGB }}",
+					"criticalSizeRoutineLoads":{
+						"ua:type":"mappedArray",
+						"items":{
+							"partitions":{
+								"ua:type":"mappedArray",
+								"source":"{{ n_d5lsD.outputs.result.alertPartitions[0].partitions }}",
+								"items":"{{ n_d5lsD.outputs.result.alertPartitions[0].partitions[0] }}"
+							},
+							"dbName":"{{ n_d5lsD.outputs.result.alertPartitions[0].DB_NAME }}",
+							"tableName":"{{ n_d5lsD.outputs.result.alertPartitions[0].TABLE_NAME }}"
+						},
+						"source":"{{ n_d5lsD.outputs.result.alertPartitions }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Data size ouptut",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":767,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
+			"id":"_PaFnz",
+			"index":6,
+			"inputs":{
+				"filters":[
+					{
+						"property":"=LEN({{ _DKDTU.outputs.result.outputs.criticalSizeRoutineLoads }})",
+						"filter":{
+							"operator":"GT",
+							"value":"0"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.record.steps.inputs",
+					"root.record.steps.outputs"
+				]
+			},
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":3226,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_PaFnz@n_nST1M@n_WOcYr@_jMFmS-1@l@3@y",
+			"id":"_zFyJ8",
+			"index":7,
+			"inputs":{
+				"writeThroughSessionVariables":false,
+				"object_type":"infra_alert_steps",
+				"skipIfBlank":false,
+				"record":{
+					"alertType":"starrocks_table_health",
+					"rootAutomationId":"{{ _EOY36.outputs.rootAutomationId }}",
+					"rootExecutionId":"{{ _EOY36.outputs.rootExecutionId }}",
+					"executedAt":"{{ _EOY36.outputs.executionTime }}",
+					"alertCategory":"starrocks",
+					"alertSubType":"routine_load_parition_sizes",
+					"stepsOrder":7,
+					"summary":"Check whether the partition of a routine load has a small data size",
+					"steps":{
+						"inputs":"{{ _DKDTU.outputs.result.inputs }}",
+						"outputs":"{{ _DKDTU.outputs.result.outputs }}"
+					},
+					"status":"CRITICAL",
+					"stepDescription":"Check whether each partition of a routine load has < {{ _EOY36.outputs.minimumStorageSizeGB }}GB storage, which is too small",
+					"resolved":false
+				}
+			},
+			"skip":false,
+			"subTitle":"Create Alert Step",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":3,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_PaFnz@n_nST1M@n_WOcYr@_jMFmS-1@l@3@y",
+			"id":"_ANDa3",
+			"index":8,
+			"inputs":{
+				"automationId":"68721bd4feea003f6a9cb688",
+				"runtimeConnections":{},
+				"synchronous":false,
+				"version":"-1",
+				"parameters":{
+					"env":"{{ n_96ZBq.outputs.env }}",
+					"alertCategory":"starrocks",
+					"alertType":"starrocks_table_health",
+					"alertTitle":"🚨 Small Data Size in Routine Load Partitions (<{{ _EOY36.outputs.minimumStorageSizeGB }}GB)",
+					"alertDescription":"For customer {{ _EOY36.outputs.customerId }}, the following routine load partitions have data size < {{ _EOY36.outputs.minimumStorageSizeGB }}GB:\n{{ _DKDTU.outputs.result.message }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.record.steps.inputs",
+					"root.record.steps.outputs"
+				]
+			},
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":3226,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_PaFnz@n_nST1M@n_WOcYr@_jMFmS-1@l@3@n",
+			"id":"_izaqB",
+			"index":9,
+			"inputs":{
+				"writeThroughSessionVariables":false,
+				"object_type":"infra_alert_steps",
+				"skipIfBlank":false,
+				"record":{
+					"alertType":"starrocks_table_health",
+					"rootAutomationId":"{{ _EOY36.outputs.rootAutomationId }}",
+					"rootExecutionId":"{{ _EOY36.outputs.rootExecutionId }}",
+					"executedAt":"{{ _EOY36.outputs.executionTime }}",
+					"alertCategory":"starrocks",
+					"alertSubType":"routine_load_parition_sizes",
+					"stepsOrder":7,
+					"summary":"Check whether the partition of a routine load has a small data size",
+					"steps":{
+						"inputs":"{{ _DKDTU.outputs.result.inputs }}",
+						"outputs":"{{ _DKDTU.outputs.result.outputs }}"
+					},
+					"status":"OK",
+					"stepDescription":"Check whether each partition of a routine load has < {{ _EOY36.outputs.minimumStorageSizeGB }}GB storage, which is too small",
+					"resolved":true
+				}
+			},
+			"skip":false,
+			"subTitle":"Create Alert Step",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":3,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_PaFnz@n_nST1M@n_WOcYr@_jMFmS-1@l@3@n",
+			"id":"_Wv2bW",
+			"index":10,
+			"inputs":{
+				"automationId":"68721bd4feea003f6a9cb688",
+				"runtimeConnections":{},
+				"synchronous":false,
+				"version":"-1",
+				"parameters":{
+					"env":"{{ n_96ZBq.outputs.env }}",
+					"alertCategory":"starrocks",
+					"alertType":"starrocks_table_health",
+					"alertTitle":"🚨 Small Data Size in Routine Load Partitions (<{{ _EOY36.outputs.minimumStorageSizeGB }}GB)",
+					"alertDescription":"For customer {{ _EOY36.outputs.customerId }}, the following routine load partitions have data size < {{ _EOY36.outputs.minimumStorageSizeGB }}GB:\n{{ _DKDTU.outputs.result.message }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
 			"context":{
 				"appName":"callables",
 				"resourceName":"callables_return_to_automation",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"_QL5ZP",
-			"index":4,
+			"index":11,
 			"inputs":{
 				"result":{
 					"slackMessage":"{{ n_d5lsD.outputs.result.slackMessage }}",
@@ -396,5 +868,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
