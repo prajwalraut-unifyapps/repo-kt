@@ -201,7 +201,7 @@
 	"id":"68df50227cb1ae420e99cbcd",
 	"lastModifiedBy":132116,
 	"lcName":"hatim-test-automation (copy)",
-	"modifiedTime":1759594855016,
+	"modifiedTime":1759595022420,
 	"name":"hatim-test-automation (copy)",
 	"nodes":[
 		{
@@ -964,7 +964,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"qdPZB@Y8gUK@RWDad-1@l@y",
 			"id":"uumAA",
@@ -1348,7 +1348,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"QddYX@qdPZB@Y8gUK@RWDad-1@l@y@l",
 			"id":"wjQD8",
@@ -1389,9 +1389,16 @@
 					]
 				},
 				"logConfig":{
-					"enabled":false,
+					"enabled":true,
 					"logPolicies":[
-						
+						{
+							"level":"INFO",
+							"maskedFields":[
+								
+							],
+							"message":"i={{ QddYX.outputs.index }}",
+							"onlyOnFailure":false
+						}
 					]
 				},
 				"rateLimitConfig":{
@@ -1409,6 +1416,9 @@
 					"metricConfigs":[
 						
 					]
+				},
+				"timeoutConfig":{
+					"enabled":false
 				}
 			},
 			"skip":false,
@@ -2084,5 +2094,5 @@
 		}
 	},
 	"standard":false,
-	"version":3
+	"version":4
 }
