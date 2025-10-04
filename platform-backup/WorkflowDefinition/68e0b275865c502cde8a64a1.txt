@@ -38,7 +38,7 @@
 	"id":"68e0b275865c502cde8a64a1",
 	"lastModifiedBy":44109,
 	"lcName":"test",
-	"modifiedTime":1759556973722,
+	"modifiedTime":1759557133969,
 	"name":"test",
 	"nodes":[
 		{
@@ -81,7 +81,7 @@
 			"index":2,
 			"inputs":{
 				"instructions":"tell me about open ai",
-				"modelId":"e_686654b81257d219bd7958d3"
+				"modelId":"e_68b9f1ec63a0db49a0245853"
 			},
 			"skip":false,
 			"subTitle":"Browser Use by UnifyApps",
@@ -142,5 +142,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
