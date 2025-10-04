@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759551474968,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_X6Pe2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_EOiyp",
+			"type":"next"
+		}
+	],
+	"id":"68e09ff2568e7817abcf40e7",
+	"lastModifiedBy":45012,
+	"lcName":"fdsa",
+	"modifiedTime":1759551474968,
+	"name":"fdsa",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_X6Pe2-1",
+			"id":"_X6Pe2",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_X6Pe2-1",
+			"id":"_EOiyp",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":45012,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
