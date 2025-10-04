@@ -88,7 +88,7 @@
 	"id":"68e1088c70c2f233effd889c",
 	"lastModifiedBy":23949,
 	"lcName":"multi tenancy | move all automations",
-	"modifiedTime":1759578535291,
+	"modifiedTime":1759578834935,
 	"name":"Multi Tenancy | Move All Automations",
 	"nodes":[
 		{
@@ -710,7 +710,19 @@
 			"groupId":"_tT02q-1",
 			"id":"n_1rXuq",
 			"index":10,
-			"inputs":{},
+			"inputs":{
+				"result":{
+					"automationAssets":{
+						"source":"{{ n_uIfRr.outputs.items }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"assetId":"{{ n_uIfRr.outputs.items[0].assetId }}",
+							"assetClass":"{{ n_uIfRr.outputs.items[0].assetClass }}",
+							"assetVersion":"{{ n_uIfRr.outputs.items[0].assetVersion }}"
+						}
+					}
+				}
+			},
 			"skip":false,
 			"subTitle":"Callable",
 			"title":"Respond to automation",
@@ -734,5 +746,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
