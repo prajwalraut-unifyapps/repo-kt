@@ -5,12 +5,12 @@
 	"createdTime":1741599466974,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759406923218,
-		"deployedBy":1,
-		"deployedDefinitionId":"68de6b4bed7fcc6978214357",
+		"deployedAt":1759574655119,
+		"deployedBy":44109,
+		"deployedDefinitionId":"68e0fa7e407fc74fb8ec357c",
 		"status":"DEPLOYED",
-		"version":37,
-		"workflowVersion":58
+		"version":38,
+		"workflowVersion":59
 	},
 	"edges":[
 		{
@@ -158,7 +158,7 @@
 	"id":"67ceb2ea00f79c0e850dab35",
 	"lastModifiedBy":44109,
 	"lcName":"browser use by unifyapps",
-	"modifiedTime":1759574653370,
+	"modifiedTime":1759575195836,
 	"name":"Browser use by UnifyApps",
 	"nodes":[
 		{
@@ -273,7 +273,7 @@
 			"index":3,
 			"inputs":{
 				"instructions":"{{ B0HXN.outputs.instructions }}",
-				"modelId":"e_agent_model_gpt_5"
+				"modelId":"e_68e0d0ee1862bc5fe3bd49a8"
 			},
 			"skip":false,
 			"subTitle":"Browser Use by UnifyApps",
@@ -730,5 +730,5 @@
 	"tags":[
 		
 	],
-	"version":59
+	"version":60
 }
