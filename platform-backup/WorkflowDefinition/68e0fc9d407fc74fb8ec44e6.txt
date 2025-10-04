@@ -16,7 +16,7 @@
 	"id":"68e0fc9d407fc74fb8ec44e6",
 	"lastModifiedBy":23949,
 	"lcName":"multi tenancy | move all assets",
-	"modifiedTime":1759577828236,
+	"modifiedTime":1759577847073,
 	"name":"Multi Tenancy | Move All assets",
 	"nodes":[
 		{
@@ -58,7 +58,7 @@
 				"parameters":{}
 			},
 			"skip":false,
-			"subTitle":"Application, packages and modules with dependencies",
+			"subTitle":"Application, Packages and Modules with dependencies",
 			"title":"Call automation",
 			"type":"CALL_WORKFLOW"
 		}
@@ -80,5 +80,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
