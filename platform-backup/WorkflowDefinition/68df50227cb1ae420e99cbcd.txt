@@ -201,7 +201,7 @@
 	"id":"68df50227cb1ae420e99cbcd",
 	"lastModifiedBy":132116,
 	"lcName":"hatim-test-automation (copy)",
-	"modifiedTime":1759596006190,
+	"modifiedTime":1759596060389,
 	"name":"hatim-test-automation (copy)",
 	"nodes":[
 		{
@@ -1511,7 +1511,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"qdPZB@Y8gUK@RWDad-1@l@n",
 			"id":"LG9CW",
@@ -1792,7 +1792,7 @@
 						{
 							"level":"INFO",
 							"maskedFields":[
-								
+								"3t72z.outputs.items[0]"
 							],
 							"message":"hi - {{ 3t72z.outputs.items }}",
 							"onlyOnFailure":false
@@ -1895,7 +1895,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"3184a@qdPZB@Y8gUK@RWDad-1@l@n@l",
 			"id":"sXV9s",
@@ -1944,6 +1944,14 @@
 								
 							],
 							"message":"fifteen={{ 3184a.outputs.index }}",
+							"onlyOnFailure":false
+						},
+						{
+							"level":"INFO",
+							"maskedFields":[
+								"3t72z.outputs.items[0]"
+							],
+							"message":"list2={{ 3t72z.outputs.items }}",
 							"onlyOnFailure":false
 						}
 					]
@@ -2222,5 +2230,5 @@
 		}
 	},
 	"standard":false,
-	"version":11
+	"version":12
 }
