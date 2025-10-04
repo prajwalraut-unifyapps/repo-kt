@@ -44,41 +44,6 @@
 			"fromNodeId":"_8aijN",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_umrc9",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_umrc9",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_UOBFb",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_UOBFb",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_8hDiA",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_8hDiA",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_dU7U9",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_dU7U9",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_fpRSM",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_fpRSM",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_zfngo",
 			"type":"next"
 		},
@@ -93,7 +58,7 @@
 	"id":"68e18578c05e7f278914dff1",
 	"lastModifiedBy":15430,
 	"lcName":"publish nearest tool ",
-	"modifiedTime":1759610530985,
+	"modifiedTime":1759610596554,
 	"name":"Publish Nearest Tool ",
 	"nodes":[
 		{
@@ -109,6 +74,19 @@
 			"id":"n_P5CXD",
 			"index":1,
 			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"ef"
+					],
+					"properties":{
+						"ef":{
+							"type":"string",
+							"title":"Ef"
+						}
+					}
+				},
 				"setup":{
 					"type":"object",
 					"additionalProperties":false,
@@ -437,434 +415,6 @@
 			"type":"ACTION"
 		},
 		{
-			"additional":{
-				"xsdSchemaConfig":{},
-				"visibleOptionalFields":[
-					"root.pageInputs.eventListFiltered.source",
-					"root.pageInputs.eventListFiltered.ua:type",
-					"root.pageInputs.eventListFiltered.items.eventLocation",
-					"root.pageInputs.eventListFiltered.items.eventTimeline",
-					"root.pageInputs.eventListFiltered.items.eventTitle",
-					"root.pageInputs.eventListFiltered.items.fallbackImageUrl",
-					"root.pageInputs.eventListFiltered.items.introText",
-					"root.pageInputs.eventListFiltered.items.websiteUrl",
-					"root.pageInputs.storeList.source",
-					"root.pageInputs.storeList.ua:type",
-					"root.pageInputs.storeList.items.storeName",
-					"root.pageInputs.storeList.items.distance",
-					"root.pageInputs.storeList.items.time",
-					"root.pageInputs.storeList.items.location",
-					"root.pageInputs.storeList.items.discount",
-					"root.pageInputs.storeList.items.desc",
-					"root.pageInputs.storeList.items.url",
-					"root.pageInputs.storeList.items.close"
-				]
-			},
-			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":104,
-				"resourceName":"variable_by_unifyapps_create_variables",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_CkHE4-1",
-			"id":"n_umrc9",
-			"index":7,
-			"inputSchema":{
-				"type":"SCHEMA_AND_LAYOUT",
-				"dynamic":false,
-				"layout":{},
-				"schema":{
-					"additionalProperties":false,
-					"type":"object",
-					"properties":{
-						"pageInputs":{
-							"type":"object",
-							"properties":{
-								"storeList":{
-									"type":"array",
-									"items":{
-										"type":"object",
-										"properties":{
-											"partnerName":{
-												"type":"string",
-												"title":"partnerName"
-											},
-											"title":{
-												"type":"string",
-												"title":"title"
-											},
-											"imageUri":{
-												"type":"string",
-												"title":"imageUri"
-											},
-											"lat":{
-												"type":"string",
-												"title":"lat"
-											},
-											"lon":{
-												"type":"string",
-												"title":"lon"
-											},
-											"mobile":{
-												"type":"string",
-												"title":"mobile"
-											},
-											"rating":{
-												"type":"string",
-												"title":"rating"
-											},
-											"reviewCount":{
-												"type":"string",
-												"title":"reviewCount"
-											},
-											"description":{
-												"type":"string",
-												"title":"description"
-											},
-											"storeType":{
-												"type":"string",
-												"title":"storeType"
-											},
-											"distance":{
-												"type":"string",
-												"title":"distance"
-											},
-											"timeToReach":{
-												"type":"string",
-												"title":"timeToReach"
-											},
-											"openTime":{
-												"type":"string",
-												"title":"openTime"
-											},
-											"closeTime":{
-												"type":"string",
-												"title":"closeTime"
-											},
-											"operational":{
-												"type":"boolean",
-												"title":"operational"
-											},
-											"website":{
-												"type":"string",
-												"title":"website"
-											},
-											"instagram":{
-												"type":"string",
-												"title":"instagram"
-											},
-											"distInt":{
-												"type":"string",
-												"title":"Dist Int"
-											},
-											"shortAddress":{
-												"type":"string",
-												"title":"Short Address"
-											},
-											"googleMapUrl":{
-												"type":"string",
-												"title":"Google Map Url"
-											}
-										},
-										"additionalProperties":false,
-										"required":[
-											"shortAddress",
-											"googleMapUrl"
-										]
-									},
-									"title":"storeList"
-								},
-								"total":{
-									"type":"string",
-									"title":"Total"
-								}
-							},
-							"title":"pageInputs",
-							"additionalProperties":false,
-							"required":[
-								"total"
-							]
-						}
-					}
-				}
-			},
-			"inputs":{
-				"pageInputs":{
-					"storeList":{
-						"source":"{{ n_8TSHY.outputs.objects }}",
-						"ua:type":"mappedArray",
-						"items":{
-							"partnerName":"{{ n_8TSHY.outputs.objects[0].properties.partnerName }}",
-							"title":"{{ n_8TSHY.outputs.objects[0].properties.title }}",
-							"imageUri":"{{ n_8TSHY.outputs.objects[0].properties.imageUri }}",
-							"lat":"{{ n_8TSHY.outputs.objects[0].properties.lat }}",
-							"lon":"{{ n_8TSHY.outputs.objects[0].properties.lon }}",
-							"mobile":"{{ n_8TSHY.outputs.objects[0].properties.mobile }}",
-							"rating":"{{ n_8TSHY.outputs.objects[0].properties.rating }}",
-							"reviewCount":"{{ n_8TSHY.outputs.objects[0].properties.reviewCount }}",
-							"description":"{{ n_8TSHY.outputs.objects[0].properties.description }}",
-							"storeType":"{{ n_8TSHY.outputs.objects[0].properties.storeType }}",
-							"distance":"{{ n_8TSHY.outputs.objects[0].properties.distance }}",
-							"timeToReach":"{{ n_8TSHY.outputs.objects[0].properties.timeToReach }}",
-							"openTime":"{{ n_8TSHY.outputs.objects[0].properties.openTime }}",
-							"closeTime":"{{ n_8TSHY.outputs.objects[0].properties.openTime }}",
-							"operational":"{{ n_8TSHY.outputs.objects[0].properties.operational }}",
-							"website":"{{ n_8TSHY.outputs.objects[0].properties.website }}",
-							"instagram":"{{ n_8TSHY.outputs.objects[0].properties.instagram }}",
-							"distInt":"{{ n_8TSHY.outputs.objects[0].properties.distanceInt }}",
-							"shortAddress":"{{ n_8TSHY.outputs.objects[0].properties.shortAddress }}",
-							"googleMapUrl":"{{ n_8TSHY.outputs.objects[0].properties.googleMapsLink }}"
-						}
-					},
-					"total":"{{ n_8TSHY.outputs.total }}"
-				}
-			},
-			"outputSchema":{
-				"dynamic":false,
-				"schema":{
-					"additionalProperties":false,
-					"type":"object",
-					"properties":{
-						"pageInputs":{
-							"type":"object",
-							"properties":{
-								"storeList":{
-									"type":"array",
-									"items":{
-										"type":"object",
-										"properties":{
-											"partnerName":{
-												"type":"string",
-												"title":"partnerName"
-											},
-											"title":{
-												"type":"string",
-												"title":"title"
-											},
-											"imageUri":{
-												"type":"string",
-												"title":"imageUri"
-											},
-											"lat":{
-												"type":"string",
-												"title":"lat"
-											},
-											"lon":{
-												"type":"string",
-												"title":"lon"
-											},
-											"mobile":{
-												"type":"string",
-												"title":"mobile"
-											},
-											"rating":{
-												"type":"string",
-												"title":"rating"
-											},
-											"reviewCount":{
-												"type":"string",
-												"title":"reviewCount"
-											},
-											"description":{
-												"type":"string",
-												"title":"description"
-											},
-											"storeType":{
-												"type":"string",
-												"title":"storeType"
-											},
-											"distance":{
-												"type":"string",
-												"title":"distance"
-											},
-											"timeToReach":{
-												"type":"string",
-												"title":"timeToReach"
-											},
-											"openTime":{
-												"type":"string",
-												"title":"openTime"
-											},
-											"closeTime":{
-												"type":"string",
-												"title":"closeTime"
-											},
-											"operational":{
-												"type":"boolean",
-												"title":"operational"
-											},
-											"website":{
-												"type":"string",
-												"title":"website"
-											},
-											"instagram":{
-												"type":"string",
-												"title":"instagram"
-											},
-											"distInt":{
-												"type":"string",
-												"title":"Dist Int"
-											},
-											"shortAddress":{
-												"type":"string",
-												"title":"Short Address"
-											},
-											"googleMapUrl":{
-												"type":"string",
-												"title":"Google Map Url"
-											}
-										},
-										"additionalProperties":false,
-										"required":[
-											"shortAddress",
-											"googleMapUrl"
-										]
-									},
-									"title":"storeList"
-								},
-								"total":{
-									"type":"string",
-									"title":"Total"
-								}
-							},
-							"title":"pageInputs",
-							"additionalProperties":false,
-							"required":[
-								"total"
-							]
-						}
-					}
-				}
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Create variables",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"conv_ai_by_unifyapps",
-				"resourceVersion":41,
-				"resourceName":"conv_ai_by_unifyapps_publish_response",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_CkHE4-1",
-			"id":"n_UOBFb",
-			"index":8,
-			"inputs":{
-				"callableInterfaceId":"__ua__publish_response_interface",
-				"defaultFallbackWorkflowId":"66fbed229edc4e0b6303cefd",
-				"parameters":{
-					"responses":[
-						{
-							"content":"{{ n_2dRxC.outputs.starterText }}"
-						}
-					],
-					"endConversation":false,
-					"caseId":"{{ n_Ny3nr.outputs.caseId }}"
-				}
-			},
-			"skip":false,
-			"subTitle":"Conversation AI by UnifyApps",
-			"title":"Publish Response",
-			"type":"CALL_INTERFACE_WORKFLOW"
-		},
-		{
-			"context":{
-				"appName":"conv_ai_by_unifyapps",
-				"resourceVersion":50,
-				"resourceName":"conv_ai_by_unifyapps_publish_interface",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_CkHE4-1",
-			"id":"n_8hDiA",
-			"index":9,
-			"inputs":{
-				"callableInterfaceId":"__ua__trigger_interface_by_unifyapps",
-				"parameters":{
-					"interfaceDescription":"An interface sharing links and buttons to redirect the user to individual DubaiNow services.",
-					"caseId":"{{ n_Ny3nr.outputs.caseId }}",
-					"interfaceDetails":{
-						"interfaceId":"dda-16",
-						"pageId":"e_68dd14385e66f5686e67b1e1",
-						"pageInputs":"{{ n_umrc9.outputs.pageInputs }}"
-					},
-					"waitForUserInput":false
-				}
-			},
-			"skip":false,
-			"subTitle":"Conversation AI by UnifyApps",
-			"title":"Publish Interface",
-			"type":"CALL_INTERFACE_WORKFLOW"
-		},
-		{
-			"context":{
-				"appName":"conv_ai_by_unifyapps",
-				"resourceVersion":41,
-				"resourceName":"conv_ai_by_unifyapps_publish_response",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_CkHE4-1",
-			"id":"_dU7U9",
-			"index":10,
-			"inputs":{
-				"callableInterfaceId":"__ua__publish_response_interface",
-				"defaultFallbackWorkflowId":"66fbed229edc4e0b6303cefd",
-				"parameters":{
-					"responses":[
-						{
-							"content":"{{ n_2dRxC.outputs.endText }}"
-						}
-					],
-					"endConversation":false,
-					"caseId":"{{ n_Ny3nr.outputs.caseId }}"
-				}
-			},
-			"skip":false,
-			"subTitle":"Conversation AI by UnifyApps",
-			"title":"Publish Response",
-			"type":"CALL_INTERFACE_WORKFLOW"
-		},
-		{
-			"context":{
-				"appName":"callables",
-				"resourceVersion":49,
-				"resourceName":"callables_call_automation",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_CkHE4-1",
-			"id":"n_fpRSM",
-			"index":11,
-			"inputs":{
-				"automationId":"68036c6fecbd4a4d19aa7fc2",
-				"runtimeConnections":{},
-				"synchronous":true,
-				"version":"-1",
-				"parameters":{
-					"caseId":"{{ n_Ny3nr.outputs.caseId }}"
-				}
-			},
-			"skip":false,
-			"subTitle":"Callable",
-			"title":"Call automation",
-			"type":"CALL_WORKFLOW"
-		},
-		{
 			"context":{
 				"appName":"variable_by_unifyapps",
 				"resourceVersion":52,
@@ -876,7 +426,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_CkHE4-1",
 			"id":"n_zfngo",
-			"index":12,
+			"index":7,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -1134,10 +684,10 @@
 			"fallbackMode":"STOP",
 			"groupId":"_CkHE4-1",
 			"id":"n_oqCHf",
-			"index":13,
+			"index":8,
 			"inputs":{
 				"result":{
-					"result":"##The user was shown the following list of events: {{ n_umrc9.outputs.pageInputs.storeList }}."
+					"ef":"dfdf"
 				}
 			},
 			"skip":false,
@@ -1163,5 +713,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
