@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759581371706,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_mA9gv",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_VYPKp",
+			"type":"next"
+		}
+	],
+	"id":"68e114bbfb0d68036d56ee17",
+	"lastModifiedBy":30410,
+	"lcName":"api timeout test",
+	"modifiedTime":1759581371706,
+	"name":"api timeout test",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_mA9gv-1",
+			"id":"_mA9gv",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_mA9gv-1",
+			"id":"_VYPKp",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":30410,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
