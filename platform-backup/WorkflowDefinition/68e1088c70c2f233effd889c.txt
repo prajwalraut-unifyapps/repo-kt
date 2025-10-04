@@ -88,7 +88,7 @@
 	"id":"68e1088c70c2f233effd889c",
 	"lastModifiedBy":23949,
 	"lcName":"multi tenancy | move all automations",
-	"modifiedTime":1759578252786,
+	"modifiedTime":1759578465174,
 	"name":"Multi Tenancy | Move All Automations",
 	"nodes":[
 		{
@@ -103,7 +103,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_tT02q-1",
 			"id":"n_tWXv8",
@@ -114,7 +114,7 @@
 					"additionalProperties":false,
 					"required":[],
 					"properties":{
-						"applicationAssets":{
+						"automationAssets":{
 							"type":"array",
 							"items":{
 								"type":"object",
@@ -135,7 +135,7 @@
 								"additionalProperties":false,
 								"required":[]
 							},
-							"title":"Application Assets"
+							"title":"Automation Assets"
 						}
 					}
 				}
@@ -191,7 +191,6 @@
 				"limit":1000
 			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -226,7 +225,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_tT02q-1",
 			"id":"n_uIfRr",
@@ -464,18 +463,17 @@
 				"createList":{
 					"ua:type":"mappedArray"
 				},
-				"ua:title":"ApplicationList",
+				"ua:title":"Automations List",
 				"ua:list_type":"OBJECT"
 			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"type":"object",
 					"properties":{
 						"items":{
 							"type":"array",
-							"title":"ApplicationList",
+							"title":"Automations List",
 							"disableActions":true,
 							"items":{
 								"type":"object",
@@ -545,7 +543,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_pVMhd@_tT02q-1@l",
 			"id":"n_feENT",
@@ -557,7 +555,7 @@
 						"aggregationFunction":"GROUP"
 					}
 				],
-				"entityType":"Application",
+				"entityType":"WorkflowDefinition",
 				"page":{
 					"offset":"{{ n_pNNqv.outputs.offset }}",
 					"limit":"{{ n_pNNqv.outputs.limit }}"
@@ -582,7 +580,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_pVMhd@_tT02q-1@l",
 			"id":"n_ZLnSe",
@@ -596,7 +594,8 @@
 					"source":"{{ n_feENT.outputs.objects }}",
 					"ua:type":"mappedArray",
 					"items":{
-						"application_id":"{{ n_feENT.outputs.objects[0].columns.id }}"
+						"application_id":"{{ n_feENT.outputs.objects[0].columns.id }}",
+						"assetClass":"WORKFLOW_DEFINITION"
 					}
 				},
 				"version":"-1"
@@ -705,24 +704,12 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_tT02q-1",
 			"id":"n_1rXuq",
 			"index":10,
-			"inputs":{
-				"result":{
-					"applicationAssets":{
-						"source":"{{ n_uIfRr.outputs.items }}",
-						"ua:type":"mappedArray",
-						"items":{
-							"assetId":"{{ n_uIfRr.outputs.items[0].assetId }}",
-							"assetClass":"{{ n_uIfRr.outputs.items[0].assetClass }}",
-							"assetVersion":"{{ n_uIfRr.outputs.items[0].assetVersion }}"
-						}
-					}
-				}
-			},
+			"inputs":{},
 			"skip":false,
 			"subTitle":"Callable",
 			"title":"Respond to automation",
@@ -746,5 +733,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
