@@ -37,7 +37,7 @@
 	"id":"686a1151d8f3427f18c07b74",
 	"lastModifiedBy":161930,
 	"lcName":"[dnt] roles child tenant publisher | create",
-	"modifiedTime":1759575728041,
+	"modifiedTime":1759576913159,
 	"name":"[DNT] Roles Child Tenant Publisher | Create",
 	"nodes":[
 		{
@@ -47,14 +47,17 @@
 				"resourceName":"standard_entities_on_platform_event"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_JkvCF-1",
 			"id":"n_B8frq",
-			"index":0,
+			"index":1,
 			"inputs":{
 				"entityType":"ROLE_DEFINITION",
-				"changeType":"CREATED"
+				"changeType":"CREATED",
+				"entityTypes":[
+					"ROLE_DEFINITION"
+				]
 			},
 			"skip":false,
 			"subTitle":"Standard entities by UnifyApps",
@@ -76,7 +79,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_JkvCF-1",
 			"id":"n_SUHbv",
-			"index":0,
+			"index":2,
 			"inputs":{
 				"projections":[
 					{
@@ -111,7 +114,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_JkvCF-1",
 			"id":"n_Q7kxp",
-			"index":0,
+			"index":3,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -406,7 +409,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_JkvCF-1",
 			"id":"n_T0I17",
-			"index":0,
+			"index":4,
 			"inputs":{
 				"assetDetails":{
 					"source":"{{ n_Q7kxp.outputs.items }}",
@@ -437,7 +440,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_JkvCF-1",
 			"id":"n_zbl7z",
-			"index":0,
+			"index":5,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -458,5 +461,5 @@
 		}
 	},
 	"standard":false,
-	"version":4
+	"version":5
 }
