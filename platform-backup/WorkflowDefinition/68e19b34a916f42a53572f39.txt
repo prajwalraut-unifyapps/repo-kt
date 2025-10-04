@@ -1,0 +1,30 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759615796386,
+	"deleted":false,
+	"edges":[
+		
+	],
+	"id":"68e19b34a916f42a53572f39",
+	"lastModifiedBy":175325,
+	"lcName":"changesetqa2autocgdnboaost",
+	"modifiedTime":1759615796386,
+	"name":"changeSetQA2autoCgDNBoAOSt",
+	"nodes":[
+		
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
