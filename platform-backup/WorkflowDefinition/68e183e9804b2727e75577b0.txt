@@ -60,7 +60,7 @@
 	"id":"68e183e9804b2727e75577b0",
 	"lastModifiedBy":44096,
 	"lcName":"dfgfrg",
-	"modifiedTime":1759613760403,
+	"modifiedTime":1759614020411,
 	"name":"dfgfrg",
 	"nodes":[
 		{
@@ -319,7 +319,16 @@
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"geosearch_dda_dnd",
-				"skipIfBlank":false
+				"skipIfBlank":false,
+				"record":{
+					"storeName":"{{ n_y953c.outputs.result.partnerName }}",
+					"rating":"{{ n_y953c.outputs.result.rating }}",
+					"discount":"{{ n_y953c.outputs.result.tit }}",
+					"location":{
+						"lat":"{{ n_y953c.outputs.result.lat }}",
+						"lon":"{{ n_y953c.outputs.result.lon }}"
+					}
+				}
 			},
 			"skip":false,
 			"subTitle":"Storage by UnifyApps",
@@ -367,5 +376,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
