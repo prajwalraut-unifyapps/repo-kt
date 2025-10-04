@@ -66,7 +66,7 @@
 	"id":"68e18578c05e7f278914dff1",
 	"lastModifiedBy":44096,
 	"lcName":"publish nearest tool ",
-	"modifiedTime":1759615025349,
+	"modifiedTime":1759615898539,
 	"name":"Publish Nearest Tool ",
 	"nodes":[
 		{
@@ -76,7 +76,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_CkHE4-1",
 			"id":"n_P5CXD",
@@ -100,7 +100,6 @@
 					"additionalProperties":false,
 					"required":[
 						"distance",
-						"rating",
 						"storeName"
 					],
 					"properties":{
@@ -122,10 +121,7 @@
 							},
 							"additionalProperties":false,
 							"title":"Rating",
-							"required":[
-								"greaterThanEqualToValue",
-								"lessThanEqualToValue"
-							]
+							"required":[]
 						},
 						"storeName":{
 							"type":"string",
@@ -150,7 +146,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_CkHE4-1",
 			"id":"n_Ny3nr",
@@ -181,7 +177,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_CkHE4-1",
 			"id":"n_l93OP",
@@ -247,7 +243,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_CkHE4-1",
 			"id":"n_1TiPd",
@@ -339,7 +335,7 @@
 						}
 					}
 				},
-				"code":"def gte = 0\ndef lte = 5\nif(binding.hasVariable('rating')){   \n   if(rating.containsKey('greaterThanEqualToValue')){\n      gte = rating.greaterThanEqualToValue\n   }\n   if(rating.containsKey('lessThanEqualToValue')){\n      lte = rating.lessThanEqualToValue\n   }\n}\n\ndef queryObject = [\n      \"bool\": [\n         \"must\": [\n            [ \"term\": [ \"properties.storeName\": storeName ] ],\n            [ \"range\": [ \"properties.rating\": [ \"gte\": gte, \"lte\": lte] ] ]\n         ],\n         \"filter\" : [ \"geo_distance\" : [ \"distance\" : distance, \"location\" : [ \"lat\" : location.lat, \"lon\" : location.lon ] ] ]\n      ]\n   ]\n\ndef sortObject = [\n         \"_geo_distance\": [\n            \"properties.location\": [ \"lat\": location.lat, \"lon\": location.lon ],\n            \"order\": \"asc\",\n            \"unit\": \"km\",\n            \"mode\": \"min\",\n            \"distance_type\": \"arc\"\n         ]\n      ]\n\nreturn [\"query\":queryObject,\"sort\":[sortObject]]",
+				"code":"def needQuery = false\ndef rating = null\ndef filter = null\ndef sort = null\n\nif(binding.hasVariable('rating')){\n   def gte = 0\n   def lte = 5   \n   if(rating.containsKey('greaterThanEqualToValue')){\n      gte = rating.greaterThanEqualToValue\n      needQuery = true\n   }\n   if(rating.containsKey('lessThanEqualToValue')){\n      lte = rating.lessThanEqualToValue\n      needQuery = true\n   }\n   if(needQuery == true){\n      rating = [ \"range\": [ \"properties.rating\": [ \"gte\": gte, \"lte\": lte] ] ]\n   }\n}\n\nif(binding.hasVariable('location') && location.containsKey('lat') && location.containsKey('lon')){\n   if(binding.hasVariable('distance')){\n      needQuery = true\n      filter = [ \"geo_distance\" : [ \"distance\" : distance, \"location\" : [ \"lat\" : location.lat, \"lon\" : location.lon ] ] ]\n   }\n   sort = [\n         \"_geo_distance\": [\n            \"properties.location\": [ \"lat\": location.lat, \"lon\": location.lon ],\n            \"order\": \"asc\",\n            \"unit\": \"km\",\n            \"mode\": \"min\",\n            \"distance_type\": \"arc\"\n         ]\n      ]\n}\n\nif(needQuery == true){\n   def queryObject = [\n      \"bool\": [\n\n      ]\n   ]\n   if(rating != null){\n      queryObject.bool[\"must\"]=[]\n      queryObject.bool[\"must\"].add(rating)\n   }\n   if(filter != null){\n      queryObject.bool[\"filter\"] = filter\n   }\n}\n\n// def queryObject = [\n//       \"bool\": [\n//          \"must\": [\n//             [ \"term\": [ \"properties.storeName\": storeName ] ],\n//             [ \"range\": [ \"properties.rating\": [ \"gte\": gte, \"lte\": lte] ] ]\n//          ],\n//          \"filter\" : [ \"geo_distance\" : [ \"distance\" : distance, \"location\" : [ \"lat\" : location.lat, \"lon\" : location.lon ] ] ]\n//       ]\n//    ]\n\nreturn [\"query\":queryObject,\"sort\":[sort]]",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
@@ -370,7 +366,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_CkHE4-1",
 			"id":"_8aijN",
@@ -438,7 +434,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_CkHE4-1",
 			"id":"n_zfngo",
@@ -696,7 +692,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_CkHE4-1",
 			"id":"n_oqCHf",
@@ -729,5 +725,5 @@
 	"tags":[
 		
 	],
-	"version":10
+	"version":11
 }
