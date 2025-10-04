@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759586359397,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_YZ9cx",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_PT4KQ",
+			"type":"next"
+		}
+	],
+	"id":"68e128375aba4e4a38932e96",
+	"lastModifiedBy":43498,
+	"lcName":"cdvb-jms",
+	"modifiedTime":1759586359397,
+	"name":"cdvb-jms",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_YZ9cx-1",
+			"id":"_YZ9cx",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_YZ9cx-1",
+			"id":"_PT4KQ",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":43498,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
