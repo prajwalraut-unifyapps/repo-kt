@@ -46,32 +46,18 @@
 			"fromNodeId":"n_r2KTK",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_X23Cf",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_B7FGe",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_X23Cf",
+			"toNodeId":"n_EFWtU",
 			"type":"next"
 		},
 		{
 			"fromNodeId":"n_8Lfmj",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_X23Cf",
+			"toNodeId":"n_EFWtU",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_X23Cf",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_B7FGe",
-			"type":"loop"
-		},
-		{
-			"fromNodeId":"n_X23Cf",
+			"fromNodeId":"n_EFWtU",
 			"name":"loopback",
 			"priority":0,
 			"skip":false,
@@ -97,7 +83,7 @@
 	"id":"68e0c7311d8bca1f3b95305b",
 	"lastModifiedBy":132116,
 	"lcName":"newconditions_insideloops_dnd (test)",
-	"modifiedTime":1759562123994,
+	"modifiedTime":1759566125007,
 	"name":"Newconditions_insideloops_DND (test)",
 	"nodes":[
 		{
@@ -175,25 +161,34 @@
 		{
 			"context":{
 				"appName":"loop",
-				"resourceVersion":14,
-				"resourceName":"loop_for",
+				"resourceVersion":874,
+				"resourceName":"loop_while",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_5B4Wa@_MXkKD-1@l",
 			"id":"n_gf4rW",
 			"index":3,
 			"inputs":{
-				"start":0,
-				"limit":"{{ n_ksLJZ.outputs.Int }}",
-				"step":1,
+				"condition":{
+					"filters":[
+						{
+							"property":"=ROW({{ n_5B4Wa.outputs.index }})",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"5"
+							}
+						}
+					],
+					"operator":"AND"
+				},
 				"captureIterations":true
 			},
 			"skip":false,
 			"subTitle":"Loop",
-			"title":"For loop",
+			"title":"While loop",
 			"type":"LOOP"
 		},
 		{
@@ -338,79 +333,257 @@
 		},
 		{
 			"context":{
-				"appName":"loop",
-				"resourceVersion":862,
-				"resourceName":"loop_for_each",
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":1006,
+				"resourceName":"variable_by_unifyapps_create_list",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_gf4rW@n_5B4Wa@_MXkKD-1@l@l",
-			"id":"n_X23Cf",
+			"id":"n_EFWtU",
 			"index":7,
-			"inputs":{
-				"repeatMode":"BATCH",
-				"listSource":"{{ n_gf4rW.outputs.index }}",
-				"captureIterations":true,
-				"batchSize":5
-			},
-			"skip":false,
-			"subTitle":"Loop",
-			"title":"For each loop",
-			"type":"LOOP"
-		},
-		{
-			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":1018,
-				"resourceName":"variable_by_unifyapps_create_variables",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"n_X23Cf@n_gf4rW@n_5B4Wa@_MXkKD-1@l@l@l",
-			"id":"n_B7FGe",
-			"index":8,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
-				"layout":{},
+				"layout":{
+					"createList":{
+						"ui:title":"",
+						"ua:type":{
+							"ui:widget":"hidden"
+						},
+						"items":{
+							"ui:title":"Initial list items",
+							"ui:description":"Set the initial values of the list (defaults to empty)"
+						},
+						"ui:order":[
+							"*",
+							"items"
+						]
+					},
+					"ua:title":{
+						"ui:widget":"hidden"
+					},
+					"ua:list_type":{
+						"ui:widget":"hidden"
+					}
+				},
 				"schema":{
-					"additionalProperties":false,
+					"allOf":[
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"OBJECT"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"items":{
+												"type":"object",
+												"properties":{}
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"STRING"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of String"
+											},
+											"items":{
+												"type":"string"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"INTEGER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Integers"
+											},
+											"items":{
+												"type":"integer"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"NUMBER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Numbers"
+											},
+											"items":{
+												"type":"number"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"BOOLEAN"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Booleans"
+											},
+											"items":{
+												"type":"boolean"
+											}
+										}
+									}
+								}
+							}
+						}
+					],
+					"format":"ua:list",
 					"type":"object",
 					"properties":{
-						"gfchjk":{
+						"ua:title":{
+							"type":"string"
+						},
+						"ua:list_type":{
 							"type":"string",
-							"title":"Gfchjk"
+							"title":"List Type",
+							"oneOf":[
+								{
+									"const":"OBJECT",
+									"title":"Object"
+								},
+								{
+									"const":"STRING",
+									"title":"String"
+								},
+								{
+									"const":"NUMBER",
+									"title":"Number"
+								},
+								{
+									"const":"INTEGER",
+									"title":"Integer"
+								},
+								{
+									"const":"BOOLEAN",
+									"title":"Boolean"
+								}
+							],
+							"default":"OBJECT"
+						},
+						"createList":{
+							"type":"object",
+							"properties":{
+								"ua:type":{
+									"type":"string",
+									"default":"mappedArray"
+								},
+								"source":{
+									"type":"string",
+									"format":"ua:source",
+									"title":"List Item Source"
+								},
+								"items":{
+									"additionalProperties":false,
+									"type":[
+										"object",
+										"string",
+										"number",
+										"boolean",
+										"integer"
+									],
+									"properties":{}
+								}
+							}
 						}
-					},
-					"required":[
-						"gfchjk"
-					]
+					}
 				}
 			},
-			"inputs":{},
+			"inputs":{
+				"createList":{
+					"ua:type":"mappedArray"
+				},
+				"ua:list_type":"NUMBER"
+			},
 			"outputSchema":{
 				"dynamic":false,
 				"schema":{
-					"additionalProperties":false,
 					"type":"object",
 					"properties":{
-						"gfchjk":{
-							"type":"string",
-							"title":"Gfchjk"
+						"items":{
+							"type":"array",
+							"title":"List",
+							"disableActions":true,
+							"items":{
+								"type":"number"
+							}
 						}
-					},
-					"required":[
-						"gfchjk"
-					]
+					}
 				}
 			},
 			"skip":false,
 			"subTitle":"Variable by UnifyApps",
-			"title":"Create variables",
+			"title":"Create list",
 			"type":"ACTION"
 		},
 		{
@@ -425,7 +598,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_MXkKD-1",
 			"id":"n_Gd8Hc",
-			"index":9,
+			"index":8,
 			"inputs":{
 				"result":{
 					"output":"{{ n_r2KTK.outputs.int1 }}{{ n_8Lfmj.outputs.int2 }}"
@@ -454,5 +627,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":4
 }
