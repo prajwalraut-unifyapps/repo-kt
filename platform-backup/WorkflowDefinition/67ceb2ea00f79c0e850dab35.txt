@@ -5,12 +5,12 @@
 	"createdTime":1741599466974,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1747320375635,
-		"deployedBy":44096,
-		"deployedDefinitionId":"6825fe37b2208a63650ad7b2",
+		"deployedAt":1759406923218,
+		"deployedBy":1,
+		"deployedDefinitionId":"68de6b4bed7fcc6978214357",
 		"status":"DEPLOYED",
-		"version":36,
-		"workflowVersion":44
+		"version":37,
+		"workflowVersion":58
 	},
 	"edges":[
 		{
@@ -156,9 +156,9 @@
 		]
 	},
 	"id":"67ceb2ea00f79c0e850dab35",
-	"lastModifiedBy":1,
+	"lastModifiedBy":44109,
 	"lcName":"browser use by unifyapps",
-	"modifiedTime":1759406744661,
+	"modifiedTime":1759574653370,
 	"name":"Browser use by UnifyApps",
 	"nodes":[
 		{
@@ -266,13 +266,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"H6jYQ-1",
 			"id":"zKDB1",
 			"index":3,
 			"inputs":{
-				"instructions":"{{ B0HXN.outputs.instructions }}"
+				"instructions":"{{ B0HXN.outputs.instructions }}",
+				"modelId":"e_agent_model_gpt_5"
 			},
 			"skip":false,
 			"subTitle":"Browser Use by UnifyApps",
@@ -634,7 +635,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"M0itl@sHFSN@zKDB1@H6jYQ-1@l@l@y",
 			"id":"vYrEV",
@@ -729,5 +730,5 @@
 	"tags":[
 		
 	],
-	"version":58
+	"version":59
 }
