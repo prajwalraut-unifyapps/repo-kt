@@ -68,7 +68,7 @@
 	"id":"68e0fc9d407fc74fb8ec44e6",
 	"lastModifiedBy":23949,
 	"lcName":"multi tenancy | move all assets",
-	"modifiedTime":1759578904635,
+	"modifiedTime":1759578914331,
 	"name":"Multi Tenancy | Move All assets",
 	"nodes":[
 		{
@@ -221,6 +221,8 @@
 		{
 			"context":{
 				"appName":"callables",
+				"resourceVersion":1066,
+				"resourceName":"callables_call_automation",
 				"type":"APPLICATION"
 			},
 			"debug":false,
@@ -229,9 +231,15 @@
 			"groupId":"n_6tLoP@_WUbts-1@2",
 			"id":"n_XRMc8",
 			"index":6,
+			"inputs":{
+				"automationId":"68e1088c70c2f233effd889c",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1"
+			},
 			"skip":false,
 			"subTitle":"Callable",
-			"title":"Select an action",
+			"title":"Call automation",
 			"type":"CALL_WORKFLOW"
 		},
 		{
@@ -275,5 +283,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
