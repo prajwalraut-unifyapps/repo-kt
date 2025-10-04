@@ -5,12 +5,12 @@
 	"createdTime":1759577071649,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759582841241,
+		"deployedAt":1759582881385,
 		"deployedBy":30410,
-		"deployedDefinitionId":"68e11a7989e0d1430931ab93",
+		"deployedDefinitionId":"68e11aa189e0d1430931ac0a",
 		"status":"DEPLOYED",
-		"version":7,
-		"workflowVersion":7
+		"version":8,
+		"workflowVersion":9
 	},
 	"edges":[
 		{
@@ -38,7 +38,7 @@
 	"id":"68e103ef6699145cc61e9297",
 	"lastModifiedBy":30410,
 	"lcName":"api timeout",
-	"modifiedTime":1759582879992,
+	"modifiedTime":1759582896864,
 	"name":"API timeout",
 	"nodes":[
 		{
@@ -103,7 +103,7 @@
 			"id":"n_Y8Ozf",
 			"index":2,
 			"inputs":{
-				"duration":2,
+				"duration":180,
 				"unit":"SECONDS"
 			},
 			"skip":false,
@@ -181,5 +181,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
