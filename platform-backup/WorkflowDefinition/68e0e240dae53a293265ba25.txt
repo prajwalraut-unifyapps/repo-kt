@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759568448696,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_XdVBe",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_8TVEn",
+			"type":"next"
+		}
+	],
+	"id":"68e0e240dae53a293265ba25",
+	"lastModifiedBy":175131,
+	"lcName":"testsalesforce",
+	"modifiedTime":1759568448696,
+	"name":"testsalesforce",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_XdVBe-1",
+			"id":"_XdVBe",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_XdVBe-1",
+			"id":"_8TVEn",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175131,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
