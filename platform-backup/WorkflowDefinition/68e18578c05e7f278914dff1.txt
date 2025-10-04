@@ -100,7 +100,7 @@
 	"id":"68e18578c05e7f278914dff1",
 	"lastModifiedBy":15430,
 	"lcName":"publish nearest tool ",
-	"modifiedTime":1759610250671,
+	"modifiedTime":1759610300057,
 	"name":"Publish Nearest Tool ",
 	"nodes":[
 		{
@@ -115,7 +115,34 @@
 			"groupId":"_CkHE4-1",
 			"id":"n_P5CXD",
 			"index":1,
-			"inputs":{},
+			"inputs":{
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"storeList"
+					],
+					"properties":{
+						"storeList":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"partnerName":{
+										"type":"string",
+										"title":"Partner Name"
+									}
+								},
+								"additionalProperties":false,
+								"required":[
+									"partnerName"
+								]
+							},
+							"title":"Store List"
+						}
+					}
+				}
+			},
 			"skip":false,
 			"subTitle":"Callable",
 			"title":"Trigger via automation",
@@ -1314,5 +1341,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
