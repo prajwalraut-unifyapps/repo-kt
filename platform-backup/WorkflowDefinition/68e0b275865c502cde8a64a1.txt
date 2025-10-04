@@ -38,7 +38,7 @@
 	"id":"68e0b275865c502cde8a64a1",
 	"lastModifiedBy":44109,
 	"lcName":"test",
-	"modifiedTime":1759557638335,
+	"modifiedTime":1759557863167,
 	"name":"test",
 	"nodes":[
 		{
@@ -81,7 +81,7 @@
 			"index":2,
 			"inputs":{
 				"instructions":"who is ceo of openai",
-				"modelId":"e_68c1d372b253e8115d419203"
+				"modelId":"e_686654b81257d219bd7958dd"
 			},
 			"skip":false,
 			"subTitle":"Browser Use by UnifyApps",
@@ -142,5 +142,5 @@
 	"tags":[
 		
 	],
-	"version":11
+	"version":12
 }
