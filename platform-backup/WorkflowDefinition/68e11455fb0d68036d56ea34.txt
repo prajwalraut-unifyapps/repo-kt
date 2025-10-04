@@ -1,8 +1,5 @@
 {
-	"appsUsed":[
-		
-	],
-	"createdTime":1759581269976,
+	"createdTime":1759581418424,
 	"deleted":false,
 	"edges":[
 		{
@@ -16,7 +13,7 @@
 	"id":"68e11455fb0d68036d56ea34",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa2autoadkovseqic",
-	"modifiedTime":1759581270050,
+	"modifiedTime":1759581418424,
 	"name":"changeSetQA2autoadkOvsEQiC",
 	"nodes":[
 		{
@@ -26,7 +23,7 @@
 				"resourceName":"callables_from_interface"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"3tFTv-1",
 			"id":"lZXRK",
@@ -74,7 +71,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"3tFTv-1",
 			"id":"CPBFM",
@@ -97,11 +94,15 @@
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
-		"enableVariableLogging":true
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
 	},
 	"standard":false,
 	"tags":[
 		
 	],
-	"version":1
+	"version":3
 }
