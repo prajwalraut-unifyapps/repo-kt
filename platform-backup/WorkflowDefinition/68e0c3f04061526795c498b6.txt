@@ -114,7 +114,7 @@
 	"id":"68e0c3f04061526795c498b6",
 	"lastModifiedBy":511,
 	"lcName":"looptesting1",
-	"modifiedTime":1759561288698,
+	"modifiedTime":1759564079695,
 	"name":"LoopTesting1",
 	"nodes":[
 		{
@@ -295,7 +295,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_fY1zp@n_yB1nW@n_fnth2@n_hM9Xn@_ols28-1@y@l@l@y",
 			"id":"n_HKpwf",
@@ -319,7 +319,7 @@
 				}
 			},
 			"inputs":{
-				"input":"successfull"
+				"input":"{{ n_fY1zp.outputs.result }}"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -350,7 +350,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_fY1zp@n_yB1nW@n_fnth2@n_hM9Xn@_ols28-1@y@l@l@n",
 			"id":"n_5qNOH",
@@ -374,7 +374,7 @@
 				}
 			},
 			"inputs":{
-				"input":"_notsuccessfull"
+				"input":"{{ n_fY1zp.outputs.result }}"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -410,7 +410,9 @@
 			"groupId":"n_yB1nW@n_fnth2@n_hM9Xn@_ols28-1@y@l@l",
 			"id":"n_nuTNL",
 			"index":8,
-			"inputs":{},
+			"inputs":{
+				"loop":"n_yB1nW"
+			},
 			"skip":false,
 			"subTitle":"Break",
 			"title":"Break",
@@ -512,5 +514,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":9
 }
