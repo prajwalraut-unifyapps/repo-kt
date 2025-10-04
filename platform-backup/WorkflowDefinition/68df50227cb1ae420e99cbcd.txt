@@ -201,7 +201,7 @@
 	"id":"68df50227cb1ae420e99cbcd",
 	"lastModifiedBy":132116,
 	"lcName":"hatim-test-automation (copy)",
-	"modifiedTime":1759595685872,
+	"modifiedTime":1759595800689,
 	"name":"hatim-test-automation (copy)",
 	"nodes":[
 		{
@@ -2058,9 +2058,9 @@
 						{
 							"level":"INFO",
 							"maskedFields":[
-								"rtO6j.outputs.index"
+								"3t72z.outputs.items[0]"
 							],
-							"message":"seventeen={{ rtO6j.outputs.index }}",
+							"message":"seventeen={{ rtO6j.outputs.index }}\n\n{{ 3t72z.outputs.items }}",
 							"onlyOnFailure":false
 						}
 					]
@@ -2214,5 +2214,5 @@
 		}
 	},
 	"standard":false,
-	"version":8
+	"version":9
 }
