@@ -1,51 +1,1306 @@
 {
 	"appsUsed":[
-		
+		"storage_by_unifyapps"
 	],
 	"createdTime":1759610232579,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_CkHE4",
+			"fromNodeId":"n_P5CXD",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_n7qls",
+			"toNodeId":"n_Ny3nr",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Ny3nr",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_l93OP",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_l93OP",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_1TiPd",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_1TiPd",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_MNKL9",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_MNKL9",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_8TSHY",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_8TSHY",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_0qnhA",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_0qnhA",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_umrc9",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_umrc9",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_UOBFb",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_UOBFb",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_8hDiA",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_8hDiA",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_dU7U9",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_dU7U9",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_fpRSM",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_fpRSM",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_zfngo",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_zfngo",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_oqCHf",
 			"type":"next"
 		}
 	],
 	"id":"68e18578c05e7f278914dff1",
 	"lastModifiedBy":15430,
 	"lcName":"publish nearest tool ",
-	"modifiedTime":1759610232579,
+	"modifiedTime":1759610250671,
 	"name":"Publish Nearest Tool ",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1011,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_CkHE4-1",
-			"id":"_CkHE4",
-			"index":0,
+			"id":"n_P5CXD",
+			"index":1,
+			"inputs":{},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":96,
+				"resourceName":"variable_by_unifyapps_get_session_variables",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_CkHE4-1",
-			"id":"_n7qls",
-			"index":0,
+			"id":"n_Ny3nr",
+			"index":2,
+			"inputs":{
+				"variableSchema":{
+					"type":"object",
+					"properties":{
+						"caseId":{
+							"type":"string",
+							"title":"Case Id"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Variable by UnifyApps",
+			"title":"Get Session Variables",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":70,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_CkHE4-1",
+			"id":"n_l93OP",
+			"index":3,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"lat":{
+							"type":"number",
+							"title":"Lat"
+						},
+						"long":{
+							"type":"number",
+							"title":"Long"
+						}
+					},
+					"required":[
+						"lat",
+						"long"
+					]
+				}
+			},
+			"inputs":{},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"lat":{
+							"type":"number",
+							"title":"Lat"
+						},
+						"long":{
+							"type":"number",
+							"title":"Long"
+						}
+					},
+					"required":[
+						"lat",
+						"long"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":263,
+				"resourceName":"standard_entities_fetch_user",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_CkHE4-1",
+			"id":"n_1TiPd",
+			"index":4,
+			"inputs":{
+				"fetchBy":"id",
+				"applicationId":"dda-16",
+				"user":"{{ __USER__.outputs.id }}"
+			},
+			"skip":true,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Fetch User",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":52,
+				"resourceName":"variable_by_unifyapps_create_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_CkHE4-1",
+			"id":"n_MNKL9",
+			"index":5,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{
+					"createList":{
+						"ui:title":"",
+						"ua:type":{
+							"ui:widget":"hidden"
+						},
+						"items":{
+							"ui:title":"Initial list items",
+							"ui:description":"Set the initial values of the list (defaults to empty)"
+						},
+						"ui:order":[
+							"*",
+							"items"
+						]
+					},
+					"ua:title":{
+						"ui:widget":"hidden"
+					},
+					"ua:list_type":{
+						"ui:widget":"hidden"
+					}
+				},
+				"schema":{
+					"allOf":[
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"OBJECT"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"items":{
+												"type":"object",
+												"properties":{}
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"STRING"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of String"
+											},
+											"items":{
+												"type":"string"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"INTEGER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Integers"
+											},
+											"items":{
+												"type":"integer"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"NUMBER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Numbers"
+											},
+											"items":{
+												"type":"number"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"BOOLEAN"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Booleans"
+											},
+											"items":{
+												"type":"boolean"
+											}
+										}
+									}
+								}
+							}
+						}
+					],
+					"format":"ua:list",
+					"type":"object",
+					"properties":{
+						"ua:title":{
+							"type":"string"
+						},
+						"ua:list_type":{
+							"type":"string",
+							"title":"List Type",
+							"oneOf":[
+								{
+									"const":"OBJECT",
+									"title":"Object"
+								},
+								{
+									"const":"STRING",
+									"title":"String"
+								},
+								{
+									"const":"NUMBER",
+									"title":"Number"
+								},
+								{
+									"const":"INTEGER",
+									"title":"Integer"
+								},
+								{
+									"const":"BOOLEAN",
+									"title":"Boolean"
+								}
+							],
+							"default":"OBJECT"
+						},
+						"createList":{
+							"type":"object",
+							"properties":{
+								"ua:type":{
+									"type":"string",
+									"default":"mappedArray"
+								},
+								"source":{
+									"type":"string",
+									"format":"ua:source",
+									"title":"List Item Source"
+								},
+								"items":{
+									"additionalProperties":false,
+									"type":[
+										"object",
+										"string",
+										"number",
+										"boolean",
+										"integer"
+									],
+									"properties":{}
+								}
+							}
+						}
+					}
+				}
+			},
+			"inputs":{
+				"createList":{
+					"ua:type":"mappedArray",
+					"source":"{{ n_2dRxC.outputs.storeList }}",
+					"items":"{{ n_2dRxC.outputs.storeList[0].partnerName }}"
+				},
+				"ua:title":"partnerList",
+				"ua:list_type":"STRING"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"type":"object",
+					"properties":{
+						"items":{
+							"type":"array",
+							"title":"partnerList",
+							"disableActions":true,
+							"items":{
+								"type":"string"
+							}
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":555,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_CkHE4-1",
+			"id":"n_8TSHY",
+			"index":6,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"properties_partnerName",
+							"filter":{
+								"operator":"IN",
+								"value":"{{ n_MNKL9.outputs.items }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"dda_nearest_stores",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"sortBy":[
+					{
+						"field":"properties_distanceInt",
+						"order":"ASC"
+					}
+				],
+				"translationsOption":"DEFAULT",
+				"page":{
+					"paginateBy":"OFFSET",
+					"limit":20,
+					"offset":0
+				},
+				"numberOfRecordsToFetch":"MULTIPLE",
+				"readThroughSessionVariables":false,
+				"includeTotalCount":true
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":555,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_CkHE4-1",
+			"id":"_0qnhA",
+			"index":7,
+			"inputs":{
+				"object_type":"dda_nearest_stores",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"sortBy":[
+					{
+						"field":"properties_distanceInt",
+						"order":"ASC"
+					}
+				],
+				"translationsOption":"DEFAULT",
+				"page":{
+					"paginateBy":"OFFSET",
+					"limit":1,
+					"offset":0
+				},
+				"numberOfRecordsToFetch":"MULTIPLE",
+				"readThroughSessionVariables":false,
+				"includeTotalCount":true
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{},
+				"visibleOptionalFields":[
+					"root.pageInputs.eventListFiltered.source",
+					"root.pageInputs.eventListFiltered.ua:type",
+					"root.pageInputs.eventListFiltered.items.eventLocation",
+					"root.pageInputs.eventListFiltered.items.eventTimeline",
+					"root.pageInputs.eventListFiltered.items.eventTitle",
+					"root.pageInputs.eventListFiltered.items.fallbackImageUrl",
+					"root.pageInputs.eventListFiltered.items.introText",
+					"root.pageInputs.eventListFiltered.items.websiteUrl",
+					"root.pageInputs.storeList.source",
+					"root.pageInputs.storeList.ua:type",
+					"root.pageInputs.storeList.items.storeName",
+					"root.pageInputs.storeList.items.distance",
+					"root.pageInputs.storeList.items.time",
+					"root.pageInputs.storeList.items.location",
+					"root.pageInputs.storeList.items.discount",
+					"root.pageInputs.storeList.items.desc",
+					"root.pageInputs.storeList.items.url",
+					"root.pageInputs.storeList.items.close"
+				]
+			},
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":104,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_CkHE4-1",
+			"id":"n_umrc9",
+			"index":8,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"pageInputs":{
+							"type":"object",
+							"properties":{
+								"storeList":{
+									"type":"array",
+									"items":{
+										"type":"object",
+										"properties":{
+											"partnerName":{
+												"type":"string",
+												"title":"partnerName"
+											},
+											"title":{
+												"type":"string",
+												"title":"title"
+											},
+											"imageUri":{
+												"type":"string",
+												"title":"imageUri"
+											},
+											"lat":{
+												"type":"string",
+												"title":"lat"
+											},
+											"lon":{
+												"type":"string",
+												"title":"lon"
+											},
+											"mobile":{
+												"type":"string",
+												"title":"mobile"
+											},
+											"rating":{
+												"type":"string",
+												"title":"rating"
+											},
+											"reviewCount":{
+												"type":"string",
+												"title":"reviewCount"
+											},
+											"description":{
+												"type":"string",
+												"title":"description"
+											},
+											"storeType":{
+												"type":"string",
+												"title":"storeType"
+											},
+											"distance":{
+												"type":"string",
+												"title":"distance"
+											},
+											"timeToReach":{
+												"type":"string",
+												"title":"timeToReach"
+											},
+											"openTime":{
+												"type":"string",
+												"title":"openTime"
+											},
+											"closeTime":{
+												"type":"string",
+												"title":"closeTime"
+											},
+											"operational":{
+												"type":"boolean",
+												"title":"operational"
+											},
+											"website":{
+												"type":"string",
+												"title":"website"
+											},
+											"instagram":{
+												"type":"string",
+												"title":"instagram"
+											},
+											"distInt":{
+												"type":"string",
+												"title":"Dist Int"
+											},
+											"shortAddress":{
+												"type":"string",
+												"title":"Short Address"
+											},
+											"googleMapUrl":{
+												"type":"string",
+												"title":"Google Map Url"
+											}
+										},
+										"additionalProperties":false,
+										"required":[
+											"shortAddress",
+											"googleMapUrl"
+										]
+									},
+									"title":"storeList"
+								},
+								"total":{
+									"type":"string",
+									"title":"Total"
+								}
+							},
+							"title":"pageInputs",
+							"additionalProperties":false,
+							"required":[
+								"total"
+							]
+						}
+					}
+				}
+			},
+			"inputs":{
+				"pageInputs":{
+					"storeList":{
+						"source":"{{ n_8TSHY.outputs.objects }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"partnerName":"{{ n_8TSHY.outputs.objects[0].properties.partnerName }}",
+							"title":"{{ n_8TSHY.outputs.objects[0].properties.title }}",
+							"imageUri":"{{ n_8TSHY.outputs.objects[0].properties.imageUri }}",
+							"lat":"{{ n_8TSHY.outputs.objects[0].properties.lat }}",
+							"lon":"{{ n_8TSHY.outputs.objects[0].properties.lon }}",
+							"mobile":"{{ n_8TSHY.outputs.objects[0].properties.mobile }}",
+							"rating":"{{ n_8TSHY.outputs.objects[0].properties.rating }}",
+							"reviewCount":"{{ n_8TSHY.outputs.objects[0].properties.reviewCount }}",
+							"description":"{{ n_8TSHY.outputs.objects[0].properties.description }}",
+							"storeType":"{{ n_8TSHY.outputs.objects[0].properties.storeType }}",
+							"distance":"{{ n_8TSHY.outputs.objects[0].properties.distance }}",
+							"timeToReach":"{{ n_8TSHY.outputs.objects[0].properties.timeToReach }}",
+							"openTime":"{{ n_8TSHY.outputs.objects[0].properties.openTime }}",
+							"closeTime":"{{ n_8TSHY.outputs.objects[0].properties.openTime }}",
+							"operational":"{{ n_8TSHY.outputs.objects[0].properties.operational }}",
+							"website":"{{ n_8TSHY.outputs.objects[0].properties.website }}",
+							"instagram":"{{ n_8TSHY.outputs.objects[0].properties.instagram }}",
+							"distInt":"{{ n_8TSHY.outputs.objects[0].properties.distanceInt }}",
+							"shortAddress":"{{ n_8TSHY.outputs.objects[0].properties.shortAddress }}",
+							"googleMapUrl":"{{ n_8TSHY.outputs.objects[0].properties.googleMapsLink }}"
+						}
+					},
+					"total":"{{ n_8TSHY.outputs.total }}"
+				}
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"pageInputs":{
+							"type":"object",
+							"properties":{
+								"storeList":{
+									"type":"array",
+									"items":{
+										"type":"object",
+										"properties":{
+											"partnerName":{
+												"type":"string",
+												"title":"partnerName"
+											},
+											"title":{
+												"type":"string",
+												"title":"title"
+											},
+											"imageUri":{
+												"type":"string",
+												"title":"imageUri"
+											},
+											"lat":{
+												"type":"string",
+												"title":"lat"
+											},
+											"lon":{
+												"type":"string",
+												"title":"lon"
+											},
+											"mobile":{
+												"type":"string",
+												"title":"mobile"
+											},
+											"rating":{
+												"type":"string",
+												"title":"rating"
+											},
+											"reviewCount":{
+												"type":"string",
+												"title":"reviewCount"
+											},
+											"description":{
+												"type":"string",
+												"title":"description"
+											},
+											"storeType":{
+												"type":"string",
+												"title":"storeType"
+											},
+											"distance":{
+												"type":"string",
+												"title":"distance"
+											},
+											"timeToReach":{
+												"type":"string",
+												"title":"timeToReach"
+											},
+											"openTime":{
+												"type":"string",
+												"title":"openTime"
+											},
+											"closeTime":{
+												"type":"string",
+												"title":"closeTime"
+											},
+											"operational":{
+												"type":"boolean",
+												"title":"operational"
+											},
+											"website":{
+												"type":"string",
+												"title":"website"
+											},
+											"instagram":{
+												"type":"string",
+												"title":"instagram"
+											},
+											"distInt":{
+												"type":"string",
+												"title":"Dist Int"
+											},
+											"shortAddress":{
+												"type":"string",
+												"title":"Short Address"
+											},
+											"googleMapUrl":{
+												"type":"string",
+												"title":"Google Map Url"
+											}
+										},
+										"additionalProperties":false,
+										"required":[
+											"shortAddress",
+											"googleMapUrl"
+										]
+									},
+									"title":"storeList"
+								},
+								"total":{
+									"type":"string",
+									"title":"Total"
+								}
+							},
+							"title":"pageInputs",
+							"additionalProperties":false,
+							"required":[
+								"total"
+							]
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"conv_ai_by_unifyapps",
+				"resourceVersion":41,
+				"resourceName":"conv_ai_by_unifyapps_publish_response",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_CkHE4-1",
+			"id":"n_UOBFb",
+			"index":9,
+			"inputs":{
+				"callableInterfaceId":"__ua__publish_response_interface",
+				"defaultFallbackWorkflowId":"66fbed229edc4e0b6303cefd",
+				"parameters":{
+					"responses":[
+						{
+							"content":"{{ n_2dRxC.outputs.starterText }}"
+						}
+					],
+					"endConversation":false,
+					"caseId":"{{ n_Ny3nr.outputs.caseId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Conversation AI by UnifyApps",
+			"title":"Publish Response",
+			"type":"CALL_INTERFACE_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"conv_ai_by_unifyapps",
+				"resourceVersion":50,
+				"resourceName":"conv_ai_by_unifyapps_publish_interface",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_CkHE4-1",
+			"id":"n_8hDiA",
+			"index":10,
+			"inputs":{
+				"callableInterfaceId":"__ua__trigger_interface_by_unifyapps",
+				"parameters":{
+					"interfaceDescription":"An interface sharing links and buttons to redirect the user to individual DubaiNow services.",
+					"caseId":"{{ n_Ny3nr.outputs.caseId }}",
+					"interfaceDetails":{
+						"interfaceId":"dda-16",
+						"pageId":"e_68dd14385e66f5686e67b1e1",
+						"pageInputs":"{{ n_umrc9.outputs.pageInputs }}"
+					},
+					"waitForUserInput":false
+				}
+			},
+			"skip":false,
+			"subTitle":"Conversation AI by UnifyApps",
+			"title":"Publish Interface",
+			"type":"CALL_INTERFACE_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"conv_ai_by_unifyapps",
+				"resourceVersion":41,
+				"resourceName":"conv_ai_by_unifyapps_publish_response",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_CkHE4-1",
+			"id":"_dU7U9",
+			"index":11,
+			"inputs":{
+				"callableInterfaceId":"__ua__publish_response_interface",
+				"defaultFallbackWorkflowId":"66fbed229edc4e0b6303cefd",
+				"parameters":{
+					"responses":[
+						{
+							"content":"{{ n_2dRxC.outputs.endText }}"
+						}
+					],
+					"endConversation":false,
+					"caseId":"{{ n_Ny3nr.outputs.caseId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Conversation AI by UnifyApps",
+			"title":"Publish Response",
+			"type":"CALL_INTERFACE_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":49,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_CkHE4-1",
+			"id":"n_fpRSM",
+			"index":12,
+			"inputs":{
+				"automationId":"68036c6fecbd4a4d19aa7fc2",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"caseId":"{{ n_Ny3nr.outputs.caseId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":52,
+				"resourceName":"variable_by_unifyapps_create_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_CkHE4-1",
+			"id":"n_zfngo",
+			"index":13,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{
+					"createList":{
+						"ui:title":"",
+						"ua:type":{
+							"ui:widget":"hidden"
+						},
+						"items":{
+							"ui:title":"Initial list items",
+							"ui:description":"Set the initial values of the list (defaults to empty)"
+						},
+						"ui:order":[
+							"*",
+							"items"
+						]
+					},
+					"ua:title":{
+						"ui:widget":"hidden"
+					},
+					"ua:list_type":{
+						"ui:widget":"hidden"
+					}
+				},
+				"schema":{
+					"allOf":[
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"OBJECT"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"items":{
+												"type":"object",
+												"properties":{}
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"STRING"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of String"
+											},
+											"items":{
+												"type":"string"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"INTEGER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Integers"
+											},
+											"items":{
+												"type":"integer"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"NUMBER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Numbers"
+											},
+											"items":{
+												"type":"number"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"BOOLEAN"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Booleans"
+											},
+											"items":{
+												"type":"boolean"
+											}
+										}
+									}
+								}
+							}
+						}
+					],
+					"format":"ua:list",
+					"type":"object",
+					"properties":{
+						"ua:title":{
+							"type":"string"
+						},
+						"ua:list_type":{
+							"type":"string",
+							"title":"List Type",
+							"oneOf":[
+								{
+									"const":"OBJECT",
+									"title":"Object"
+								},
+								{
+									"const":"STRING",
+									"title":"String"
+								},
+								{
+									"const":"NUMBER",
+									"title":"Number"
+								},
+								{
+									"const":"INTEGER",
+									"title":"Integer"
+								},
+								{
+									"const":"BOOLEAN",
+									"title":"Boolean"
+								}
+							],
+							"default":"OBJECT"
+						},
+						"createList":{
+							"type":"object",
+							"properties":{
+								"ua:type":{
+									"type":"string",
+									"default":"mappedArray"
+								},
+								"source":{
+									"type":"string",
+									"format":"ua:source",
+									"title":"List Item Source"
+								},
+								"items":{
+									"additionalProperties":false,
+									"type":[
+										"object",
+										"string",
+										"number",
+										"boolean",
+										"integer"
+									],
+									"properties":{}
+								}
+							}
+						}
+					}
+				}
+			},
+			"inputs":{
+				"createList":{
+					"ua:type":"mappedArray",
+					"source":"{{ n_8TSHY.outputs.objects }}",
+					"items":"{{ n_8TSHY.outputs.objects[0] }}"
+				},
+				"ua:title":"storesNearMeWithDiscounts",
+				"ua:list_type":"STRING"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"type":"object",
+					"properties":{
+						"items":{
+							"type":"array",
+							"title":"storesNearMeWithDiscounts",
+							"disableActions":true,
+							"items":{
+								"type":"string"
+							}
+						}
+					}
+				}
+			},
+			"skip":true,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":106,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_CkHE4-1",
+			"id":"n_oqCHf",
+			"index":14,
+			"inputs":{
+				"result":{
+					"result":"##The user was shown the following list of events: {{ n_umrc9.outputs.pageInputs.storeList }}."
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":15430,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +1314,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
