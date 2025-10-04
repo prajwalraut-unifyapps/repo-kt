@@ -1,6 +1,5 @@
 {
 	"appsUsed":[
-		"emailoctopus",
 		"salesforce",
 		"slack"
 	],
@@ -11,11 +10,11 @@
 			"fromNodeId":"n_CNj4T",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_KpgYp",
+			"toNodeId":"n_tTWt4",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_KpgYp",
+			"fromNodeId":"n_tTWt4",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_bo2QC",
@@ -32,7 +31,7 @@
 	"id":"68e12e42090f310b0fa680b8",
 	"lastModifiedBy":188567,
 	"lcName":"test",
-	"modifiedTime":1759590946800,
+	"modifiedTime":1759591497968,
 	"name":"test",
 	"nodes":[
 		{
@@ -62,20 +61,23 @@
 		},
 		{
 			"context":{
-				"appName":"emailoctopus",
-				"resourceVersion":4063,
-				"resourceName":"emailoctopus_create_contact_of_list",
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"utility_by_unifyapps_parse_email",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_oMFxq-1",
-			"id":"n_KpgYp",
+			"id":"n_tTWt4",
 			"index":2,
+			"inputs":{
+				"mimeContent":"from:unifyapps.com"
+			},
 			"skip":false,
-			"subTitle":"EmailOctopus",
-			"title":"Create contact",
+			"subTitle":"Utility by UnifyApps",
+			"title":"Parse email",
 			"type":"ACTION"
 		},
 		{
@@ -157,5 +159,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
