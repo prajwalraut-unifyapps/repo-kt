@@ -55,7 +55,7 @@
 	"id":"68e12e42090f310b0fa680b8",
 	"lastModifiedBy":188567,
 	"lcName":"test",
-	"modifiedTime":1759597774643,
+	"modifiedTime":1759597952512,
 	"name":"test",
 	"nodes":[
 		{
@@ -92,7 +92,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_oMFxq-1",
 			"id":"n_Fz80Z",
@@ -115,7 +115,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_oMFxq-1",
 			"id":"n_Fse0O",
@@ -142,7 +142,7 @@
 				"appName":"stop"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_Fse0O@_oMFxq-1@y",
 			"id":"n_kEn4n",
@@ -167,7 +167,7 @@
 			"id":"n_fY79T",
 			"index":5,
 			"inputs":{
-				"object":"Cust Customer"
+				"object":"\n{{ n_Fz80Z.outputs.id }}"
 			},
 			"skip":false,
 			"subTitle":"Salesforce",
@@ -183,7 +183,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_oMFxq-1",
 			"id":"n_5WvrT",
@@ -219,5 +219,5 @@
 	"tags":[
 		
 	],
-	"version":14
+	"version":15
 }
