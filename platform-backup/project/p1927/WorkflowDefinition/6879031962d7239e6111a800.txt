@@ -45,7 +45,7 @@
 	"id":"6879031962d7239e6111a800",
 	"lastModifiedBy":39713,
 	"lcName":"[virtu-support-checkin-bot-fn]createadaptivecarttableendpoint",
-	"modifiedTime":1759555303011,
+	"modifiedTime":1759555588834,
 	"name":"[virtu-support-checkin-bot-fn]CreateAdaptiveCartTableEndpoint",
 	"nodes":[
 		{
@@ -55,7 +55,7 @@
 				"resourceName":"callables_from_api"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_iDBfH-1",
 			"id":"n_gP2eI",
@@ -236,7 +236,39 @@
 			"id":"n_o0TSV",
 			"index":4,
 			"inputs":{
-				"code":" using System.Collections.Generic;\n \n \n \n public class Table\n    {\n        public List<Body> body { get; set; }\n    }\n \n \n \n string[] columnSetListStrArray = data.Split(columnSetSeparator);\n            Table tableObject = new Table();\n            \n            List<Body> BodyList = new List<Body>();\n          bool isFirstRow = true;\n// for prevent add more columns thant header keep header size\n                int headerColumnCount=0;\n            foreach (var columnSetStr in columnSetListStrArray)\n            {\n                Body tableBody = new Body();\n                // extract columns string \n                string[] columnStrArray = columnSetStr.Split(columnSeparator);\n                List<Column> columnList = new List<Column>();\n                \n                if(isFirstRow){\n                      headerColumnCount=  columnStrArray.Length;\n                    isFirstRow = false;\n                }\n                int count = 0;\n                foreach (var column in columnStrArray)\n                {   \n                   \n                    Column columnObj = new Column();\n                    \n                    List<Item> itemList = new List<Item>();\n                   Item item = new Item();\n                   item.text = column;\n                   item.type = \"TextBlock\";\n                   item.wrap=true;\n                   itemList.Add(item);\n                   columnObj.items=itemList;\n                   columnObj.type=\"Column\";\n                   columnObj.width=\"stretch\";\n                   columnList.Add(columnObj);\n                   count ++;\n                    if(count>=headerColumnCount){\n                            break;\n                    }\n                }\n\n                tableBody.columns = columnList;\n                tableBody.type = \"ColumnSet\";\n                BodyList.Add(tableBody);\n            }\n            tableObject.body = BodyList;\n\n            result tableObject;",
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"tableObject":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Table Object"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"columnSetSeparator":{
+							"type":"string",
+							"title":"Column Set Separator"
+						},
+						"columnSeparator":{
+							"type":"string",
+							"title":"Column Separator"
+						},
+						"data":{
+							"type":"string",
+							"title":"Data"
+						}
+					}
+				},
+				"code":" using System.Collections.Generic;\n \n \n \n public class Table\n    {\n        public List<Body> body { get; set; }\n    }\n \n \n \nstring[] columnSetListStrArray = data.Split(columnSetSeparator);\nTable tableObject = new Table();\n\nList<Body> BodyList = new List<Body>();\nbool isFirstRow = true;\n// for prevent add more columns thant header keep header size\n            int headerColumnCount=0;\n        foreach (var columnSetStr in columnSetListStrArray)\n        {\n            Body tableBody = new Body();\n            // extract columns string \n            string[] columnStrArray = columnSetStr.Split(columnSeparator);\n            List<Column> columnList = new List<Column>();\n            \n            if(isFirstRow){\n                  headerColumnCount=  columnStrArray.Length;\n                isFirstRow = false;\n            }\n            int count = 0;\n            foreach (var column in columnStrArray)\n            {   \n               \n                Column columnObj = new Column();\n                \n                List<Item> itemList = new List<Item>();\n               Item item = new Item();\n               item.text = column;\n               item.type = \"TextBlock\";\n               item.wrap=true;\n               itemList.Add(item);\n               columnObj.items=itemList;\n               columnObj.type=\"Column\";\n               columnObj.width=\"stretch\";\n               columnList.Add(columnObj);\n               count ++;\n                if(count>=headerColumnCount){\n                        break;\n                }\n    }\n    tableBody.columns = columnList;\n    tableBody.type = \"ColumnSet\";\n    BodyList.Add(tableBody);\n}\ntableObject.body = BodyList;\nvar result = new Dictionary<string, object>\n{\n    { \"tableObject\", tableObject }\n};",
 				"isAsync":false
 			},
 			"skip":false,
@@ -252,7 +284,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_iDBfH-1",
 			"id":"n_vITM5",
@@ -289,5 +321,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
