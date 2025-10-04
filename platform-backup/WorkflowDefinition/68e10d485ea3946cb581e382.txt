@@ -1,51 +1,102 @@
 {
 	"appsUsed":[
-		
+		"jms",
+		"teamwork"
 	],
 	"createdTime":1759579464506,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_wUOYu",
+			"fromNodeId":"n_AgaC4",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_WgdEi",
+			"toNodeId":"n_VRxmT",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_VRxmT",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_JQQHL",
 			"type":"next"
 		}
 	],
 	"id":"68e10d485ea3946cb581e382",
 	"lastModifiedBy":43498,
 	"lcName":"dcsfv-jms",
-	"modifiedTime":1759579464506,
+	"modifiedTime":1759579489177,
 	"name":"dcsfv-jms",
 	"nodes":[
 		{
+			"context":{
+				"appName":"jms",
+				"resourceVersion":54,
+				"connectionId":"67592679b73f613be2e69445",
+				"resourceName":"jms_on_event_received"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_wUOYu-1",
-			"id":"_wUOYu",
-			"index":0,
+			"id":"n_AgaC4",
+			"index":1,
+			"inputs":{
+				"queueName":"unifyapps"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"JMS",
+			"title":"On event received",
 			"trigger":{
 				"type":"EVENT"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"teamwork",
+				"resourceVersion":2676,
+				"connectionId":"682dc94eddb04d7c722c2c69",
+				"resourceName":"teamwork_getall_tasklists",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_wUOYu-1",
-			"id":"_WgdEi",
-			"index":0,
+			"id":"n_VRxmT",
+			"index":2,
+			"inputs":{
+				"showDeleted":false,
+				"pageSize":"250",
+				"page":"1",
+				"includeArchivedProjects":false,
+				"status":"active"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Teamwork",
+			"title":"Get all task lists",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_wUOYu-1",
+			"id":"n_JQQHL",
+			"index":3,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":43498,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +110,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
