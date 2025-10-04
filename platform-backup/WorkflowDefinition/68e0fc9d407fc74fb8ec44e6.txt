@@ -58,6 +58,21 @@
 			"type":"next"
 		},
 		{
+			"fromNodeId":"n_6tLoP",
+			"name":"4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_6tLoP@4",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"n_6tLoP@4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_XwIEP",
+			"type":"next"
+		},
+		{
 			"fromNodeId":"n_ZAAml",
 			"priority":0,
 			"skip":false,
@@ -73,6 +88,13 @@
 		},
 		{
 			"fromNodeId":"_8gV8g",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_8a019",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_XwIEP",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_8a019",
@@ -97,7 +119,7 @@
 	"id":"68e0fc9d407fc74fb8ec44e6",
 	"lastModifiedBy":23949,
 	"lcName":"multi tenancy | move all assets",
-	"modifiedTime":1759579810446,
+	"modifiedTime":1759580192328,
 	"name":"Multi Tenancy | Move All assets",
 	"nodes":[
 		{
@@ -176,6 +198,12 @@
 						"id":"3",
 						"inputs":{
 							"name":"Branch 3"
+						}
+					},
+					{
+						"id":"4",
+						"inputs":{
+							"name":"Branch 4"
 						}
 					},
 					{
@@ -324,6 +352,51 @@
 		},
 		{
 			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":0,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_6tLoP@_WUbts-1@4",
+			"id":"n_6tLoP@4",
+			"index":9,
+			"inputs":{
+				"name":"Branch 4"
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1066,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_6tLoP@_WUbts-1@4",
+			"id":"n_XwIEP",
+			"index":10,
+			"inputs":{
+				"automationId":"68e10ecf677e472805d631e2",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
 				"appName":"utility_by_unifyapps",
 				"type":"APPLICATION"
 			},
@@ -332,7 +405,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_WUbts-1",
 			"id":"n_8a019",
-			"index":9,
+			"index":11,
 			"skip":false,
 			"subTitle":"Utility by UnifyApps",
 			"title":"Select an action",
@@ -350,7 +423,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_WUbts-1",
 			"id":"n_Kzv5a",
-			"index":10,
+			"index":12,
 			"inputs":{
 				"result":{
 					"result":"success"
@@ -379,5 +452,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
