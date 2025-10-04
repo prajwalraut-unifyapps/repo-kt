@@ -1,0 +1,30 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759563729594,
+	"deleted":false,
+	"edges":[
+		
+	],
+	"id":"68e0cfd11d8bca1f3b956bfc",
+	"lastModifiedBy":175325,
+	"lcName":"changesetlocalevpifrjcpa4k",
+	"modifiedTime":1759563729594,
+	"name":"changeSetLocalEvpIFRjCpa4K",
+	"nodes":[
+		
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
