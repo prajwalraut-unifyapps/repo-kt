@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759558398286,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_nembu",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_y373t",
+			"type":"next"
+		}
+	],
+	"id":"68e0bafe865c502cde8a8c63",
+	"lastModifiedBy":124519,
+	"lcName":"test",
+	"modifiedTime":1759558398286,
+	"name":"test",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_nembu-1",
+			"id":"_nembu",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_nembu-1",
+			"id":"_y373t",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":124519,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
