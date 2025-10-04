@@ -41,17 +41,41 @@
 			"skip":false,
 			"toNodeId":"n_XRMc8",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_ZAAml",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Kzv5a",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_XRMc8",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Kzv5a",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_6tLoP",
+			"name":"default",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Kzv5a",
+			"type":"branch"
 		}
 	],
 	"id":"68e0fc9d407fc74fb8ec44e6",
 	"lastModifiedBy":23949,
 	"lcName":"multi tenancy | move all assets",
-	"modifiedTime":1759578237194,
+	"modifiedTime":1759578904635,
 	"name":"Multi Tenancy | Move All assets",
 	"nodes":[
 		{
 			"context":{
-				"appName":"callables"
+				"appName":"callables",
+				"resourceVersion":1010,
+				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
 			"dirty":true,
@@ -59,9 +83,36 @@
 			"groupId":"_WUbts-1",
 			"id":"n_pQu77",
 			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"result":{
+							"type":"string",
+							"title":"Result"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"environmentIdList":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Environment Id List"
+						}
+					}
+				}
+			},
 			"skip":false,
 			"subTitle":"Callable",
-			"title":"Select a trigger event",
+			"title":"Trigger via automation",
 			"trigger":{
 				"type":"CALLABLE"
 			},
@@ -136,7 +187,7 @@
 			"id":"n_ZAAml",
 			"index":4,
 			"inputs":{
-				"automationId":"68e10013ea707a2087a6fc55",
+				"automationId":"68e1088c70c2f233effd889c",
 				"runtimeConnections":{},
 				"synchronous":true,
 				"version":"-1",
@@ -182,6 +233,29 @@
 			"subTitle":"Callable",
 			"title":"Select an action",
 			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1046,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_WUbts-1",
+			"id":"n_Kzv5a",
+			"index":7,
+			"inputs":{
+				"result":{
+					"result":"success"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":23949,
@@ -201,5 +275,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
