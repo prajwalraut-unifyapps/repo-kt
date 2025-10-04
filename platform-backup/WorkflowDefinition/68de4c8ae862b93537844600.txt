@@ -17,6 +17,13 @@
 			"fromNodeId":"n_UcSUx",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_8l4q3",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_8l4q3",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_Zmt8y",
 			"type":"next"
 		},
@@ -31,7 +38,7 @@
 	"id":"68de4c8ae862b93537844600",
 	"lastModifiedBy":161165,
 	"lcName":"virtusafileupload1",
-	"modifiedTime":1759583421138,
+	"modifiedTime":1759583531037,
 	"name":"VirtusafileUpload1",
 	"nodes":[
 		{
@@ -106,6 +113,47 @@
 			},
 			"context":{
 				"appName":"storage_by_unifyapps",
+				"resourceVersion":4527,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_kdzrB-1",
+			"id":"n_8l4q3",
+			"index":2,
+			"inputs":{
+				"writeThroughSessionVariables":false,
+				"object_type":"e_tcc",
+				"skipIfBlank":false,
+				"record":{
+					"fileDetails":{
+						"name":"{{ n_UcSUx.outputs.fileDetails.name }}",
+						"source":"{{ n_UcSUx.outputs.fileDetails.source }}",
+						"sourceType":"{{ n_UcSUx.outputs.fileDetails.sourceType }}",
+						"fileType":"{{ n_UcSUx.outputs.fileDetails.fileType }}",
+						"size":"{{ n_UcSUx.outputs.fileDetails.size }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.record.fileDetails.name",
+					"root.record.fileDetails.source",
+					"root.record.fileDetails.sourceType",
+					"root.record.fileDetails.fileType",
+					"root.record.fileDetails.size"
+				]
+			},
+			"context":{
+				"appName":"storage_by_unifyapps",
 				"resourceVersion":11027,
 				"resourceName":"storage_by_unifyapps_create_record",
 				"type":"APPLICATION"
@@ -115,7 +163,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_kdzrB-1",
 			"id":"n_Zmt8y",
-			"index":2,
+			"index":3,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"e_tcc",
@@ -163,7 +211,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_kdzrB-1",
 			"id":"n_HPBH8",
-			"index":3,
+			"index":4,
 			"inputs":{
 				"result":{
 					"result":"200"
@@ -192,5 +240,5 @@
 	"tags":[
 		
 	],
-	"version":15
+	"version":16
 }
