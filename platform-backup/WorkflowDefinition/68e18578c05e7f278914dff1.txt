@@ -66,7 +66,7 @@
 	"id":"68e18578c05e7f278914dff1",
 	"lastModifiedBy":44096,
 	"lcName":"publish nearest tool ",
-	"modifiedTime":1759617360152,
+	"modifiedTime":1759618267500,
 	"name":"Publish Nearest Tool ",
 	"nodes":[
 		{
@@ -350,7 +350,7 @@
 						}
 					}
 				},
-				"code":"def needQuery = false\ndef ratingQuery = null\ndef filter = null\ndef sort = null\n\nif (binding.hasVariable('rating') && rating instanceof Map && !rating.isEmpty()) {\n    def gte = null\n    def lte = null\n\n    if (rating.containsKey('greaterThanEqualToValue') && rating.greaterThanEqualToValue.toString().trim()) {\n        gte = (Double) rating.greaterThanEqualToValue\n        needQuery = true\n    }\n    if (rating.containsKey('lessThanEqualToValue') && rating.lessThanEqualToValue.toString().trim()) {\n        lte = (Double) rating.lessThanEqualToValue\n        needQuery = true\n    }\n\n    if (needQuery) {\n        def rangePart = [:]\n        if (gte != null) rangePart.gte = gte\n        if (lte != null) rangePart.lte = lte\n\n        ratingQuery = [\"range\": [\"properties.rating\": rangePart]]\n    }\n}\n\nif (binding.hasVariable('location') && location instanceof Map && location.lat && location.lon) {\n    def latVal = location.lat\n    def lonVal = location.lon\n\n    if (latVal && lonVal) {\n        def lat = (Double) latVal\n        def lon = (Double) lonVal\n\n        if (binding.hasVariable('distance') && distance.toString().trim()) {\n            needQuery = true\n            filter = [\n                \"geo_distance\": [\n                    \"distance\": distance,\n                    \"properties.location\": [\"lat\": lat, \"lon\": lon]\n                ]\n            ]\n        }\n\n        sort = [\n            \"_geo_distance\": [\n                \"properties.location\": [\"lat\": lat, \"lon\": lon],\n                \"order\": \"asc\",\n                \"unit\": \"km\",\n                \"mode\": \"min\",\n                \"distance_type\": \"arc\"\n            ]\n        ]\n    }\n}\n\ndef queryObject = null\nif (needQuery) {\n    queryObject = [\"bool\": [:]]\n\n    if (ratingQuery != null) {\n        queryObject.bool[\"must\"] = [ratingQuery]\n    }\n    if (filter != null) {\n        queryObject.bool[\"filter\"] = filter\n    }\n}\n\nreturn [\n    \"query\": queryObject ?: null,\n    \"sort\": sort ? [sort] : null\n]\n",
+				"code":"def needQuery = false\ndef ratingQuery = null\ndef storeNameQuery = null\ndef filter = null\ndef sort = null\n\nif (binding.hasVariable('rating') && rating instanceof Map && !rating.isEmpty()) {\n    def gte = null\n    def lte = null\n\n    if (rating.containsKey('greaterThanEqualToValue') && rating.greaterThanEqualToValue.toString().trim()) {\n        gte = (Double) rating.greaterThanEqualToValue\n        needQuery = true\n    }\n    if (rating.containsKey('lessThanEqualToValue') && rating.lessThanEqualToValue.toString().trim()) {\n        lte = (Double) rating.lessThanEqualToValue\n        needQuery = true\n    }\n\n    if (needQuery) {\n        def rangePart = [:]\n        if (gte != null) rangePart.gte = gte\n        if (lte != null) rangePart.lte = lte\n\n        ratingQuery = [\"range\": [\"properties.rating\": rangePart]]\n    }\n}\n\nif (binding.hasVariable('storeName') && storeName instanceof String && storeName?.trim()) {\n    storeNameQuery = [\"term\": [\"properties.storeName\": storeName]]\n    needQuery = true\n}\n\nif (binding.hasVariable('location') && location instanceof Map && location.lat && location.lon) {\n    def latVal = location.lat\n    def lonVal = location.lon\n\n    if (latVal && lonVal) {\n        def lat = (Double) latVal\n        def lon = (Double) lonVal\n\n        if (binding.hasVariable('distance') && distance.toString().trim()) {\n            needQuery = true\n            filter = [\n                \"geo_distance\": [\n                    \"distance\": distance,\n                    \"properties.location\": [\"lat\": lat, \"lon\": lon]\n                ]\n            ]\n        }\n\n        sort = [\n            \"_geo_distance\": [\n                \"properties.location\": [\"lat\": lat, \"lon\": lon],\n                \"order\": \"asc\",\n                \"unit\": \"km\",\n                \"mode\": \"min\",\n                \"distance_type\": \"arc\"\n            ]\n        ]\n    }\n}\n\ndef queryObject = null\nif (needQuery) {\n    queryObject = [\"bool\": [:]]\n\n    def mustClauses = []\n    if (storeNameQuery != null) mustClauses << storeNameQuery\n    if (ratingQuery != null) mustClauses << ratingQuery\n\n    if (!mustClauses.isEmpty()) {\n        queryObject.bool[\"must\"] = mustClauses\n    }\n\n    if (filter != null) {\n        queryObject.bool[\"filter\"] = filter\n    }\n}\n\nreturn [\n    \"query\": queryObject ?: [:],\n    \"sort\": sort ? [sort] : []\n]\n",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
@@ -743,5 +743,5 @@
 	"tags":[
 		
 	],
-	"version":20
+	"version":21
 }
