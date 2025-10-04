@@ -6,7 +6,7 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_nembu",
+			"fromNodeId":"n_1R0gZ",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"_y373t",
@@ -14,22 +14,29 @@
 		}
 	],
 	"id":"68e0bafe865c502cde8a8c63",
-	"lastModifiedBy":124519,
+	"lastModifiedBy":67744,
 	"lcName":"test",
-	"modifiedTime":1759558398286,
+	"modifiedTime":1759561265047,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":970,
+				"resourceName":"callables_from_interface"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_nembu-1",
-			"id":"_nembu",
-			"index":0,
+			"id":"n_1R0gZ",
+			"index":1,
+			"inputs":{},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger interface",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
@@ -39,13 +46,16 @@
 			"fallbackMode":"STOP",
 			"groupId":"_nembu-1",
 			"id":"_y373t",
-			"index":0,
+			"index":2,
 			"skip":false,
 			"title":"Select an app and action",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":124519,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +69,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
