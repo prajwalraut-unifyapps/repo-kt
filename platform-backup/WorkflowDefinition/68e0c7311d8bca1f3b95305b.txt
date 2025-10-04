@@ -44,14 +44,34 @@
 		},
 		{
 			"fromNodeId":"n_r2KTK",
-			"name":"loopback",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_gf4rW",
+			"toNodeId":"n_X23Cf",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_B7FGe",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_X23Cf",
 			"type":"next"
 		},
 		{
 			"fromNodeId":"n_8Lfmj",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_X23Cf",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_X23Cf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_B7FGe",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_X23Cf",
 			"name":"loopback",
 			"priority":0,
 			"skip":false,
@@ -77,7 +97,7 @@
 	"id":"68e0c7311d8bca1f3b95305b",
 	"lastModifiedBy":132116,
 	"lcName":"newconditions_insideloops_dnd (test)",
-	"modifiedTime":1759561521335,
+	"modifiedTime":1759562123994,
 	"name":"Newconditions_insideloops_DND (test)",
 	"nodes":[
 		{
@@ -241,7 +261,6 @@
 				"int1":"Two"
 			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -297,7 +316,6 @@
 				"int2":"_Unsuccessfull"
 			},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -320,6 +338,83 @@
 		},
 		{
 			"context":{
+				"appName":"loop",
+				"resourceVersion":862,
+				"resourceName":"loop_for_each",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_gf4rW@n_5B4Wa@_MXkKD-1@l@l",
+			"id":"n_X23Cf",
+			"index":7,
+			"inputs":{
+				"repeatMode":"BATCH",
+				"listSource":"{{ n_gf4rW.outputs.index }}",
+				"captureIterations":true,
+				"batchSize":5
+			},
+			"skip":false,
+			"subTitle":"Loop",
+			"title":"For each loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":1018,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_X23Cf@n_gf4rW@n_5B4Wa@_MXkKD-1@l@l@l",
+			"id":"n_B7FGe",
+			"index":8,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"gfchjk":{
+							"type":"string",
+							"title":"Gfchjk"
+						}
+					},
+					"required":[
+						"gfchjk"
+					]
+				}
+			},
+			"inputs":{},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"gfchjk":{
+							"type":"string",
+							"title":"Gfchjk"
+						}
+					},
+					"required":[
+						"gfchjk"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"callables",
 				"resourceVersion":1739,
 				"resourceName":"callables_return_to_automation",
@@ -330,7 +425,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_MXkKD-1",
 			"id":"n_Gd8Hc",
-			"index":7,
+			"index":9,
 			"inputs":{
 				"result":{
 					"output":"{{ n_r2KTK.outputs.int1 }}{{ n_8Lfmj.outputs.int2 }}"
@@ -359,5 +454,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":2
 }
