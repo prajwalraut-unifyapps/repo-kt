@@ -95,7 +95,7 @@
 	"id":"68e10013ea707a2087a6fc55",
 	"lastModifiedBy":23949,
 	"lcName":"multi tenancy | move all applications",
-	"modifiedTime":1759577710242,
+	"modifiedTime":1759577723332,
 	"name":"Multi Tenancy | Move All Applications",
 	"nodes":[
 		{
@@ -693,6 +693,11 @@
 			"type":"ACTION"
 		},
 		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.assetDetails.items.assetVersion"
+				]
+			},
 			"context":{
 				"appName":"standard_entities",
 				"resourceVersion":556,
@@ -700,7 +705,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_tT02q-1",
 			"id":"n_3MQfm",
@@ -711,7 +716,8 @@
 					"ua:type":"mappedArray",
 					"items":{
 						"assetId":"{{ n_uIfRr.outputs.items[0].assetId }}",
-						"assetClass":"{{ n_uIfRr.outputs.items[0].assetClass }}"
+						"assetClass":"{{ n_uIfRr.outputs.items[0].assetClass }}",
+						"assetVersion":"{{ n_uIfRr.outputs.items[0].assetVersion }}"
 					}
 				},
 				"envIds":{
@@ -767,5 +773,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
