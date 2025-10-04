@@ -45,7 +45,7 @@
 	"id":"68df66b77cb1ae420e9a6c7f",
 	"lastModifiedBy":44103,
 	"lcName":"slot dynamic mapping",
-	"modifiedTime":1759564801556,
+	"modifiedTime":1759566878192,
 	"name":"Slot Dynamic mapping",
 	"nodes":[
 		{
@@ -182,7 +182,7 @@
 					}
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Groovy code",
 			"type":"ACTION"
@@ -332,5 +332,5 @@
 		}
 	},
 	"standard":false,
-	"version":7
+	"version":8
 }
