@@ -9,14 +9,30 @@
 			"fromNodeId":"n_8oKd7",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_90528",
+			"toNodeId":"n_HCfug",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_HCfug",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_kwRmK",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_HCfug",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_qigzc",
 			"type":"next"
 		}
 	],
 	"id":"68e0d5541d8bca1f3b958a4b",
 	"lastModifiedBy":1234,
 	"lcName":"azure bot get user token (dnd)",
-	"modifiedTime":1759576947347,
+	"modifiedTime":1759577053438,
 	"name":"Azure Bot Get User Token (DND)",
 	"nodes":[
 		{
@@ -62,12 +78,53 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":791,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_bU1lL-1",
-			"id":"_90528",
+			"id":"n_HCfug",
 			"index":2,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_8oKd7.outputs.type }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"message"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_HCfug@_bU1lL-1@y",
+			"id":"n_kwRmK",
+			"index":3,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		},
+		{
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_HCfug@_bU1lL-1@n",
+			"id":"n_qigzc",
+			"index":4,
 			"skip":false,
 			"title":"Select an app and action",
 			"type":"ACTION"
@@ -90,5 +147,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
