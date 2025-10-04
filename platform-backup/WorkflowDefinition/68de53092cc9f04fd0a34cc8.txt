@@ -44,7 +44,7 @@
 	"id":"68de53092cc9f04fd0a34cc8",
 	"lastModifiedBy":44567,
 	"lcName":"tst",
-	"modifiedTime":1759586835639,
+	"modifiedTime":1759586862570,
 	"name":"tst",
 	"nodes":[
 		{
@@ -252,7 +252,10 @@
 			"groupId":"_dYuxR-1",
 			"id":"n_Iyzj1",
 			"index":6,
-			"inputs":{},
+			"inputs":{
+				"webJobFile":"{{ _B4pG8.outputs.result.fileDetails }}",
+				"setupFile":"{{ n_uMej7.outputs.result.fileDetails }}"
+			},
 			"options":{
 				"bulkheadConfig":{
 					"enabled":false,
@@ -326,5 +329,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
