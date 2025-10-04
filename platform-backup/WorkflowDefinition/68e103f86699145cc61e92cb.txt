@@ -175,9 +175,9 @@
 	],
 	"id":"68e103f86699145cc61e92cb",
 	"lastModifiedBy":23949,
-	"lcName":"multi tenancy | get dependencies",
-	"modifiedTime":1759577971076,
-	"name":"Multi Tenancy | Get Dependencies",
+	"lcName":"multi tenancy | get asset and its dependencies",
+	"modifiedTime":1759577983184,
+	"name":"Multi Tenancy | Get Asset and its Dependencies",
 	"nodes":[
 		{
 			"context":{
@@ -1541,5 +1541,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
