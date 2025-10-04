@@ -108,7 +108,7 @@
 	"id":"68e0c3f04061526795c498b6",
 	"lastModifiedBy":511,
 	"lcName":"looptesting1",
-	"modifiedTime":1759561190173,
+	"modifiedTime":1759561216469,
 	"name":"LoopTesting1",
 	"nodes":[
 		{
@@ -226,7 +226,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_fnth2@n_hM9Xn@_ols28-1@y@l",
 			"id":"n_yB1nW",
@@ -244,7 +244,7 @@
 					],
 					"operator":"AND"
 				},
-				"captureIterations":false
+				"captureIterations":true
 			},
 			"skip":false,
 			"subTitle":"Loop",
@@ -487,5 +487,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
