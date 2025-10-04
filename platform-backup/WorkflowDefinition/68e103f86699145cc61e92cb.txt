@@ -5,12 +5,12 @@
 	"createdTime":1759577080846,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759577986888,
+		"deployedAt":1759578407425,
 		"deployedBy":23949,
-		"deployedDefinitionId":"68e1078270c2f233effd816d",
+		"deployedDefinitionId":"68e1092770c2f233effd8b6a",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":4
+		"version":3,
+		"workflowVersion":5
 	},
 	"edges":[
 		{
@@ -176,7 +176,7 @@
 	"id":"68e103f86699145cc61e92cb",
 	"lastModifiedBy":23949,
 	"lcName":"multi tenancy | get asset and its dependencies",
-	"modifiedTime":1759578406030,
+	"modifiedTime":1759578527726,
 	"name":"Multi Tenancy | Get Asset and its Dependencies",
 	"nodes":[
 		{
@@ -234,6 +234,10 @@
 						"assetClass":{
 							"type":"string",
 							"title":"Asset Class"
+						},
+						"assetVersion":{
+							"type":"string",
+							"title":"Asset Version"
 						}
 					}
 				}
@@ -486,7 +490,8 @@
 					"ua:type":"mappedArray",
 					"items":{
 						"assetdId":"{{ n_XGIsZ.outputs.application_id }}",
-						"assetClass":"{{ n_XGIsZ.outputs.assetClass }}"
+						"assetClass":"{{ n_XGIsZ.outputs.assetClass }}",
+						"assetVersion":"{{ n_XGIsZ.outputs.assetVersion }}"
 					}
 				},
 				"ua:title":"all_dependencies",
@@ -767,7 +772,8 @@
 					"ua:type":"mappedArray",
 					"items":{
 						"assetdId":"{{ n_XGIsZ.outputs.application_id }}",
-						"assetClass":"{{ n_XGIsZ.outputs.assetClass }}"
+						"assetClass":"{{ n_XGIsZ.outputs.assetClass }}",
+						"assetVersion":"{{ n_XGIsZ.outputs.assetVersion }}"
 					}
 				},
 				"ua:title":"to_process",
@@ -1545,5 +1551,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
