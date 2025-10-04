@@ -45,7 +45,7 @@
 	"id":"6879031962d7239e6111a800",
 	"lastModifiedBy":39713,
 	"lcName":"[virtu-support-checkin-bot-fn]createadaptivecarttableendpoint",
-	"modifiedTime":1759555695561,
+	"modifiedTime":1759555712249,
 	"name":"[virtu-support-checkin-bot-fn]CreateAdaptiveCartTableEndpoint",
 	"nodes":[
 		{
@@ -260,7 +260,7 @@
 				"parameters":{
 					"columnSetSeparator":"{{ n_gP2eI.outputs.queryParams.columnSetSeparator }}",
 					"columnSeparator":"{{ n_gP2eI.outputs.queryParams.columnSeparator }}",
-					"data":"{{ n_SWWyy.outputs.result.body }}"
+					"data":"{{ n_gP2eI.outputs.body }}"
 				}
 			},
 			"skip":false,
@@ -313,5 +313,5 @@
 	"tags":[
 		
 	],
-	"version":10
+	"version":11
 }
