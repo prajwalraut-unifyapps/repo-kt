@@ -1,0 +1,30 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759579716684,
+	"deleted":false,
+	"edges":[
+		
+	],
+	"id":"68e10e44677e472805d629b8",
+	"lastModifiedBy":175325,
+	"lcName":"changesetqa2autowrbthosinf",
+	"modifiedTime":1759579716684,
+	"name":"changeSetQA2autowrBtHOSinF",
+	"nodes":[
+		
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
