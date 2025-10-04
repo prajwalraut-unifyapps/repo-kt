@@ -61,12 +61,19 @@
 			"skip":false,
 			"toNodeId":"n_3MQfm",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_3MQfm",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_1rXuq",
+			"type":"next"
 		}
 	],
 	"id":"68e10013ea707a2087a6fc55",
 	"lastModifiedBy":23949,
 	"lcName":"multi tenancy | move all applications",
-	"modifiedTime":1759576701620,
+	"modifiedTime":1759576723501,
 	"name":"Multi Tenancy | Move All Applications",
 	"nodes":[
 		{
@@ -82,6 +89,17 @@
 			"id":"n_tWXv8",
 			"index":1,
 			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"success":{
+							"type":"string",
+							"title":"Success"
+						}
+					}
+				},
 				"setup":{
 					"type":"object",
 					"additionalProperties":false,
@@ -619,6 +637,29 @@
 			"subTitle":"Standard entities by UnifyApps",
 			"title":"Submit changeset",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1046,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_tT02q-1",
+			"id":"n_1rXuq",
+			"index":9,
+			"inputs":{
+				"result":{
+					"success":"Ok"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":23949,
@@ -638,5 +679,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
