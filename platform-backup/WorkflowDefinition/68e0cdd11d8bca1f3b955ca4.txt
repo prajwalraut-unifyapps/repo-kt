@@ -9,14 +9,14 @@
 			"fromNodeId":"n_yf6kn",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_u8AWC",
+			"toNodeId":"n_96cn8",
 			"type":"next"
 		}
 	],
 	"id":"68e0cdd11d8bca1f3b955ca4",
 	"lastModifiedBy":43498,
 	"lcName":"test!",
-	"modifiedTime":1759564926762,
+	"modifiedTime":1759564933979,
 	"name":"test!",
 	"nodes":[
 		{
@@ -44,15 +44,19 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"stop"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_DVxeZ-1",
-			"id":"_u8AWC",
+			"id":"n_96cn8",
 			"index":2,
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":2721,
@@ -72,5 +76,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
