@@ -1,20 +1,20 @@
 {
 	"appsUsed":[
-		"storage_by_unifyapps"
+		"slack"
 	],
 	"createdTime":1759496007833,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759521384945,
+		"deployedAt":1759565634461,
 		"deployedBy":155543,
-		"deployedDefinitionId":"68e02a687b716b0c216d35e1",
+		"deployedDefinitionId":"68e0d742dfb5c8781f69b478",
 		"status":"DEPLOYED",
-		"version":14,
-		"workflowVersion":17
+		"version":15,
+		"workflowVersion":18
 	},
 	"edges":[
 		{
-			"fromNodeId":"n_3snC2",
+			"fromNodeId":"n_aUn4Z",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_slGxt",
@@ -31,38 +31,68 @@
 			"fromNodeId":"n_mffa7",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_qF03j",
+			"toNodeId":"n_3fXiC",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_3fXiC",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_fRU8U",
 			"type":"next"
 		}
 	],
 	"id":"68dfc747ee7bed4bfee9071c",
 	"lastModifiedBy":155543,
 	"lcName":"dwaesrg",
-	"modifiedTime":1759565632265,
+	"modifiedTime":1759566156068,
 	"name":"dwaesrg",
 	"nodes":[
 		{
 			"context":{
-				"appName":"webhooks",
-				"resourceVersion":830,
-				"resourceName":"webhooks_default"
+				"appName":"callables",
+				"resourceVersion":1003,
+				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7GtmI-1",
-			"id":"n_3snC2",
+			"id":"n_aUn4Z",
 			"index":1,
 			"inputs":{
-				"request":{
-					"contentType":"application/json"
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"ok"
+					],
+					"properties":{
+						"ok":{
+							"type":"string",
+							"title":"Ok"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"fsdf"
+					],
+					"properties":{
+						"fsdf":{
+							"type":"string",
+							"title":"Fsdf"
+						}
+					}
 				}
 			},
 			"skip":false,
-			"subTitle":"Webhook",
-			"title":"New event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"WEBHOOK"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
@@ -74,7 +104,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7GtmI-1",
 			"id":"n_slGxt",
@@ -82,7 +112,7 @@
 			"inputs":{
 				"pdfPages":[
 					{
-						"url":"https://www.unifyapps.com/"
+						"url":"https://forms.apps.isa.ae/familiarization-print"
 					}
 				],
 				"exportType":"PDF",
@@ -122,29 +152,52 @@
 		},
 		{
 			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":4520,
-				"resourceName":"storage_by_unifyapps_create_record",
+				"appName":"slack",
+				"resourceVersion":6277,
+				"connectionId":"68120aad96195b6ae3580731",
+				"resourceName":"slack_post_message_in_channel",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7GtmI-1",
-			"id":"n_qF03j",
+			"id":"n_3fXiC",
 			"index":4,
 			"inputs":{
-				"writeThroughSessionVariables":false,
-				"object_type":"testlink",
-				"skipIfBlank":false,
-				"record":{
-					"link":"{{ n_mffa7.outputs.url }}"
+				"link_names":true,
+				"messageType":"text",
+				"channel":"C08MGHNDMHS",
+				"text":"{{ n_mffa7.outputs.url }}",
+				"mrkdwn":true
+			},
+			"skip":false,
+			"subTitle":"Slack",
+			"title":"Post message",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1039,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_7GtmI-1",
+			"id":"n_fRU8U",
+			"index":5,
+			"inputs":{
+				"result":{
+					"ok":"200"
 				}
 			},
 			"skip":false,
-			"subTitle":"Storage by UnifyApps",
-			"title":"Create record",
-			"type":"ACTION"
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":155543,
@@ -164,5 +217,5 @@
 	"tags":[
 		
 	],
-	"version":18
+	"version":19
 }
