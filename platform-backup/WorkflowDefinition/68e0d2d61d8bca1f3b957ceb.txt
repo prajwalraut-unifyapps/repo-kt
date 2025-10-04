@@ -4,13 +4,21 @@
 	],
 	"createdTime":1759564502609,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759564538745,
+		"deployedBy":124029,
+		"deployedDefinitionId":"68e0d2fa1d8bca1f3b957eea",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		
 	],
 	"id":"68e0d2d61d8bca1f3b957ceb",
 	"lastModifiedBy":124029,
 	"lcName":"netsuite vendor trigger",
-	"modifiedTime":1759564536463,
+	"modifiedTime":1759568672811,
 	"name":"Netsuite vendor trigger",
 	"nodes":[
 		{
@@ -29,7 +37,7 @@
 			"inputs":{
 				"from":"2025-01-01T13:25:00",
 				"interval":1,
-				"batchSize":100
+				"batchSize":1
 			},
 			"skip":false,
 			"subTitle":"Netsuite",
@@ -57,5 +65,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
