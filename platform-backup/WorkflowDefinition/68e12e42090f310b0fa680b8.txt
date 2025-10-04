@@ -55,7 +55,7 @@
 	"id":"68e12e42090f310b0fa680b8",
 	"lastModifiedBy":188567,
 	"lcName":"test",
-	"modifiedTime":1759597961155,
+	"modifiedTime":1759598248217,
 	"name":"test",
 	"nodes":[
 		{
@@ -167,7 +167,7 @@
 			"id":"n_fY79T",
 			"index":5,
 			"inputs":{
-				"object":"\n{{ n_Fz80Z.outputs.id }}"
+				"object":"{{ n_Fz80Z.outputs.from.fromEmail }}{{ n_Fz80Z.outputs.from.fromName }}"
 			},
 			"skip":false,
 			"subTitle":"Salesforce",
@@ -219,5 +219,5 @@
 	"tags":[
 		
 	],
-	"version":16
+	"version":17
 }
