@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759579616082,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_Ex8is",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_1TEon",
+			"type":"next"
+		}
+	],
+	"id":"68e10de05ea3946cb581ed68",
+	"lastModifiedBy":30410,
+	"lcName":"callable api",
+	"modifiedTime":1759579616082,
+	"name":"callable api",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Ex8is-1",
+			"id":"_Ex8is",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Ex8is-1",
+			"id":"_1TEon",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":30410,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
