@@ -24,7 +24,7 @@
 	"id":"68e12e42090f310b0fa680b8",
 	"lastModifiedBy":188567,
 	"lcName":"test",
-	"modifiedTime":1759591837057,
+	"modifiedTime":1759592020754,
 	"name":"test",
 	"nodes":[
 		{
@@ -74,12 +74,13 @@
 						"source":"Unify_Contact",
 						"ua:type":"mappedArray",
 						"items":{
-							"LastName":"Unify"
+							"LastName":"Unify",
+							"EmailAddress":"unifyapps.com"
 						}
 					}
 				},
-				"batchSize":200,
-				"objectId":"Contact"
+				"batchSize":1,
+				"objectId":"ContactPointEmail"
 			},
 			"skip":false,
 			"subTitle":"Salesforce",
@@ -131,5 +132,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
