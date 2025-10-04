@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759575197825,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_WUbts",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_PqH9M",
+			"type":"next"
+		}
+	],
+	"id":"68e0fc9d407fc74fb8ec44e6",
+	"lastModifiedBy":23949,
+	"lcName":"multi tenancy | move all assets",
+	"modifiedTime":1759575197825,
+	"name":"Multi Tenancy | Move All assets",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_WUbts-1",
+			"id":"_WUbts",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_WUbts-1",
+			"id":"_PqH9M",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":23949,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
