@@ -67,7 +67,7 @@
 	"id":"68e08b935edfc92b0f9cb6d0",
 	"lastModifiedBy":49915,
 	"lcName":"hello 123 ",
-	"modifiedTime":1759546395231,
+	"modifiedTime":1759546409988,
 	"name":"hello 123 ",
 	"nodes":[
 		{
@@ -196,7 +196,7 @@
 					],
 					"operator":"AND"
 				},
-				"captureIterations":false
+				"captureIterations":true
 			},
 			"skip":false,
 			"subTitle":"Loop",
@@ -285,5 +285,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
