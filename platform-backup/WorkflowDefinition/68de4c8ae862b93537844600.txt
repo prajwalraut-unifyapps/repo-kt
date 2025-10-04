@@ -24,13 +24,6 @@
 			"fromNodeId":"n_8l4q3",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_Zmt8y",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_Zmt8y",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_HPBH8",
 			"type":"next"
 		}
@@ -38,7 +31,7 @@
 	"id":"68de4c8ae862b93537844600",
 	"lastModifiedBy":161165,
 	"lcName":"virtusafileupload1",
-	"modifiedTime":1759583531037,
+	"modifiedTime":1759583581841,
 	"name":"VirtusafileUpload1",
 	"nodes":[
 		{
@@ -83,12 +76,13 @@
 									"title":"fileType"
 								},
 								"size":{
-									"type":"integer",
+									"type":"number",
 									"title":"size"
 								}
 							},
 							"title":"fileDetails",
-							"additionalProperties":false
+							"additionalProperties":false,
+							"required":[]
 						}
 					}
 				}
@@ -145,56 +139,6 @@
 		{
 			"additional":{
 				"visibleOptionalFields":[
-					"root.record.fileDetails.name",
-					"root.record.fileDetails.source",
-					"root.record.fileDetails.sourceType",
-					"root.record.fileDetails.fileType",
-					"root.record.fileDetails.size"
-				]
-			},
-			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":11027,
-				"resourceName":"storage_by_unifyapps_create_record",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_kdzrB-1",
-			"id":"n_Zmt8y",
-			"index":3,
-			"inputs":{
-				"writeThroughSessionVariables":false,
-				"object_type":"e_tcc",
-				"skipIfBlank":false,
-				"record":{
-					"fileDetails":{
-						"name":"{{ n_UcSUx.outputs.fileDetails.name }}",
-						"source":"{{ n_UcSUx.outputs.fileDetails.source }}",
-						"sourceType":"{{ n_UcSUx.outputs.fileDetails.sourceType }}",
-						"fileType":"{{ n_UcSUx.outputs.fileDetails.fileType }}",
-						"size":"{{ n_UcSUx.outputs.fileDetails.size }}"
-					},
-					"id":"{{ n_UcSUx.outputs.file[0].id }}",
-					"name":"{{ n_UcSUx.outputs.file[0].name }}",
-					"url":"{{ n_UcSUx.outputs.file[0].url }}",
-					"sourceType":"{{ n_UcSUx.outputs.file[0].sourceType }}",
-					"source":"{{ n_UcSUx.outputs.file[0].source }}",
-					"fileType":"{{ n_UcSUx.outputs.file[0].fileType }}",
-					"size":"{{ n_UcSUx.outputs.file[0].size }}",
-					"type":"{{ n_UcSUx.outputs.file[0].type }}",
-					"mimeType":"{{ n_UcSUx.outputs.file[0].mimeType }}"
-				}
-			},
-			"skip":false,
-			"subTitle":"Storage by UnifyApps",
-			"title":"Create record",
-			"type":"ACTION"
-		},
-		{
-			"additional":{
-				"visibleOptionalFields":[
 					"root.result.aiJustification",
 					"root.result.status",
 					"root.result.userCommentConsistency"
@@ -211,7 +155,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_kdzrB-1",
 			"id":"n_HPBH8",
-			"index":4,
+			"index":3,
 			"inputs":{
 				"result":{
 					"result":"200"
@@ -240,5 +184,5 @@
 	"tags":[
 		
 	],
-	"version":16
+	"version":17
 }
