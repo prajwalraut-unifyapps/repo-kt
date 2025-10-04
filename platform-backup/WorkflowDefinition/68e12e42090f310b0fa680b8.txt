@@ -24,7 +24,7 @@
 	"id":"68e12e42090f310b0fa680b8",
 	"lastModifiedBy":188567,
 	"lcName":"test",
-	"modifiedTime":1759592020754,
+	"modifiedTime":1759592097419,
 	"name":"test",
 	"nodes":[
 		{
@@ -53,6 +53,11 @@
 			"type":"START"
 		},
 		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.record.objects.items.EmailDomain"
+				]
+			},
 			"context":{
 				"appName":"salesforce",
 				"resourceVersion":3428,
@@ -75,7 +80,7 @@
 						"ua:type":"mappedArray",
 						"items":{
 							"LastName":"Unify",
-							"EmailAddress":"unifyapps.com"
+							"EmailDomain":"unifyapps.com"
 						}
 					}
 				},
@@ -132,5 +137,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
