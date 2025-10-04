@@ -1,12 +1,12 @@
 {
 	"appsUsed":[
-		
+		"azure_bot"
 	],
 	"createdTime":1759565140980,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_bU1lL",
+			"fromNodeId":"n_8oKd7",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"_90528",
@@ -16,18 +16,46 @@
 	"id":"68e0d5541d8bca1f3b958a4b",
 	"lastModifiedBy":1234,
 	"lcName":"azure bot get user token (dnd)",
-	"modifiedTime":1759565140980,
+	"modifiedTime":1759576947347,
 	"name":"Azure Bot Get User Token (DND)",
 	"nodes":[
 		{
+			"context":{
+				"appName":"azure_bot",
+				"resourceVersion":3358,
+				"connectionId":"68cc4f697abc9920a1e3f4f1",
+				"resourceName":"azure_bot_on_new_message"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_bU1lL-1",
-			"id":"_bU1lL",
-			"index":0,
+			"id":"n_8oKd7",
+			"index":1,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"{{ n_8oKd7.outputs.type }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"message"
+							}
+						},
+						{
+							"property":"{{ n_8oKd7.outputs.entities[0].type }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"invoke"
+							}
+						}
+					],
+					"operator":"OR"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Azure Bot",
+			"title":"On new message",
 			"trigger":{
 				"type":"EVENT"
 			},
@@ -39,13 +67,16 @@
 			"fallbackMode":"STOP",
 			"groupId":"_bU1lL-1",
 			"id":"_90528",
-			"index":0,
+			"index":2,
 			"skip":false,
 			"title":"Select an app and action",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":1234,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +90,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
