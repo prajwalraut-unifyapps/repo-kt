@@ -9,6 +9,13 @@
 			"fromNodeId":"n_5dhTu",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_jvi3d",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_jvi3d",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_KeLQs",
 			"type":"next"
 		},
@@ -21,9 +28,9 @@
 		}
 	],
 	"id":"6879e094c50a4674d83a2671",
-	"lastModifiedBy":103171,
+	"lastModifiedBy":39713,
 	"lcName":"[virtu-support-checkin-bot-fn] createprojectmultioptionlist",
-	"modifiedTime":1759004141075,
+	"modifiedTime":1759562681464,
 	"name":"[virtu-support-checkin-bot-fn] CreateProjectMultiOptionList",
 	"nodes":[
 		{
@@ -66,6 +73,28 @@
 		{
 			"context":{
 				"appName":"code_by_unifyapps",
+				"resourceVersion":156,
+				"resourceName":"code_by_unifyapps_csharp",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_91yYw-1",
+			"id":"n_jvi3d",
+			"index":2,
+			"inputs":{
+				"code":"\nusing System;\nusing System.IO;\nusing System.Threading.Tasks;\nusing Microsoft.AspNetCore.Mvc;\nusing Microsoft.Azure.WebJobs;\nusing Microsoft.Azure.WebJobs.Extensions.Http;\nusing Microsoft.AspNetCore.Http;\nusing Microsoft.Extensions.Logging;\nusing Newtonsoft.Json;\n// using virtusa.eag;\nusing System.Collections.Generic;\n\n\npublic class RequestProjectList {\n      public string id { get; set; }\n      public object projectID { get; set; }\n      public string projectName { get; set; }\n      public string projectNumber { get; set; }\n      public string projectType { get; set; }\n      public string projectDesc { get; set; }\n      public DateTime projectStartDate { get; set; }\n      public DateTime projectCompletionDate { get; set; }\n      public DateTime? projectClosedDate { get; set; }\n      public string projectStatusCode { get; set; }\n      public string projectStatusName { get; set; }\n      public string projectSbuSegment { get; set; }\n      public string customerNumber { get; set; }\n      public string customerName { get; set; }\n      public object segmentId { get; set; }\n      public string deliveryCenter { get; set; }\n      public object createdDate { get; set; }\n      public DateTime lastUpdatedDate { get; set; }\n      public string projectManagerPersonNumber { get; set; }\n      public string projectManagerEmailAddress { get; set; }\n      public string projectManagerName{get;set;}\n      \n      public string projectCode { get; set; }\n      public string account { get; set; }\n      public string accountID { get; set; }\n      public string sourceTemplateNumber { get; set; }\n      public string templateFlag { get; set; }\n      public string typeDescription { get; set; }\n      public object projectTypeID { get; set; }\n      public string sourceApplicationCode { get; set; }\n      public object SBUSegmentID { get; set; }\n      public object legalEntityID { get; set; }\n      public string legalEntityName { get; set; }\n      public string scheduledFlag { get; set; }\n      public DateTime? scheduledStartDate { get; set; }\n      public DateTime? scheduledFinishDate { get; set; }\n      public object targetStartDate { get; set; }\n      public object targetFinishDate { get; set; }\n      public string sourceProjectReference { get; set; }\n      public string organizationName { get; set; }\n      \n      public string projectPriorityCode { get; set; }\n      public string outlineDisplayLevel { get; set; }\n      public string planningProjectFlag { get; set; }\n      public string serviceTypeCode { get; set; }\n      public string workTypeName { get; set; }\n      public string limitToTxnControls { get; set; }\n      public string projectCurrencyCode { get; set; }\n      public string currencyConvRateType { get; set; }\n      public string currencyConvDateTypeCode { get; set; }\n      public object currencyConvDate { get; set; }\n      public string cintEligibleFlag { get; set; }\n      public string cintRateSchName { get; set; }\n      public object cintStopDate { get; set; }\n      public string assetAllocationMethodCode { get; set; }\n      public string capitalEventProcessingCode { get; set; }\n      public string allowCrossChargeFlag { get; set; }\n      public string ccProcessLaborFlag { get; set; }\n      public string laborTpScheduleName { get; set; }\n      public object laborTpFixedDate { get; set; }\n      public string ccProcessNLFlag { get; set; }\n      public string nlTpScheduleName { get; set; }\n      public object nlTpFixedDate { get; set; }\n      public string kpiNotificationEnabled { get; set; }\n      public string kpiNotificationRecipients { get; set; }\n      public string kpiNotificationIncludeNotes { get; set; }\n      public string attributeCategory { get; set; }\n      public string attribute1 { get; set; }\n      public string attribute2 { get; set; }\n      public string practiceName { get; set; }\n      public string opportunityStatus { get; set; }\n      public object carryingOutOrganizationID { get; set; }\n      public string department { get; set; }\n      public string lastUpdateBy { get; set; }\n      public object orgId { get; set; }\n      public DateTime projectStatusEffectiveDate { get; set; }\n      public string segmentName { get; set; }\n      public string pmProductCode { get; set; }\n      public string businessUnit { get; set; }\n      public object expectedApprovalDate { get; set; }\n      public DateTime projectFinishDate { get; set; }\n      public long clientID { get; set; }\n      public string clientName { get; set; }\n      public string checkinProjectId {get;set;} }\n\npublic class OptionItem {\n        public string title { get; set; }\n        public string value { get; set; } }\n\n\n public List<OptionItem> createOptionList(List<RequestProjectList> v5ProjectList) {\n    List<OptionItem> optionItemList = new List<OptionItem>();\n    foreach (var project in v5ProjectList)\n    {\n        var item = new OptionItem();\n        item.title = project.projectName + \" - (\" + project.projectNumber + \")\";\n        item.value = project.projectNumber + \":\" + project.projectName + \":\" + project.projectManagerName + \":\" + project.projectManagerEmailAddress + \":\" + project.checkinProjectId;\n        optionItemList.Add(item);\n    }\n    return optionItemList; }\n\n\nvar v5ProjectList = JsonConvert.DeserializeObject<List<RequestProjectList>>(requestBody);\n// name = name ?? data?.name;\nOptionListCreator optionListCreator = new OptionListCreator();\nList<OptionItem> itemList = createOptionList(v5ProjectList);\n\nvar resultObject = new Dictionary<string, object>\n{ { \"itemList\", itemList } };\n\nresultObject",
+				"isAsync":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute CSharp script",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
 				"resourceVersion":803,
 				"resourceName":"code_by_unifyapps_groovy",
 				"type":"APPLICATION"
@@ -75,7 +104,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_91yYw-1",
 			"id":"n_KeLQs",
-			"index":2,
+			"index":3,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -131,7 +160,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_91yYw-1",
 			"id":"n_eW1fE",
-			"index":3,
+			"index":4,
 			"inputs":{
 				"streamingCompleted":true,
 				"responseName":"200_200",
@@ -161,5 +190,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
