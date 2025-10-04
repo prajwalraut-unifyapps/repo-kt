@@ -5,12 +5,12 @@
 	"createdTime":1756550692239,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1756551640972,
-		"deployedBy":569,
-		"deployedDefinitionId":"68b2d9cfe482c576c90c0ece",
-		"status":"PAUSED",
-		"version":3,
-		"workflowVersion":3
+		"deployedAt":1759577368344,
+		"deployedBy":161930,
+		"deployedDefinitionId":"68e105186699145cc61ea099",
+		"status":"DEPLOYED",
+		"version":4,
+		"workflowVersion":4
 	},
 	"edges":[
 		{
@@ -220,7 +220,7 @@
 	"id":"68b2d624e482c576c90c021b",
 	"lastModifiedBy":161930,
 	"lcName":"[dnt] on creation child tenant publisher",
-	"modifiedTime":1759577365970,
+	"modifiedTime":1759577378655,
 	"name":"[DNT] On Creation Child Tenant Publisher",
 	"nodes":[
 		{
@@ -1781,5 +1781,5 @@
 		}
 	},
 	"standard":false,
-	"version":4
+	"version":5
 }
