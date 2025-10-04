@@ -58,7 +58,7 @@
 	"id":"68e18578c05e7f278914dff1",
 	"lastModifiedBy":15430,
 	"lcName":"publish nearest tool ",
-	"modifiedTime":1759610596554,
+	"modifiedTime":1759610644802,
 	"name":"Publish Nearest Tool ",
 	"nodes":[
 		{
@@ -191,7 +191,10 @@
 					]
 				}
 			},
-			"inputs":{},
+			"inputs":{
+				"lat":25.18813,
+				"long":55.29744
+			},
 			"outputSchema":{
 				"dynamic":false,
 				"schema":{
@@ -713,5 +716,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
