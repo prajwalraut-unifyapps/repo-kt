@@ -24,7 +24,7 @@
 	"id":"68e12e42090f310b0fa680b8",
 	"lastModifiedBy":188567,
 	"lcName":"test",
-	"modifiedTime":1759592097419,
+	"modifiedTime":1759595413656,
 	"name":"test",
 	"nodes":[
 		{
@@ -55,7 +55,7 @@
 		{
 			"additional":{
 				"visibleOptionalFields":[
-					"root.record.objects.items.EmailDomain"
+					"root.record.objects.items.Email"
 				]
 			},
 			"context":{
@@ -74,18 +74,58 @@
 			"inputs":{
 				"allOrNone":true,
 				"objectSourceResourceName":"salesforce_fetch_object",
-				"record":{
-					"objects":{
-						"source":"Unify_Contact",
-						"ua:type":"mappedArray",
-						"items":{
-							"LastName":"Unify",
-							"EmailDomain":"unifyapps.com"
-						}
-					}
+				"batchSize":200,
+				"objectId":"Custom Contact Details"
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"global":false
 				},
-				"batchSize":1,
-				"objectId":"ContactPointEmail"
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"STOP",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
 			},
 			"skip":false,
 			"subTitle":"Salesforce",
@@ -137,5 +177,5 @@
 	"tags":[
 		
 	],
-	"version":10
+	"version":11
 }
