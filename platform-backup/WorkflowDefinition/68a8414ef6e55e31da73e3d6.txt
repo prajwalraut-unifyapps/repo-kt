@@ -5,12 +5,12 @@
 	"createdTime":1755857230762,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1755860704976,
+		"deployedAt":1759580280928,
 		"deployedBy":46209,
-		"deployedDefinitionId":"68a84eddf6e55e31da74cb85",
+		"deployedDefinitionId":"68e11078c15265445ccff625",
 		"status":"DEPLOYED",
-		"version":3,
-		"workflowVersion":3
+		"version":4,
+		"workflowVersion":4
 	},
 	"edges":[
 		{
@@ -24,7 +24,7 @@
 	"id":"68a8414ef6e55e31da73e3d6",
 	"lastModifiedBy":46209,
 	"lcName":"test-hjhj",
-	"modifiedTime":1759580279310,
+	"modifiedTime":1759580285963,
 	"name":"test-hjhj",
 	"nodes":[
 		{
@@ -104,5 +104,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
