@@ -1,16 +1,16 @@
 {
 	"appsUsed":[
-		"slack"
+		"storage_by_unifyapps"
 	],
 	"createdTime":1759496007833,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759565634461,
+		"deployedAt":1759566158183,
 		"deployedBy":155543,
-		"deployedDefinitionId":"68e0d742dfb5c8781f69b478",
+		"deployedDefinitionId":"68e0d94ddfb5c8781f69bf2a",
 		"status":"DEPLOYED",
-		"version":15,
-		"workflowVersion":18
+		"version":16,
+		"workflowVersion":19
 	},
 	"edges":[
 		{
@@ -31,11 +31,11 @@
 			"fromNodeId":"n_mffa7",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_3fXiC",
+			"toNodeId":"n_R268j",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_3fXiC",
+			"fromNodeId":"n_R268j",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_fRU8U",
@@ -45,7 +45,7 @@
 	"id":"68dfc747ee7bed4bfee9071c",
 	"lastModifiedBy":155543,
 	"lcName":"dwaesrg",
-	"modifiedTime":1759566156068,
+	"modifiedTime":1759566190595,
 	"name":"dwaesrg",
 	"nodes":[
 		{
@@ -152,28 +152,28 @@
 		},
 		{
 			"context":{
-				"appName":"slack",
-				"resourceVersion":6277,
-				"connectionId":"68120aad96195b6ae3580731",
-				"resourceName":"slack_post_message_in_channel",
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":4527,
+				"resourceName":"storage_by_unifyapps_create_record",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7GtmI-1",
-			"id":"n_3fXiC",
+			"id":"n_R268j",
 			"index":4,
 			"inputs":{
-				"link_names":true,
-				"messageType":"text",
-				"channel":"C08MGHNDMHS",
-				"text":"{{ n_mffa7.outputs.url }}",
-				"mrkdwn":true
+				"writeThroughSessionVariables":false,
+				"object_type":"testlink",
+				"skipIfBlank":false,
+				"record":{
+					"link":"{{ n_mffa7.outputs.url }}"
+				}
 			},
 			"skip":false,
-			"subTitle":"Slack",
-			"title":"Post message",
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create record",
 			"type":"ACTION"
 		},
 		{
@@ -217,5 +217,5 @@
 	"tags":[
 		
 	],
-	"version":19
+	"version":20
 }
