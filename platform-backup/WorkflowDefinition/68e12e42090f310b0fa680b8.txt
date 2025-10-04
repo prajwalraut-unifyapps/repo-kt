@@ -32,7 +32,7 @@
 	"id":"68e12e42090f310b0fa680b8",
 	"lastModifiedBy":188567,
 	"lcName":"test",
-	"modifiedTime":1759590005871,
+	"modifiedTime":1759590061916,
 	"name":"test",
 	"nodes":[
 		{
@@ -42,7 +42,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_oMFxq-1",
 			"id":"n_CNj4T",
@@ -76,7 +76,7 @@
 			"index":2,
 			"inputs":{
 				"toCreate":false,
-				"searchQuery":"unifyapps.com",
+				"searchQuery":"from:unifyapps.com",
 				"count":1
 			},
 			"skip":false,
@@ -93,7 +93,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_oMFxq-1",
 			"id":"n_bo2QC",
@@ -127,7 +127,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_oMFxq-1",
 			"id":"n_5KUgE",
@@ -163,5 +163,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
