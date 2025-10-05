@@ -123,25 +123,11 @@
 			"fromNodeId":"n_nST1M@1",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_PLMxF",
+			"toNodeId":"_XJ4ei",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"_PLMxF",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_I1uNl",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_I1uNl",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_BWkSS",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_BWkSS",
+			"fromNodeId":"_XJ4ei",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_1v1ta",
@@ -865,7 +851,7 @@
 	"id":"68c6239b79f7e65c8a16452f",
 	"lastModifiedBy":59995,
 	"lcName":"infra | starrocks | alert |  table health",
-	"modifiedTime":1759453759472,
+	"modifiedTime":1759660063413,
 	"name":"INFRA | STARROCKS | ALERT |  Table health",
 	"nodes":[
 		{
@@ -875,7 +861,7 @@
 				"resourceName":"schedule_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"n_LMBIr",
@@ -903,7 +889,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"n_96ZBq",
@@ -979,7 +965,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"n_cd79r",
@@ -1030,7 +1016,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_auxBn",
@@ -1099,7 +1085,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"n_A4kqi",
@@ -1198,7 +1184,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_fimnV",
@@ -1426,7 +1412,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"n_U8Jua",
@@ -1745,7 +1731,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"n_CWqg9",
@@ -2058,7 +2044,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_6VeEl",
@@ -2397,7 +2383,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_Bfd6E",
@@ -2730,7 +2716,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_D05iT",
@@ -3079,7 +3065,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_cAiLs",
@@ -3382,7 +3368,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_gVB1y",
@@ -3695,7 +3681,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"n_WOcYr",
@@ -3716,7 +3702,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_WOcYr@_jMFmS-1@l",
 			"id":"n_nST1M",
@@ -3783,7 +3769,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@1",
 			"id":"n_nST1M@1",
@@ -3796,332 +3782,32 @@
 			"type":"BRANCH_CONDITION"
 		},
 		{
-			"additional":{
-				"xsdSchemaConfig":{
-					"root":{}
-				}
-			},
 			"context":{
-				"appName":"custom_http_endpoint",
-				"resourceVersion":10,
-				"resourceName":"custom_http_endpoint_execute",
+				"appName":"callables",
+				"resourceVersion":1026,
+				"resourceName":"callables_call_automation",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@1",
-			"id":"_PLMxF",
+			"id":"_XJ4ei",
 			"index":17,
 			"inputs":{
-				"isAsync":false,
-				"enableProxy":false,
-				"requestTimeoutInSecs":-1,
-				"httpMethod":"POST",
-				"body":{},
-				"connectionType":"DIRECT",
-				"sslVerify":false,
-				"path":"/internal/sql-report/report-configs",
-				"responseSchema":{
-					"type":"object",
-					"additionalProperties":false,
-					"properties":{
-						"routineLoad":{
-							"type":"object",
-							"properties":{
-								"columnJsonPaths":{
-									"type":"array",
-									"items":{
-										"type":"string"
-									},
-									"title":"columnJsonPaths"
-								},
-								"columns":{
-									"type":"array",
-									"items":{
-										"type":"string"
-									},
-									"title":"columns"
-								}
-							},
-							"title":"routineLoad",
-							"additionalProperties":false
-						},
-						"table":{
-							"type":"object",
-							"properties":{
-								"buckets":{
-									"type":"integer",
-									"title":"buckets"
-								},
-								"columnDefinitions":{
-									"type":"array",
-									"items":{
-										"type":"object",
-										"properties":{
-											"name":{
-												"type":"string",
-												"title":"name"
-											},
-											"type":{
-												"type":"string",
-												"title":"type"
-											}
-										},
-										"additionalProperties":false
-									},
-									"title":"columnDefinitions"
-								},
-								"distributionKeys":{
-									"type":"array",
-									"items":{
-										"type":"string"
-									},
-									"title":"distributionKeys"
-								},
-								"external":{
-									"type":"boolean",
-									"title":"external"
-								},
-								"primaryKeys":{
-									"type":"array",
-									"items":{
-										"type":"string"
-									},
-									"title":"primaryKeys"
-								},
-								"type":{
-									"type":"string",
-									"title":"type"
-								}
-							},
-							"title":"table",
-							"additionalProperties":false
-						}
-					}
-				},
-				"baseUrl":"{{ n_96ZBq.outputs.baseInternalUrl }}",
-				"httpVersion":"HTTP_2",
-				"queryParamsList":[
-					{
-						"key":"reportGroup",
-						"value":"PLATFORM"
-					},
-					{
-						"key":"reportType",
-						"value":"{{ n_WOcYr.outputs.item.TableName }}"
-					}
-				],
-				"responseContentType":"application/json",
-				"headersList":[],
-				"authType":"CUSTOM",
-				"requestContentType":"application/json",
-				"ignoreTrailingSlashes":false,
-				"certificateType":"CERT_STRING"
-			},
-			"skip":false,
-			"subTitle":"Fetch Report Config",
-			"title":"Execute REST request",
-			"type":"ACTION"
-		},
-		{
-			"additional":{
-				"xsdSchemaConfig":{
-					"root":{}
-				}
-			},
-			"context":{
-				"appName":"utility_by_unifyapps",
-				"resourceVersion":446,
-				"resourceName":"utility_by_unifyapps_to_json_object",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@1",
-			"id":"n_I1uNl",
-			"index":18,
-			"inputs":{
-				"jsonSchema":{
-					"type":"object",
-					"additionalProperties":false,
-					"properties":{
-						"partitions":{
-							"type":"string",
-							"title":"partitions"
-						},
-						"partial_update":{
-							"type":"string",
-							"title":"partial_update"
-						},
-						"columnToColumnExpr":{
-							"type":"string",
-							"title":"columnToColumnExpr"
-						},
-						"maxBatchIntervalS":{
-							"type":"string",
-							"title":"maxBatchIntervalS"
-						},
-						"partial_update_mode":{
-							"type":"string",
-							"title":"partial_update_mode"
-						},
-						"whereExpr":{
-							"type":"string",
-							"title":"whereExpr"
-						},
-						"dataFormat":{
-							"type":"string",
-							"title":"dataFormat"
-						},
-						"timezone":{
-							"type":"string",
-							"title":"timezone"
-						},
-						"format":{
-							"type":"string",
-							"title":"format"
-						},
-						"log_rejected_record_num":{
-							"type":"string",
-							"title":"log_rejected_record_num"
-						},
-						"taskTimeoutSecond":{
-							"type":"string",
-							"title":"taskTimeoutSecond"
-						},
-						"json_root":{
-							"type":"string",
-							"title":"json_root"
-						},
-						"maxFilterRatio":{
-							"type":"string",
-							"title":"maxFilterRatio"
-						},
-						"strict_mode":{
-							"type":"string",
-							"title":"strict_mode"
-						},
-						"jsonpaths":{
-							"type":"string",
-							"title":"jsonpaths"
-						},
-						"taskConsumeSecond":{
-							"type":"string",
-							"title":"taskConsumeSecond"
-						},
-						"desireTaskConcurrentNum":{
-							"type":"string",
-							"title":"desireTaskConcurrentNum"
-						},
-						"maxErrorNum":{
-							"type":"string",
-							"title":"maxErrorNum"
-						},
-						"strip_outer_array":{
-							"type":"string",
-							"title":"strip_outer_array"
-						},
-						"currentTaskConcurrentNum":{
-							"type":"string",
-							"title":"currentTaskConcurrentNum"
-						},
-						"maxBatchRows":{
-							"type":"string",
-							"title":"maxBatchRows"
-						}
-					}
-				},
-				"jsonString":"{{ n_WOcYr.outputs.item.JobProperties }}"
-			},
-			"skip":false,
-			"subTitle":"Utility by UnifyApps",
-			"title":"Deserialise string to JSON object",
-			"type":"ACTION"
-		},
-		{
-			"additional":{
-				"visibleOptionalFields":[
-					"root.parameters.columnsFromConfig.items",
-					"root.parameters.columnsFromRoutineLoad.items"
-				]
-			},
-			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":448,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@1",
-			"id":"_BWkSS",
-			"index":19,
-			"inputs":{
-				"output":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"shouldSetup",
-						"columnsFromArray",
-						"columnsFromRoutineLoad"
-					],
-					"properties":{
-						"shouldSetup":{
-							"type":"boolean",
-							"title":"Should Setup"
-						},
-						"columnsFromArray":{
-							"type":"array",
-							"items":{
-								"type":"string"
-							},
-							"title":"Columns From Array"
-						},
-						"columnsFromRoutineLoad":{
-							"type":"array",
-							"items":{
-								"type":"string"
-							},
-							"title":"Columns From Routine Load"
-						}
-					}
-				},
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[],
-					"properties":{
-						"columnsFromConfig":{
-							"type":"string",
-							"title":"Columns From Config"
-						},
-						"columnsFromRoutineLoad":{
-							"type":"array",
-							"items":{
-								"type":"string"
-							},
-							"title":"Columns From Routine Load"
-						}
-					}
-				},
-				"code":"if (!binding.hasVariable('columnsFromConfig') || !binding.hasVariable('columnsFromRoutineLoad')) {\n  return [shouldSetup: false]\n}\n\n// Remove brackets and quotes, then split by comma, and trim spaces\ndef cleanedString = columnsFromConfig.replaceAll('[\\\\[\\\\]\"]', '')\ndef columnsArray = cleanedString.split(',').collect { it.trim() }\n\n// columnsFromRoutineLoad is now a flat list\ndef routineColumns = columnsFromRoutineLoad[0]\n\n// Compare both count and values (order-sensitive)\ndef setup = !(columnsArray == routineColumns)\nreturn [shouldSetup: setup, columnsFromArray: columnsArray, columnsFromRoutineLoad: routineColumns]",
-				"compile_static":false,
-				"captureStdOutput":false,
+				"automationId":"68e2445e03f2967ff7fd2eaa",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
 				"parameters":{
-					"columnsFromConfig":"{{ n_I1uNl.outputs.result.jsonpaths }}",
-					"columnsFromRoutineLoad":{
-						"source":"{{ _PLMxF.outputs.result.routineLoad.columnJsonPaths }}",
-						"ua:type":"mappedArray"
-					}
+					"jobProperties":"{{ n_WOcYr.outputs.item.JobProperties }}",
+					"tableName":"{{ n_WOcYr.outputs.item.TableName }}"
 				}
 			},
 			"skip":false,
-			"subTitle":"Code by UnifyApps",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
 		},
 		{
 			"context":{
@@ -4135,11 +3821,11 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@1",
 			"id":"n_1v1ta",
-			"index":20,
+			"index":18,
 			"inputs":{
 				"filters":[
 					{
-						"property":"{{ _BWkSS.outputs.result.shouldSetup }}",
+						"property":"{{ _XJ4ei.outputs.shouldSetup }}",
 						"filter":{
 							"operator":"EQUAL",
 							"value":"true"
@@ -4161,11 +3847,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_1v1ta@n_nST1M@n_WOcYr@_jMFmS-1@l@1@y",
 			"id":"_z0WSp",
-			"index":21,
+			"index":19,
 			"inputs":{
 				"itemToAdd":{
 					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
@@ -4198,11 +3884,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@2",
 			"id":"n_nST1M@2",
-			"index":22,
+			"index":20,
 			"inputs":{
 				"name":"Bucket "
 			},
@@ -4223,11 +3909,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@2",
 			"id":"_zNca6",
-			"index":23,
+			"index":21,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -4444,11 +4130,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@2",
 			"id":"n_ab9zj",
-			"index":24,
+			"index":22,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -4540,11 +4226,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@2",
 			"id":"n_bY8K0",
-			"index":25,
+			"index":23,
 			"inputs":{
 				"filters":[
 					{
@@ -4570,11 +4256,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_bY8K0@n_nST1M@n_WOcYr@_jMFmS-1@l@2@y",
 			"id":"n_jqjfO",
-			"index":26,
+			"index":24,
 			"inputs":{
 				"itemToAdd":{
 					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
@@ -4602,11 +4288,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"n_nST1M@3",
-			"index":27,
+			"index":25,
 			"inputs":{
 				"name":"Storage Size"
 			},
@@ -4622,11 +4308,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"n_6a9km",
-			"index":28,
+			"index":26,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -4714,11 +4400,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"n_d5lsD",
-			"index":29,
+			"index":27,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -4798,11 +4484,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"_vqt0t",
-			"index":30,
+			"index":28,
 			"inputs":{
 				"filters":[
 					{
@@ -4828,11 +4514,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_vqt0t@n_nST1M@n_WOcYr@_jMFmS-1@l@3@y",
 			"id":"_6HtcA",
-			"index":31,
+			"index":29,
 			"inputs":{
 				"itemToAdd":{
 					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
@@ -4867,11 +4553,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@4",
 			"id":"n_nST1M@4",
-			"index":32,
+			"index":30,
 			"inputs":{
 				"name":"persistent index"
 			},
@@ -4892,11 +4578,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@4",
 			"id":"_j3OdX",
-			"index":33,
+			"index":31,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -5027,11 +4713,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@4",
 			"id":"_6AG7s",
-			"index":34,
+			"index":32,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -5082,11 +4768,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@4",
 			"id":"n_LEVUH",
-			"index":35,
+			"index":33,
 			"inputs":{
 				"filters":[
 					{
@@ -5112,11 +4798,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_LEVUH@n_nST1M@n_WOcYr@_jMFmS-1@l@4@y",
 			"id":"n_NSutB",
-			"index":36,
+			"index":34,
 			"inputs":{
 				"itemToAdd":{
 					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
@@ -5143,11 +4829,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@5",
 			"id":"n_nST1M@5",
-			"index":37,
+			"index":35,
 			"inputs":{
 				"name":"compaction score"
 			},
@@ -5168,11 +4854,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@5",
 			"id":"_BuzLR",
-			"index":38,
+			"index":36,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -5407,11 +5093,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@5",
 			"id":"n_OsTze",
-			"index":39,
+			"index":37,
 			"inputs":{
 				"filters":[
 					{
@@ -5437,11 +5123,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_OsTze@n_nST1M@n_WOcYr@_jMFmS-1@l@5@y",
 			"id":"n_fIxNz",
-			"index":40,
+			"index":38,
 			"inputs":{
 				"itemToAdd":{
 					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
@@ -5473,11 +5159,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@6",
 			"id":"n_nST1M@6",
-			"index":41,
+			"index":39,
 			"inputs":{
 				"name":"routine load ingestion lag"
 			},
@@ -5498,11 +5184,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@6",
 			"id":"n_KMp2i",
-			"index":42,
+			"index":40,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -5593,11 +5279,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@6",
 			"id":"n_5tffR",
-			"index":43,
+			"index":41,
 			"inputs":{
 				"filters":[
 					{
@@ -5623,11 +5309,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_5tffR@n_nST1M@n_WOcYr@_jMFmS-1@l@6@y",
 			"id":"n_HYspD",
-			"index":44,
+			"index":42,
 			"inputs":{
 				"itemToAdd":{
 					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
@@ -5651,11 +5337,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@7",
 			"id":"n_nST1M@7",
-			"index":45,
+			"index":43,
 			"inputs":{
 				"name":"missing next partition"
 			},
@@ -5671,11 +5357,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@7",
 			"id":"_1fTuQ",
-			"index":46,
+			"index":44,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -5768,11 +5454,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@7",
 			"id":"_Y9MIK",
-			"index":47,
+			"index":45,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -5860,11 +5546,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@7",
 			"id":"n_h8mwo",
-			"index":48,
+			"index":46,
 			"inputs":{
 				"filters":[
 					{
@@ -5890,11 +5576,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_h8mwo@n_nST1M@n_WOcYr@_jMFmS-1@l@7@y",
 			"id":"n_cFMH1",
-			"index":49,
+			"index":47,
 			"inputs":{
 				"itemToAdd":{
 					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
@@ -5927,11 +5613,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_aXMZM",
-			"index":50,
+			"index":48,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -6071,11 +5757,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_RG5N7",
-			"index":51,
+			"index":49,
 			"inputs":{
 				"filters":[
 					{
@@ -6107,11 +5793,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_RG5N7@_jMFmS-1@y",
 			"id":"_WBvio",
-			"index":52,
+			"index":50,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -6147,11 +5833,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_RG5N7@_jMFmS-1@y",
 			"id":"_Ed4F0",
-			"index":53,
+			"index":51,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -6184,11 +5870,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_RG5N7@_jMFmS-1@n",
 			"id":"_EQKPq",
-			"index":54,
+			"index":52,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -6224,11 +5910,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_RG5N7@_jMFmS-1@n",
 			"id":"_HmRJS",
-			"index":55,
+			"index":53,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -6256,11 +5942,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"n_3FUqO",
-			"index":56,
+			"index":54,
 			"inputs":{
 				"automationId":"68de72f25b11474238866535",
 				"runtimeConnections":{},
@@ -6289,11 +5975,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_9xKNR",
-			"index":57,
+			"index":55,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -6428,11 +6114,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_6H2OQ",
-			"index":58,
+			"index":56,
 			"inputs":{
 				"filters":[
 					{
@@ -6464,11 +6150,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_6H2OQ@_jMFmS-1@y",
 			"id":"_CeBOO",
-			"index":59,
+			"index":57,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -6504,11 +6190,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_6H2OQ@_jMFmS-1@y",
 			"id":"_xe7MC",
-			"index":60,
+			"index":58,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -6541,11 +6227,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_6H2OQ@_jMFmS-1@n",
 			"id":"_ODwaO",
-			"index":61,
+			"index":59,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -6581,11 +6267,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_6H2OQ@_jMFmS-1@n",
 			"id":"_PA7QE",
-			"index":62,
+			"index":60,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -6613,11 +6299,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"n_7eEkF",
-			"index":63,
+			"index":61,
 			"inputs":{
 				"automationId":"68de9e4e0e9d387c5aab02d2",
 				"runtimeConnections":{},
@@ -6646,11 +6332,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_DKDTU",
-			"index":64,
+			"index":62,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -6785,11 +6471,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_PaFnz",
-			"index":65,
+			"index":63,
 			"inputs":{
 				"filters":[
 					{
@@ -6821,11 +6507,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_PaFnz@_jMFmS-1@y",
 			"id":"_zFyJ8",
-			"index":66,
+			"index":64,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -6861,11 +6547,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_PaFnz@_jMFmS-1@y",
 			"id":"_ANDa3",
-			"index":67,
+			"index":65,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -6898,11 +6584,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_PaFnz@_jMFmS-1@n",
 			"id":"_izaqB",
-			"index":68,
+			"index":66,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -6938,11 +6624,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_PaFnz@_jMFmS-1@n",
 			"id":"_Wv2bW",
-			"index":69,
+			"index":67,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -6970,11 +6656,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"n_qRMpV",
-			"index":70,
+			"index":68,
 			"inputs":{
 				"automationId":"68df10f132f8572ada24c781",
 				"runtimeConnections":{},
@@ -7002,11 +6688,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_3dH62",
-			"index":71,
+			"index":69,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -7144,11 +6830,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_wcAiW",
-			"index":72,
+			"index":70,
 			"inputs":{
 				"filters":[
 					{
@@ -7180,11 +6866,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_wcAiW@_jMFmS-1@y",
 			"id":"_7hrr3",
-			"index":73,
+			"index":71,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -7220,11 +6906,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_wcAiW@_jMFmS-1@y",
 			"id":"_TNCsd",
-			"index":74,
+			"index":72,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -7257,11 +6943,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_wcAiW@_jMFmS-1@n",
 			"id":"_7DI3g",
-			"index":75,
+			"index":73,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -7297,11 +6983,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_wcAiW@_jMFmS-1@n",
 			"id":"_nHiIA",
-			"index":76,
+			"index":74,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -7327,11 +7013,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"n_wIqCh",
-			"index":77,
+			"index":75,
 			"skip":false,
 			"subTitle":"Callable",
 			"title":"Select an action",
@@ -7350,11 +7036,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_oSfM0",
-			"index":78,
+			"index":76,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -7489,11 +7175,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_sbw6Y",
-			"index":79,
+			"index":77,
 			"inputs":{
 				"filters":[
 					{
@@ -7525,11 +7211,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_sbw6Y@_jMFmS-1@y",
 			"id":"_W50DB",
-			"index":80,
+			"index":78,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -7565,11 +7251,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_sbw6Y@_jMFmS-1@y",
 			"id":"_axNoi",
-			"index":81,
+			"index":79,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -7602,11 +7288,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_sbw6Y@_jMFmS-1@n",
 			"id":"_XAGCp",
-			"index":82,
+			"index":80,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -7642,11 +7328,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_sbw6Y@_jMFmS-1@n",
 			"id":"_Ul4xT",
-			"index":83,
+			"index":81,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -7679,11 +7365,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_mTnAB",
-			"index":84,
+			"index":82,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -7821,11 +7507,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_sd49N",
-			"index":85,
+			"index":83,
 			"inputs":{
 				"filters":[
 					{
@@ -7857,11 +7543,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_sd49N@_jMFmS-1@y",
 			"id":"_jP4zx",
-			"index":86,
+			"index":84,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -7897,11 +7583,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_sd49N@_jMFmS-1@y",
 			"id":"_9P9Co",
-			"index":87,
+			"index":85,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -7934,11 +7620,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_sd49N@_jMFmS-1@n",
 			"id":"_mK9Cz",
-			"index":88,
+			"index":86,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -7974,11 +7660,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_sd49N@_jMFmS-1@n",
 			"id":"_OvB0j",
-			"index":89,
+			"index":87,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -8011,11 +7697,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_Xc40g",
-			"index":90,
+			"index":88,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -8141,11 +7827,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_3i0XI",
-			"index":91,
+			"index":89,
 			"inputs":{
 				"filters":[
 					{
@@ -8177,11 +7863,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_3i0XI@_jMFmS-1@y",
 			"id":"_wwCEw",
-			"index":92,
+			"index":90,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -8217,11 +7903,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_3i0XI@_jMFmS-1@y",
 			"id":"_A4qEN",
-			"index":93,
+			"index":91,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -8255,11 +7941,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_3i0XI@_jMFmS-1@n",
 			"id":"_VKHcU",
-			"index":94,
+			"index":92,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -8295,11 +7981,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_3i0XI@_jMFmS-1@n",
 			"id":"_wR0DC",
-			"index":95,
+			"index":93,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -8338,5 +8024,5 @@
 	"tags":[
 		
 	],
-	"version":96
+	"version":97
 }
