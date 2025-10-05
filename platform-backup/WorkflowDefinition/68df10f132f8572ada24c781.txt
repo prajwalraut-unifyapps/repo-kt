@@ -1,9 +1,17 @@
 {
 	"appsUsed":[
-		
+		"storage_by_unifyapps"
 	],
 	"createdTime":1759449329611,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759451762942,
+		"deployedBy":59995,
+		"deployedDefinitionId":"68df1a72aa7c7b4f21f8434e",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":3
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_aHG9Z",
@@ -30,6 +38,57 @@
 			"fromNodeId":"_Y9MIK",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"_3dH62",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_3dH62",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_wcAiW",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_wcAiW",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_7hrr3",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"_7hrr3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_TNCsd",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_wcAiW",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_7DI3g",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_7DI3g",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_nHiIA",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_TNCsd",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_v5jm5",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_nHiIA",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_v5jm5",
 			"type":"next"
 		}
@@ -37,7 +96,7 @@
 	"id":"68df10f132f8572ada24c781",
 	"lastModifiedBy":59995,
 	"lcName":" missing next partition",
-	"modifiedTime":1759451759759,
+	"modifiedTime":1759651205589,
 	"name":" Missing Next Partition",
 	"nodes":[
 		{
@@ -101,12 +160,27 @@
 					"type":"object",
 					"additionalProperties":false,
 					"required":[
-						"customerId"
+						"customerId",
+						"rootAutomationId",
+						"rootExecutionId",
+						"executedAt"
 					],
 					"properties":{
 						"customerId":{
 							"type":"string",
 							"title":"Customer Id"
+						},
+						"rootAutomationId":{
+							"type":"string",
+							"title":"Root Automation Id"
+						},
+						"rootExecutionId":{
+							"type":"string",
+							"title":"Root Execution Id"
+						},
+						"executedAt":{
+							"type":"number",
+							"title":"Executed At"
 						}
 					}
 				}
@@ -385,6 +459,337 @@
 			"type":"ACTION"
 		},
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_BzeUm-1",
+			"id":"_3dH62",
+			"index":5,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"message",
+						"inputs",
+						"outputs"
+					],
+					"properties":{
+						"message":{
+							"type":"string",
+							"title":"Message"
+						},
+						"inputs":{
+							"type":"object",
+							"properties":{
+								"totalPartitionsMissing":{
+									"type":"integer",
+									"title":"Total Partitions Missing"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Inputs",
+							"required":[
+								"totalPartitionsMissing"
+							]
+						},
+						"outputs":{
+							"type":"object",
+							"properties":{
+								"missingNextPartitions":{
+									"type":"array",
+									"items":{
+										"type":"object",
+										"properties":{},
+										"additionalProperties":false
+									},
+									"title":"Missing Next Partitions"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Outputs",
+							"required":[
+								"missingNextPartitions"
+							]
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"missingNextPartitions"
+					],
+					"properties":{
+						"missingNextPartitions":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"dbName":{
+										"type":"string",
+										"title":"Db Name"
+									},
+									"tableName":{
+										"type":"string",
+										"title":"Table Name"
+									},
+									"LATEST_PARTITION_END_DATE":{
+										"type":"string",
+										"title":"LATEST PARTITION END DATE"
+									},
+									"PARTITION_NAME":{
+										"type":"string",
+										"title":"PARTITION NAME"
+									},
+									"DAYS_REMAINING":{
+										"type":"integer",
+										"title":"DAYS REMAINING"
+									},
+									"DATA_SIZE":{
+										"type":"string",
+										"title":"DATA SIZE"
+									},
+									"ROW_COUNT":{
+										"type":"integer",
+										"title":"ROW COUNT"
+									}
+								},
+								"additionalProperties":false,
+								"required":[
+									"dbName",
+									"tableName",
+									"LATEST_PARTITION_END_DATE",
+									"PARTITION_NAME",
+									"DAYS_REMAINING",
+									"DATA_SIZE",
+									"ROW_COUNT"
+								]
+							},
+							"title":"Missing Next Partitions"
+						}
+					}
+				},
+				"code":"if (!(binding.hasVariable(\"missingNextPartitions\") && missingNextPartitions)) {\n  return [message: \"\", inputs: [totalPartitionsMissing: 0], outputs: [missingNextPartitions: []]]\n}\ndef messages = []\n\nif (missingNextPartitions.size() > 0) {\n  for (item in missingNextPartitions) {\n    def storageMessage = [\"[ \"]\n    for (partitions in item.partitions) {\n      storageMessage << \" [ PartitionName = \" + partitions.PARTITION_NAME + \", PartitionLatestEndDate = \" + partitions.LATEST_PARTITION_END_DATE + \", PartitionDaysRemaining = \" + partitions.DAYS_REMAINING + \" ] , \"\n    }\n    storageMessage << \" ]\"\n    storageMessage = storageMessage.join()\n    messages << \"• Database = \" + item.DB_NAME + \", tableName =  \" + item.TABLE_NAME + \", PartitionName = \" + item.PARTITION_NAME + \", PartitionLatestEndDate = \" + item.LATEST_PARTITION_END_DATE + \", PartitionDaysRemaining = \" + item.DAYS_REMAINING + \"\\n\"\n  }\n}\nreturn [outputs: [missingNextPartitions: missingNextPartitions], inputs: [\"totalPartitionsMissing\": missingNextPartitions.size()], message: messages.join()]",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"missingNextPartitions":{
+						"ua:type":"mappedArray",
+						"items":{
+							"dbName":"{{ _Y9MIK.outputs.result.result[0].DB_NAME }}",
+							"tableName":"{{ _Y9MIK.outputs.result.result[0].TABLE_NAME }}",
+							"LATEST_PARTITION_END_DATE":"{{ _Y9MIK.outputs.result.result[0].LATEST_PARTITION_END_DATE }}",
+							"PARTITION_NAME":"{{ _Y9MIK.outputs.result.result[0].PARTITION_NAME }}",
+							"DAYS_REMAINING":"{{ _Y9MIK.outputs.result.result[0].DAYS_REMAINING }}",
+							"DATA_SIZE":"{{ _Y9MIK.outputs.result.result[0].DATA_SIZE }}",
+							"ROW_COUNT":"{{ _Y9MIK.outputs.result.result[0].ROW_COUNT }}"
+						},
+						"source":"{{ _Y9MIK.outputs.result.result }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":" Missing next partition output",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":767,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_BzeUm-1",
+			"id":"_wcAiW",
+			"index":6,
+			"inputs":{
+				"filters":[
+					{
+						"property":"=LEN({{ _3dH62.outputs.result.outputs.missingNextPartitions }})",
+						"filter":{
+							"operator":"GT",
+							"value":"0"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.record.steps.inputs",
+					"root.record.steps.outputs"
+				]
+			},
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":3226,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_wcAiW@_BzeUm-1@y",
+			"id":"_7hrr3",
+			"index":7,
+			"inputs":{
+				"writeThroughSessionVariables":false,
+				"object_type":"infra_alert_steps",
+				"skipIfBlank":false,
+				"record":{
+					"alertType":"starrocks_table_health",
+					"rootAutomationId":"{{ n_aHG9Z.outputs.rootAutomationId }}",
+					"rootExecutionId":"{{ n_aHG9Z.outputs.rootExecutionId }}",
+					"executedAt":"{{ n_aHG9Z.outputs.executedAt }}",
+					"alertCategory":"starrocks",
+					"alertSubType":"routine_load_missing_next_partition",
+					"stepsOrder":8,
+					"summary":"Check whether a routine load has it's next partition setup",
+					"steps":{
+						"inputs":"{{ _3dH62.outputs.result.inputs }}",
+						"outputs":"{{ _3dH62.outputs.result.outputs }}"
+					},
+					"status":"CRITICAL",
+					"stepDescription":"Check whether a routine load has it's next partition setup",
+					"resolved":false
+				}
+			},
+			"skip":false,
+			"subTitle":"Create Alert Step",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":3,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_wcAiW@_BzeUm-1@y",
+			"id":"_TNCsd",
+			"index":8,
+			"inputs":{
+				"automationId":"68721bd4feea003f6a9cb688",
+				"runtimeConnections":{},
+				"synchronous":false,
+				"version":"-1",
+				"parameters":{
+					"env":"{{ n_96ZBq.outputs.env }}",
+					"alertCategory":"starrocks",
+					"alertType":"starrocks_table_health",
+					"alertTitle":"🚨 Missing Current Partitions for Routine Loads",
+					"alertDescription":"For customer {{ n_aHG9Z.outputs.customerId }}, the following routine loads are missing their next partition:\n{{ _3dH62.outputs.result.message }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.record.steps.inputs",
+					"root.record.steps.outputs"
+				]
+			},
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":3226,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_wcAiW@_BzeUm-1@n",
+			"id":"_7DI3g",
+			"index":9,
+			"inputs":{
+				"writeThroughSessionVariables":false,
+				"object_type":"infra_alert_steps",
+				"skipIfBlank":false,
+				"record":{
+					"alertType":"starrocks_table_health",
+					"rootAutomationId":"{{ n_aHG9Z.outputs.rootAutomationId }}",
+					"rootExecutionId":"{{ n_aHG9Z.outputs.rootExecutionId }}",
+					"executedAt":"{{ n_aHG9Z.outputs.executedAt }}",
+					"alertCategory":"starrocks",
+					"alertSubType":"routine_load_missing_next_partition",
+					"stepsOrder":8,
+					"summary":"Check whether a routine load has it's next partition setup",
+					"steps":{
+						"inputs":"{{ _3dH62.outputs.result.inputs }}",
+						"outputs":"{{ _3dH62.outputs.result.outputs }}"
+					},
+					"status":"OK",
+					"stepDescription":"Check whether a routine load has it's next partition setup",
+					"resolved":true
+				}
+			},
+			"skip":false,
+			"subTitle":"Create Alert Step",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":3,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_wcAiW@_BzeUm-1@n",
+			"id":"_nHiIA",
+			"index":10,
+			"inputs":{
+				"automationId":"68721bd4feea003f6a9cb688",
+				"runtimeConnections":{},
+				"synchronous":false,
+				"version":"-1",
+				"parameters":{
+					"env":"{{ n_96ZBq.outputs.env }}",
+					"alertCategory":"starrocks",
+					"alertType":"starrocks_table_health",
+					"alertTitle":"🚨 Missing Current Partitions for Routine Loads",
+					"alertDescription":"For customer {{ n_aHG9Z.outputs.customerId }}, the following routine loads are missing their next partition:\n{{ _3dH62.outputs.result.message }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
 			"context":{
 				"appName":"callables",
 				"resourceVersion":1001,
@@ -396,7 +801,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_BzeUm-1",
 			"id":"n_v5jm5",
-			"index":5,
+			"index":11,
 			"inputs":{
 				"result":{
 					"missingPartitions":{
@@ -437,5 +842,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
