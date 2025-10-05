@@ -5,12 +5,12 @@
 	"createdTime":1759449329611,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759451762942,
+		"deployedAt":1759651397863,
 		"deployedBy":59995,
-		"deployedDefinitionId":"68df1a72aa7c7b4f21f8434e",
+		"deployedDefinitionId":"68e22645051d735de0183b05",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":3
+		"version":2,
+		"workflowVersion":4
 	},
 	"edges":[
 		{
@@ -96,10 +96,15 @@
 	"id":"68df10f132f8572ada24c781",
 	"lastModifiedBy":59995,
 	"lcName":" missing next partition",
-	"modifiedTime":1759651205589,
+	"modifiedTime":1759651456775,
 	"name":" Missing Next Partition",
 	"nodes":[
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
 			"context":{
 				"appName":"callables",
 				"resourceVersion":976,
@@ -115,44 +120,13 @@
 				"result":{
 					"type":"object",
 					"additionalProperties":false,
+					"required":[
+						"missingNextPartitionsCount"
+					],
 					"properties":{
-						"missingPartitions":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"DB_NAME":{
-										"type":"string",
-										"title":"DB_NAME"
-									},
-									"TABLE_NAME":{
-										"type":"string",
-										"title":"TABLE_NAME"
-									},
-									"PARTITION_NAME":{
-										"type":"string",
-										"title":"PARTITION_NAME"
-									},
-									"LATEST_PARTITION_END_DATE":{
-										"type":"string",
-										"title":"LATEST_PARTITION_END_DATE"
-									},
-									"DAYS_REMAINING":{
-										"type":"integer",
-										"title":"DAYS_REMAINING"
-									},
-									"DATA_SIZE":{
-										"type":"string",
-										"title":"DATA_SIZE"
-									},
-									"ROW_COUNT":{
-										"type":"integer",
-										"title":"ROW_COUNT"
-									}
-								},
-								"additionalProperties":false
-							},
-							"title":"missingPartitions"
+						"missingNextPartitionsCount":{
+							"type":"number",
+							"title":"Missing Next Partitions Count"
 						}
 					}
 				},
@@ -804,19 +778,7 @@
 			"index":11,
 			"inputs":{
 				"result":{
-					"missingPartitions":{
-						"source":"{{ _Y9MIK.outputs.result.result }}",
-						"ua:type":"mappedArray",
-						"items":{
-							"DB_NAME":"{{ _Y9MIK.outputs.result.result[0].DB_NAME }}",
-							"TABLE_NAME":"{{ _Y9MIK.outputs.result.result[0].TABLE_NAME }}",
-							"PARTITION_NAME":"{{ _Y9MIK.outputs.result.result[0].PARTITION_NAME }}",
-							"LATEST_PARTITION_END_DATE":"{{ _Y9MIK.outputs.result.result[0].LATEST_PARTITION_END_DATE }}",
-							"DAYS_REMAINING":"{{ _Y9MIK.outputs.result.result[0].DAYS_REMAINING }}",
-							"DATA_SIZE":"{{ _Y9MIK.outputs.result.result[0].DATA_SIZE }}",
-							"ROW_COUNT":"{{ _Y9MIK.outputs.result.result[0].ROW_COUNT }}"
-						}
-					}
+					"missingNextPartitionsCount":"=LEN({{ _Y9MIK.outputs.result.result }})"
 				}
 			},
 			"skip":false,
@@ -842,5 +804,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
