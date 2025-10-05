@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759660708221,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_1QC8a",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_PhKVX",
+			"type":"next"
+		}
+	],
+	"id":"68e24aa4a94b8359f76dd212",
+	"lastModifiedBy":43498,
+	"lcName":"sdafg-jms",
+	"modifiedTime":1759660708221,
+	"name":"sdafg-jms",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_1QC8a-1",
+			"id":"_1QC8a",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_1QC8a-1",
+			"id":"_PhKVX",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":43498,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
