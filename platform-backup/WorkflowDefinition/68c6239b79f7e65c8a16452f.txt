@@ -157,80 +157,6 @@
 		},
 		{
 			"fromNodeId":"n_nST1M",
-			"name":"2",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_nST1M@2",
-			"type":"branch"
-		},
-		{
-			"fromNodeId":"n_nST1M@2",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_zNca6",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_zNca6",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_ab9zj",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_ab9zj",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_bY8K0",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_bY8K0",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_jqjfO",
-			"type":"if"
-		},
-		{
-			"fromNodeId":"n_nST1M",
-			"name":"3",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_nST1M@3",
-			"type":"branch"
-		},
-		{
-			"fromNodeId":"n_nST1M@3",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_6a9km",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_6a9km",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_d5lsD",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_d5lsD",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_vqt0t",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_vqt0t",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_6HtcA",
-			"type":"if"
-		},
-		{
-			"fromNodeId":"n_nST1M",
 			"name":"4",
 			"priority":0,
 			"skip":false,
@@ -268,36 +194,6 @@
 		},
 		{
 			"fromNodeId":"n_nST1M",
-			"name":"5",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_nST1M@5",
-			"type":"branch"
-		},
-		{
-			"fromNodeId":"n_nST1M@5",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_BuzLR",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_BuzLR",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_OsTze",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_OsTze",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_fIxNz",
-			"type":"if"
-		},
-		{
-			"fromNodeId":"n_nST1M",
 			"name":"6",
 			"priority":0,
 			"skip":false,
@@ -327,43 +223,6 @@
 			"type":"if"
 		},
 		{
-			"fromNodeId":"n_nST1M",
-			"name":"7",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_nST1M@7",
-			"type":"branch"
-		},
-		{
-			"fromNodeId":"n_nST1M@7",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_1fTuQ",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_1fTuQ",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_Y9MIK",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_Y9MIK",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_h8mwo",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_h8mwo",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_cFMH1",
-			"type":"if"
-		},
-		{
 			"fromNodeId":"_z0WSp",
 			"name":"loopback",
 			"priority":0,
@@ -373,38 +232,6 @@
 		},
 		{
 			"fromNodeId":"n_1v1ta",
-			"name":"no",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_WOcYr",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_jqjfO",
-			"name":"loopback",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_WOcYr",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_bY8K0",
-			"name":"no",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_WOcYr",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_6HtcA",
-			"name":"loopback",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_WOcYr",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_vqt0t",
 			"name":"no",
 			"priority":0,
 			"skip":false,
@@ -428,22 +255,6 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_fIxNz",
-			"name":"loopback",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_WOcYr",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_OsTze",
-			"name":"no",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_WOcYr",
-			"type":"next"
-		},
-		{
 			"fromNodeId":"n_HYspD",
 			"name":"loopback",
 			"priority":0,
@@ -453,22 +264,6 @@
 		},
 		{
 			"fromNodeId":"n_5tffR",
-			"name":"no",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_WOcYr",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_cFMH1",
-			"name":"loopback",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_WOcYr",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_h8mwo",
 			"name":"no",
 			"priority":0,
 			"skip":false,
@@ -545,113 +340,11 @@
 			"fromNodeId":"n_3FUqO",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_9xKNR",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_9xKNR",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_6H2OQ",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_6H2OQ",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_CeBOO",
-			"type":"if"
-		},
-		{
-			"fromNodeId":"_CeBOO",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_xe7MC",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_6H2OQ",
-			"name":"no",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_ODwaO",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_ODwaO",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_PA7QE",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_xe7MC",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_7eEkF",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_PA7QE",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_7eEkF",
 			"type":"next"
 		},
 		{
 			"fromNodeId":"n_7eEkF",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_DKDTU",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_DKDTU",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_PaFnz",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_PaFnz",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_zFyJ8",
-			"type":"if"
-		},
-		{
-			"fromNodeId":"_zFyJ8",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_ANDa3",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_PaFnz",
-			"name":"no",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_izaqB",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_izaqB",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_Wv2bW",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_ANDa3",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_qRMpV",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_Wv2bW",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_qRMpV",
@@ -661,113 +354,11 @@
 			"fromNodeId":"n_qRMpV",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_3dH62",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_3dH62",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_wcAiW",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_wcAiW",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_7hrr3",
-			"type":"if"
-		},
-		{
-			"fromNodeId":"_7hrr3",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_TNCsd",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_wcAiW",
-			"name":"no",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_7DI3g",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_7DI3g",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_nHiIA",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_TNCsd",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_wIqCh",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_nHiIA",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_wIqCh",
 			"type":"next"
 		},
 		{
 			"fromNodeId":"n_wIqCh",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_oSfM0",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_oSfM0",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_sbw6Y",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_sbw6Y",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_W50DB",
-			"type":"if"
-		},
-		{
-			"fromNodeId":"_W50DB",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_axNoi",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_sbw6Y",
-			"name":"no",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_XAGCp",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_XAGCp",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_Ul4xT",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_axNoi",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_mTnAB",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_Ul4xT",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"_mTnAB",
@@ -865,7 +456,7 @@
 	"id":"68c6239b79f7e65c8a16452f",
 	"lastModifiedBy":59995,
 	"lcName":"infra | starrocks | alert |  table health",
-	"modifiedTime":1759660274059,
+	"modifiedTime":1759660680684,
 	"name":"INFRA | STARROCKS | ALERT |  Table health",
 	"nodes":[
 		{
@@ -3730,39 +3321,15 @@
 						}
 					},
 					{
-						"id":"2",
-						"inputs":{
-							"name":"Bucket "
-						}
-					},
-					{
-						"id":"3",
-						"inputs":{
-							"name":"Storage Size"
-						}
-					},
-					{
 						"id":"4",
 						"inputs":{
 							"name":"persistent index"
 						}
 					},
 					{
-						"id":"5",
-						"inputs":{
-							"name":"compaction score"
-						}
-					},
-					{
 						"id":"6",
 						"inputs":{
 							"name":"routine load ingestion lag"
-						}
-					},
-					{
-						"id":"7",
-						"inputs":{
-							"name":"missing next partition"
 						}
 					},
 					{
@@ -4200,678 +3767,9 @@
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
-			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@2",
-			"id":"n_nST1M@2",
-			"index":22,
-			"inputs":{
-				"name":"Bucket "
-			},
-			"skip":false,
-			"title":"",
-			"type":"BRANCH_CONDITION"
-		},
-		{
-			"additional":{
-				"xsdSchemaConfig":{
-					"root":{}
-				}
-			},
-			"context":{
-				"appName":"custom_http_endpoint",
-				"resourceVersion":10,
-				"resourceName":"custom_http_endpoint_execute",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@2",
-			"id":"_zNca6",
-			"index":23,
-			"inputs":{
-				"isAsync":false,
-				"enableProxy":false,
-				"requestTimeoutInSecs":-1,
-				"httpMethod":"POST",
-				"body":{
-					"sql":"SHOW PARTITIONS FROM {{ n_WOcYr.outputs.item.DbName }}.{{ n_WOcYr.outputs.item.TableName }} where Buckets < {{ _auxBn.outputs.result.minimumBucketCount }};"
-				},
-				"connectionType":"DIRECT",
-				"sslVerify":false,
-				"path":"/internal/sql-report/runSQL/query/{{ n_A4kqi.outputs.customerId }}",
-				"responseSchema":{
-					"type":"object",
-					"additionalProperties":false,
-					"properties":{
-						"hasMore":{
-							"type":"boolean",
-							"title":"hasMore"
-						},
-						"objects":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"DistributionKey":{
-										"type":"string",
-										"title":"DistributionKey"
-									},
-									"StorageSize":{
-										"type":"string",
-										"title":"StorageSize"
-									},
-									"AvgCS":{
-										"type":"string",
-										"title":"AvgCS"
-									},
-									"PartitionId":{
-										"type":"string",
-										"title":"PartitionId"
-									},
-									"Range":{
-										"type":"string",
-										"title":"Range"
-									},
-									"AsyncWrite":{
-										"type":"string",
-										"title":"AsyncWrite"
-									},
-									"Buckets":{
-										"type":"string",
-										"title":"Buckets"
-									},
-									"VersionEpoch":{
-										"type":"string",
-										"title":"VersionEpoch"
-									},
-									"PartitionName":{
-										"type":"string",
-										"title":"PartitionName"
-									},
-									"VersionTxnType":{
-										"type":"string",
-										"title":"VersionTxnType"
-									},
-									"State":{
-										"type":"string",
-										"title":"State"
-									},
-									"NextVersion":{
-										"type":"string",
-										"title":"NextVersion"
-									},
-									"DataSize":{
-										"type":"string",
-										"title":"DataSize"
-									},
-									"EnableDataCache":{
-										"type":"string",
-										"title":"EnableDataCache"
-									},
-									"PartitionKey":{
-										"type":"string",
-										"title":"PartitionKey"
-									},
-									"CompactVersion":{
-										"type":"string",
-										"title":"CompactVersion"
-									},
-									"P50CS":{
-										"type":"string",
-										"title":"P50CS"
-									},
-									"DataVersion":{
-										"type":"string",
-										"title":"DataVersion"
-									},
-									"VisibleVersion":{
-										"type":"string",
-										"title":"VisibleVersion"
-									},
-									"RowCount":{
-										"type":"string",
-										"title":"RowCount"
-									},
-									"MaxCS":{
-										"type":"string",
-										"title":"MaxCS"
-									}
-								},
-								"additionalProperties":false
-							},
-							"title":"objects"
-						}
-					}
-				},
-				"baseUrl":"{{ n_96ZBq.outputs.baseInternalUrl }}",
-				"httpVersion":"HTTP_2",
-				"bodySchema":{
-					"type":"object",
-					"additionalProperties":false,
-					"properties":{
-						"sql":{
-							"type":"string",
-							"title":"sql"
-						}
-					}
-				},
-				"queryParamsList":[
-					{
-						"key":"sqlResourceType",
-						"value":"PLATFORM"
-					}
-				],
-				"responseContentType":"application/json",
-				"headersList":[],
-				"authType":"CUSTOM",
-				"requestContentType":"application/json",
-				"ignoreTrailingSlashes":false,
-				"certificateType":"CERT_STRING"
-			},
-			"options":{
-				"bulkheadConfig":{
-					"enabled":false,
-					"global":false
-				},
-				"businessHoursConfig":{
-					"enabled":false,
-					"waitForNextWindow":false
-				},
-				"cacheConfig":{
-					"enabled":false,
-					"usagePolicy":"ALWAYS"
-				},
-				"circuitBreakerConfig":{
-					"enabled":false,
-					"slidingWindowType":"COUNT_BASED"
-				},
-				"disableLogging":false,
-				"enabledForReExecution":false,
-				"hookConfig":{
-					"enabled":false,
-					"postHooks":[
-						
-					],
-					"preHooks":[
-						
-					]
-				},
-				"logConfig":{
-					"enabled":false,
-					"logPolicies":[
-						
-					]
-				},
-				"rateLimitConfig":{
-					"enabled":false,
-					"unit":"MINUTES",
-					"waitForNextWindow":false
-				},
-				"retryConfig":{
-					"backOffFactor":null,
-					"captureRetries":false,
-					"enabled":false
-				},
-				"stepError":"STOP",
-				"telemetryConfig":{
-					"enableTelemetry":false,
-					"metricConfigs":[
-						
-					]
-				}
-			},
-			"skip":false,
-			"subTitle":"Get Partitions ",
-			"title":"Execute REST request",
-			"type":"ACTION"
-		},
-		{
-			"additional":{
-				"visibleOptionalFields":[
-					"root.parameters.tablePartitions.items.DistributionKey",
-					"root.parameters.tablePartitions.items.PartitionId",
-					"root.parameters.tablePartitions.items.Buckets",
-					"root.parameters.tablePartitions.items.PartitionName",
-					"root.parameters.tablePartitions.items.State",
-					"root.parameters.tablePartitions.items.DataSize",
-					"root.parameters.tablePartitions.items.RowCount"
-				]
-			},
-			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":0,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@2",
-			"id":"n_ab9zj",
-			"index":24,
-			"inputs":{
-				"output":{
-					"type":"object",
-					"additionalProperties":false,
-					"properties":{
-						"bucketWarnings":{
-							"type":"array",
-							"title":"bucketWarnings"
-						}
-					}
-				},
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"minBuckets"
-					],
-					"properties":{
-						"tablePartitions":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"DistributionKey":{
-										"type":"string",
-										"title":"DistributionKey"
-									},
-									"PartitionId":{
-										"type":"string",
-										"title":"PartitionId"
-									},
-									"Buckets":{
-										"type":"string",
-										"title":"Buckets"
-									},
-									"PartitionName":{
-										"type":"string",
-										"title":"PartitionName"
-									},
-									"State":{
-										"type":"string",
-										"title":"State"
-									},
-									"DataSize":{
-										"type":"string",
-										"title":"DataSize"
-									}
-								},
-								"additionalProperties":false,
-								"required":[]
-							},
-							"title":"tablePartitions"
-						},
-						"minBuckets":{
-							"type":"number",
-							"title":"Min Buckets"
-						}
-					}
-				},
-				"code":"if (!binding.hasVariable(\"tablePartitions\") || tablePartitions == null) {\n  return [\"bucketWarnings\": []]\n}\n\nbucketWarnings = []\ntablePartitions.each { item -> \n  def bucketNum = Integer.parseInt(item.Buckets ?: \"0\")\n  if (bucketNum < minBuckets) {\n    bucketWarnings << item\n  }\n}\nreturn [\"bucketWarnings\": bucketWarnings]",
-				"compile_static":false,
-				"captureStdOutput":false,
-				"parameters":{
-					"minBuckets":"{{ _auxBn.outputs.result.minimumBucketCount }}",
-					"tablePartitions":{
-						"source":"{{ _zNca6.outputs.result.objects }}",
-						"ua:type":"mappedArray",
-						"items":{
-							"DistributionKey":"{{ _zNca6.outputs.result.objects[0].DistributionKey }}",
-							"PartitionId":"{{ _zNca6.outputs.result.objects[0].PartitionId }}",
-							"Buckets":"{{ _zNca6.outputs.result.objects[0].Buckets }}",
-							"PartitionName":"{{ _zNca6.outputs.result.objects[0].PartitionName }}",
-							"State":"{{ _zNca6.outputs.result.objects[0].State }}",
-							"DataSize":"{{ _zNca6.outputs.result.objects[0].DataSize }}"
-						}
-					}
-				}
-			},
-			"skip":false,
-			"subTitle":"Code by UnifyApps",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"if_else",
-				"resourceVersion":2,
-				"resourceName":"if_else_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@2",
-			"id":"n_bY8K0",
-			"index":25,
-			"inputs":{
-				"filters":[
-					{
-						"property":"=LEN({{ n_ab9zj.outputs.result.bucketWarnings }})",
-						"filter":{
-							"operator":"GT",
-							"value":"0"
-						}
-					}
-				],
-				"operator":"AND"
-			},
-			"skip":false,
-			"subTitle":"Condition",
-			"title":"Condition",
-			"type":"IF_ELSE"
-		},
-		{
-			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":2,
-				"resourceName":"variable_by_unifyapps_add_item_to_list",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_bY8K0@n_nST1M@n_WOcYr@_jMFmS-1@l@2@y",
-			"id":"n_jqjfO",
-			"index":26,
-			"inputs":{
-				"itemToAdd":{
-					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
-					"tableName":"{{ n_WOcYr.outputs.item.TableName }}",
-					"routineLoadName":"{{ n_WOcYr.outputs.item.Name }}",
-					"buckets":{
-						"source":"{{ n_ab9zj.outputs.result.bucketWarnings }}",
-						"ua:type":"mappedArray",
-						"items":"{{ n_ab9zj.outputs.result.bucketWarnings }}"
-					}
-				},
-				"insertLocation":"END",
-				"listName":"{{ n_CWqg9.outputs.items[0] }}"
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Add item to list",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"branch_condition",
-				"resourceVersion":0,
-				"resourceName":"branch_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
-			"id":"n_nST1M@3",
-			"index":27,
-			"inputs":{
-				"name":"Storage Size"
-			},
-			"skip":false,
-			"title":"",
-			"type":"BRANCH_CONDITION"
-		},
-		{
-			"context":{
-				"appName":"custom_http_endpoint",
-				"resourceVersion":871,
-				"resourceName":"custom_http_endpoint_execute",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
-			"id":"n_6a9km",
-			"index":28,
-			"inputs":{
-				"isAsync":false,
-				"enableProxy":false,
-				"requestTimeoutInSecs":-1,
-				"httpMethod":"POST",
-				"body":{
-					"sql":"SELECT * FROM information_schema.partitions_meta \nWHERE DB_NAME = '{{ n_WOcYr.outputs.item.DbName }}'\nAND TABLE_NAME = '{{ n_WOcYr.outputs.item.TableName }}' \nAND (\nCASE \nWHEN RIGHT(DATA_SIZE, 1) = 'B' AND RIGHT(DATA_SIZE, 2) NOT IN ('KB','MB','GB','TB') \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'B', 1) AS DECIMAL(15,2))\nWHEN RIGHT(DATA_SIZE, 2) = 'KB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'K', 1) AS DECIMAL(15,2)) * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'MB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'M', 1) AS DECIMAL(15,2)) * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'GB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'G', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'TB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'T', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024 * 1024\nELSE 0\nEND < {{ _auxBn.outputs.result.minimumStorageSizeGB }} * 1024 * 1024 * 1024\n)\nORDER BY \nCASE \nWHEN RIGHT(DATA_SIZE, 1) = 'B' AND RIGHT(DATA_SIZE, 2) NOT IN ('KB','MB','GB','TB') \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'B', 1) AS DECIMAL(15,2))\nWHEN RIGHT(DATA_SIZE, 2) = 'KB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'K', 1) AS DECIMAL(15,2)) * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'MB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'M', 1) AS DECIMAL(15,2)) * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'GB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'G', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024\nWHEN RIGHT(DATA_SIZE, 2) = 'TB' \nTHEN CAST(SUBSTRING_INDEX(DATA_SIZE, 'T', 1) AS DECIMAL(15,2)) * 1024 * 1024 * 1024 * 1024\nELSE 0\nEND DESC;"
-				},
-				"connectionType":"DIRECT",
-				"sslVerify":false,
-				"path":"/internal/sql-report/runSQL/query/{{ n_A4kqi.outputs.customerId }}",
-				"responseSchema":{
-					"type":"object",
-					"additionalProperties":false,
-					"properties":{
-						"objects":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"DATA_SIZE":{
-										"type":"string",
-										"title":"DATA SIZE"
-									},
-									"PARTITION_NAME":{
-										"type":"string",
-										"title":"PARTITION NAME"
-									},
-									"TABLE_NAME":{
-										"type":"string",
-										"title":"TABLE NAME"
-									},
-									"DB_NAME":{
-										"type":"string",
-										"title":"DB NAME"
-									}
-								},
-								"additionalProperties":false,
-								"required":[
-									"DATA_SIZE",
-									"PARTITION_NAME",
-									"TABLE_NAME",
-									"DB_NAME"
-								]
-							},
-							"title":"objects"
-						}
-					}
-				},
-				"baseUrl":"{{ n_96ZBq.outputs.baseInternalUrl }}",
-				"httpVersion":"HTTP_2",
-				"bodySchema":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[],
-					"properties":{
-						"sql":{
-							"type":"string",
-							"title":"Sql"
-						}
-					}
-				},
-				"queryParamsList":[
-					{
-						"key":"sqlResourceType",
-						"value":"PLATFORM"
-					}
-				],
-				"responseContentType":"application/json",
-				"authType":"CUSTOM",
-				"requestContentType":"application/json",
-				"ignoreTrailingSlashes":false,
-				"certificateType":"CERT_STRING"
-			},
-			"skip":false,
-			"subTitle":"Get Partitions with size < threshold",
-			"title":"Execute REST request",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":111,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
-			"id":"n_d5lsD",
-			"index":29,
-			"inputs":{
-				"output":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"slackMessage",
-						"alertPartitions"
-					],
-					"properties":{
-						"slackMessage":{
-							"type":"string",
-							"title":"Slack Message"
-						},
-						"alertPartitions":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"partitionName":{
-										"type":"string",
-										"title":"Partition Name"
-									},
-									"partitionSize":{
-										"type":"string",
-										"title":"Partition Size"
-									}
-								},
-								"additionalProperties":false,
-								"required":[
-									"partitionName",
-									"partitionSize"
-								]
-							},
-							"title":"Alert Partitions"
-						}
-					}
-				},
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"partitions"
-					],
-					"properties":{
-						"partitions":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{},
-								"additionalProperties":false
-							},
-							"title":"Partitions"
-						}
-					}
-				},
-				"compile_static":false,
-				"code":"if (!binding.hasVariable('partitions')) {\n    return [\"slackMessage\": \"\", \"alertPartitions\": []]\n}\n\ndef slackMessage = new StringBuilder()\nslackMessage << \"\\n\\n\"\nalertPartitions = []\n\ndef items = []\ndef now = System.currentTimeMillis()\n\ndef timestamps = []\n\npartitions.each { partition ->\n    def pv = partition.PARTITION_VALUE\n    long start\n    long end\n    if (pv.contains(\"DATETIME\")) {\n        def matchesDate = (pv =~ /\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}/)\n        if (matchesDate.size() >= 2) {\n            if (matchesDate[0] == \"0000-00-00 00:00:00\") {\n                // This is an invalid or uninitialized partition, skip it\n            } else {\n                start = java.sql.Timestamp.valueOf(matchesDate[0]).time\n                end = java.sql.Timestamp.valueOf(matchesDate[1]).time\n            }\n        } \n    } else {\n        def matchesMillis = (pv =~ /\\d{13}/)\n        if (matchesMillis.size() >= 2) {\n            start = matchesMillis[0] as Long\n            end = matchesMillis[1] as Long\n        }\n    }\n    if (start != null && end != null && now >= start && now < end) {\n        items << partition\n    }\n}\n\nitems.each { partition ->\n    slackMessage << \"*DB:* `${partition.DB_NAME}`\\n\"\n    slackMessage << \"*Table:* `${partition.TABLE_NAME}`\\n\"\n    slackMessage << \"*Partition:* `${partition.PARTITION_NAME}`\\n\"\n    slackMessage << \"*Size:* `${partition.DATA_SIZE}`\\n\"\n    slackMessage << \"-----------------------------\\n\"\n    alertPartitions << [\"partitionName\": partition.PARTITION_NAME, \"size\": partition.DATA_SIZE]\n}\n\nreturn [\"slackMessage\": slackMessage ,\"stamps\":timestamps, \"alertPartitions\": alertPartitions]",
-				"captureStdOutput":false,
-				"parameters":{
-					"partitions":{
-						"source":"{{ n_6a9km.outputs.result.objects }}",
-						"ua:type":"mappedArray",
-						"items":"{{ n_6a9km.outputs.result.objects[0] }}"
-					}
-				}
-			},
-			"skip":false,
-			"subTitle":"Generate Slack message",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"if_else",
-				"resourceVersion":2,
-				"resourceName":"if_else_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
-			"id":"_vqt0t",
-			"index":30,
-			"inputs":{
-				"filters":[
-					{
-						"property":"=LEN({{ n_d5lsD.outputs.result.alertPartitions }})",
-						"filter":{
-							"operator":"GT",
-							"value":"0"
-						}
-					}
-				],
-				"operator":"AND"
-			},
-			"skip":false,
-			"subTitle":"Condition",
-			"title":"Condition",
-			"type":"IF_ELSE"
-		},
-		{
-			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":2,
-				"resourceName":"variable_by_unifyapps_add_item_to_list",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_vqt0t@n_nST1M@n_WOcYr@_jMFmS-1@l@3@y",
-			"id":"_6HtcA",
-			"index":31,
-			"inputs":{
-				"itemToAdd":{
-					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
-					"tableName":"{{ n_WOcYr.outputs.item.TableName }}",
-					"routineLoadName":"{{ n_WOcYr.outputs.item.Name }}",
-					"buckets":{
-						"items":" ",
-						"ua:type":"mappedArray"
-					},
-					"partitionSizes":{
-						"ua:type":"mappedArray",
-						"items":{
-							"partitionSize":"{{ n_d5lsD.outputs.result.alertPartitions[0].partitionSize }}",
-							"partitionName":"{{ n_d5lsD.outputs.result.alertPartitions[0].partitionName }}"
-						},
-						"source":"{{ n_d5lsD.outputs.result.alertPartitions }}"
-					}
-				},
-				"insertLocation":"END",
-				"listName":"{{ _6VeEl.outputs.items[0] }}"
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Add item to list",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"branch_condition",
-				"resourceVersion":0,
-				"resourceName":"branch_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@4",
 			"id":"n_nST1M@4",
-			"index":32,
+			"index":22,
 			"inputs":{
 				"name":"persistent index"
 			},
@@ -4896,7 +3794,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@4",
 			"id":"_j3OdX",
-			"index":33,
+			"index":23,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -5031,7 +3929,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@4",
 			"id":"_6AG7s",
-			"index":34,
+			"index":24,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -5086,7 +3984,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@4",
 			"id":"n_LEVUH",
-			"index":35,
+			"index":25,
 			"inputs":{
 				"filters":[
 					{
@@ -5116,7 +4014,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_LEVUH@n_nST1M@n_WOcYr@_jMFmS-1@l@4@y",
 			"id":"n_NSutB",
-			"index":36,
+			"index":26,
 			"inputs":{
 				"itemToAdd":{
 					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
@@ -5145,339 +4043,9 @@
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
-			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@5",
-			"id":"n_nST1M@5",
-			"index":37,
-			"inputs":{
-				"name":"compaction score"
-			},
-			"skip":false,
-			"title":"",
-			"type":"BRANCH_CONDITION"
-		},
-		{
-			"additional":{
-				"xsdSchemaConfig":{
-					"root":{}
-				}
-			},
-			"context":{
-				"appName":"custom_http_endpoint",
-				"resourceVersion":10,
-				"resourceName":"custom_http_endpoint_execute",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@5",
-			"id":"_BuzLR",
-			"index":38,
-			"inputs":{
-				"isAsync":false,
-				"enableProxy":false,
-				"requestTimeoutInSecs":-1,
-				"httpMethod":"POST",
-				"body":{
-					"sql":"SELECT * FROM information_schema.partitions_meta WHERE TABLE_NAME = '{{ n_WOcYr.outputs.item.TableName }}' AND DB_NAME = '{{ n_WOcYr.outputs.item.DbName }}' AND P50_CS < {{ _auxBn.outputs.result.compactionMin }};"
-				},
-				"connectionType":"DIRECT",
-				"sslVerify":false,
-				"path":"/internal/sql-report/runSQL/query/{{ n_A4kqi.outputs.customerId }}",
-				"responseSchema":{
-					"type":"object",
-					"additionalProperties":false,
-					"properties":{
-						"hasMore":{
-							"type":"boolean",
-							"title":"hasMore"
-						},
-						"objects":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"COOLDOWN_TIME":{
-										"type":"string",
-										"title":"COOLDOWN_TIME"
-									},
-									"P50_CS":{
-										"type":"integer",
-										"title":"P50_CS"
-									},
-									"TABLE_NAME":{
-										"type":"string",
-										"title":"TABLE_NAME"
-									},
-									"PARTITION_NAME":{
-										"type":"string",
-										"title":"PARTITION_NAME"
-									},
-									"DATA_SIZE":{
-										"type":"string",
-										"title":"DATA_SIZE"
-									},
-									"DISTRIBUTION_KEY":{
-										"type":"string",
-										"title":"DISTRIBUTION_KEY"
-									},
-									"VERSION_EPOCH":{
-										"type":"integer",
-										"title":"VERSION_EPOCH"
-									},
-									"DB_NAME":{
-										"type":"string",
-										"title":"DB_NAME"
-									},
-									"PARTITION_VALUE":{
-										"type":"string",
-										"title":"PARTITION_VALUE"
-									},
-									"REPLICATION_NUM":{
-										"type":"integer",
-										"title":"REPLICATION_NUM"
-									},
-									"PARTITION_ID":{
-										"type":"integer",
-										"title":"PARTITION_ID"
-									},
-									"BUCKETS":{
-										"type":"integer",
-										"title":"BUCKETS"
-									},
-									"STORAGE_MEDIUM":{
-										"type":"string",
-										"title":"STORAGE_MEDIUM"
-									},
-									"AVG_CS":{
-										"type":"number",
-										"title":"AVG_CS"
-									},
-									"VISIBLE_VERSION":{
-										"type":"integer",
-										"title":"VISIBLE_VERSION"
-									},
-									"STORAGE_PATH":{
-										"type":"string",
-										"title":"STORAGE_PATH"
-									},
-									"VERSION_TXN_TYPE":{
-										"type":"string",
-										"title":"VERSION_TXN_TYPE"
-									},
-									"VISIBLE_VERSION_TIME":{
-										"type":"string",
-										"title":"VISIBLE_VERSION_TIME"
-									},
-									"IS_TEMP":{
-										"type":"boolean",
-										"title":"IS_TEMP"
-									},
-									"NEXT_VERSION":{
-										"type":"integer",
-										"title":"NEXT_VERSION"
-									},
-									"COMPACT_VERSION":{
-										"type":"integer",
-										"title":"COMPACT_VERSION"
-									},
-									"DATA_VERSION":{
-										"type":"integer",
-										"title":"DATA_VERSION"
-									},
-									"MAX_CS":{
-										"type":"integer",
-										"title":"MAX_CS"
-									},
-									"PARTITION_KEY":{
-										"type":"string",
-										"title":"PARTITION_KEY"
-									},
-									"IS_IN_MEMORY":{
-										"type":"boolean",
-										"title":"IS_IN_MEMORY"
-									},
-									"ROW_COUNT":{
-										"type":"integer",
-										"title":"ROW_COUNT"
-									},
-									"ENABLE_DATACACHE":{
-										"type":"boolean",
-										"title":"ENABLE_DATACACHE"
-									},
-									"STORAGE_SIZE":{
-										"type":"integer",
-										"title":"STORAGE_SIZE"
-									}
-								},
-								"additionalProperties":false
-							},
-							"title":"objects"
-						}
-					}
-				},
-				"baseUrl":"{{ n_96ZBq.outputs.baseInternalUrl }}",
-				"httpVersion":"HTTP_2",
-				"bodySchema":{
-					"type":"object",
-					"additionalProperties":false,
-					"properties":{
-						"sql":{
-							"type":"string",
-							"title":"sql"
-						}
-					}
-				},
-				"queryParamsList":[
-					{
-						"key":"sqlResourceType",
-						"value":"PLATFORM"
-					}
-				],
-				"responseContentType":"application/json",
-				"headersList":[],
-				"errorResponseSchemas":[],
-				"authType":"CUSTOM",
-				"requestContentType":"application/json",
-				"ignoreTrailingSlashes":false,
-				"certificateType":"CERT_STRING"
-			},
-			"options":{
-				"bulkheadConfig":{
-					"enabled":false,
-					"global":false
-				},
-				"businessHoursConfig":{
-					"enabled":false,
-					"waitForNextWindow":false
-				},
-				"cacheConfig":{
-					"enabled":false,
-					"usagePolicy":"ALWAYS"
-				},
-				"circuitBreakerConfig":{
-					"enabled":false,
-					"slidingWindowType":"COUNT_BASED"
-				},
-				"disableLogging":false,
-				"enabledForReExecution":false,
-				"hookConfig":{
-					"enabled":false,
-					"postHooks":[
-						
-					],
-					"preHooks":[
-						
-					]
-				},
-				"logConfig":{
-					"enabled":false,
-					"logPolicies":[
-						
-					]
-				},
-				"rateLimitConfig":{
-					"enabled":false,
-					"unit":"MINUTES",
-					"waitForNextWindow":false
-				},
-				"retryConfig":{
-					"backOffFactor":null,
-					"captureRetries":false,
-					"enabled":false
-				},
-				"stepError":"STOP",
-				"telemetryConfig":{
-					"enableTelemetry":false,
-					"metricConfigs":[
-						
-					]
-				}
-			},
-			"skip":false,
-			"subTitle":"Get partitions compaction score",
-			"title":"Execute REST request",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"if_else",
-				"resourceVersion":767,
-				"resourceName":"if_else_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@5",
-			"id":"n_OsTze",
-			"index":39,
-			"inputs":{
-				"filters":[
-					{
-						"property":"=LEN({{ _BuzLR.outputs.result.objects }})",
-						"filter":{
-							"operator":"GT",
-							"value":"0"
-						}
-					}
-				],
-				"operator":"AND"
-			},
-			"skip":false,
-			"subTitle":"Condition",
-			"title":"Condition",
-			"type":"IF_ELSE"
-		},
-		{
-			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":814,
-				"resourceName":"variable_by_unifyapps_add_item_to_list",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_OsTze@n_nST1M@n_WOcYr@_jMFmS-1@l@5@y",
-			"id":"n_fIxNz",
-			"index":40,
-			"inputs":{
-				"itemToAdd":{
-					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
-					"tableName":"{{ n_WOcYr.outputs.item.TableName }}",
-					"routineLoadName":"{{ n_WOcYr.outputs.item.Name }}",
-					"partitions":{
-						"source":"{{ _BuzLR.outputs.result.objects }}",
-						"ua:type":"mappedArray",
-						"items":{
-							"partitionName":"{{ _BuzLR.outputs.result.objects[0].PARTITION_NAME }}",
-							"partitionId":"{{ _BuzLR.outputs.result.objects[0].PARTITION_ID }}",
-							"compactionScore":"{{ _BuzLR.outputs.result.objects[0].P50_CS }}"
-						}
-					}
-				},
-				"insertLocation":"END",
-				"listName":"{{ _D05iT.outputs.items[0] }}"
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Add item to list",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"branch_condition",
-				"resourceVersion":0,
-				"resourceName":"branch_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@6",
 			"id":"n_nST1M@6",
-			"index":41,
+			"index":27,
 			"inputs":{
 				"name":"routine load ingestion lag"
 			},
@@ -5502,7 +4070,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@6",
 			"id":"n_KMp2i",
-			"index":42,
+			"index":28,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -5597,7 +4165,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@6",
 			"id":"n_5tffR",
-			"index":43,
+			"index":29,
 			"inputs":{
 				"filters":[
 					{
@@ -5627,7 +4195,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_5tffR@n_nST1M@n_WOcYr@_jMFmS-1@l@6@y",
 			"id":"n_HYspD",
-			"index":44,
+			"index":30,
 			"inputs":{
 				"itemToAdd":{
 					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
@@ -5637,277 +4205,6 @@
 				},
 				"insertLocation":"END",
 				"listName":"{{ _cAiLs.outputs.items[0] }}"
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Add item to list",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"branch_condition",
-				"resourceVersion":0,
-				"resourceName":"branch_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@7",
-			"id":"n_nST1M@7",
-			"index":45,
-			"inputs":{
-				"name":"missing next partition"
-			},
-			"skip":false,
-			"title":"",
-			"type":"BRANCH_CONDITION"
-		},
-		{
-			"context":{
-				"appName":"custom_http_endpoint",
-				"resourceVersion":871,
-				"resourceName":"custom_http_endpoint_execute",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@7",
-			"id":"_1fTuQ",
-			"index":46,
-			"inputs":{
-				"isAsync":false,
-				"enableProxy":false,
-				"requestTimeoutInSecs":-1,
-				"httpMethod":"POST",
-				"body":{
-					"sql":"SELECT DB_NAME, TABLE_NAME, PARTITION_NAME, DATA_SIZE, ROW_COUNT, VISIBLE_VERSION_TIME, PARTITION_VALUE FROM ( SELECT *, ROW_NUMBER() OVER ( PARTITION BY DB_NAME, TABLE_NAME ORDER BY CAST(SUBSTRING(PARTITION_NAME, 2) AS BIGINT) DESC ) as rn FROM information_schema.partitions_meta WHERE PARTITION_NAME IS NOT NULL AND DB_NAME = '{{ n_WOcYr.outputs.item.DbName }}' AND TABLE_NAME = '{{ n_WOcYr.outputs.item.TableName }}' AND TABLE_NAME NOT LIKE 'ENTITY_%' AND DB_NAME LIKE 'REPORTING_%' AND TABLE_NAME NOT IN ('AUDIT_LOG', 'CONNECTION', 'WORKFLOW_ITERATION_VARIABLE', 'WORKFLOW_VARIABLE')) ranked WHERE rn = 1 ORDER BY DB_NAME, TABLE_NAME;"
-				},
-				"connectionType":"DIRECT",
-				"sslVerify":false,
-				"path":"/internal/sql-report/runSQL/query/{{ n_A4kqi.outputs.customerId }}",
-				"responseSchema":{
-					"type":"object",
-					"additionalProperties":false,
-					"properties":{
-						"objects":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"DATA_SIZE":{
-										"type":"string",
-										"title":"DATA SIZE"
-									},
-									"PARTITION_NAME":{
-										"type":"string",
-										"title":"PARTITION NAME"
-									},
-									"TABLE_NAME":{
-										"type":"string",
-										"title":"TABLE NAME"
-									},
-									"DB_NAME":{
-										"type":"string",
-										"title":"DB NAME"
-									}
-								},
-								"additionalProperties":false,
-								"required":[
-									"DATA_SIZE",
-									"PARTITION_NAME",
-									"TABLE_NAME",
-									"DB_NAME"
-								]
-							},
-							"title":"objects"
-						}
-					}
-				},
-				"baseUrl":"{{ n_96ZBq.outputs.baseInternalUrl }}",
-				"httpVersion":"HTTP_2",
-				"bodySchema":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[],
-					"properties":{
-						"sql":{
-							"type":"string",
-							"title":"Sql"
-						}
-					}
-				},
-				"queryParamsList":[
-					{
-						"key":"sqlResourceType",
-						"value":"PLATFORM"
-					}
-				],
-				"responseContentType":"application/json",
-				"authType":"CUSTOM",
-				"requestContentType":"application/json",
-				"ignoreTrailingSlashes":false,
-				"certificateType":"CERT_STRING"
-			},
-			"skip":false,
-			"subTitle":"get partitions",
-			"title":"Execute REST request",
-			"type":"ACTION"
-		},
-		{
-			"additional":{
-				"xsdSchemaConfig":{
-					"root":{}
-				}
-			},
-			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":111,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@7",
-			"id":"_Y9MIK",
-			"index":47,
-			"inputs":{
-				"output":{
-					"type":"object",
-					"additionalProperties":false,
-					"properties":{
-						"result":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"DB_NAME":{
-										"type":"string",
-										"title":"DB_NAME"
-									},
-									"TABLE_NAME":{
-										"type":"string",
-										"title":"TABLE_NAME"
-									},
-									"PARTITION_NAME":{
-										"type":"string",
-										"title":"PARTITION_NAME"
-									},
-									"LATEST_PARTITION_END_DATE":{
-										"type":"string",
-										"title":"LATEST_PARTITION_END_DATE"
-									},
-									"DAYS_REMAINING":{
-										"type":"integer",
-										"title":"DAYS_REMAINING"
-									},
-									"DATA_SIZE":{
-										"type":"string",
-										"title":"DATA_SIZE"
-									},
-									"ROW_COUNT":{
-										"type":"integer",
-										"title":"ROW_COUNT"
-									}
-								},
-								"additionalProperties":false
-							},
-							"title":"result"
-						}
-					}
-				},
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"partitions"
-					],
-					"properties":{
-						"partitions":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{},
-								"additionalProperties":false
-							},
-							"title":"Partitions"
-						}
-					}
-				},
-				"code":"import java.time.LocalDateTime\nimport java.time.format.DateTimeFormatter\nimport java.time.temporal.ChronoUnit\n\ndef filterTablesWithInsufficientPartitions(data) {\n    def now = LocalDateTime.now()\n    def oneWeekFromNow = now.plusWeeks(1)\n    \n    def tablesWithInsufficientPartitions = []\n    \n    data.each { partition ->\n        def tableName = partition.TABLE_NAME\n        def dbName = partition.DB_NAME\n        def partitionName = partition.PARTITION_NAME\n        def partitionValue = partition.PARTITION_VALUE\n        \n        try {\n            def endDate = extractEndDateFromPartitionValue(partitionValue)\n            \n            if (endDate && endDate.isBefore(oneWeekFromNow)) {\n                tablesWithInsufficientPartitions << [\n                    DB_NAME: dbName,\n                    TABLE_NAME: tableName,\n                    PARTITION_NAME: partitionName,\n                    LATEST_PARTITION_END_DATE: endDate.toString(),\n                    DAYS_REMAINING: ChronoUnit.DAYS.between(now, endDate),\n                    DATA_SIZE: partition.DATA_SIZE,\n                    ROW_COUNT: partition.ROW_COUNT\n                ]\n            }\n        } catch (Exception e) {\n            println \"Error processing partition ${dbName}.${tableName}.${partitionName}: ${e.message}\"\n        }\n    }\n    \n    return tablesWithInsufficientPartitions\n}\n\ndef extractEndDateFromPartitionValue(partitionValue) {\n    try {\n        def pattern = /.*\\.\\.types:\\s*\\[[^\\]]+\\];\\s*keys:\\s*\\[([^\\]]+)\\]/\n        def matcher = partitionValue =~ pattern\n        \n        if (matcher.find()) {\n            def endValueStr = matcher.group(1).trim()\n            if (endValueStr.matches(/^\\d+$/)) {\n                def timestamp = Long.parseLong(endValueStr)\n                if (timestamp > 1000000000000L) {\n                    def instant = java.time.Instant.ofEpochMilli(timestamp)\n                    return LocalDateTime.ofInstant(instant, java.time.ZoneId.systemDefault())\n                } else {\n                    def instant = java.time.Instant.ofEpochSecond(timestamp)\n                    return LocalDateTime.ofInstant(instant, java.time.ZoneId.systemDefault())\n                }\n            } else {\n                def formatter = DateTimeFormatter.ofPattern(\"yyyy-MM-dd HH:mm:ss\")\n                return LocalDateTime.parse(endValueStr, formatter)\n            }\n        }\n        return extractDateFromPartitionName(partitionName)\n        \n    } catch (Exception e) {\n        return null\n    }\n}\n\ndef extractDateFromPartitionName(partitionName) {\n    try {\n        if (partitionName.startsWith('p') && partitionName.length() == 9) {\n            def dateStr = partitionName.substring(1)\n            def year = dateStr.substring(0, 4) as int\n            def month = dateStr.substring(4, 6) as int\n            def day = dateStr.substring(6, 8) as int\n            return LocalDateTime.of(year, month, day, 0, 0, 0).plusDays(1)\n        } else if (partitionName.startsWith('p') && partitionName.length() > 10) {\n            def timestamp = Long.parseLong(partitionName.substring(1))\n            def instant = java.time.Instant.ofEpochMilli(timestamp)\n            return LocalDateTime.ofInstant(instant, java.time.ZoneId.systemDefault())\n        }\n    } catch (Exception e) {\n        \n    }\n    return null\n}\n\ndef result = []\nif (binding.hasVariable(\"partitions\") && partitions)\n    result = filterTablesWithInsufficientPartitions(partitions)\n\nreturn [\"result\": result]\n\n\n",
-				"compile_static":false,
-				"captureStdOutput":false,
-				"parameters":{
-					"partitions":{
-						"ua:type":"mappedArray",
-						"source":"{{ _1fTuQ.outputs.result.objects }}",
-						"items":"{{ _1fTuQ.outputs.result.objects[0] }}"
-					}
-				}
-			},
-			"skip":false,
-			"subTitle":"Filter partitions",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"if_else",
-				"resourceVersion":767,
-				"resourceName":"if_else_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@7",
-			"id":"n_h8mwo",
-			"index":48,
-			"inputs":{
-				"filters":[
-					{
-						"property":"=LEN({{ _Y9MIK.outputs.result.result }})",
-						"filter":{
-							"operator":"GT",
-							"value":"0"
-						}
-					}
-				],
-				"operator":"AND"
-			},
-			"skip":false,
-			"subTitle":"Condition",
-			"title":"Condition",
-			"type":"IF_ELSE"
-		},
-		{
-			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":814,
-				"resourceName":"variable_by_unifyapps_add_item_to_list",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_h8mwo@n_nST1M@n_WOcYr@_jMFmS-1@l@7@y",
-			"id":"n_cFMH1",
-			"index":49,
-			"inputs":{
-				"itemToAdd":{
-					"dbName":"{{ n_WOcYr.outputs.item.DbName }}",
-					"tableName":"{{ n_WOcYr.outputs.item.TableName }}",
-					"routineLoadName":"{{ n_WOcYr.outputs.item.Name }}",
-					"details":{
-						"source":"{{ _Y9MIK.outputs.result.result }}",
-						"ua:type":"mappedArray",
-						"items":"{{ _Y9MIK.outputs.result.result }}"
-					}
-				},
-				"insertLocation":"END",
-				"listName":"{{ _gVB1y.outputs.items[0] }}"
 			},
 			"skip":false,
 			"subTitle":"Variable by UnifyApps",
@@ -5931,7 +4228,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_aXMZM",
-			"index":50,
+			"index":31,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -6075,7 +4372,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_RG5N7",
-			"index":51,
+			"index":32,
 			"inputs":{
 				"filters":[
 					{
@@ -6111,7 +4408,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_RG5N7@_jMFmS-1@y",
 			"id":"_WBvio",
-			"index":52,
+			"index":33,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -6151,7 +4448,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_RG5N7@_jMFmS-1@y",
 			"id":"_Ed4F0",
-			"index":53,
+			"index":34,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -6188,7 +4485,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_RG5N7@_jMFmS-1@n",
 			"id":"_EQKPq",
-			"index":54,
+			"index":35,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -6228,7 +4525,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_RG5N7@_jMFmS-1@n",
 			"id":"_HmRJS",
-			"index":55,
+			"index":36,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -6256,11 +4553,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"n_3FUqO",
-			"index":56,
+			"index":37,
 			"inputs":{
 				"automationId":"68de72f25b11474238866535",
 				"runtimeConnections":{},
@@ -6268,340 +4565,14 @@
 				"version":"-1",
 				"parameters":{
 					"minimumBucketCount":"{{ _auxBn.outputs.result.minimumBucketCount }}",
-					"customerId":"{{ __RUN__.outputs.customerId }}"
-				}
-			},
-			"skip":false,
-			"subTitle":"Callable",
-			"title":"Call automation",
-			"type":"CALL_WORKFLOW"
-		},
-		{
-			"additional":{
-				"xsdSchemaConfig":{
-					"root":{}
-				}
-			},
-			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":0,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_jMFmS-1",
-			"id":"_9xKNR",
-			"index":57,
-			"inputs":{
-				"output":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"message",
-						"inputs",
-						"outputs"
-					],
-					"properties":{
-						"message":{
-							"type":"string",
-							"title":"Message"
-						},
-						"inputs":{
-							"type":"object",
-							"properties":{
-								"minimumBucketCount":{
-									"type":"integer",
-									"title":"Minimum Bucket Count"
-								}
-							},
-							"additionalProperties":false,
-							"title":"Inputs",
-							"required":[
-								"minimumBucketCount"
-							]
-						},
-						"outputs":{
-							"type":"object",
-							"properties":{
-								"criticalBuckets":{
-									"type":"array",
-									"items":{
-										"type":"object",
-										"properties":{},
-										"additionalProperties":false
-									},
-									"title":"Critical Buckets"
-								}
-							},
-							"additionalProperties":false,
-							"title":"Outputs",
-							"required":[
-								"criticalBuckets"
-							]
-						}
-					}
-				},
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"criticalBuckets",
-						"minimumBucketCount"
-					],
-					"properties":{
-						"criticalBuckets":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"dbName":{
-										"type":"string",
-										"title":"Db Name"
-									},
-									"tableName":{
-										"type":"string",
-										"title":"Table Name"
-									},
-									"routineLoadName":{
-										"type":"string",
-										"title":"Routine Load Name"
-									},
-									"buckets":{
-										"type":"array",
-										"items":{
-											"type":"object",
-											"properties":{},
-											"additionalProperties":false
-										},
-										"title":"Buckets"
-									}
-								},
-								"additionalProperties":false,
-								"required":[
-									"dbName",
-									"tableName",
-									"routineLoadName",
-									"buckets"
-								]
-							},
-							"title":"Critical Buckets"
-						},
-						"minimumBucketCount":{
-							"type":"integer",
-							"title":"Minimum Bucket Count"
-						}
-					}
-				},
-				"code":"if (!(binding.hasVariable(\"criticalBuckets\") && criticalBuckets)) {\n  return [message: \"\", inputs: [minimumBucketCount: minimumBucketCount], outputs: [criticalBuckets: []]]\n}\ndef messages = []\n\nif (criticalBuckets.size() > 0) {\n  for (item in criticalBuckets) {\n    def bucketMessage = [\"[ \"]\n    for (partitions in item.buckets) {\n      bucketMessage << \" [ PartitionName = \" + partitions.PartitionName + \", PartitionId = \" + partitions.PartitionId + \", buckets = \" + partitions.Buckets + \" ] , \"\n    }\n    bucketMessage << \" ]\"\n    bucketMessage = bucketMessage.join()\n    messages << \"• Database = \" + item.dbName + \", tableName =  \" + item.tableName + \", routineLoadName = \" + item.routineLoadName + \", partitions = \" + bucketMessage + \"\\n\"\n  }\n}\nreturn [outputs: [criticalBuckets: criticalBuckets], inputs: [\"minimumBucketCount\": minimumBucketCount], message: messages.join()]",
-				"compile_static":false,
-				"captureStdOutput":false,
-				"parameters":{
-					"minimumBucketCount":"{{ _auxBn.outputs.result.minimumBucketCount }}",
-					"criticalBuckets":{
-						"ua:type":"mappedArray",
-						"items":{
-							"buckets":{
-								"ua:type":"mappedArray",
-								"source":"{{ n_3FUqO.outputs.bucketWarnings[0].partitions }}",
-								"items":"{{ n_3FUqO.outputs.bucketWarnings[0].partitions[0] }}"
-							},
-							"dbName":"{{ n_3FUqO.outputs.bucketWarnings[0].dbName }}",
-							"tableName":"{{ n_3FUqO.outputs.bucketWarnings[0].tableName }}",
-							"routineLoadName":"test"
-						},
-						"source":"{{ n_3FUqO.outputs.bucketWarnings }}"
-					}
-				}
-			},
-			"skip":false,
-			"subTitle":"Buckets ouptut",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"if_else",
-				"resourceVersion":767,
-				"resourceName":"if_else_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_jMFmS-1",
-			"id":"_6H2OQ",
-			"index":58,
-			"inputs":{
-				"filters":[
-					{
-						"property":"=LEN({{ _9xKNR.outputs.result.outputs.criticalBuckets }})",
-						"filter":{
-							"operator":"GT",
-							"value":"0"
-						}
-					}
-				],
-				"operator":"AND"
-			},
-			"skip":false,
-			"subTitle":"Condition",
-			"title":"Condition",
-			"type":"IF_ELSE"
-		},
-		{
-			"additional":{
-				"visibleOptionalFields":[
-					"root.record.steps.inputs",
-					"root.record.steps.outputs"
-				]
-			},
-			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":3226,
-				"resourceName":"storage_by_unifyapps_create_record",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_6H2OQ@_jMFmS-1@y",
-			"id":"_CeBOO",
-			"index":59,
-			"inputs":{
-				"writeThroughSessionVariables":false,
-				"object_type":"infra_alert_steps",
-				"skipIfBlank":false,
-				"record":{
-					"resolved":false,
-					"alertType":"starrocks_table_health",
+					"customerId":"{{ __RUN__.outputs.customerId }}",
 					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
 					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
-					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
-					"alertCategory":"starrocks",
-					"alertSubType":"routine_load_partition_buckets",
-					"summary":"Check whether the partition of a routine load has a healthy bucket size",
-					"steps":{
-						"inputs":"{{ _9xKNR.outputs.result.inputs }}",
-						"outputs":"{{ _9xKNR.outputs.result.outputs }}"
-					},
-					"status":"CRITICAL",
-					"stepDescription":"Check whether each partition of a routine load is < {{ _auxBn.outputs.result.minimumBucketCount }} , which is too small",
-					"stepsOrder":6
+					"executionTime":"{{ n_A4kqi.outputs.executionTime }}"
 				}
 			},
 			"skip":false,
-			"subTitle":"Create Alert Step",
-			"title":"Create record",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"callables",
-				"resourceVersion":3,
-				"resourceName":"callables_call_automation",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_6H2OQ@_jMFmS-1@y",
-			"id":"_xe7MC",
-			"index":60,
-			"inputs":{
-				"automationId":"68721bd4feea003f6a9cb688",
-				"runtimeConnections":{},
-				"synchronous":false,
-				"version":"-1",
-				"parameters":{
-					"env":"{{ n_t5eD3.outputs.result.env }}",
-					"alertCategory":"starrocks",
-					"alertType":"starrocks_table_health",
-					"alertTitle":"🚨 Small Buckets in Routine Load Partitions (<{{ n_t5eD3.outputs.result.minimumBucketCount }})",
-					"alertDescription":"For customer {{ __RUN__.outputs.customerId }}, the following routine load partitions have buckets < {{ n_t5eD3.outputs.result.minimumBucketCount }}:\n{{ _9xKNR.outputs.result.message }}"
-				}
-			},
-			"skip":false,
-			"subTitle":"Callable",
-			"title":"Call automation",
-			"type":"CALL_WORKFLOW"
-		},
-		{
-			"additional":{
-				"visibleOptionalFields":[
-					"root.record.steps.inputs",
-					"root.record.steps.outputs"
-				]
-			},
-			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":3226,
-				"resourceName":"storage_by_unifyapps_create_record",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_6H2OQ@_jMFmS-1@n",
-			"id":"_ODwaO",
-			"index":61,
-			"inputs":{
-				"writeThroughSessionVariables":false,
-				"object_type":"infra_alert_steps",
-				"skipIfBlank":false,
-				"record":{
-					"resolved":true,
-					"alertType":"starrocks_table_health",
-					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
-					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
-					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
-					"alertCategory":"starrocks",
-					"alertSubType":"routine_load_partition_buckets",
-					"summary":"Check whether the partition of a routine load has a healthy bucket size",
-					"steps":{
-						"inputs":"{{ _9xKNR.outputs.result.inputs }}",
-						"outputs":"{{ _9xKNR.outputs.result.outputs }}"
-					},
-					"status":"OK",
-					"stepDescription":"Check whether each partition of a routine load is < {{ _auxBn.outputs.result.minimumBucketCount }} , which is too small",
-					"stepsOrder":6
-				}
-			},
-			"skip":false,
-			"subTitle":"Create Alert Step",
-			"title":"Create record",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"callables",
-				"resourceVersion":3,
-				"resourceName":"callables_call_automation",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_6H2OQ@_jMFmS-1@n",
-			"id":"_PA7QE",
-			"index":62,
-			"inputs":{
-				"automationId":"68721bd4feea003f6a9cb688",
-				"runtimeConnections":{},
-				"synchronous":false,
-				"version":"-1",
-				"parameters":{
-					"sendAlert":false,
-					"env":"{{ n_t5eD3.outputs.result.env }}",
-					"alertCategory":"starrocks",
-					"alertType":"starrocks_table_health",
-					"alertTitle":"🚨 Small Buckets in Routine Load Partitions (<{{ n_t5eD3.outputs.result.minimumBucketCount }})",
-					"alertDescription":"For customer {{ __RUN__.outputs.customerId }}, the following routine load partitions have buckets < {{ n_t5eD3.outputs.result.minimumBucketCount }}:\n{{ _9xKNR.outputs.result.message }}"
-				}
-			},
-			"skip":false,
-			"subTitle":"Callable",
+			"subTitle":"Critical Buckets Automation",
 			"title":"Call automation",
 			"type":"CALL_WORKFLOW"
 		},
@@ -6613,11 +4584,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"n_7eEkF",
-			"index":63,
+			"index":38,
 			"inputs":{
 				"automationId":"68de9e4e0e9d387c5aab02d2",
 				"runtimeConnections":{},
@@ -6625,340 +4596,14 @@
 				"version":"-1",
 				"parameters":{
 					"customerId":"{{ __RUN__.outputs.customerId }}",
-					"minimumStorageSizeGB":"{{ _auxBn.outputs.result.minimumStorageSizeGB }}"
-				}
-			},
-			"skip":false,
-			"subTitle":"Callable",
-			"title":"Call automation",
-			"type":"CALL_WORKFLOW"
-		},
-		{
-			"additional":{
-				"xsdSchemaConfig":{
-					"root":{}
-				}
-			},
-			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":0,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_jMFmS-1",
-			"id":"_DKDTU",
-			"index":64,
-			"inputs":{
-				"output":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"message",
-						"inputs",
-						"outputs"
-					],
-					"properties":{
-						"message":{
-							"type":"string",
-							"title":"Message"
-						},
-						"inputs":{
-							"type":"object",
-							"properties":{
-								"minimumStorageSize":{
-									"type":"integer",
-									"title":"Minimum Storage Size"
-								}
-							},
-							"additionalProperties":false,
-							"title":"Inputs",
-							"required":[
-								"minimumStorageSize"
-							]
-						},
-						"outputs":{
-							"type":"object",
-							"properties":{
-								"criticalSizeRoutineLoads":{
-									"type":"array",
-									"items":{
-										"type":"object",
-										"properties":{},
-										"additionalProperties":false
-									},
-									"title":"Critical Size Routine Loads"
-								}
-							},
-							"additionalProperties":false,
-							"title":"Outputs",
-							"required":[
-								"criticalSizeRoutineLoads"
-							]
-						}
-					}
-				},
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"criticalSizeRoutineLoads",
-						"minimumStorageSize"
-					],
-					"properties":{
-						"criticalSizeRoutineLoads":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"dbName":{
-										"type":"string",
-										"title":"Db Name"
-									},
-									"tableName":{
-										"type":"string",
-										"title":"Table Name"
-									},
-									"routineLoadName":{
-										"type":"string",
-										"title":"Routine Load Name"
-									},
-									"partitions":{
-										"type":"array",
-										"items":{
-											"type":"object",
-											"properties":{},
-											"additionalProperties":false
-										},
-										"title":"Partitions"
-									}
-								},
-								"additionalProperties":false,
-								"required":[
-									"dbName",
-									"tableName",
-									"routineLoadName",
-									"partitions"
-								]
-							},
-							"title":"Critical Size Routine Loads"
-						},
-						"minimumStorageSize":{
-							"type":"integer",
-							"title":"Minimum Storage Size"
-						}
-					}
-				},
-				"code":"if (!(binding.hasVariable(\"criticalSizeRoutineLoads\") && criticalSizeRoutineLoads)) {\n  return [message: \"\", inputs: [minimumStorageSize: minimumStorageSize], outputs: [criticalSizeRoutineLoads: []]]\n}\ndef messages = []\n\nif (criticalSizeRoutineLoads.size() > 0) {\n  for (item in criticalSizeRoutineLoads) {\n    def storageMessage = [\"[ \"]\n    for (partitions in item.partitions) {\n      storageMessage << \" [ PartitionName = \" + partitions.partitionName + \", PartitionSize = \" + partitions.partitionSize + \" ] , \"\n    }\n    storageMessage << \" ]\"\n    storageMessage = storageMessage.join()\n    messages << \"• Database = \" + item.dbName + \", tableName =  \" + item.tableName + \", routineLoadName = \" + item.routineLoadName + \", partitions = \" + storageMessage + \"\\n\"\n  }\n}\nreturn [outputs: [criticalSizeRoutineLoads: criticalSizeRoutineLoads], inputs: [\"minimumStorageSize\": minimumStorageSize], message: messages.join()]",
-				"compile_static":false,
-				"captureStdOutput":false,
-				"parameters":{
-					"minimumStorageSize":"{{ _auxBn.outputs.result.minimumStorageSizeGB }}",
-					"criticalSizeRoutineLoads":{
-						"ua:type":"mappedArray",
-						"items":{
-							"partitions":{
-								"ua:type":"mappedArray",
-								"source":"{{ n_7eEkF.outputs.alertPartitions[0].partitions }}",
-								"items":"{{ n_7eEkF.outputs.alertPartitions[0].partitions[0] }}"
-							},
-							"dbName":"{{ n_7eEkF.outputs.alertPartitions[0].dbName }}",
-							"tableName":"{{ n_7eEkF.outputs.alertPartitions[0].tableName }}",
-							"routineLoadName":"test"
-						},
-						"source":"{{ n_7eEkF.outputs.alertPartitions }}"
-					}
-				}
-			},
-			"skip":false,
-			"subTitle":"Data size ouptut",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"if_else",
-				"resourceVersion":767,
-				"resourceName":"if_else_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_jMFmS-1",
-			"id":"_PaFnz",
-			"index":65,
-			"inputs":{
-				"filters":[
-					{
-						"property":"=LEN({{ _DKDTU.outputs.result.outputs.criticalSizeRoutineLoads }})",
-						"filter":{
-							"operator":"GT",
-							"value":"0"
-						}
-					}
-				],
-				"operator":"AND"
-			},
-			"skip":false,
-			"subTitle":"Condition",
-			"title":"Condition",
-			"type":"IF_ELSE"
-		},
-		{
-			"additional":{
-				"visibleOptionalFields":[
-					"root.record.steps.inputs",
-					"root.record.steps.outputs"
-				]
-			},
-			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":3226,
-				"resourceName":"storage_by_unifyapps_create_record",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_PaFnz@_jMFmS-1@y",
-			"id":"_zFyJ8",
-			"index":66,
-			"inputs":{
-				"writeThroughSessionVariables":false,
-				"object_type":"infra_alert_steps",
-				"skipIfBlank":false,
-				"record":{
-					"resolved":false,
-					"alertType":"starrocks_table_health",
+					"minimumStorageSizeGB":"{{ _auxBn.outputs.result.minimumStorageSizeGB }}",
 					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
 					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
-					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
-					"alertCategory":"starrocks",
-					"alertSubType":"routine_load_parition_sizes",
-					"summary":"Check whether the partition of a routine load has a small data size",
-					"steps":{
-						"inputs":"{{ _DKDTU.outputs.result.inputs }}",
-						"outputs":"{{ _DKDTU.outputs.result.outputs }}"
-					},
-					"status":"CRITICAL",
-					"stepDescription":"Check whether each partition of a routine load has < {{ _auxBn.outputs.result.minimumStorageSizeGB }}GB storage, which is too small",
-					"stepsOrder":7
+					"executionTime":"{{ n_A4kqi.outputs.executionTime }}"
 				}
 			},
 			"skip":false,
-			"subTitle":"Create Alert Step",
-			"title":"Create record",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"callables",
-				"resourceVersion":3,
-				"resourceName":"callables_call_automation",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_PaFnz@_jMFmS-1@y",
-			"id":"_ANDa3",
-			"index":67,
-			"inputs":{
-				"automationId":"68721bd4feea003f6a9cb688",
-				"runtimeConnections":{},
-				"synchronous":false,
-				"version":"-1",
-				"parameters":{
-					"env":"{{ n_96ZBq.outputs.env }}",
-					"alertCategory":"starrocks",
-					"alertType":"starrocks_table_health",
-					"alertTitle":"🚨 Small Data Size in Routine Load Partitions (<{{ _auxBn.outputs.result.minimumStorageSizeGB }}GB)",
-					"alertDescription":"For customer {{ __RUN__.outputs.customerId }}, the following routine load partitions have data size < {{ _auxBn.outputs.result.minimumStorageSizeGB }}GB:\n{{ _DKDTU.outputs.result.message }}"
-				}
-			},
-			"skip":false,
-			"subTitle":"Callable",
-			"title":"Call automation",
-			"type":"CALL_WORKFLOW"
-		},
-		{
-			"additional":{
-				"visibleOptionalFields":[
-					"root.record.steps.inputs",
-					"root.record.steps.outputs"
-				]
-			},
-			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":3226,
-				"resourceName":"storage_by_unifyapps_create_record",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_PaFnz@_jMFmS-1@n",
-			"id":"_izaqB",
-			"index":68,
-			"inputs":{
-				"writeThroughSessionVariables":false,
-				"object_type":"infra_alert_steps",
-				"skipIfBlank":false,
-				"record":{
-					"resolved":true,
-					"alertType":"starrocks_table_health",
-					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
-					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
-					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
-					"alertCategory":"starrocks",
-					"alertSubType":"routine_load_parition_sizes",
-					"summary":"Check whether the partition of a routine load has a small data size",
-					"steps":{
-						"inputs":"{{ _DKDTU.outputs.result.inputs }}",
-						"outputs":"{{ _DKDTU.outputs.result.outputs }}"
-					},
-					"status":"OK",
-					"stepDescription":"Check whether each partition of a routine load has < {{ _auxBn.outputs.result.minimumStorageSizeGB }}GB storage, which is too small",
-					"stepsOrder":7
-				}
-			},
-			"skip":false,
-			"subTitle":"Create Alert Step",
-			"title":"Create record",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"callables",
-				"resourceVersion":3,
-				"resourceName":"callables_call_automation",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_PaFnz@_jMFmS-1@n",
-			"id":"_Wv2bW",
-			"index":69,
-			"inputs":{
-				"automationId":"68721bd4feea003f6a9cb688",
-				"runtimeConnections":{},
-				"synchronous":false,
-				"version":"-1",
-				"parameters":{
-					"sendAlert":false,
-					"env":"{{ n_96ZBq.outputs.env }}",
-					"alertCategory":"starrocks",
-					"alertType":"starrocks_table_health",
-					"alertTitle":"🚨 Small Data Size in Routine Load Partitions (<{{ _auxBn.outputs.result.minimumStorageSizeGB }}GB)",
-					"alertDescription":"For customer {{ __RUN__.outputs.customerId }}, the following routine load partitions have data size < {{ _auxBn.outputs.result.minimumStorageSizeGB }}GB:\n{{ _DKDTU.outputs.result.message }}"
-				}
-			},
-			"skip":false,
-			"subTitle":"Callable",
+			"subTitle":"Critical Partition Size",
 			"title":"Call automation",
 			"type":"CALL_WORKFLOW"
 		},
@@ -6970,699 +4615,56 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"n_qRMpV",
-			"index":70,
+			"index":39,
 			"inputs":{
 				"automationId":"68df10f132f8572ada24c781",
 				"runtimeConnections":{},
 				"synchronous":true,
 				"version":"-1",
 				"parameters":{
-					"customerId":"{{ __RUN__.outputs.customerId }}"
+					"customerId":"{{ __RUN__.outputs.customerId }}",
+					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
+					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
+					"executedAt":"{{ n_A4kqi.outputs.executionTime }}"
 				}
 			},
 			"skip":false,
-			"subTitle":"Callable",
+			"subTitle":"Missing Next Partitions",
 			"title":"Call automation",
 			"type":"CALL_WORKFLOW"
 		},
 		{
-			"additional":{
-				"xsdSchemaConfig":{
-					"root":{}
-				}
-			},
-			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":0,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_jMFmS-1",
-			"id":"_3dH62",
-			"index":71,
-			"inputs":{
-				"output":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"message",
-						"inputs",
-						"outputs"
-					],
-					"properties":{
-						"message":{
-							"type":"string",
-							"title":"Message"
-						},
-						"inputs":{
-							"type":"object",
-							"properties":{
-								"totalPartitionsMissing":{
-									"type":"integer",
-									"title":"Total Partitions Missing"
-								}
-							},
-							"additionalProperties":false,
-							"title":"Inputs",
-							"required":[
-								"totalPartitionsMissing"
-							]
-						},
-						"outputs":{
-							"type":"object",
-							"properties":{
-								"missingNextPartitions":{
-									"type":"array",
-									"items":{
-										"type":"object",
-										"properties":{},
-										"additionalProperties":false
-									},
-									"title":"Missing Next Partitions"
-								}
-							},
-							"additionalProperties":false,
-							"title":"Outputs",
-							"required":[
-								"missingNextPartitions"
-							]
-						}
-					}
-				},
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"missingNextPartitions"
-					],
-					"properties":{
-						"missingNextPartitions":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"dbName":{
-										"type":"string",
-										"title":"Db Name"
-									},
-									"tableName":{
-										"type":"string",
-										"title":"Table Name"
-									},
-									"LATEST_PARTITION_END_DATE":{
-										"type":"string",
-										"title":"LATEST PARTITION END DATE"
-									},
-									"PARTITION_NAME":{
-										"type":"string",
-										"title":"PARTITION NAME"
-									},
-									"DAYS_REMAINING":{
-										"type":"integer",
-										"title":"DAYS REMAINING"
-									},
-									"DATA_SIZE":{
-										"type":"string",
-										"title":"DATA SIZE"
-									},
-									"ROW_COUNT":{
-										"type":"integer",
-										"title":"ROW COUNT"
-									}
-								},
-								"additionalProperties":false,
-								"required":[
-									"dbName",
-									"tableName",
-									"LATEST_PARTITION_END_DATE",
-									"PARTITION_NAME",
-									"DAYS_REMAINING",
-									"DATA_SIZE",
-									"ROW_COUNT"
-								]
-							},
-							"title":"Missing Next Partitions"
-						}
-					}
-				},
-				"code":"if (!(binding.hasVariable(\"missingNextPartitions\") && missingNextPartitions)) {\n  return [message: \"\", inputs: [totalPartitionsMissing: 0], outputs: [missingNextPartitions: []]]\n}\ndef messages = []\n\nif (missingNextPartitions.size() > 0) {\n  for (item in missingNextPartitions) {\n    def storageMessage = [\"[ \"]\n    for (partitions in item.partitions) {\n      storageMessage << \" [ PartitionName = \" + partitions.PARTITION_NAME + \", PartitionLatestEndDate = \" + partitions.LATEST_PARTITION_END_DATE + \", PartitionDaysRemaining = \" + partitions.DAYS_REMAINING + \" ] , \"\n    }\n    storageMessage << \" ]\"\n    storageMessage = storageMessage.join()\n    messages << \"• Database = \" + item.DB_NAME + \", tableName =  \" + item.TABLE_NAME + \", PartitionName = \" + item.PARTITION_NAME + \", PartitionLatestEndDate = \" + item.LATEST_PARTITION_END_DATE + \", PartitionDaysRemaining = \" + item.DAYS_REMAINING + \"\\n\"\n  }\n}\nreturn [outputs: [missingNextPartitions: missingNextPartitions], inputs: [\"totalPartitionsMissing\": missingNextPartitions.size()], message: messages.join()]",
-				"compile_static":false,
-				"captureStdOutput":false,
-				"parameters":{
-					"missingNextPartitions":{
-						"ua:type":"mappedArray",
-						"items":{
-							"dbName":"{{ n_qRMpV.outputs.missingPartitions[0].DB_NAME }}",
-							"tableName":"{{ n_qRMpV.outputs.missingPartitions[0].TABLE_NAME }}",
-							"LATEST_PARTITION_END_DATE":"{{ n_qRMpV.outputs.missingPartitions[0].LATEST_PARTITION_END_DATE }}",
-							"PARTITION_NAME":"{{ n_qRMpV.outputs.missingPartitions[0].PARTITION_NAME }}",
-							"DAYS_REMAINING":"{{ n_qRMpV.outputs.missingPartitions[0].DAYS_REMAINING }}",
-							"DATA_SIZE":"{{ n_qRMpV.outputs.missingPartitions[0].DATA_SIZE }}",
-							"ROW_COUNT":"{{ n_qRMpV.outputs.missingPartitions[0].ROW_COUNT }}"
-						},
-						"source":"{{ n_qRMpV.outputs.missingPartitions }}"
-					}
-				}
-			},
-			"skip":false,
-			"subTitle":" Missing next partition output",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"if_else",
-				"resourceVersion":767,
-				"resourceName":"if_else_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_jMFmS-1",
-			"id":"_wcAiW",
-			"index":72,
-			"inputs":{
-				"filters":[
-					{
-						"property":"=LEN({{ _3dH62.outputs.result.outputs.missingNextPartitions }})",
-						"filter":{
-							"operator":"GT",
-							"value":"0"
-						}
-					}
-				],
-				"operator":"AND"
-			},
-			"skip":false,
-			"subTitle":"Condition",
-			"title":"Condition",
-			"type":"IF_ELSE"
-		},
-		{
-			"additional":{
-				"visibleOptionalFields":[
-					"root.record.steps.inputs",
-					"root.record.steps.outputs"
-				]
-			},
-			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":3226,
-				"resourceName":"storage_by_unifyapps_create_record",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_wcAiW@_jMFmS-1@y",
-			"id":"_7hrr3",
-			"index":73,
-			"inputs":{
-				"writeThroughSessionVariables":false,
-				"object_type":"infra_alert_steps",
-				"skipIfBlank":false,
-				"record":{
-					"resolved":false,
-					"alertType":"starrocks_table_health",
-					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
-					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
-					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
-					"alertCategory":"starrocks",
-					"alertSubType":"routine_load_missing_next_partition",
-					"summary":"Check whether a routine load has it's next partition setup",
-					"steps":{
-						"inputs":"{{ _3dH62.outputs.result.inputs }}",
-						"outputs":"{{ _3dH62.outputs.result.outputs }}"
-					},
-					"status":"CRITICAL",
-					"stepDescription":"Check whether a routine load has it's next partition setup",
-					"stepsOrder":8
-				}
-			},
-			"skip":false,
-			"subTitle":"Create Alert Step",
-			"title":"Create record",
-			"type":"ACTION"
-		},
-		{
 			"context":{
 				"appName":"callables",
-				"resourceVersion":3,
+				"resourceVersion":1069,
 				"resourceName":"callables_call_automation",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_wcAiW@_jMFmS-1@y",
-			"id":"_TNCsd",
-			"index":74,
-			"inputs":{
-				"automationId":"68721bd4feea003f6a9cb688",
-				"runtimeConnections":{},
-				"synchronous":false,
-				"version":"-1",
-				"parameters":{
-					"env":"{{ n_96ZBq.outputs.env }}",
-					"alertCategory":"starrocks",
-					"alertType":"starrocks_table_health",
-					"alertTitle":"🚨 Missing Current Partitions for Routine Loads",
-					"alertDescription":"For customer {{ n_A4kqi.outputs.customerId }}, the following routine loads are missing their next partition:\n{{ _3dH62.outputs.result.message }}"
-				}
-			},
-			"skip":false,
-			"subTitle":"Callable",
-			"title":"Call automation",
-			"type":"CALL_WORKFLOW"
-		},
-		{
-			"additional":{
-				"visibleOptionalFields":[
-					"root.record.steps.inputs",
-					"root.record.steps.outputs"
-				]
-			},
-			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":3226,
-				"resourceName":"storage_by_unifyapps_create_record",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_wcAiW@_jMFmS-1@n",
-			"id":"_7DI3g",
-			"index":75,
-			"inputs":{
-				"writeThroughSessionVariables":false,
-				"object_type":"infra_alert_steps",
-				"skipIfBlank":false,
-				"record":{
-					"resolved":true,
-					"alertType":"starrocks_table_health",
-					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
-					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
-					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
-					"alertCategory":"starrocks",
-					"alertSubType":"routine_load_missing_next_partition",
-					"summary":"Check whether a routine load has it's next partition setup",
-					"steps":{
-						"inputs":"{{ _3dH62.outputs.result.inputs }}",
-						"outputs":"{{ _3dH62.outputs.result.outputs }}"
-					},
-					"status":"OK",
-					"stepDescription":"Check whether a routine load has it's next partition setup",
-					"stepsOrder":8
-				}
-			},
-			"skip":false,
-			"subTitle":"Create Alert Step",
-			"title":"Create record",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"callables",
-				"resourceVersion":3,
-				"resourceName":"callables_call_automation",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_wcAiW@_jMFmS-1@n",
-			"id":"_nHiIA",
-			"index":76,
-			"inputs":{
-				"automationId":"68721bd4feea003f6a9cb688",
-				"runtimeConnections":{},
-				"synchronous":false,
-				"version":"-1",
-				"parameters":{
-					"sendAlert":false,
-					"env":"{{ n_96ZBq.outputs.env }}",
-					"alertCategory":"starrocks",
-					"alertType":"starrocks_table_health",
-					"alertTitle":"🚨 Missing Current Partitions for Routine Loads",
-					"alertDescription":"For customer {{ n_A4kqi.outputs.customerId }}, the following routine loads are missing their next partition:\n{{ _3dH62.outputs.result.message }}"
-				}
-			},
-			"skip":false,
-			"subTitle":"Callable",
-			"title":"Call automation",
-			"type":"CALL_WORKFLOW"
-		},
-		{
-			"context":{
-				"appName":"callables",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"n_wIqCh",
-			"index":77,
-			"skip":false,
-			"subTitle":"Callable",
-			"title":"Select an action",
-			"type":"CALL_WORKFLOW"
-		},
-		{
-			"additional":{
-				"xsdSchemaConfig":{
-					"root":{}
-				}
-			},
-			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":0,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_jMFmS-1",
-			"id":"_oSfM0",
-			"index":78,
+			"index":40,
 			"inputs":{
-				"output":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"message",
-						"inputs",
-						"outputs"
-					],
-					"properties":{
-						"message":{
-							"type":"string",
-							"title":"Message"
-						},
-						"inputs":{
-							"type":"object",
-							"properties":{
-								"minCompactionScore":{
-									"type":"integer",
-									"title":"Min Compaction Score"
-								}
-							},
-							"additionalProperties":false,
-							"title":"Inputs",
-							"required":[
-								"minCompactionScore"
-							]
-						},
-						"outputs":{
-							"type":"object",
-							"properties":{
-								"smallCompactionPartitions":{
-									"type":"array",
-									"items":{
-										"type":"object",
-										"properties":{},
-										"additionalProperties":false
-									},
-									"title":"Small Compaction Partitions"
-								}
-							},
-							"additionalProperties":false,
-							"title":"Outputs",
-							"required":[
-								"smallCompactionPartitions"
-							]
-						}
-					}
-				},
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"smallCompactionPartitions",
-						"minCompactionScore"
-					],
-					"properties":{
-						"smallCompactionPartitions":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"dbName":{
-										"type":"string",
-										"title":"Db Name"
-									},
-									"tableName":{
-										"type":"string",
-										"title":"Table Name"
-									},
-									"routineLoadName":{
-										"type":"string",
-										"title":"Routine Load Name"
-									},
-									"partitions":{
-										"type":"array",
-										"items":{
-											"type":"object",
-											"properties":{},
-											"additionalProperties":false
-										},
-										"title":"Partitions"
-									}
-								},
-								"additionalProperties":false,
-								"required":[
-									"dbName",
-									"tableName",
-									"routineLoadName",
-									"partitions"
-								]
-							},
-							"title":"Small Compaction Partitions"
-						},
-						"minCompactionScore":{
-							"type":"integer",
-							"title":"Min Compaction Score"
-						}
-					}
-				},
-				"code":"if (!(binding.hasVariable(\"smallCompactionPartitions\") && smallCompactionPartitions)) {\n  return [message: \"\", inputs: [minCompactionScore: minCompactionScore], outputs: [smallCompactionPartitions: []]]\n}\ndef messages = []\n\nif (smallCompactionPartitions.size() > 0) {\n  for (item in smallCompactionPartitions) {\n    def storageMessage = [\"[ \"]\n    for (partitions in item.partitions) {\n      storageMessage << \" [ PartitionName = \" + partitions.partitionName + \", PartitionId = \" + partitions.partitionId + \", CompactionScore = \" + partitions.compactionScore + \" ] , \"\n    }\n    storageMessage << \" ]\"\n    storageMessage = storageMessage.join()\n    messages << \"• Database = \" + item.dbName + \", tableName =  \" + item.tableName + \", routineLoadName = \" + item.routineLoadName + \", partitions = \" + storageMessage + \"\\n\"\n  }\n}\nreturn [outputs: [smallCompactionPartitions: smallCompactionPartitions], inputs: [\"minCompactionScore\": minCompactionScore], message: messages.join()]",
-				"compile_static":false,
-				"captureStdOutput":false,
-				"parameters":{
-					"minCompactionScore":"{{ _auxBn.outputs.result.compactionMin }}",
-					"smallCompactionPartitions":{
-						"source":"{{ _D05iT.outputs.items }}",
-						"ua:type":"mappedArray",
-						"items":{
-							"dbName":"{{ _D05iT.outputs.items[0].dbName }}",
-							"tableName":"{{ _D05iT.outputs.items[0].tableName }}",
-							"routineLoadName":"{{ _D05iT.outputs.items[0].routineLoadName }}",
-							"partitions":{
-								"source":"{{ _D05iT.outputs.items[0].partitions }}",
-								"ua:type":"mappedArray",
-								"items":"{{ _D05iT.outputs.items[0].partitions[0] }}"
-							}
-						}
-					}
-				}
-			},
-			"skip":false,
-			"subTitle":"Small compaction score output",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"if_else",
-				"resourceVersion":767,
-				"resourceName":"if_else_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_jMFmS-1",
-			"id":"_sbw6Y",
-			"index":79,
-			"inputs":{
-				"filters":[
-					{
-						"property":"=LEN({{ _oSfM0.outputs.result.outputs.smallCompactionPartitions }})",
-						"filter":{
-							"operator":"GT",
-							"value":"0"
-						}
-					}
-				],
-				"operator":"AND"
-			},
-			"skip":false,
-			"subTitle":"Condition",
-			"title":"Condition",
-			"type":"IF_ELSE"
-		},
-		{
-			"additional":{
-				"visibleOptionalFields":[
-					"root.record.steps.inputs",
-					"root.record.steps.outputs"
-				]
-			},
-			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":3226,
-				"resourceName":"storage_by_unifyapps_create_record",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_sbw6Y@_jMFmS-1@y",
-			"id":"_W50DB",
-			"index":80,
-			"inputs":{
-				"writeThroughSessionVariables":false,
-				"object_type":"infra_alert_steps",
-				"skipIfBlank":false,
-				"record":{
-					"resolved":false,
-					"alertType":"starrocks_table_health",
-					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
-					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
-					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
-					"alertCategory":"starrocks",
-					"alertSubType":"routine_load_small_compaction_score",
-					"summary":"Check whether a routine load partition has a small compaction score",
-					"steps":{
-						"inputs":"{{ _oSfM0.outputs.result.inputs }}",
-						"outputs":"{{ _oSfM0.outputs.result.outputs }}"
-					},
-					"status":"CRITICAL",
-					"stepDescription":"Check whether a routine load's partition has compaction score < {{ _auxBn.outputs.result.compactionMin }}",
-					"stepsOrder":9
-				}
-			},
-			"skip":false,
-			"subTitle":"Create Alert Step",
-			"title":"Create record",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"callables",
-				"resourceVersion":3,
-				"resourceName":"callables_call_automation",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_sbw6Y@_jMFmS-1@y",
-			"id":"_axNoi",
-			"index":81,
-			"inputs":{
-				"automationId":"68721bd4feea003f6a9cb688",
+				"automationId":"68df06a1aa7c7b4f21f842e7",
 				"runtimeConnections":{},
-				"synchronous":false,
+				"synchronous":true,
 				"version":"-1",
 				"parameters":{
-					"env":"{{ n_96ZBq.outputs.env }}",
-					"alertCategory":"starrocks",
-					"alertType":"starrocks_table_health",
-					"alertTitle":"🚨 Small Compactions in Routine Load Partitions (< {{ _auxBn.outputs.result.compactionMin }})",
-					"alertDescription":"For customer {{ n_A4kqi.outputs.customerId }}, the following routine loads and their partitions have a small compaction score (< {{ _auxBn.outputs.result.compactionMin }}):\n{{ _oSfM0.outputs.result.message }}"
-				}
-			},
-			"skip":false,
-			"subTitle":"Callable",
-			"title":"Call automation",
-			"type":"CALL_WORKFLOW"
-		},
-		{
-			"additional":{
-				"visibleOptionalFields":[
-					"root.record.steps.inputs",
-					"root.record.steps.outputs"
-				]
-			},
-			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":3226,
-				"resourceName":"storage_by_unifyapps_create_record",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_sbw6Y@_jMFmS-1@n",
-			"id":"_XAGCp",
-			"index":82,
-			"inputs":{
-				"writeThroughSessionVariables":false,
-				"object_type":"infra_alert_steps",
-				"skipIfBlank":false,
-				"record":{
-					"resolved":true,
-					"alertType":"starrocks_table_health",
+					"customerId":"{{ n_A4kqi.outputs.customerId }}",
+					"compactionMin":"{{ _auxBn.outputs.result.compactionMin }}",
 					"rootAutomationId":"{{ n_A4kqi.outputs.rootAutomationId }}",
 					"rootExecutionId":"{{ n_A4kqi.outputs.rootExecutionId }}",
-					"executedAt":"{{ n_A4kqi.outputs.executionTime }}",
-					"alertCategory":"starrocks",
-					"alertSubType":"routine_load_small_compaction_score",
-					"summary":"Check whether a routine load partition has a small compaction score",
-					"steps":{
-						"inputs":"{{ _oSfM0.outputs.result.inputs }}",
-						"outputs":"{{ _oSfM0.outputs.result.outputs }}"
-					},
-					"status":"OK",
-					"stepDescription":"Check whether a routine load's partition has compaction score < {{ _auxBn.outputs.result.compactionMin }}",
-					"stepsOrder":9
+					"executedAt":"{{ n_A4kqi.outputs.executionTime }}"
 				}
 			},
 			"skip":false,
-			"subTitle":"Create Alert Step",
-			"title":"Create record",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"callables",
-				"resourceVersion":3,
-				"resourceName":"callables_call_automation",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_sbw6Y@_jMFmS-1@n",
-			"id":"_Ul4xT",
-			"index":83,
-			"inputs":{
-				"automationId":"68721bd4feea003f6a9cb688",
-				"runtimeConnections":{},
-				"synchronous":false,
-				"version":"-1",
-				"parameters":{
-					"sendAlert":false,
-					"env":"{{ n_96ZBq.outputs.env }}",
-					"alertCategory":"starrocks",
-					"alertType":"starrocks_table_health",
-					"alertTitle":"🚨 Small Compactions in Routine Load Partitions (< {{ _auxBn.outputs.result.compactionMin }})",
-					"alertDescription":"For customer {{ n_A4kqi.outputs.customerId }}, the following routine loads and their partitions have a small compaction score (< {{ _auxBn.outputs.result.compactionMin }}):\n{{ _oSfM0.outputs.result.message }}"
-				}
-			},
-			"skip":false,
-			"subTitle":"Callable",
+			"subTitle":"Critical Compaction Scores",
 			"title":"Call automation",
 			"type":"CALL_WORKFLOW"
 		},
@@ -7683,7 +4685,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_mTnAB",
-			"index":84,
+			"index":41,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -7825,7 +4827,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_sd49N",
-			"index":85,
+			"index":42,
 			"inputs":{
 				"filters":[
 					{
@@ -7861,7 +4863,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sd49N@_jMFmS-1@y",
 			"id":"_jP4zx",
-			"index":86,
+			"index":43,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -7901,7 +4903,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sd49N@_jMFmS-1@y",
 			"id":"_9P9Co",
-			"index":87,
+			"index":44,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -7938,7 +4940,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sd49N@_jMFmS-1@n",
 			"id":"_mK9Cz",
-			"index":88,
+			"index":45,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -7978,7 +4980,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sd49N@_jMFmS-1@n",
 			"id":"_OvB0j",
-			"index":89,
+			"index":46,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -8015,7 +5017,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_Xc40g",
-			"index":90,
+			"index":47,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -8145,7 +5147,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_jMFmS-1",
 			"id":"_3i0XI",
-			"index":91,
+			"index":48,
 			"inputs":{
 				"filters":[
 					{
@@ -8181,7 +5183,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_3i0XI@_jMFmS-1@y",
 			"id":"_wwCEw",
-			"index":92,
+			"index":49,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -8221,7 +5223,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_3i0XI@_jMFmS-1@y",
 			"id":"_A4qEN",
-			"index":93,
+			"index":50,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -8259,7 +5261,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_3i0XI@_jMFmS-1@n",
 			"id":"_VKHcU",
-			"index":94,
+			"index":51,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -8299,7 +5301,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_3i0XI@_jMFmS-1@n",
 			"id":"_wR0DC",
-			"index":95,
+			"index":52,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -8338,5 +5340,5 @@
 	"tags":[
 		
 	],
-	"version":98
+	"version":99
 }
