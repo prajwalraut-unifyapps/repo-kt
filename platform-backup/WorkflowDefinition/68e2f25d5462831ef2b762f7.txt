@@ -16,7 +16,7 @@
 	"id":"68e2f25d5462831ef2b762f7",
 	"lastModifiedBy":44096,
 	"lcName":"dda-fetch-events",
-	"modifiedTime":1759703946086,
+	"modifiedTime":1759703968304,
 	"name":"dda-fetch-events",
 	"nodes":[
 		{
@@ -54,7 +54,14 @@
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"ssssssssssss",
-				"skipIfBlank":false
+				"skipIfBlank":false,
+				"record":{
+					"gggg":{
+						"source":"{{ __USER__.outputs.customProperties.drop1 }}",
+						"ua:type":"mappedArray",
+						"items":"{{ __USER__.outputs.customProperties.drop6[0] }}"
+					}
+				}
 			},
 			"skip":false,
 			"subTitle":"Storage by UnifyApps",
@@ -79,5 +86,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
