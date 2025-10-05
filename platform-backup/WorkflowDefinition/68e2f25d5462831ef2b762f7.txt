@@ -16,7 +16,7 @@
 	"id":"68e2f25d5462831ef2b762f7",
 	"lastModifiedBy":44096,
 	"lcName":"dda-fetch-events",
-	"modifiedTime":1759703968304,
+	"modifiedTime":1759704244199,
 	"name":"dda-fetch-events",
 	"nodes":[
 		{
@@ -59,7 +59,10 @@
 					"gggg":{
 						"source":"{{ __USER__.outputs.customProperties.drop1 }}",
 						"ua:type":"mappedArray",
-						"items":"{{ __USER__.outputs.customProperties.drop6[0] }}"
+						"items":{
+							"sssss":"{{ __USER__.outputs.customProperties.kl[0] }}",
+							"sssfrfrfr":"{{ __USER__.outputs.customProperties.kl[0] }}"
+						}
 					}
 				}
 			},
@@ -86,5 +89,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
