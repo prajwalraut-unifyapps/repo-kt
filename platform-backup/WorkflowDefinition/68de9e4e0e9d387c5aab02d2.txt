@@ -38,13 +38,6 @@
 			"fromNodeId":"n_d5lsD",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_DKDTU",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_DKDTU",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"_PaFnz",
 			"type":"next"
 		},
@@ -96,7 +89,7 @@
 	"id":"68de9e4e0e9d387c5aab02d2",
 	"lastModifiedBy":59995,
 	"lcName":"partition size",
-	"modifiedTime":1759632852654,
+	"modifiedTime":1759647788902,
 	"name":"partition size",
 	"nodes":[
 		{
@@ -384,6 +377,11 @@
 			"type":"ACTION"
 		},
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
 			"context":{
 				"appName":"code_by_unifyapps",
 				"resourceVersion":111,
@@ -400,59 +398,65 @@
 				"output":{
 					"type":"object",
 					"additionalProperties":false,
-					"required":[
-						"slackMessage",
-						"alertPartitions"
-					],
 					"properties":{
+						"inputs":{
+							"type":"object",
+							"properties":{
+								"minimumStorageSizeGB":{
+									"type":"number",
+									"title":"minimumStorageSizeGB"
+								}
+							},
+							"title":"inputs",
+							"additionalProperties":false,
+							"required":[]
+						},
 						"slackMessage":{
 							"type":"string",
-							"title":"Slack Message"
+							"title":"slackMessage"
 						},
-						"alertPartitions":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"DB_NAME":{
-										"type":"string",
-										"title":"DB NAME"
-									},
-									"TABLE_NAME":{
-										"type":"string",
-										"title":"TABLE NAME"
-									},
-									"partitions":{
-										"type":"array",
-										"items":{
-											"type":"object",
-											"properties":{
-												"PARTITION_NAME":{
-													"type":"string",
-													"title":"PARTITION NAME"
-												},
-												"DATA_SIZE":{
-													"type":"string",
-													"title":"DATA SIZE"
-												}
+						"outputs":{
+							"type":"object",
+							"properties":{
+								"alertPartitions":{
+									"type":"array",
+									"items":{
+										"type":"object",
+										"properties":{
+											"DB_NAME":{
+												"type":"string",
+												"title":"DB_NAME"
 											},
-											"additionalProperties":false,
-											"required":[
-												"PARTITION_NAME",
-												"DATA_SIZE"
-											]
+											"TABLE_NAME":{
+												"type":"string",
+												"title":"TABLE_NAME"
+											},
+											"partitions":{
+												"type":"array",
+												"items":{
+													"type":"object",
+													"properties":{
+														"PARTITION_NAME":{
+															"type":"string",
+															"title":"PARTITION_NAME"
+														},
+														"DATA_SIZE":{
+															"type":"string",
+															"title":"DATA_SIZE"
+														}
+													},
+													"additionalProperties":false
+												},
+												"title":"partitions"
+											}
 										},
-										"title":"Partitions"
-									}
-								},
-								"additionalProperties":false,
-								"required":[
-									"DB_NAME",
-									"TABLE_NAME",
-									"partitions"
-								]
+										"additionalProperties":false
+									},
+									"title":"alertPartitions"
+								}
 							},
-							"title":"Alert Partitions"
+							"title":"outputs",
+							"additionalProperties":false
 						}
 					}
 				},
@@ -479,7 +483,7 @@
 						}
 					}
 				},
-				"code":"if (!binding.hasVariable('partitions')) {\n    return [\"inputs\": [\"minimumStorageSizeGB\": minimumStorageSize], \"slackMessage\": \"\", \"outputs\": [\"criticalCount\": 0, \"alertPartitions\": []]]\n}\n\ndef slackMessage = new StringBuilder()\nslackMessage << \"\\n\\n\"\n\ndef items = []\ndef now = System.currentTimeMillis()\n\ndef dbTable = [] as Set\n\npartitions.each { partition ->\n    def pv = partition.PARTITION_VALUE\n    long start\n    long end\n    if (pv.contains(\"DATETIME\")) {\n        def matchesDate = (pv =~ /\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}/)\n        if (matchesDate.size() >= 2) {\n            if (matchesDate[0] == \"0000-00-00 00:00:00\") {\n                // This is an invalid or uninitialized partition, skip it\n            } else {\n                start = java.sql.Timestamp.valueOf(matchesDate[0]).time\n                end = java.sql.Timestamp.valueOf(matchesDate[1]).time\n            }\n        } \n    } else {\n        def matchesMillis = (pv =~ /\\d{13}/)\n        if (matchesMillis.size() >= 2) {\n            start = matchesMillis[0] as Long\n            end = matchesMillis[1] as Long\n        }\n    }\n    if (start != null && end != null && now >= start && now < end) {\n        if (dbTable.contains(partition.DB_NAME) && dbTable.contains(partition.TABLE_NAME)) {\n            items.last()[\"partitions\"].add([PARTITION_NAME: partition.PARTITION_NAME, DATA_SIZE: partition.DATA_SIZE])\n        } else {\n            items << [DB_NAME: partition.DB_NAME, TABLE_NAME: partition.TABLE_NAME, partitions: [[PARTITION_NAME: partition.PARTITION_NAME, DATA_SIZE: partition.DATA_SIZE]]]\n            dbTable = [partition.DB_NAME, partition.TABLE_NAME] as Set\n        }\n    }\n}\n\nitems.each { partition ->\n    slackMessage << \"*DB:* `${partition.DB_NAME}`\\n\"\n    slackMessage << \"*Table:* `${partition.TABLE_NAME}`\\n\"\n    for (part in partition.partitions) {\n        slackMessage << \"*PartitionName:* `${part.PARTITION_NAME}` *Size:* `${part.DATA_SIZE}`\\n\"\n    }\n    slackMessage << \"-----------------------------\\n\"\n}\n\nreturn [\"inputs\": [minimumStorageSizeGB: minimumStorageSize], \"slackMessage\": slackMessage,  \"outputs\":[\"alertPartitions\": items]]",
+				"code":"if (!binding.hasVariable('partitions')) {\n    return [\"inputs\": [\"minimumStorageSizeGB\": minimumStorageSize], \"slackMessage\": \"\", \"outputs\": [\"alertPartitions\": []]]\n}\n\ndef slackMessage = new StringBuilder()\nslackMessage << \"\\n\\n\"\n\ndef items = []\ndef now = System.currentTimeMillis()\n\ndef dbTable = [] as Set\n\npartitions.each { partition ->\n    def pv = partition.PARTITION_VALUE\n    long start\n    long end\n    if (pv.contains(\"DATETIME\")) {\n        def matchesDate = (pv =~ /\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}/)\n        if (matchesDate.size() >= 2) {\n            if (matchesDate[0] == \"0000-00-00 00:00:00\") {\n                // This is an invalid or uninitialized partition, skip it\n            } else {\n                start = java.sql.Timestamp.valueOf(matchesDate[0]).time\n                end = java.sql.Timestamp.valueOf(matchesDate[1]).time\n            }\n        } \n    } else {\n        def matchesMillis = (pv =~ /\\d{13}/)\n        if (matchesMillis.size() >= 2) {\n            start = matchesMillis[0] as Long\n            end = matchesMillis[1] as Long\n        }\n    }\n    if (start != null && end != null && now >= start && now < end) {\n        if (dbTable.contains(partition.DB_NAME) && dbTable.contains(partition.TABLE_NAME)) {\n            items.last()[\"partitions\"].add([PARTITION_NAME: partition.PARTITION_NAME, DATA_SIZE: partition.DATA_SIZE])\n        } else {\n            items << [DB_NAME: partition.DB_NAME, TABLE_NAME: partition.TABLE_NAME, partitions: [[PARTITION_NAME: partition.PARTITION_NAME, DATA_SIZE: partition.DATA_SIZE]]]\n            dbTable = [partition.DB_NAME, partition.TABLE_NAME] as Set\n        }\n    }\n}\n\nitems.each { partition ->\n    slackMessage << \"*DB:* `${partition.DB_NAME}`\\n\"\n    slackMessage << \"*Table:* `${partition.TABLE_NAME}`\\n\"\n    for (part in partition.partitions) {\n        slackMessage << \"*PartitionName:* `${part.PARTITION_NAME}` *Size:* `${part.DATA_SIZE}`\\n\"\n    }\n    slackMessage << \"-----------------------------\\n\"\n}\n\nreturn [\"inputs\": [minimumStorageSizeGB: minimumStorageSize], \"slackMessage\": slackMessage,  \"outputs\":[\"alertPartitions\": items]]",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
@@ -497,144 +501,6 @@
 			"type":"ACTION"
 		},
 		{
-			"additional":{
-				"xsdSchemaConfig":{
-					"root":{}
-				}
-			},
-			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":0,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
-			"id":"_DKDTU",
-			"index":5,
-			"inputs":{
-				"output":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"message",
-						"inputs",
-						"outputs"
-					],
-					"properties":{
-						"message":{
-							"type":"string",
-							"title":"Message"
-						},
-						"inputs":{
-							"type":"object",
-							"properties":{
-								"minimumStorageSize":{
-									"type":"integer",
-									"title":"Minimum Storage Size"
-								}
-							},
-							"additionalProperties":false,
-							"title":"Inputs",
-							"required":[
-								"minimumStorageSize"
-							]
-						},
-						"outputs":{
-							"type":"object",
-							"properties":{
-								"criticalSizeRoutineLoads":{
-									"type":"array",
-									"items":{
-										"type":"object",
-										"properties":{},
-										"additionalProperties":false
-									},
-									"title":"Critical Size Routine Loads"
-								}
-							},
-							"additionalProperties":false,
-							"title":"Outputs",
-							"required":[
-								"criticalSizeRoutineLoads"
-							]
-						}
-					}
-				},
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"criticalSizeRoutineLoads",
-						"minimumStorageSize"
-					],
-					"properties":{
-						"criticalSizeRoutineLoads":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"dbName":{
-										"type":"string",
-										"title":"Db Name"
-									},
-									"tableName":{
-										"type":"string",
-										"title":"Table Name"
-									},
-									"partitions":{
-										"type":"array",
-										"items":{
-											"type":"object",
-											"properties":{},
-											"additionalProperties":false
-										},
-										"title":"Partitions"
-									}
-								},
-								"additionalProperties":false,
-								"required":[
-									"dbName",
-									"tableName",
-									"partitions"
-								]
-							},
-							"title":"Critical Size Routine Loads"
-						},
-						"minimumStorageSize":{
-							"type":"integer",
-							"title":"Minimum Storage Size"
-						}
-					}
-				},
-				"code":"if (!(binding.hasVariable(\"criticalSizeRoutineLoads\") && criticalSizeRoutineLoads)) {\n  return [message: \"\", inputs: [minimumStorageSize: minimumStorageSize], outputs: [criticalSizeRoutineLoads: []]]\n}\ndef messages = []\n\nif (criticalSizeRoutineLoads.size() > 0) {\n  for (item in criticalSizeRoutineLoads) {\n    def storageMessage = [\"[ \"]\n    for (partitions in item.partitions) {\n      storageMessage << \" [ PartitionName = \" + partitions.partitionName + \", PartitionSize = \" + partitions.partitionSize + \" ] , \"\n    }\n    storageMessage << \" ]\"\n    storageMessage = storageMessage.join()\n    messages << \"• Database = \" + item.dbName + \", tableName =  \" + item.tableName + \", partitions = \" + storageMessage + \"\\n\"\n  }\n}\nreturn [outputs: [criticalSizeRoutineLoads: criticalSizeRoutineLoads], inputs: [\"minimumStorageSize\": minimumStorageSize], message: messages.join()]",
-				"compile_static":false,
-				"captureStdOutput":false,
-				"parameters":{
-					"minimumStorageSize":"{{ _EOY36.outputs.minimumStorageSizeGB }}",
-					"criticalSizeRoutineLoads":{
-						"ua:type":"mappedArray",
-						"items":{
-							"partitions":{
-								"ua:type":"mappedArray",
-								"source":"{{ n_d5lsD.outputs.result.alertPartitions[0].partitions }}",
-								"items":"{{ n_d5lsD.outputs.result.alertPartitions[0].partitions[0] }}"
-							},
-							"dbName":"{{ n_d5lsD.outputs.result.alertPartitions[0].DB_NAME }}",
-							"tableName":"{{ n_d5lsD.outputs.result.alertPartitions[0].TABLE_NAME }}"
-						},
-						"source":"{{ n_d5lsD.outputs.result.alertPartitions }}"
-					}
-				}
-			},
-			"skip":false,
-			"subTitle":"Data size ouptut",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
 			"context":{
 				"appName":"if_else",
 				"resourceVersion":767,
@@ -646,7 +512,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"_PaFnz",
-			"index":6,
+			"index":5,
 			"inputs":{
 				"filters":[
 					{
@@ -682,7 +548,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_PaFnz@n_nST1M@n_WOcYr@_jMFmS-1@l@3@y",
 			"id":"_zFyJ8",
-			"index":7,
+			"index":6,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -697,8 +563,8 @@
 					"stepsOrder":7,
 					"summary":"Check whether the partition of a routine load has a small data size",
 					"steps":{
-						"inputs":"{{ _DKDTU.outputs.result.inputs }}",
-						"outputs":"{{ _DKDTU.outputs.result.outputs }}"
+						"inputs":"{{ n_d5lsD.outputs.result.inputs }}",
+						"outputs":"{{ n_d5lsD.outputs.result.outputs }}"
 					},
 					"status":"CRITICAL",
 					"stepDescription":"Check whether each partition of a routine load has < {{ _EOY36.outputs.minimumStorageSizeGB }}GB storage, which is too small",
@@ -722,7 +588,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_PaFnz@n_nST1M@n_WOcYr@_jMFmS-1@l@3@y",
 			"id":"_ANDa3",
-			"index":8,
+			"index":7,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -733,7 +599,7 @@
 					"alertCategory":"starrocks",
 					"alertType":"starrocks_table_health",
 					"alertTitle":"🚨 Small Data Size in Routine Load Partitions (<{{ _EOY36.outputs.minimumStorageSizeGB }}GB)",
-					"alertDescription":"For customer {{ _EOY36.outputs.customerId }}, the following routine load partitions have data size < {{ _EOY36.outputs.minimumStorageSizeGB }}GB:\n{{ _DKDTU.outputs.result.message }}"
+					"alertDescription":"For customer {{ _EOY36.outputs.customerId }}, the following routine load partitions have data size < {{ _EOY36.outputs.minimumStorageSizeGB }}GB:\n{{ n_d5lsD.outputs.result.slackMessage }}"
 				}
 			},
 			"skip":false,
@@ -759,7 +625,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_PaFnz@n_nST1M@n_WOcYr@_jMFmS-1@l@3@n",
 			"id":"_izaqB",
-			"index":9,
+			"index":8,
 			"inputs":{
 				"writeThroughSessionVariables":false,
 				"object_type":"infra_alert_steps",
@@ -774,8 +640,8 @@
 					"stepsOrder":7,
 					"summary":"Check whether the partition of a routine load has a small data size",
 					"steps":{
-						"inputs":"{{ _DKDTU.outputs.result.inputs }}",
-						"outputs":"{{ _DKDTU.outputs.result.outputs }}"
+						"inputs":"{{ n_d5lsD.outputs.result.inputs }}",
+						"outputs":"{{ n_d5lsD.outputs.result.outputs }}"
 					},
 					"status":"OK",
 					"stepDescription":"Check whether each partition of a routine load has < {{ _EOY36.outputs.minimumStorageSizeGB }}GB storage, which is too small",
@@ -799,7 +665,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_PaFnz@n_nST1M@n_WOcYr@_jMFmS-1@l@3@n",
 			"id":"_Wv2bW",
-			"index":10,
+			"index":9,
 			"inputs":{
 				"automationId":"68721bd4feea003f6a9cb688",
 				"runtimeConnections":{},
@@ -810,7 +676,7 @@
 					"alertCategory":"starrocks",
 					"alertType":"starrocks_table_health",
 					"alertTitle":"🚨 Small Data Size in Routine Load Partitions (<{{ _EOY36.outputs.minimumStorageSizeGB }}GB)",
-					"alertDescription":"For customer {{ _EOY36.outputs.customerId }}, the following routine load partitions have data size < {{ _EOY36.outputs.minimumStorageSizeGB }}GB:\n{{ _DKDTU.outputs.result.message }}"
+					"alertDescription":"For customer {{ _EOY36.outputs.customerId }}, the following routine load partitions have data size < {{ _EOY36.outputs.minimumStorageSizeGB }}GB:\n{{ n_d5lsD.outputs.result.slackMessage }}"
 				}
 			},
 			"skip":false,
@@ -829,7 +695,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@3",
 			"id":"_QL5ZP",
-			"index":11,
+			"index":10,
 			"inputs":{
 				"result":{
 					"slackMessage":"{{ n_d5lsD.outputs.result.slackMessage }}",
@@ -874,5 +740,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
