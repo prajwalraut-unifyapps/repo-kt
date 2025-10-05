@@ -6,7 +6,14 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_yNdlg",
+			"fromNodeId":"n_nR8KJ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_xe7MC",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_xe7MC",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"_EWzPl",
@@ -16,22 +23,94 @@
 	"id":"68e1df69fa552e20a0f2f80b",
 	"lastModifiedBy":59995,
 	"lcName":"infra | heartbeat | long message",
-	"modifiedTime":1759633257597,
+	"modifiedTime":1759633486934,
 	"name":"INFRA | HEARTBEAT | LONG MESSAGE",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1011,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_yNdlg-1",
-			"id":"_yNdlg",
-			"index":0,
+			"id":"n_nR8KJ",
+			"index":1,
+			"inputs":{
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"env",
+						"alertCategory",
+						"alertType",
+						"alertTitle",
+						"alertDescription"
+					],
+					"properties":{
+						"env":{
+							"type":"string",
+							"title":"Env"
+						},
+						"alertCategory":{
+							"type":"string",
+							"title":"Alert Category"
+						},
+						"alertType":{
+							"type":"string",
+							"title":"Alert Type"
+						},
+						"alertTitle":{
+							"type":"string",
+							"title":"Alert Title"
+						},
+						"alertDescription":{
+							"type":"string",
+							"title":"Alert Description"
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":3,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_yNdlg-1",
+			"id":"_xe7MC",
+			"index":2,
+			"inputs":{
+				"automationId":"68721bd4feea003f6a9cb688",
+				"runtimeConnections":{},
+				"synchronous":false,
+				"version":"-1",
+				"parameters":{
+					"env":"{{ n_nR8KJ.outputs.env }}",
+					"alertCategory":"{{ n_nR8KJ.outputs.alertCategory }}",
+					"alertType":"{{ n_nR8KJ.outputs.alertType }}",
+					"alertTitle":"{{ n_nR8KJ.outputs.alertTitle }}",
+					"alertDescription":"{{ n_nR8KJ.outputs.alertDescription }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
 		},
 		{
 			"debug":false,
@@ -39,13 +118,16 @@
 			"fallbackMode":"STOP",
 			"groupId":"_yNdlg-1",
 			"id":"_EWzPl",
-			"index":0,
+			"index":3,
 			"skip":false,
 			"title":"Select an app and action",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":59995,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +141,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
