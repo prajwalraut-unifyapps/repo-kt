@@ -6,7 +6,7 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_5jWnf",
+			"fromNodeId":"n_pz8c5",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_zF6S5",
@@ -23,20 +23,31 @@
 	"id":"68de93424361896e3c5f3ac2",
 	"lastModifiedBy":43498,
 	"lcName":"jms-trigger",
-	"modifiedTime":1759474581075,
+	"modifiedTime":1759666800075,
 	"name":"jms-trigger",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_5jWnf-1",
-			"id":"_5jWnf",
+			"id":"n_pz8c5",
 			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
@@ -55,7 +66,7 @@
 			"id":"n_zF6S5",
 			"index":2,
 			"inputs":{
-				"queueName":"unifyapps",
+				"queueName":"unifyapp",
 				"messageFormat":"text",
 				"message":"adi"
 			},
@@ -79,7 +90,7 @@
 			"id":"n_W3v9k",
 			"index":3,
 			"inputs":{
-				"queueName":"unifyapps",
+				"queueName":"unifyapp",
 				"timeout":"1000"
 			},
 			"skip":false,
@@ -105,5 +116,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
