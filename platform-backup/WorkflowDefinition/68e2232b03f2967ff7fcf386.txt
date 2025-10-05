@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759650603742,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_vo9NZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_CuzDu",
+			"type":"next"
+		}
+	],
+	"id":"68e2232b03f2967ff7fcf386",
+	"lastModifiedBy":39715,
+	"lcName":"resync",
+	"modifiedTime":1759650603742,
+	"name":"resync",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_vo9NZ-1",
+			"id":"_vo9NZ",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_vo9NZ-1",
+			"id":"_CuzDu",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":39715,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
