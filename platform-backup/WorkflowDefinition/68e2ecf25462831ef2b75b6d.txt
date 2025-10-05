@@ -1,0 +1,30 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759702258646,
+	"deleted":false,
+	"edges":[
+		
+	],
+	"id":"68e2ecf25462831ef2b75b6d",
+	"lastModifiedBy":175325,
+	"lcName":"changesetqa2slack7888153526",
+	"modifiedTime":1759702258646,
+	"name":"changeSetQA2Slack7888153526",
+	"nodes":[
+		
+	],
+	"ownerUserId":175325,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
