@@ -89,7 +89,7 @@
 	"id":"68de9e4e0e9d387c5aab02d2",
 	"lastModifiedBy":59995,
 	"lcName":"partition size",
-	"modifiedTime":1759647788902,
+	"modifiedTime":1759647851988,
 	"name":"partition size",
 	"nodes":[
 		{
@@ -107,56 +107,13 @@
 				"result":{
 					"type":"object",
 					"additionalProperties":false,
-					"required":[],
+					"required":[
+						"criticalCount"
+					],
 					"properties":{
-						"slackMessage":{
-							"type":"string",
-							"title":"Slack Message"
-						},
-						"alertPartitions":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"dbName":{
-										"type":"string",
-										"title":"Db Name"
-									},
-									"tableName":{
-										"type":"string",
-										"title":"Table Name"
-									},
-									"partitions":{
-										"type":"array",
-										"items":{
-											"type":"object",
-											"properties":{
-												"partitionName":{
-													"type":"string",
-													"title":"Partition Name"
-												},
-												"partitionSize":{
-													"type":"string",
-													"title":"Partition Size"
-												}
-											},
-											"additionalProperties":false,
-											"required":[
-												"partitionName",
-												"partitionSize"
-											]
-										},
-										"title":"Partitions"
-									}
-								},
-								"additionalProperties":false,
-								"required":[
-									"dbName",
-									"tableName",
-									"partitions"
-								]
-							},
-							"title":"Alert Partitions"
+						"criticalCount":{
+							"type":"number",
+							"title":"Critical Count"
 						}
 					}
 				},
@@ -698,23 +655,7 @@
 			"index":10,
 			"inputs":{
 				"result":{
-					"slackMessage":"{{ n_d5lsD.outputs.result.slackMessage }}",
-					"alertPartitions":{
-						"source":"{{ n_d5lsD.outputs.result.alertPartitions }}",
-						"ua:type":"mappedArray",
-						"items":{
-							"dbName":"{{ n_d5lsD.outputs.result.alertPartitions[0].DB_NAME }}",
-							"tableName":"{{ n_d5lsD.outputs.result.alertPartitions[0].TABLE_NAME }}",
-							"partitions":{
-								"source":"{{ n_d5lsD.outputs.result.alertPartitions[0].partitions }}",
-								"ua:type":"mappedArray",
-								"items":{
-									"partitionName":"{{ n_d5lsD.outputs.result.alertPartitions[0].partitions[0].PARTITION_NAME }}",
-									"partitionSize":"{{ n_d5lsD.outputs.result.alertPartitions[0].partitions[0].DATA_SIZE }}"
-								}
-							}
-						}
-					}
+					"criticalCount":"=LEN({{ n_d5lsD.outputs.result.outputs.alertPartitions }})"
 				}
 			},
 			"skip":false,
@@ -740,5 +681,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
