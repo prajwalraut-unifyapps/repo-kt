@@ -96,7 +96,7 @@
 	"id":"68de72f25b11474238866535",
 	"lastModifiedBy":59995,
 	"lcName":"buckets number",
-	"modifiedTime":1759647711282,
+	"modifiedTime":1759648750051,
 	"name":"Buckets Number",
 	"nodes":[
 		{
@@ -682,7 +682,7 @@
 						}
 					}
 				},
-				"code":"if (!(binding.hasVariable(\"criticalBuckets\") && criticalBuckets)) {\n  return [message: \"\", inputs: [minimumBucketCount: minimumBucketCount], outputs: [criticalBuckets: []]]\n}\ndef messages = []\n\nif (criticalBuckets.size() > 0) {\n  for (item in criticalBuckets) {\n    def bucketMessage = [\"[ \"]\n    for (partitions in item.buckets) {\n      bucketMessage << \" [ PartitionName = \" + partitions.PartitionName + \", PartitionId = \" + partitions.PartitionId + \", buckets = \" + partitions.Buckets + \" ] , \"\n    }\n    bucketMessage << \" ]\"\n    bucketMessage = bucketMessage.join()\n    messages << \"• Database = \" + item.dbName + \", tableName =  \" + item.tableName + \", partitions = \" + bucketMessage + \"\\n\"\n  }\n}\nreturn [outputs: [criticalBuckets: criticalBuckets], inputs: [\"minimumBucketCount\": minimumBucketCount], message: messages.join()]",
+				"code":"if (!(binding.hasVariable(\"criticalBuckets\") && criticalBuckets)) {\n  return [message: \"\", inputs: [minimumBucketCount: minimumBucketCount], outputs: [criticalBuckets: []]]\n}\ndef messages = []\n\nif (criticalBuckets.size() > 0) {\n  for (item in criticalBuckets) {\n    def bucketMessage = [\"[ \"]\n    for (partitions in item.buckets) {\n      bucketMessage << \" [ PartitionName = \" + partitions.partitionName + \", PartitionId = \" + partitions.partitionId + \", buckets = \" + partitions.buckets + \" ] , \"\n    }\n    bucketMessage << \" ]\"\n    bucketMessage = bucketMessage.join()\n    messages << \"• Database = \" + item.dbName + \", tableName =  \" + item.tableName + \", partitions = \" + bucketMessage + \"\\n\"\n  }\n}\nreturn [outputs: [criticalBuckets: criticalBuckets], inputs: [\"minimumBucketCount\": minimumBucketCount], message: messages.join()]",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
@@ -751,7 +751,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_6H2OQ@n_nST1M@n_WOcYr@_jMFmS-1@l@2@y",
 			"id":"_CeBOO",
@@ -791,7 +791,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_6H2OQ@n_nST1M@n_WOcYr@_jMFmS-1@l@2@y",
 			"id":"_xe7MC",
@@ -828,7 +828,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_6H2OQ@n_nST1M@n_WOcYr@_jMFmS-1@l@2@n",
 			"id":"_ODwaO",
@@ -931,5 +931,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
