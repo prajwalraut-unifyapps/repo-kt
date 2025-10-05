@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759689237470,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_P2vlj",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_RNc0i",
+			"type":"next"
+		}
+	],
+	"id":"68e2ba15c70b361d9372f84a",
+	"lastModifiedBy":175510,
+	"lcName":"brgith",
+	"modifiedTime":1759689237470,
+	"name":"brgith",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_P2vlj-1",
+			"id":"_P2vlj",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_P2vlj-1",
+			"id":"_RNc0i",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175510,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
