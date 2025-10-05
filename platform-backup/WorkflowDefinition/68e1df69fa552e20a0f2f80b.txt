@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759633257597,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_yNdlg",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_EWzPl",
+			"type":"next"
+		}
+	],
+	"id":"68e1df69fa552e20a0f2f80b",
+	"lastModifiedBy":59995,
+	"lcName":"infra | heartbeat | long message",
+	"modifiedTime":1759633257597,
+	"name":"INFRA | HEARTBEAT | LONG MESSAGE",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_yNdlg-1",
+			"id":"_yNdlg",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_yNdlg-1",
+			"id":"_EWzPl",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":59995,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
