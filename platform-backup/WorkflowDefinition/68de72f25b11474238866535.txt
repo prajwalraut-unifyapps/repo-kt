@@ -5,12 +5,12 @@
 	"createdTime":1759408882903,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759608247440,
+		"deployedAt":1759650734718,
 		"deployedBy":59995,
-		"deployedDefinitionId":"68e17db7804b2727e7554fee",
+		"deployedDefinitionId":"68e223aea94b8359f76dc233",
 		"status":"DEPLOYED",
-		"version":4,
-		"workflowVersion":8
+		"version":5,
+		"workflowVersion":12
 	},
 	"edges":[
 		{
@@ -96,7 +96,7 @@
 	"id":"68de72f25b11474238866535",
 	"lastModifiedBy":59995,
 	"lcName":"buckets number",
-	"modifiedTime":1759650724157,
+	"modifiedTime":1759661988960,
 	"name":"Buckets Number",
 	"nodes":[
 		{
@@ -931,5 +931,5 @@
 	"tags":[
 		
 	],
-	"version":12
+	"version":13
 }
