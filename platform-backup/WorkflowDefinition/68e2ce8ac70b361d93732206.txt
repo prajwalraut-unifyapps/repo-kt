@@ -73,6 +73,13 @@
 			"type":"next"
 		},
 		{
+			"fromNodeId":"_Akcsn",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_gC6rO",
+			"type":"next"
+		},
+		{
 			"fromNodeId":"n_5G6Ef",
 			"priority":0,
 			"skip":false,
@@ -87,7 +94,7 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"_Akcsn",
+			"fromNodeId":"n_gC6rO",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_19gOt",
@@ -112,7 +119,7 @@
 	"id":"68e2ce8ac70b361d93732206",
 	"lastModifiedBy":308,
 	"lcName":"checkbranch",
-	"modifiedTime":1759695777286,
+	"modifiedTime":1759695790370,
 	"name":"checkBranch",
 	"nodes":[
 		{
@@ -431,6 +438,29 @@
 		},
 		{
 			"context":{
+				"appName":"slack",
+				"resourceVersion":3565,
+				"connectionId":"68da93197c4eaf6df8215a99",
+				"resourceName":"slack_list_users",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_iGxh4@_QSWHh-1@3",
+			"id":"n_gC6rO",
+			"index":11,
+			"inputs":{
+				"limit":100,
+				"include_locale":false
+			},
+			"skip":false,
+			"subTitle":"Slack",
+			"title":"List users",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"gmail",
 				"resourceVersion":5537,
 				"connectionId":"68e2d36e8d4a993cdc119691",
@@ -442,7 +472,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_QSWHh-1",
 			"id":"n_19gOt",
-			"index":11,
+			"index":12,
 			"inputs":{
 				"email_type":"text",
 				"subject":"checking",
@@ -469,7 +499,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_QSWHh-1",
 			"id":"n_SHcEl",
-			"index":12,
+			"index":13,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -493,5 +523,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
