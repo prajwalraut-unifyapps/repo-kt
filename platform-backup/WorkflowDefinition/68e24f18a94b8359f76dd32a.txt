@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759661848771,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_WhK2p",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_FZJup",
+			"type":"next"
+		}
+	],
+	"id":"68e24f18a94b8359f76dd32a",
+	"lastModifiedBy":178541,
+	"lcName":"sample oauth firebase",
+	"modifiedTime":1759661848771,
+	"name":"Sample OAuth Firebase",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_WhK2p-1",
+			"id":"_WhK2p",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_WhK2p-1",
+			"id":"_FZJup",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":178541,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
