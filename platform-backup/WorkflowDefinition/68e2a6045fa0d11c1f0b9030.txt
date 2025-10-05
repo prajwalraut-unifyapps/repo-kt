@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759684100180,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_wWzHT",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Gcn1O",
+			"type":"next"
+		}
+	],
+	"id":"68e2a6045fa0d11c1f0b9030",
+	"lastModifiedBy":1,
+	"lcName":"qween_streaming_webhook",
+	"modifiedTime":1759684100180,
+	"name":"qween_streaming_webhook",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_wWzHT-1",
+			"id":"_wWzHT",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_wWzHT-1",
+			"id":"_Gcn1O",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":1,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
