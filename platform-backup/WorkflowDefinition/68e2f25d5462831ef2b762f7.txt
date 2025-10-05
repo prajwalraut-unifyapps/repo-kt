@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		
+		"storage_by_unifyapps"
 	],
 	"createdTime":1759703645947,
 	"deleted":false,
@@ -9,14 +9,14 @@
 			"fromNodeId":"_vssWE",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_PwcpL",
+			"toNodeId":"n_VRk7Y",
 			"type":"next"
 		}
 	],
 	"id":"68e2f25d5462831ef2b762f7",
-	"lastModifiedBy":10,
+	"lastModifiedBy":44096,
 	"lcName":"dda-fetch-events",
-	"modifiedTime":1759703645947,
+	"modifiedTime":1759703946086,
 	"name":"dda-fetch-events",
 	"nodes":[
 		{
@@ -25,7 +25,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_vssWE-1",
 			"id":"_vssWE",
-			"index":0,
+			"index":1,
 			"skip":false,
 			"title":"Select a trigger event",
 			"trigger":{
@@ -34,18 +34,38 @@
 			"type":"START"
 		},
 		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.record.gggg.items"
+				]
+			},
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":4530,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_vssWE-1",
-			"id":"_PwcpL",
-			"index":0,
+			"id":"n_VRk7Y",
+			"index":2,
+			"inputs":{
+				"writeThroughSessionVariables":false,
+				"object_type":"ssssssssssss",
+				"skipIfBlank":false
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create record",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":10,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +79,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
