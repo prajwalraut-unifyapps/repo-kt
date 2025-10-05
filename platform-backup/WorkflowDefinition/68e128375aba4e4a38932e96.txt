@@ -5,12 +5,12 @@
 	"createdTime":1759586359397,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759586375335,
+		"deployedAt":1759661948960,
 		"deployedBy":43498,
-		"deployedDefinitionId":"68e128475aba4e4a38932ece",
+		"deployedDefinitionId":"68e24f7ca94b8359f76dd34d",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":1
+		"version":2,
+		"workflowVersion":2
 	},
 	"edges":[
 		{
@@ -24,7 +24,7 @@
 	"id":"68e128375aba4e4a38932e96",
 	"lastModifiedBy":43498,
 	"lcName":"cdvb-jms",
-	"modifiedTime":1759661946822,
+	"modifiedTime":1759663789494,
 	"name":"cdvb-jms",
 	"nodes":[
 		{
@@ -35,7 +35,7 @@
 				"resourceName":"jms_on_event_received"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_YZ9cx-1",
 			"id":"n_hQxoL",
@@ -84,5 +84,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
