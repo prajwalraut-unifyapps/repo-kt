@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759674677409,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_VJbui",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_eHexj",
+			"type":"next"
+		}
+	],
+	"id":"68e281358117a56167929873",
+	"lastModifiedBy":2721,
+	"lcName":"freg",
+	"modifiedTime":1759674677409,
+	"name":"freg",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_VJbui-1",
+			"id":"_VJbui",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_VJbui-1",
+			"id":"_eHexj",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":2721,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
