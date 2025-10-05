@@ -119,7 +119,7 @@
 	"id":"68e2ce8ac70b361d93732206",
 	"lastModifiedBy":308,
 	"lcName":"checkbranch",
-	"modifiedTime":1759695790370,
+	"modifiedTime":1759695835636,
 	"name":"checkBranch",
 	"nodes":[
 		{
@@ -478,11 +478,9 @@
 				"subject":"checking",
 				"fromName":"Sans",
 				"from":"sanskar.singh@unifyapps.com",
-				"to":{
-					"source":"singh822577@gmail.com",
-					"ua:type":"mappedArray",
-					"items":"abc"
-				},
+				"to":[
+					"singh822577@gmail.com"
+				],
 				"message":"lalala"
 			},
 			"skip":false,
@@ -523,5 +521,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
