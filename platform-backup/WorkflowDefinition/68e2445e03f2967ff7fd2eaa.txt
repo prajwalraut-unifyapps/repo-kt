@@ -9,6 +9,13 @@
 			"fromNodeId":"_Z8soy",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_96ZBq",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_96ZBq",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"_PLMxF",
 			"type":"next"
 		},
@@ -37,7 +44,7 @@
 	"id":"68e2445e03f2967ff7fd2eaa",
 	"lastModifiedBy":59995,
 	"lcName":"mismatched table and routine load columns check",
-	"modifiedTime":1759659102869,
+	"modifiedTime":1759659430337,
 	"name":"mismatched table and routine load columns check",
 	"nodes":[
 		{
@@ -46,13 +53,43 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@1",
 			"id":"_Z8soy",
-			"index":0,
+			"index":1,
 			"inputs":{
-				"setup":{}
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"shouldSetup"
+					],
+					"properties":{
+						"shouldSetup":{
+							"type":"boolean",
+							"title":"Should Setup"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"jobProperties",
+						"tableName"
+					],
+					"properties":{
+						"jobProperties":{
+							"type":"string",
+							"title":"Job Properties"
+						},
+						"tableName":{
+							"type":"string",
+							"title":"Table Name"
+						}
+					}
+				}
 			},
 			"skip":false,
 			"subTitle":"Callable",
@@ -61,6 +98,82 @@
 				"type":"CALLABLE"
 			},
 			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":3,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@1",
+			"id":"n_96ZBq",
+			"index":2,
+			"inputs":{
+				"automationId":"68b932d26607f33c4d7f0988",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{}
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"global":false
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":true,
+					"timeToLive":"3600",
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"STOP",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
 		},
 		{
 			"additional":{
@@ -75,11 +188,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@1",
 			"id":"_PLMxF",
-			"index":17,
+			"index":3,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -176,7 +289,7 @@
 					},
 					{
 						"key":"reportType",
-						"value":"{{ n_WOcYr.outputs.item.TableName }}"
+						"value":"{{ _Z8soy.outputs.tableName }}"
 					}
 				],
 				"responseContentType":"application/json",
@@ -205,11 +318,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@1",
 			"id":"n_I1uNl",
-			"index":18,
+			"index":4,
 			"inputs":{
 				"jsonSchema":{
 					"type":"object",
@@ -301,7 +414,7 @@
 						}
 					}
 				},
-				"jsonString":"{{ n_WOcYr.outputs.item.JobProperties }}"
+				"jsonString":"{{ _Z8soy.outputs.jobProperties }}"
 			},
 			"skip":false,
 			"subTitle":"Utility by UnifyApps",
@@ -322,11 +435,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@1",
 			"id":"_BWkSS",
-			"index":19,
+			"index":5,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -398,11 +511,16 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_nST1M@n_WOcYr@_jMFmS-1@l@1",
 			"id":"_rbpUG",
-			"index":0,
+			"index":6,
+			"inputs":{
+				"result":{
+					"shouldSetup":"{{ _BWkSS.outputs.result.shouldSetup }}"
+				}
+			},
 			"skip":false,
 			"subTitle":"Callable",
 			"title":"Respond to automation",
@@ -410,6 +528,9 @@
 		}
 	],
 	"ownerUserId":59995,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -423,5 +544,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
