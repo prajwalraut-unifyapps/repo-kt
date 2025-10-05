@@ -96,7 +96,7 @@
 	"id":"68de9e4e0e9d387c5aab02d2",
 	"lastModifiedBy":59995,
 	"lcName":"partition size",
-	"modifiedTime":1759608785945,
+	"modifiedTime":1759632852654,
 	"name":"partition size",
 	"nodes":[
 		{
@@ -460,7 +460,8 @@
 					"type":"object",
 					"additionalProperties":false,
 					"required":[
-						"partitions"
+						"partitions",
+						"minimumStorageSize"
 					],
 					"properties":{
 						"partitions":{
@@ -471,13 +472,18 @@
 								"additionalProperties":false
 							},
 							"title":"Partitions"
+						},
+						"minimumStorageSize":{
+							"type":"number",
+							"title":"Minimum Storage Size"
 						}
 					}
 				},
-				"code":"if (!binding.hasVariable('partitions')) {\n    return [\"slackMessage\": \"\", \"alertPartitions\": []]\n}\n\ndef slackMessage = new StringBuilder()\nslackMessage << \"\\n\\n\"\n\ndef items = []\ndef now = System.currentTimeMillis()\n\ndef timestamps = []\ndef dbTable = [] as Set\n\npartitions.each { partition ->\n    def pv = partition.PARTITION_VALUE\n    long start\n    long end\n    if (pv.contains(\"DATETIME\")) {\n        def matchesDate = (pv =~ /\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}/)\n        if (matchesDate.size() >= 2) {\n            if (matchesDate[0] == \"0000-00-00 00:00:00\") {\n                // This is an invalid or uninitialized partition, skip it\n            } else {\n                start = java.sql.Timestamp.valueOf(matchesDate[0]).time\n                end = java.sql.Timestamp.valueOf(matchesDate[1]).time\n            }\n        } \n    } else {\n        def matchesMillis = (pv =~ /\\d{13}/)\n        if (matchesMillis.size() >= 2) {\n            start = matchesMillis[0] as Long\n            end = matchesMillis[1] as Long\n        }\n    }\n    if (start != null && end != null && now >= start && now < end) {\n        if (dbTable.contains(partition.DB_NAME) && dbTable.contains(partition.TABLE_NAME)) {\n            items.last()[\"partitions\"].add([PARTITION_NAME: partition.PARTITION_NAME, DATA_SIZE: partition.DATA_SIZE])\n        } else {\n            items << [DB_NAME: partition.DB_NAME, TABLE_NAME: partition.TABLE_NAME, partitions: [[PARTITION_NAME: partition.PARTITION_NAME, DATA_SIZE: partition.DATA_SIZE]]]\n            dbTable = [partition.DB_NAME, partition.TABLE_NAME] as Set\n        }\n    }\n}\n\nitems.each { partition ->\n    slackMessage << \"*DB:* `${partition.DB_NAME}`\\n\"\n    slackMessage << \"*Table:* `${partition.TABLE_NAME}`\\n\"\n    for (part in partition.partitions) {\n        slackMessage << \"*PartitionName:* `${part.PARTITION_NAME}` *Size:* `${part.DATA_SIZE}`\\n\"\n    }\n    slackMessage << \"-----------------------------\\n\"\n}\n\nreturn [\"slackMessage\": slackMessage ,\"stamps\":timestamps, \"alertPartitions\": items]",
+				"code":"if (!binding.hasVariable('partitions')) {\n    return [\"inputs\": [\"minimumStorageSizeGB\": minimumStorageSize], \"slackMessage\": \"\", \"outputs\": [\"criticalCount\": 0, \"alertPartitions\": []]]\n}\n\ndef slackMessage = new StringBuilder()\nslackMessage << \"\\n\\n\"\n\ndef items = []\ndef now = System.currentTimeMillis()\n\ndef dbTable = [] as Set\n\npartitions.each { partition ->\n    def pv = partition.PARTITION_VALUE\n    long start\n    long end\n    if (pv.contains(\"DATETIME\")) {\n        def matchesDate = (pv =~ /\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}/)\n        if (matchesDate.size() >= 2) {\n            if (matchesDate[0] == \"0000-00-00 00:00:00\") {\n                // This is an invalid or uninitialized partition, skip it\n            } else {\n                start = java.sql.Timestamp.valueOf(matchesDate[0]).time\n                end = java.sql.Timestamp.valueOf(matchesDate[1]).time\n            }\n        } \n    } else {\n        def matchesMillis = (pv =~ /\\d{13}/)\n        if (matchesMillis.size() >= 2) {\n            start = matchesMillis[0] as Long\n            end = matchesMillis[1] as Long\n        }\n    }\n    if (start != null && end != null && now >= start && now < end) {\n        if (dbTable.contains(partition.DB_NAME) && dbTable.contains(partition.TABLE_NAME)) {\n            items.last()[\"partitions\"].add([PARTITION_NAME: partition.PARTITION_NAME, DATA_SIZE: partition.DATA_SIZE])\n        } else {\n            items << [DB_NAME: partition.DB_NAME, TABLE_NAME: partition.TABLE_NAME, partitions: [[PARTITION_NAME: partition.PARTITION_NAME, DATA_SIZE: partition.DATA_SIZE]]]\n            dbTable = [partition.DB_NAME, partition.TABLE_NAME] as Set\n        }\n    }\n}\n\nitems.each { partition ->\n    slackMessage << \"*DB:* `${partition.DB_NAME}`\\n\"\n    slackMessage << \"*Table:* `${partition.TABLE_NAME}`\\n\"\n    for (part in partition.partitions) {\n        slackMessage << \"*PartitionName:* `${part.PARTITION_NAME}` *Size:* `${part.DATA_SIZE}`\\n\"\n    }\n    slackMessage << \"-----------------------------\\n\"\n}\n\nreturn [\"inputs\": [minimumStorageSizeGB: minimumStorageSize], \"slackMessage\": slackMessage,  \"outputs\":[\"alertPartitions\": items]]",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
+					"minimumStorageSize":"{{ _EOY36.outputs.minimumStorageSizeGB }}",
 					"partitions":{
 						"source":"{{ n_6a9km.outputs.result.objects }}",
 						"ua:type":"mappedArray",
@@ -868,5 +874,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
