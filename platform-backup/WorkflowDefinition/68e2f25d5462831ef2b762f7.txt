@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759703645947,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_vssWE",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_PwcpL",
+			"type":"next"
+		}
+	],
+	"id":"68e2f25d5462831ef2b762f7",
+	"lastModifiedBy":10,
+	"lcName":"dda-fetch-events",
+	"modifiedTime":1759703645947,
+	"name":"dda-fetch-events",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_vssWE-1",
+			"id":"_vssWE",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_vssWE-1",
+			"id":"_PwcpL",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":10,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
