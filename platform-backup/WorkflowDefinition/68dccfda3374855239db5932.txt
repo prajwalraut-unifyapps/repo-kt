@@ -30,7 +30,7 @@
 	"id":"68dccfda3374855239db5932",
 	"lastModifiedBy":20249,
 	"lcName":"figma testing",
-	"modifiedTime":1759735907190,
+	"modifiedTime":1759736053637,
 	"name":"Figma testing",
 	"nodes":[
 		{
@@ -112,7 +112,7 @@
 				}
 			},
 			"inputs":{
-				"hgj":"=ROUND(4943.5)"
+				"hgj":"=ROUNDUP(123.5)"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -152,7 +152,7 @@
 			"inputs":{
 				"file_id":"WYnrW7WvFb42fwDFycibor",
 				"client_meta":{
-					"x":"=ROUND(4943.5)",
+					"x":4943,
 					"y":-160
 				},
 				"message":"Testing"
@@ -180,5 +180,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
