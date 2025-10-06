@@ -67,6 +67,13 @@
 			"fromNodeId":"n_l6giD",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_4oL8R",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_4oL8R",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"_L7CN5",
 			"type":"next"
 		},
@@ -89,7 +96,7 @@
 	"id":"68e3c9795742db1a6d5f3e61",
 	"lastModifiedBy":182775,
 	"lcName":"testdependency",
-	"modifiedTime":1759760808141,
+	"modifiedTime":1759760818645,
 	"name":"testDependency",
 	"nodes":[
 		{
@@ -314,6 +321,21 @@
 		},
 		{
 			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_nOzMM@_Gdlwf-1@l",
+			"id":"n_4oL8R",
+			"index":8,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		},
+		{
+			"context":{
 				"appName":"variable_by_unifyapps",
 				"resourceVersion":1034,
 				"resourceName":"variable_by_unifyapps_create_variables",
@@ -324,7 +346,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_nOzMM@_Gdlwf-1@l",
 			"id":"_L7CN5",
-			"index":8,
+			"index":9,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -374,7 +396,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_Gdlwf-1",
 			"id":"n_gVVAI",
-			"index":9,
+			"index":10,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -398,5 +420,5 @@
 	"tags":[
 		
 	],
-	"version":12
+	"version":13
 }
