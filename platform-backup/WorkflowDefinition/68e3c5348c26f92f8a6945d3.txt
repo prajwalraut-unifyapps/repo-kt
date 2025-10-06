@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759757620774,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_xDZfa",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_OAyv9",
+			"type":"next"
+		}
+	],
+	"id":"68e3c5348c26f92f8a6945d3",
+	"lastModifiedBy":177799,
+	"lcName":"connection_initiation_rishabh",
+	"modifiedTime":1759757620774,
+	"name":"connection_initiation_rishabh",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_xDZfa-1",
+			"id":"_xDZfa",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_xDZfa-1",
+			"id":"_OAyv9",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":177799,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
