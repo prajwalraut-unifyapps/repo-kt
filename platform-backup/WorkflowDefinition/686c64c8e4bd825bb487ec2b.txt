@@ -39,7 +39,7 @@
 	"id":"686c64c8e4bd825bb487ec2b",
 	"lastModifiedBy":59995,
 	"lcName":"exceltocsv",
-	"modifiedTime":1759751095586,
+	"modifiedTime":1759751145233,
 	"name":"ExcelToCSV",
 	"nodes":[
 		{
@@ -131,21 +131,22 @@
 									"type":"string",
 									"title":"sourceType"
 								},
-								"ua:type":{
-									"type":"string",
-									"title":"ua:type"
-								},
 								"link":{
 									"type":"string",
 									"title":"link"
+								},
+								"type":{
+									"type":"string",
+									"title":"type"
 								}
 							},
 							"title":"fileDetails",
-							"additionalProperties":false
+							"additionalProperties":false,
+							"required":[]
 						}
 					}
 				},
-				"jsonString":"{\"fileDetails\": {\n\"fileType\": \"application\",\n\"name\": \"xlsTesting.xls\",\n\"size\": 6837,\n\"source\": \"1/workflow_uploads/xlsTesting.xls\",\n\"sourceType\": \"CLOUD_STORAGE\",\n\"ua:type\": \"FILE\",\n\"link\": \"https://qa.unifyapps.com/api/file/download/__UNIFY_ENCR_UNIFYAPPS__V3__PRCVV58ComkfXlLuJs9dH4XbukNKrPBRpMwSCZCadk7j%2FtgKBFoSn6xzOrocL1CLIQ%3D%3D\"\n} }"
+				"jsonString":"{\"fileDetails\": {\n\"fileType\": \"application\",\n\"name\": \"xlsTesting.xls\",\n\"size\": 6837,\n\"source\": \"1/workflow_uploads/xlsTesting.xls\",\n\"sourceType\": \"CLOUD_STORAGE\",\n\"type\": \"FILE\",\n\"link\": \"https://qa.unifyapps.com/api/file/download/__UNIFY_ENCR_UNIFYAPPS__V3__PRCVV58ComkfXlLuJs9dH4XbukNKrPBRpMwSCZCadk7j%2FtgKBFoSn6xzOrocL1CLIQ%3D%3D\"\n} }"
 			},
 			"skip":false,
 			"subTitle":"Utility by UnifyApps",
@@ -193,5 +194,5 @@
 	"tags":[
 		
 	],
-	"version":91
+	"version":92
 }
