@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759750604548,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_Kz5Yr",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_0gWRV",
+			"type":"next"
+		}
+	],
+	"id":"68e3a9cc5742db1a6d5ebbdc",
+	"lastModifiedBy":175510,
+	"lcName":"bright data",
+	"modifiedTime":1759750604548,
+	"name":"bright data",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Kz5Yr-1",
+			"id":"_Kz5Yr",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Kz5Yr-1",
+			"id":"_0gWRV",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175510,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
