@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		"gcalendar",
+		"google_task",
 		"hubspot"
 	],
 	"createdTime":1758867334099,
@@ -9,13 +9,13 @@
 		"deployedAt":1758867348957,
 		"deployedBy":177799,
 		"deployedDefinitionId":"68d62f94c156f5666b0556b8",
-		"status":"DEPLOYED",
+		"status":"PAUSED",
 		"version":1,
 		"workflowVersion":1
 	},
 	"edges":[
 		{
-			"fromNodeId":"n_VYC32",
+			"fromNodeId":"n_Kg7DW",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_p8b5d",
@@ -32,28 +32,28 @@
 	"id":"68d62f86e96d017a23fa7800",
 	"lastModifiedBy":177799,
 	"lcName":"test_rishabh (copy)",
-	"modifiedTime":1758868417235,
+	"modifiedTime":1759744642169,
 	"name":"test_rishabh (copy)",
 	"nodes":[
 		{
 			"context":{
-				"appName":"gcalendar",
-				"resourceVersion":5694,
-				"connectionId":"68d62ef09cbe6f109c67952b",
-				"resourceName":"gcalendar_on_event_changes"
+				"appName":"google_task",
+				"resourceVersion":3581,
+				"resourceName":"google_task_on_new_tasklist_polling"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_mzkHe-1",
-			"id":"n_VYC32",
+			"id":"n_Kg7DW",
 			"index":1,
 			"inputs":{
-				"calendarId":"primary"
+				"interval":30,
+				"batchSize":100
 			},
 			"skip":false,
-			"subTitle":"Google Calendar",
-			"title":"Event changed (Google Calendar)",
+			"subTitle":"Google Task",
+			"title":"New task list",
 			"trigger":{
 				"type":"EVENT"
 			},
@@ -68,7 +68,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_mzkHe-1",
 			"id":"n_p8b5d",
@@ -114,5 +114,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
