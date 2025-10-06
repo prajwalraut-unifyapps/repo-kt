@@ -6,46 +6,101 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_NvHMG",
+			"fromNodeId":"n_kNt8X",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_D7S5F",
+			"toNodeId":"n_bBE7Z",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_bBE7Z",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_zGRyj",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_zGRyj",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_bBE7Z",
 			"type":"next"
 		}
 	],
 	"id":"68e3c5741457fe48f5213b01",
-	"lastModifiedBy":124519,
+	"lastModifiedBy":182775,
 	"lcName":"test",
-	"modifiedTime":1759757684419,
+	"modifiedTime":1759760932169,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1105,
+				"resourceName":"callables_from_api"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_NvHMG-1",
-			"id":"_NvHMG",
-			"index":0,
+			"id":"n_kNt8X",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				},
+				"endpointType":"REST",
+				"streamingResponse":false
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via API",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":870,
+				"resourceName":"callables_call_automation_streaming",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_NvHMG-1",
-			"id":"_D7S5F",
-			"index":0,
+			"id":"n_bBE7Z",
+			"index":2,
+			"inputs":{
+				"automationId":"68bc34c0b7d5156f7f60df91",
+				"runtimeConnections":{},
+				"version":"-1",
+				"parameters":{}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"LOOP"
+		},
+		{
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_bBE7Z@_NvHMG-1@l",
+			"id":"n_zGRyj",
+			"index":3,
 			"skip":false,
 			"title":"Select an app and action",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":124519,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +114,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
