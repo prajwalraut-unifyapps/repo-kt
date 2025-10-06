@@ -53,7 +53,7 @@
 	"id":"68decb77fe740e380539aa08",
 	"lastModifiedBy":161958,
 	"lcName":"ritikpublisher1",
-	"modifiedTime":1759743535409,
+	"modifiedTime":1759743558834,
 	"name":"ritikPublisher1",
 	"nodes":[
 		{
@@ -183,7 +183,7 @@
 				"streamId":"e_68cbc6c8dbdb8a69d171213a",
 				"skipInputValidation":false,
 				"event":{
-					"key":"{{ n_ZbYOw.outputs.index }}"
+					"key":"=TEXT({{ n_ZbYOw.outputs.index }})"
 				}
 			},
 			"skip":false,
@@ -224,5 +224,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
