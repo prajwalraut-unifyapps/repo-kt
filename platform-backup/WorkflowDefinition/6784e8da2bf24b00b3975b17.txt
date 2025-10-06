@@ -5,23 +5,16 @@
 	"createdTime":1736763610743,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759243566760,
+		"deployedAt":1759371888368,
 		"deployedBy":-1,
-		"deployedDefinitionId":"68dbed2e5e003e08cdeb2f25",
+		"deployedDefinitionId":"68dde270d3636c7f14535dc5",
 		"status":"DEPLOYED",
-		"version":87,
-		"workflowVersion":146
+		"version":88,
+		"workflowVersion":147
 	},
 	"edges":[
 		{
 			"fromNodeId":"EIiwt",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_cuOAL",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_cuOAL",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_vLLHr",
@@ -38,13 +31,6 @@
 			"fromNodeId":"Il52k",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_ZPdEi",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_ZPdEi",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"2t2pg",
 			"type":"next"
 		},
@@ -52,61 +38,8 @@
 			"fromNodeId":"2t2pg",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_stEdU",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_stEdU",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_yopss",
-			"type":"if"
-		},
-		{
-			"fromNodeId":"n_yopss",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_oTH0W",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_stEdU",
-			"name":"no",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_fSAFg",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_oTH0W",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_vLhsV",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_fSAFg",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_vLhsV",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_vLhsV",
-			"name":"no",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"_FYo6S",
 			"type":"next"
-		},
-		{
-			"fromNodeId":"n_vLhsV",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_LDYaq",
-			"type":"if"
 		},
 		{
 			"fromNodeId":"_FYo6S",
@@ -494,13 +427,6 @@
 			"fromNodeId":"wqGoc",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_eXp8p",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_eXp8p",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"JbGgg",
 			"type":"next"
 		},
@@ -520,13 +446,6 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"sX4HL",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_fYTPB",
-			"type":"next"
-		},
-		{
 			"fromNodeId":"JbGgg",
 			"name":"error",
 			"priority":0,
@@ -536,13 +455,6 @@
 		},
 		{
 			"fromNodeId":"IRkAI",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_QOP3I",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_QOP3I",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"raaBa",
@@ -556,7 +468,7 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_fYTPB",
+			"fromNodeId":"sX4HL",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"boutm",
@@ -581,9 +493,9 @@
 		]
 	},
 	"id":"6784e8da2bf24b00b3975b17",
-	"lastModifiedBy":-1,
+	"lastModifiedBy":44096,
 	"lcName":"fetch relevant knowledge chunks",
-	"modifiedTime":1759371888102,
+	"modifiedTime":1759714184068,
 	"name":"Fetch Relevant Knowledge Chunks",
 	"nodes":[
 		{
@@ -601,8 +513,6 @@
 			"inputs":{
 				"result":{
 					"type":"object",
-					"additionalProperties":false,
-					"required":[],
 					"properties":{
 						"relevantContent":{
 							"type":"array",
@@ -638,12 +548,12 @@
 							"title":"Relevant Content",
 							"required":[]
 						}
-					}
+					},
+					"additionalProperties":false,
+					"required":[]
 				},
 				"setup":{
 					"type":"object",
-					"additionalProperties":false,
-					"required":[],
 					"properties":{
 						"userQuery":{
 							"type":"string",
@@ -670,64 +580,10 @@
 						"onlyPeople":{
 							"type":"boolean",
 							"title":"Only People"
-						},
-						"knowledgeIds":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"properties":{
-										"type":"object",
-										"properties":{},
-										"additionalProperties":false,
-										"title":"Properties"
-									},
-									"id":{
-										"type":"string",
-										"title":"Id"
-									}
-								},
-								"additionalProperties":false,
-								"required":[]
-							},
-							"title":"Knowledge Ids"
-						},
-						"knowledgeSetIds":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{},
-								"additionalProperties":false
-							},
-							"title":"Knowledge Set Ids"
-						},
-						"skipSourceRBAC":{
-							"type":"boolean",
-							"title":"Skip Source RBAC"
-						},
-						"filterByLLM":{
-							"type":"object",
-							"properties":{
-								"knowledgeTags":{
-									"type":"array",
-									"items":{
-										"type":"string"
-									},
-									"title":"Knowledge Tags"
-								},
-								"knowledgeSetTags":{
-									"type":"array",
-									"items":{
-										"type":"string"
-									},
-									"title":"Knowledge Set Tags"
-								}
-							},
-							"additionalProperties":false,
-							"title":"Filter By LLM",
-							"required":[]
 						}
-					}
+					},
+					"additionalProperties":false,
+					"required":[]
 				}
 			},
 			"skip":false,
@@ -741,37 +597,6 @@
 		{
 			"context":{
 				"appName":"variable_by_unifyapps",
-				"resourceVersion":453,
-				"resourceName":"variable_by_unifyapps_get_session_variables",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"4ZR9C-1",
-			"id":"n_cuOAL",
-			"index":2,
-			"inputs":{
-				"variableSchema":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[],
-					"properties":{
-						"messageId":{
-							"type":"string",
-							"title":"Message Id"
-						}
-					}
-				}
-			},
-			"skip":false,
-			"subTitle":"Fetch currentMessageId",
-			"title":"Get Session Variables",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"variable_by_unifyapps",
 				"resourceVersion":93,
 				"resourceName":"variable_by_unifyapps_set_session_variable",
 				"type":"APPLICATION"
@@ -781,7 +606,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"4ZR9C-1",
 			"id":"n_vLLHr",
-			"index":3,
+			"index":2,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -832,7 +657,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"4ZR9C-1",
 			"id":"Il52k",
-			"index":4,
+			"index":3,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -1067,6 +892,27 @@
 							"items":{
 								"type":"string"
 							}
+						},
+						"_ua_variableDetails":{
+							"items":{
+								"properties":{
+									"dataType":{
+										"description":"Data type of the variable",
+										"type":"string"
+									},
+									"description":{
+										"description":"Description of the variable",
+										"type":"string"
+									},
+									"name":{
+										"description":"Name of the variable",
+										"type":"string"
+									}
+								},
+								"type":"object"
+							},
+							"title":"Variable Details",
+							"type":"array"
 						}
 					}
 				}
@@ -1074,59 +920,6 @@
 			"skip":false,
 			"subTitle":"embedding Models",
 			"title":"Create list",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":458,
-				"resourceName":"variable_by_unifyapps_create_variables",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"4ZR9C-1",
-			"id":"n_ZPdEi",
-			"index":5,
-			"inputSchema":{
-				"type":"SCHEMA_AND_LAYOUT",
-				"dynamic":false,
-				"layout":{},
-				"schema":{
-					"additionalProperties":false,
-					"type":"object",
-					"properties":{
-						"knowledgeIds":{
-							"type":"array",
-							"items":{
-								"type":"object"
-							},
-							"title":"knowledgeIds"
-						}
-					}
-				}
-			},
-			"inputs":{},
-			"outputSchema":{
-				"dynamic":false,
-				"schema":{
-					"additionalProperties":false,
-					"type":"object",
-					"properties":{
-						"knowledgeIds":{
-							"type":"array",
-							"items":{
-								"type":"object"
-							},
-							"title":"knowledgeIds"
-						}
-					}
-				}
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Create variables",
 			"type":"ACTION"
 		},
 		{
@@ -1141,7 +934,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"4ZR9C-1",
 			"id":"2t2pg",
-			"index":6,
+			"index":4,
 			"inputs":{
 				"automationId":"679c6123a6583456a71988d2",
 				"runtimeConnections":{},
@@ -1150,227 +943,13 @@
 				"parameters":{
 					"caseId":"{{ EIiwt.outputs.caseId }}",
 					"aiAgentId":"{{ EIiwt.outputs.aiAgentId }}",
-					"filter":"{{ EIiwt.outputs.filter }}",
-					"fetchKnowledgeSetKnowledges":true,
-					"filterByLLM":{
-						"knowledgeTags":{
-							"source":"{{ EIiwt.outputs.filterByLLM.knowledgeTags }}",
-							"ua:type":"mappedArray",
-							"items":"{{ EIiwt.outputs.filterByLLM.knowledgeTags[0] }}"
-						},
-						"knowledgeSetTags":{
-							"source":"{{ EIiwt.outputs.filterByLLM.knowledgeSetTags }}",
-							"ua:type":"mappedArray",
-							"items":"{{ EIiwt.outputs.filterByLLM.knowledgeSetTags[0] }}"
-						}
-					}
+					"filter":"{{ EIiwt.outputs.filter }}"
 				}
 			},
 			"skip":false,
 			"subTitle":"Fetch applicable knowledges",
 			"title":"Call automation",
 			"type":"CALL_WORKFLOW"
-		},
-		{
-			"context":{
-				"appName":"if_else",
-				"resourceVersion":439,
-				"resourceName":"if_else_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"4ZR9C-1",
-			"id":"n_stEdU",
-			"index":7,
-			"inputs":{
-				"filters":[
-					{
-						"property":"{{ EIiwt.outputs.knowledgeIds }}",
-						"filter":{
-							"operator":"EXISTS"
-						}
-					}
-				],
-				"operator":"OR"
-			},
-			"skip":false,
-			"subTitle":"Condition",
-			"title":"Condition",
-			"type":"IF_ELSE"
-		},
-		{
-			"additional":{
-				"visibleOptionalFields":[
-					"root.parameters.knowledgeIdsApplicable1.items",
-					"root.parameters.knowledgeIdsApplicable2.items"
-				]
-			},
-			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":451,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_stEdU@4ZR9C-1@y",
-			"id":"n_yopss",
-			"index":8,
-			"inputs":{
-				"output":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[],
-					"properties":{
-						"knowledgeIdsApplicableFinal":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{},
-								"additionalProperties":false
-							},
-							"title":"Knowledge Ids Applicable Final"
-						}
-					}
-				},
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[],
-					"properties":{
-						"knowledgeIdsApplicable1":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{},
-								"additionalProperties":false
-							},
-							"title":"Knowledge Ids Applicable 1"
-						},
-						"knowledgeIdsApplicable2":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{},
-								"additionalProperties":false
-							},
-							"title":"Knowledge Ids Applicable 2"
-						}
-					}
-				},
-				"code":"def intersectKnowledge = { List<Map> list1, List<Map> list2, boolean preferSecond = true ->\ndef byId1 = (list1 ?: []).collectEntries { [(it.id): it] }\ndef byId2 = (list2 ?: []).collectEntries { [(it.id): it] }\ndef commonIds = byId1.keySet().intersect(byId2.keySet())\n\ncommonIds.collect { id ->\n    def chosen = preferSecond ? byId2[id] : byId1[id]\n    [id: id, properties: chosen.properties]\n}\n}\n\nif(!binding.hasVariable('knowledgeIdsApplicable1'))return [\"knowledgeIdsApplicableFinal\":knowledgeIdsApplicable2]\ndef intersection = intersectKnowledge(knowledgeIdsApplicable1, knowledgeIdsApplicable2, true)\nreturn [\"knowledgeIdsApplicableFinal\":intersection]",
-				"compile_static":false,
-				"captureStdOutput":false,
-				"parameters":{
-					"knowledgeIdsApplicable1":{
-						"source":"{{ EIiwt.outputs.knowledgeIds }}",
-						"ua:type":"mappedArray",
-						"items":"{{ EIiwt.outputs.knowledgeIds[0] }}"
-					},
-					"knowledgeIdsApplicable2":{
-						"source":"{{ 2t2pg.outputs.knowledges }}",
-						"ua:type":"mappedArray",
-						"items":"{{ 2t2pg.outputs.knowledges[0] }}"
-					}
-				}
-			},
-			"skip":false,
-			"subTitle":"Code by UnifyApps",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":447,
-				"resourceName":"variable_by_unifyapps_update_variables",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_stEdU@4ZR9C-1@y",
-			"id":"n_oTH0W",
-			"index":9,
-			"inputs":{
-				"variables":[
-					{
-						"source":"{{ n_ZPdEi.outputs.knowledgeIds }}",
-						"value":{
-							"source":"{{ n_yopss.outputs.result.knowledgeIdsApplicableFinal }}",
-							"ua:type":"mappedArray",
-							"items":"{{ n_yopss.outputs.result.knowledgeIdsApplicableFinal[0] }}"
-						}
-					}
-				]
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Update variables",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":447,
-				"resourceName":"variable_by_unifyapps_update_variables",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_stEdU@4ZR9C-1@n",
-			"id":"_fSAFg",
-			"index":10,
-			"inputs":{
-				"variables":[
-					{
-						"source":"{{ n_ZPdEi.outputs.knowledgeIds }}",
-						"value":{
-							"ua:type":"mappedArray",
-							"source":"{{ 2t2pg.outputs.knowledges }}",
-							"items":"{{ 2t2pg.outputs.knowledges[0] }}"
-						}
-					}
-				]
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Update variables",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"if_else",
-				"resourceVersion":439,
-				"resourceName":"if_else_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"4ZR9C-1",
-			"id":"n_vLhsV",
-			"index":11,
-			"inputs":{
-				"filters":[
-					{
-						"property":"{{ EIiwt.outputs.skipSourceRBAC }}",
-						"filter":{
-							"operator":"EQUAL",
-							"value":"true"
-						}
-					}
-				],
-				"operator":"AND"
-			},
-			"skip":false,
-			"subTitle":"Skip Source RBAC",
-			"title":"Condition",
-			"type":"IF_ELSE"
 		},
 		{
 			"context":{
@@ -1382,27 +961,21 @@
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
-			"groupId":"n_vLhsV@4ZR9C-1@n",
+			"groupId":"4ZR9C-1",
 			"id":"_FYo6S",
-			"index":12,
+			"index":5,
 			"inputs":{
 				"automationId":"6704f23182227947dd32e79c",
 				"runtimeConnections":{},
 				"synchronous":true,
 				"version":"-1",
 				"parameters":{
-					"userEmailAddress":"{{ EIiwt.outputs.userEmail }}",
-					"parentType":"Retrieval",
 					"knowledgeIds":{
 						"ua:type":"mappedArray",
-						"items":"=MAPGET({{ n_ZPdEi.outputs.knowledgeIds }},\"id\")",
-						"source":"{{ n_ZPdEi.outputs.knowledgeIds }}"
+						"source":"{{ 2t2pg.outputs.knowledges }}",
+						"items":"=MAPGET({{ 2t2pg.outputs.knowledges[0] }},\"id\")"
 					},
-					"knowledgeSetId":{
-						"source":"{{ 2t2pg.outputs.knowledgeSets }}",
-						"ua:type":"mappedArray",
-						"items":"{{ 2t2pg.outputs.knowledgeSets[0].id }}"
-					}
+					"userEmailAddress":"{{ EIiwt.outputs.userEmail }}"
 				}
 			},
 			"skip":false,
@@ -1422,7 +995,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"4ZR9C-1",
 			"id":"_LDYaq",
-			"index":13,
+			"index":6,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -1691,7 +1264,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"4ZR9C-1",
 			"id":"IZ4CM",
-			"index":14,
+			"index":7,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -1759,7 +1332,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"4ZR9C-1",
 			"id":"YS5lb",
-			"index":15,
+			"index":8,
 			"inputs":{
 				"branches":[
 					{
@@ -1808,7 +1381,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"YS5lb@4ZR9C-1@1",
 			"id":"YS5lb@1",
-			"index":16,
+			"index":9,
 			"inputs":{
 				"name":"custom metadata filter",
 				"conditions":{
@@ -1840,7 +1413,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"YS5lb@4ZR9C-1@1",
 			"id":"EungR",
-			"index":17,
+			"index":10,
 			"inputs":{
 				"automationId":"679b7fdad2256d4d7f3277fe",
 				"runtimeConnections":{},
@@ -1848,23 +1421,18 @@
 				"version":"-1",
 				"parameters":{
 					"userQuery":"{{ EIiwt.outputs.userQuery }}",
-					"includeCustomMetadataFilter":true,
-					"filter":"{{ EIiwt.outputs.filter }}",
 					"sharedWithIds":{
 						"source":"{{ _FYo6S.outputs.sharedWithIds }}",
 						"ua:type":"mappedArray",
 						"items":"{{ _FYo6S.outputs.sharedWithIds[0] }}"
 					},
+					"includeCustomMetadataFilter":true,
 					"knowledges":{
 						"ua:type":"mappedArray",
-						"source":"{{ n_ZPdEi.outputs.knowledgeIds }}",
-						"items":"{{ n_ZPdEi.outputs.knowledgeIds[0] }}"
+						"source":"{{ 2t2pg.outputs.knowledges }}",
+						"items":"{{ 2t2pg.outputs.knowledges[0] }}"
 					},
-					"knowledgeSets":{
-						"source":"{{ 2t2pg.outputs.knowledgeSets }}",
-						"ua:type":"mappedArray",
-						"items":"{{ 2t2pg.outputs.knowledgeSets[0] }}"
-					}
+					"filter":"{{ EIiwt.outputs.filter }}"
 				}
 			},
 			"skip":false,
@@ -1884,7 +1452,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"YS5lb@4ZR9C-1@1",
 			"id":"RSPhZ",
-			"index":18,
+			"index":11,
 			"inputs":{
 				"filters":[
 					{
@@ -1913,7 +1481,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"RSPhZ@YS5lb@4ZR9C-1@1@y",
 			"id":"8LbH2",
-			"index":19,
+			"index":12,
 			"inputs":{
 				"variables":[
 					{
@@ -1939,7 +1507,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"YS5lb@4ZR9C-1@2",
 			"id":"YS5lb@2",
-			"index":20,
+			"index":13,
 			"inputs":{
 				"name":"normal"
 			},
@@ -1959,7 +1527,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"YS5lb@4ZR9C-1@2",
 			"id":"mrAC4",
-			"index":21,
+			"index":14,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -2196,6 +1764,27 @@
 							"items":{
 								"type":"string"
 							}
+						},
+						"_ua_variableDetails":{
+							"items":{
+								"properties":{
+									"dataType":{
+										"description":"Data type of the variable",
+										"type":"string"
+									},
+									"description":{
+										"description":"Description of the variable",
+										"type":"string"
+									},
+									"name":{
+										"description":"Name of the variable",
+										"type":"string"
+									}
+								},
+								"type":"object"
+							},
+							"title":"Variable Details",
+							"type":"array"
 						}
 					}
 				}
@@ -2217,7 +1806,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"YS5lb@4ZR9C-1@2",
 			"id":"kKbzd",
-			"index":22,
+			"index":15,
 			"inputs":{
 				"filters":[
 					{
@@ -2247,7 +1836,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"kKbzd@YS5lb@4ZR9C-1@2@y",
 			"id":"GyeR4",
-			"index":23,
+			"index":16,
 			"inputs":{
 				"input_schema":{
 					"user_query":"{{ EIiwt.outputs.userQuery }}"
@@ -2271,7 +1860,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"kKbzd@YS5lb@4ZR9C-1@2@y",
 			"id":"WjCb4",
-			"index":24,
+			"index":17,
 			"inputs":{
 				"variableSchema":{
 					"type":"object",
@@ -2302,7 +1891,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"kKbzd@YS5lb@4ZR9C-1@2@y",
 			"id":"dODk0",
-			"index":25,
+			"index":18,
 			"inputs":{
 				"automationId":"66dfd76eb70dad256986b784",
 				"runtimeConnections":{},
@@ -2334,7 +1923,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"kKbzd@YS5lb@4ZR9C-1@2@y",
 			"id":"95uWL",
-			"index":26,
+			"index":19,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -2385,7 +1974,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"kKbzd@YS5lb@4ZR9C-1@2@y",
 			"id":"y2UIy",
-			"index":27,
+			"index":20,
 			"inputs":{
 				"jsonSchema":{
 					"type":"object",
@@ -2459,7 +2048,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"kKbzd@YS5lb@4ZR9C-1@2@y",
 			"id":"AdGNT",
-			"index":28,
+			"index":21,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -2537,7 +2126,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"kKbzd@YS5lb@4ZR9C-1@2@y",
 			"id":"O4EeA",
-			"index":29,
+			"index":22,
 			"inputs":{
 				"insertLocation":"END",
 				"itemsToAdd":{
@@ -2564,7 +2153,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"YS5lb@4ZR9C-1@2",
 			"id":"vuObq",
-			"index":30,
+			"index":23,
 			"inputs":{
 				"itemToAdd":"{{ EIiwt.outputs.userQuery }}",
 				"insertLocation":"START",
@@ -2585,7 +2174,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"YS5lb@4ZR9C-1@2",
 			"id":"V3W0i",
-			"index":31,
+			"index":24,
 			"inputs":{
 				"branches":[
 					{
@@ -2646,7 +2235,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"V3W0i@YS5lb@4ZR9C-1@2@1",
 			"id":"V3W0i@1",
-			"index":32,
+			"index":25,
 			"inputs":{
 				"name":"Branch 1",
 				"conditions":{
@@ -2678,12 +2267,12 @@
 			"fallbackMode":"STOP",
 			"groupId":"V3W0i@YS5lb@4ZR9C-1@2@1",
 			"id":"6dnmo",
-			"index":33,
+			"index":26,
 			"inputs":{
 				"automationId":"679b7fdad2256d4d7f3277fe",
 				"runtimeConnections":{},
 				"synchronous":true,
-				"distributeWorkflowLoad":true,
+				"distributeWorkflowLoad":false,
 				"parametersList":{
 					"ua:type":"mappedArray",
 					"items":{
@@ -2693,17 +2282,12 @@
 							"items":"{{ _FYo6S.outputs.sharedWithIds[0] }}"
 						},
 						"knowledges":{
+							"source":"{{ 2t2pg.outputs.knowledges }}",
 							"ua:type":"mappedArray",
-							"source":"{{ n_ZPdEi.outputs.knowledgeIds }}",
-							"items":"{{ n_ZPdEi.outputs.knowledgeIds[0] }}"
+							"items":"{{ 2t2pg.outputs.knowledges[0] }}"
 						},
 						"userQuery":"{{ mrAC4.outputs.items[0] }}",
 						"filter":"{{ EIiwt.outputs.filter }}",
-						"knowledgeSets":{
-							"source":"{{ 2t2pg.outputs.knowledgeSets }}",
-							"ua:type":"mappedArray",
-							"items":"{{ 2t2pg.outputs.knowledgeSets[0] }}"
-						},
 						"includeCustomMetadataFilter":false
 					},
 					"source":"{{ mrAC4.outputs.items }}"
@@ -2727,7 +2311,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"V3W0i@YS5lb@4ZR9C-1@2@2",
 			"id":"V3W0i@2",
-			"index":34,
+			"index":27,
 			"inputs":{
 				"name":"Branch 2",
 				"conditions":{
@@ -2759,7 +2343,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"V3W0i@YS5lb@4ZR9C-1@2@2",
 			"id":"UVUnc",
-			"index":35,
+			"index":28,
 			"inputs":{
 				"automationId":"679b7fdad2256d4d7f3277fe",
 				"runtimeConnections":{},
@@ -2774,9 +2358,9 @@
 							"items":"{{ _FYo6S.outputs.sharedWithIds[0] }}"
 						},
 						"knowledges":{
+							"source":"{{ 2t2pg.outputs.knowledges }}",
 							"ua:type":"mappedArray",
-							"source":"{{ n_ZPdEi.outputs.knowledgeIds }}",
-							"items":"{{ n_ZPdEi.outputs.knowledgeIds[0] }}"
+							"items":"{{ 2t2pg.outputs.knowledges[0] }}"
 						},
 						"userQuery":"{{ y2UIy.outputs.result.sample_answers[0] }}",
 						"filter":"{{ EIiwt.outputs.filter }}",
@@ -2803,7 +2387,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"V3W0i@YS5lb@4ZR9C-1@2@default",
 			"id":"n_ZByHg",
-			"index":36,
+			"index":29,
 			"inputs":{
 				"compile_static":false,
 				"code":"return true"
@@ -2825,7 +2409,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"YS5lb@4ZR9C-1@default",
 			"id":"n_gqaCL",
-			"index":37,
+			"index":30,
 			"inputs":{
 				"compile_static":false,
 				"code":"return true"
@@ -2847,7 +2431,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"4ZR9C-1",
 			"id":"vXqrq",
-			"index":38,
+			"index":31,
 			"inputs":{
 				"filters":[
 					{
@@ -2883,7 +2467,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"vXqrq@4ZR9C-1@y",
 			"id":"bXPoI",
-			"index":39,
+			"index":32,
 			"inputs":{
 				"insertLocation":"END",
 				"itemsToAdd":{
@@ -2913,7 +2497,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"vXqrq@4ZR9C-1@n",
 			"id":"15max",
-			"index":40,
+			"index":33,
 			"inputs":{
 				"repeatMode":"SINGLE",
 				"listSource":"{{ 6dnmo.outputs.result }}",
@@ -2942,7 +2526,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"15max@vXqrq@4ZR9C-1@n@l",
 			"id":"VsC2W",
-			"index":41,
+			"index":34,
 			"inputs":{
 				"insertLocation":"END",
 				"itemsToAdd":{
@@ -2972,7 +2556,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"vXqrq@4ZR9C-1@n",
 			"id":"beSYu",
-			"index":42,
+			"index":35,
 			"inputs":{
 				"repeatMode":"SINGLE",
 				"listSource":"{{ UVUnc.outputs.result }}",
@@ -3001,7 +2585,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"beSYu@vXqrq@4ZR9C-1@n@l",
 			"id":"KG2sk",
-			"index":43,
+			"index":36,
 			"inputs":{
 				"insertLocation":"END",
 				"itemsToAdd":{
@@ -3038,7 +2622,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"vXqrq@4ZR9C-1@n",
 			"id":"WXzED",
-			"index":44,
+			"index":37,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -3136,7 +2720,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"vXqrq@4ZR9C-1@n",
 			"id":"t4sCQ",
-			"index":45,
+			"index":38,
 			"inputs":{
 				"listName":"{{ _LDYaq.outputs.items[0] }}"
 			},
@@ -3163,7 +2747,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"vXqrq@4ZR9C-1@n",
 			"id":"nWEzE",
-			"index":46,
+			"index":39,
 			"inputs":{
 				"insertLocation":"END",
 				"itemsToAdd":{
@@ -3193,7 +2777,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"4ZR9C-1",
 			"id":"n_7sG9j",
-			"index":47,
+			"index":40,
 			"inputs":{
 				"filters":[
 					{
@@ -3223,7 +2807,7 @@
 			"fallbackMode":"CONTINUE",
 			"groupId":"n_7sG9j@4ZR9C-1@y",
 			"id":"n_DDBp2",
-			"index":48,
+			"index":41,
 			"inputs":{
 				"automationId":"689475b798afb57877127c83",
 				"runtimeConnections":{},
@@ -3310,7 +2894,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"4ZR9C-1",
 			"id":"kdyzQ",
-			"index":49,
+			"index":42,
 			"inputs":{
 				"filters":[
 					{
@@ -3339,12 +2923,10 @@
 			"fallbackMode":"STOP",
 			"groupId":"kdyzQ@4ZR9C-1@n",
 			"id":"nM9oM",
-			"index":50,
+			"index":43,
 			"inputs":{
 				"output":{
 					"type":"object",
-					"additionalProperties":false,
-					"required":[],
 					"properties":{
 						"relevantContent":{
 							"type":"array",
@@ -3367,12 +2949,13 @@
 							"title":"Relevant Content",
 							"required":[]
 						}
-					}
+					},
+					"additionalProperties":false,
+					"required":[]
 				},
-				"code":"return [\"relevantcontent\" : []];",
 				"compile_static":false,
-				"isAsync":false,
-				"captureStdOutput":false
+				"code":"return [\"relevantcontent\" : []];",
+				"isAsync":false
 			},
 			"skip":false,
 			"subTitle":"relevant content",
@@ -3391,7 +2974,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"kdyzQ@4ZR9C-1@n",
 			"id":"St1Vn",
-			"index":51,
+			"index":44,
 			"inputs":{
 				"result":{
 					"relevantContent":{
@@ -3426,7 +3009,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"4ZR9C-1",
 			"id":"hmkkt",
-			"index":52,
+			"index":45,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -3507,7 +3090,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"4ZR9C-1",
 			"id":"wqGoc",
-			"index":53,
+			"index":46,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -3798,57 +3381,6 @@
 		},
 		{
 			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":458,
-				"resourceName":"variable_by_unifyapps_create_variables",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"4ZR9C-1",
-			"id":"n_eXp8p",
-			"index":54,
-			"inputSchema":{
-				"type":"SCHEMA_AND_LAYOUT",
-				"dynamic":false,
-				"layout":{},
-				"schema":{
-					"additionalProperties":false,
-					"type":"object",
-					"properties":{
-						"rerankerStartTime":{
-							"type":"integer",
-							"title":"Reranker Start Time"
-						}
-					},
-					"required":[]
-				}
-			},
-			"inputs":{
-				"rerankerStartTime":"=INT((NOW() - DATE(1970,1,1)) * 86400000)"
-			},
-			"outputSchema":{
-				"dynamic":false,
-				"schema":{
-					"additionalProperties":false,
-					"type":"object",
-					"properties":{
-						"rerankerStartTime":{
-							"type":"integer",
-							"title":"Reranker Start Time"
-						}
-					},
-					"required":[]
-				}
-			},
-			"skip":false,
-			"subTitle":"Reranker Start Time",
-			"title":"Create variables",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"callables",
 				"resourceVersion":48,
 				"resourceName":"callables_call_automation",
@@ -3859,7 +3391,7 @@
 			"fallbackMode":"MANUAL",
 			"groupId":"4ZR9C-1",
 			"id":"JbGgg",
-			"index":55,
+			"index":47,
 			"inputs":{
 				"automationId":"66ae2f6e381d8834cd6742de",
 				"runtimeConnections":{},
@@ -3934,7 +3466,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"JbGgg@4ZR9C-1@success",
 			"id":"ezyvl",
-			"index":56,
+			"index":48,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -4031,7 +3563,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"JbGgg@4ZR9C-1@success",
 			"id":"sX4HL",
-			"index":57,
+			"index":49,
 			"inputs":{
 				"insertLocation":"END",
 				"itemsToAdd":{
@@ -4053,97 +3585,6 @@
 			"type":"ACTION"
 		},
 		{
-			"context":{
-				"appName":"callables",
-				"resourceVersion":467,
-				"resourceName":"callables_call_automation",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"CONTINUE",
-			"groupId":"JbGgg@4ZR9C-1@success",
-			"id":"n_fYTPB",
-			"index":58,
-			"inputs":{
-				"automationId":"68c51597269ad81cc750a3ca",
-				"runtimeConnections":{},
-				"synchronous":false,
-				"triggerWorkflowWithRuntimeType":"IN_MEMORY",
-				"version":"-1",
-				"parameters":{
-					"caseId":"{{ EIiwt.outputs.caseId }}",
-					"aiAgentId":"{{ EIiwt.outputs.aiAgentId }}",
-					"executionInstanceId":"{{ JbGgg.outputs.executionInstanceId }}",
-					"parent":"Retrieval",
-					"messageId":"{{ n_cuOAL.outputs.messageId }}",
-					"llmTimeTaken":"=INT((NOW() - DATE(1970,1,1)) * 86400000)-{{ n_eXp8p.outputs.rerankerStartTime }}",
-					"input":"{{ JbGgg.outputs }}",
-					"currentType":"Reranker",
-					"rootExecutionId":"{{ __RUN__.outputs.rootExecutionId }}",
-					"parentExecutionId":"{{ __RUN__.outputs.executionId }}",
-					"userId":"=IF(ISNUMBER({{ __RUN__.outputs.userId }}), {{ __RUN__.outputs.userId }}, 0)",
-					"fromAutomationId":"66ae2f6e381d8834cd6742de",
-					"startTime":"{{ n_eXp8p.outputs.rerankerStartTime }}",
-					"success":true
-				}
-			},
-			"options":{
-				"bulkheadConfig":{
-					"enabled":false,
-					"global":false
-				},
-				"businessHoursConfig":{
-					"enabled":false,
-					"waitForNextWindow":false
-				},
-				"cacheConfig":{
-					"enabled":false,
-					"usagePolicy":"ALWAYS"
-				},
-				"circuitBreakerConfig":{
-					"enabled":false
-				},
-				"disableLogging":false,
-				"enabledForReExecution":false,
-				"hookConfig":{
-					"enabled":false,
-					"postHooks":[
-						
-					],
-					"preHooks":[
-						
-					]
-				},
-				"logConfig":{
-					"enabled":false,
-					"logPolicies":[
-						
-					]
-				},
-				"rateLimitConfig":{
-					"enabled":false,
-					"waitForNextWindow":false
-				},
-				"retryConfig":{
-					"backOffFactor":null,
-					"captureRetries":false,
-					"enabled":false
-				},
-				"stepError":"CONTINUE",
-				"telemetryConfig":{
-					"enableTelemetry":false,
-					"metricConfigs":[
-						
-					]
-				}
-			},
-			"skip":false,
-			"subTitle":"Capture Trace",
-			"title":"Call automation",
-			"type":"CALL_WORKFLOW"
-		},
-		{
 			"additional":{
 				"visibleOptionalFields":[
 					"root.parameters.chunks.items"
@@ -4160,7 +3601,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"JbGgg@4ZR9C-1@error",
 			"id":"IRkAI",
-			"index":59,
+			"index":50,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -4232,97 +3673,6 @@
 		{
 			"context":{
 				"appName":"callables",
-				"resourceVersion":467,
-				"resourceName":"callables_call_automation",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"CONTINUE",
-			"groupId":"JbGgg@4ZR9C-1@error",
-			"id":"_QOP3I",
-			"index":60,
-			"inputs":{
-				"automationId":"68c51597269ad81cc750a3ca",
-				"runtimeConnections":{},
-				"synchronous":false,
-				"triggerWorkflowWithRuntimeType":"IN_MEMORY",
-				"version":"-1",
-				"parameters":{
-					"caseId":"{{ EIiwt.outputs.caseId }}",
-					"aiAgentId":"{{ EIiwt.outputs.aiAgentId }}",
-					"executionInstanceId":"{{ __RUN__.outputs.executionId }}",
-					"parent":"Retrieval",
-					"messageId":"{{ n_cuOAL.outputs.messageId }}",
-					"llmTimeTaken":"=INT((NOW() - DATE(1970,1,1)) * 86400000)-{{ n_eXp8p.outputs.rerankerStartTime }}",
-					"input":"{{ JbGgg.outputs }}",
-					"currentType":"Reranker",
-					"rootExecutionId":"{{ __RUN__.outputs.rootExecutionId }}",
-					"parentExecutionId":"{{ __RUN__.outputs.parentExecutionId }}",
-					"userId":"=IF(ISNUMBER({{ __RUN__.outputs.userId }}), {{ __RUN__.outputs.userId }}, 0)",
-					"fromAutomationId":"66ae2f6e381d8834cd6742de",
-					"startTime":"{{ n_eXp8p.outputs.rerankerStartTime }}",
-					"success":false
-				}
-			},
-			"options":{
-				"bulkheadConfig":{
-					"enabled":false,
-					"global":false
-				},
-				"businessHoursConfig":{
-					"enabled":false,
-					"waitForNextWindow":false
-				},
-				"cacheConfig":{
-					"enabled":false,
-					"usagePolicy":"ALWAYS"
-				},
-				"circuitBreakerConfig":{
-					"enabled":false
-				},
-				"disableLogging":false,
-				"enabledForReExecution":false,
-				"hookConfig":{
-					"enabled":false,
-					"postHooks":[
-						
-					],
-					"preHooks":[
-						
-					]
-				},
-				"logConfig":{
-					"enabled":false,
-					"logPolicies":[
-						
-					]
-				},
-				"rateLimitConfig":{
-					"enabled":false,
-					"waitForNextWindow":false
-				},
-				"retryConfig":{
-					"backOffFactor":null,
-					"captureRetries":false,
-					"enabled":false
-				},
-				"stepError":"CONTINUE",
-				"telemetryConfig":{
-					"enableTelemetry":false,
-					"metricConfigs":[
-						
-					]
-				}
-			},
-			"skip":false,
-			"subTitle":"Capture Trace",
-			"title":"Call automation",
-			"type":"CALL_WORKFLOW"
-		},
-		{
-			"context":{
-				"appName":"callables",
 				"resourceVersion":1,
 				"resourceName":"callables_return_to_automation",
 				"type":"APPLICATION"
@@ -4332,7 +3682,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"JbGgg@4ZR9C-1@error",
 			"id":"raaBa",
-			"index":61,
+			"index":51,
 			"inputs":{
 				"result":{
 					"relevantContent":{
@@ -4370,7 +3720,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"JbGgg@4ZR9C-1@error",
 			"id":"CvguA",
-			"index":62,
+			"index":52,
 			"inputs":{
 				"insertLocation":"END",
 				"itemsToAdd":{
@@ -4400,7 +3750,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"4ZR9C-1",
 			"id":"boutm",
-			"index":63,
+			"index":53,
 			"inputs":{
 				"result":{
 					"relevantContent":{
@@ -4440,5 +3790,5 @@
 		"AI Agent",
 		"Knowledge"
 	],
-	"version":147
+	"version":148
 }
