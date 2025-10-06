@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759761730158,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759761761128,
+		"deployedBy":46209,
+		"deployedDefinitionId":"68e3d5611457fe48f5215a34",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_Ln6mJ",
@@ -16,7 +24,7 @@
 	"id":"68e3d5421457fe48f5215a06",
 	"lastModifiedBy":46209,
 	"lcName":"test-call",
-	"modifiedTime":1759761759504,
+	"modifiedTime":1759762813437,
 	"name":"test-call",
 	"nodes":[
 		{
@@ -33,6 +41,21 @@
 			"index":1,
 			"inputs":{
 				"request":{
+					"headers":{
+						"type":"object",
+						"additionalProperties":false,
+						"required":[],
+						"properties":{
+							"vi":{
+								"type":"string",
+								"title":"Vi"
+							},
+							"ve":{
+								"type":"string",
+								"title":"Ve"
+							}
+						}
+					},
 					"contentType":"application/json"
 				},
 				"endpointType":"REST",
@@ -96,5 +119,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
