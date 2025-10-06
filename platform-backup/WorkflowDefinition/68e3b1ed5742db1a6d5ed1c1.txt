@@ -52,7 +52,7 @@
 	"id":"68e3b1ed5742db1a6d5ed1c1",
 	"lastModifiedBy":161877,
 	"lcName":"test",
-	"modifiedTime":1759763108784,
+	"modifiedTime":1759763429783,
 	"name":"test",
 	"nodes":[
 		{
@@ -363,8 +363,8 @@
 		{
 			"context":{
 				"appName":"variable_by_unifyapps",
-				"resourceVersion":890,
-				"resourceName":"variable_by_unifyapps_find_and_update_variables",
+				"resourceVersion":878,
+				"resourceName":"variable_by_unifyapps_set_session_variable",
 				"type":"APPLICATION"
 			},
 			"debug":false,
@@ -373,19 +373,42 @@
 			"groupId":"n_KSMSw@_7WtRV-1@l",
 			"id":"n_V8Wzn",
 			"index":4,
-			"inputs":{
-				"variables":{
-					"source":"{{ n_tFrtL.outputs.items }}",
-					"ua:type":"mappedArray",
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"ua:__linkedVariable__":"n_tFrtL.outputs.items",
+					"disableActions":true,
+					"type":"array",
+					"title":"List",
 					"items":{
-						"source":"{{ n_tFrtL.outputs.items }}",
-						"value":"8"
+						"type":"number",
+						"properties":{}
+					}
+				}
+			},
+			"inputs":{
+				"source":"{{ n_tFrtL.outputs.items }}",
+				"items":5,
+				"ua:type":"mappedArray"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"ua:__linkedVariable__":"n_tFrtL.outputs.items",
+					"disableActions":true,
+					"type":"array",
+					"title":"List",
+					"items":{
+						"type":"number",
+						"properties":{}
 					}
 				}
 			},
 			"skip":false,
 			"subTitle":"Variable by UnifyApps",
-			"title":"Find and update variable",
+			"title":"Set Session Variables",
 			"type":"ACTION"
 		},
 		{
@@ -444,5 +467,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
