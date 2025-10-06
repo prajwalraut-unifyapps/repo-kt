@@ -1,66 +1,63 @@
 {
 	"appsUsed":[
-		"gmeet"
+		
 	],
 	"createdTime":1759734448792,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_iaR0F",
+			"fromNodeId":"n_2DuJ1",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_wfyQy",
+			"toNodeId":"n_eusFV",
 			"type":"next"
 		}
 	],
 	"id":"68e36ab0ea6d01680438912c",
 	"lastModifiedBy":177799,
 	"lcName":"lyearn_testing_rishabh",
-	"modifiedTime":1759735134325,
+	"modifiedTime":1759735447644,
 	"name":"lyearn_testing_rishabh",
 	"nodes":[
 		{
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_iaR0F-1",
-			"id":"_iaR0F",
-			"index":1,
-			"skip":false,
-			"title":"Select a trigger event",
-			"trigger":{
-				"type":"EVENT"
-			},
-			"type":"START"
-		},
-		{
 			"context":{
-				"appName":"gmeet",
-				"resourceVersion":63,
-				"connectionId":"68da921d7c4eaf6df8215940",
-				"resourceName":"gmeet_create_subscription",
-				"type":"APPLICATION"
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_iaR0F-1",
-			"id":"n_wfyQy",
-			"index":2,
+			"id":"n_2DuJ1",
+			"index":1,
 			"inputs":{
-				"targetResource":"//meet.googleapis.com/spaces/ptm-nwtg-otu",
-				"eventTypes":[
-					"google.workspace.meet.conference.v2.started",
-					"google.workspace.meet.conference.v2.ended",
-					"google.workspace.meet.recording.v2.fileGenerated",
-					"google.workspace.meet.transcript.v2.fileGenerated"
-				],
-				"pubsubTopic":"projects/classroom-278011/topics/workspace-events-topic"
+				"request":{
+					"contentType":"application/json"
+				}
 			},
 			"skip":false,
-			"subTitle":"Google Meet",
-			"title":"Create pub/sub subscription",
-			"type":"ACTION"
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_iaR0F-1",
+			"id":"n_eusFV",
+			"index":2,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":177799,
@@ -80,5 +77,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
