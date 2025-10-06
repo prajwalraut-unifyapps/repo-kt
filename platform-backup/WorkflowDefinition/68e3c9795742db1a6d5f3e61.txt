@@ -23,7 +23,7 @@
 	"id":"68e3c9795742db1a6d5f3e61",
 	"lastModifiedBy":182775,
 	"lcName":"testdependency",
-	"modifiedTime":1759758825008,
+	"modifiedTime":1759758837266,
 	"name":"testDependency",
 	"nodes":[
 		{
@@ -147,6 +147,9 @@
 			"inputs":{
 				"streamingCompleted":true,
 				"responseName":"200_Status",
+				"body":{
+					"Status":"Successful"
+				},
 				"status":200
 			},
 			"skip":false,
@@ -172,5 +175,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
