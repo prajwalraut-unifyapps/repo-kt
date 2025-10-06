@@ -26,12 +26,19 @@
 			"skip":false,
 			"toNodeId":"n_LWdzd",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_LWdzd",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_aTL2n",
+			"type":"next"
 		}
 	],
 	"id":"68e3e7af58728978fcb53e7b",
 	"lastModifiedBy":43498,
 	"lcName":"test-pdf",
-	"modifiedTime":1759766759036,
+	"modifiedTime":1759766773547,
 	"name":"test-pdf",
 	"nodes":[
 		{
@@ -103,6 +110,21 @@
 			"subTitle":"Delay",
 			"title":"Set delay duration",
 			"type":"DELAY"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_8m5fP-1",
+			"id":"n_aTL2n",
+			"index":4,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":43498,
@@ -122,5 +144,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
