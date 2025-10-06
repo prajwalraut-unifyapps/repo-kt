@@ -88,7 +88,7 @@
 	"id":"68e36d45ea6d01680438954e",
 	"lastModifiedBy":161860,
 	"lcName":"test1",
-	"modifiedTime":1759738892922,
+	"modifiedTime":1759739115433,
 	"name":"test1",
 	"nodes":[
 		{
@@ -483,7 +483,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Tx6s5-1",
 			"id":"_RVFPq",
@@ -548,7 +548,7 @@
 						}
 					}
 				},
-				"code":"def generateContactArray(contactName, contactId) {\n    // Construct the URL and contact name text separately\n    def url = \"https://contentstack--staginguat.sandbox.lightning.force.com/lightning/r/Contact/\" + contactId + \"/view\"\n    def contactText = contactName + \" (Customer)\"\n    \n    // Return the required array structure\n    return [\n        [\n            \"markupType\": \"Hyperlink\",\n            \"type\": \"MarkupBegin\",\n            \"url\": url\n        ],\n        [\n            \"text\": contactText,\n            \"type\": \"Text\"\n        ],\n        [\n            \"markupType\": \"Hyperlink\",\n            \"type\": \"MarkupEnd\"\n        ],\n        [\n            \"text\": \"says:\",\n            \"type\": \"Text\"\n        ],\n        [\n            \"markupType\": \"Paragraph\",\n            \"type\": \"MarkupBegin\"\n        ],\n        [\n            \"markupType\": \"Paragraph\",\n            \"type\": \"MarkupEnd\"\n        ],\n        [\n        \"markupType\": \"Paragraph\",\n        \"type\": \"MarkupBegin\"\n      ],\n      [\n        \"markupType\": \"Paragraph\",\n        \"type\": \"MarkupEnd\"\n      ]\n    ]\n}\n\ndef result = generateContactArray(contactName, contactId)\nreturn [\"headerText\": result]",
+				"code":"def generateContactArray(contactName, contactId) {\n    // Construct the URL and contact name text separately\n    def url = \"https://uudev-dev-ed.develop.lightning.force.com/lightning/r/Contact/\" + contactId + \"/view\"\n    def contactText = contactName + \" (Customer)\"\n    \n    // Return the required array structure\n    return [\n        [\n            \"markupType\": \"Hyperlink\",\n            \"type\": \"MarkupBegin\",\n            \"url\": url\n        ],\n        [\n            \"text\": contactText,\n            \"type\": \"Text\"\n        ],\n        [\n            \"markupType\": \"Hyperlink\",\n            \"type\": \"MarkupEnd\"\n        ],\n        [\n            \"text\": \"says:\",\n            \"type\": \"Text\"\n        ],\n        [\n            \"markupType\": \"Paragraph\",\n            \"type\": \"MarkupBegin\"\n        ],\n        [\n            \"markupType\": \"Paragraph\",\n            \"type\": \"MarkupEnd\"\n        ],\n        [\n        \"markupType\": \"Paragraph\",\n        \"type\": \"MarkupBegin\"\n      ],\n      [\n        \"markupType\": \"Paragraph\",\n        \"type\": \"MarkupEnd\"\n      ]\n    ]\n}\n\ndef result = generateContactArray(contactName, contactId)\nreturn [\"headerText\": result]",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
@@ -1061,7 +1061,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"CONTINUE",
 			"groupId":"_Tx6s5-1",
 			"id":"_Ui27P",
@@ -1149,7 +1149,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_Tx6s5-1",
 			"id":"n_DMD9A",
@@ -1195,5 +1195,5 @@
 	"tags":[
 		
 	],
-	"version":20
+	"version":22
 }
