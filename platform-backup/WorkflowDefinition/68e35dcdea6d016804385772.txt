@@ -5,13 +5,13 @@
 	"createdTime":1759731149582,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759731301849,
+		"deployedAt":1759733692095,
 		"deployedBy":3546,
-		"deployedDefinitionId":"68e35e65ea6d016804385898",
-		"deploymentTag":"V1",
+		"deployedDefinitionId":"68e367bbea6d016804388523",
+		"deploymentTag":"V2",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":1
+		"version":2,
+		"workflowVersion":2
 	},
 	"edges":[
 		{
@@ -25,7 +25,7 @@
 	"id":"68e35dcdea6d016804385772",
 	"lastModifiedBy":3546,
 	"lcName":"testingiii",
-	"modifiedTime":1759733685503,
+	"modifiedTime":1759736026405,
 	"name":"testingiii",
 	"nodes":[
 		{
@@ -48,14 +48,14 @@
 							"property":"{{ n_Nho0M.outputs.title }}",
 							"filter":{
 								"operator":"EQUAL",
-								"value":"Tasklist4"
+								"value":"Tasklist5"
 							}
 						}
 					],
 					"operator":"AND"
 				},
 				"interval":30,
-				"batchSize":100
+				"batchSize":10
 			},
 			"skip":false,
 			"subTitle":"Google Task",
@@ -98,5 +98,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
