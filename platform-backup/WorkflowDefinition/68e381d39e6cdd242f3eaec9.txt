@@ -6,46 +6,89 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_X8WJK",
+			"fromNodeId":"n_NYc7b",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_9JTQL",
+			"toNodeId":"n_4I3ZI",
 			"type":"next"
 		}
 	],
 	"id":"68e381d39e6cdd242f3eaec9",
 	"lastModifiedBy":49915,
 	"lcName":"export-ms default test",
-	"modifiedTime":1759740371209,
+	"modifiedTime":1759740439144,
 	"name":"export-ms default test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1015,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_X8WJK-1",
-			"id":"_X8WJK",
-			"index":0,
+			"id":"n_NYc7b",
+			"index":1,
+			"inputs":{
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"url":{
+							"type":"string",
+							"title":"Url"
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":1061,
+				"resourceName":"utility_by_unifyapps_export_unifyapps_pages_to_pdf",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_X8WJK-1",
-			"id":"_9JTQL",
-			"index":0,
+			"id":"n_4I3ZI",
+			"index":2,
+			"inputs":{
+				"pdfPages":[
+					{
+						"url":"{{ n_NYc7b.outputs.url }}"
+					}
+				],
+				"exportType":"PDF",
+				"page":{
+					"format":"a4",
+					"layout":"landscape",
+					"scale":1,
+					"timeout":5000
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Utility by UnifyApps",
+			"title":"Export UnifyApps pages to PDF",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":49915,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +102,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
