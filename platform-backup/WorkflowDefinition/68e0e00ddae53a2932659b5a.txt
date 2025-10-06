@@ -17,6 +17,42 @@
 			"fromNodeId":"n_pMglE",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_sQxkV",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_sQxkV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_x0HDn",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_x0HDn",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Cwp0r",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Cwp0r",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_sQxkV",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_sQxkV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_7c0rs",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_7c0rs",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_U9j8K",
 			"type":"next"
 		},
@@ -128,7 +164,7 @@
 	"id":"68e0e00ddae53a2932659b5a",
 	"lastModifiedBy":39715,
 	"lcName":"testing_branch",
-	"modifiedTime":1759737869330,
+	"modifiedTime":1759737927341,
 	"name":"testing_branch",
 	"nodes":[
 		{
@@ -159,6 +195,106 @@
 		{
 			"context":{
 				"appName":"loop",
+				"resourceVersion":877,
+				"resourceName":"loop_while",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_FvSe0-1",
+			"id":"n_sQxkV",
+			"index":2,
+			"inputs":{
+				"condition":{
+					"filters":[
+						{
+							"property":"1",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"1"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"captureIterations":true
+			},
+			"skip":false,
+			"subTitle":"Loop",
+			"title":"While loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":975,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_sQxkV@_FvSe0-1@l",
+			"id":"n_x0HDn",
+			"index":3,
+			"inputs":{
+				"code":"return 2",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"break",
+				"resourceVersion":817,
+				"resourceName":"break",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_sQxkV@_FvSe0-1@l",
+			"id":"n_Cwp0r",
+			"index":4,
+			"inputs":{
+				"loop":"n_sQxkV"
+			},
+			"skip":false,
+			"subTitle":"Break",
+			"title":"Break",
+			"type":"BREAK"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":975,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_FvSe0-1",
+			"id":"n_7c0rs",
+			"index":5,
+			"inputs":{
+				"code":"return 4",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"loop",
 				"resourceVersion":36,
 				"resourceName":"loop_for",
 				"type":"APPLICATION"
@@ -168,7 +304,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_FvSe0-1",
 			"id":"n_U9j8K",
-			"index":2,
+			"index":6,
 			"inputs":{
 				"start":0,
 				"limit":3,
@@ -192,7 +328,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_U9j8K@_FvSe0-1@l",
 			"id":"n_T3AJ3",
-			"index":3,
+			"index":7,
 			"inputs":{
 				"code":"return 2",
 				"compile_static":false,
@@ -213,7 +349,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_FvSe0-1",
 			"id":"n_Ywwxe",
-			"index":4,
+			"index":8,
 			"inputs":{
 				"branches":[
 					{
@@ -274,7 +410,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_Ywwxe@_FvSe0-1@1",
 			"id":"n_Ywwxe@1",
-			"index":5,
+			"index":9,
 			"inputs":{
 				"name":"Branch 1",
 				"conditions":{
@@ -306,7 +442,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_Ywwxe@_FvSe0-1@1",
 			"id":"n_hmYtm",
-			"index":6,
+			"index":10,
 			"inputs":{
 				"start":0,
 				"limit":2,
@@ -330,7 +466,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hmYtm@n_Ywwxe@_FvSe0-1@1@l",
 			"id":"n_iGKI9",
-			"index":7,
+			"index":11,
 			"inputs":{
 				"code":"return 3",
 				"compile_static":false,
@@ -353,7 +489,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_Ywwxe@_FvSe0-1@2",
 			"id":"n_Ywwxe@2",
-			"index":8,
+			"index":12,
 			"inputs":{
 				"name":"Branch 2",
 				"conditions":{
@@ -385,7 +521,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_Ywwxe@_FvSe0-1@2",
 			"id":"n_k9Djs",
-			"index":9,
+			"index":13,
 			"inputs":{
 				"start":0,
 				"limit":3,
@@ -409,7 +545,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_k9Djs@n_Ywwxe@_FvSe0-1@2@l",
 			"id":"n_oq5L1",
-			"index":10,
+			"index":14,
 			"inputs":{
 				"code":"return 6",
 				"compile_static":false,
@@ -429,7 +565,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_FvSe0-1",
 			"id":"n_eMG9v",
-			"index":11,
+			"index":15,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -453,5 +589,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
