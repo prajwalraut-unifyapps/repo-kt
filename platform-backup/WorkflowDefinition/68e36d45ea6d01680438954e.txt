@@ -81,7 +81,7 @@
 	"id":"68e36d45ea6d01680438954e",
 	"lastModifiedBy":161860,
 	"lcName":"test1",
-	"modifiedTime":1759738451383,
+	"modifiedTime":1759738516904,
 	"name":"test1",
 	"nodes":[
 		{
@@ -610,7 +610,7 @@
 			"inputs":{
 				"filters":[
 					{
-						"property":"=len({{ _u2PSU.outputs.replyMsg }})",
+						"property":"=len({{ n_0AYNZ.outputs.replyMsg }})",
 						"filter":{
 							"operator":"GTE",
 							"value":"1"
@@ -1132,5 +1132,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
