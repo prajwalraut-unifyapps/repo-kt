@@ -69,7 +69,7 @@
 	"id":"68e3a4221457fe48f5210adf",
 	"lastModifiedBy":161877,
 	"lcName":"test",
-	"modifiedTime":1759749761128,
+	"modifiedTime":1759749812953,
 	"name":"test",
 	"nodes":[
 		{
@@ -336,15 +336,23 @@
 									"title":"List Item Source"
 								},
 								"items":{
-									"additionalProperties":false,
-									"type":[
-										"object",
-										"string",
-										"number",
-										"boolean",
-										"integer"
-									],
-									"properties":{}
+									"type":"array",
+									"items":{
+										"type":"object",
+										"properties":{
+											"col1__0":{
+												"type":"string",
+												"title":"col1",
+												"$id":"urn:vertxschemas:436ffbdd-24ac-455a-8113-ccfd08986ee8"
+											},
+											"col2__1":{
+												"type":"string",
+												"title":"col2",
+												"$id":"urn:vertxschemas:16b5c5a3-b92e-4fdb-9dde-42a5abac8103"
+											}
+										}
+									},
+									"ua:__linkedVariable__":"n_Me7dm.outputs.rows[0]"
 								}
 							}
 						}
@@ -352,7 +360,11 @@
 				}
 			},
 			"inputs":{
-				"ua:title":"ans"
+				"createList":{
+					"ua:type":"mappedArray"
+				},
+				"ua:title":"ans",
+				"ua:list_type":"OBJECT"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -482,5 +494,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
