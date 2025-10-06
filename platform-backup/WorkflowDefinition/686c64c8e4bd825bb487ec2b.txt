@@ -39,7 +39,7 @@
 	"id":"686c64c8e4bd825bb487ec2b",
 	"lastModifiedBy":59995,
 	"lcName":"exceltocsv",
-	"modifiedTime":1759751083759,
+	"modifiedTime":1759751095586,
 	"name":"ExcelToCSV",
 	"nodes":[
 		{
@@ -168,7 +168,7 @@
 			"inputs":{
 				"startFromRow":1,
 				"quoteChar":"\"",
-				"fileDetails":"{{ n_b3v4D.outputs.fileDetails }}",
+				"fileDetails":"{{ n_qzuM1.outputs.result.fileDetails }}",
 				"delimiter":"\\t",
 				"skipHeaderRow":true,
 				"encoding":"Windows-1252",
@@ -193,5 +193,5 @@
 	"tags":[
 		
 	],
-	"version":90
+	"version":91
 }
