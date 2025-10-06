@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759742341935,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_TjViN",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_ml58B",
+			"type":"next"
+		}
+	],
+	"id":"68e389858c26f92f8a68ee55",
+	"lastModifiedBy":73066,
+	"lcName":"testa",
+	"modifiedTime":1759742341935,
+	"name":"testa",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_TjViN-1",
+			"id":"_TjViN",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_TjViN-1",
+			"id":"_ml58B",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":73066,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
