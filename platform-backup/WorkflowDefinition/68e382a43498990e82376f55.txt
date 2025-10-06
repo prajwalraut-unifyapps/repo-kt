@@ -6,67 +6,41 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"n_NYc7b",
+			"fromNodeId":"n_rqDve",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_4I3ZI",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_4I3ZI",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_TijCc",
 			"type":"next"
 		}
 	],
 	"id":"68e382a43498990e82376f55",
 	"lastModifiedBy":49915,
 	"lcName":"export-ms default test (copy)",
-	"modifiedTime":1759740580699,
+	"modifiedTime":1759740601807,
 	"name":"export-ms default test (copy)",
 	"nodes":[
 		{
 			"context":{
-				"appName":"callables",
-				"resourceVersion":1015,
-				"resourceName":"callables_from_automation"
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_X8WJK-1",
-			"id":"n_NYc7b",
+			"id":"n_rqDve",
 			"index":1,
 			"inputs":{
-				"result":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[],
-					"properties":{
-						"success":{
-							"type":"boolean",
-							"title":"Success"
-						}
-					}
-				},
-				"setup":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[],
-					"properties":{
-						"url":{
-							"type":"string",
-							"title":"Url"
-						}
-					}
+				"request":{
+					"contentType":"application/json"
 				}
 			},
 			"skip":false,
-			"subTitle":"Callable",
-			"title":"Trigger via automation",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"CALLABLE"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
@@ -78,7 +52,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_X8WJK-1",
 			"id":"n_4I3ZI",
@@ -86,7 +60,7 @@
 			"inputs":{
 				"pdfPages":[
 					{
-						"url":"{{ n_NYc7b.outputs.url }}"
+						"url":"https://www.google.com/"
 					}
 				],
 				"exportType":"PDF",
@@ -101,29 +75,6 @@
 			"subTitle":"Utility by UnifyApps",
 			"title":"Export UnifyApps pages to PDF",
 			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"callables",
-				"resourceVersion":1051,
-				"resourceName":"callables_return_to_automation",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_X8WJK-1",
-			"id":"n_TijCc",
-			"index":3,
-			"inputs":{
-				"result":{
-					"success":true
-				}
-			},
-			"skip":false,
-			"subTitle":"Callable",
-			"title":"Respond to automation",
-			"type":"STOP"
 		}
 	],
 	"ownerUserId":49915,
@@ -143,5 +94,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
