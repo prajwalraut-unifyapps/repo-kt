@@ -6,46 +6,109 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_8m5fP",
+			"fromNodeId":"n_zRKTU",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_2OmwM",
+			"toNodeId":"n_LWdzd",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_LWdzd",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_7quYY",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_7quYY",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_LWdzd",
 			"type":"next"
 		}
 	],
 	"id":"68e3e7af58728978fcb53e7b",
 	"lastModifiedBy":43498,
 	"lcName":"test-pdf",
-	"modifiedTime":1759766447234,
+	"modifiedTime":1759766759036,
 	"name":"test-pdf",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_8m5fP-1",
-			"id":"_8m5fP",
-			"index":0,
+			"id":"n_zRKTU",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"pdf_by_unifyapps",
+				"resourceVersion":828,
+				"resourceName":"pdf_by_unifyapps_for_each_split_file",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_8m5fP-1",
-			"id":"_2OmwM",
-			"index":0,
+			"id":"n_LWdzd",
+			"index":2,
+			"inputs":{
+				"pageCount":5,
+				"fileDetails":"https://s3.ap-south-1.amazonaws.com/qa.unifyapps.com.cloudstorage.1/connector_streaming_uploads/1/18/7973a443-31ee-49ce-bdc2-21249a6b66f8_Article%20-%2029%20Sessions.pdf?response-content-disposition=attachment%3Bfilename%3D%227973a443-31ee-49ce-bdc2-21249a6b66f8_Article%2B-%2B29%2BSessions.pdf%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEOL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCmFwLXNvdXRoLTEiSDBGAiEAj7v6Q4fqXW1N151T04f2AmoE5o8CVdaeGBKQ4rJE7vECIQC08pvvstSlhHnx2as9Q0HstN97cP82SqdYWcxVaukxoiq%2BBQh7EAAaDDU0NjkxODEwNjI4MyIMsB3EvLYvviHFWTgNKpsFTAvJ%2BHDFFhihvIROB4JHoP3YOy14vgD8YgAdX2oqtIbU%2BQcX3mA5qVqmtzmThpA815Ula21MSE%2BW0mdfffUW1K49eydCu2n9x1MYervwMYLo1uWAwOIfUBb10QyR%2BAcAfRRP%2FNm0%2B5t1RsLH5psnnxeWtj8%2BaK4usSgBy%2FACPbTeQ3W6WZuGOr3cFPVvasgOD2UlNx3cTYt0F3VlU10oZiFtWlGlLnsReAUKRTBu0KGpKupRtZFFrU43PYtjtioVqBiKYAVfQkaqcDwEijCACJ%2FAZnE1VTfhkqouVqOPm9eTDXX47xQWrlZR1lkS2VNnnYgQcUAP80k9Y0izmVEC8JpQRQ%2FN9BvTy2voiXn6H7SDyA8lR6QtHwUeObJtcE%2BmUgF%2FKuyvYpQhn1AMZcHv0AgHiqCbF0hV9eg2sbWhjYWxKBf%2BPy2H%2FqkYavKEm7gyq0DFJ56YLY2FmAXITRs0SFZYqe53p1IHFAbjggz4YmfV1DjKvSp82X%2BkG%2BYape%2FJiY2KUUpTWn8OpMHBuWr9Ec8sasIEquRoqoHCRRvAaooqT4igLFk60g3TLP5iChJAvqG2ht2RWi4Ss6zjPitMj5UZPtqJYph4wQu3zSx%2FZ1cqqjGuNIt0BDZnv2K09ZRwvLbB%2BsCXx1H3GY43Kz7%2Fxz0LoGo2yEo1YATbLgqyytedr80FJNpT8APQt0%2FuVjBDKPxSiFNn14VzEX%2By5XKR2Oy4wteZLrCWwT1TJ738jumMJXlvjmtr3R%2FGspApL9%2BdmbPpm%2FftsYULLJWJBuviNYTH94ziKT3TIeiSpvtjrzAwiz%2BYLQEb3GUziqKka%2BX3mFz2BiiELKQAXT44UetDfhCquufKt5b3KFRnueNvofL2duKuuowi9qw2WjDH24rHBjqwAZ6lt6QR2zvqA8ut2OjZPU0TZ36ycphhhlv%2FpaiwbeyW9o54UFN1lhszsbu76BVhY8ygl4AdW4Wndk06c82TGU3o2d0LCAPwDuQhD22JktT1N0Z%2FOJa9cMh62BT%2BUOKGx1YbjpZZzxOQY8a6r0pHbYJsZnwrLFStTxwRRBldnIfSdBC3TURKcl%2BdkHwVBUpm3v4med06u9lfwZTPGF9Z9sP72rtKQ3s6pWkP8oCyfILv&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251005T183414Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV7KVATPSI%2F20251005%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=3600&X-Amz-Signature=95ecd0d7864d4b915797c88e9a8312721093372fb58693f3772d162b9848578d",
+				"splitType":"splitByPage"
+			},
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"PDF by UnifyApps",
+			"title":"Split PDF file",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"delay",
+				"resourceVersion":809,
+				"resourceName":"delay_for",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_LWdzd@_8m5fP-1@l",
+			"id":"n_7quYY",
+			"index":3,
+			"inputs":{
+				"duration":2,
+				"unit":"SECONDS"
+			},
+			"skip":false,
+			"subTitle":"Delay",
+			"title":"Set delay duration",
+			"type":"DELAY"
 		}
 	],
 	"ownerUserId":43498,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +122,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
