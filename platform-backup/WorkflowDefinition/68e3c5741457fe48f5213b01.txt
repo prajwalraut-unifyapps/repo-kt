@@ -6,7 +6,7 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"n_kNt8X",
+			"fromNodeId":"n_0EguA",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_bBE7Z",
@@ -38,33 +38,31 @@
 	"id":"68e3c5741457fe48f5213b01",
 	"lastModifiedBy":182775,
 	"lcName":"test",
-	"modifiedTime":1759760968068,
+	"modifiedTime":1759760982657,
 	"name":"test",
 	"nodes":[
 		{
 			"context":{
-				"appName":"callables",
-				"resourceVersion":1105,
-				"resourceName":"callables_from_api"
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_NvHMG-1",
-			"id":"n_kNt8X",
+			"id":"n_0EguA",
 			"index":1,
 			"inputs":{
 				"request":{
 					"contentType":"application/json"
-				},
-				"endpointType":"REST",
-				"streamingResponse":false
+				}
 			},
 			"skip":false,
-			"subTitle":"Callable",
-			"title":"Trigger via API",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"CALLABLE"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
@@ -100,7 +98,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_bBE7Z@_NvHMG-1@l",
 			"id":"n_c5AzZ",
@@ -375,5 +373,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
