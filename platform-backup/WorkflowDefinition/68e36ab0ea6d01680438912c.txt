@@ -1,12 +1,27 @@
 {
 	"appsUsed":[
-		
+		"gmeet"
 	],
 	"createdTime":1759734448792,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759735451957,
+		"deployedBy":177799,
+		"deployedDefinitionId":"68e36e99ea6d016804389745",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_2DuJ1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_So0ue",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_So0ue",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_eusFV",
@@ -16,7 +31,7 @@
 	"id":"68e36ab0ea6d01680438912c",
 	"lastModifiedBy":177799,
 	"lcName":"lyearn_testing_rishabh",
-	"modifiedTime":1759735447644,
+	"modifiedTime":1759735612871,
 	"name":"lyearn_testing_rishabh",
 	"nodes":[
 		{
@@ -26,7 +41,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_iaR0F-1",
 			"id":"n_2DuJ1",
@@ -46,14 +61,33 @@
 		},
 		{
 			"context":{
-				"appName":"stop"
+				"appName":"gmeet",
+				"resourceVersion":63,
+				"resourceName":"gmeet_create_subscription",
+				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_iaR0F-1",
-			"id":"n_eusFV",
+			"id":"n_So0ue",
 			"index":2,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Google Meet",
+			"title":"Create pub/sub subscription",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_iaR0F-1",
+			"id":"n_eusFV",
+			"index":3,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -77,5 +111,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
