@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		
+		"salesforce"
 	],
 	"createdTime":1759735109009,
 	"deleted":false,
@@ -9,14 +9,14 @@
 			"fromNodeId":"_Tx6s5",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_PA1Nt",
+			"toNodeId":"n_hDNsJ",
 			"type":"next"
 		}
 	],
 	"id":"68e36d45ea6d01680438954e",
-	"lastModifiedBy":73066,
+	"lastModifiedBy":39712,
 	"lcName":"test1",
-	"modifiedTime":1759735109009,
+	"modifiedTime":1759737962730,
 	"name":"test1",
 	"nodes":[
 		{
@@ -25,7 +25,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_Tx6s5-1",
 			"id":"_Tx6s5",
-			"index":0,
+			"index":1,
 			"skip":false,
 			"title":"Select a trigger event",
 			"trigger":{
@@ -34,18 +34,46 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"salesforce",
+				"resourceVersion":4444,
+				"connectionId":"68de8b42953b7316d9d81c59",
+				"resourceName":"salesforce_reply_to_comment",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Tx6s5-1",
-			"id":"_PA1Nt",
-			"index":0,
+			"id":"n_hDNsJ",
+			"index":2,
+			"inputs":{
+				"feedItemId":"0D5dL00000LmhBSSAZ",
+				"payload":{
+					"body":{
+						"messageSegments":[
+							{
+								"type":"Text",
+								"text":"hiiii"
+							},
+							{
+								"type":"Text",
+								"text":"cdwxsaz"
+							}
+						]
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Salesforce",
+			"title":"Reply to a comment",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":73066,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +87,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
