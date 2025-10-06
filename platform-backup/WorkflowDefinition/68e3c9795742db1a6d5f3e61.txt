@@ -1,16 +1,16 @@
 {
 	"appsUsed":[
-		
+		"gcloud_storage"
 	],
 	"createdTime":1759758713567,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759759045520,
+		"deployedAt":1759759182708,
 		"deployedBy":182775,
-		"deployedDefinitionId":"68e3cac51457fe48f5214619",
+		"deployedDefinitionId":"68e3cb4e5742db1a6d5f4398",
 		"status":"DEPLOYED",
-		"version":3,
-		"workflowVersion":6
+		"version":4,
+		"workflowVersion":8
 	},
 	"edges":[
 		{
@@ -22,6 +22,13 @@
 		},
 		{
 			"fromNodeId":"n_8UYx8",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_hCWEW",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_hCWEW",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_nOzMM",
@@ -75,7 +82,7 @@
 	"id":"68e3c9795742db1a6d5f3e61",
 	"lastModifiedBy":182775,
 	"lcName":"testdependency",
-	"modifiedTime":1759759180685,
+	"modifiedTime":1759760079383,
 	"name":"testDependency",
 	"nodes":[
 		{
@@ -194,6 +201,35 @@
 		},
 		{
 			"context":{
+				"appName":"gcloud_storage",
+				"resourceVersion":5727,
+				"connectionId":"68ac666caa52965d63249026",
+				"resourceName":"gcloud_storage_create_bucket",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Gdlwf-1",
+			"id":"n_hCWEW",
+			"index":3,
+			"inputs":{
+				"name":"{{ __USER__.outputs.name }}",
+				"project":"virtusa-eag-devtest-202773",
+				"iamConfiguration":{
+					"uniformBucketLevelAccess":{
+						"enabled":true
+					}
+				},
+				"location":"US-EAST5"
+			},
+			"skip":false,
+			"subTitle":"Google Cloud Storage",
+			"title":"Create a bucket",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"callables",
 				"resourceVersion":870,
 				"resourceName":"callables_call_automation_streaming",
@@ -204,7 +240,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_Gdlwf-1",
 			"id":"n_nOzMM",
-			"index":3,
+			"index":4,
 			"inputs":{
 				"automationId":"68bc34c0b7d5156f7f60df91",
 				"runtimeConnections":{},
@@ -224,11 +260,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_nOzMM@_Gdlwf-1@l",
 			"id":"n_l6giD",
-			"index":4,
+			"index":5,
 			"inputs":{
 				"streamId":"e_68e013d6dc6c2b4d40587f06",
 				"repeatMode":"BATCH",
@@ -249,11 +285,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_l6giD@n_nOzMM@_Gdlwf-1@l@l",
 			"id":"n_1xTql",
-			"index":5,
+			"index":6,
 			"inputs":{
 				"streamId":"e_68e013d6dc6c2b4d40587f06",
 				"skipInputValidation":true,
@@ -280,7 +316,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_nOzMM@_Gdlwf-1@l",
 			"id":"_L7CN5",
-			"index":6,
+			"index":7,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -333,7 +369,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_Gdlwf-1",
 			"id":"n_0qbxt",
-			"index":7,
+			"index":8,
 			"inputs":{
 				"streamingCompleted":true,
 				"responseName":"200_Status",
@@ -365,5 +401,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
