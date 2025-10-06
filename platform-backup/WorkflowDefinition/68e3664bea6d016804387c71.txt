@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759733323700,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_8cv88",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_BNN5R",
+			"type":"next"
+		}
+	],
+	"id":"68e3664bea6d016804387c71",
+	"lastModifiedBy":45010,
+	"lcName":"3der",
+	"modifiedTime":1759733323700,
+	"name":"3der",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_8cv88-1",
+			"id":"_8cv88",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_8cv88-1",
+			"id":"_BNN5R",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":45010,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
