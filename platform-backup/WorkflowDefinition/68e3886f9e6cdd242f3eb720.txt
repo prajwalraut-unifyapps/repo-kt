@@ -74,7 +74,7 @@
 	"id":"68e3886f9e6cdd242f3eb720",
 	"lastModifiedBy":426,
 	"lcName":"dep-graph (copy)",
-	"modifiedTime":1759742063235,
+	"modifiedTime":1759742104642,
 	"name":"dep-graph (copy)",
 	"nodes":[
 		{
@@ -106,13 +106,13 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_sdWBH",
 			"index":2,
 			"inputs":{
-				"automationId":"68defa11d6d230107d495d5d",
+				"automationId":"68e3886f9e6cdd242f3eb720",
 				"runtimeConnections":{},
 				"synchronous":true,
 				"version":"-1",
@@ -156,7 +156,6 @@
 			},
 			"inputs":{},
 			"outputSchema":{
-				"type":"SCHEMA",
 				"dynamic":false,
 				"schema":{
 					"additionalProperties":false,
@@ -352,5 +351,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
