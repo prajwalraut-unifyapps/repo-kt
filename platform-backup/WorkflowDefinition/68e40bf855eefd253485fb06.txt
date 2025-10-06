@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759775736464,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_WmdtE",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_YrEIX",
+			"type":"next"
+		}
+	],
+	"id":"68e40bf855eefd253485fb06",
+	"lastModifiedBy":44103,
+	"lcName":"slot dnd",
+	"modifiedTime":1759775736464,
+	"name":"slot dnd",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_WmdtE-1",
+			"id":"_WmdtE",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_WmdtE-1",
+			"id":"_YrEIX",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":44103,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
