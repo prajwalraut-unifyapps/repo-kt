@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759788339858,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_DL1MM",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_JklGo",
+			"type":"next"
+		}
+	],
+	"id":"68e43d3321d1c0029880ce8d",
+	"lastModifiedBy":33444,
+	"lcName":"test hp css",
+	"modifiedTime":1759788339858,
+	"name":"test hp css",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_DL1MM-1",
+			"id":"_DL1MM",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_DL1MM-1",
+			"id":"_JklGo",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":33444,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
