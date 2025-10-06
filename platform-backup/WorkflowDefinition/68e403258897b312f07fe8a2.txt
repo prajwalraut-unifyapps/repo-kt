@@ -52,14 +52,14 @@
 			"fromNodeId":"aaaKD",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_boHTX",
+			"toNodeId":"n_KknfT",
 			"type":"next"
 		}
 	],
 	"id":"68e403258897b312f07fe8a2",
 	"lastModifiedBy":43498,
 	"lcName":"sdf-pdf",
-	"modifiedTime":1759773668847,
+	"modifiedTime":1759773686368,
 	"name":"sdf-pdf",
 	"nodes":[
 		{
@@ -526,17 +526,23 @@
 		},
 		{
 			"context":{
-				"appName":"stop"
+				"appName":"callables",
+				"resourceVersion":1054,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_hMJYx-1",
-			"id":"n_boHTX",
+			"id":"n_KknfT",
 			"index":7,
+			"inputs":{
+				"result":"200"
+			},
 			"skip":false,
-			"subTitle":"Stop",
-			"title":"Stop",
+			"subTitle":"Callable",
+			"title":"Respond to automation",
 			"type":"STOP"
 		}
 	],
@@ -557,5 +563,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
