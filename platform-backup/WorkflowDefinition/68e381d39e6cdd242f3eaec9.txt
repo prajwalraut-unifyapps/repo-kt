@@ -11,12 +11,19 @@
 			"skip":false,
 			"toNodeId":"n_4I3ZI",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_4I3ZI",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_TijCc",
+			"type":"next"
 		}
 	],
 	"id":"68e381d39e6cdd242f3eaec9",
 	"lastModifiedBy":49915,
 	"lcName":"export-ms default test",
-	"modifiedTime":1759740439144,
+	"modifiedTime":1759740458896,
 	"name":"export-ms default test",
 	"nodes":[
 		{
@@ -32,6 +39,17 @@
 			"id":"n_NYc7b",
 			"index":1,
 			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"success":{
+							"type":"boolean",
+							"title":"Success"
+						}
+					}
+				},
 				"setup":{
 					"type":"object",
 					"additionalProperties":false,
@@ -83,6 +101,29 @@
 			"subTitle":"Utility by UnifyApps",
 			"title":"Export UnifyApps pages to PDF",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1051,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_X8WJK-1",
+			"id":"n_TijCc",
+			"index":3,
+			"inputs":{
+				"result":{
+					"success":true
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":49915,
@@ -102,5 +143,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
