@@ -81,7 +81,7 @@
 	"id":"68e36d45ea6d01680438954e",
 	"lastModifiedBy":161860,
 	"lcName":"test1",
-	"modifiedTime":1759738594653,
+	"modifiedTime":1759738624869,
 	"name":"test1",
 	"nodes":[
 		{
@@ -1060,7 +1060,7 @@
 			"id":"_Ui27P",
 			"index":10,
 			"inputs":{
-				"feedItemId":"{{ _u2PSU.outputs.feedItem }}",
+				"feedItemId":"{{ n_0AYNZ.outputs.feedItem }}",
 				"bodyType":"MARKDOWN",
 				"payload":{
 					"bodyRichText":{
@@ -1133,5 +1133,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
