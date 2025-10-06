@@ -9,6 +9,13 @@
 			"fromNodeId":"n_zRKTU",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_p2zuW",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_p2zuW",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_LWdzd",
 			"type":"next"
 		},
@@ -38,7 +45,7 @@
 	"id":"68e3e7af58728978fcb53e7b",
 	"lastModifiedBy":43498,
 	"lcName":"test-pdf",
-	"modifiedTime":1759772999929,
+	"modifiedTime":1759773146688,
 	"name":"test-pdf",
 	"nodes":[
 		{
@@ -68,6 +75,28 @@
 		},
 		{
 			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":1039,
+				"resourceName":"utility_by_unifyapps_generate_public_url",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_8m5fP-1",
+			"id":"n_p2zuW",
+			"index":2,
+			"inputs":{
+				"file":" \"expiryTime\": 1,\n  \"file\": {\n\"fileType\": \"pdf\",\n\"name\": \"7973a443-31ee-49ce-bdc2-21249a6b66f8_Article - 29 Sessions.pdf\",\n\"size\": 0,\n\"source\": \"connector_streaming_uploads/1/18/7973a443-31ee-49ce-bdc2-21249a6b66f8_Article - 29 Sessions.pdf\",\n\"sourceType\": \"CLOUD_STORAGE\",\n\"ua:type\": \"FILE\",\n\"link\": \"https://qa.unifyapps.com/api/file/download/__UNIFY_ENCR_UNIFYAPPS__V3__b1CMVogKsGoCdn7vJMZTE4jG8mRTr8hbttwISMabPxq%2FALbqr2mQp7M5TNwvwUwJNjSj%2FzJDuQqUPMv4yqOjoaKmPezynSoUYEujAkxdWACQkzghVjJ61nd2xq2nzr%2B1MkVz4Q%2FwRx2VjKw6j8nw\"\n  }",
+				"expiryTime":1
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Generate public file URL",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"pdf_by_unifyapps",
 				"resourceVersion":828,
 				"resourceName":"pdf_by_unifyapps_for_each_split_file",
@@ -78,10 +107,10 @@
 			"fallbackMode":"STOP",
 			"groupId":"_8m5fP-1",
 			"id":"n_LWdzd",
-			"index":2,
+			"index":3,
 			"inputs":{
 				"pageCount":5,
-				"fileDetails":"https://s3.ap-south-1.amazonaws.com/qa.unifyapps.com.cloudstorage.1/connector_streaming_uploads/1/18/7973a443-31ee-49ce-bdc2-21249a6b66f8_Article%20-%2029%20Sessions.pdf?response-content-disposition=attachment%3Bfilename%3D%227973a443-31ee-49ce-bdc2-21249a6b66f8_Article%2B-%2B29%2BSessions.pdf%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEOL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCmFwLXNvdXRoLTEiSDBGAiEAj7v6Q4fqXW1N151T04f2AmoE5o8CVdaeGBKQ4rJE7vECIQC08pvvstSlhHnx2as9Q0HstN97cP82SqdYWcxVaukxoiq%2BBQh7EAAaDDU0NjkxODEwNjI4MyIMsB3EvLYvviHFWTgNKpsFTAvJ%2BHDFFhihvIROB4JHoP3YOy14vgD8YgAdX2oqtIbU%2BQcX3mA5qVqmtzmThpA815Ula21MSE%2BW0mdfffUW1K49eydCu2n9x1MYervwMYLo1uWAwOIfUBb10QyR%2BAcAfRRP%2FNm0%2B5t1RsLH5psnnxeWtj8%2BaK4usSgBy%2FACPbTeQ3W6WZuGOr3cFPVvasgOD2UlNx3cTYt0F3VlU10oZiFtWlGlLnsReAUKRTBu0KGpKupRtZFFrU43PYtjtioVqBiKYAVfQkaqcDwEijCACJ%2FAZnE1VTfhkqouVqOPm9eTDXX47xQWrlZR1lkS2VNnnYgQcUAP80k9Y0izmVEC8JpQRQ%2FN9BvTy2voiXn6H7SDyA8lR6QtHwUeObJtcE%2BmUgF%2FKuyvYpQhn1AMZcHv0AgHiqCbF0hV9eg2sbWhjYWxKBf%2BPy2H%2FqkYavKEm7gyq0DFJ56YLY2FmAXITRs0SFZYqe53p1IHFAbjggz4YmfV1DjKvSp82X%2BkG%2BYape%2FJiY2KUUpTWn8OpMHBuWr9Ec8sasIEquRoqoHCRRvAaooqT4igLFk60g3TLP5iChJAvqG2ht2RWi4Ss6zjPitMj5UZPtqJYph4wQu3zSx%2FZ1cqqjGuNIt0BDZnv2K09ZRwvLbB%2BsCXx1H3GY43Kz7%2Fxz0LoGo2yEo1YATbLgqyytedr80FJNpT8APQt0%2FuVjBDKPxSiFNn14VzEX%2By5XKR2Oy4wteZLrCWwT1TJ738jumMJXlvjmtr3R%2FGspApL9%2BdmbPpm%2FftsYULLJWJBuviNYTH94ziKT3TIeiSpvtjrzAwiz%2BYLQEb3GUziqKka%2BX3mFz2BiiELKQAXT44UetDfhCquufKt5b3KFRnueNvofL2duKuuowi9qw2WjDH24rHBjqwAZ6lt6QR2zvqA8ut2OjZPU0TZ36ycphhhlv%2FpaiwbeyW9o54UFN1lhszsbu76BVhY8ygl4AdW4Wndk06c82TGU3o2d0LCAPwDuQhD22JktT1N0Z%2FOJa9cMh62BT%2BUOKGx1YbjpZZzxOQY8a6r0pHbYJsZnwrLFStTxwRRBldnIfSdBC3TURKcl%2BdkHwVBUpm3v4med06u9lfwZTPGF9Z9sP72rtKQ3s6pWkP8oCyfILv&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251005T183414Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV7KVATPSI%2F20251005%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=3600&X-Amz-Signature=95ecd0d7864d4b915797c88e9a8312721093372fb58693f3772d162b9848578d",
+				"fileDetails":"{{ n_p2zuW.outputs.url }}",
 				"splitType":"splitByPage"
 			},
 			"skip":false,
@@ -101,7 +130,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_LWdzd@_8m5fP-1@l",
 			"id":"n_7quYY",
-			"index":3,
+			"index":4,
 			"inputs":{
 				"duration":2,
 				"unit":"SECONDS"
@@ -120,7 +149,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_8m5fP-1",
 			"id":"n_aTL2n",
-			"index":4,
+			"index":5,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -144,5 +173,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
