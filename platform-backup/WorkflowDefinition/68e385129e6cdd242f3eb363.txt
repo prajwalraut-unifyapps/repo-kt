@@ -9,14 +9,35 @@
 			"fromNodeId":"_pPake",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_HW0H3",
+			"toNodeId":"n_89cLE",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_89cLE",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_SUKEJ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_SUKEJ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Fwnrk",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Fwnrk",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_qLSsC",
 			"type":"next"
 		}
 	],
 	"id":"68e385129e6cdd242f3eb363",
 	"lastModifiedBy":73066,
 	"lcName":"test",
-	"modifiedTime":1759741202588,
+	"modifiedTime":1759742323101,
 	"name":"test",
 	"nodes":[
 		{
@@ -25,7 +46,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_pPake-1",
 			"id":"_pPake",
-			"index":0,
+			"index":1,
 			"skip":false,
 			"title":"Select a trigger event",
 			"trigger":{
@@ -34,18 +55,93 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":115,
+				"resourceName":"utility_by_unifyapps_decode_file_from_base64",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_pPake-1",
-			"id":"_HW0H3",
-			"index":0,
+			"id":"n_89cLE",
+			"index":2,
+			"inputs":{},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Utility by UnifyApps",
+			"title":"Decode file content",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":115,
+				"resourceName":"utility_by_unifyapps_decode_file_from_base64",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_pPake-1",
+			"id":"n_SUKEJ",
+			"index":3,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Decode file content",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":119,
+				"resourceName":"utility_by_unifyapps_encode_file_to_base64",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_pPake-1",
+			"id":"n_Fwnrk",
+			"index":4,
+			"inputs":{
+				"characterSet":"Binary(no.conv)"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Encode file content",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"files_by_unifyapps",
+				"resourceVersion":908,
+				"resourceName":"files_by_unifyapps_upload_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_pPake-1",
+			"id":"n_qLSsC",
+			"index":5,
+			"inputs":{
+				"uploadPublic":false,
+				"fileName":"testshubhamabdmdc.jpeg",
+				"url":"https://camo.githubusercontent.com/3cae61090608b8cbd681f5825ca5ac76af8d8d3ee12024926d51c5480aef5d6c/68747470733a2f2f796176757a63656c696b65722e6769746875622e696f2f73616d706c652d696d616765732f696d6167652d313032312e6a7067",
+				"option":"url"
+			},
+			"skip":false,
+			"subTitle":"Files by UnifyApps",
+			"title":"Upload file",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":73066,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +155,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
