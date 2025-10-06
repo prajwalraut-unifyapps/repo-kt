@@ -11,12 +11,19 @@
 			"skip":false,
 			"toNodeId":"n_tFrtL",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_tFrtL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_ACF9W",
+			"type":"next"
 		}
 	],
 	"id":"68e3b1ed5742db1a6d5ed1c1",
 	"lastModifiedBy":161877,
 	"lcName":"test",
-	"modifiedTime":1759762085714,
+	"modifiedTime":1759762118189,
 	"name":"test",
 	"nodes":[
 		{
@@ -300,6 +307,29 @@
 			"subTitle":"Variable by UnifyApps",
 			"title":"Create list",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":989,
+				"resourceName":"variable_by_unifyapps_add_item_to_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_7WtRV-1",
+			"id":"n_ACF9W",
+			"index":3,
+			"inputs":{
+				"itemToAdd":8,
+				"insertLocation":"END",
+				"listName":"{{ n_tFrtL.outputs.items[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Add item to list",
+			"type":"ACTION"
 		}
 	],
 	"ownerUserId":161877,
@@ -319,5 +349,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
