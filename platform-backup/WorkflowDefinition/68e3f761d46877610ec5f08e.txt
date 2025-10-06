@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759770465349,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759770465743,
+		"deployedBy":175325,
+		"deployedDefinitionId":"68e3f7615742db1a6d5fac6c",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"7pKsG",
@@ -16,7 +24,7 @@
 	"id":"68e3f761d46877610ec5f08e",
 	"lastModifiedBy":175325,
 	"lcName":"changesetlocalwmmkhu6vzctp",
-	"modifiedTime":1759770465539,
+	"modifiedTime":1759770555240,
 	"name":"changeSetLocalWmMKhU6VZCTp",
 	"nodes":[
 		{
@@ -87,7 +95,7 @@
 			"index":0,
 			"inputs":{
 				"result":{
-					"c":"=SUM({{ 7pKsG.outputs.a }},{{ 7pKsG.outputs.b }})"
+					"c":"=PRODUCT({{ 7pKsG.outputs.a }},{{ 7pKsG.outputs.b }})"
 				}
 			},
 			"skip":false,
@@ -109,5 +117,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
