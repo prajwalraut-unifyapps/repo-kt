@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759567885663,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759737701757,
+		"deployedBy":39715,
+		"deployedDefinitionId":"68e37763c1f0a911a754a2d8",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":5
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_pMglE",
@@ -149,7 +157,7 @@
 	"id":"68e0e00ddae53a2932659b5a",
 	"lastModifiedBy":39715,
 	"lcName":"testing_branch",
-	"modifiedTime":1759737697379,
+	"modifiedTime":1759737758463,
 	"name":"testing_branch",
 	"nodes":[
 		{
@@ -551,5 +559,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
