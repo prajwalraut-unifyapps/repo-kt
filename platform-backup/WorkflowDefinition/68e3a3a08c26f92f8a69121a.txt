@@ -1,51 +1,196 @@
 {
 	"appsUsed":[
-		
+		"gsheets"
 	],
 	"createdTime":1759749024152,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_EyqFS",
+			"fromNodeId":"n_93Nnw",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_YhUD8",
+			"toNodeId":"n_78SrJ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_78SrJ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_a6Skx",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_a6Skx",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_14dbh",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_14dbh",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_BuNfT",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_14dbh",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_nBcnP",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_BuNfT",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_a6Skx",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_nBcnP",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_a6Skx",
 			"type":"next"
 		}
 	],
 	"id":"68e3a3a08c26f92f8a69121a",
 	"lastModifiedBy":170624,
 	"lcName":"dsfg",
-	"modifiedTime":1759749024152,
+	"modifiedTime":1759749380851,
 	"name":"dsfg",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1015,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_EyqFS-1",
-			"id":"_EyqFS",
-			"index":0,
+			"id":"n_93Nnw",
+			"index":1,
+			"inputs":{},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"gsheets",
+				"resourceVersion":6175,
+				"connectionId":"68c54ed817c21c1bbc157079",
+				"resourceName":"gsheets_get_rows_batch",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_EyqFS-1",
-			"id":"_YhUD8",
-			"index":0,
+			"id":"n_78SrJ",
+			"index":2,
+			"inputs":{
+				"sheetName":"Training calendar",
+				"valueRenderOption":"FORMATTED_VALUE",
+				"objectSourceResourceName":"gsheets_fetch_columns",
+				"spreadsheetId":"1is0pAapcsn4Ciuc8x0EFdo1GfTqcLSlyJzIkBb5dDRg__20251005_PA Training Calendar"
+			},
+			"skip":false,
+			"subTitle":"Google Sheets",
+			"title":"Get rows",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":36,
+				"resourceName":"loop_for",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_EyqFS-1",
+			"id":"n_a6Skx",
+			"index":3,
+			"inputs":{
+				"start":0,
+				"limit":10,
+				"step":3,
+				"captureIterations":false
+			},
+			"skip":false,
+			"subTitle":"Loop",
+			"title":"For loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":791,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_a6Skx@_EyqFS-1@l",
+			"id":"n_14dbh",
+			"index":4,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_78SrJ.outputs.rows[0].PA_Training_Calendar___5 }}",
+						"filter":{
+							"operator":"EQUAL"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_14dbh@n_a6Skx@_EyqFS-1@l@y",
+			"id":"n_BuNfT",
+			"index":5,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		},
+		{
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_14dbh@n_a6Skx@_EyqFS-1@l@n",
+			"id":"n_nBcnP",
+			"index":6,
 			"skip":false,
 			"title":"Select an app and action",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":170624,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +204,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
