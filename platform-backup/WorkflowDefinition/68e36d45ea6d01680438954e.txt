@@ -83,12 +83,19 @@
 			"skip":false,
 			"toNodeId":"n_DMD9A",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_DMD9A",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_3nzBY",
+			"type":"next"
 		}
 	],
 	"id":"68e36d45ea6d01680438954e",
 	"lastModifiedBy":161860,
 	"lcName":"test1",
-	"modifiedTime":1759739970041,
+	"modifiedTime":1759745460640,
 	"name":"test1",
 	"nodes":[
 		{
@@ -1176,6 +1183,30 @@
 			"subTitle":"Salesforce",
 			"title":"Reply to a comment",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"salesforce",
+				"resourceVersion":6695,
+				"connectionId":"68de8b42953b7316d9d81c59",
+				"resourceName":"salesforce_execute_soql",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Tx6s5-1",
+			"id":"n_3nzBY",
+			"index":12,
+			"inputs":{
+				"performAsync":false,
+				"objectSourceResourceName":"salesforce_execute_soql_metadata",
+				"query":"SELECT Id, Name, ContactId, Contact.Name \nFROM User \nWHERE Id = '005dL000002QA9yQAG'"
+			},
+			"skip":false,
+			"subTitle":"Salesforce",
+			"title":"Execute SOQL",
+			"type":"ACTION"
 		}
 	],
 	"ownerUserId":73066,
@@ -1195,5 +1226,5 @@
 	"tags":[
 		
 	],
-	"version":25
+	"version":26
 }
