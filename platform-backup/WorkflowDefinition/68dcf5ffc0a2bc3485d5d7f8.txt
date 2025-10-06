@@ -24,7 +24,7 @@
 	"id":"68dcf5ffc0a2bc3485d5d7f8",
 	"lastModifiedBy":161875,
 	"lcName":"test jira jql",
-	"modifiedTime":1759750577295,
+	"modifiedTime":1759750592856,
 	"name":"Test Jira JQL",
 	"nodes":[
 		{
@@ -67,6 +67,7 @@
 			"id":"n_oCcfj",
 			"index":2,
 			"inputs":{
+				"issueIdOrKey":"MD-5",
 				"bodyV3":{
 					"content":[
 						{
@@ -106,5 +107,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
