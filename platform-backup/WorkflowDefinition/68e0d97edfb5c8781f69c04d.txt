@@ -5,12 +5,12 @@
 	"createdTime":1759566206836,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759566779736,
+		"deployedAt":1759738061015,
 		"deployedBy":155543,
-		"deployedDefinitionId":"68e0dbb9dae53a2932657e35",
+		"deployedDefinitionId":"68e378cc3498990e82375dea",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":4
+		"version":5,
+		"workflowVersion":7
 	},
 	"edges":[
 		{
@@ -24,7 +24,7 @@
 	"id":"68e0d97edfb5c8781f69c04d",
 	"lastModifiedBy":155543,
 	"lcName":"testttt",
-	"modifiedTime":1759566786315,
+	"modifiedTime":1759745794085,
 	"name":"testttt",
 	"nodes":[
 		{
@@ -96,5 +96,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":8
 }
