@@ -11,12 +11,19 @@
 			"skip":false,
 			"toNodeId":"n_22Bji",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_22Bji",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_WCoZX",
+			"type":"next"
 		}
 	],
 	"id":"68e355c7ad66760cac4d88df",
 	"lastModifiedBy":46217,
 	"lcName":"test",
-	"modifiedTime":1759730292510,
+	"modifiedTime":1759730338982,
 	"name":"test",
 	"nodes":[
 		{
@@ -67,6 +74,29 @@
 			"subTitle":"Azure Blob",
 			"title":"Get container properties",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"azure_blob",
+				"resourceVersion":5050,
+				"connectionId":"68e34a388d4a993cdc151ace",
+				"resourceName":"azure_blob_get_container_properties",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_SDPQ9-1",
+			"id":"_WCoZX",
+			"index":3,
+			"inputs":{
+				"containerName":"unifyapps-test",
+				"storageAccount":"unifyapps"
+			},
+			"skip":false,
+			"subTitle":"Azure Blob",
+			"title":"Get container properties",
+			"type":"ACTION"
 		}
 	],
 	"ownerUserId":46217,
@@ -86,5 +116,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
