@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759736275617,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_XRHXZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_amhuI",
+			"type":"next"
+		}
+	],
+	"id":"68e371d3ea6d016804389a70",
+	"lastModifiedBy":517,
+	"lcName":"signal observer",
+	"modifiedTime":1759736275617,
+	"name":"signal observer",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_XRHXZ-1",
+			"id":"_XRHXZ",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_XRHXZ-1",
+			"id":"_amhuI",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":517,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
