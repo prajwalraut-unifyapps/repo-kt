@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759768981630,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_N4XPt",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_xdSe8",
+			"type":"next"
+		}
+	],
+	"id":"68e3f1955742db1a6d5fa792",
+	"lastModifiedBy":39715,
+	"lcName":"scheduler",
+	"modifiedTime":1759768981630,
+	"name":"scheduler",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_N4XPt-1",
+			"id":"_N4XPt",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_N4XPt-1",
+			"id":"_xdSe8",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":39715,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
