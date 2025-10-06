@@ -31,7 +31,7 @@
 	"id":"68e3f1955742db1a6d5fa792",
 	"lastModifiedBy":44109,
 	"lcName":"scheduler",
-	"modifiedTime":1759771964798,
+	"modifiedTime":1759772023334,
 	"name":"scheduler",
 	"nodes":[
 		{
@@ -76,6 +76,7 @@
 				"automationId":"68df66b77cb1ae420e9a6c7f",
 				"runtimeConnections":{},
 				"synchronous":true,
+				"triggerWorkflowWithRuntimeType":"IN_MEMORY",
 				"version":"-1",
 				"parameters":{}
 			},
@@ -117,5 +118,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
