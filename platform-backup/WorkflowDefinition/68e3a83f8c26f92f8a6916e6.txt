@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759750207177,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_IS4ec",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_KnFJa",
+			"type":"next"
+		}
+	],
+	"id":"68e3a83f8c26f92f8a6916e6",
+	"lastModifiedBy":46218,
+	"lcName":"transport orders",
+	"modifiedTime":1759750207177,
+	"name":"transport orders",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_IS4ec-1",
+			"id":"_IS4ec",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_IS4ec-1",
+			"id":"_KnFJa",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":46218,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
