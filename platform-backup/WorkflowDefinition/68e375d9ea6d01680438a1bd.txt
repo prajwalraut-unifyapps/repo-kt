@@ -1,20 +1,12 @@
 {
 	"appsUsed":[
-		"azure_bot",
-		"microsoft_sharepoint"
+		"azure_bot"
 	],
 	"createdTime":1759737305335,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_QA5yH",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_iq0jk",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_iq0jk",
+			"fromNodeId":"n_VdSDs",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_4bRam",
@@ -24,45 +16,33 @@
 	"id":"68e375d9ea6d01680438a1bd",
 	"lastModifiedBy":1234,
 	"lcName":"desrvdf",
-	"modifiedTime":1759753795127,
+	"modifiedTime":1759753802239,
 	"name":"desrvdf",
 	"nodes":[
 		{
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_QA5yH-1",
-			"id":"_QA5yH",
-			"index":1,
-			"skip":false,
-			"title":"Select a trigger event",
-			"trigger":{
-				"type":"EVENT"
-			},
-			"type":"START"
-		},
-		{
 			"context":{
-				"appName":"microsoft_sharepoint",
-				"resourceVersion":1844,
-				"connectionId":"68c903a12e17d80327e58f62",
-				"resourceName":"microsoft_sharepoint_search_items",
-				"type":"APPLICATION"
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_QA5yH-1",
-			"id":"n_iq0jk",
-			"index":2,
+			"id":"n_VdSDs",
+			"index":1,
 			"inputs":{
-				"queryText":"title:\"Book.xls\"",
-				"siteType":"sites"
+				"request":{
+					"contentType":"application/json"
+				}
 			},
 			"skip":false,
-			"subTitle":"Microsoft SharePoint",
-			"title":"Search items",
-			"type":"ACTION"
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
 		},
 		{
 			"context":{
@@ -77,7 +57,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_QA5yH-1",
 			"id":"n_4bRam",
-			"index":3,
+			"index":2,
 			"inputs":{
 				"conversationId":"a:1voWTOn35RXsFp87zvEgEa6iwhwVQ0Z1IIfYcTUi6MzpxisgsQUzJMy7KWa4XBZHXWja55_UBYtx2dSo-3ixzp8SQJHQjL_RibmTzb1uwmBXnsyHRw1OExwBqA4Wr6j9h"
 			},
@@ -104,5 +84,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
