@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759752077785,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_dqkAV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_td5ka",
+			"type":"next"
+		}
+	],
+	"id":"68e3af8d8c26f92f8a691f9e",
+	"lastModifiedBy":15,
+	"lcName":"dfgv",
+	"modifiedTime":1759752077785,
+	"name":"dfgv",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_dqkAV-1",
+			"id":"_dqkAV",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_dqkAV-1",
+			"id":"_td5ka",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":15,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
