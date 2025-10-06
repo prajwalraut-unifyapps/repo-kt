@@ -1,30 +1,140 @@
 {
 	"appsUsed":[
-		
+		"68e43f414a0d4706ffe7da67"
 	],
 	"createdTime":1759788908370,
 	"deleted":false,
 	"edges":[
-		
+		{
+			"fromNodeId":"YfJoI",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"F60Kd",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"F60Kd",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"QWsaq",
+			"type":"next"
+		}
 	],
 	"id":"68e43f6c21d1c0029880d2af",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa2sdk5105462711",
-	"modifiedTime":1759788908370,
+	"modifiedTime":1759788908431,
 	"name":"changeSetQA2sdk5105462711",
 	"nodes":[
-		
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":195,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"A7L4x-1",
+			"id":"YfJoI",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"response":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"response"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"response"
+					]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"n":{
+							"type":"string",
+							"title":"n"
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"n"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"68e43f414a0d4706ffe7da67",
+				"resourceVersion":3,
+				"connectionId":"68e43f674a0d4706ffe7da80",
+				"resourceName":"68e43f414a0d4706ffe7da67:68e43f484a0d4706ffe7da75",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"A7L4x-1",
+			"id":"F60Kd",
+			"index":0,
+			"inputs":{
+				"types":"public_channel",
+				"limit":"1"
+			},
+			"skip":false,
+			"subTitle":"changeSetQA2slck8553637240",
+			"title":"List conversations",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":195,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"A7L4x-1",
+			"id":"QWsaq",
+			"index":0,
+			"inputs":{
+				"result":{
+					"response":"{{ F60Kd.outputs.response }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
 	],
 	"ownerUserId":175325,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
-		"enableVariableLogging":true,
-		"route":{
-			"default":false,
-			"tierName":"global"
-		}
+		"enableVariableLogging":true
 	},
 	"standard":false,
-	"version":0
+	"tags":[
+		
+	],
+	"version":1
 }
