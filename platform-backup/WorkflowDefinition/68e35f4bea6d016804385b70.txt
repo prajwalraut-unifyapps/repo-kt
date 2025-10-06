@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759731531949,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_c9No6",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_k0DVA",
+			"type":"next"
+		}
+	],
+	"id":"68e35f4bea6d016804385b70",
+	"lastModifiedBy":175510,
+	"lcName":"brightgg",
+	"modifiedTime":1759731531949,
+	"name":"brightgg",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_c9No6-1",
+			"id":"_c9No6",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_c9No6-1",
+			"id":"_k0DVA",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175510,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
