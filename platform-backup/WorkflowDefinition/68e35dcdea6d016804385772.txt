@@ -5,13 +5,13 @@
 	"createdTime":1759731149582,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759736032514,
+		"deployedAt":1759736772993,
 		"deployedBy":3546,
-		"deployedDefinitionId":"68e370e0c1f0a911a7548fcd",
-		"deploymentTag":"V3",
+		"deployedDefinitionId":"68e373c4c1f0a911a75499ba",
+		"deploymentTag":"V4",
 		"status":"DEPLOYED",
-		"version":3,
-		"workflowVersion":3
+		"version":4,
+		"workflowVersion":4
 	},
 	"edges":[
 		{
@@ -25,7 +25,7 @@
 	"id":"68e35dcdea6d016804385772",
 	"lastModifiedBy":3546,
 	"lcName":"testingiii",
-	"modifiedTime":1759736768359,
+	"modifiedTime":1759736780467,
 	"name":"testingiii",
 	"nodes":[
 		{
@@ -45,7 +45,7 @@
 				"triggerInputCondition":{
 					"filters":[
 						{
-							"property":"{{ n_Nho0M.outputs.title }}",
+							"property":"title",
 							"filter":{
 								"operator":"EQUAL",
 								"value":"Tasklist8"
@@ -98,5 +98,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
