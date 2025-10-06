@@ -76,19 +76,12 @@
 			"skip":false,
 			"toNodeId":"_Ui27P",
 			"type":"next"
-		},
-		{
-			"fromNodeId":"_Ui27P",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_y0hO7",
-			"type":"next"
 		}
 	],
 	"id":"68e36d45ea6d01680438954e",
 	"lastModifiedBy":161860,
 	"lcName":"test1",
-	"modifiedTime":1759738788086,
+	"modifiedTime":1759738793705,
 	"name":"test1",
 	"nodes":[
 		{
@@ -1121,29 +1114,6 @@
 			"subTitle":"Salesforce",
 			"title":"Reply to a comment",
 			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"salesforce",
-				"resourceVersion":4446,
-				"connectionId":"68de8b42953b7316d9d81c59",
-				"resourceName":"salesforce_reply_to_comment",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_Tx6s5-1",
-			"id":"n_y0hO7",
-			"index":11,
-			"inputs":{
-				"feedItemId":"{{ n_0AYNZ.outputs.feedItem }}",
-				"bodyType":"MARKDOWN"
-			},
-			"skip":true,
-			"subTitle":"Salesforce",
-			"title":"Reply to a comment",
-			"type":"ACTION"
 		}
 	],
 	"ownerUserId":73066,
@@ -1163,5 +1133,5 @@
 	"tags":[
 		
 	],
-	"version":13
+	"version":14
 }
