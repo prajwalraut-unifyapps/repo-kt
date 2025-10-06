@@ -68,7 +68,7 @@
 	"id":"68e3a4221457fe48f5210adf",
 	"lastModifiedBy":161877,
 	"lcName":"test",
-	"modifiedTime":1759749843178,
+	"modifiedTime":1759749885560,
 	"name":"test",
 	"nodes":[
 		{
@@ -78,7 +78,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_2qylx-1",
 			"id":"n_orWRG",
@@ -114,7 +114,7 @@
 				"sheetName":"Sheet1",
 				"valueRenderOption":"FORMATTED_VALUE",
 				"objectSourceResourceName":"gsheets_fetch_columns",
-				"range":"1:30",
+				"range":"1:3 0",
 				"spreadsheetId":"11a5AjcHLvs2Mf_DovGZ8Z4Ka6jROrfj3kU25QrOdMBY__bootcamp"
 			},
 			"skip":false,
@@ -395,7 +395,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_2qylx-1",
 			"id":"n_4nUfg",
@@ -418,7 +418,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_4nUfg@_2qylx-1@l",
 			"id":"n_zCJXu",
@@ -448,7 +448,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_zCJXu@n_4nUfg@_2qylx-1@l@y",
 			"id":"n_4i7xI",
@@ -469,7 +469,7 @@
 				"appName":"stop"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_2qylx-1",
 			"id":"n_e5Kdv",
@@ -497,5 +497,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
