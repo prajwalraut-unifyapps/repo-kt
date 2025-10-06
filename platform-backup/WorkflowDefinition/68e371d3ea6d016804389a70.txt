@@ -9,14 +9,29 @@
 			"fromNodeId":"_XRHXZ",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_amhuI",
+			"toNodeId":"n_5FjPV",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_5FjPV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_AjsNG",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_AjsNG",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_5FjPV",
 			"type":"next"
 		}
 	],
 	"id":"68e371d3ea6d016804389a70",
 	"lastModifiedBy":517,
 	"lcName":"signal observer",
-	"modifiedTime":1759736275617,
+	"modifiedTime":1759736621415,
 	"name":"signal observer",
 	"nodes":[
 		{
@@ -25,7 +40,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_XRHXZ-1",
 			"id":"_XRHXZ",
-			"index":0,
+			"index":1,
 			"skip":false,
 			"title":"Select a trigger event",
 			"trigger":{
@@ -34,18 +49,43 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"streams_by_unifyapps",
+				"resourceVersion":927,
+				"resourceName":"streams_by_unifyapps_poll_events",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_XRHXZ-1",
-			"id":"_amhuI",
-			"index":0,
+			"id":"n_5FjPV",
+			"index":2,
+			"inputs":{
+				"repeatMode":"BATCH",
+				"batchSize":1
+			},
+			"skip":false,
+			"subTitle":"Streams by UnifyApps",
+			"title":"Polls for new events from stream",
+			"type":"LOOP"
+		},
+		{
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_5FjPV@_XRHXZ-1@l",
+			"id":"n_AjsNG",
+			"index":3,
 			"skip":false,
 			"title":"Select an app and action",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":517,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +99,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
