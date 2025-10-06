@@ -88,7 +88,7 @@
 	"id":"68e36d45ea6d01680438954e",
 	"lastModifiedBy":161860,
 	"lcName":"test1",
-	"modifiedTime":1759739151708,
+	"modifiedTime":1759739403769,
 	"name":"test1",
 	"nodes":[
 		{
@@ -1149,13 +1149,13 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Tx6s5-1",
 			"id":"n_DMD9A",
 			"index":11,
 			"inputs":{
-				"feedItemId":"{{ n_0AYNZ.outputs.feedItem }}",
+				"feedItemId":"0D5dL00000LmhBSSAZ",
 				"bodyType":"MARKDOWN",
 				"payload":{
 					"bodyRichText":{
@@ -1195,5 +1195,5 @@
 	"tags":[
 		
 	],
-	"version":23
+	"version":24
 }
