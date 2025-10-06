@@ -46,13 +46,6 @@
 			"fromNodeId":"n_sQxkV",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_7c0rs",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_7c0rs",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_U9j8K",
 			"type":"next"
 		},
@@ -164,7 +157,7 @@
 	"id":"68e0e00ddae53a2932659b5a",
 	"lastModifiedBy":39715,
 	"lcName":"testing_branch",
-	"modifiedTime":1759737927341,
+	"modifiedTime":1759737941233,
 	"name":"testing_branch",
 	"nodes":[
 		{
@@ -271,29 +264,6 @@
 		},
 		{
 			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":975,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_FvSe0-1",
-			"id":"n_7c0rs",
-			"index":5,
-			"inputs":{
-				"code":"return 4",
-				"compile_static":false,
-				"captureStdOutput":false
-			},
-			"skip":false,
-			"subTitle":"Code by UnifyApps",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"loop",
 				"resourceVersion":36,
 				"resourceName":"loop_for",
@@ -304,7 +274,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_FvSe0-1",
 			"id":"n_U9j8K",
-			"index":6,
+			"index":5,
 			"inputs":{
 				"start":0,
 				"limit":3,
@@ -328,7 +298,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_U9j8K@_FvSe0-1@l",
 			"id":"n_T3AJ3",
-			"index":7,
+			"index":6,
 			"inputs":{
 				"code":"return 2",
 				"compile_static":false,
@@ -349,7 +319,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_FvSe0-1",
 			"id":"n_Ywwxe",
-			"index":8,
+			"index":7,
 			"inputs":{
 				"branches":[
 					{
@@ -410,7 +380,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_Ywwxe@_FvSe0-1@1",
 			"id":"n_Ywwxe@1",
-			"index":9,
+			"index":8,
 			"inputs":{
 				"name":"Branch 1",
 				"conditions":{
@@ -442,7 +412,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_Ywwxe@_FvSe0-1@1",
 			"id":"n_hmYtm",
-			"index":10,
+			"index":9,
 			"inputs":{
 				"start":0,
 				"limit":2,
@@ -466,7 +436,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hmYtm@n_Ywwxe@_FvSe0-1@1@l",
 			"id":"n_iGKI9",
-			"index":11,
+			"index":10,
 			"inputs":{
 				"code":"return 3",
 				"compile_static":false,
@@ -489,7 +459,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_Ywwxe@_FvSe0-1@2",
 			"id":"n_Ywwxe@2",
-			"index":12,
+			"index":11,
 			"inputs":{
 				"name":"Branch 2",
 				"conditions":{
@@ -521,7 +491,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_Ywwxe@_FvSe0-1@2",
 			"id":"n_k9Djs",
-			"index":13,
+			"index":12,
 			"inputs":{
 				"start":0,
 				"limit":3,
@@ -545,7 +515,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_k9Djs@n_Ywwxe@_FvSe0-1@2@l",
 			"id":"n_oq5L1",
-			"index":14,
+			"index":13,
 			"inputs":{
 				"code":"return 6",
 				"compile_static":false,
@@ -565,7 +535,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_FvSe0-1",
 			"id":"n_eMG9v",
-			"index":15,
+			"index":14,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -589,5 +559,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
