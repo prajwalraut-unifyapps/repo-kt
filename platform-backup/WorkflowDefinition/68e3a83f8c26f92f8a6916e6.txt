@@ -39,7 +39,7 @@
 	"id":"68e3a83f8c26f92f8a6916e6",
 	"lastModifiedBy":39713,
 	"lcName":"transport orders",
-	"modifiedTime":1759750294192,
+	"modifiedTime":1759750484273,
 	"name":"transport orders",
 	"nodes":[
 		{
@@ -306,10 +306,14 @@
 				"version":"v1.1",
 				"connectionType":"DIRECT",
 				"sslVerify":false,
-				"path":"/",
-				"baseUrl":"https://apiplatform-uat.belcorp.biz/api-endpoint/transport-orders/",
+				"path":"/transport-orders/",
+				"baseUrl":"https://apiplatform-uat.belcorp.biz/api-endpoint",
 				"bodySchema":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"urn:ZwsValidarNrojira"
+					],
 					"properties":{
 						"urn:ZwsValidarNrojira":{
 							"type":"object",
@@ -325,11 +329,7 @@
 								"INroOrden"
 							]
 						}
-					},
-					"additionalProperties":false,
-					"required":[
-						"urn:ZwsValidarNrojira"
-					]
+					}
 				},
 				"responseContentType":"text/xml",
 				"headersList":[
@@ -516,5 +516,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
