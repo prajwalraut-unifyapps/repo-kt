@@ -81,7 +81,7 @@
 	"id":"68e36d45ea6d01680438954e",
 	"lastModifiedBy":161860,
 	"lcName":"test1",
-	"modifiedTime":1759738633839,
+	"modifiedTime":1759738688886,
 	"name":"test1",
 	"nodes":[
 		{
@@ -1054,7 +1054,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"CONTINUE",
 			"groupId":"_Tx6s5-1",
 			"id":"_Ui27P",
@@ -1065,14 +1065,14 @@
 				"payload":{
 					"bodyRichText":{
 						"messageSegments":{
-							"source":"{{ _iTrwy.outputs.items }}",
 							"ua:type":"mappedArray",
 							"items":{
-								"type":"{{ _iTrwy.outputs.items[0].type }}",
-								"text":"{{ _iTrwy.outputs.items[0].text }}",
+								"url":"{{ _iTrwy.outputs.items[0].url }}",
 								"markupType":"{{ _iTrwy.outputs.items[0].markupType }}",
-								"url":"{{ _iTrwy.outputs.items[0].url }}"
-							}
+								"text":"{{ _iTrwy.outputs.items[0].text }}",
+								"type":"{{ _iTrwy.outputs.items[0].type }}"
+							},
+							"source":"{{ _iTrwy.outputs.items }}"
 						}
 					}
 				}
@@ -1133,5 +1133,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
