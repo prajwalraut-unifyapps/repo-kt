@@ -42,14 +42,6 @@
 			"type":"if"
 		},
 		{
-			"fromNodeId":"n_zCJXu",
-			"name":"no",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_BG5tj",
-			"type":"next"
-		},
-		{
 			"fromNodeId":"n_4i7xI",
 			"name":"loopback",
 			"priority":0,
@@ -58,8 +50,8 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_BG5tj",
-			"name":"loopback",
+			"fromNodeId":"n_zCJXu",
+			"name":"no",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_4nUfg",
@@ -76,7 +68,7 @@
 	"id":"68e3a4221457fe48f5210adf",
 	"lastModifiedBy":161877,
 	"lcName":"test",
-	"modifiedTime":1759749835581,
+	"modifiedTime":1759749843178,
 	"name":"test",
 	"nodes":[
 		{
@@ -473,17 +465,6 @@
 			"type":"ACTION"
 		},
 		{
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"n_zCJXu@n_4nUfg@_2qylx-1@l@n",
-			"id":"n_BG5tj",
-			"index":7,
-			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
-		},
-		{
 			"context":{
 				"appName":"stop"
 			},
@@ -492,7 +473,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_2qylx-1",
 			"id":"n_e5Kdv",
-			"index":8,
+			"index":7,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -516,5 +497,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
