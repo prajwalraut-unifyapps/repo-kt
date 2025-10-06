@@ -6,30 +6,125 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_Tx6s5",
+			"fromNodeId":"n_0AYNZ",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_hDNsJ",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_hDNsJ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_iTrwy",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_iTrwy",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_RVFPq",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_RVFPq",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_BN1Zm",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_BN1Zm",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_95Cva",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_95Cva",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_bHaB6",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"_bHaB6",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_2hx03",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_2hx03",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_yMXps",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_95Cva",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_yMXps",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_yMXps",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Ui27P",
+			"type":"next"
 		}
 	],
 	"id":"68e36d45ea6d01680438954e",
-	"lastModifiedBy":39712,
+	"lastModifiedBy":161860,
 	"lcName":"test1",
-	"modifiedTime":1759737962730,
+	"modifiedTime":1759738451383,
 	"name":"test1",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1015,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Tx6s5-1",
-			"id":"_Tx6s5",
+			"id":"n_0AYNZ",
 			"index":1,
+			"inputs":{
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"replyMsg":{
+							"type":"string",
+							"title":"replyMsg"
+						},
+						"contactId":{
+							"type":"string",
+							"title":"contactId"
+						},
+						"contactName":{
+							"type":"string",
+							"title":"contactName"
+						},
+						"feedItem":{
+							"type":"string",
+							"title":"feedItem"
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
@@ -49,6 +144,7 @@
 			"index":2,
 			"inputs":{
 				"feedItemId":"0D5dL00000LmhBSSAZ",
+				"bodyType":"MARKDOWN",
 				"payload":{
 					"body":{
 						"messageSegments":[
@@ -62,6 +158,955 @@
 							}
 						]
 					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Salesforce",
+			"title":"Reply to a comment",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":36,
+				"resourceName":"variable_by_unifyapps_create_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Tx6s5-1",
+			"id":"_iTrwy",
+			"index":3,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{
+					"createList":{
+						"ui:title":"",
+						"ua:type":{
+							"ui:widget":"hidden"
+						},
+						"items":{
+							"ui:title":"Initial list items",
+							"ui:description":"Set the initial values of the list (defaults to empty)"
+						},
+						"ui:order":[
+							"*",
+							"items"
+						]
+					},
+					"ua:title":{
+						"ui:widget":"hidden"
+					},
+					"ua:list_type":{
+						"ui:widget":"hidden"
+					}
+				},
+				"schema":{
+					"allOf":[
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"OBJECT"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"items":{
+												"type":"object",
+												"properties":{}
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"STRING"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of String"
+											},
+											"items":{
+												"type":"string"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"INTEGER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Integers"
+											},
+											"items":{
+												"type":"integer"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"NUMBER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Numbers"
+											},
+											"items":{
+												"type":"number"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"BOOLEAN"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Booleans"
+											},
+											"items":{
+												"type":"boolean"
+											}
+										}
+									}
+								}
+							}
+						}
+					],
+					"format":"ua:list",
+					"type":"object",
+					"properties":{
+						"ua:title":{
+							"type":"string"
+						},
+						"ua:list_type":{
+							"type":"string",
+							"title":"List Type",
+							"oneOf":[
+								{
+									"const":"OBJECT",
+									"title":"Object"
+								},
+								{
+									"const":"STRING",
+									"title":"String"
+								},
+								{
+									"const":"NUMBER",
+									"title":"Number"
+								},
+								{
+									"const":"INTEGER",
+									"title":"Integer"
+								},
+								{
+									"const":"BOOLEAN",
+									"title":"Boolean"
+								}
+							],
+							"default":"OBJECT"
+						},
+						"createList":{
+							"type":"object",
+							"properties":{
+								"ua:type":{
+									"type":"string",
+									"default":"mappedArray"
+								},
+								"source":{
+									"type":"string",
+									"format":"ua:source",
+									"title":"List Item Source"
+								},
+								"items":{
+									"additionalProperties":false,
+									"type":[
+										"object",
+										"string",
+										"number",
+										"boolean",
+										"integer"
+									],
+									"properties":{
+										"url":{
+											"type":"string",
+											"title":"Url"
+										},
+										"type":{
+											"type":"string",
+											"title":"Type"
+										},
+										"text":{
+											"type":"string",
+											"title":"Text"
+										},
+										"markupType":{
+											"type":"string",
+											"title":"Markup Type"
+										}
+									},
+									"required":[
+										"url",
+										"type",
+										"text",
+										"markupType"
+									]
+								}
+							}
+						}
+					}
+				}
+			},
+			"inputs":{
+				"createList":{
+					"ua:type":"mappedArray"
+				},
+				"ua:title":"Message List",
+				"ua:list_type":"OBJECT"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"type":"object",
+					"properties":{
+						"items":{
+							"type":"array",
+							"title":"Message List",
+							"disableActions":true,
+							"items":{
+								"type":"object",
+								"properties":{
+									"url":{
+										"type":"string",
+										"title":"Url"
+									},
+									"type":{
+										"type":"string",
+										"title":"Type"
+									},
+									"text":{
+										"type":"string",
+										"title":"Text"
+									},
+									"markupType":{
+										"type":"string",
+										"title":"Markup Type"
+									}
+								},
+								"required":[
+									"url",
+									"type",
+									"text",
+									"markupType"
+								]
+							}
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Message list",
+			"title":"Create list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":36,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Tx6s5-1",
+			"id":"_RVFPq",
+			"index":4,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"headerText"
+					],
+					"properties":{
+						"headerText":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"markupType":{
+										"type":"string",
+										"title":"Markup Type"
+									},
+									"type":{
+										"type":"string",
+										"title":"Type"
+									},
+									"url":{
+										"type":"string",
+										"title":"Url"
+									},
+									"text":{
+										"type":"string",
+										"title":"Text"
+									}
+								},
+								"additionalProperties":false,
+								"required":[
+									"markupType",
+									"type",
+									"url",
+									"text"
+								]
+							},
+							"title":"Header Text"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"contactName",
+						"contactId"
+					],
+					"properties":{
+						"contactName":{
+							"type":"string",
+							"title":"Contact Name"
+						},
+						"contactId":{
+							"type":"string",
+							"title":"Contact Id"
+						}
+					}
+				},
+				"code":"def generateContactArray(contactName, contactId) {\n    // Construct the URL and contact name text separately\n    def url = \"https://contentstack--staginguat.sandbox.lightning.force.com/lightning/r/Contact/\" + contactId + \"/view\"\n    def contactText = contactName + \" (Customer)\"\n    \n    // Return the required array structure\n    return [\n        [\n            \"markupType\": \"Hyperlink\",\n            \"type\": \"MarkupBegin\",\n            \"url\": url\n        ],\n        [\n            \"text\": contactText,\n            \"type\": \"Text\"\n        ],\n        [\n            \"markupType\": \"Hyperlink\",\n            \"type\": \"MarkupEnd\"\n        ],\n        [\n            \"text\": \"says:\",\n            \"type\": \"Text\"\n        ],\n        [\n            \"markupType\": \"Paragraph\",\n            \"type\": \"MarkupBegin\"\n        ],\n        [\n            \"markupType\": \"Paragraph\",\n            \"type\": \"MarkupEnd\"\n        ],\n        [\n        \"markupType\": \"Paragraph\",\n        \"type\": \"MarkupBegin\"\n      ],\n      [\n        \"markupType\": \"Paragraph\",\n        \"type\": \"MarkupEnd\"\n      ]\n    ]\n}\n\ndef result = generateContactArray(contactName, contactId)\nreturn [\"headerText\": result]",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"contactName":"{{ n_0AYNZ.outputs.contactName }}",
+					"contactId":"{{ n_0AYNZ.outputs.contactId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Header of message",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.itemsToAdd.items.url",
+					"root.itemsToAdd.items.type",
+					"root.itemsToAdd.items.text",
+					"root.itemsToAdd.items.markupType"
+				]
+			},
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":35,
+				"resourceName":"variable_by_unifyapps_add_items_to_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Tx6s5-1",
+			"id":"_BN1Zm",
+			"index":5,
+			"inputs":{
+				"insertLocation":"END",
+				"itemsToAdd":{
+					"ua:type":"mappedArray",
+					"source":"{{ _RVFPq.outputs.result.headerText }}",
+					"items":{
+						"url":"{{ _RVFPq.outputs.result.headerText[0].url }}",
+						"type":"{{ _RVFPq.outputs.result.headerText[0].type }}",
+						"text":"{{ _RVFPq.outputs.result.headerText[0].text }}",
+						"markupType":"{{ _RVFPq.outputs.result.headerText[0].markupType }}"
+					}
+				},
+				"listName":"{{ _iTrwy.outputs.items[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Add items to list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":99,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Tx6s5-1",
+			"id":"n_95Cva",
+			"index":6,
+			"inputs":{
+				"filters":[
+					{
+						"property":"=len({{ _u2PSU.outputs.replyMsg }})",
+						"filter":{
+							"operator":"GTE",
+							"value":"1"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":36,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_95Cva@_Tx6s5-1@y",
+			"id":"_bHaB6",
+			"index":7,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"message"
+					],
+					"properties":{
+						"message":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"markupType":{
+										"type":"string",
+										"title":"Markup Type"
+									},
+									"url":{
+										"type":"string",
+										"title":"Url"
+									},
+									"type":{
+										"type":"string",
+										"title":"Type"
+									},
+									"text":{
+										"type":"string",
+										"title":"Text"
+									}
+								},
+								"additionalProperties":false,
+								"required":[
+									"markupType",
+									"url",
+									"type",
+									"text"
+								]
+							},
+							"title":"Message"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"html1"
+					],
+					"properties":{
+						"html1":{
+							"type":"string",
+							"title":"Html 1"
+						}
+					}
+				},
+				"code":"class HtmlToSegments {\n    private def messageSegments = []\n    private String html\n\n    HtmlToSegments(String html) {\n        this.html = html\n    }\n\n    private def createSegment(String type, String text = null, String markupType = null, String url = null) {\n        def segment = [type: type]\n        if (text) segment.text = text\n        if (markupType) segment.markupType = markupType\n        if (url) segment.url = url\n        return segment\n    }\n\n    private void addTextSegment(String text) {\n        if (text) {\n            messageSegments << createSegment(\"Text\", text)\n        }\n    }\n\n    private void processTag(String tag, String content, Map attributes = [:], List<String> activeFormats = []) {\n        def currentFormat = [\n            \"a\": \"Hyperlink\",\n            \"strong\": \"Bold\", \n            \"b\": \"Bold\",\n            \"em\": \"Italic\",\n            \"i\": \"Italic\",\n            \"u\": \"Underline\",\n            \"s\": \"Strikethrough\",\n            \"del\": \"Strikethrough\",\n            \"ol\": \"OrderedList\",\n            \"ul\": \"UnorderedList\",\n            \"li\": \"ListItem\",\n            \"p\": \"Paragraph\"\n        ][tag.toLowerCase()]\n\n        if (currentFormat) {\n            def updatedFormats = activeFormats + [currentFormat]\n            \n            if (currentFormat == \"Hyperlink\") {\n                def href = attributes.find { it.key.toLowerCase() == \"href\" }?.value\n                if (href && (href.startsWith(\"http://\") || href.startsWith(\"https://\"))) {\n                    messageSegments << createSegment(\"MarkupBegin\", null, currentFormat, href)\n                    processNestedContent(content, updatedFormats, true)\n                    messageSegments << createSegment(\"MarkupEnd\", null, currentFormat)\n                }\n            } else {\n                messageSegments << createSegment(\"MarkupBegin\", null, currentFormat)\n                processNestedContent(content, updatedFormats, true)\n                messageSegments << createSegment(\"MarkupEnd\", null, currentFormat)\n            }\n        } else if (tag == \"br\") {\n            // For <br> tags, we'll end the current paragraph and start a new one\n            messageSegments << createSegment(\"MarkupEnd\", null, \"Paragraph\")\n            messageSegments << createSegment(\"MarkupBegin\", null, \"Paragraph\")\n        }\n    }\n\n    private void processNestedContent(String content, List<String> activeFormats, boolean addLeadingSpace = false) {\n        def text = new StringBuilder()\n        int i = 0\n        boolean lastWasMarkup = !messageSegments.isEmpty() && messageSegments[-1].type != \"Text\"\n        while (i < content.length()) {\n            char c = content[i]\n            if (c == '<') {\n                if (text) {\n                    if (lastWasMarkup || addLeadingSpace) {\n                        addTextSegment(\" \" + text.toString())\n                    } else {\n                        addTextSegment(text.toString())\n                    }\n                    text.setLength(0)\n                    lastWasMarkup = false\n                }\n                \n                def tagEnd = content.indexOf('>', i)\n                if (tagEnd == -1) break\n                \n                def fullTag = content.substring(i + 1, tagEnd)\n                if (fullTag.startsWith(\"/\")) {\n                    i = tagEnd + 1\n                    continue\n                }\n                \n                def tagParts = fullTag.split(/\\s+/, 2)\n                def tagName = tagParts[0].toLowerCase()\n                def attributes = tagParts.length > 1 ? parseAttributes(tagParts[1]) : [:]\n                \n                def closingTag = \"</${tagName}>\"\n                def closeTagIndex = findMatchingClosingTag(content, tagEnd, tagName)\n                if (closeTagIndex == -1) {\n                    if (tagName == \"br\") {\n                        processTag(tagName, \"\", attributes, activeFormats)\n                        i = tagEnd + 1\n                        continue\n                    }\n                    break\n                }\n                \n                def tagContent = content.substring(tagEnd + 1, closeTagIndex)\n                processTag(tagName, tagContent, attributes, activeFormats)\n                \n                i = closeTagIndex + closingTag.length()\n                lastWasMarkup = true\n            } else {\n                text.append(c)\n                i++\n            }\n        }\n        \n        if (text) {\n            addTextSegment((lastWasMarkup || addLeadingSpace ? \" \" : \"\") + text.toString())\n        }\n    }\n\n    private int findMatchingClosingTag(String content, int startPos, String tagName) {\n        def depth = 1\n        def currentPos = startPos + 1\n        while (depth > 0 && currentPos < content.length()) {\n            def nextOpenTag = content.indexOf(\"<${tagName}\", currentPos)\n            def nextCloseTag = content.indexOf(\"</${tagName}>\", currentPos)\n            if (nextCloseTag == -1) return -1\n            if (nextOpenTag != -1 && nextOpenTag < nextCloseTag) {\n                depth++\n                currentPos = nextOpenTag + 1\n            } else {\n                depth--\n                if (depth == 0) return nextCloseTag\n                currentPos = nextCloseTag + 1\n            }\n        }\n        return depth == 0 ? currentPos : -1\n    }\n\n    private Map<String, String> parseAttributes(String attributeString) {\n        def attributes = [:]\n        def matcher = attributeString =~ /(\\w+)=['\"]([^'\"]+)['\"]/\n        while (matcher.find()) {\n            attributes[matcher.group(1)] = matcher.group(2)\n        }\n        return attributes\n    }\n\n    def convert() {\n        messageSegments.clear()\n        \n        // Pre-process the HTML to normalize <br> tags\n        // Convert <p>test<br>test<br>test</p> to <p>test</p><p>test</p><p>test</p>\n        String normalizedHtml = html.replaceAll(\"(?i)<br\\\\s*/>\", \"</p><p>\").replaceAll(\"(?i)<br>\", \"</p><p>\")\n        \n        processNestedContent(normalizedHtml, [])\n        return messageSegments\n    }\n}\n\ndef converter1 = new HtmlToSegments(html1)\ndef result1 = converter1.convert()\nreturn [\"message\": result1]",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"html1":"{{ _u2PSU.outputs.replyMsg }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Rich Text",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.itemsToAdd.items.url",
+					"root.itemsToAdd.items.type",
+					"root.itemsToAdd.items.text",
+					"root.itemsToAdd.items.markupType"
+				]
+			},
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":35,
+				"resourceName":"variable_by_unifyapps_add_items_to_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_95Cva@_Tx6s5-1@y",
+			"id":"_2hx03",
+			"index":8,
+			"inputs":{
+				"insertLocation":"END",
+				"itemsToAdd":{
+					"ua:type":"mappedArray",
+					"source":"{{ _bHaB6.outputs.result.message }}",
+					"items":{
+						"url":"{{ _bHaB6.outputs.result.message[0].url }}",
+						"type":"{{ _bHaB6.outputs.result.message[0].type }}",
+						"text":"{{ _bHaB6.outputs.result.message[0].text }}",
+						"markupType":"{{ _bHaB6.outputs.result.message[0].markupType }}"
+					}
+				},
+				"listName":"{{ _iTrwy.outputs.items[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Add items to list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":33,
+				"resourceName":"variable_by_unifyapps_create_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Tx6s5-1",
+			"id":"_yMXps",
+			"index":9,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{
+					"createList":{
+						"ui:title":"",
+						"ua:type":{
+							"ui:widget":"hidden"
+						},
+						"items":{
+							"ui:title":"Initial list items",
+							"ui:description":"Set the initial values of the list (defaults to empty)"
+						},
+						"ui:order":[
+							"*",
+							"items"
+						]
+					},
+					"ua:title":{
+						"ui:widget":"hidden"
+					},
+					"ua:list_type":{
+						"ui:widget":"hidden"
+					}
+				},
+				"schema":{
+					"allOf":[
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"OBJECT"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"items":{
+												"type":"object",
+												"properties":{}
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"STRING"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of String"
+											},
+											"items":{
+												"type":"string"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"INTEGER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Integers"
+											},
+											"items":{
+												"type":"integer"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"NUMBER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Numbers"
+											},
+											"items":{
+												"type":"number"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"BOOLEAN"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Booleans"
+											},
+											"items":{
+												"type":"boolean"
+											}
+										}
+									}
+								}
+							}
+						}
+					],
+					"format":"ua:list",
+					"type":"object",
+					"properties":{
+						"ua:title":{
+							"type":"string"
+						},
+						"ua:list_type":{
+							"type":"string",
+							"title":"List Type",
+							"oneOf":[
+								{
+									"const":"OBJECT",
+									"title":"Object"
+								},
+								{
+									"const":"STRING",
+									"title":"String"
+								},
+								{
+									"const":"NUMBER",
+									"title":"Number"
+								},
+								{
+									"const":"INTEGER",
+									"title":"Integer"
+								},
+								{
+									"const":"BOOLEAN",
+									"title":"Boolean"
+								}
+							],
+							"default":"OBJECT"
+						},
+						"createList":{
+							"type":"object",
+							"properties":{
+								"ua:type":{
+									"type":"string",
+									"default":"mappedArray"
+								},
+								"source":{
+									"type":"string",
+									"format":"ua:source",
+									"title":"List Item Source"
+								},
+								"items":{
+									"additionalProperties":false,
+									"type":[
+										"object",
+										"string",
+										"number",
+										"boolean",
+										"integer"
+									],
+									"properties":{
+										"sfId":{
+											"type":"string",
+											"title":"Sf Id"
+										},
+										"name":{
+											"type":"string",
+											"title":"Name"
+										}
+									},
+									"required":[
+										"sfId",
+										"name"
+									]
+								}
+							}
+						}
+					}
+				}
+			},
+			"inputs":{
+				"createList":{
+					"ua:type":"mappedArray"
+				},
+				"ua:title":"Attachment List",
+				"ua:list_type":"OBJECT"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"type":"object",
+					"properties":{
+						"items":{
+							"type":"array",
+							"title":"Attachment List",
+							"disableActions":true,
+							"items":{
+								"type":"object",
+								"properties":{
+									"sfId":{
+										"type":"string",
+										"title":"Sf Id"
+									},
+									"name":{
+										"type":"string",
+										"title":"Name"
+									}
+								},
+								"required":[
+									"sfId",
+									"name"
+								]
+							}
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create list",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.payload.capabilities.content.contentDocumentId",
+					"root.payload.capabilities.content.description",
+					"root.payload.capabilities.content.sharingOption",
+					"root.payload.capabilities.content.title",
+					"root.payload.bodyRichText.messageSegments.items.type",
+					"root.payload.bodyRichText.messageSegments.items.text",
+					"root.payload.bodyRichText.messageSegments.items.id",
+					"root.payload.bodyRichText.messageSegments.items.username",
+					"root.payload.bodyRichText.messageSegments.items.markupType",
+					"root.payload.bodyRichText.messageSegments.items.altText",
+					"root.payload.bodyRichText.messageSegments.items.url",
+					"root.payload.bodyRichText.messageSegments.items.fileId",
+					"root.payload.bodyRichText.messageSegments.items.tag",
+					"root.payload.bodyRichText.messageSegments.items.entityId"
+				]
+			},
+			"context":{
+				"appName":"salesforce",
+				"resourceVersion":369,
+				"connectionId":"68de8b42953b7316d9d81c59",
+				"resourceName":"salesforce_reply_to_comment",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"CONTINUE",
+			"groupId":"_Tx6s5-1",
+			"id":"_Ui27P",
+			"index":10,
+			"inputs":{
+				"feedItemId":"{{ _u2PSU.outputs.feedItem }}",
+				"payload":{
+					"bodyRichText":{
+						"messageSegments":{
+							"source":"{{ _iTrwy.outputs.items }}",
+							"ua:type":"mappedArray",
+							"items":{
+								"type":"{{ _iTrwy.outputs.items[0].type }}",
+								"text":"{{ _iTrwy.outputs.items[0].text }}",
+								"markupType":"{{ _iTrwy.outputs.items[0].markupType }}",
+								"url":"{{ _iTrwy.outputs.items[0].url }}"
+							}
+						}
+					}
+				}
+			},
+			"options":{
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false
+				},
+				"logConfig":{
+					"enabled":false
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"CONTINUE",
+				"telemetryConfig":{
+					"enableTelemetry":false
 				}
 			},
 			"skip":false,
@@ -87,5 +1132,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
