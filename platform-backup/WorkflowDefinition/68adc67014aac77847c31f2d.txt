@@ -38,7 +38,7 @@
 	"id":"68adc67014aac77847c31f2d",
 	"lastModifiedBy":-1,
 	"lcName":"slow automation detector",
-	"modifiedTime":1759771115763,
+	"modifiedTime":1759772038046,
 	"name":"Slow automation detector",
 	"nodes":[
 		{
@@ -183,5 +183,5 @@
 	"tags":[
 		
 	],
-	"version":3774
+	"version":3775
 }
