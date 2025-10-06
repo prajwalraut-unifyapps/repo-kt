@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759751857558,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_NKcy1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_wdfB2",
+			"type":"next"
+		}
+	],
+	"id":"68e3aeb11457fe48f52117db",
+	"lastModifiedBy":175510,
+	"lcName":"brirr",
+	"modifiedTime":1759751857558,
+	"name":"brirr",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_NKcy1-1",
+			"id":"_NKcy1",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_NKcy1-1",
+			"id":"_wdfB2",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175510,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
