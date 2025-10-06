@@ -5,12 +5,12 @@
 	"createdTime":1759674677409,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759730219029,
+		"deployedAt":1759730884977,
 		"deployedBy":2721,
-		"deployedDefinitionId":"68e35a2a42b62c5ab61f3666",
+		"deployedDefinitionId":"68e35cc4ea6d01680438558a",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":2
+		"version":2,
+		"workflowVersion":3
 	},
 	"edges":[
 		{
@@ -22,9 +22,9 @@
 		}
 	],
 	"id":"68e281358117a56167929873",
-	"lastModifiedBy":2721,
+	"lastModifiedBy":15,
 	"lcName":"freg",
-	"modifiedTime":1759730874737,
+	"modifiedTime":1759731795507,
 	"name":"freg",
 	"nodes":[
 		{
@@ -43,7 +43,7 @@
 			"inputs":{
 				"bucketName":"gcst-virtu-eag-integrationcloudstorage-dev2",
 				"interval":5,
-				"from":"2024-10-07T05:54:00.000Z",
+				"from":"2025-10-06T05:54:00.000Z",
 				"batchSize":100
 			},
 			"skip":false,
@@ -87,5 +87,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
