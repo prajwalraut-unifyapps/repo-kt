@@ -11,12 +11,19 @@
 			"skip":false,
 			"toNodeId":"n_8UYx8",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_8UYx8",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_0qbxt",
+			"type":"next"
 		}
 	],
 	"id":"68e3c9795742db1a6d5f3e61",
 	"lastModifiedBy":182775,
 	"lcName":"testdependency",
-	"modifiedTime":1759758758343,
+	"modifiedTime":1759758825008,
 	"name":"testDependency",
 	"nodes":[
 		{
@@ -36,6 +43,29 @@
 					"contentType":"application/json"
 				},
 				"endpointType":"REST",
+				"response":[
+					{
+						"name":"Status",
+						"status":200,
+						"contentType":"application/json",
+						"textBody":{
+							"type":"string"
+						},
+						"body":{
+							"type":"object",
+							"properties":{
+								"Status":{
+									"type":"string",
+									"title":"Status"
+								}
+							},
+							"additionalProperties":false,
+							"required":[
+								"Status"
+							]
+						}
+					}
+				],
 				"streamingResponse":false
 			},
 			"skip":false,
@@ -100,6 +130,29 @@
 			"subTitle":"Variable by UnifyApps",
 			"title":"Create variables",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1074,
+				"resourceName":"callables_return_response_to_api",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_Gdlwf-1",
+			"id":"n_0qbxt",
+			"index":3,
+			"inputs":{
+				"streamingCompleted":true,
+				"responseName":"200_Status",
+				"status":200
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to API request",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":182775,
@@ -119,5 +172,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
