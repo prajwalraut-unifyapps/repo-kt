@@ -5,12 +5,18 @@
 	"createdTime":1759674677409,
 	"deleted":false,
 	"edges":[
-		
+		{
+			"fromNodeId":"n_4aeLB",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_YRRvh",
+			"type":"next"
+		}
 	],
 	"id":"68e281358117a56167929873",
 	"lastModifiedBy":2721,
 	"lcName":"freg",
-	"modifiedTime":1759730204543,
+	"modifiedTime":1759730214888,
 	"name":"freg",
 	"nodes":[
 		{
@@ -39,6 +45,21 @@
 				"type":"EVENT"
 			},
 			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_VJbui-1",
+			"id":"n_YRRvh",
+			"index":2,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":2721,
@@ -58,5 +79,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
