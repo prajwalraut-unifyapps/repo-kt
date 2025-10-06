@@ -24,7 +24,7 @@
 	"id":"68dcf5ffc0a2bc3485d5d7f8",
 	"lastModifiedBy":161875,
 	"lcName":"test jira jql",
-	"modifiedTime":1759750680503,
+	"modifiedTime":1759750905956,
 	"name":"Test Jira JQL",
 	"nodes":[
 		{
@@ -69,7 +69,17 @@
 			"inputs":{
 				"issueIdOrKey":"MD-5",
 				"bodyV3":{
-					"content":[],
+					"content":[
+						{
+							"content":[
+								{
+									"text":"This is the first line bois",
+									"type":"text"
+								}
+							],
+							"type":"paragraph"
+						}
+					],
 					"type":"doc",
 					"version":1
 				},
@@ -98,5 +108,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
