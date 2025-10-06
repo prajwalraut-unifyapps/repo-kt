@@ -6,46 +6,73 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_N4XPt",
+			"fromNodeId":"n_pxkFZ",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_xdSe8",
+			"toNodeId":"n_DAcJL",
 			"type":"next"
 		}
 	],
 	"id":"68e3f1955742db1a6d5fa792",
 	"lastModifiedBy":39715,
 	"lcName":"scheduler",
-	"modifiedTime":1759768981630,
+	"modifiedTime":1759769017544,
 	"name":"scheduler",
 	"nodes":[
 		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":836,
+				"resourceName":"schedule_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_N4XPt-1",
-			"id":"_N4XPt",
-			"index":0,
+			"id":"n_pxkFZ",
+			"index":1,
+			"inputs":{
+				"cron":"INTERVAL",
+				"sequential":false,
+				"interval":1,
+				"frequency":"MINUTES"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Schedule",
+			"title":"New recurring event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"SCHEDULED"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":977,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_N4XPt-1",
-			"id":"_xdSe8",
-			"index":0,
+			"id":"n_DAcJL",
+			"index":2,
+			"inputs":{
+				"code":"return 1;",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":39715,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +86,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
