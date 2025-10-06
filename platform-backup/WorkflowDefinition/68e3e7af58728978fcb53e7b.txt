@@ -9,6 +9,13 @@
 			"fromNodeId":"n_zRKTU",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_Ir2hu",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Ir2hu",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_p2zuW",
 			"type":"next"
 		},
@@ -45,7 +52,7 @@
 	"id":"68e3e7af58728978fcb53e7b",
 	"lastModifiedBy":43498,
 	"lcName":"test-pdf",
-	"modifiedTime":1759773218108,
+	"modifiedTime":1759773265209,
 	"name":"test-pdf",
 	"nodes":[
 		{
@@ -76,6 +83,27 @@
 		{
 			"context":{
 				"appName":"utility_by_unifyapps",
+				"resourceVersion":1040,
+				"resourceName":"utility_by_unifyapps_to_json_object",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_8m5fP-1",
+			"id":"n_Ir2hu",
+			"index":2,
+			"inputs":{
+				"jsonString":"{\n  \"expiryTime\": 1,\n\"file\": {\n\"fileType\": \"pdf\",\n\"name\": \"7973a443-31ee-49ce-bdc2-21249a6b66f8_Article - 29 Sessions.pdf\",\n\"size\": 0,\n\"source\": \"connector_streaming_uploads/1/18/7973a443-31ee-49ce-bdc2-21249a6b66f8_Article - 29 Sessions.pdf\",\n\"sourceType\": \"CLOUD_STORAGE\",\n\"ua:type\": \"FILE\",\n\"link\": \"https://qa.unifyapps.com/api/file/download/__UNIFY_ENCR_UNIFYAPPS__V3__b1CMVogKsGoCdn7vJMZTE4jG8mRTr8hbttwISMabPxq%2FALbqr2mQp7M5TNwvwUwJNjSj%2FzJDuQqUPMv4yqOjoaKmPezynSoUYEujAkxdWACQkzghVjJ61nd2xq2nzr%2B1MkVz4Q%2FwRx2VjKw6j8nw\"\n  }\n}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Deserialise string to JSON object",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
 				"resourceVersion":1039,
 				"resourceName":"utility_by_unifyapps_generate_public_url",
 				"type":"APPLICATION"
@@ -85,9 +113,9 @@
 			"fallbackMode":"STOP",
 			"groupId":"_8m5fP-1",
 			"id":"n_p2zuW",
-			"index":2,
+			"index":3,
 			"inputs":{
-				"file":"{\n  \"expiryTime\": 1,\n\"file\": {\n\"fileType\": \"pdf\",\n\"name\": \"7973a443-31ee-49ce-bdc2-21249a6b66f8_Article - 29 Sessions.pdf\",\n\"size\": 0,\n\"source\": \"connector_streaming_uploads/1/18/7973a443-31ee-49ce-bdc2-21249a6b66f8_Article - 29 Sessions.pdf\",\n\"sourceType\": \"CLOUD_STORAGE\",\n\"ua:type\": \"FILE\",\n\"link\": \"https://qa.unifyapps.com/api/file/download/__UNIFY_ENCR_UNIFYAPPS__V3__b1CMVogKsGoCdn7vJMZTE4jG8mRTr8hbttwISMabPxq%2FALbqr2mQp7M5TNwvwUwJNjSj%2FzJDuQqUPMv4yqOjoaKmPezynSoUYEujAkxdWACQkzghVjJ61nd2xq2nzr%2B1MkVz4Q%2FwRx2VjKw6j8nw\"\n  }\n}",
+				"file":"{{ n_Ir2hu.outputs.result }}",
 				"expiryTime":1
 			},
 			"skip":false,
@@ -107,7 +135,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_8m5fP-1",
 			"id":"n_LWdzd",
-			"index":3,
+			"index":4,
 			"inputs":{
 				"pageCount":5,
 				"fileDetails":"{{ n_p2zuW.outputs.url }}",
@@ -130,7 +158,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_LWdzd@_8m5fP-1@l",
 			"id":"n_7quYY",
-			"index":4,
+			"index":5,
 			"inputs":{
 				"duration":2,
 				"unit":"SECONDS"
@@ -149,7 +177,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_8m5fP-1",
 			"id":"n_aTL2n",
-			"index":5,
+			"index":6,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -173,5 +201,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
