@@ -1,5 +1,6 @@
 {
 	"appsUsed":[
+		"bill",
 		"netsuite"
 	],
 	"createdTime":1759420719102,
@@ -17,14 +18,21 @@
 			"fromNodeId":"n_XV5J7",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_Rb1pI",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Rb1pI",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_NdnuU",
 			"type":"next"
 		}
 	],
 	"id":"68dea12f0e9d387c5aab0bcc",
-	"lastModifiedBy":2621,
+	"lastModifiedBy":124029,
 	"lcName":"netsuite filtering trigger (dnt)",
-	"modifiedTime":1759421005972,
+	"modifiedTime":1759734172401,
 	"name":"Netsuite filtering trigger (DNT)",
 	"nodes":[
 		{
@@ -54,6 +62,40 @@
 			"type":"START"
 		},
 		{
+			"additional":{
+				"visibleOptionalFields":[]
+			},
+			"context":{
+				"appName":"bill",
+				"resourceVersion":509,
+				"connectionId":"68b565c1a0ef2435c1d88768",
+				"resourceName":"bill_create_vendor",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_cor6R-1",
+			"id":"n_Rb1pI",
+			"index":2,
+			"inputs":{
+				"address":{
+					"country":"US",
+					"line1":"JHK",
+					"city":"JBJ",
+					"stateOrProvince":"BJJ",
+					"zipOrPostalCode":"464656"
+				},
+				"phone":"{{ n_XV5J7.outputs.batch[0].phone }}",
+				"name":"{{ n_XV5J7.outputs.batch[0].companyname }}",
+				"email":"{{ n_XV5J7.outputs.batch[0].email }}"
+			},
+			"skip":false,
+			"subTitle":"Bill",
+			"title":"Create vendor",
+			"type":"ACTION"
+		},
+		{
 			"context":{
 				"appName":"stop"
 			},
@@ -62,7 +104,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_cor6R-1",
 			"id":"n_NdnuU",
-			"index":2,
+			"index":3,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -86,5 +128,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
