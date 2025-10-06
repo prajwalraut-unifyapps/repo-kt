@@ -108,6 +108,35 @@
 		},
 		{
 			"fromNodeId":"O7NKp",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_pFCRA",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_pFCRA",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Gj1PF",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"_Gj1PF",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_k2r9A",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_k2r9A",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_pFCRA",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_pFCRA",
 			"name":"loopback",
 			"priority":0,
 			"skip":false,
@@ -200,7 +229,7 @@
 	"id":"68e371f9c1f0a911a7549546",
 	"lastModifiedBy":161912,
 	"lcName":"hey",
-	"modifiedTime":1759736347734,
+	"modifiedTime":1759736668550,
 	"name":"hey",
 	"nodes":[
 		{
@@ -1504,6 +1533,194 @@
 		},
 		{
 			"context":{
+				"appName":"loop",
+				"resourceVersion":402,
+				"resourceName":"loop_while",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_pFCRA@qdPZB@Y8gUK@_sgh4R-1@l@y@l",
+			"id":"_pFCRA",
+			"index":14,
+			"inputs":{
+				"condition":{
+					"filters":[
+						{
+							"property":"=LEN({{ uumAA.outputs.items }})",
+							"filter":{
+								"operator":"LTE",
+								"value":"{{ Y8gUK.outputs.item }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"captureIterations":true
+			},
+			"skip":false,
+			"subTitle":"Loop",
+			"title":"While loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":368,
+				"resourceName":"variable_by_unifyapps_add_item_to_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_pFCRA@_pFCRA@qdPZB@Y8gUK@_sgh4R-1@l@y@l@l",
+			"id":"_Gj1PF",
+			"index":15,
+			"inputs":{
+				"itemToAdd":{
+					"nested_item":"{{ _pFCRA.outputs.index }}",
+					"main_item":"{{ Y8gUK.outputs.item }}"
+				},
+				"insertLocation":"END",
+				"listName":"{{ uumAA.outputs.items[0] }}"
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"global":false
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":true,
+					"logPolicies":[
+						{
+							"level":"INFO",
+							"maskedFields":[
+								
+							],
+							"message":"i={{ _pFCRA.outputs.index }}",
+							"onlyOnFailure":false
+						}
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"STOP",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				},
+				"timeoutConfig":{
+					"enabled":false
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Add item to list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":424,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_pFCRA@_pFCRA@qdPZB@Y8gUK@_sgh4R-1@l@y@l@l",
+			"id":"_k2r9A",
+			"index":16,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"nested_index":{
+							"type":"number",
+							"title":"Nested Index"
+						},
+						"main_item":{
+							"type":"number",
+							"title":"Current Item"
+						},
+						"main_index":{
+							"type":"number",
+							"title":"Current Index"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"nested_index":"{{ _pFCRA.outputs.index }}",
+				"main_item":"{{ Y8gUK.outputs.item }}",
+				"main_index":"{{ Y8gUK.outputs.index }}"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"nested_index":{
+							"type":"number",
+							"title":"Nested Index"
+						},
+						"main_item":{
+							"type":"number",
+							"title":"Current Item"
+						},
+						"main_index":{
+							"type":"number",
+							"title":"Current Index"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"variable_by_unifyapps",
 				"resourceVersion":418,
 				"resourceName":"variable_by_unifyapps_create_list",
@@ -1514,7 +1731,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"qdPZB@Y8gUK@_sgh4R-1@l@n",
 			"id":"LG9CW",
-			"index":14,
+			"index":17,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -1865,7 +2082,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"qdPZB@Y8gUK@_sgh4R-1@l@n",
 			"id":"3184a",
-			"index":15,
+			"index":18,
 			"inputs":{
 				"condition":{
 					"filters":[
@@ -1898,7 +2115,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"3184a@qdPZB@Y8gUK@_sgh4R-1@l@n@l",
 			"id":"sXV9s",
-			"index":16,
+			"index":19,
 			"inputs":{
 				"itemToAdd":{
 					"main_item":"{{ Y8gUK.outputs.item }}",
@@ -1992,7 +2209,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"3184a@qdPZB@Y8gUK@_sgh4R-1@l@n@l",
 			"id":"rtO6j",
-			"index":17,
+			"index":20,
 			"inputs":{
 				"repeatMode":"SINGLE",
 				"listSource":"{{ LG9CW.outputs.items }}",
@@ -2015,7 +2232,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"rtO6j@3184a@qdPZB@Y8gUK@_sgh4R-1@l@n@l@l",
 			"id":"zyRkR",
-			"index":18,
+			"index":21,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -2135,7 +2352,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"3184a@qdPZB@Y8gUK@_sgh4R-1@l@n@l",
 			"id":"S7Rpp",
-			"index":19,
+			"index":22,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -2204,7 +2421,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_sgh4R-1",
 			"id":"1sOP8",
-			"index":20,
+			"index":23,
 			"inputs":{
 				"code":"{}",
 				"isAsync":false
@@ -2232,5 +2449,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
