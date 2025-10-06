@@ -1,51 +1,66 @@
 {
 	"appsUsed":[
-		
+		"gdrive"
 	],
 	"createdTime":1759743661741,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_T1wg1",
+			"fromNodeId":"n_ejtkk",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_X3koC",
+			"toNodeId":"n_tgDWu",
 			"type":"next"
 		}
 	],
 	"id":"68e38ead5742db1a6d5e72c2",
 	"lastModifiedBy":678,
 	"lcName":"vdsv",
-	"modifiedTime":1759743661741,
+	"modifiedTime":1759743696595,
 	"name":"vdsv",
 	"nodes":[
 		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":6282,
+				"connectionId":"68c2a2140c48cd5eea951e76",
+				"resourceName":"gdrive_on_create_file"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_T1wg1-1",
-			"id":"_T1wg1",
-			"index":0,
+			"id":"n_ejtkk",
+			"index":1,
+			"inputs":{},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Google Drive",
+			"title":"Create a file",
 			"trigger":{
 				"type":"EVENT"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"stop"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_T1wg1-1",
-			"id":"_X3koC",
-			"index":0,
+			"id":"n_tgDWu",
+			"index":2,
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":678,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +74,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
