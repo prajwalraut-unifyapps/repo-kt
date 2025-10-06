@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759789607312,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759789607370,
+		"deployedBy":175325,
+		"deployedDefinitionId":"68e442279a5e220931df4d7f",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"lZXRK",
@@ -30,7 +38,7 @@
 	"id":"68e442011a71840450afb5e7",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa2autohmgfsgkvuy",
-	"modifiedTime":1759789607312,
+	"modifiedTime":1759789607393,
 	"name":"changeSetQA2autoHmGFSGkvuY",
 	"nodes":[
 		{
@@ -56,7 +64,7 @@
 					},
 					"required":[]
 				},
-				"callableInterfaceId":"68e442011a71840450afb5e5",
+				"callableInterfaceId":"68e442011a71840450afb5e6",
 				"setup":{
 					"type":"object",
 					"properties":{
@@ -97,7 +105,7 @@
 				"automationId":"68e442011a71840450afb5e1",
 				"runtimeConnections":{},
 				"synchronous":true,
-				"version":"1",
+				"version":"-1",
 				"parameters":{
 					"a":"{{ lZXRK.outputs.a }}",
 					"b":"{{ lZXRK.outputs.b }}"
@@ -122,7 +130,7 @@
 			"id":"EmKzy",
 			"index":0,
 			"inputs":{
-				"object_type":"changeSetQA2SARkwnAeHIHiyJVJxAZv",
+				"object_type":"changeSetQA2fbtiSJGolhLsiViPZwdA",
 				"record":{
 					"n":"HI"
 				}
@@ -173,5 +181,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
