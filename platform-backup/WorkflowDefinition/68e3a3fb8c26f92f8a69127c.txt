@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759749115118,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_ZGw2t",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_VphZh",
+			"type":"next"
+		}
+	],
+	"id":"68e3a3fb8c26f92f8a69127c",
+	"lastModifiedBy":178107,
+	"lcName":"dp_training_loop",
+	"modifiedTime":1759749115118,
+	"name":"dp_training_loop",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_ZGw2t-1",
+			"id":"_ZGw2t",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_ZGw2t-1",
+			"id":"_VphZh",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":178107,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
