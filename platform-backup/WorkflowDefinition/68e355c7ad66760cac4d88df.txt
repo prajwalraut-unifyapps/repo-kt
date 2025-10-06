@@ -1,0 +1,78 @@
+{
+	"appsUsed":[
+		"azure_blob"
+	],
+	"createdTime":1759729095961,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_SDPQ9",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_22Bji",
+			"type":"next"
+		}
+	],
+	"id":"68e355c7ad66760cac4d88df",
+	"lastModifiedBy":46217,
+	"lcName":"test",
+	"modifiedTime":1759730288742,
+	"name":"test",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_SDPQ9-1",
+			"id":"_SDPQ9",
+			"index":1,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"azure_blob",
+				"resourceVersion":5050,
+				"connectionId":"68e359168d4a993cdc15f231",
+				"resourceName":"azure_blob_get_container_properties",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_SDPQ9-1",
+			"id":"n_22Bji",
+			"index":2,
+			"inputs":{
+				"containerName":"testing",
+				"storageAccount":"unifyappstest"
+			},
+			"skip":false,
+			"subTitle":"Azure Blob",
+			"title":"Get container properties",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":46217,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
