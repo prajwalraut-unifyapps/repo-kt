@@ -38,11 +38,11 @@
 			"fromNodeId":"n_l6giD",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_VQ9Fc",
+			"toNodeId":"n_1xTql",
 			"type":"loop"
 		},
 		{
-			"fromNodeId":"n_VQ9Fc",
+			"fromNodeId":"n_1xTql",
 			"name":"loopback",
 			"priority":0,
 			"skip":false,
@@ -75,7 +75,7 @@
 	"id":"68e3c9795742db1a6d5f3e61",
 	"lastModifiedBy":182775,
 	"lcName":"testdependency",
-	"modifiedTime":1759759128768,
+	"modifiedTime":1759759180685,
 	"name":"testDependency",
 	"nodes":[
 		{
@@ -242,14 +242,30 @@
 			"type":"LOOP"
 		},
 		{
+			"context":{
+				"appName":"streams_by_unifyapps",
+				"resourceVersion":1626,
+				"resourceName":"streams_by_unifyapps_publish_event",
+				"type":"APPLICATION"
+			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_l6giD@n_nOzMM@_Gdlwf-1@l@l",
-			"id":"n_VQ9Fc",
+			"id":"n_1xTql",
 			"index":5,
+			"inputs":{
+				"streamId":"e_68e013d6dc6c2b4d40587f06",
+				"skipInputValidation":true,
+				"event":{
+					"a":"{{ n_l6giD.outputs.item[0].event.a }}",
+					"b":"{{ n_l6giD.outputs.item[0].event.b }}"
+				},
+				"key":"{{ n_l6giD.outputs.item[0].key }}"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Streams by UnifyApps",
+			"title":"Publish event to stream",
 			"type":"ACTION"
 		},
 		{
@@ -349,5 +365,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
