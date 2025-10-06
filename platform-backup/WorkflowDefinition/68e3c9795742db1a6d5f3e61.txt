@@ -96,7 +96,7 @@
 	"id":"68e3c9795742db1a6d5f3e61",
 	"lastModifiedBy":182775,
 	"lcName":"testdependency",
-	"modifiedTime":1759760857259,
+	"modifiedTime":1759760868067,
 	"name":"testDependency",
 	"nodes":[
 		{
@@ -426,5 +426,5 @@
 	"tags":[
 		
 	],
-	"version":14
+	"version":15
 }
