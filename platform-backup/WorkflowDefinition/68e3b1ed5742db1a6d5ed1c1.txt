@@ -23,7 +23,7 @@
 	"id":"68e3b1ed5742db1a6d5ed1c1",
 	"lastModifiedBy":161877,
 	"lcName":"test",
-	"modifiedTime":1759762118189,
+	"modifiedTime":1759762195476,
 	"name":"test",
 	"nodes":[
 		{
@@ -281,8 +281,7 @@
 			},
 			"inputs":{
 				"createList":{
-					"ua:type":"mappedArray",
-					"items":"1,2,4,3,3,45,5,34,2"
+					"ua:type":"mappedArray"
 				},
 				"ua:title":"List",
 				"ua:list_type":"NUMBER"
@@ -349,5 +348,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
