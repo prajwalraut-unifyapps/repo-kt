@@ -6,7 +6,7 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_SDPQ9",
+			"fromNodeId":"n_cFwuH",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_22Bji",
@@ -16,20 +16,32 @@
 	"id":"68e355c7ad66760cac4d88df",
 	"lastModifiedBy":46217,
 	"lcName":"test",
-	"modifiedTime":1759730288742,
+	"modifiedTime":1759730292510,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":836,
+				"resourceName":"schedule_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_SDPQ9-1",
-			"id":"_SDPQ9",
+			"id":"n_cFwuH",
 			"index":1,
+			"inputs":{
+				"cron":"INTERVAL",
+				"sequential":false,
+				"interval":15,
+				"frequency":"MINUTES"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Schedule",
+			"title":"New recurring event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"SCHEDULED"
 			},
 			"type":"START"
 		},
@@ -74,5 +86,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
