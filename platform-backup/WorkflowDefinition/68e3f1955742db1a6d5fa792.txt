@@ -4,69 +4,100 @@
 	],
 	"createdTime":1759768981630,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759769029373,
+		"deployedBy":39715,
+		"deployedDefinitionId":"68e3f1c55742db1a6d5fa7ac",
+		"status":"PAUSED",
+		"version":1,
+		"workflowVersion":2
+	},
 	"edges":[
 		{
-			"fromNodeId":"n_pxkFZ",
+			"fromNodeId":"n_2ABmh",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_DAcJL",
+			"toNodeId":"n_dgLVs",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_dgLVs",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_MDq3H",
 			"type":"next"
 		}
 	],
 	"id":"68e3f1955742db1a6d5fa792",
-	"lastModifiedBy":39715,
+	"lastModifiedBy":44109,
 	"lcName":"scheduler",
-	"modifiedTime":1759769021937,
+	"modifiedTime":1759771964798,
 	"name":"scheduler",
 	"nodes":[
 		{
 			"context":{
-				"appName":"schedule",
-				"resourceVersion":836,
-				"resourceName":"schedule_default"
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_N4XPt-1",
-			"id":"n_pxkFZ",
+			"id":"n_2ABmh",
 			"index":1,
 			"inputs":{
-				"cron":"INTERVAL",
-				"sequential":false,
-				"interval":1,
-				"frequency":"MINUTES"
+				"request":{
+					"contentType":"application/json"
+				}
 			},
 			"skip":false,
-			"subTitle":"Schedule",
-			"title":"New recurring event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"SCHEDULED"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
 			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":977,
-				"resourceName":"code_by_unifyapps_groovy",
+				"appName":"callables",
+				"resourceVersion":1074,
+				"resourceName":"callables_call_automation",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_N4XPt-1",
-			"id":"n_DAcJL",
+			"id":"n_dgLVs",
 			"index":2,
 			"inputs":{
-				"code":"return 1;",
-				"compile_static":false,
-				"captureStdOutput":false
+				"automationId":"68df66b77cb1ae420e9a6c7f",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{}
 			},
 			"skip":false,
-			"subTitle":"Code by UnifyApps",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_N4XPt-1",
+			"id":"n_MDq3H",
+			"index":3,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":39715,
@@ -86,5 +117,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
