@@ -17,6 +17,13 @@
 			"fromNodeId":"n_4aeLB",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_YRRvh",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_YRRvh",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_wPXZQ",
 			"type":"next"
 		},
@@ -24,14 +31,14 @@
 			"fromNodeId":"n_wPXZQ",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_YRRvh",
+			"toNodeId":"n_VVq57",
 			"type":"next"
 		}
 	],
 	"id":"68e281358117a56167929873",
 	"lastModifiedBy":161165,
 	"lcName":"freg",
-	"modifiedTime":1759731885773,
+	"modifiedTime":1759732173610,
 	"name":"freg",
 	"nodes":[
 		{
@@ -63,6 +70,21 @@
 		},
 		{
 			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_VJbui-1",
+			"id":"n_YRRvh",
+			"index":2,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		},
+		{
+			"context":{
 				"appName":"gcloud_storage",
 				"resourceVersion":5705,
 				"connectionId":"68ac666caa52965d63249026",
@@ -74,16 +96,16 @@
 			"fallbackMode":"STOP",
 			"groupId":"_VJbui-1",
 			"id":"n_wPXZQ",
-			"index":2,
+			"index":3,
 			"inputs":{
 				"bucketName":"gcst-virtu-eag-integrationcloudstorage-dev2",
 				"attachment":{
 					"attachment_option":"use_file_url",
-					"file_name":"020-0086536-003_4570730_20230714.pdf",
+					"file_name":"020-0086536-003_4570730_202307145.pdf",
 					"mimeType":"pdf",
 					"url":"https://s3.ap-south-1.amazonaws.com/qa.unifyapps.com.cloudstorage.1/user-uploads/1/1759731515000/020-0086536-003_4570730_20230714.pdf?response-content-disposition=attachment%3Bfilename%3D%22020-0086536-003_4570730_20230714.pdf%22&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEO7%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCmFwLXNvdXRoLTEiRjBEAiB%2BnEN%2BmlCu141jtPfZQRHjKZI5qaFqyYCJJYeL2oBPbQIgXuL1%2FgdG%2F5b8%2B9Bf8oi3x15nSFjhxb5sEbkpCUpXT3QqxwUIh%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw1NDY5MTgxMDYyODMiDFgdVGeOWwCZryyvaSqbBR4JDWDBIyidbsL3ZtPgPbW8kiezJOr71UQVm5%2FXic65oed8dfwk6IS7QeuddFygMI1z6u8bql7pkfNPsjut15Mkgtv2DEF%2BYmWXCI%2B5NKJLYiLwByDkkc8cL72Y1UChVOIYXPayghMYCJBTMv0jr8jOiHjIdWNVdFDoOXEim%2BJRZNTe1y%2F6uIhmDaEWIaxASiUQiHKrGxygk%2B1kzrH9%2FLWO9t3UBEaECmrZaZOfyJ4%2Bx5Yp9U0iXM3U%2FWQVPJ44%2FY%2FZaYDUea1JgbYHuAAStqDKIQns25mUrxU767t2HzJ1gGxncBuzWtjhqAehYIpIXo7hVAtGgBAgVqHm0Q7dotTLLcpFfhfMEv%2F0Z9X2QGJwhYsvsvL1ACL7xzZEnUn9saYZG7Vk3v7oXajjAbQonOvk9P0rF7XAus7VaLi%2FFw1Fs0mlG%2FedjYhMTDcXqEirkKdu0STZ8nflqH6VwKI5Iqeb4kMoVatwbpT4DT3ywyNguU5MU8AH83drzASCPPFXB9VQYBY%2BIfZcAgeQDNV6t78mVjJ31FmHFIxqfyjJiXUT7%2BQ1sdgERowX1XYn3ObKkfxrMf0vO3lcFE83B%2BS8oBSTBiEvXhddKchJaVrqA42cl24Bjj3p6%2FfHaI8e5mEHN39nsHWnSrLVFkrroihfDIdy04WCuii7fUakt1MI8457MrevD8J%2FgPxvd5YN0bPBLb%2FzRVHfMu3akXgu1PwjKBktjRoE5hz3Xa5uOInyzIrpTXEUqxLBP9W3JY%2FkPiZ6ggCRKzwaeZ4ivHu6UJuhohdILHNUFpZzZ%2BueHiYAGeBzN1ScbmZvicjYEsF22Hh6Y7Ns8UhxSjt9PF%2BQ7ou8Y8W%2BVPKLxqRomugA4l25McB7QDktaTuJDBv9ctEwtraNxwY6sgGEGz6BI6a5kpiagF0kWIE%2FyJD5ZvbUvV4zsWRjBfdp3NkIo%2BjEVLF2EY0yhTMin9ly4SbS843Vfe0z9rayPXALKTHsQwLmVL%2B6TymNXX4rW58r%2Fd8%2FEfip3sDeZAgbNkpjs9gBEJKZJBeQk6AvoFq%2FnRKfcHvgoIMUU%2FuDgZ46R2kobGvfFxuFkawKSf1ClU7o0TE%2F7HQScXdC%2FslcDAh4HHSkgmVaO2A75tNHXhm7hNaz&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251006T061926Z&X-Amz-SignedHeaders=host&X-Amz-Credential=ASIAX6VW4ASV5LGZQBYI%2F20251006%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Expires=3600&X-Amz-Signature=1298771054834ae272d3f81d8029c1de6e0188333ace8eefc8e544204ba35ce6"
 				},
-				"name":"invoiceadlsfs/AirlineInvoice/Uploaded/020-0086536-003_4570730_20230714.pdf"
+				"name":"invoiceadlsfs/AirlineInvoice/Uploaded/020-0086536-003_4570730_202307145.pdf"
 			},
 			"skip":false,
 			"subTitle":"Google Cloud Storage",
@@ -92,18 +114,27 @@
 		},
 		{
 			"context":{
-				"appName":"stop"
+				"appName":"gcloud_storage",
+				"resourceVersion":5687,
+				"connectionId":"68ac666caa52965d63249026",
+				"resourceName":"gcloud_storage_list_objects",
+				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_VJbui-1",
-			"id":"n_YRRvh",
-			"index":3,
+			"id":"n_VVq57",
+			"index":4,
+			"inputs":{
+				"bucketName":"gcst-virtu-eag-integrationcloudstorage-dev2",
+				"versions":false,
+				"projection":"noAcl"
+			},
 			"skip":false,
-			"subTitle":"Stop",
-			"title":"Stop",
-			"type":"STOP"
+			"subTitle":"Google Cloud Storage",
+			"title":"List objects",
+			"type":"ACTION"
 		}
 	],
 	"ownerUserId":2721,
@@ -123,5 +154,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
