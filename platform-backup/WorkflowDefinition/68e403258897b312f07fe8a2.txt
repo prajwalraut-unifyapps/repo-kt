@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759773477073,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_hMJYx",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_sBbNp",
+			"type":"next"
+		}
+	],
+	"id":"68e403258897b312f07fe8a2",
+	"lastModifiedBy":43498,
+	"lcName":"sdf-pdf",
+	"modifiedTime":1759773477073,
+	"name":"sdf-pdf",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_hMJYx-1",
+			"id":"_hMJYx",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_hMJYx-1",
+			"id":"_sBbNp",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":43498,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
