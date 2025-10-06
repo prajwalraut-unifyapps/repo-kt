@@ -16,7 +16,7 @@
 	"id":"68e3679fea6d016804388416",
 	"lastModifiedBy":124029,
 	"lcName":"netsuite vendor trigger (dnt)",
-	"modifiedTime":1759733663709,
+	"modifiedTime":1759733668000,
 	"name":"Netsuite vendor trigger (DNT)",
 	"nodes":[
 		{
@@ -25,7 +25,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_XYJlA-1",
 			"id":"_XYJlA",
-			"index":0,
+			"index":1,
 			"skip":false,
 			"title":"Select a trigger event",
 			"trigger":{
@@ -39,13 +39,16 @@
 			"fallbackMode":"STOP",
 			"groupId":"_XYJlA-1",
 			"id":"_iBM1L",
-			"index":0,
+			"index":2,
 			"skip":false,
 			"title":"Select an app and action",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":124029,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +62,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
