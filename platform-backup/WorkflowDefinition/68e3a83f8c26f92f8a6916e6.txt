@@ -6,46 +6,503 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_IS4ec",
+			"fromNodeId":"n_MkY3D",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_KnFJa",
+			"toNodeId":"_HZPWT",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_HZPWT",
+			"name":"success",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_ywOkZ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_HZPWT",
+			"name":"error",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_4Lx8V",
+			"type":"error"
+		},
+		{
+			"fromNodeId":"_4Lx8V",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_eaUyf",
 			"type":"next"
 		}
 	],
 	"id":"68e3a83f8c26f92f8a6916e6",
 	"lastModifiedBy":46218,
 	"lcName":"transport orders",
-	"modifiedTime":1759750207177,
+	"modifiedTime":1759750249433,
 	"name":"transport orders",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_IS4ec-1",
-			"id":"_IS4ec",
-			"index":0,
+			"id":"n_MkY3D",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				},
+				"visibleOptionalFields":[
+					"root.body.type",
+					"root.body.payload.title",
+					"root.body.payload.templateId",
+					"root.body.payload.contractId",
+					"root.body.payload.reference",
+					"root.body.payload.createdAt",
+					"root.body.payload.startedAt",
+					"root.body.payload.accountName",
+					"root.body.documentRequest.Issuer.Email",
+					"root.body.documentRequest.Customer.Email",
+					"root.body.documentRequest.Issuer.Email",
+					"root.body.documentRequest.Customer.Email",
+					"root.body.country",
+					"root.body.documentType",
+					"root.body.processType",
+					"root.body.documentRequest.StoreNo",
+					"root.body.documentRequest.DocId",
+					"root.body.documentRequest.DocTypeCode",
+					"root.body.documentRequest.Serial",
+					"root.body.documentRequest.Correlative",
+					"root.body.documentRequest.ManualReceipt",
+					"root.body.documentRequest.SalesDate",
+					"root.body.documentRequest.CurrencyCode",
+					"root.body.documentRequest.ExchangeRate",
+					"root.body.documentRequest.CashierCode",
+					"root.body.documentRequest.Register.RegisterId",
+					"root.body.documentRequest.Register.RegisterSN",
+					"root.body.documentRequest.Register.InitialNumber",
+					"root.body.documentRequest.Register.EndingNumber",
+					"root.body.documentRequest.Register.InitialDate",
+					"root.body.documentRequest.Register.EndingDate",
+					"root.body.documentRequest.Issuer.FullName",
+					"root.body.documentRequest.Issuer.TradeName",
+					"root.body.documentRequest.Issuer.IDTypeCode",
+					"root.body.documentRequest.Issuer.IDNumber",
+					"root.body.documentRequest.Issuer.Email",
+					"root.body.documentRequest.Issuer.EconomicActivityCode",
+					"root.body.documentRequest.Issuer.FiscalAddress.CityId",
+					"root.body.documentRequest.Issuer.FiscalAddress.DistrictId",
+					"root.body.documentRequest.Issuer.FiscalAddress.Address",
+					"root.body.documentRequest.Issuer.FiscalAddress.ZipCode",
+					"root.body.documentRequest.Issuer.StoreAddress.StoreCode",
+					"root.body.documentRequest.Issuer.StoreAddress.CountryId",
+					"root.body.documentRequest.Issuer.StoreAddress.StateId",
+					"root.body.documentRequest.Issuer.StoreAddress.Address",
+					"root.body.documentRequest.Issuer.StoreAddress.ZipCode",
+					"root.body.documentRequest.Customer.CustomerNo",
+					"root.body.documentRequest.Customer.FullName",
+					"root.body.documentRequest.Customer.IDTypeCode",
+					"root.body.documentRequest.Customer.IDNumber",
+					"root.body.documentRequest.Customer.Email",
+					"root.body.documentRequest.Customer.AddressNo",
+					"root.body.documentRequest.CustomerAddress.CountryId",
+					"root.body.documentRequest.CustomerAddress.Address",
+					"root.body.documentRequest.CustomerAddress.ZipCode",
+					"root.body.documentRequest.LineCount",
+					"root.body.documentRequest.Version",
+					"root.body.documentRequest.Notes",
+					"root.body.documentRequest.Notes2",
+					"root.body.documentRequest.Notes3",
+					"root.body.documentRequest.Items.source",
+					"root.body.documentRequest.Items.ua:type",
+					"root.body.documentRequest.Items.items.LineId",
+					"root.body.documentRequest.Items.items.TypeCode",
+					"root.body.documentRequest.Items.items.SKU",
+					"root.body.documentRequest.Items.items.UPC",
+					"root.body.documentRequest.Items.items.UOM",
+					"root.body.documentRequest.Items.items.Clerk",
+					"root.body.documentRequest.Items.items.LineDescription",
+					"root.body.documentRequest.Items.items.LineNotes",
+					"root.body.documentRequest.Items.items.Qty",
+					"root.body.documentRequest.Items.items.OriginalPrice",
+					"root.body.documentRequest.Items.items.OriginalPriceWTax",
+					"root.body.documentRequest.Items.items.ExtOriginalPrice",
+					"root.body.documentRequest.Items.items.ExtOriginalPriceWTax",
+					"root.body.documentRequest.Items.items.RetailPrice",
+					"root.body.documentRequest.Items.items.ExtRetailPrice",
+					"root.body.documentRequest.Items.items.Taxes.source",
+					"root.body.documentRequest.Items.items.Taxes.ua:type",
+					"root.body.documentRequest.Items.items.Taxes.items.TaxId",
+					"root.body.documentRequest.Items.items.Taxes.items.TaxCode",
+					"root.body.documentRequest.Items.items.Taxes.items.TaxBase",
+					"root.body.documentRequest.Items.items.Taxes.items.TaxFactor",
+					"root.body.documentRequest.Items.items.Taxes.items.TaxAmount",
+					"root.body.documentRequest.Items.items.RetailPriceWTax",
+					"root.body.documentRequest.Items.items.ExtTaxAmount",
+					"root.body.documentRequest.Items.items.ExtRetailPriceWTax",
+					"root.body.documentRequest.Totals.SumExtOriginalPrice",
+					"root.body.documentRequest.Totals.SumExtOriginalPriceWTax",
+					"root.body.documentRequest.Totals.SumExtDiscAmount",
+					"root.body.documentRequest.Totals.SumExtDiscAmountWTax",
+					"root.body.documentRequest.Totals.SubTotal",
+					"root.body.documentRequest.Totals.SubTotalWTax",
+					"root.body.documentRequest.Totals.Taxes.source",
+					"root.body.documentRequest.Totals.Taxes.ua:type",
+					"root.body.documentRequest.Totals.Taxes.items.TaxId",
+					"root.body.documentRequest.Totals.Taxes.items.TaxCode",
+					"root.body.documentRequest.Totals.Taxes.items.TaxBase",
+					"root.body.documentRequest.Totals.Taxes.items.TaxFactor",
+					"root.body.documentRequest.Totals.Taxes.items.TaxTotal",
+					"root.body.documentRequest.Totals.FeeId",
+					"root.body.documentRequest.Totals.FeeTaxPercent",
+					"root.body.documentRequest.Totals.FeeTotal",
+					"root.body.documentRequest.Totals.FeeTotalWTax",
+					"root.body.documentRequest.Totals.FeeTaxAmount",
+					"root.body.documentRequest.Totals.PayTotal",
+					"root.body.documentRequest.Tenders.source",
+					"root.body.documentRequest.Tenders.ua:type",
+					"root.body.documentRequest.Tenders.items.LineId",
+					"root.body.documentRequest.Tenders.items.CurrencyId",
+					"root.body.documentRequest.Tenders.items.TenderId",
+					"root.body.documentRequest.Tenders.items.TakeAmount",
+					"root.body.documentRequest.Tenders.items.GiveAmount",
+					"root.body.documentRequest.Tenders.items.ExchangeRate",
+					"root.body.documentRequest.Tenders.items.PaymentDay",
+					"root.body.documentRequest.Tenders.items.PaymentDate",
+					"root.body.documentRequest.Tenders.items.PaymentMethod",
+					"root.body.documentRequest.Tenders.items.PaymentCode",
+					"root.body.documentRequest.Comments.source",
+					"root.body.documentRequest.Comments.ua:type",
+					"root.body.documentRequest.Comments.items.Group",
+					"root.body.documentRequest.Comments.items.Name",
+					"root.body.documentRequest.Comments.items.Value",
+					"root.body.documentRequest.documentdetail.documento.complementos.nominareceptor.email",
+					"root.body.documentRequest.documentdetail.documento.complementos.nominareceptor.email",
+					"root.body.country",
+					"root.body.documentType",
+					"root.body.processType",
+					"root.body.documentRequest.header.pais",
+					"root.body.documentRequest.header.orgvtas",
+					"root.body.documentRequest.header.docnumber",
+					"root.body.documentRequest.header.docid",
+					"root.body.documentRequest.documentdetail.documento.encabezado.iddoc.fechaemis",
+					"root.body.documentRequest.documentdetail.documento.encabezado.iddoc.numero",
+					"root.body.documentRequest.documentdetail.documento.encabezado.iddoc.mediopago",
+					"root.body.documentRequest.documentdetail.documento.encabezado.iddoc.tipo",
+					"root.body.documentRequest.documentdetail.documento.encabezado.iddoc.version",
+					"root.body.documentRequest.documentdetail.documento.encabezado.iddoc.tipoemision",
+					"root.body.documentRequest.documentdetail.documento.encabezado.iddoc.tiposervicio",
+					"root.body.documentRequest.documentdetail.documento.encabezado.iddoc.nocertificado",
+					"root.body.documentRequest.documentdetail.documento.encabezado.iddoc.lugarexpedicion",
+					"root.body.documentRequest.documentdetail.documento.encabezado.iddoc.sello",
+					"root.body.documentRequest.documentdetail.documento.encabezado.totales.moneda",
+					"root.body.documentRequest.documentdetail.documento.encabezado.totales.subtotal",
+					"root.body.documentRequest.documentdetail.documento.encabezado.totales.vlrpagar",
+					"root.body.documentRequest.documentdetail.documento.encabezado.emisor.nmbemisor",
+					"root.body.documentRequest.documentdetail.documento.encabezado.emisor.regimencontable",
+					"root.body.documentRequest.documentdetail.documento.encabezado.emisor.idemisor",
+					"root.body.documentRequest.documentdetail.documento.encabezado.emisor.domfiscal.codigopostal",
+					"root.body.documentRequest.documentdetail.documento.encabezado.receptor.docrecep.nrodocrecep",
+					"root.body.documentRequest.documentdetail.documento.encabezado.receptor.nmbrecep",
+					"root.body.documentRequest.documentdetail.documento.encabezado.receptor.domfiscalrcp.codigopostal",
+					"root.body.documentRequest.documentdetail.documento.encabezado.receptor.regimencontabler",
+					"root.body.documentRequest.documentdetail.documento.detalle.source",
+					"root.body.documentRequest.documentdetail.documento.detalle.ua:type",
+					"root.body.documentRequest.documentdetail.documento.detalle.items.cdgitem.source",
+					"root.body.documentRequest.documentdetail.documento.detalle.items.cdgitem.ua:type",
+					"root.body.documentRequest.documentdetail.documento.detalle.items.cdgitem.items.tpocodigo",
+					"root.body.documentRequest.documentdetail.documento.detalle.items.cdgitem.items.vlrcodigo",
+					"root.body.documentRequest.documentdetail.documento.detalle.items.qtyitem",
+					"root.body.documentRequest.documentdetail.documento.detalle.items.dscitem",
+					"root.body.documentRequest.documentdetail.documento.detalle.items.prcnetoitem",
+					"root.body.documentRequest.documentdetail.documento.detalle.items.montonetoitem",
+					"root.body.documentRequest.documentdetail.documento.detalle.items.descuentomonto",
+					"root.body.documentRequest.documentdetail.documento.detalle.items.montototalitem",
+					"root.body.documentRequest.documentdetail.documento.complementos.resumen.version",
+					"root.body.documentRequest.documentdetail.documento.complementos.resumen.tiponomina",
+					"root.body.documentRequest.documentdetail.documento.complementos.resumen.fechapago",
+					"root.body.documentRequest.documentdetail.documento.complementos.resumen.fechainicialpago",
+					"root.body.documentRequest.documentdetail.documento.complementos.resumen.fechafinalpago",
+					"root.body.documentRequest.documentdetail.documento.complementos.resumen.numdiaspagados",
+					"root.body.documentRequest.documentdetail.documento.complementos.resumen.totalpercepciones",
+					"root.body.documentRequest.documentdetail.documento.complementos.resumen.totaldeducciones",
+					"root.body.documentRequest.documentdetail.documento.complementos.resumen.totalotrospagos",
+					"root.body.documentRequest.documentdetail.documento.complementos.nominaemisor.registropatronal",
+					"root.body.documentRequest.documentdetail.documento.complementos.nominaemisor.idpatronorigen",
+					"root.body.documentRequest.documentdetail.documento.complementos.nominareceptor.curp",
+					"root.body.documentRequest.documentdetail.documento.complementos.nominareceptor.tipocontrato",
+					"root.body.documentRequest.documentdetail.documento.complementos.nominareceptor.sindicalizado",
+					"root.body.documentRequest.documentdetail.documento.complementos.nominareceptor.tipojornada",
+					"root.body.documentRequest.documentdetail.documento.complementos.nominareceptor.tiporegimen",
+					"root.body.documentRequest.documentdetail.documento.complementos.nominareceptor.numempleado",
+					"root.body.documentRequest.documentdetail.documento.complementos.nominareceptor.departamento",
+					"root.body.documentRequest.documentdetail.documento.complementos.nominareceptor.puesto",
+					"root.body.documentRequest.documentdetail.documento.complementos.nominareceptor.riesgopuesto",
+					"root.body.documentRequest.documentdetail.documento.complementos.nominareceptor.periodicidadpago",
+					"root.body.documentRequest.documentdetail.documento.complementos.nominareceptor.salariodiariointegrado",
+					"root.body.documentRequest.documentdetail.documento.complementos.nominareceptor.claveentfed",
+					"root.body.documentRequest.documentdetail.documento.complementos.nominareceptor.email",
+					"root.body.documentRequest.documentdetail.documento.complementos.percepcion.totalsueldos",
+					"root.body.documentRequest.documentdetail.documento.complementos.percepcion.totalgravado",
+					"root.body.documentRequest.documentdetail.documento.complementos.percepcion.totalexento",
+					"root.body.documentRequest.documentdetail.documento.complementos.percepcion.tipopercepcion",
+					"root.body.documentRequest.documentdetail.documento.complementos.percepcion.clave",
+					"root.body.documentRequest.documentdetail.documento.complementos.percepcion.concepto",
+					"root.body.documentRequest.documentdetail.documento.complementos.percepcion.importegravado",
+					"root.body.documentRequest.documentdetail.documento.complementos.percepcion.importeexento",
+					"root.body.documentRequest.documentdetail.documento.complementos.deduccion.importe",
+					"root.body.documentRequest.documentdetail.documento.complementos.deduccion.totalimpuestosretenidos",
+					"root.body.documentRequest.documentdetail.documento.complementos.deduccion.tipodeduccion",
+					"root.body.documentRequest.documentdetail.documento.complementos.deduccion.clave",
+					"root.body.documentRequest.documentdetail.documento.complementos.deduccion.concepto",
+					"root.body.system",
+					"root.body.header.pais",
+					"root.body.header.docNumber",
+					"root.body.header.docId"
+				]
+			},
+			"context":{
+				"appName":"custom_http_endpoint",
+				"resourceVersion":34,
+				"resourceName":"custom_http_endpoint_execute_soap",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
+			"dirty":true,
+			"fallbackMode":"MANUAL",
 			"groupId":"_IS4ec-1",
-			"id":"_KnFJa",
-			"index":0,
+			"id":"_HZPWT",
+			"index":2,
+			"inputs":{
+				"isAsync":false,
+				"enableProxy":false,
+				"requestTimeoutInSecs":-1,
+				"httpMethod":"POST",
+				"body":{
+					"urn:ZwsValidarNrojira":{
+						"INroOrden":"DEVK9A3IDE"
+					}
+				},
+				"version":"v1.1",
+				"connectionType":"DIRECT",
+				"sslVerify":false,
+				"path":"/",
+				"baseUrl":"https://apiplatform-uat.belcorp.biz/api-endpoint/transport-orders/",
+				"bodySchema":{
+					"type":"object",
+					"properties":{
+						"urn:ZwsValidarNrojira":{
+							"type":"object",
+							"properties":{
+								"INroOrden":{
+									"type":"string",
+									"title":"I Nro Orden"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Urn Zws Validar Nrojira",
+							"required":[
+								"INroOrden"
+							]
+						}
+					},
+					"additionalProperties":false,
+					"required":[
+						"urn:ZwsValidarNrojira"
+					]
+				},
+				"responseContentType":"text/xml",
+				"headersList":[
+					{
+						"key":"Content-Type",
+						"value":"text/xml; charset=utf-8"
+					},
+					{
+						"key":"SOAPAction",
+						"value":"urn:sap-com:document:sap:soap:functions:mc-style:ZWS_TRANSPORTA_JIRA_WEB:ZwsValidarNrojiraRequest"
+					},
+					{
+						"key":"Authorization",
+						"value":"Basic YWRtaW5iZWxjb3JwOmJhc2lzUFBS"
+					},
+					{
+						"key":"Cookie",
+						"value":"MYSAPSSO2=AjQxMDMBABhCAEMARQBYAFQAUwBGADAAOQAgACAAIAACAAY0ADAAMAADABBQAFAAUgAgACAAIAAgACAABAAYMgAwADIANQAwADgAMAA1ADIAMgAzADQABQAEAAAACAYAAlgACQACUwD%2fAVcwggFTBgkqhkiG9w0BBwKgggFEMIIBQAIBATELMAkGBSsOAwIaBQAwCwYJKoZIhvcNAQcBMYIBHzCCARsCAQEwcDBkMQswCQYDVQQGEwJERTEcMBoGA1UEChMTU0FQIFRydXN0IENvbW11bml0eTETMBEGA1UECxMKU0FQIFdlYiBBUzEUMBIGA1UECxMLSTAwMjAwOTA4OTIxDDAKBgNVBAMTA1BSRAIICiAVBRcgBAEwCQYFKw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTI1MDgwNTIyMzQ0MVowIwYJKoZIhvcNAQkEMRYEFEN5bPGICEEHd1Q3dBntZ8Qf0R8VMAkGByqGSM44BAMELzAtAhUA4XZntY7FD694iGpV%2f4Dh0g94nWMCFHQWdcdICPBjBZg8zWXA1aZy5E0I; SAP_SESSIONID_PPR_400=zgtrprn5f-PxBt_VeJbZbxBldJtyZxHwkcQCQ_7Sy24%3d; sap-usercontext=sap-client=400; sap-usercontext=sap-client=400"
+					},
+					{
+						"key":"api-token",
+						"value":"7/68c9a1d088174675ef6e8867"
+					}
+				],
+				"authType":"CUSTOM",
+				"requestContentType":"text/xml",
+				"isNestedHeaders":false,
+				"namespaces":[
+					{
+						"key":"soapenv",
+						"value":"http://schemas.xmlsoap.org/soap/envelope/"
+					},
+					{
+						"key":"urn",
+						"value":"urn:sap-com:document:sap:soap:functions:mc-style"
+					}
+				]
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"global":false
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"MANUAL",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"transport-orders",
+			"title":"Execute SOAP request",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_HZPWT@_IS4ec-1@success",
+			"id":"_ywOkZ",
+			"index":3,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ n_LPwQi.outputs.Success_Count }}",
+						"value":"={{ n_LPwQi.outputs.Success_Count }}+1"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Success Increment",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_HZPWT@_IS4ec-1@error",
+			"id":"_4Lx8V",
+			"index":4,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ n_LPwQi.outputs.Failure_Count }}",
+						"value":"={{ n_LPwQi.outputs.Failure_Count }}+1"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Failure Increment",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":19,
+				"resourceName":"variable_by_unifyapps_add_item_to_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_HZPWT@_IS4ec-1@error",
+			"id":"_eaUyf",
+			"index":5,
+			"inputs":{
+				"itemToAdd":"transport-orders",
+				"insertLocation":"END",
+				"listName":"{{ n_pOAJs.outputs.items[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Add item to list",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":46218,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +516,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
