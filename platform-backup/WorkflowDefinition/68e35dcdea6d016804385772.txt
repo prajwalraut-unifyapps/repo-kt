@@ -1,51 +1,69 @@
 {
 	"appsUsed":[
-		
+		"google_task"
 	],
 	"createdTime":1759731149582,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_LXvsX",
+			"fromNodeId":"n_Nho0M",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_OSLFE",
+			"toNodeId":"n_PgcvJ",
 			"type":"next"
 		}
 	],
 	"id":"68e35dcdea6d016804385772",
 	"lastModifiedBy":3546,
 	"lcName":"testingiii",
-	"modifiedTime":1759731149582,
+	"modifiedTime":1759731297541,
 	"name":"testingiii",
 	"nodes":[
 		{
+			"context":{
+				"appName":"google_task",
+				"resourceVersion":3580,
+				"connectionId":"68d5885cfd866b5d0e3e5611",
+				"resourceName":"google_task_on_new_tasklist_polling"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_LXvsX-1",
-			"id":"_LXvsX",
-			"index":0,
+			"id":"n_Nho0M",
+			"index":1,
+			"inputs":{
+				"interval":30,
+				"batchSize":100
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Google Task",
+			"title":"New task list",
 			"trigger":{
 				"type":"EVENT"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"stop"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_LXvsX-1",
-			"id":"_OSLFE",
-			"index":0,
+			"id":"n_PgcvJ",
+			"index":2,
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":3546,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +77,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
