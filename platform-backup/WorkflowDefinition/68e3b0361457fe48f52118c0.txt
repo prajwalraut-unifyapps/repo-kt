@@ -1,0 +1,320 @@
+{
+	"appsUsed":[
+		"gmail"
+	],
+	"createdTime":1759752246984,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"VZVC4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"1edEF",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"1edEF",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Cwocq",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"Cwocq",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"ZBrOg",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"ZBrOg",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"2MV3c",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"ZBrOg",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"GfuMa",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"2MV3c",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"GfuMa",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"GfuMa",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"JNWV5",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"JNWV5",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"1edEF",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"1edEF",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Xk8JK",
+			"type":"next"
+		}
+	],
+	"id":"68e3b0361457fe48f52118c0",
+	"lastModifiedBy":189412,
+	"lcName":"gmail trigger (ai agent)",
+	"modifiedTime":1759752246984,
+	"name":"Gmail Trigger (AI Agent)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"gmail",
+				"resourceVersion":3204,
+				"resourceName":"gmail_on_new_email_polling"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"WPPtH-1",
+			"id":"VZVC4",
+			"index":0,
+			"inputs":{
+				"intervalType":"seconds",
+				"fetchAllMails":false,
+				"pageSize":1,
+				"interval":10,
+				"from":"<<_ua_ai_agent.inputs.from>>",
+				"batchSize":1
+			},
+			"skip":false,
+			"subTitle":"Gmail",
+			"title":"New email",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":462,
+				"resourceName":"loop_for_each",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"WPPtH-1",
+			"id":"1edEF",
+			"index":0,
+			"inputs":{
+				"repeatMode":"SINGLE",
+				"listSource":"{{ VZVC4.outputs.batch }}",
+				"captureIterations":false
+			},
+			"skip":false,
+			"subTitle":"For each email in batch",
+			"title":"For loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":488,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"1edEF@WPPtH-1@l",
+			"id":"Cwocq",
+			"index":0,
+			"inputs":{
+				"automationId":"67f3af475de54f1ddb4a6988",
+				"runtimeConnections":{
+					"gmail":"<CONNECTION_ID>"
+				},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"inputs":"{{ 1edEF.outputs.item }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Preprocessor",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":70,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"1edEF@WPPtH-1@l",
+			"id":"ZBrOg",
+			"index":0,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ Cwocq.outputs.allowed }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"true"
+						}
+					}
+				],
+				"operator":"OR"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ZBrOg@1edEF@WPPtH-1@l@n",
+			"id":"2MV3c",
+			"index":0,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":450,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"1edEF@WPPtH-1@l",
+			"id":"GfuMa",
+			"index":0,
+			"inputs":{
+				"automationId":"674afe5adefb851816d61959",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"caseAssociationType":"PREVIOUS_FAN_MESSAGE",
+					"messageType":"FAN",
+					"triggeredFromAutomationId":"{{ __RUN__.outputs.workflowId }}",
+					"attachments":{
+						"ua:type":"mappedArray",
+						"items":{
+							"name":"{{ Cwocq.outputs.attachments[0].name }}",
+							"mimeType":"{{ Cwocq.outputs.attachments[0].mimeType }}",
+							"fileType":"{{ Cwocq.outputs.attachments[0].fileType }}",
+							"url":"{{ Cwocq.outputs.attachments[0].link }}",
+							"source":"{{ Cwocq.outputs.attachments[0].source }}",
+							"sourceType":"{{ Cwocq.outputs.attachments[0].sourceType }}"
+						},
+						"source":"{{ Cwocq.outputs.attachments }}"
+					},
+					"triggerInput":"{{ 1edEF.outputs.item }}",
+					"channelName":"gmail",
+					"text":"{{ Cwocq.outputs.finalText }}",
+					"channelSpecificUserId":"{{ 1edEF.outputs.item.from.fromEmail }}",
+					"channelSpecificMessageId":"{{ 1edEF.outputs.item.id }}",
+					"preferredMarkupLanguage":"HTML",
+					"toCustomerUserId":"<AI_AGENT_ID>"
+				}
+			},
+			"skip":false,
+			"subTitle":"Case Management",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":450,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"1edEF@WPPtH-1@l",
+			"id":"JNWV5",
+			"index":0,
+			"inputs":{
+				"automationId":"6732f70850384a29acf312fd",
+				"runtimeConnections":{},
+				"synchronous":false,
+				"triggerWorkflowWithRuntimeType":"IN_MEMORY",
+				"version":"-1",
+				"parameters":{
+					"caseId":"{{ GfuMa.outputs.caseId }}",
+					"messageId":"{{ GfuMa.outputs.messageId }}",
+					"userEmailAddress":"{{ VZVC4.outputs.batch[0].from.fromEmail }}",
+					"aiAgentId":"<AI_AGENT_ID>",
+					"userQuery":"{{ Cwocq.outputs.finalText }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Trigger AI Agent",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"WPPtH-1",
+			"id":"Xk8JK",
+			"index":0,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":189412,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
