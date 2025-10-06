@@ -5,12 +5,12 @@
 	"createdTime":1736763610743,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759371888368,
-		"deployedBy":-1,
-		"deployedDefinitionId":"68dde270d3636c7f14535dc5",
+		"deployedAt":1759714184519,
+		"deployedBy":44096,
+		"deployedDefinitionId":"68e31b885462831ef2b7d1fb",
 		"status":"DEPLOYED",
-		"version":88,
-		"workflowVersion":147
+		"version":89,
+		"workflowVersion":148
 	},
 	"edges":[
 		{
@@ -495,7 +495,7 @@
 	"id":"6784e8da2bf24b00b3975b17",
 	"lastModifiedBy":44096,
 	"lcName":"fetch relevant knowledge chunks",
-	"modifiedTime":1759714184068,
+	"modifiedTime":1759714233723,
 	"name":"Fetch Relevant Knowledge Chunks",
 	"nodes":[
 		{
@@ -1409,7 +1409,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"YS5lb@4ZR9C-1@1",
 			"id":"EungR",
@@ -1421,18 +1421,23 @@
 				"version":"-1",
 				"parameters":{
 					"userQuery":"{{ EIiwt.outputs.userQuery }}",
+					"includeCustomMetadataFilter":true,
+					"filter":"{{ EIiwt.outputs.filter }}",
 					"sharedWithIds":{
 						"source":"{{ _FYo6S.outputs.sharedWithIds }}",
 						"ua:type":"mappedArray",
 						"items":"{{ _FYo6S.outputs.sharedWithIds[0] }}"
 					},
-					"includeCustomMetadataFilter":true,
 					"knowledges":{
 						"ua:type":"mappedArray",
 						"source":"{{ 2t2pg.outputs.knowledges }}",
 						"items":"{{ 2t2pg.outputs.knowledges[0] }}"
 					},
-					"filter":"{{ EIiwt.outputs.filter }}"
+					"knowledgeSets":{
+						"source":"{{ 2t2pg.outputs.knowledgeSets }}",
+						"ua:type":"mappedArray",
+						"items":"{{ 2t2pg.outputs.knowledgeSets[0] }}"
+					}
 				}
 			},
 			"skip":false,
@@ -3785,10 +3790,10 @@
 			"tierName":"global"
 		}
 	},
-	"standard":true,
+	"standard":false,
 	"tags":[
 		"AI Agent",
 		"Knowledge"
 	],
-	"version":148
+	"version":149
 }
