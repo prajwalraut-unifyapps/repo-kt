@@ -1,0 +1,86 @@
+{
+	"appsUsed":[
+		"figma"
+	],
+	"createdTime":1759763429530,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_RG2jB",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_v3KHg",
+			"type":"next"
+		}
+	],
+	"id":"68e3dbe55742db1a6d5f865c",
+	"lastModifiedBy":9,
+	"lcName":"test (copy)",
+	"modifiedTime":1759763429530,
+	"name":"test (copy)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_NvHMG-1",
+			"id":"n_RG2jB",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"figma",
+				"resourceVersion":1130,
+				"connectionId":"68dd37f512547e4cdcf1cbd6",
+				"resourceName":"figma_create_comment",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_NvHMG-1",
+			"id":"n_v3KHg",
+			"index":2,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Figma",
+			"title":"Create a comment",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":9,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
