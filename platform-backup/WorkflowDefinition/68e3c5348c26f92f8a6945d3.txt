@@ -88,7 +88,7 @@
 	"id":"68e3c5348c26f92f8a6945d3",
 	"lastModifiedBy":177799,
 	"lcName":"connection_initiation_rishabh",
-	"modifiedTime":1759818063468,
+	"modifiedTime":1759818125918,
 	"name":"connection_initiation_rishabh",
 	"nodes":[
 		{
@@ -530,7 +530,7 @@
 				"connectionType":"DIRECT",
 				"sslVerify":false,
 				"path":"/api-endpoint/admin/oauth/authorize",
-				"baseUrl":"https://lyearn.uat-us-east-1.unifyapps.com",
+				"baseUrl":"https://qa.unifyapps.com",
 				"responseHeaders":[
 					"content-security-policy"
 				],
@@ -597,7 +597,7 @@
 					},
 					{
 						"key":"appName",
-						"value":"{{ n_4rzJF.outputs.body.app_name }}"
+						"value":"{{ n_boHCg.outputs.body.App_Name }}"
 					},
 					{
 						"key":"returnTo",
@@ -605,15 +605,15 @@
 					}
 				],
 				"responseContentType":"application/json",
-				"followRedirects":"NORMAL",
+				"followRedirects":"NEVER",
 				"headersList":[
 					{
 						"key":"x-admin-authorization",
-						"value":"68df8e13f501fd2fd306cbe2"
+						"value":"66732d0f1775b60a2f0f20e0"
 					},
 					{
 						"key":"x-ua-assume-customer-id",
-						"value":"26"
+						"value":"1"
 					},
 					{
 						"key":"Content-Type",
@@ -723,5 +723,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
