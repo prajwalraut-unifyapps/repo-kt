@@ -1,12 +1,12 @@
 {
 	"appsUsed":[
-		
+		"jms"
 	],
 	"createdTime":1759826876288,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_YigIf",
+			"fromNodeId":"n_OfSMZ",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"_xA8Ux",
@@ -16,18 +16,28 @@
 	"id":"68e4d3bc244fb40b02ae2000",
 	"lastModifiedBy":43498,
 	"lcName":"sdfwef-jms-adi",
-	"modifiedTime":1759826876288,
+	"modifiedTime":1759826889914,
 	"name":"sdfwef-jms-adi",
 	"nodes":[
 		{
+			"context":{
+				"appName":"jms",
+				"resourceVersion":69,
+				"connectionId":"67592679b73f613be2e69445",
+				"resourceName":"jms_on_event_received"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_YigIf-1",
-			"id":"_YigIf",
-			"index":0,
+			"id":"n_OfSMZ",
+			"index":1,
+			"inputs":{
+				"queueName":"unifyapp"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"JMS",
+			"title":"On event received",
 			"trigger":{
 				"type":"EVENT"
 			},
@@ -39,13 +49,16 @@
 			"fallbackMode":"STOP",
 			"groupId":"_YigIf-1",
 			"id":"_xA8Ux",
-			"index":0,
+			"index":2,
 			"skip":false,
 			"title":"Select an app and action",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":43498,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +72,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
