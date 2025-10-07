@@ -6,46 +6,156 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_IW2Ij",
+			"fromNodeId":"n_Ao0Uk",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_fFdp2",
+			"toNodeId":"n_sqUKp",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_sqUKp",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_CR7Yq",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_CR7Yq",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_0opZj",
 			"type":"next"
 		}
 	],
 	"id":"68e5315523ca0361355e551a",
 	"lastModifiedBy":21056,
 	"lcName":"camera recording",
-	"modifiedTime":1759850837807,
+	"modifiedTime":1759850967289,
 	"name":"camera recording",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1023,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_IW2Ij-1",
-			"id":"_IW2Ij",
-			"index":0,
+			"id":"n_Ao0Uk",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"new"
+					],
+					"properties":{
+						"new":{
+							"type":"string",
+							"title":"New"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"new":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"New"
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"files_by_unifyapps",
+				"resourceVersion":916,
+				"resourceName":"files_by_unifyapps_upload_file",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_IW2Ij-1",
-			"id":"_fFdp2",
-			"index":0,
+			"id":"n_sqUKp",
+			"index":2,
+			"inputs":{
+				"base64Content":"{{ n_Ao0Uk.outputs.new[0] }}",
+				"fileName":"newww",
+				"mimeType":"video/mp4",
+				"option":"base64Content"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Files by UnifyApps",
+			"title":"Upload file",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":1047,
+				"resourceName":"utility_by_unifyapps_generate_public_url",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_IW2Ij-1",
+			"id":"n_CR7Yq",
+			"index":3,
+			"inputs":{
+				"file":"{{ n_sqUKp.outputs.fileDetails }}",
+				"expiryTime":1
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Generate public file URL",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1059,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_IW2Ij-1",
+			"id":"n_0opZj",
+			"index":4,
+			"inputs":{
+				"result":{
+					"new":"200"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":21056,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +169,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
