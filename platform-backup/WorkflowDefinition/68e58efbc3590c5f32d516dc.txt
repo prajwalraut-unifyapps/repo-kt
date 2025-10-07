@@ -2,7 +2,7 @@
 	"appsUsed":[
 		
 	],
-	"createdTime":1759874846309,
+	"createdTime":1759874882113,
 	"deleted":false,
 	"edges":[
 		{
@@ -16,7 +16,7 @@
 	"id":"68e58efbc3590c5f32d516dc",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa21759874811645irmbblnhag",
-	"modifiedTime":1759874846309,
+	"modifiedTime":1759874882113,
 	"name":"changeSetQA21759874811645IRMbBLNHAg",
 	"nodes":[
 		{
@@ -87,7 +87,7 @@
 			"index":0,
 			"inputs":{
 				"result":{
-					"c":"=SUM({{ 7pKsG.outputs.a }},{{ 7pKsG.outputs.b }})"
+					"c":"=PRODUCT({{ 7pKsG.outputs.a }},{{ 7pKsG.outputs.b }})"
 				}
 			},
 			"skip":false,
@@ -113,5 +113,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":3
 }
