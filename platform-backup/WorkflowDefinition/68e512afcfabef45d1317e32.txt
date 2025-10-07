@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		
+		"microsoft_sharepoint"
 	],
 	"createdTime":1759842991912,
 	"deleted":false,
@@ -9,14 +9,21 @@
 			"fromNodeId":"n_0InMZ",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_Oxyvs",
+			"toNodeId":"n_jIlgX",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_jIlgX",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_y4Qla",
 			"type":"next"
 		}
 	],
 	"id":"68e512afcfabef45d1317e32",
-	"lastModifiedBy":161877,
+	"lastModifiedBy":1234,
 	"lcName":"asd",
-	"modifiedTime":1759843042291,
+	"modifiedTime":1759852850695,
 	"name":"asd",
 	"nodes":[
 		{
@@ -26,7 +33,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_VQolM-1",
 			"id":"n_0InMZ",
@@ -45,14 +52,84 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"microsoft_sharepoint",
+				"resourceVersion":1852,
+				"connectionId":"68e388958d4a993cdc177a26",
+				"resourceName":"microsoft_sharepoint_search_items",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_VQolM-1",
-			"id":"_Oxyvs",
+			"id":"n_jIlgX",
 			"index":2,
+			"inputs":{},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Microsoft SharePoint",
+			"title":"Search items",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.freeText.must.items",
+					"root.freeText.should.items",
+					"root.freeText.mustNot.items",
+					"root.freeText.suffixWildcardFor.items",
+					"root.properties.items.value",
+					"root.properties.items.isPhrase",
+					"root.properties.items.suffixWildcard",
+					"root.properties.items.range.from",
+					"root.properties.items.range.to",
+					"root.properties.items.include",
+					"root.propertyGroups.items.includeAny.items",
+					"root.propertyGroups.items.excludeAny.items",
+					"root.proximity.items.distance",
+					"root.synonyms.items.items",
+					"root.dates.items.interval",
+					"root.dates.items.op",
+					"root.dates.items.value",
+					"root.dates.items.from",
+					"root.dates.items.to",
+					"root.dates.items.include",
+					"root.xrank.items.params.n",
+					"root.xrank.items.params.nb",
+					"root.xrank.items.params.cb",
+					"root.xrank.items.params.rb",
+					"root.xrank.items.params.pb",
+					"root.xrank.items.params.avgb",
+					"root.xrank.items.params.stdb"
+				]
+			},
+			"context":{
+				"appName":"microsoft_sharepoint",
+				"resourceVersion":2,
+				"connectionId":"68e388958d4a993cdc177a26",
+				"resourceName":"microsoft_sharepoint_search_items_from_fields",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_VQolM-1",
+			"id":"n_y4Qla",
+			"index":3,
+			"inputs":{
+				"site_name":"UnifyApps",
+				"freeText":{
+					"must":[
+						"presentation"
+					],
+					"mustNot":[
+						"final 5"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Microsoft SharePoint",
+			"title":"Search items",
 			"type":"ACTION"
 		}
 	],
@@ -73,5 +150,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
