@@ -53,15 +53,31 @@
 			"fromNodeId":"n_I42Hn",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_MYhE4",
+			"toNodeId":"n_8BfTX",
 			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_8BfTX",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_MYhE4",
+			"type":"if"
 		},
 		{
 			"fromNodeId":"n_MYhE4",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_bQF3v",
+			"toNodeId":"n_AAewe",
 			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_AAewe",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_bQF3v",
+			"type":"if"
 		},
 		{
 			"fromNodeId":"n_bQF3v",
@@ -87,7 +103,23 @@
 			"type":"next"
 		},
 		{
+			"fromNodeId":"n_AAewe",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_MYhE4",
+			"type":"next"
+		},
+		{
 			"fromNodeId":"n_MYhE4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_7O1un",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_8BfTX",
+			"name":"no",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_7O1un",
@@ -149,7 +181,7 @@
 	"id":"68de24422364216c2da9d549",
 	"lastModifiedBy":161908,
 	"lcName":"branchloop",
-	"modifiedTime":1759831439277,
+	"modifiedTime":1759832024983,
 	"name":"branchloop",
 	"nodes":[
 		{
@@ -357,17 +389,47 @@
 		},
 		{
 			"context":{
+				"appName":"if_else",
+				"resourceVersion":791,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_I42Hn@n_ikdIO@_kS6s2-1@1@l",
+			"id":"n_8BfTX",
+			"index":7,
+			"inputs":{
+				"filters":[
+					{
+						"property":"1",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"1"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
 				"appName":"loop",
 				"resourceVersion":852,
 				"resourceName":"loop_for_each",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
-			"groupId":"n_I42Hn@n_ikdIO@_kS6s2-1@1@l",
+			"groupId":"n_8BfTX@n_I42Hn@n_ikdIO@_kS6s2-1@1@l@y",
 			"id":"n_MYhE4",
-			"index":7,
+			"index":8,
 			"inputs":{
 				"repeatMode":"SINGLE",
 				"listSource":"{{ n_Tjmb5.outputs.objects }}",
@@ -380,6 +442,36 @@
 		},
 		{
 			"context":{
+				"appName":"if_else",
+				"resourceVersion":791,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_MYhE4@n_8BfTX@n_I42Hn@n_ikdIO@_kS6s2-1@1@l@y@l",
+			"id":"n_AAewe",
+			"index":9,
+			"inputs":{
+				"filters":[
+					{
+						"property":"1",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"1"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
 				"appName":"loop",
 				"resourceVersion":0,
 				"resourceName":"loop_for_each",
@@ -388,9 +480,9 @@
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
-			"groupId":"n_MYhE4@n_I42Hn@n_ikdIO@_kS6s2-1@1@l@l",
+			"groupId":"n_AAewe@n_MYhE4@n_8BfTX@n_I42Hn@n_ikdIO@_kS6s2-1@1@l@y@l@y",
 			"id":"n_bQF3v",
-			"index":8,
+			"index":10,
 			"inputs":{
 				"repeatMode":"SINGLE",
 				"listSource":"{{ n_Tjmb5.outputs.objects }}",
@@ -411,9 +503,9 @@
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
-			"groupId":"n_bQF3v@n_MYhE4@n_I42Hn@n_ikdIO@_kS6s2-1@1@l@l@l",
+			"groupId":"n_bQF3v@n_AAewe@n_MYhE4@n_8BfTX@n_I42Hn@n_ikdIO@_kS6s2-1@1@l@y@l@y@l",
 			"id":"n_m1r59",
-			"index":9,
+			"index":11,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -464,7 +556,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_I42Hn@n_ikdIO@_kS6s2-1@1@l",
 			"id":"n_7O1un",
-			"index":10,
+			"index":12,
 			"inputs":{
 				"variables":[
 					{
@@ -490,7 +582,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_ikdIO@_kS6s2-1@2",
 			"id":"n_ikdIO@2",
-			"index":11,
+			"index":13,
 			"inputs":{
 				"name":"Branch 2"
 			},
@@ -510,7 +602,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_ikdIO@_kS6s2-1@2",
 			"id":"_zV8iS",
-			"index":12,
+			"index":14,
 			"inputs":{
 				"variables":[
 					{
@@ -536,7 +628,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_kS6s2-1",
 			"id":"n_yRzol",
-			"index":13,
+			"index":15,
 			"inputs":{
 				"result":{
 					"result":"rwg"
@@ -556,7 +648,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_kS6s2-1",
 			"id":"n_gUgCT",
-			"index":14,
+			"index":16,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -580,5 +672,5 @@
 	"tags":[
 		
 	],
-	"version":18
+	"version":19
 }
