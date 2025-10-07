@@ -30,12 +30,14 @@
 	"id":"68c054b9ecdc557672b81d0f",
 	"lastModifiedBy":39715,
 	"lcName":"sumitbansaltesting",
-	"modifiedTime":1759819910895,
+	"modifiedTime":1759819973747,
 	"name":"sumitBansalTesting",
 	"nodes":[
 		{
 			"context":{
-				"appName":"callables"
+				"appName":"callables",
+				"resourceVersion":1019,
+				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
 			"dirty":true,
@@ -43,9 +45,10 @@
 			"groupId":"_hIm1D-1",
 			"id":"n_6I4lD",
 			"index":1,
+			"inputs":{},
 			"skip":false,
 			"subTitle":"Callable",
-			"title":"Select a trigger event",
+			"title":"Trigger via automation",
 			"trigger":{
 				"type":"CALLABLE"
 			},
@@ -125,8 +128,8 @@
 		{
 			"context":{
 				"appName":"code_by_unifyapps",
-				"resourceVersion":0,
-				"resourceName":"code_by_unifyapps_groovy",
+				"resourceVersion":924,
+				"resourceName":"code_by_unifyapps_python",
 				"type":"APPLICATION"
 			},
 			"debug":false,
@@ -136,13 +139,15 @@
 			"id":"n_po0sB",
 			"index":4,
 			"inputs":{
-				"code":"return 2;\n",
-				"compile_static":false,
+				"configurationMode":"DEFAULT",
+				"code":"result = 3",
+				"isAsync":true,
+				"python_version":"3.12",
 				"captureStdOutput":false
 			},
 			"skip":false,
 			"subTitle":"Code by WurkNow",
-			"title":"Execute Groovy code",
+			"title":"Execute Python script",
 			"type":"ACTION"
 		}
 	],
@@ -163,5 +168,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
