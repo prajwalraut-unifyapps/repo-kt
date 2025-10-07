@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759815984069,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_LHCGh",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_0dXAp",
+			"type":"next"
+		}
+	],
+	"id":"68e4a930e1a58a521ea6d504",
+	"lastModifiedBy":3546,
+	"lcName":"sdcfgtryh",
+	"modifiedTime":1759815984069,
+	"name":"sdcfgtryh",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_LHCGh-1",
+			"id":"_LHCGh",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_LHCGh-1",
+			"id":"_0dXAp",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":3546,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
