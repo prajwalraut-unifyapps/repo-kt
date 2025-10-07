@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		
+		"slack"
 	],
 	"createdTime":1759844882833,
 	"deleted":false,
@@ -9,14 +9,14 @@
 			"fromNodeId":"_lpeKi",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_fcHtE",
+			"toNodeId":"n_WnUXC",
 			"type":"next"
 		}
 	],
 	"id":"68e51a12a0b9f01f0ce8f717",
 	"lastModifiedBy":161877,
 	"lcName":"sdf",
-	"modifiedTime":1759844882833,
+	"modifiedTime":1759846469420,
 	"name":"sdf",
 	"nodes":[
 		{
@@ -25,7 +25,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_lpeKi-1",
 			"id":"_lpeKi",
-			"index":0,
+			"index":1,
 			"skip":false,
 			"title":"Select a trigger event",
 			"trigger":{
@@ -34,18 +34,52 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"slack",
+				"resourceVersion":6299,
+				"connectionId":"68e450294a0d4706ffe8a622",
+				"resourceName":"slack_post_message_in_channel",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_lpeKi-1",
-			"id":"_fcHtE",
-			"index":0,
+			"id":"n_WnUXC",
+			"index":2,
+			"inputs":{
+				"link_names":true,
+				"messageType":"blocks",
+				"unfurl_media":true,
+				"Attach":[
+					{
+						"attachmentsType":"attachmentBlock",
+						"attachmentsBlock":{
+							"mrkdwn_in":[
+								"text",
+								"pretext",
+								"fields",
+								"footer"
+							],
+							"fields":{
+								"source":"sdfsdf",
+								"ua:type":"mappedArray"
+							}
+						}
+					}
+				],
+				"mrkdwn":true
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Slack",
+			"title":"Post message",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":161877,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +93,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
