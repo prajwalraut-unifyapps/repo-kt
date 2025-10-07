@@ -11,12 +11,19 @@
 			"skip":false,
 			"toNodeId":"n_YrV9f",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_YrV9f",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Yl0oV",
+			"type":"next"
 		}
 	],
 	"id":"68e5851e8beda876d6601618",
 	"lastModifiedBy":47811,
 	"lcName":"count2",
-	"modifiedTime":1759872373114,
+	"modifiedTime":1759872397292,
 	"name":"count2",
 	"nodes":[
 		{
@@ -96,6 +103,33 @@
 			"subTitle":"Storage by UnifyApps",
 			"title":"Fetch records",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1059,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_dqU8j-1",
+			"id":"n_Yl0oV",
+			"index":3,
+			"inputs":{
+				"result":{
+					"allocation":{
+						"source":"{{ n_YrV9f.outputs.objects }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_YrV9f.outputs.objects[0].properties.ProjectId }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":47811,
@@ -115,5 +149,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
