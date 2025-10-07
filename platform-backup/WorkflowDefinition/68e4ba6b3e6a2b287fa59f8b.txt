@@ -5,12 +5,12 @@
 	"createdTime":1759820395139,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759824255930,
+		"deployedAt":1759824731113,
 		"deployedBy":44096,
-		"deployedDefinitionId":"68e4c97fe8040a44a3ec919c",
+		"deployedDefinitionId":"68e4cb5ae8040a44a3eca0ea",
 		"status":"DEPLOYED",
-		"version":9,
-		"workflowVersion":9
+		"version":11,
+		"workflowVersion":11
 	},
 	"edges":[
 		{
@@ -45,7 +45,7 @@
 	"id":"68e4ba6b3e6a2b287fa59f8b",
 	"lastModifiedBy":44096,
 	"lcName":"ws",
-	"modifiedTime":1759824269733,
+	"modifiedTime":1759824737130,
 	"name":"ws",
 	"nodes":[
 		{
@@ -89,7 +89,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_QtgHl-1",
 			"id":"n_zMSle",
@@ -100,7 +100,7 @@
 				"version":"-1",
 				"parameters":{}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Callable",
 			"title":"Call automation async",
 			"type":"CALL_WORKFLOW"
@@ -113,7 +113,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_QtgHl-1",
 			"id":"n_6sIYq",
@@ -138,7 +138,7 @@
 						}
 					}
 				},
-				"code":"return [\"context\":[\"resourceName\":\"callables_call_automation_async\",\"appName\":\"callables\"],\"inputs\":[\"parameters\":[:],\"automationId\":\"68e4bb6bc403722219fe9028\"]]",
+				"code":"return [[\n  \"context\": [\n    \"appName\": \"storage_by_unifyapps\",\n    \"resourceName\": \"storage_by_unifyapps_fetch_records\"\n  ],\n  \"inputs\": [\n    \"includeCurrentUserPermissions\": false,\n    \"includeRoleMappings\": false,\n    \"includeTotalCount\": false,\n    \"numberOfRecordsToFetch\": \"MULTIPLE\",\n    \"object_type\": \"entry\",\n    \"page\": [\n      \"limit\": 20,\n      \"paginateBy\": \"OFFSET\"\n    ],\n    \"readThroughSessionVariables\": false,\n    \"searchField\": [\n      \"expression\": \"manoj.kumar@unifyapps.com\",\n      \"fields\": [\n        \"properties_Useremail\"\n      ]\n    ],\n    \"translationsOption\": \"DEFAULT\"\n  ],\n  \"instanceId\": \"68e4b0f8ff0b8d5e755d945e\"\n]]",
 				"compile_static":false,
 				"captureStdOutput":false
 			},
@@ -164,7 +164,7 @@
 				"input":"{{ n_6sIYq.outputs.result.inputs }}",
 				"context":"{{ n_6sIYq.outputs.result.context }}"
 			},
-			"skip":true,
+			"skip":false,
 			"subTitle":"Custom Application",
 			"title":"Execute Custom Application Request",
 			"type":"ACTION"
@@ -210,5 +210,5 @@
 	"tags":[
 		
 	],
-	"version":10
+	"version":12
 }
