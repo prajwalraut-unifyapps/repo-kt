@@ -6,46 +6,175 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_eHYnF",
+			"fromNodeId":"n_egnVZ",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_lN1G2",
+			"toNodeId":"n_11dAW",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_11dAW",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_N2l9n",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_N2l9n",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_11dAW",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_11dAW",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_fzWsT",
 			"type":"next"
 		}
 	],
 	"id":"68e55608d2b59c1294b133a4",
 	"lastModifiedBy":44108,
 	"lcName":"execute multiple update command dnt",
-	"modifiedTime":1759860232236,
+	"modifiedTime":1759860594512,
 	"name":"execute multiple update command dnt",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1023,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_eHYnF-1",
-			"id":"_eHYnF",
-			"index":0,
+			"id":"n_egnVZ",
+			"index":1,
+			"inputs":{
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"commands":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Commands"
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":865,
+				"resourceName":"loop_for_each",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_eHYnF-1",
-			"id":"_lN1G2",
-			"index":0,
+			"id":"n_11dAW",
+			"index":2,
+			"inputs":{
+				"repeatMode":"SINGLE",
+				"listSource":"{{ n_egnVZ.outputs.commands }}",
+				"captureIterations":false
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Loop",
+			"title":"For each loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"custom_http_endpoint",
+				"resourceVersion":1067,
+				"resourceName":"custom_http_endpoint_execute",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_11dAW@_eHYnF-1@l",
+			"id":"n_N2l9n",
+			"index":3,
+			"inputs":{
+				"isAsync":false,
+				"enableProxy":false,
+				"requestTimeoutInSecs":-1,
+				"httpMethod":"POST",
+				"body":{
+					"sql":"{{ n_11dAW.outputs.item }}"
+				},
+				"connectionType":"DIRECT",
+				"sslVerify":false,
+				"path":"/sql-report/execute/1",
+				"baseUrl":"http://internal-global-svc.unifyapps.svc.cluster.local:80/internal",
+				"httpVersion":"HTTP_2",
+				"bodySchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"sql":{
+							"type":"string",
+							"title":"Sql"
+						}
+					}
+				},
+				"queryParamsList":[
+					{
+						"key":"resourceType",
+						"value":"PLATFORM"
+					}
+				],
+				"responseContentType":"application/json",
+				"followRedirects":"NORMAL",
+				"authType":"CUSTOM",
+				"requestContentType":"application/json",
+				"ignoreTrailingSlashes":false,
+				"certificateType":"CERT_STRING"
+			},
+			"skip":false,
+			"subTitle":"Point de terminaison HTTP personnalisé",
+			"title":"Execute REST request",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_eHYnF-1",
+			"id":"n_fzWsT",
+			"index":4,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":44108,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +188,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
