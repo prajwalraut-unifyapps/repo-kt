@@ -1,51 +1,91 @@
 {
 	"appsUsed":[
-		
+		"smtp"
 	],
 	"createdTime":1759841479666,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_ggdRl",
+			"fromNodeId":"n_XMogK",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_v7CRT",
+			"toNodeId":"n_znkb9",
 			"type":"next"
 		}
 	],
 	"id":"68e50cc75a4d7b70d0f9e3bc",
 	"lastModifiedBy":24420,
 	"lcName":"smtp invalid emails",
-	"modifiedTime":1759841479666,
+	"modifiedTime":1759841563964,
 	"name":"SMTP Invalid emails",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1022,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ggdRl-1",
-			"id":"_ggdRl",
-			"index":0,
+			"id":"n_XMogK",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"a"
+					],
+					"properties":{
+						"a":{
+							"type":"string",
+							"title":"A"
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"smtp",
+				"resourceVersion":3279,
+				"connectionId":"68bc05f02207e44db12109d5",
+				"resourceName":"smtp_send_email",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ggdRl-1",
-			"id":"_v7CRT",
-			"index":0,
+			"id":"n_znkb9",
+			"index":2,
+			"inputs":{
+				"sendPartial":true,
+				"subject":"Test",
+				"fromName":"Test",
+				"body":"Test",
+				"toEmail":"prachi.mishra@unifyapps.com, loganathane@invalid.virtusa.com",
+				"fromEmail":"notificationadmintest@virtusa.com"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"SMTP",
+			"title":"Send email",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":24420,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +99,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
