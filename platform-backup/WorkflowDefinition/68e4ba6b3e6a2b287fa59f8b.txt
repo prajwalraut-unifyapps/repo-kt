@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759820395139,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_QtgHl",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_WPmoR",
+			"type":"next"
+		}
+	],
+	"id":"68e4ba6b3e6a2b287fa59f8b",
+	"lastModifiedBy":44096,
+	"lcName":"ws",
+	"modifiedTime":1759820395139,
+	"name":"ws",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_QtgHl-1",
+			"id":"_QtgHl",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_QtgHl-1",
+			"id":"_WPmoR",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":44096,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
