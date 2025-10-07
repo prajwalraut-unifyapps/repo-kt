@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		
+		"microsoft_outlook"
 	],
 	"createdTime":1723442896973,
 	"deleted":false,
@@ -10,31 +10,33 @@
 	"id":"66b9a6d00275d14846b889c3",
 	"lastModifiedBy":2627,
 	"lcName":"123qa",
-	"modifiedTime":1759848463618,
+	"modifiedTime":1759848767372,
 	"name":"123QA",
 	"nodes":[
 		{
 			"context":{
-				"appName":"webhooks",
-				"resourceVersion":833,
-				"resourceName":"webhooks_default"
+				"appName":"microsoft_outlook",
+				"resourceVersion":4457,
+				"connectionId":"68e528dca1a6c341636fb277",
+				"resourceName":"microsoft_outlook_on_new_mail"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"dXC7x-1",
-			"id":"n_YABmJ",
+			"id":"n_V0XVf",
 			"index":1,
 			"inputs":{
-				"request":{
-					"contentType":"application/json"
-				}
+				"changeType":[
+					"created"
+				],
+				"folderId":"AQMkAGM2ZDBiNzA3LWYxOWMtNDg4ADktYmVmZS1lNmU0MTNjNjI0OTcALgAAAyWWI-H9FqtGjakAm61rOoIBAGy7s_bOTNZPup_hg8RKPVIAAAIBCQAAAA=="
 			},
 			"skip":false,
-			"subTitle":"Webhook",
-			"title":"New event",
+			"subTitle":"Microsoft Outlook",
+			"title":"New mail",
 			"trigger":{
-				"type":"WEBHOOK"
+				"type":"EVENT"
 			},
 			"type":"START"
 		}
@@ -52,5 +54,5 @@
 	"tags":[
 		
 	],
-	"version":27
+	"version":28
 }
