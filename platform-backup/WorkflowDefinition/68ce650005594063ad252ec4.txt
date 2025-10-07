@@ -95,7 +95,7 @@
 	"id":"68ce650005594063ad252ec4",
 	"lastModifiedBy":76193,
 	"lcName":"virtusa | slack update [dnd]",
-	"modifiedTime":1758684506230,
+	"modifiedTime":1759817663483,
 	"name":"Virtusa | Slack Update [DND]",
 	"nodes":[
 		{
@@ -213,7 +213,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_GiVOu-1",
 			"id":"n_Xl2Ez",
@@ -383,7 +383,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_GiVOu-1",
 			"id":"_VeHV0",
@@ -553,7 +553,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_GiVOu-1",
 			"id":"_c2hZ2",
@@ -717,7 +717,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_GiVOu-1",
 			"id":"_FYLZZ",
@@ -888,7 +888,7 @@
 				"link_names":true,
 				"messageType":"text",
 				"channel":"C08J2UC9P9R",
-				"text":"*Virtusa NoCode Apps Update {{ n_Rbpu3.outputs.date }}*\n*App 1:* In Virtusa In QA. Making changes based on business demo\n*App 2:* In product config. Tech Review ETA 3rd Oct\n*App 3:* In product config. In QA\n*App 4:* Support Virtusa in UAT\n*App 5*: In Discovery and design\n\n*UI*\n{{ n_Xl2Ez.outputs.result.UI_slack_text }}\n\n*BE*\n{{ _VeHV0.outputs.result.BE_slack_text }}\n\n*UI+BE*\n{{ _c2hZ2.outputs.result.UI_BE_slack_text }}\n\n*Product*\n{{ _FYLZZ.outputs.result.Product_slack_text }}\n\ncc: @Rachit Mittal sir @Abhishek Khurana sir @Kavish Manubolu sir @Abhinav Singi sir @Abhishek Singh sir @Shivam Satrawal sir",
+				"text":"*Virtusa NoCode Apps Update {{ n_Rbpu3.outputs.date }}*\n*App 1 | Commercial Meeting Tracker:* In Virtusa In QA. Making changes based on business demo\n*App 2 | POC App:* In product config. Tech Review ETA 6th Oct\n*App 3 | Ratings Normalization:* In product config. In QA\n*App 4 | Time Modification (CFO App):* In Production\n*App 5 | Manager Clearance:* In Discovery and design\n\n*UI*\n{{ n_Xl2Ez.outputs.result.UI_slack_text }}\n{{ _c2hZ2.outputs.result.UI_BE_slack_text }}\n\n*BE*\n{{ _VeHV0.outputs.result.BE_slack_text }}\n{{ _c2hZ2.outputs.result.UI_BE_slack_text }}\n\n*Product*\n{{ _FYLZZ.outputs.result.Product_slack_text }}\n\ncc: @Rachit Mittal sir @Abhishek Khurana sir @Kavish Manubolu sir @Abhinav Singi sir @Abhishek Singh sir @Shivam Satrawal sir",
 				"mrkdwn":true
 			},
 			"skip":false,
@@ -914,5 +914,5 @@
 	"tags":[
 		
 	],
-	"version":39
+	"version":40
 }
