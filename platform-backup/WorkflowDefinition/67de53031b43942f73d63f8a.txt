@@ -39,7 +39,7 @@
 	"id":"67de53031b43942f73d63f8a",
 	"lastModifiedBy":46030,
 	"lcName":"bhavesh1204",
-	"modifiedTime":1759808488858,
+	"modifiedTime":1759808539687,
 	"name":"bhavesh1204",
 	"nodes":[
 		{
@@ -83,8 +83,8 @@
 			"inputs":{
 				"pdfPages":[
 					{
-						"url":"www.google.com",
-						"externalPage":true
+						"url":"https://qa.unifyapps.com/p/0/automations/67de53031b43942f73d63f8a",
+						"externalPage":false
 					}
 				],
 				"exportType":"PDF",
@@ -169,5 +169,5 @@
 	"tags":[
 		"bhavesh1204"
 	],
-	"version":285
+	"version":286
 }
