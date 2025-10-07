@@ -5,12 +5,12 @@
 	"createdTime":1759841479666,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759841777791,
+		"deployedAt":1759842250008,
 		"deployedBy":24420,
-		"deployedDefinitionId":"68e50df1fb3db2786385361c",
+		"deployedDefinitionId":"68e50fc9fb3db27863853c61",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":2
+		"version":2,
+		"workflowVersion":3
 	},
 	"edges":[
 		{
@@ -31,7 +31,7 @@
 	"id":"68e50cc75a4d7b70d0f9e3bc",
 	"lastModifiedBy":24420,
 	"lcName":"smtp invalid emails",
-	"modifiedTime":1759842246745,
+	"modifiedTime":1759842518560,
 	"name":"SMTP Invalid emails",
 	"nodes":[
 		{
@@ -73,7 +73,7 @@
 			"context":{
 				"appName":"smtp",
 				"resourceVersion":3279,
-				"connectionId":"68bc05f02207e44db12109d5",
+				"connectionId":"686cb830d6807d57e55f6fe8",
 				"resourceName":"smtp_send_email",
 				"type":"APPLICATION"
 			},
@@ -89,7 +89,7 @@
 				"fromName":"Test",
 				"body":"Test",
 				"toEmail":"prachi.mishra@unifyapps.com",
-				"fromEmail":"notificationadmintest@virtusa.com"
+				"fromEmail":"hppatel531@gmail.com"
 			},
 			"skip":false,
 			"subTitle":"SMTP",
@@ -137,5 +137,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
