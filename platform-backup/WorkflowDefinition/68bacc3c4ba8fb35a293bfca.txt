@@ -5,12 +5,12 @@
 	"createdTime":1757072444067,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1757840235799,
+		"deployedAt":1759843987719,
 		"deployedBy":45771,
-		"deployedDefinitionId":"68c6836b98c9c0374de87068",
+		"deployedDefinitionId":"68e516935941fe6c16b19b3f",
 		"status":"DEPLOYED",
-		"version":9,
-		"workflowVersion":13
+		"version":10,
+		"workflowVersion":14
 	},
 	"edges":[
 		{
@@ -73,7 +73,7 @@
 	"id":"68bacc3c4ba8fb35a293bfca",
 	"lastModifiedBy":45771,
 	"lcName":"generate eval export url and import node",
-	"modifiedTime":1759843985710,
+	"modifiedTime":1759844612276,
 	"name":"generate eval export URL and import node",
 	"nodes":[
 		{
@@ -536,14 +536,13 @@
 				"requestTimeoutInSecs":-1,
 				"httpMethod":"POST",
 				"body":{
-					"modules":{
-						"items":{
+					"modules":[
+						{
 							"id":"e_asset",
 							"displayName":"UnifyApps Assets",
 							"enabled":true
-						},
-						"ua:type":"mappedArray"
-					}
+						}
+					]
 				},
 				"connectionType":"DIRECT",
 				"sslVerify":false,
@@ -631,5 +630,5 @@
 	"tags":[
 		
 	],
-	"version":14
+	"version":15
 }
