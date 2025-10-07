@@ -18,12 +18,19 @@
 			"skip":false,
 			"toNodeId":"n_DCVU6",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_DCVU6",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_kelhO",
+			"type":"next"
 		}
 	],
 	"id":"68e5415cadfbe13741b36083",
 	"lastModifiedBy":2621,
 	"lcName":"test",
-	"modifiedTime":1759855879168,
+	"modifiedTime":1759856771733,
 	"name":"test",
 	"nodes":[
 		{
@@ -59,7 +66,15 @@
 			"id":"n_43UCX",
 			"index":2,
 			"inputs":{
-				"variantId":"53044"
+				"price":{
+					"amount":100,
+					"currencyCode":"USD"
+				},
+				"inventoryId":"485416102",
+				"variantId":"53044",
+				"customersDetails":{
+					"count":1
+				}
 			},
 			"skip":false,
 			"subTitle":"Headout",
@@ -69,9 +84,9 @@
 		{
 			"context":{
 				"appName":"headout",
-				"resourceVersion":60,
+				"resourceVersion":53,
 				"connectionId":"68e540c7a1a6c34163702566",
-				"resourceName":"headout_get_booking_id",
+				"resourceName":"headout_list_bookings",
 				"type":"APPLICATION"
 			},
 			"debug":false,
@@ -80,14 +95,28 @@
 			"groupId":"_wfav9-1",
 			"id":"n_DCVU6",
 			"index":3,
-			"inputs":{
-				"productId":"25965",
-				"fetchVariants":true,
-				"language":"EN"
-			},
 			"skip":false,
 			"subTitle":"Headout",
-			"title":"Get product by ID",
+			"title":"List all bookings",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"headout",
+				"resourceVersion":53,
+				"connectionId":"68e540c7a1a6c34163702566",
+				"resourceName":"headout_list_bookings",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_wfav9-1",
+			"id":"n_kelhO",
+			"index":4,
+			"skip":false,
+			"subTitle":"Headout",
+			"title":"List all bookings",
 			"type":"ACTION"
 		}
 	],
@@ -108,5 +137,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
