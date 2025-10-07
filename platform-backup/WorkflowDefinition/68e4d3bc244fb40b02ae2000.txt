@@ -9,14 +9,14 @@
 			"fromNodeId":"n_OfSMZ",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_xA8Ux",
+			"toNodeId":"n_9r6jj",
 			"type":"next"
 		}
 	],
 	"id":"68e4d3bc244fb40b02ae2000",
 	"lastModifiedBy":43498,
 	"lcName":"sdfwef-jms-adi",
-	"modifiedTime":1759826889914,
+	"modifiedTime":1759826898035,
 	"name":"sdfwef-jms-adi",
 	"nodes":[
 		{
@@ -44,15 +44,19 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"stop"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_YigIf-1",
-			"id":"_xA8Ux",
+			"id":"n_9r6jj",
 			"index":2,
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":43498,
@@ -72,5 +76,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
