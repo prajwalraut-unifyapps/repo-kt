@@ -1,51 +1,68 @@
 {
 	"appsUsed":[
-		
+		"jms"
 	],
 	"createdTime":1759824070083,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_6wVU7",
+			"fromNodeId":"n_YhZws",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_ULu90",
+			"toNodeId":"n_yUfTv",
 			"type":"next"
 		}
 	],
 	"id":"68e4c8c6e8040a44a3ec896e",
 	"lastModifiedBy":43498,
 	"lcName":"sdfg-adi-jms",
-	"modifiedTime":1759824070083,
+	"modifiedTime":1759824089116,
 	"name":"sdfg-adi-jms",
 	"nodes":[
 		{
+			"context":{
+				"appName":"jms",
+				"resourceVersion":68,
+				"connectionId":"67592679b73f613be2e69445",
+				"resourceName":"jms_on_event_received"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_6wVU7-1",
-			"id":"_6wVU7",
-			"index":0,
+			"id":"n_YhZws",
+			"index":1,
+			"inputs":{
+				"queueName":"unifyapp"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"JMS",
+			"title":"On event received",
 			"trigger":{
 				"type":"EVENT"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"stop"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_6wVU7-1",
-			"id":"_ULu90",
-			"index":0,
+			"id":"n_yUfTv",
+			"index":2,
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":43498,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +76,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
