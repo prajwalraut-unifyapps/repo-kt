@@ -4,13 +4,21 @@
 	],
 	"createdTime":1723442896973,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759848774987,
+		"deployedBy":2627,
+		"deployedDefinitionId":"68e52944e3453e12a66797cb",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":28
+	},
 	"edges":[
 		
 	],
 	"id":"66b9a6d00275d14846b889c3",
 	"lastModifiedBy":2627,
 	"lcName":"123qa",
-	"modifiedTime":1759848767372,
+	"modifiedTime":1759858516922,
 	"name":"123QA",
 	"nodes":[
 		{
@@ -21,7 +29,7 @@
 				"resourceName":"microsoft_outlook_on_new_mail"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"dXC7x-1",
 			"id":"n_V0XVf",
@@ -54,5 +62,5 @@
 	"tags":[
 		
 	],
-	"version":28
+	"version":29
 }
