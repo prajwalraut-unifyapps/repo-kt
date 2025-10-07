@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759824070083,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_6wVU7",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_ULu90",
+			"type":"next"
+		}
+	],
+	"id":"68e4c8c6e8040a44a3ec896e",
+	"lastModifiedBy":43498,
+	"lcName":"sdfg-adi-jms",
+	"modifiedTime":1759824070083,
+	"name":"sdfg-adi-jms",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_6wVU7-1",
+			"id":"_6wVU7",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_6wVU7-1",
+			"id":"_ULu90",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":43498,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
