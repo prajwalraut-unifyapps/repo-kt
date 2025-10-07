@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759829538509,
+	"deleted":false,
+	"description":"hbvv",
+	"edges":[
+		{
+			"fromNodeId":"_mM1NZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_qvCAY",
+			"type":"next"
+		}
+	],
+	"id":"68e4de22244fb40b02ae6f4a",
+	"lastModifiedBy":33444,
+	"lcName":"cyg",
+	"modifiedTime":1759829538509,
+	"name":"cyg",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_mM1NZ-1",
+			"id":"_mM1NZ",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_mM1NZ-1",
+			"id":"_qvCAY",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":33444,
+	"projectId":38,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		"testtest"
+	],
+	"version":0
+}
