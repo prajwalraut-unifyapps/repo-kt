@@ -9,14 +9,14 @@
 			"fromNodeId":"n_FRigc",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_RbFTW",
+			"toNodeId":"n_IsxhL",
 			"type":"next"
 		}
 	],
 	"id":"68e536e7be4be8476bc251b6",
 	"lastModifiedBy":2621,
 	"lcName":"test",
-	"modifiedTime":1759852309417,
+	"modifiedTime":1759852437308,
 	"name":"test",
 	"nodes":[
 		{
@@ -32,7 +32,11 @@
 			"groupId":"_vpbga-1",
 			"id":"n_FRigc",
 			"index":1,
-			"inputs":{},
+			"inputs":{
+				"bookingId":23299405,
+				"status":"COMPLETED",
+				"eventTimestamp":"2025-10-07T15:51:52Z"
+			},
 			"skip":false,
 			"subTitle":"Headout",
 			"title":"On booking events",
@@ -42,15 +46,19 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"stop"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_vpbga-1",
-			"id":"_RbFTW",
+			"id":"n_IsxhL",
 			"index":2,
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":2621,
@@ -70,5 +78,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
