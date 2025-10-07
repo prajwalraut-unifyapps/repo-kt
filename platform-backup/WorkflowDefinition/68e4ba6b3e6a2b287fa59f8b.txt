@@ -5,12 +5,12 @@
 	"createdTime":1759820395139,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759821295404,
+		"deployedAt":1759821668426,
 		"deployedBy":44096,
-		"deployedDefinitionId":"68e4bdef3e6a2b287fa5b004",
+		"deployedDefinitionId":"68e4bf64be41c4122945a7b8",
 		"status":"DEPLOYED",
-		"version":6,
-		"workflowVersion":6
+		"version":7,
+		"workflowVersion":7
 	},
 	"edges":[
 		{
@@ -38,7 +38,7 @@
 	"id":"68e4ba6b3e6a2b287fa59f8b",
 	"lastModifiedBy":44096,
 	"lcName":"ws",
-	"modifiedTime":1759821667018,
+	"modifiedTime":1759823600149,
 	"name":"ws",
 	"nodes":[
 		{
@@ -107,7 +107,7 @@
 						}
 					}
 				},
-				"code":"return [\"context\":[\"resourceName\":\"callables_call_automation_async\",\"appName\":\"callables\"],\"inputs\":[\"parameters\":[:],\"automationId\":\"68e4bb6bc403722219fe9028\"]]",
+				"code":"return [\"context\":[\"resourceName\":\"callables_call_automation\",\"appName\":\"callables\"],\"inputs\":[\"parameters\":[:],\"automationId\":\"68e4bb6bc403722219fe9028\",\"synchronous\":true]]",
 				"compile_static":false,
 				"captureStdOutput":false
 			},
@@ -179,5 +179,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
