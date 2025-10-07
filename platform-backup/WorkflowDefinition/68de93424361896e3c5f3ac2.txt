@@ -31,7 +31,7 @@
 	"id":"68de93424361896e3c5f3ac2",
 	"lastModifiedBy":43498,
 	"lcName":"jms-trigger",
-	"modifiedTime":1759829341519,
+	"modifiedTime":1759848387570,
 	"name":"jms-trigger",
 	"nodes":[
 		{
@@ -76,7 +76,7 @@
 			"inputs":{
 				"queueName":"unifyapp",
 				"messageFormat":"text",
-				"message":"adi 4"
+				"message":"adi"
 			},
 			"skip":false,
 			"subTitle":"JMS",
@@ -92,14 +92,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_5jWnf-1",
 			"id":"n_W3v9k",
 			"index":3,
 			"inputs":{
 				"queueName":"unifyapp",
-				"timeout":"1000"
+				"timeout":"1"
 			},
 			"skip":false,
 			"subTitle":"JMS",
@@ -124,5 +124,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
