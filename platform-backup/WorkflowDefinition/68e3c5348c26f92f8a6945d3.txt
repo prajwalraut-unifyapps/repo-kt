@@ -81,7 +81,7 @@
 	"id":"68e3c5348c26f92f8a6945d3",
 	"lastModifiedBy":177799,
 	"lcName":"connection_initiation_rishabh",
-	"modifiedTime":1759818524507,
+	"modifiedTime":1759818937028,
 	"name":"connection_initiation_rishabh",
 	"nodes":[
 		{
@@ -432,7 +432,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_xDZfa-1",
 			"id":"n_MkQPq",
@@ -440,19 +440,25 @@
 			"inputs":{
 				"output":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"returnTo_url"
+					],
 					"properties":{
 						"returnTo_url":{
 							"type":"string",
 							"title":"Return To Url"
 						}
-					},
-					"additionalProperties":false,
-					"required":[
-						"returnTo_url"
-					]
+					}
 				},
 				"input":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"provider_id",
+						"state_",
+						"base_url"
+					],
 					"properties":{
 						"provider_id":{
 							"type":"string",
@@ -466,13 +472,7 @@
 							"type":"string",
 							"title":"Base Url"
 						}
-					},
-					"additionalProperties":false,
-					"required":[
-						"provider_id",
-						"state_",
-						"base_url"
-					]
+					}
 				},
 				"code":"import java.net.URLEncoder\n\n// Inputs mapped from UnifyApps\ndef ly__state      = state_        // e.g. \"active\"\ndef providerId = provider_id   // e.g. \"hubspot\"\n\n// Base URL with providerId dynamically appended\ndef integrationRedirect = \"${base_url}/integration/auth/redirect/${providerId}\"\n\n\n// Build query string\ndef query = [\n    \"ly__state=${ly__state}\"\n].join(\"&\")\n\n// Final URL\ndef finalUrl = \"${integrationRedirect}?${query}\"\n\n// ✅ Return single field for UnifyApps\nreturn [returnTo_url: finalUrl.toString()]\n",
 				"compile_static":false,
@@ -480,7 +480,7 @@
 				"parameters":{
 					"provider_id":"{{ n_boHCg.outputs.body.ProviderId }}",
 					"state_":"{{ n_boHCg.outputs.body.State }}",
-					"base_url":"{{ __ENV__.outputs.base_lyearn_url }}"
+					"base_url":"{{ __ENV__.outputs.base-lyearn-url }}"
 				}
 			},
 			"skip":false,
@@ -496,7 +496,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_xDZfa-1",
 			"id":"_E4XVR",
@@ -631,7 +631,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_xDZfa-1",
 			"id":"n_RRZlU",
@@ -668,5 +668,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
