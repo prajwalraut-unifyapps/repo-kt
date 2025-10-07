@@ -30,7 +30,7 @@
 	"id":"68e5315523ca0361355e551a",
 	"lastModifiedBy":21056,
 	"lcName":"camera recording",
-	"modifiedTime":1759850967289,
+	"modifiedTime":1759850973118,
 	"name":"camera recording",
 	"nodes":[
 		{
@@ -143,7 +143,7 @@
 			"index":4,
 			"inputs":{
 				"result":{
-					"new":"200"
+					"new":"{{ n_CR7Yq.outputs.url }}"
 				}
 			},
 			"skip":false,
@@ -169,5 +169,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
