@@ -24,7 +24,7 @@
 	"id":"68e0d97edfb5c8781f69c04d",
 	"lastModifiedBy":45771,
 	"lcName":"testttt",
-	"modifiedTime":1759819248611,
+	"modifiedTime":1759819271315,
 	"name":"testttt",
 	"nodes":[
 		{
@@ -76,7 +76,7 @@
 				"requestTimeoutInSecs":-1,
 				"httpMethod":"POST",
 				"body":{
-					"sql":"{{ n_lEZw0.outputs.statement.sql }}"
+					"sql":"show routine load for ROUTINE_LOAD_WORKFLOW_EXECUTION;"
 				},
 				"connectionType":"DIRECT",
 				"sslVerify":true,
@@ -130,5 +130,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
