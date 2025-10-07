@@ -6,7 +6,7 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"n_vgfv1",
+			"fromNodeId":"n_6I4lD",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_hRNWr",
@@ -30,31 +30,24 @@
 	"id":"68c054b9ecdc557672b81d0f",
 	"lastModifiedBy":39715,
 	"lcName":"sumitbansaltesting",
-	"modifiedTime":1759400683553,
+	"modifiedTime":1759819910895,
 	"name":"sumitBansalTesting",
 	"nodes":[
 		{
 			"context":{
-				"appName":"webhooks",
-				"resourceVersion":809,
-				"resourceName":"webhooks_default"
+				"appName":"callables"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_hIm1D-1",
-			"id":"n_vgfv1",
+			"id":"n_6I4lD",
 			"index":1,
-			"inputs":{
-				"request":{
-					"contentType":"application/json"
-				}
-			},
 			"skip":false,
-			"subTitle":"Webhook",
-			"title":"New event",
+			"subTitle":"Callable",
+			"title":"Select a trigger event",
 			"trigger":{
-				"type":"WEBHOOK"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
@@ -81,7 +74,7 @@
 				"python_version":"3.12",
 				"captureStdOutput":false
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Python script",
 			"type":"ACTION"
@@ -99,7 +92,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_hIm1D-1",
 			"id":"n_28GEh",
@@ -124,7 +117,7 @@
 				},
 				"jsonString":"\"[{\\\"name\\\":\\\"Virtu-Business-Public-sub-key\\\",\\\"value\\\":\\\"2f43f7d7982b42298a17bc98a8e77d4c\\\"},{\\\"name\\\":\\\"fusionUserName\\\",\\\"value\\\":\\\"fusionmwuser\\\"},{\\\"name\\\":\\\"fusionPassword\\\",\\\"value\\\":\\\"Welcome@123\\\"},{\\\"name\\\":\\\"Virtusa-Projects-Subscription-Key\\\",\\\"value\\\":\\\"d6f3f63f50854c0990cd61dbd7e64057\\\"},{\\\"name\\\":\\\"virtuIntegrationAppClientID\\\",\\\"value\\\":\\\"fb37e32e-cf16-434b-93e6-3420f7bc11f9\\\"},{\\\"name\\\":\\\"virtuIntegrationAppSecret\\\",\\\"value\\\":\\\"NDs8Q~QHYF7lHLNCcqs8iFFlFO3A0gain8YykdAu\\\"},{\\\"name\\\":\\\"virtuIntegrationAppAudiance\\\",\\\"value\\\":\\\"fb37e32e-cf16-434b-93e6-3420f7bc11f9\\\"},{\\\"name\\\":\\\"virtu-Integration-AD-Tenent\\\",\\\"value\\\":\\\"0d85160c-5899-44ca-acc8-db1501b993b6\\\"},{\\\"name\\\":\\\"RMPaasResourceId\\\",\\\"value\\\":\\\"fb37e32e-cf16-434b-93e6-3420f7bc11f9\\\"},{\\\"name\\\":\\\"RMPaasClientSecret\\\",\\\"value\\\":\\\"NDs8Q~QHYF7lHLNCcqs8iFFlFO3A0gain8YykdAu\\\"},{\\\"name\\\":\\\"RMPaasClientId\\\",\\\"value\\\":\\\"fb37e32e-cf16-434b-93e6-3420f7bc11f9\\\"},{\\\"name\\\":\\\"Virtu-Business-Internal-sub-key\\\",\\\"value\\\":\\\"2e75c34b7ee14a9c94f1703af8c850c7\\\"}]\""
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Utility by UnifyApps",
 			"title":"Deserialise string to JSON object",
 			"type":"ACTION"
@@ -137,14 +130,15 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_hIm1D-1",
 			"id":"n_po0sB",
 			"index":4,
 			"inputs":{
+				"code":"return 2;\n",
 				"compile_static":false,
-				"code":"assert false : \"Intentional failure\"\n"
+				"captureStdOutput":false
 			},
 			"skip":false,
 			"subTitle":"Code by WurkNow",
@@ -169,5 +163,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
