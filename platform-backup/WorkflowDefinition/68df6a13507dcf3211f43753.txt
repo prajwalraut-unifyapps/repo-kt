@@ -19,6 +19,13 @@
 			"fromNodeId":"n_7CuSI",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_XPGvu",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_XPGvu",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_sdWBH",
 			"type":"next"
 		},
@@ -82,7 +89,7 @@
 	"id":"68df6a13507dcf3211f43753",
 	"lastModifiedBy":161877,
 	"lcName":"dep-graph",
-	"modifiedTime":1759493110743,
+	"modifiedTime":1759824862368,
 	"name":"dep-graph",
 	"nodes":[
 		{
@@ -108,6 +115,32 @@
 		},
 		{
 			"context":{
+				"appName":"decision_table_by_unifyapps",
+				"resourceVersion":857,
+				"resourceName":"decision_table_by_unifyapps_execute_table",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_0aXnR-1",
+			"id":"n_XPGvu",
+			"index":2,
+			"inputs":{
+				"responseType":"FINAL_MATCH",
+				"data":{
+					"a":9,
+					"b":7
+				},
+				"entityId":"e_68e440a3e78d7d471d26fda7"
+			},
+			"skip":false,
+			"subTitle":"Decision Table by UnifyApps",
+			"title":"Execute a Decision Table",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"callables",
 				"resourceVersion":1026,
 				"resourceName":"callables_call_automation",
@@ -118,7 +151,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_sdWBH",
-			"index":2,
+			"index":3,
 			"inputs":{
 				"automationId":"68defa11d6d230107d495d5d",
 				"runtimeConnections":{},
@@ -139,11 +172,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_0RhwL",
-			"index":3,
+			"index":4,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -196,7 +229,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_taqdm",
-			"index":4,
+			"index":5,
 			"inputs":{
 				"automationId":"68de641fed7fcc6978211234",
 				"runtimeConnections":{},
@@ -221,7 +254,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_VOYYJ",
-			"index":5,
+			"index":6,
 			"inputs":{
 				"automationId":"6868e50ed1ed1e08253fa172",
 				"runtimeConnections":{},
@@ -247,7 +280,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_YQUx4",
-			"index":6,
+			"index":7,
 			"inputs":{},
 			"skip":false,
 			"subTitle":"Gmail",
@@ -267,7 +300,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_v76xa",
-			"index":7,
+			"index":8,
 			"inputs":{},
 			"skip":false,
 			"subTitle":"Github",
@@ -286,7 +319,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_kMXFh",
-			"index":8,
+			"index":9,
 			"inputs":{
 				"object_type":"trial1"
 			},
@@ -307,7 +340,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_3Ltb2",
-			"index":9,
+			"index":10,
 			"inputs":{
 				"automationId":"68df6a13507dcf3211f43753",
 				"runtimeConnections":{},
@@ -332,7 +365,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_0aXnR-1",
 			"id":"n_kDZe5",
-			"index":10,
+			"index":11,
 			"inputs":{
 				"result":"s"
 			},
@@ -359,5 +392,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
