@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759816633502,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_VpTSH",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_rnaUA",
+			"type":"next"
+		}
+	],
+	"id":"68e4abb9e1a58a521ea6e949",
+	"lastModifiedBy":678,
+	"lcName":"vdsv",
+	"modifiedTime":1759816633502,
+	"name":"vdsv",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_VpTSH-1",
+			"id":"_VpTSH",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_VpTSH-1",
+			"id":"_rnaUA",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":678,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
