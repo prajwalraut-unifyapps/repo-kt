@@ -75,7 +75,7 @@
 	"id":"68e51417cfabef45d1318a32",
 	"lastModifiedBy":39712,
 	"lcName":"test",
-	"modifiedTime":1759843713863,
+	"modifiedTime":1759843786713,
 	"name":"test",
 	"nodes":[
 		{
@@ -277,7 +277,7 @@
 						}
 					}
 				},
-				"code":"import java.text.SimpleDateFormat\n\ndef now = new Date()\ndef sdf = new SimpleDateFormat(\"yyyy-MM-dd HH:mm:ss\")\ndef formattedTime = sdf.format(now)\ndef final1 = \"Current system time: ${formattedTime}\"\nreturn [\"final1\":final1]",
+				"code":"import java.text.SimpleDateFormat\n\ndef now = new Date()\ndef sdf = new SimpleDateFormat(\"yyyy-MM-dd HH:mm:ss.SSS\")\ndef formattedTime = sdf.format(now)\ndef final1 = \"Current system time: ${formattedTime}\"\nreturn [\"final1\": final1]",
 				"compile_static":false,
 				"captureStdOutput":false
 			},
@@ -343,7 +343,7 @@
 						}
 					}
 				},
-				"code":"import java.text.SimpleDateFormat\n\ndef now = new Date()\ndef sdf = new SimpleDateFormat(\"yyyy-MM-dd HH:mm:ss\")\ndef formattedTime = sdf.format(now)\ndef final1 = \"Current system time: ${formattedTime}\"\nreturn [\"final2\":final1]",
+				"code":"import java.text.SimpleDateFormat\n\ndef now = new Date()\ndef sdf = new SimpleDateFormat(\"yyyy-MM-dd HH:mm:ss.SSS\")\ndef formattedTime = sdf.format(now)\ndef final1 = \"Current system time: ${formattedTime}\"\nreturn [\"final2\":final1]",
 				"compile_static":false,
 				"captureStdOutput":false
 			},
@@ -385,5 +385,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
