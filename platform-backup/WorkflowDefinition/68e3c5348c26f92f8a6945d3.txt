@@ -88,7 +88,7 @@
 	"id":"68e3c5348c26f92f8a6945d3",
 	"lastModifiedBy":177799,
 	"lcName":"connection_initiation_rishabh",
-	"modifiedTime":1759817990363,
+	"modifiedTime":1759818039677,
 	"name":"connection_initiation_rishabh",
 	"nodes":[
 		{
@@ -163,7 +163,6 @@
 							},
 							"additionalProperties":false,
 							"required":[
-								"redirect_url",
 								"connected"
 							]
 						}
@@ -723,5 +722,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
