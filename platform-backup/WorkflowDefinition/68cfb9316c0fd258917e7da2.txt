@@ -45,7 +45,7 @@
 	"id":"68cfb9316c0fd258917e7da2",
 	"lastModifiedBy":165764,
 	"lcName":"createshorttimetoken",
-	"modifiedTime":1759847544079,
+	"modifiedTime":1759847676327,
 	"name":"createShortTimeToken",
 	"nodes":[
 		{
@@ -419,8 +419,8 @@
 			"id":"n_XGiZv",
 			"index":4,
 			"inputs":{
-				"headers":"{{ n_EWBIi.outputs.headers }}",
-				"formData":"{{ n_EWBIi.outputs.formData }}",
+				"headers":"{{ n_FO6Mm.outputs.result.headers }}",
+				"formData":"{{ n_FO6Mm.outputs.result.formData }}",
 				"applicationId":"public-secret",
 				"packagedSession":false,
 				"identityProviderId":"680cc754245ecaaee2a00aa1"
@@ -471,5 +471,5 @@
 	"tags":[
 		
 	],
-	"version":33
+	"version":34
 }
