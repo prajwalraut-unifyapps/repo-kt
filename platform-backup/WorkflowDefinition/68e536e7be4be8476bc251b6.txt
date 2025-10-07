@@ -9,14 +9,14 @@
 			"fromNodeId":"n_FRigc",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_IsxhL",
+			"toNodeId":"n_066pg",
 			"type":"next"
 		}
 	],
 	"id":"68e536e7be4be8476bc251b6",
 	"lastModifiedBy":1234,
 	"lcName":"test",
-	"modifiedTime":1759852538484,
+	"modifiedTime":1759852574515,
 	"name":"test",
 	"nodes":[
 		{
@@ -50,10 +50,10 @@
 				"appName":"stop"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_vpbga-1",
-			"id":"n_IsxhL",
+			"id":"n_066pg",
 			"index":2,
 			"skip":false,
 			"subTitle":"Stop",
@@ -78,5 +78,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
