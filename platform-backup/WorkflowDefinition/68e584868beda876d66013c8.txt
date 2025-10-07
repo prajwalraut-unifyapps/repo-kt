@@ -23,22 +23,29 @@
 			"fromNodeId":"n_9ti39",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_0JrnF",
+			"toNodeId":"n_hA3zY",
 			"type":"loop"
 		},
 		{
-			"fromNodeId":"n_0JrnF",
+			"fromNodeId":"n_hA3zY",
 			"name":"loopback",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_9ti39",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_9ti39",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_XntYs",
 			"type":"next"
 		}
 	],
 	"id":"68e584868beda876d66013c8",
 	"lastModifiedBy":47811,
 	"lcName":"count1",
-	"modifiedTime":1759872167240,
+	"modifiedTime":1759872248722,
 	"name":"count1",
 	"nodes":[
 		{
@@ -122,15 +129,62 @@
 			"type":"LOOP"
 		},
 		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":4543,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_9ti39@_QwxmF-1@l",
-			"id":"n_0JrnF",
+			"id":"n_hA3zY",
 			"index":4,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"properties_ClientID",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ n_9ti39.outputs.item.properties.ClientID }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"ProjectTest",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"translationsOption":"DEFAULT",
+				"page":{
+					"paginateBy":"OFFSET",
+					"limit":20
+				},
+				"numberOfRecordsToFetch":"SINGLE",
+				"readThroughSessionVariables":false,
+				"includeTotalCount":false
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Storage by UnifyApps",
+			"title":"Fetch records",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_QwxmF-1",
+			"id":"n_XntYs",
+			"index":5,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":47811,
@@ -150,5 +204,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
