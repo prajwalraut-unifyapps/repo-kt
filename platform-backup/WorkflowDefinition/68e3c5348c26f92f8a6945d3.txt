@@ -1,12 +1,63 @@
 {
 	"appsUsed":[
-		"storage_by_unifyapps"
+		
 	],
 	"createdTime":1759757620774,
 	"deleted":false,
 	"edges":[
 		{
 			"fromNodeId":"n_boHCg",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_F77jW",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_F77jW",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_5QVsF",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_5QVsF",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_LIXGc",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_LIXGc",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_BvpXM",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_BvpXM",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Dl6pj",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"_Dl6pj",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_P0nvw",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_P0nvw",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_MkQPq",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_BvpXM",
+			"name":"no",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_MkQPq",
@@ -16,11 +67,11 @@
 			"fromNodeId":"n_MkQPq",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_UyYue",
+			"toNodeId":"_E4XVR",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_UyYue",
+			"fromNodeId":"_E4XVR",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_9kyrn",
@@ -30,21 +81,14 @@
 			"fromNodeId":"n_9kyrn",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_6nCu0",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_6nCu0",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_nwsSv",
+			"toNodeId":"n_RRZlU",
 			"type":"next"
 		}
 	],
 	"id":"68e3c5348c26f92f8a6945d3",
 	"lastModifiedBy":177799,
 	"lcName":"connection_initiation_rishabh",
-	"modifiedTime":1759817571287,
+	"modifiedTime":1759817990363,
 	"name":"connection_initiation_rishabh",
 	"nodes":[
 		{
@@ -61,9 +105,70 @@
 			"index":1,
 			"inputs":{
 				"request":{
-					"contentType":"application/json"
+					"contentType":"application/json",
+					"body":{
+						"type":"object",
+						"properties":{
+							"UserId":{
+								"type":"string",
+								"title":"UserId"
+							},
+							"WorkspaceId":{
+								"type":"string",
+								"title":"WorkspaceId"
+							},
+							"OrgLevel":{
+								"type":"string",
+								"title":"OrgLevel"
+							},
+							"State":{
+								"type":"string",
+								"title":"State"
+							},
+							"ProviderId":{
+								"type":"string",
+								"title":"ProviderId"
+							},
+							"App_Name":{
+								"type":"string",
+								"title":"App Name"
+							}
+						},
+						"additionalProperties":false,
+						"required":[
+							"App_Name"
+						]
+					}
 				},
 				"endpointType":"REST",
+				"response":[
+					{
+						"name":"redirect",
+						"status":308,
+						"contentType":"application/json",
+						"textBody":{
+							"type":"string"
+						},
+						"body":{
+							"type":"object",
+							"properties":{
+								"redirect_url":{
+									"type":"string",
+									"title":"Redirect Url"
+								},
+								"connected":{
+									"type":"boolean",
+									"title":"Connected"
+								}
+							},
+							"additionalProperties":false,
+							"required":[
+								"redirect_url",
+								"connected"
+							]
+						}
+					}
+				],
 				"streamingResponse":false
 			},
 			"skip":false,
@@ -73,6 +178,259 @@
 				"type":"CALLABLE"
 			},
 			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":19,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_xDZfa-1",
+			"id":"n_F77jW",
+			"index":2,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"connection_name":{
+							"type":"string",
+							"title":"Connection Name"
+						},
+						"connectionExists":{
+							"type":"boolean",
+							"title":"connectionExists",
+							"default":"false"
+						}
+					},
+					"required":[
+						"connection_name",
+						"connectionExists"
+					]
+				}
+			},
+			"inputs":{
+				"connection_name":"{{ n_boHCg.outputs.body.App_Name }}_{{ n_boHCg.outputs.body.OrgLevel }}_{{ n_boHCg.outputs.body.WorkspaceId }}_{{ n_boHCg.outputs.body.UserId }}_LYEARN_DND",
+				"connectionExists":"false"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"connection_name":{
+							"type":"string",
+							"title":"Connection Name"
+						},
+						"connectionExists":{
+							"type":"boolean",
+							"title":"connectionExists",
+							"default":"false"
+						}
+					},
+					"required":[
+						"connection_name",
+						"connectionExists"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":21,
+				"resourceName":"code_by_unifyapps_javascript",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_xDZfa-1",
+			"id":"n_5QVsF",
+			"index":3,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"toFindConnectionName"
+					],
+					"properties":{
+						"toFindConnectionName":{
+							"type":"string",
+							"title":"toFindConnectionName"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"workspace_id",
+						"org_level",
+						"state",
+						"provider_id",
+						"app_name"
+					],
+					"ua:__linkedVariable__":"n_4rzJF.outputs.body",
+					"properties":{
+						"user_id":{
+							"type":"string",
+							"title":"User Id"
+						},
+						"workspace_id":{
+							"type":"string",
+							"title":"Workspace Id"
+						},
+						"org_level":{
+							"type":"string",
+							"title":"Org Level"
+						},
+						"state":{
+							"type":"string",
+							"title":"State"
+						},
+						"provider_id":{
+							"type":"string",
+							"title":"Provider Id"
+						},
+						"app_name":{
+							"type":"string",
+							"title":"App Name"
+						}
+					}
+				},
+				"code":"function getConnectionName({app_name, org_level, workspace_id, user_id}){\n  const connectionName = `${app_name}_${org_level}_${workspace_id}`;\n  if(org_level !== 'workspace'){\n    connectionName = `${connectionName}_${user_id}`;\n  }\n  return {toFindConnectionName: connectionName};\n}\n\ngetConnectionName({app_name, org_level, workspace_id, user_id})",
+				"isAsync":false,
+				"parameters":{
+					"user_id":"{{ n_boHCg.outputs.body.UserId }}",
+					"workspace_id":"{{ n_boHCg.outputs.body.WorkspaceId }}",
+					"org_level":"{{ n_boHCg.outputs.body.OrgLevel }}",
+					"state":"{{ n_boHCg.outputs.body.State }}",
+					"provider_id":"{{ n_boHCg.outputs.body.ProviderId }}",
+					"app_name":"{{ n_boHCg.outputs.body.App_Name }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Javascript",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":0,
+				"resourceName":"standard_entities_get_connections",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_xDZfa-1",
+			"id":"n_LIXGc",
+			"index":4,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"name",
+							"filter":{
+								"operator":"CONTAINS",
+								"value":"{{ n_5QVsF.outputs.result.toFindConnectionName }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"offset":0,
+				"size":1
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Get connections",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":21,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_xDZfa-1",
+			"id":"n_BvpXM",
+			"index":5,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_LIXGc.outputs.connections[0].id }}",
+						"filter":{
+							"operator":"EXISTS"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":19,
+				"resourceName":"callables_return_response_to_api",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_BvpXM@_xDZfa-1@y",
+			"id":"_Dl6pj",
+			"index":6,
+			"inputs":{
+				"streamingCompleted":true,
+				"responseName":"308_redirect",
+				"body":{
+					"connected":true
+				},
+				"status":308
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to API request",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_BvpXM@_xDZfa-1@y",
+			"id":"n_P0nvw",
+			"index":7,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		},
 		{
 			"context":{
@@ -86,29 +444,23 @@
 			"fallbackMode":"STOP",
 			"groupId":"_xDZfa-1",
 			"id":"n_MkQPq",
-			"index":2,
+			"index":8,
 			"inputs":{
 				"output":{
 					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"returnTo_url"
-					],
 					"properties":{
 						"returnTo_url":{
 							"type":"string",
 							"title":"Return To Url"
 						}
-					}
+					},
+					"additionalProperties":false,
+					"required":[
+						"returnTo_url"
+					]
 				},
 				"input":{
 					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"provider_id",
-						"state_",
-						"base_url"
-					],
 					"properties":{
 						"provider_id":{
 							"type":"string",
@@ -122,11 +474,16 @@
 							"type":"string",
 							"title":"Base Url"
 						}
-					}
+					},
+					"additionalProperties":false,
+					"required":[
+						"provider_id",
+						"state_",
+						"base_url"
+					]
 				},
-				"code":"import java.net.URLEncoder\n\n// Inputs mapped from UnifyApps\ndef ly__state      = state_        // e.g. \"active\"\ndef providerId = provider_id   // e.g. \"hubspot\"\n\n// Base URL with providerId dynamically appended\ndef integrationRedirect = \"${base_url}/integration/auth/redirect/${providerId}\"\n\n\n// Build query string\ndef query = [\n    \"ly__state=${ly__state}\"\n].join(\"&\")\n\n// Final URL\ndef finalUrl = \"${integrationRedirect}?${query}\"\n\n// ✅ Return single field for UnifyApps\nreturn [returnTo_url: finalUrl.toString()]\n",
 				"compile_static":false,
-				"captureStdOutput":false,
+				"code":"import java.net.URLEncoder\n\n// Inputs mapped from UnifyApps\ndef ly__state      = state_        // e.g. \"active\"\ndef providerId = provider_id   // e.g. \"hubspot\"\n\n// Base URL with providerId dynamically appended\ndef integrationRedirect = \"${base_url}/integration/auth/redirect/${providerId}\"\n\n\n// Build query string\ndef query = [\n    \"ly__state=${ly__state}\"\n].join(\"&\")\n\n// Final URL\ndef finalUrl = \"${integrationRedirect}?${query}\"\n\n// ✅ Return single field for UnifyApps\nreturn [returnTo_url: finalUrl.toString()]\n",
 				"parameters":{
 					"provider_id":"{{ n_4rzJF.outputs.body.provider_id }}",
 					"state_":"{{ n_4rzJF.outputs.body.state }}",
@@ -149,8 +506,8 @@
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_xDZfa-1",
-			"id":"n_UyYue",
-			"index":3,
+			"id":"_E4XVR",
+			"index":9,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -159,7 +516,7 @@
 				"body":{
 					"authType":"OAUTH",
 					"inputs":{
-						"name":"qwerty",
+						"name":"{{ n_F77jW.outputs.connection_name }}",
 						"circuitBreakerConfig":{
 							"enabled":false
 						},
@@ -168,12 +525,12 @@
 						},
 						"authType":"OAUTH"
 					},
-					"name":"qwerty"
+					"name":"{{ n_F77jW.outputs.connection_name }}"
 				},
 				"connectionType":"DIRECT",
 				"sslVerify":false,
 				"path":"/api-endpoint/admin/oauth/authorize",
-				"baseUrl":"https://qa.unifyapps.com",
+				"baseUrl":"https://lyearn.uat-us-east-1.unifyapps.com",
 				"responseHeaders":[
 					"content-security-policy"
 				],
@@ -240,23 +597,23 @@
 					},
 					{
 						"key":"appName",
-						"value":"hubspot"
+						"value":"{{ n_4rzJF.outputs.body.app_name }}"
 					},
 					{
 						"key":"returnTo",
-						"value":"https://class-api.dev.lyearn.com/integration/auth/redirect/62bbd534accecdaaca2b5ee9?ly__state=eyJ3b3Jrc3BhY2VJZCI6IjYwOTM5YzBhNGUxZWI0OGRiZjJlMGUyNSIsInVzZXJJZCI6IjYwOTM5ZDI5NGUxZWI0OGRiZjJlYzQ5YiIsInJlZGlyZWN0VXJsIjoiaHR0cHM6Ly9tZWV0LXFhLmx5ZWFybi5jb20vaW50ZWdyYXRpb24tc3RhdHVzL2luZGV4Lmh0bWw/c3VjY2Vzcz10cnVlIiwiZmFpbHVyZVVybCI6Imh0dHBzOi8vbWVldC1xYS5seWVhcm4uY29tL2ludGVncmF0aW9uLXN0YXR1cy9pbmRleC5odG1sP3N1Y2Nlc3M9ZmFsc2UiLCJzY29wZSI6IndvcmtzcGFjZSJ9"
+						"value":"{{ n_MkQPq.outputs.result.returnTo_url }}"
 					}
 				],
 				"responseContentType":"application/json",
-				"followRedirects":"NEVER",
+				"followRedirects":"NORMAL",
 				"headersList":[
 					{
 						"key":"x-admin-authorization",
-						"value":"66732d0f1775b60a2f0f20e0"
+						"value":"68df8e13f501fd2fd306cbe2"
 					},
 					{
 						"key":"x-ua-assume-customer-id",
-						"value":"1"
+						"value":"26"
 					},
 					{
 						"key":"Content-Type",
@@ -285,7 +642,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_xDZfa-1",
 			"id":"n_9kyrn",
-			"index":4,
+			"index":10,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -327,38 +684,8 @@
 		},
 		{
 			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":89,
-				"resourceName":"storage_by_unifyapps_create_record",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_xDZfa-1",
-			"id":"n_6nCu0",
-			"index":5,
-			"inputs":{
-				"writeThroughSessionVariables":false,
-				"object_type":"user_details",
-				"record":{
-					"user_id":"{{ n_4rzJF.outputs.body.user_id }}",
-					"workspace_id":"{{ n_4rzJF.outputs.body.workspace_id }}",
-					"org_level":"{{ n_4rzJF.outputs.body.org_level }}",
-					"state":"{{ n_4rzJF.outputs.body.state }}",
-					"provider_id":"{{ n_4rzJF.outputs.body.provider_id }}",
-					"app_name":"{{ n_4rzJF.outputs.body.app_name }}"
-				}
-			},
-			"skip":false,
-			"subTitle":"Storage by UnifyApps",
-			"title":"Create record",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"callables",
-				"resourceVersion":1077,
+				"resourceVersion":19,
 				"resourceName":"callables_return_response_to_api",
 				"type":"APPLICATION"
 			},
@@ -366,10 +693,12 @@
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_xDZfa-1",
-			"id":"n_nwsSv",
-			"index":6,
+			"id":"n_RRZlU",
+			"index":11,
 			"inputs":{
-				"streamingCompleted":true
+				"streamingCompleted":true,
+				"responseName":"308_redirect",
+				"status":308
 			},
 			"skip":false,
 			"subTitle":"Callable",
@@ -394,5 +723,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
