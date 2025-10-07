@@ -95,7 +95,7 @@
 	"id":"68e3c5348c26f92f8a6945d3",
 	"lastModifiedBy":177799,
 	"lcName":"connection_initiation_rishabh",
-	"modifiedTime":1759817372160,
+	"modifiedTime":1759817510175,
 	"name":"connection_initiation_rishabh",
 	"nodes":[
 		{
@@ -463,7 +463,7 @@
 				"body":{
 					"authType":"OAUTH",
 					"inputs":{
-						"name":"{{ n_F77jW.outputs.connection_name }}",
+						"name":"qwerty",
 						"circuitBreakerConfig":{
 							"enabled":false
 						},
@@ -472,7 +472,7 @@
 						},
 						"authType":"OAUTH"
 					},
-					"name":"{{ n_F77jW.outputs.connection_name }}"
+					"name":"qwerty"
 				},
 				"connectionType":"DIRECT",
 				"sslVerify":false,
@@ -544,11 +544,11 @@
 					},
 					{
 						"key":"appName",
-						"value":"{{ n_4rzJF.outputs.body.app_name }}"
+						"value":"hubspot"
 					},
 					{
 						"key":"returnTo",
-						"value":"{{ n_MkQPq.outputs.result.returnTo_url }}"
+						"value":"https://class-api.dev.lyearn.com/integration/auth/redirect/62bbd534accecdaaca2b5ee9?ly__state=eyJ3b3Jrc3BhY2VJZCI6IjYwOTM5YzBhNGUxZWI0OGRiZjJlMGUyNSIsInVzZXJJZCI6IjYwOTM5ZDI5NGUxZWI0OGRiZjJlYzQ5YiIsInJlZGlyZWN0VXJsIjoiaHR0cHM6Ly9tZWV0LXFhLmx5ZWFybi5jb20vaW50ZWdyYXRpb24tc3RhdHVzL2luZGV4Lmh0bWw/c3VjY2Vzcz10cnVlIiwiZmFpbHVyZVVybCI6Imh0dHBzOi8vbWVldC1xYS5seWVhcm4uY29tL2ludGVncmF0aW9uLXN0YXR1cy9pbmRleC5odG1sP3N1Y2Nlc3M9ZmFsc2UiLCJzY29wZSI6IndvcmtzcGFjZSJ9"
 					}
 				],
 				"responseContentType":"application/json",
@@ -698,5 +698,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
