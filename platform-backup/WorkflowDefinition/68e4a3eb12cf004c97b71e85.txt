@@ -1,0 +1,80 @@
+{
+	"appsUsed":[
+		"jira"
+	],
+	"createdTime":1759814635102,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_4LeMC",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_IHzoY",
+			"type":"next"
+		}
+	],
+	"id":"68e4a3eb12cf004c97b71e85",
+	"lastModifiedBy":161860,
+	"lcName":"test jira divyam",
+	"modifiedTime":1759817355340,
+	"name":"test jira divyam",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_4LeMC-1",
+			"id":"_4LeMC",
+			"index":1,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"jira",
+				"resourceVersion":3698,
+				"connectionId":"686cfce6447d347848921629",
+				"resourceName":"jira_search_issues_using_jql",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_4LeMC-1",
+			"id":"n_IHzoY",
+			"index":2,
+			"inputs":{
+				"jql":"issuetype = \"Feature Request\" AND statusCategory != \"done\" AND project =\"PROD\"",
+				"maxResults":100,
+				"objectSourceResourceName":"jira_fetch_issue_schema",
+				"fields":"*all"
+			},
+			"skip":false,
+			"subTitle":"Jira",
+			"title":"Search issues by JQL",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":161860,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
