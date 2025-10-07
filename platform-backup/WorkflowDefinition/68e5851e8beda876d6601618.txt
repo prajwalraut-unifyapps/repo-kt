@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759872286983,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759872444841,
+		"deployedBy":47811,
+		"deployedDefinitionId":"68e585bc8beda876d66019c4",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":4
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_FK4lY",
@@ -23,7 +31,7 @@
 	"id":"68e5851e8beda876d6601618",
 	"lastModifiedBy":47811,
 	"lcName":"count2",
-	"modifiedTime":1759872442743,
+	"modifiedTime":1759874045432,
 	"name":"count2",
 	"nodes":[
 		{
@@ -44,12 +52,9 @@
 					"additionalProperties":false,
 					"required":[],
 					"properties":{
-						"allocation":{
-							"type":"array",
-							"items":{
-								"type":"string"
-							},
-							"title":"allocation"
+						"count":{
+							"type":"integer",
+							"title":"count"
 						}
 					}
 				},
@@ -76,8 +81,8 @@
 		{
 			"context":{
 				"appName":"storage_by_unifyapps",
-				"resourceVersion":4543,
-				"resourceName":"storage_by_unifyapps_fetch_records",
+				"resourceVersion":4542,
+				"resourceName":"storage_by_unifyapps_count_records",
 				"type":"APPLICATION"
 			},
 			"debug":false,
@@ -99,21 +104,11 @@
 					],
 					"operator":"AND"
 				},
-				"object_type":"Allocationtest",
-				"includeRoleMappings":false,
-				"includeCurrentUserPermissions":false,
-				"translationsOption":"DEFAULT",
-				"page":{
-					"paginateBy":"OFFSET",
-					"limit":20
-				},
-				"numberOfRecordsToFetch":"MULTIPLE",
-				"readThroughSessionVariables":false,
-				"includeTotalCount":false
+				"object_type":"Allocationtest"
 			},
 			"skip":false,
 			"subTitle":"Storage by UnifyApps",
-			"title":"Fetch records",
+			"title":"Count records",
 			"type":"ACTION"
 		},
 		{
@@ -130,13 +125,7 @@
 			"id":"n_Yl0oV",
 			"index":3,
 			"inputs":{
-				"result":{
-					"allocation":{
-						"source":"{{ n_YrV9f.outputs.objects }}",
-						"ua:type":"mappedArray",
-						"items":"{{ n_YrV9f.outputs.objects[0].properties.AllocationName }}"
-					}
-				}
+				"result":{}
 			},
 			"skip":false,
 			"subTitle":"Callable",
@@ -161,5 +150,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":6
 }
