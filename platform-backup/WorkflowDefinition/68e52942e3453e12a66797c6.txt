@@ -9,14 +9,14 @@
 			"fromNodeId":"n_XI7u0",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_Xh1Xz",
+			"toNodeId":"n_d4Ifz",
 			"type":"next"
 		}
 	],
 	"id":"68e52942e3453e12a66797c6",
 	"lastModifiedBy":43498,
 	"lcName":"sdfv-jms-loop",
-	"modifiedTime":1759848785090,
+	"modifiedTime":1759848792144,
 	"name":"sdfv-jms-loop",
 	"nodes":[
 		{
@@ -44,15 +44,19 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"stop"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_JmErf-1",
-			"id":"_Xh1Xz",
+			"id":"n_d4Ifz",
 			"index":2,
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":43498,
@@ -72,5 +76,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
