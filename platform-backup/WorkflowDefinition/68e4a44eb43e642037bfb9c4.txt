@@ -11,12 +11,19 @@
 			"skip":false,
 			"toNodeId":"n_n1t7b",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_n1t7b",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_NBFEJ",
+			"type":"next"
 		}
 	],
 	"id":"68e4a44eb43e642037bfb9c4",
 	"lastModifiedBy":45771,
 	"lcName":"test bright",
-	"modifiedTime":1759827970091,
+	"modifiedTime":1759828016681,
 	"name":"test bright",
 	"nodes":[
 		{
@@ -40,6 +47,10 @@
 						"test1":{
 							"type":"string",
 							"title":"Test 1"
+						},
+						"test12":{
+							"type":"string",
+							"title":"Test 12"
 						}
 					}
 				}
@@ -71,13 +82,32 @@
 				"skipIfBlank":false,
 				"record":{
 					"primarykey":"{{ n_rGxtj.outputs.test1 }}",
-					"uniqueKey":"{{ n_rGxtj.outputs.test1 }}"
+					"uniqueKey":"{{ n_rGxtj.outputs.test12 }}"
 				}
 			},
 			"skip":false,
 			"subTitle":"Storage by UnifyApps",
 			"title":"Create record",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1058,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_GjQdm-1",
+			"id":"n_NBFEJ",
+			"index":3,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":175510,
@@ -97,5 +127,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
