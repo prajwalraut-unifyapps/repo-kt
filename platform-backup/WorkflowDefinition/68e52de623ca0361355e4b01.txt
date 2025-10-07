@@ -38,7 +38,7 @@
 	"id":"68e52de623ca0361355e4b01",
 	"lastModifiedBy":161877,
 	"lcName":"huhyg",
-	"modifiedTime":1759851822936,
+	"modifiedTime":1759851832471,
 	"name":"huhyg",
 	"nodes":[
 		{
@@ -87,6 +87,8 @@
 		{
 			"context":{
 				"appName":"loop",
+				"resourceVersion":36,
+				"resourceName":"loop_for",
 				"type":"APPLICATION"
 			},
 			"debug":false,
@@ -95,9 +97,14 @@
 			"groupId":"_ZOviw-1",
 			"id":"n_ivsOV",
 			"index":3,
+			"inputs":{
+				"start":0,
+				"step":1,
+				"captureIterations":false
+			},
 			"skip":false,
 			"subTitle":"Loop",
-			"title":"Select an action",
+			"title":"For loop",
 			"type":"LOOP"
 		},
 		{
@@ -171,5 +178,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
