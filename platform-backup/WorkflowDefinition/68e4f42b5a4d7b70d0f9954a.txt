@@ -1,51 +1,79 @@
 {
 	"appsUsed":[
-		
+		"smtp"
 	],
 	"createdTime":1759835179651,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_O2z0S",
+			"fromNodeId":"n_8crRg",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_zmTc2",
+			"toNodeId":"n_nIq7G",
 			"type":"next"
 		}
 	],
 	"id":"68e4f42b5a4d7b70d0f9954a",
-	"lastModifiedBy":2621,
+	"lastModifiedBy":13,
 	"lcName":"test",
-	"modifiedTime":1759835179651,
+	"modifiedTime":1759840239252,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_O2z0S-1",
-			"id":"_O2z0S",
-			"index":0,
+			"id":"n_8crRg",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"smtp",
+				"resourceVersion":3277,
+				"connectionId":"688ca2885af0f4ae3932cc30",
+				"resourceName":"smtp_send_email",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_O2z0S-1",
-			"id":"_zmTc2",
-			"index":0,
+			"id":"n_nIq7G",
+			"index":2,
+			"inputs":{
+				"subject":"test",
+				"body":"test",
+				"toEmail":"202001165@dau.ac.in",
+				"fromEmail":"202001165@dau.ac.in"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"SMTP",
+			"title":"Send email",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":2621,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +87,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
