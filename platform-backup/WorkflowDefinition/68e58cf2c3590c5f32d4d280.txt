@@ -16,7 +16,7 @@
 	"id":"68e58cf2c3590c5f32d4d280",
 	"lastModifiedBy":175325,
 	"lcName":"changesetqa21759874290164bqtblyojos",
-	"modifiedTime":1759874453994,
+	"modifiedTime":1759874369700,
 	"name":"changeSetQA21759874290164BqtblYOJOs",
 	"nodes":[
 		{
@@ -39,11 +39,11 @@
 						"properties":{
 							"b":{
 								"type":"integer",
-								"title":"B"
+								"title":"b"
 							},
 							"a":{
 								"type":"integer",
-								"title":"A"
+								"title":"a"
 							}
 						},
 						"additionalProperties":false,
@@ -85,14 +85,14 @@
 					"properties":{
 						"c":{
 							"type":"integer",
-							"title":"C"
+							"title":"c"
 						}
 					},
 					"required":[]
 				}
 			},
 			"inputs":{
-				"c":"=PRODUCT({{ KGcta.outputs.body.a }},{{ KGcta.outputs.body.b }})"
+				"c":"=SUM({{ KGcta.outputs.body.a }},{{ KGcta.outputs.body.b }})"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -102,7 +102,7 @@
 					"properties":{
 						"c":{
 							"type":"integer",
-							"title":"C"
+							"title":"c"
 						}
 					},
 					"required":[]
@@ -131,5 +131,5 @@
 	"tags":[
 		"CHANGE_SET_AUTO_DND"
 	],
-	"version":2
+	"version":1
 }
