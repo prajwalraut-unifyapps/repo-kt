@@ -16,7 +16,7 @@
 	"id":"68e52de623ca0361355e4b01",
 	"lastModifiedBy":161877,
 	"lcName":"huhyg",
-	"modifiedTime":1759849958624,
+	"modifiedTime":1759851672517,
 	"name":"huhyg",
 	"nodes":[
 		{
@@ -25,7 +25,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_ZOviw-1",
 			"id":"_ZOviw",
-			"index":0,
+			"index":1,
 			"skip":false,
 			"title":"Select a trigger event",
 			"trigger":{
@@ -39,13 +39,16 @@
 			"fallbackMode":"STOP",
 			"groupId":"_ZOviw-1",
 			"id":"_efmx0",
-			"index":0,
+			"index":2,
 			"skip":false,
 			"title":"Select an app and action",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":161877,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +62,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
