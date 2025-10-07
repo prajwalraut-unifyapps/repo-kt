@@ -28,6 +28,13 @@
 		},
 		{
 			"fromNodeId":"n_d7jCK",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_uR4vh",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_uR4vh",
 			"name":"loopback",
 			"priority":0,
 			"skip":false,
@@ -38,13 +45,6 @@
 			"fromNodeId":"n_ivsOV",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_uR4vh",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_uR4vh",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_PRoUH",
 			"type":"next"
 		}
@@ -52,7 +52,7 @@
 	"id":"68e52de623ca0361355e4b01",
 	"lastModifiedBy":161877,
 	"lcName":"huhyg",
-	"modifiedTime":1759852027500,
+	"modifiedTime":1759852043350,
 	"name":"huhyg",
 	"nodes":[
 		{
@@ -185,7 +185,7 @@
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
-			"groupId":"_ZOviw-1",
+			"groupId":"n_ivsOV@_ZOviw-1@l",
 			"id":"n_uR4vh",
 			"index":5,
 			"inputSchema":{
@@ -254,5 +254,5 @@
 		"enableVariableLogging":true
 	},
 	"standard":false,
-	"version":9
+	"version":10
 }
