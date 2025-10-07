@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		
+		"jira"
 	],
 	"createdTime":1759817416108,
 	"deleted":false,
@@ -9,14 +9,14 @@
 			"fromNodeId":"_bxopK",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_VBkiM",
+			"toNodeId":"n_owCz5",
 			"type":"next"
 		}
 	],
 	"id":"68e4aec8e1a58a521ea6ffa2",
 	"lastModifiedBy":161860,
 	"lcName":"jitrgcfvhbjkn",
-	"modifiedTime":1759817416108,
+	"modifiedTime":1759817475494,
 	"name":"jitrgcfvhbjkn",
 	"nodes":[
 		{
@@ -25,7 +25,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_bxopK-1",
 			"id":"_bxopK",
-			"index":0,
+			"index":1,
 			"skip":false,
 			"title":"Select a trigger event",
 			"trigger":{
@@ -34,18 +34,35 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"jira",
+				"resourceVersion":3698,
+				"connectionId":"686cfce6447d347848921629",
+				"resourceName":"jira_search_issues_using_jql",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_bxopK-1",
-			"id":"_VBkiM",
-			"index":0,
+			"id":"n_owCz5",
+			"index":2,
+			"inputs":{
+				"jql":"issuetype = \"Feature Request\" AND statusCategory != \"done\" AND project =\"{{ n_VCyb8.outputs.project }}\"",
+				"maxResults":100,
+				"objectSourceResourceName":"jira_fetch_issue_schema",
+				"fields":"*all"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Jira",
+			"title":"Search issues by JQL",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":161860,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +76,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
