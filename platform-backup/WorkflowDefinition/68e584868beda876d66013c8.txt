@@ -28,6 +28,13 @@
 		},
 		{
 			"fromNodeId":"n_hA3zY",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_AFrvw",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_AFrvw",
 			"name":"loopback",
 			"priority":0,
 			"skip":false,
@@ -45,7 +52,7 @@
 	"id":"68e584868beda876d66013c8",
 	"lastModifiedBy":47811,
 	"lcName":"count1",
-	"modifiedTime":1759872248722,
+	"modifiedTime":1759872458186,
 	"name":"count1",
 	"nodes":[
 		{
@@ -162,7 +169,7 @@
 					"paginateBy":"OFFSET",
 					"limit":20
 				},
-				"numberOfRecordsToFetch":"SINGLE",
+				"numberOfRecordsToFetch":"MULTIPLE",
 				"readThroughSessionVariables":false,
 				"includeTotalCount":false
 			},
@@ -173,6 +180,38 @@
 		},
 		{
 			"context":{
+				"appName":"callables",
+				"resourceVersion":885,
+				"resourceName":"callables_call_automation_batch",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_9ti39@_QwxmF-1@l",
+			"id":"n_AFrvw",
+			"index":5,
+			"inputs":{
+				"automationId":"68e5851e8beda876d6601618",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"distributeWorkflowLoad":false,
+				"parametersList":{
+					"source":"{{ n_hA3zY.outputs.objects }}",
+					"ua:type":"mappedArray",
+					"items":{
+						"projectID":"{{ n_hA3zY.outputs.objects[0].properties.ProjectID }}"
+					}
+				},
+				"version":"-1"
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
 				"appName":"stop"
 			},
 			"debug":false,
@@ -180,7 +219,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_QwxmF-1",
 			"id":"n_XntYs",
-			"index":5,
+			"index":6,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -204,5 +243,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
