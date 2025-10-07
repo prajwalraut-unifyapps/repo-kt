@@ -209,7 +209,7 @@
 	"id":"68de24422364216c2da9d549",
 	"lastModifiedBy":426,
 	"lcName":"branchloop",
-	"modifiedTime":1759832659620,
+	"modifiedTime":1759832737791,
 	"name":"branchloop",
 	"nodes":[
 		{
@@ -835,7 +835,7 @@
 			"inputs":{
 				"filters":[
 					{
-						"property":"{{ n_I42Hn.outputs.item.properties.index }}",
+						"property":"{{ n_I42Hn.outputs.item.index }}",
 						"filter":{
 							"operator":"NOT_EQUAL",
 							"value":"3"
@@ -1051,5 +1051,5 @@
 	"tags":[
 		
 	],
-	"version":24
+	"version":25
 }
