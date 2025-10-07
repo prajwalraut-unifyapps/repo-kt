@@ -52,7 +52,7 @@
 	"id":"68e4e20f0236d070762e1bb8",
 	"lastModifiedBy":161877,
 	"lcName":"changeset_testing",
-	"modifiedTime":1759830766122,
+	"modifiedTime":1759830775359,
 	"name":"changeset_testing",
 	"nodes":[
 		{
@@ -136,6 +136,8 @@
 		{
 			"context":{
 				"appName":"loop",
+				"resourceVersion":36,
+				"resourceName":"loop_for",
 				"type":"APPLICATION"
 			},
 			"debug":false,
@@ -144,9 +146,15 @@
 			"groupId":"_VGMcr-1",
 			"id":"n_aU1ga",
 			"index":3,
+			"inputs":{
+				"start":0,
+				"limit":4,
+				"step":1,
+				"captureIterations":false
+			},
 			"skip":false,
 			"subTitle":"Loop",
-			"title":"Select an action",
+			"title":"For loop",
 			"type":"LOOP"
 		},
 		{
@@ -288,5 +296,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
