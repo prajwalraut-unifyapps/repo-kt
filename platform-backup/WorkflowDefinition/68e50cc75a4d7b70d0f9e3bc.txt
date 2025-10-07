@@ -11,12 +11,19 @@
 			"skip":false,
 			"toNodeId":"n_znkb9",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_znkb9",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_sti9j",
+			"type":"next"
 		}
 	],
 	"id":"68e50cc75a4d7b70d0f9e3bc",
 	"lastModifiedBy":24420,
 	"lcName":"smtp invalid emails",
-	"modifiedTime":1759841563964,
+	"modifiedTime":1759841575287,
 	"name":"SMTP Invalid emails",
 	"nodes":[
 		{
@@ -80,6 +87,29 @@
 			"subTitle":"SMTP",
 			"title":"Send email",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1058,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_ggdRl-1",
+			"id":"n_sti9j",
+			"index":3,
+			"inputs":{
+				"result":{
+					"a":"a"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":24420,
@@ -99,5 +129,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
