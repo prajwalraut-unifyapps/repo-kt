@@ -31,7 +31,7 @@
 	"id":"68e50cc75a4d7b70d0f9e3bc",
 	"lastModifiedBy":24420,
 	"lcName":"smtp invalid emails",
-	"modifiedTime":1759842518560,
+	"modifiedTime":1759842558804,
 	"name":"SMTP Invalid emails",
 	"nodes":[
 		{
@@ -88,7 +88,7 @@
 				"subject":"Test",
 				"fromName":"Test",
 				"body":"Test",
-				"toEmail":"prachi.mishra@unifyapps.com",
+				"toEmail":"prachi.mishra@unifyapps.com,loganathane@invalid.virtusa.com",
 				"fromEmail":"hppatel531@gmail.com"
 			},
 			"skip":false,
@@ -137,5 +137,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
