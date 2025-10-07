@@ -1,51 +1,107 @@
 {
 	"appsUsed":[
-		
+		"storage_by_unifyapps"
 	],
 	"createdTime":1759872286983,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_dqU8j",
+			"fromNodeId":"n_FK4lY",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_O4hRL",
+			"toNodeId":"n_YrV9f",
 			"type":"next"
 		}
 	],
 	"id":"68e5851e8beda876d6601618",
 	"lastModifiedBy":47811,
 	"lcName":"count2",
-	"modifiedTime":1759872286983,
+	"modifiedTime":1759872373114,
 	"name":"count2",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1023,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_dqU8j-1",
-			"id":"_dqU8j",
-			"index":0,
+			"id":"n_FK4lY",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"allocation":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"allocation"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"projectID":{
+							"type":"string",
+							"title":"projectID"
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":4543,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_dqU8j-1",
-			"id":"_O4hRL",
-			"index":0,
+			"id":"n_YrV9f",
+			"index":2,
+			"inputs":{
+				"object_type":"Allocationtest",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"translationsOption":"DEFAULT",
+				"page":{
+					"paginateBy":"OFFSET",
+					"limit":20
+				},
+				"numberOfRecordsToFetch":"MULTIPLE",
+				"readThroughSessionVariables":false,
+				"includeTotalCount":false
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Storage by UnifyApps",
+			"title":"Fetch records",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":47811,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +115,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
