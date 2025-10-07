@@ -6,7 +6,7 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"n_X2khB",
+			"fromNodeId":"n_MXOtL",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_EHYnA",
@@ -30,13 +30,13 @@
 	"id":"68e3675fea6d016804388339",
 	"lastModifiedBy":3546,
 	"lcName":"test",
-	"modifiedTime":1759750082494,
+	"modifiedTime":1759815975301,
 	"name":"test",
 	"nodes":[
 		{
 			"context":{
 				"appName":"google_task",
-				"resourceVersion":2,
+				"resourceVersion":4,
 				"connectionId":"68d5885cfd866b5d0e3e5611",
 				"resourceName":"google_task_on_new_task_polling"
 			},
@@ -44,7 +44,7 @@
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_YJYEu-1",
-			"id":"n_X2khB",
+			"id":"n_MXOtL",
 			"index":1,
 			"inputs":{
 				"interval":30,
@@ -67,7 +67,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_YJYEu-1",
 			"id":"n_EHYnA",
@@ -95,7 +95,7 @@
 			"id":"n_muNUQ",
 			"index":3,
 			"inputs":{
-				"taskList":"bXBkN1A5Zmp2QmxfTXNqRQ",
+				"taskList":"SkVLVDFNdGNnVkVEdWo4TA",
 				"title":"Task3"
 			},
 			"skip":false,
@@ -118,7 +118,7 @@
 			"id":"n_AjODN",
 			"index":4,
 			"inputs":{
-				"taskList":"YWZRMGQ0UnRQdkVvMm8zRg"
+				"taskList":"SkVLVDFNdGNnVkVEdWo4TA"
 			},
 			"skip":false,
 			"subTitle":"Google Task",
@@ -143,5 +143,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
