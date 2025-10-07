@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759837016516,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_J0zjt",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_4z6qd",
+			"type":"next"
+		}
+	],
+	"id":"68e4fb585a4d7b70d0f9aeea",
+	"lastModifiedBy":178107,
+	"lcName":"dp_training_groovy",
+	"modifiedTime":1759837016516,
+	"name":"dp_training_groovy",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_J0zjt-1",
+			"id":"_J0zjt",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_J0zjt-1",
+			"id":"_4z6qd",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":178107,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
