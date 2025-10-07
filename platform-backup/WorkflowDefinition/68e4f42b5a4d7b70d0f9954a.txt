@@ -16,7 +16,7 @@
 	"id":"68e4f42b5a4d7b70d0f9954a",
 	"lastModifiedBy":13,
 	"lcName":"test",
-	"modifiedTime":1759840239252,
+	"modifiedTime":1759841259817,
 	"name":"test",
 	"nodes":[
 		{
@@ -59,6 +59,7 @@
 			"id":"n_nIq7G",
 			"index":2,
 			"inputs":{
+				"sendPartial":false,
 				"subject":"test",
 				"body":"test",
 				"toEmail":"202001165@dau.ac.in",
@@ -87,5 +88,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
