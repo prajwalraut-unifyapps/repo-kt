@@ -1,51 +1,142 @@
 {
 	"appsUsed":[
-		
+		"storage_by_unifyapps"
 	],
 	"createdTime":1759872134341,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_QwxmF",
+			"fromNodeId":"n_BaqN2",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_VDrz8",
+			"toNodeId":"n_plI0R",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_plI0R",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_9ti39",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_9ti39",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_0JrnF",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_0JrnF",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_9ti39",
 			"type":"next"
 		}
 	],
 	"id":"68e584868beda876d66013c8",
 	"lastModifiedBy":47811,
 	"lcName":"count1",
-	"modifiedTime":1759872134341,
+	"modifiedTime":1759872167240,
 	"name":"count1",
 	"nodes":[
 		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":836,
+				"resourceName":"schedule_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_QwxmF-1",
-			"id":"_QwxmF",
-			"index":0,
+			"id":"n_BaqN2",
+			"index":1,
+			"inputs":{
+				"cron":"INTERVAL",
+				"sequential":false,
+				"interval":15,
+				"frequency":"MINUTES"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Schedule",
+			"title":"New recurring event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"SCHEDULED"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":4543,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_QwxmF-1",
-			"id":"_VDrz8",
-			"index":0,
+			"id":"n_plI0R",
+			"index":2,
+			"inputs":{
+				"object_type":"ClientTest",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"translationsOption":"DEFAULT",
+				"page":{
+					"paginateBy":"OFFSET",
+					"limit":20
+				},
+				"numberOfRecordsToFetch":"MULTIPLE",
+				"readThroughSessionVariables":false,
+				"includeTotalCount":false
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":865,
+				"resourceName":"loop_for_each",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_QwxmF-1",
+			"id":"n_9ti39",
+			"index":3,
+			"inputs":{
+				"repeatMode":"SINGLE",
+				"listSource":"{{ n_plI0R.outputs.objects }}",
+				"captureIterations":false
+			},
+			"skip":false,
+			"subTitle":"Loop",
+			"title":"For each loop",
+			"type":"LOOP"
+		},
+		{
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_9ti39@_QwxmF-1@l",
+			"id":"n_0JrnF",
+			"index":4,
 			"skip":false,
 			"title":"Select an app and action",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":47811,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +150,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
