@@ -88,7 +88,7 @@
 	"id":"68e3c5348c26f92f8a6945d3",
 	"lastModifiedBy":177799,
 	"lcName":"connection_initiation_rishabh",
-	"modifiedTime":1759818039677,
+	"modifiedTime":1759818063468,
 	"name":"connection_initiation_rishabh",
 	"nodes":[
 		{
@@ -447,19 +447,25 @@
 			"inputs":{
 				"output":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"returnTo_url"
+					],
 					"properties":{
 						"returnTo_url":{
 							"type":"string",
 							"title":"Return To Url"
 						}
-					},
-					"additionalProperties":false,
-					"required":[
-						"returnTo_url"
-					]
+					}
 				},
 				"input":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"provider_id",
+						"state_",
+						"base_url"
+					],
 					"properties":{
 						"provider_id":{
 							"type":"string",
@@ -473,19 +479,14 @@
 							"type":"string",
 							"title":"Base Url"
 						}
-					},
-					"additionalProperties":false,
-					"required":[
-						"provider_id",
-						"state_",
-						"base_url"
-					]
+					}
 				},
-				"compile_static":false,
 				"code":"import java.net.URLEncoder\n\n// Inputs mapped from UnifyApps\ndef ly__state      = state_        // e.g. \"active\"\ndef providerId = provider_id   // e.g. \"hubspot\"\n\n// Base URL with providerId dynamically appended\ndef integrationRedirect = \"${base_url}/integration/auth/redirect/${providerId}\"\n\n\n// Build query string\ndef query = [\n    \"ly__state=${ly__state}\"\n].join(\"&\")\n\n// Final URL\ndef finalUrl = \"${integrationRedirect}?${query}\"\n\n// ✅ Return single field for UnifyApps\nreturn [returnTo_url: finalUrl.toString()]\n",
+				"compile_static":false,
+				"captureStdOutput":false,
 				"parameters":{
-					"provider_id":"{{ n_4rzJF.outputs.body.provider_id }}",
-					"state_":"{{ n_4rzJF.outputs.body.state }}",
+					"provider_id":"{{ n_boHCg.outputs.body.ProviderId }}",
+					"state_":"{{ n_boHCg.outputs.body.State }}",
 					"base_url":"{{ __ENV__.outputs.base_lyearn_url }}"
 				}
 			},
@@ -722,5 +723,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
