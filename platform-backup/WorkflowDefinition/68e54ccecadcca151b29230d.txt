@@ -1,51 +1,87 @@
 {
 	"appsUsed":[
-		
+		"brightdata"
 	],
 	"createdTime":1759857870404,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_Av04V",
+			"fromNodeId":"n_K9J5v",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_X5SjJ",
+			"toNodeId":"n_Q4Wtu",
 			"type":"next"
 		}
 	],
 	"id":"68e54ccecadcca151b29230d",
 	"lastModifiedBy":3546,
 	"lcName":"automation4",
-	"modifiedTime":1759857870404,
+	"modifiedTime":1759857931039,
 	"name":"automation4",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Av04V-1",
-			"id":"_Av04V",
-			"index":0,
+			"id":"n_K9J5v",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"brightdata",
+				"resourceVersion":60,
+				"connectionId":"68e39b568d4a993cdc17bd29",
+				"resourceName":"brightdata_ws_sm_linkedin_profiles",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Av04V-1",
-			"id":"_X5SjJ",
-			"index":0,
+			"id":"n_Q4Wtu",
+			"index":2,
+			"inputs":{
+				"mode":"discover_by_name",
+				"discover_by":"name",
+				"dataset_id":"gd_l1viktl72bvl7bjuj0",
+				"format":"json",
+				"profiles":[
+					{
+						"first_name":"Laura",
+						"last_name":"Wilson"
+					}
+				],
+				"include_errors":true,
+				"type":"discover_new"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"bright data",
+			"title":"LinkedIn profiles collector",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":3546,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +95,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
