@@ -6,7 +6,7 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_SbDJ9",
+			"fromNodeId":"n_qr87M",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"_bpZIe",
@@ -16,20 +16,24 @@
 	"id":"68e52aa44a1ec91425ca6b01",
 	"lastModifiedBy":108247,
 	"lcName":"test",
-	"modifiedTime":1759849124903,
+	"modifiedTime":1759849294303,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_SbDJ9-1",
-			"id":"_SbDJ9",
-			"index":0,
+			"id":"n_qr87M",
+			"index":1,
 			"skip":false,
+			"subTitle":"Callable",
 			"title":"Select a trigger event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
@@ -39,13 +43,16 @@
 			"fallbackMode":"STOP",
 			"groupId":"_SbDJ9-1",
 			"id":"_bpZIe",
-			"index":0,
+			"index":2,
 			"skip":false,
 			"title":"Select an app and action",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":108247,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +66,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
