@@ -1,9 +1,17 @@
 {
 	"appsUsed":[
-		
+		"storage_by_unifyapps"
 	],
 	"createdTime":1759850027967,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759854445665,
+		"deployedBy":182775,
+		"deployedDefinitionId":"68e53f6dadfbe13741b35a2b",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":3
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_1qDVQ",
@@ -18,12 +26,71 @@
 			"skip":false,
 			"toNodeId":"n_MWX6x",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_MWX6x",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_JbiVg",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_JbiVg",
+			"name":"1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_JbiVg@1",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"n_JbiVg@1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_gpNhe",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_JbiVg",
+			"name":"2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_JbiVg@2",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"n_JbiVg@2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_ejmTM",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_gpNhe",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_0olWY",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_ejmTM",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_0olWY",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_JbiVg",
+			"name":"default",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_0olWY",
+			"type":"branch"
 		}
 	],
 	"id":"68e52e2b23ca0361355e4c40",
 	"lastModifiedBy":182775,
 	"lcName":"testnullhandling",
-	"modifiedTime":1759854441887,
+	"modifiedTime":1759867091938,
 	"name":"testNullHandling",
 	"nodes":[
 		{
@@ -33,7 +100,7 @@
 				"resourceName":"schedule_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_2ea1A-1",
 			"id":"n_1qDVQ",
@@ -84,7 +151,7 @@
 				}
 			},
 			"inputs":{
-				"stringxml":"<Employee><name>Parth</name></Employee>"
+				"stringxml":"<Emp><ID>123</ID><name/></Emp>"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -113,7 +180,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_2ea1A-1",
 			"id":"n_MWX6x",
@@ -140,6 +207,149 @@
 			"subTitle":"Utility by UnifyApps",
 			"title":"Deserialise XML string to JSON object",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"branch",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_2ea1A-1",
+			"id":"n_JbiVg",
+			"index":4,
+			"inputs":{
+				"branches":[
+					{
+						"id":"1",
+						"inputs":{
+							"name":"Branch 1"
+						}
+					},
+					{
+						"id":"2",
+						"inputs":{
+							"name":"Branch 2"
+						}
+					},
+					{
+						"id":"default"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Branch",
+			"title":"",
+			"type":"BRANCH"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":0,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_JbiVg@_2ea1A-1@1",
+			"id":"n_JbiVg@1",
+			"index":5,
+			"inputs":{
+				"name":"Branch 1"
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":4540,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_JbiVg@_2ea1A-1@1",
+			"id":"n_gpNhe",
+			"index":6,
+			"inputs":{
+				"writeThroughSessionVariables":false,
+				"object_type":"test_null",
+				"skipIfBlank":false,
+				"record":{
+					"id":"{{ n_MWX6x.outputs.result.id }}",
+					"name":"{{ n_MWX6x.outputs.result.name }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":0,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_JbiVg@_2ea1A-1@2",
+			"id":"n_JbiVg@2",
+			"index":7,
+			"inputs":{
+				"name":"Branch 2"
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"streams_by_unifyapps",
+				"resourceVersion":1633,
+				"resourceName":"streams_by_unifyapps_publish_event",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_JbiVg@_2ea1A-1@2",
+			"id":"n_ejmTM",
+			"index":8,
+			"inputs":{
+				"streamId":"e_68e534cfad92c813c0266aa6",
+				"skipInputValidation":true,
+				"event":{
+					"id":"{{ n_MWX6x.outputs.result.id }}",
+					"name":"{{ n_MWX6x.outputs.result.name }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Streams by UnifyApps",
+			"title":"Publish event to stream",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_2ea1A-1",
+			"id":"n_0olWY",
+			"index":9,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":182775,
@@ -159,5 +369,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":18
 }
