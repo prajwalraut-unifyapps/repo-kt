@@ -5,16 +5,16 @@
 	"createdTime":1759388738749,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759389423731,
-		"deployedBy":426,
-		"deployedDefinitionId":"68de26ef2364216c2da9d871",
+		"deployedAt":1759832030386,
+		"deployedBy":161908,
+		"deployedDefinitionId":"68e4e7defb3db27863844501",
 		"status":"DEPLOYED",
-		"version":3,
-		"workflowVersion":7
+		"version":4,
+		"workflowVersion":19
 	},
 	"edges":[
 		{
-			"fromNodeId":"n_BIvEP",
+			"fromNodeId":"n_pzSPz",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_Tjmb5",
@@ -181,38 +181,31 @@
 	"id":"68de24422364216c2da9d549",
 	"lastModifiedBy":161908,
 	"lcName":"branchloop",
-	"modifiedTime":1759832024983,
+	"modifiedTime":1759832043387,
 	"name":"branchloop",
 	"nodes":[
 		{
 			"context":{
-				"appName":"callables",
-				"resourceVersion":1003,
-				"resourceName":"callables_from_automation"
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_kS6s2-1",
-			"id":"n_BIvEP",
+			"id":"n_pzSPz",
 			"index":1,
 			"inputs":{
-				"result":{
-					"type":"object",
-					"additionalProperties":false,
-					"properties":{
-						"result":{
-							"type":"string",
-							"title":"result"
-						}
-					}
+				"request":{
+					"contentType":"application/json"
 				}
 			},
 			"skip":false,
-			"subTitle":"Callable",
-			"title":"Trigger via automation",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"CALLABLE"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
@@ -672,5 +665,5 @@
 	"tags":[
 		
 	],
-	"version":19
+	"version":20
 }
