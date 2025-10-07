@@ -23,7 +23,7 @@
 	"id":"68e5851e8beda876d6601618",
 	"lastModifiedBy":47811,
 	"lcName":"count2",
-	"modifiedTime":1759872397292,
+	"modifiedTime":1759872402675,
 	"name":"count2",
 	"nodes":[
 		{
@@ -122,7 +122,7 @@
 					"allocation":{
 						"source":"{{ n_YrV9f.outputs.objects }}",
 						"ua:type":"mappedArray",
-						"items":"{{ n_YrV9f.outputs.objects[0].properties.ProjectId }}"
+						"items":"{{ n_YrV9f.outputs.objects[0].properties.AllocationName }}"
 					}
 				}
 			},
@@ -149,5 +149,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
