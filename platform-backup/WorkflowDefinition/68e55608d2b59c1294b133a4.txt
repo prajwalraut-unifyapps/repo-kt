@@ -31,14 +31,14 @@
 			"fromNodeId":"n_11dAW",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_fzWsT",
+			"toNodeId":"n_7RtUx",
 			"type":"next"
 		}
 	],
 	"id":"68e55608d2b59c1294b133a4",
 	"lastModifiedBy":44108,
 	"lcName":"execute multiple update command dnt",
-	"modifiedTime":1759860594512,
+	"modifiedTime":1759860619406,
 	"name":"execute multiple update command dnt",
 	"nodes":[
 		{
@@ -157,17 +157,23 @@
 		},
 		{
 			"context":{
-				"appName":"stop"
+				"appName":"callables",
+				"resourceVersion":1059,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_eHYnF-1",
-			"id":"n_fzWsT",
+			"id":"n_7RtUx",
 			"index":4,
+			"inputs":{
+				"result":"{{ n_11dAW.outputs }}"
+			},
 			"skip":false,
-			"subTitle":"Stop",
-			"title":"Stop",
+			"subTitle":"Callable",
+			"title":"Respond to automation",
 			"type":"STOP"
 		}
 	],
@@ -188,5 +194,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
