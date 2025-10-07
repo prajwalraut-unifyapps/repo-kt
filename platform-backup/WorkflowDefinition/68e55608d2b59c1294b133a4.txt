@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759860232236,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_eHYnF",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_lN1G2",
+			"type":"next"
+		}
+	],
+	"id":"68e55608d2b59c1294b133a4",
+	"lastModifiedBy":44108,
+	"lcName":"execute multiple update command dnt",
+	"modifiedTime":1759860232236,
+	"name":"execute multiple update command dnt",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_eHYnF-1",
+			"id":"_eHYnF",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_eHYnF-1",
+			"id":"_lN1G2",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":44108,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
