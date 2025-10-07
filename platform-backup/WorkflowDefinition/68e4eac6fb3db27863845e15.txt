@@ -1,16 +1,16 @@
 {
 	"appsUsed":[
-		
+		"slack"
 	],
 	"createdTime":1759832774923,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759838885994,
+		"deployedAt":1759838928442,
 		"deployedBy":161877,
-		"deployedDefinitionId":"68e502a3fb3db27863850276",
+		"deployedDefinitionId":"68e502d05a4d7b70d0f9c832",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":1
+		"version":2,
+		"workflowVersion":3
 	},
 	"edges":[
 		{
@@ -19,12 +19,19 @@
 			"skip":false,
 			"toNodeId":"n_6aLvR",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_6aLvR",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_KN5gG",
+			"type":"next"
 		}
 	],
 	"id":"68e4eac6fb3db27863845e15",
 	"lastModifiedBy":161877,
 	"lcName":"test",
-	"modifiedTime":1759838921232,
+	"modifiedTime":1759838971052,
 	"name":"test",
 	"nodes":[
 		{
@@ -60,7 +67,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_7HRNq-1",
 			"id":"n_6aLvR",
@@ -308,6 +315,26 @@
 			"subTitle":"Variable by UnifyApps",
 			"title":"Create list",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"slack",
+				"resourceVersion":4846,
+				"connectionId":"68e450294a0d4706ffe8a622",
+				"resourceName":"slack_get_file_details",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_7HRNq-1",
+			"id":"n_KN5gG",
+			"index":3,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Slack",
+			"title":"Get file details",
+			"type":"ACTION"
 		}
 	],
 	"ownerUserId":161877,
@@ -327,5 +354,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
