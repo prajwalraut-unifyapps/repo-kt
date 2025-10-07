@@ -25,12 +25,19 @@
 			"skip":false,
 			"toNodeId":"n_po0sB",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_po0sB",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_f6MLe",
+			"type":"next"
 		}
 	],
 	"id":"68c054b9ecdc557672b81d0f",
 	"lastModifiedBy":39715,
 	"lcName":"sumitbansaltesting",
-	"modifiedTime":1759819973747,
+	"modifiedTime":1759819995807,
 	"name":"sumitBansalTesting",
 	"nodes":[
 		{
@@ -149,6 +156,27 @@
 			"subTitle":"Code by WurkNow",
 			"title":"Execute Python script",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1055,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_hIm1D-1",
+			"id":"n_f6MLe",
+			"index":5,
+			"inputs":{
+				"result":"true"
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":39715,
@@ -168,5 +196,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
