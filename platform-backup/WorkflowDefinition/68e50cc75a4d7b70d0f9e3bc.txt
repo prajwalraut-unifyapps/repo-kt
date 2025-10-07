@@ -31,7 +31,7 @@
 	"id":"68e50cc75a4d7b70d0f9e3bc",
 	"lastModifiedBy":24420,
 	"lcName":"smtp invalid emails",
-	"modifiedTime":1759842558804,
+	"modifiedTime":1759842583293,
 	"name":"SMTP Invalid emails",
 	"nodes":[
 		{
@@ -73,7 +73,7 @@
 			"context":{
 				"appName":"smtp",
 				"resourceVersion":3279,
-				"connectionId":"686cb830d6807d57e55f6fe8",
+				"connectionId":"688ca2885af0f4ae3932cc30",
 				"resourceName":"smtp_send_email",
 				"type":"APPLICATION"
 			},
@@ -89,7 +89,7 @@
 				"fromName":"Test",
 				"body":"Test",
 				"toEmail":"prachi.mishra@unifyapps.com,loganathane@invalid.virtusa.com",
-				"fromEmail":"hppatel531@gmail.com"
+				"fromEmail":"202001165@dau.ac.in"
 			},
 			"skip":false,
 			"subTitle":"SMTP",
@@ -137,5 +137,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
