@@ -23,7 +23,7 @@
 	"id":"68e52e2b23ca0361355e4c40",
 	"lastModifiedBy":182775,
 	"lcName":"testnullhandling",
-	"modifiedTime":1759854394326,
+	"modifiedTime":1759854441887,
 	"name":"testNullHandling",
 	"nodes":[
 		{
@@ -33,7 +33,7 @@
 				"resourceName":"schedule_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_2ea1A-1",
 			"id":"n_1qDVQ",
@@ -62,7 +62,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_2ea1A-1",
 			"id":"n_nrzmN",
@@ -120,6 +120,20 @@
 			"index":3,
 			"inputs":{
 				"serializeEmptyElementAsNull":true,
+				"jsonSchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"id":{
+							"type":"integer",
+							"title":"id"
+						},
+						"name":{
+							"type":"string",
+							"title":"name"
+						}
+					}
+				},
 				"xmlString":"{{ n_nrzmN.outputs.stringxml }}"
 			},
 			"skip":false,
@@ -145,5 +159,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
