@@ -31,7 +31,7 @@
 	"id":"68de93424361896e3c5f3ac2",
 	"lastModifiedBy":43498,
 	"lcName":"jms-trigger",
-	"modifiedTime":1759848387570,
+	"modifiedTime":1759848852659,
 	"name":"jms-trigger",
 	"nodes":[
 		{
@@ -74,7 +74,7 @@
 			"id":"n_zF6S5",
 			"index":2,
 			"inputs":{
-				"queueName":"unifyapp",
+				"queueName":"unifyappa",
 				"messageFormat":"text",
 				"message":"adi"
 			},
@@ -98,7 +98,7 @@
 			"id":"n_W3v9k",
 			"index":3,
 			"inputs":{
-				"queueName":"unifyapp",
+				"queueName":"unifyappa",
 				"timeout":"1"
 			},
 			"skip":false,
@@ -124,5 +124,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
