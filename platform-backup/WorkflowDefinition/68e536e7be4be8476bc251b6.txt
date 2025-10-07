@@ -1,12 +1,12 @@
 {
 	"appsUsed":[
-		
+		"headout"
 	],
 	"createdTime":1759852263023,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_vpbga",
+			"fromNodeId":"n_FRigc",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"_RbFTW",
@@ -16,18 +16,26 @@
 	"id":"68e536e7be4be8476bc251b6",
 	"lastModifiedBy":2621,
 	"lcName":"test",
-	"modifiedTime":1759852263023,
+	"modifiedTime":1759852309417,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"headout",
+				"resourceVersion":5,
+				"connectionId":"68e52da7a1a6c341636fe344",
+				"resourceName":"headout_on_booking_event"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_vpbga-1",
-			"id":"_vpbga",
-			"index":0,
+			"id":"n_FRigc",
+			"index":1,
+			"inputs":{},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Headout",
+			"title":"On booking events",
 			"trigger":{
 				"type":"EVENT"
 			},
@@ -39,13 +47,16 @@
 			"fallbackMode":"STOP",
 			"groupId":"_vpbga-1",
 			"id":"_RbFTW",
-			"index":0,
+			"index":2,
 			"skip":false,
 			"title":"Select an app and action",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":2621,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +70,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
