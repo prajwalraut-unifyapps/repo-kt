@@ -6,46 +6,284 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_uuFnn",
+			"fromNodeId":"n_Y4TpO",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_Vqt40",
+			"toNodeId":"n_8diKt",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_8diKt",
+			"name":"1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_8diKt@1",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"n_8diKt@1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_o87uo",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_8diKt",
+			"name":"2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_8diKt@2",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"n_8diKt@2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_nH48r",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_o87uo",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Fq7nu",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_nH48r",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Fq7nu",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_8diKt",
+			"name":"default",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Fq7nu",
+			"type":"branch"
 		}
 	],
 	"id":"68e512c1cfabef45d1317ec8",
 	"lastModifiedBy":39714,
 	"lcName":"test",
-	"modifiedTime":1759843009682,
+	"modifiedTime":1759843511891,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":836,
+				"resourceName":"schedule_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_uuFnn-1",
-			"id":"_uuFnn",
-			"index":0,
+			"id":"n_Y4TpO",
+			"index":1,
+			"inputs":{
+				"cron":"INTERVAL",
+				"sequential":false,
+				"interval":1,
+				"frequency":"MINUTES"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Schedule",
+			"title":"New recurring event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"SCHEDULED"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"branch",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_uuFnn-1",
-			"id":"_Vqt40",
-			"index":0,
+			"id":"n_8diKt",
+			"index":2,
+			"inputs":{
+				"branches":[
+					{
+						"id":"1",
+						"inputs":{
+							"name":"Branch 1",
+							"conditions":{
+								"filters":[
+									{
+										"property":"1",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"1"
+										}
+									}
+								],
+								"operator":"AND"
+							}
+						}
+					},
+					{
+						"id":"2",
+						"inputs":{
+							"name":"Branch 2",
+							"conditions":{
+								"filters":[
+									{
+										"property":"1",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"1"
+										}
+									}
+								],
+								"operator":"AND"
+							}
+						}
+					},
+					{
+						"id":"default"
+					}
+				]
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Branch",
+			"title":"",
+			"type":"BRANCH"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":0,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_8diKt@_uuFnn-1@1",
+			"id":"n_8diKt@1",
+			"index":3,
+			"inputs":{
+				"name":"Branch 1",
+				"conditions":{
+					"filters":[
+						{
+							"property":"1",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"1"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":0,
+				"resourceName":"standard_entities_deploy_pipeline",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_8diKt@_uuFnn-1@1",
+			"id":"n_o87uo",
+			"index":4,
+			"inputs":{
+				"forceRestart":false,
+				"pipelineId":"68e514030b7e55394d6e1fd8"
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Deploy a pipeline",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":0,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_8diKt@_uuFnn-1@2",
+			"id":"n_8diKt@2",
+			"index":5,
+			"inputs":{
+				"name":"Branch 2",
+				"conditions":{
+					"filters":[
+						{
+							"property":"1",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"1"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":0,
+				"resourceName":"standard_entities_deploy_pipeline",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_8diKt@_uuFnn-1@2",
+			"id":"_nH48r",
+			"index":6,
+			"inputs":{
+				"forceRestart":false,
+				"pipelineId":"68e514030b7e55394d6e1fd8"
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Deploy a pipeline",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_uuFnn-1",
+			"id":"n_Fq7nu",
+			"index":7,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":39714,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +297,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
