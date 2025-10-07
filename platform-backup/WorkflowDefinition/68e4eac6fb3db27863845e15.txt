@@ -5,12 +5,12 @@
 	"createdTime":1759832774923,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759838928442,
+		"deployedAt":1759838973627,
 		"deployedBy":161877,
-		"deployedDefinitionId":"68e502d05a4d7b70d0f9c832",
+		"deployedDefinitionId":"68e502fdfb3db278638503b1",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":3
+		"version":3,
+		"workflowVersion":4
 	},
 	"edges":[
 		{
@@ -31,7 +31,7 @@
 	"id":"68e4eac6fb3db27863845e15",
 	"lastModifiedBy":161877,
 	"lcName":"test",
-	"modifiedTime":1759838971052,
+	"modifiedTime":1759838986259,
 	"name":"test",
 	"nodes":[
 		{
@@ -319,9 +319,9 @@
 		{
 			"context":{
 				"appName":"slack",
-				"resourceVersion":4846,
+				"resourceVersion":6262,
 				"connectionId":"68e450294a0d4706ffe8a622",
-				"resourceName":"slack_get_file_details",
+				"resourceName":"slack_conversation_invite",
 				"type":"APPLICATION"
 			},
 			"debug":false,
@@ -330,10 +330,14 @@
 			"groupId":"_7HRNq-1",
 			"id":"n_KN5gG",
 			"index":3,
-			"inputs":{},
+			"inputs":{
+				"channel":"C085RV70TNY",
+				"force":true,
+				"users":"sdf"
+			},
 			"skip":false,
 			"subTitle":"Slack",
-			"title":"Get file details",
+			"title":"Conversation invite",
 			"type":"ACTION"
 		}
 	],
@@ -354,5 +358,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
