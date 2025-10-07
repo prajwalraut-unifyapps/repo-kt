@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759850837807,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_IW2Ij",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_fFdp2",
+			"type":"next"
+		}
+	],
+	"id":"68e5315523ca0361355e551a",
+	"lastModifiedBy":21056,
+	"lcName":"camera recording",
+	"modifiedTime":1759850837807,
+	"name":"camera recording",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_IW2Ij-1",
+			"id":"_IW2Ij",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_IW2Ij-1",
+			"id":"_fFdp2",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":21056,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
