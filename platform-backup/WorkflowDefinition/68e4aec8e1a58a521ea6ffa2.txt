@@ -16,7 +16,7 @@
 	"id":"68e4aec8e1a58a521ea6ffa2",
 	"lastModifiedBy":161860,
 	"lcName":"jitrgcfvhbjkn",
-	"modifiedTime":1759817475494,
+	"modifiedTime":1759817488666,
 	"name":"jitrgcfvhbjkn",
 	"nodes":[
 		{
@@ -48,7 +48,7 @@
 			"id":"n_owCz5",
 			"index":2,
 			"inputs":{
-				"jql":"issuetype = \"Feature Request\" AND statusCategory != \"done\" AND project =\"{{ n_VCyb8.outputs.project }}\"",
+				"jql":"ssuetype = \"Feature Request\" AND statusCategory != \"done\" AND project =\"PROD\"",
 				"maxResults":100,
 				"objectSourceResourceName":"jira_fetch_issue_schema",
 				"fields":"*all"
@@ -76,5 +76,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
