@@ -6,42 +6,151 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_ZOviw",
+			"fromNodeId":"n_m2T7K",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_efmx0",
+			"toNodeId":"n_rwKtX",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_rwKtX",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_ivsOV",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_ivsOV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_d7jCK",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_d7jCK",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_ivsOV",
 			"type":"next"
 		}
 	],
 	"id":"68e52de623ca0361355e4b01",
 	"lastModifiedBy":161877,
 	"lcName":"huhyg",
-	"modifiedTime":1759851704595,
+	"modifiedTime":1759851822936,
 	"name":"huhyg",
 	"nodes":[
 		{
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_ZOviw-1",
-			"id":"_ZOviw",
-			"index":1,
-			"skip":false,
-			"title":"Select a trigger event",
-			"trigger":{
-				"type":"EVENT"
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
 			},
-			"type":"START"
-		},
-		{
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ZOviw-1",
-			"id":"_efmx0",
+			"id":"n_m2T7K",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":1041,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_ZOviw-1",
+			"id":"n_rwKtX",
 			"index":2,
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_ZOviw-1",
+			"id":"n_ivsOV",
+			"index":3,
+			"skip":false,
+			"subTitle":"Loop",
+			"title":"Select an action",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":1041,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_ivsOV@_ZOviw-1@l",
+			"id":"n_d7jCK",
+			"index":4,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"b":{
+							"type":"string",
+							"title":"B"
+						}
+					},
+					"required":[
+						"b"
+					]
+				}
+			},
+			"inputs":{},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"b":{
+							"type":"string",
+							"title":"B"
+						}
+					},
+					"required":[
+						"b"
+					]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
 			"type":"ACTION"
 		}
 	],
@@ -62,5 +171,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
