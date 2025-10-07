@@ -45,7 +45,7 @@
 	"id":"68cfb9316c0fd258917e7da2",
 	"lastModifiedBy":165764,
 	"lcName":"createshorttimetoken",
-	"modifiedTime":1759847324600,
+	"modifiedTime":1759847544079,
 	"name":"createShortTimeToken",
 	"nodes":[
 		{
@@ -243,12 +243,27 @@
 										"customPageInput":{
 											"type":"string",
 											"title":"customPageInput"
+										},
+										"userPreferences":{
+											"type":"object",
+											"properties":{
+												"theme":{
+													"type":"string",
+													"title":"Theme"
+												}
+											},
+											"additionalProperties":false,
+											"title":"User Preferences",
+											"required":[
+												"theme"
+											]
 										}
 									},
 									"additionalProperties":false,
 									"title":"Custom Properties",
 									"required":[
-										"customPageInput"
+										"customPageInput",
+										"userPreferences"
 									]
 								},
 								"username":{
@@ -322,12 +337,27 @@
 										"customPageInput":{
 											"type":"string",
 											"title":"customPageInput"
+										},
+										"userPreferences":{
+											"type":"object",
+											"properties":{
+												"theme":{
+													"type":"string",
+													"title":"Theme"
+												}
+											},
+											"additionalProperties":false,
+											"title":"User Preferences",
+											"required":[
+												"theme"
+											]
 										}
 									},
 									"additionalProperties":false,
 									"title":"Custom Properties",
 									"required":[
-										"customPageInput"
+										"customPageInput",
+										"userPreferences"
 									]
 								},
 								"username":{
@@ -441,5 +471,5 @@
 	"tags":[
 		
 	],
-	"version":32
+	"version":33
 }
