@@ -45,7 +45,7 @@
 	"id":"68cfb9316c0fd258917e7da2",
 	"lastModifiedBy":9,
 	"lcName":"createshorttimetoken",
-	"modifiedTime":1759853583947,
+	"modifiedTime":1759858221101,
 	"name":"createShortTimeToken",
 	"nodes":[
 		{
@@ -55,7 +55,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_10EHI-1",
 			"id":"n_fVX5A",
@@ -81,7 +81,8 @@
 						"customPageInput",
 						"username",
 						"locale",
-						"mode"
+						"mode",
+						"interfaceId"
 					],
 					"properties":{
 						"customPageInput":{
@@ -99,6 +100,11 @@
 						"mode":{
 							"type":"string",
 							"title":"Mode"
+						},
+						"interfaceId":{
+							"type":"string",
+							"title":"Interface Id",
+							"default":"secret"
 						}
 					}
 				}
@@ -119,7 +125,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_10EHI-1",
 			"id":"n_FO6Mm",
@@ -221,7 +227,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_10EHI-1",
 			"id":"n_EWBIi",
@@ -421,7 +427,7 @@
 			"inputs":{
 				"headers":"{{ n_FO6Mm.outputs.result.headers }}",
 				"formData":"{{ n_FO6Mm.outputs.result.formData }}",
-				"applicationId":"public-secret",
+				"applicationId":"{{ n_fVX5A.outputs.interfaceId }}",
 				"packagedSession":false,
 				"identityProviderId":"680cc754245ecaaee2a00aa1"
 			},
@@ -445,7 +451,7 @@
 			"index":5,
 			"inputs":{
 				"result":{
-					"url":"https://public-secret-qa.matrix-qa.unifyapps.com/auth/external/login/{{ n_XGiZv.outputs.sessionId }}"
+					"url":"https://{{ n_fVX5A.outputs.interfaceId }}-qa.matrix-qa.unifyapps.com/auth/external/login/{{ n_XGiZv.outputs.sessionId }}"
 				}
 			},
 			"skip":false,
@@ -471,5 +477,5 @@
 	"tags":[
 		
 	],
-	"version":37
+	"version":38
 }
