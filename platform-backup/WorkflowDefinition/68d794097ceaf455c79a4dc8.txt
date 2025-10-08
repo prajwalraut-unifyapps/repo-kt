@@ -5,12 +5,12 @@
 	"createdTime":1758977331611,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759502272597,
+		"deployedAt":1759502554365,
 		"deployedBy":23949,
-		"deployedDefinitionId":"68dfdfc0f5d9ee32ff9a816e",
+		"deployedDefinitionId":"68dfe0daf5d9ee32ff9a8d9e",
 		"status":"DEPLOYED",
-		"version":5,
-		"workflowVersion":18
+		"version":6,
+		"workflowVersion":19
 	},
 	"edges":[
 		{
@@ -83,7 +83,7 @@
 	"id":"68d794097ceaf455c79a4dc8",
 	"lastModifiedBy":23949,
 	"lcName":"publish lookup form test",
-	"modifiedTime":1759502552874,
+	"modifiedTime":1759924314559,
 	"name":"Publish lookup form test",
 	"nodes":[
 		{
@@ -93,7 +93,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_j6UZQ-1",
 			"id":"n_U5Ovv",
@@ -127,7 +127,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_j6UZQ-1",
 			"id":"n_7LPwF",
@@ -192,7 +192,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_j6UZQ-1",
 			"id":"n_uNvzq",
@@ -228,7 +228,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_j6UZQ-1",
 			"id":"n_7xTUy",
@@ -261,7 +261,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_j6UZQ-1",
 			"id":"n_Gc29u",
@@ -312,6 +312,24 @@
 									"additionalProperties":false,
 									"title":"Options",
 									"required":[]
+								},
+								"dependecies":{
+									"type":"object",
+									"properties":{
+										"ua:dependent_fields":{
+											"type":"array",
+											"items":{
+												"type":"string"
+											},
+											"title":"ua:dependent_fields"
+										},
+										"ua:dependencyChangeBehavior":{
+											"type":"string",
+											"title":"ua:dependencyChangeBehavior"
+										}
+									},
+									"additionalProperties":false,
+									"title":"Dependecies"
 								}
 							},
 							"additionalProperties":false,
@@ -332,6 +350,13 @@
 						},
 						"runtimeType":"IN_MEMORY",
 						"resolvePath":"objects"
+					},
+					"dependecies":{
+						"ua:dependencyChangeBehavior":"reset",
+						"ua:dependent_fields":{
+							"items":"effectiveDate",
+							"ua:type":"mappedArray"
+						}
 					}
 				}
 			},
@@ -379,6 +404,24 @@
 									"additionalProperties":false,
 									"title":"Options",
 									"required":[]
+								},
+								"dependecies":{
+									"type":"object",
+									"properties":{
+										"ua:dependent_fields":{
+											"type":"array",
+											"items":{
+												"type":"string"
+											},
+											"title":"ua:dependent_fields"
+										},
+										"ua:dependencyChangeBehavior":{
+											"type":"string",
+											"title":"ua:dependencyChangeBehavior"
+										}
+									},
+									"additionalProperties":false,
+									"title":"Dependecies"
 								}
 							},
 							"additionalProperties":false,
@@ -443,7 +486,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_j6UZQ-1",
 			"id":"n_UWJrg",
@@ -476,5 +519,5 @@
 	"tags":[
 		
 	],
-	"version":19
+	"version":20
 }
