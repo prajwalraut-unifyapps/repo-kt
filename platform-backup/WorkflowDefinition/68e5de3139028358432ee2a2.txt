@@ -299,14 +299,6 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_JfHtS",
-			"name":"no",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_oArI7",
-			"type":"next"
-		},
-		{
 			"fromNodeId":"n_EKmVb",
 			"name":"loopback",
 			"priority":0,
@@ -315,8 +307,8 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_oArI7",
-			"name":"loopback",
+			"fromNodeId":"n_JfHtS",
+			"name":"no",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_YCTfO",
@@ -356,7 +348,7 @@
 	"id":"68e5de3139028358432ee2a2",
 	"lastModifiedBy":24420,
 	"lcName":"submit qa",
-	"modifiedTime":1759895884876,
+	"modifiedTime":1759895921082,
 	"name":"submit qa",
 	"nodes":[
 		{
@@ -3960,7 +3952,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"n_NxK6O",
@@ -4029,7 +4021,7 @@
 					"currentLevel":"{{ n_AdAxU.outputs.result.output2 }}"
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Groovy code",
 			"type":"ACTION"
@@ -4042,7 +4034,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"n_OVijX",
@@ -4091,7 +4083,7 @@
 				},
 				"unsetIfNull":false
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Storage by UnifyApps",
 			"title":"Bulk upsert records via id",
 			"type":"ACTION"
@@ -4130,7 +4122,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_u4tjC",
@@ -4181,7 +4173,7 @@
 				"readThroughSessionVariables":false,
 				"includeTotalCount":false
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Storage by UnifyApps",
 			"title":"Fetch records",
 			"type":"ACTION"
@@ -4194,7 +4186,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_ZYcAh",
@@ -4238,7 +4230,7 @@
 					}
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":" SQL format",
 			"title":"Execute Groovy code",
 			"type":"ACTION"
@@ -4251,7 +4243,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_HlgiC",
@@ -4277,7 +4269,7 @@
 				"query":"SELECT DISTINCT \r\n    mct._pr_value\r\nFROM ENTITY_approval_matrix_Table am\r\nJOIN ENTITY_mapping_category_type mct\r\n    ON am._pr_categoryType = mct._pr_key\r\nWHERE am._pr_roleName IN {{ _ZYcAh.outputs.result.phoneListSQL }};\r\n",
 				"group":"ENTITY_REPORTING"
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Analytics by UnifyApps",
 			"title":"Execute Analytics SQL Query",
 			"type":"ACTION"
@@ -4298,7 +4290,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_O3VuW",
@@ -4341,7 +4333,7 @@
 					}
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Groovy code",
 			"type":"ACTION"
@@ -4354,7 +4346,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_Od1Jm",
@@ -4380,7 +4372,7 @@
 				"query":"SELECT \r\n   CONCAT_WS(', ', {{ _O3VuW.outputs.result.filter }}) AS filter_value\r\nFROM ENTITY_normalization_master_table nm\r\nWHERE nm._pr_xxxern_employeenumber = '{{ n_pGInD.outputs.objects[0].properties.xxxern_employeenumber }}'\r\n   OR nm._pr_xxxern_personnumber = '{{ n_pGInD.outputs.objects[0].properties.xxxern_personnumber }}';\r\n",
 				"group":"ENTITY_REPORTING"
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Analytics by UnifyApps",
 			"title":"Execute Analytics SQL Query",
 			"type":"ACTION"
@@ -4398,7 +4390,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"n_Gv8zr",
@@ -4435,7 +4427,7 @@
 					"inputStr":"{{ _Od1Jm.outputs.objects[0].columns.filter_value }}"
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Groovy code",
 			"type":"ACTION"
@@ -4448,7 +4440,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_gilte",
@@ -4693,7 +4685,7 @@
 					}
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Variable by UnifyApps",
 			"title":"Create list",
 			"type":"ACTION"
@@ -4706,7 +4698,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_kDm0j",
@@ -4741,7 +4733,7 @@
 				"entityType":"ENTITY_approval_matrix_Table",
 				"group":"ENTITY_REPORTING"
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Analytics by UnifyApps",
 			"title":"Analytics Query",
 			"type":"ACTION"
@@ -4763,7 +4755,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_TphIf",
@@ -4805,7 +4797,7 @@
 					}
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Groovy code",
 			"type":"ACTION"
@@ -4818,7 +4810,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_O0UUX",
@@ -4860,7 +4852,7 @@
 					]
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Variable by UnifyApps",
 			"title":"Create variables",
 			"type":"ACTION"
@@ -4879,7 +4871,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"n_EKmVb",
@@ -4937,77 +4929,9 @@
 					}
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
-			"additional":{
-				"visibleOptionalFields":[
-					"root.itemsToAdd.items.geo",
-					"root.itemsToAdd.items.tier",
-					"root.itemsToAdd.items.actual.items.1",
-					"root.itemsToAdd.items.actual.items.2",
-					"root.itemsToAdd.items.actual.items.3",
-					"root.itemsToAdd.items.actual.items.4",
-					"root.itemsToAdd.items.actual.items.5",
-					"root.itemsToAdd.items.expected.items.1",
-					"root.itemsToAdd.items.expected.items.2",
-					"root.itemsToAdd.items.expected.items.3",
-					"root.itemsToAdd.items.expected.items.4",
-					"root.itemsToAdd.items.expected.items.5"
-				]
-			},
-			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":26,
-				"resourceName":"variable_by_unifyapps_add_items_to_list",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@n",
-			"id":"n_oArI7",
-			"index":40,
-			"inputs":{
-				"insertLocation":"END",
-				"itemsToAdd":{
-					"ua:type":"mappedArray",
-					"source":"{{ n_c0gBQ.outputs.result.failures }}",
-					"items":{
-						"geo":"{{ n_c0gBQ.outputs.result.failures[0].geo }}",
-						"tier":"{{ n_c0gBQ.outputs.result.failures[0].tier }}",
-						"actual":{
-							"source":"{{ n_c0gBQ.outputs.result.failures[0].actual }}",
-							"ua:type":"mappedArray",
-							"items":{
-								"1":"{{ n_c0gBQ.outputs.result.failures[0].actual.1 }}",
-								"2":"{{ n_c0gBQ.outputs.result.failures[0].actual.2 }}",
-								"3":"{{ n_c0gBQ.outputs.result.failures[0].actual.3 }}",
-								"4":"{{ n_c0gBQ.outputs.result.failures[0].actual.4 }}",
-								"5":"{{ n_c0gBQ.outputs.result.failures[0].actual.5 }}"
-							}
-						},
-						"expected":{
-							"source":"{{ n_c0gBQ.outputs.result.failures[0].expected }}",
-							"ua:type":"mappedArray",
-							"items":{
-								"1":"{{ n_c0gBQ.outputs.result.failures[0].expected.1 }}",
-								"2":"{{ n_c0gBQ.outputs.result.failures[0].expected.2 }}",
-								"3":"{{ n_c0gBQ.outputs.result.failures[0].expected.3 }}",
-								"4":"{{ n_c0gBQ.outputs.result.failures[0].expected.4 }}",
-								"5":"{{ n_c0gBQ.outputs.result.failures[0].expected.5 }}"
-							}
-						}
-					}
-				},
-				"listName":"{{ n_IbGxo.outputs.items[0] }}"
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Add items to list",
 			"type":"ACTION"
 		},
 		{
@@ -5024,11 +4948,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_00PKA",
-			"index":41,
+			"index":40,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -5078,7 +5002,7 @@
 					}
 				}
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Code by UnifyApps",
 			"title":"Execute Groovy code",
 			"type":"ACTION"
@@ -5095,7 +5019,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_hVZQy",
-			"index":42,
+			"index":41,
 			"inputs":{
 				"filters":[
 					{
@@ -5125,7 +5049,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@y",
 			"id":"n_S8Az4",
-			"index":43,
+			"index":42,
 			"inputs":{
 				"result":{
 					"a":"Submission Successful!"
@@ -5148,7 +5072,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@n",
 			"id":"_rRHSk",
-			"index":44,
+			"index":43,
 			"inputs":{
 				"result":{
 					"a":" Submission for {{ n_00PKA.outputs.result.result }} failed!"
@@ -5179,5 +5103,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
