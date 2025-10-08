@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759906534555,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_IIXaY",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_1stAg",
+			"type":"next"
+		}
+	],
+	"id":"68e60ae6ed5850184709a375",
+	"lastModifiedBy":161875,
+	"lcName":"test jql trigger",
+	"modifiedTime":1759906534555,
+	"name":"Test JQL Trigger",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_IIXaY-1",
+			"id":"_IIXaY",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_IIXaY-1",
+			"id":"_1stAg",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":161875,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
