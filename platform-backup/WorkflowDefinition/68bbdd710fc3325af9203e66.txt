@@ -147,27 +147,6 @@
 			"fromNodeId":"_ojQkx",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_NxK6O",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_NxK6O",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_lXTSC",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_lXTSC",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_u4tjC",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_u4tjC",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"_ZYcAh",
 			"type":"next"
 		},
@@ -228,7 +207,7 @@
 	"id":"68bbdd710fc3325af9203e66",
 	"lastModifiedBy":426,
 	"lcName":"normalization | submit ratings",
-	"modifiedTime":1759890926408,
+	"modifiedTime":1759890942014,
 	"name":"Normalization | Submit Ratings",
 	"nodes":[
 		{
@@ -2940,187 +2919,6 @@
 			"type":"ACTION"
 		},
 		{
-			"additional":{
-				"xsdSchemaConfig":{
-					"root":{}
-				},
-				"visibleOptionalFields":[
-					"root.parameters.keys.items.Stage",
-					"root.parameters.keys.items.Level"
-				]
-			},
-			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":0,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
-			"id":"n_NxK6O",
-			"index":19,
-			"inputs":{
-				"output":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[],
-					"properties":{
-						"Stage":{
-							"type":"string",
-							"title":"Stage"
-						},
-						"Level":{
-							"type":"string",
-							"title":"Level"
-						}
-					}
-				},
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"properties":{
-						"currentStage":{
-							"type":"string",
-							"title":"currentStage"
-						},
-						"currentLevel":{
-							"type":"string",
-							"title":"currentLevel"
-						},
-						"keys":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"Stage":{
-										"type":"string",
-										"title":"Stage"
-									},
-									"Level":{
-										"type":"string",
-										"title":"Level"
-									}
-								},
-								"additionalProperties":false
-							},
-							"title":"keys"
-						}
-					}
-				},
-				"code":"// Fetch safely\ndef currentStage = binding.hasVariable(\"currentStage\") ? binding.getVariable(\"currentStage\") : \"\"\ndef currentLevel = binding.hasVariable(\"currentLevel\") ? binding.getVariable(\"currentLevel\") : \"\"\ndef keys = binding.hasVariable(\"keys\") ? binding.getVariable(\"keys\") : []\n\n// Extract numbers from current stage and level for comparison\ndef currentStageNum = (currentStage =~ /\\d+/)[0].toInteger()\ndef currentLevelNum = (currentLevel =~ /\\d+/)[0].toInteger()\n\ndef result = [:]\n\n// Find the first Stage/Level that is strictly bigger than current\ndef nextEntry = keys.find { entry ->\n    def stageNum = (entry[\"Stage\"] =~ /\\d+/)[0].toInteger()\n    def levelNum = (entry[\"Level\"] =~ /\\d+/)[0].toInteger()\n    (stageNum > currentStageNum) || (stageNum == currentStageNum && levelNum > currentLevelNum)\n}\n\nif (nextEntry) {\n    // Return as strings exactly as in keys\n    result[\"Stage\"] = nextEntry[\"Stage\"]\n    result[\"Level\"] = nextEntry[\"Level\"]\n}\n\nreturn result\n",
-				"compile_static":false,
-				"captureStdOutput":false,
-				"parameters":{
-					"keys":{
-						"source":"{{ _ojQkx.outputs.objects }}",
-						"ua:type":"mappedArray",
-						"items":{
-							"Stage":"{{ _ojQkx.outputs.objects[0].properties.Stage }}",
-							"Level":"{{ _ojQkx.outputs.objects[0].properties.Level }}"
-						}
-					},
-					"currentStage":"{{ n_AdAxU.outputs.result.output1 }}",
-					"currentLevel":"{{ n_AdAxU.outputs.result.output2 }}"
-				}
-			},
-			"skip":false,
-			"subTitle":"Code by UnifyApps",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":27,
-				"resourceName":"variable_by_unifyapps_add_item_to_list",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
-			"id":"n_lXTSC",
-			"index":20,
-			"inputs":{
-				"itemToAdd":{
-					"CatID":"{{ n_YCTfO.outputs.item }}",
-					"StageLevel":"{{ n_NxK6O.outputs.result.Stage }} {{ n_NxK6O.outputs.result.Level }}"
-				},
-				"insertLocation":"START",
-				"listName":"{{ n_p5jRR.outputs.items[0] }}"
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Add item to list",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":241,
-				"resourceName":"storage_by_unifyapps_fetch_records",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
-			"id":"_u4tjC",
-			"index":21,
-			"inputs":{
-				"triggerInputCondition":{
-					"filters":[
-						{
-							"property":"properties_Cycle",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"{{ n_0ePlH.outputs.cycle_name }}"
-							}
-						},
-						{
-							"property":"properties_Department",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"{{ n_0ePlH.outputs.department }}"
-							}
-						},
-						{
-							"property":"properties_Stage",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"{{ n_AdAxU.outputs.result.output1 }}"
-							}
-						},
-						{
-							"property":"properties_Level",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"{{ n_AdAxU.outputs.result.output2 }}"
-							}
-						}
-					],
-					"operator":"AND"
-				},
-				"object_type":"access_control_for_roleplayers",
-				"includeRoleMappings":false,
-				"includeCurrentUserPermissions":false,
-				"translationsOption":"DEFAULT",
-				"page":{
-					"paginateBy":"OFFSET",
-					"limit":2000
-				},
-				"numberOfRecordsToFetch":"MULTIPLE",
-				"readThroughSessionVariables":false,
-				"includeTotalCount":false
-			},
-			"skip":false,
-			"subTitle":"Storage by UnifyApps",
-			"title":"Fetch records",
-			"type":"ACTION"
-		},
-		{
 			"context":{
 				"appName":"code_by_unifyapps",
 				"resourceVersion":21,
@@ -3132,7 +2930,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_ZYcAh",
-			"index":22,
+			"index":19,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -3189,7 +2987,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_HlgiC",
-			"index":23,
+			"index":20,
 			"inputs":{
 				"outputSchema":{
 					"type":"object",
@@ -3236,7 +3034,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_O3VuW",
-			"index":24,
+			"index":21,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -3292,7 +3090,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_hVZQy",
-			"index":25,
+			"index":22,
 			"inputs":{
 				"filters":[
 					{
@@ -3322,7 +3120,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@y",
 			"id":"n_S8Az4",
-			"index":26,
+			"index":23,
 			"inputs":{
 				"result":{
 					"a":"Submission Successful!"
@@ -3345,7 +3143,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@n",
 			"id":"_rRHSk",
-			"index":27,
+			"index":24,
 			"inputs":{
 				"result":{
 					"a":" Submission for {{ n_00PKA.outputs.result.result }} failed!"
@@ -3376,5 +3174,5 @@
 	"tags":[
 		
 	],
-	"version":159
+	"version":160
 }
