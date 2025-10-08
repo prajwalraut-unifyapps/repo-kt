@@ -11,17 +11,26 @@
 			"skip":false,
 			"toNodeId":"n_K1k1Q",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_K1k1Q",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Nnr2Q",
+			"type":"next"
 		}
 	],
 	"id":"68e64891da5185509e648974",
 	"lastModifiedBy":165764,
 	"lcName":"bulkheadtest",
-	"modifiedTime":1759922346733,
+	"modifiedTime":1759922362521,
 	"name":"bulkHeadTest",
 	"nodes":[
 		{
 			"context":{
-				"appName":"callables"
+				"appName":"callables",
+				"resourceVersion":1023,
+				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
 			"dirty":true,
@@ -29,9 +38,10 @@
 			"groupId":"_sSI3q-1",
 			"id":"n_PdCO9",
 			"index":1,
+			"inputs":{},
 			"skip":false,
 			"subTitle":"Callable",
-			"title":"Select a trigger event",
+			"title":"Trigger via automation",
 			"trigger":{
 				"type":"CALLABLE"
 			},
@@ -121,6 +131,27 @@
 			"subTitle":"Storage by UnifyApps",
 			"title":"Fetch records",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1059,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_sSI3q-1",
+			"id":"n_Nnr2Q",
+			"index":3,
+			"inputs":{
+				"result":"200"
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":165764,
@@ -140,5 +171,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
