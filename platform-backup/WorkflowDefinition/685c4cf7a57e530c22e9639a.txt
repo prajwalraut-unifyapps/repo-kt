@@ -4,6 +4,14 @@
 	],
 	"createdTime":1758977329653,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1758977331235,
+		"deployedBy":23949,
+		"deployedDefinitionId":"68d7dd32f1a8bd727046e733",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":47
+	},
 	"edges":[
 		{
 			"fromNodeId":"NVLFE",
@@ -57,10 +65,34 @@
 			"type":"next"
 		}
 	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"EXPORT_AS_TEMPLATE",
+					"A",
+					"C",
+					"S",
+					"VI",
+					"D",
+					"TEST",
+					"VIEW_RUNS",
+					"E",
+					"V",
+					"VS",
+					"DEP"
+				],
+				"principalIds":[
+					"67a1a7856d555959c8608546"
+				],
+				"principalType":"USER_GROUPS"
+			}
+		]
+	},
 	"id":"685c4cf7a57e530c22e9639a",
 	"lastModifiedBy":23949,
 	"lcName":"publish tool form via interface (copy)",
-	"modifiedTime":1758977329653,
+	"modifiedTime":1759924514416,
 	"name":"Publish tool Form Via interface (copy)",
 	"nodes":[
 		{
@@ -275,7 +307,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"4ZR9C-1",
 			"id":"KP9cp",
@@ -283,6 +315,10 @@
 			"inputs":{
 				"output":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"pageInputs"
+					],
 					"properties":{
 						"pageInputs":{
 							"type":"object",
@@ -290,14 +326,14 @@
 							"additionalProperties":false,
 							"title":"Page Inputs"
 						}
-					},
-					"additionalProperties":false,
-					"required":[
-						"pageInputs"
-					]
+					}
 				},
 				"input":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"fields"
+					],
 					"properties":{
 						"fields":{
 							"type":"array",
@@ -367,15 +403,15 @@
 							"type":"string",
 							"title":"Description"
 						}
-					},
-					"additionalProperties":false,
-					"required":[
-						"fields"
-					]
+					}
 				},
+				"code":"import java.util.UUID\n\nif (!binding.hasVariable('fields')) {\n  return [\"coPilotBlocks\": []]\n}\n\n\n\ndef getProperty(field) {\n    def property = [\n        title: field.title,\n        type : mapType(field.type)\n    ]\n    \n    switch(field.type?.toUpperCase()) {\n        case \"DROPDOWN\":\n        case \"DROP-DOWN\":\n        case \"SELECT\":\n        case \"SINGLE_SELECT\":\n        case \"SINGLE-SELECT\":\n            property.type = \"string\"\n            property.oneOf = getOptions(field.options)\n            property.searchType = \"ICONTAINS\"\n            break\n        case \"MULTI-SELECT\":\n        case \"MULTISELECT\":\n        case \"MULTI_SELECT\":\n            property.type = \"array\"\n            property.searchType = \"ICONTAINS\"\n            property.items = [\n                type: \"string\",\n                oneOf: getOptions(field.options)\n            ]\n            break\n        case \"DATE\":\n            property.type = \"string\"\n            property.format = \"date\"\n            break\n        case \"NUMBER\":\n            property.type = \"number\"\n            break\n        case \"BOOLEAN\":\n            property.type = \"boolean\"\n            break\n        default:\n            property.type = \"string\"\n    }\n    if(field instanceof Map && field.containsKey(\"foreignKey\"))\n    {\n        property.foreignKey=field.foreignKey\n    }\n    return property\n}\n\ndef getOptions(options) {\n    if (options == null || options.isEmpty()) {\n        return []\n    }\n    def first = options[0]\n    if (first instanceof Map && first.containsKey('label') && first.containsKey('value')) {\n        return options.collect { opt ->\n            [const: opt.value, title: opt.label]\n        }\n    } else {\n        return options.collect { opt ->\n            [const: opt, title: opt]\n        }\n    }\n}\n\ndef mapType(type) {\n    switch (type?.toUpperCase()) {\n        case \"TEXT\":\n        case \"SELECT\":\n        case \"SINGLE_SELECT\":\n        case \"SINGLE-SELECT\":\n        case \"MULTI_SELECT\":\n        case \"MULTISELECT\":\n        case \"MULTI-SELECT\":\n        case \"DATE\":\n            return \"string\"\n        case \"NUMBER\":\n            return \"number\"\n        case \"BOOLEAN\":\n            return \"boolean\"\n        default:\n            return \"string\"\n    }\n}\n\n// Layout generator\ndef getLayout(field, isConditional = false) {\n    def layout = [\n        \"ui:placeholder\": field.placeholder ?: \"\",\n        \"ui:title\": field.title\n    ]\n    \n    if (field.type?.toUpperCase() == 'MULTI_SELECT' || field.type?.toUpperCase() == 'MULTISELECT' || field.type?.toUpperCase() == 'MULTI-SELECT') {\n        layout[\"ui:field\"] = \"MultiSelectField\"\n        if (field.foreignKey) {\n            layout[\"ui:widget\"] = \"LookupWidget\"\n            layout[\"ui:options\"] = (layout[\"ui:options\"] ?: [:]) + [\n                \"ua:payload\": [\n                    \"lookupType\": field.foreignKey.reference,\n                    \"options\":field.foreignKey.options,\n                    \"type\": \"ByQuery\"\n                ]\n            ]\n        } + (field.foreignKey.dependecies ?: [:]) \n        return layout\n    }\n    \n    switch(field.type?.toUpperCase()) {\n        case \"TEXT\":\n            layout[\"ua:fieldType\"] = \"TEXT\"\n            layout[\"ua:valueType\"] = \"single\"\n            break\n        case \"DROPDOWN\":\n        case \"DROP-DOWN\":\n        case \"SELECT\":\n        case \"SINGLE_SELECT\":\n        case \"SINGLE-SELECT\":\n            layout[\"ua:disableClearable\"] = true\n            layout[\"ua:fieldType\"] = \"SINGLE_SELECT_DROPDOWN\"\n            layout[\"ua:valueType\"] = \"single\"\n            layout[\"ui:placeholder\"] = \"Select\"\n            layout[\"ui:options\"] = [\n                \"ua:searchType\": \"ICONTAINS\",\n                \"ua:width\": \"100%\",\n                \"ua:hideTagsInDropdown\": true\n            ]\n            break\n        case \"MULTISELECT\":\n        case \"MULTI_SELECT\":\n            layout[\"ua:fieldType\"] = \"SELECT\"\n            layout[\"ua:valueType\"] = \"multiple\"\n            break\n        case \"DATE\":\n            layout[\"ua:fieldType\"] = \"DATE\"\n            layout[\"ua:valueType\"] = \"single\"\n            break\n        case \"BOOLEAN\":\n            layout[\"ua:fieldType\"] = \"BOOLEAN\"\n            layout[\"ua:valueType\"] = \"single\"\n            break\n        case \"NUMBER\":\n            layout[\"ua:fieldType\"] = \"NUMBER\"\n            layout[\"ua:valueType\"] = \"single\"\n            break\n        default:\n            layout[\"ua:fieldType\"] = \"TEXT\"\n            layout[\"ua:valueType\"] = \"single\"\n    }\n    if (field.foreignKey) {\n        layout[\"ui:widget\"] = \"LookupWidget\"\n        layout[\"ui:options\"] = (layout[\"ui:options\"] ?: [:]) + [\n            \"ua:payload\": [\n                \"lookupType\": field.foreignKey.reference,\n                \"options\":field.foreignKey.options,\n                \"type\": \"ByQuery\"\n            ]\n        ]\n    }\n    return layout\n}\n\n// Build condition structure for allOf\ndef buildCondition(condition, isRequired = true) {\n    def condStruct = [\n        properties: [\n            (condition.key): [:]\n        ]\n    ]\n    \n    // Handle different expression types\n    switch(condition.expression) {\n        case \"IN\":\n            if (condition.values?.size() == 1) {\n                condStruct.properties[condition.key][\"const\"] = condition.values[0]\n            } else {\n                // For multiple values, use anyOf with const for each value\n                return [\n                    anyOf: condition.values.collect { value ->\n                        [\n                            properties: [\n                                (condition.key): [const: value]\n                            ],\n                            required: isRequired ? [condition.key] : []\n                        ]\n                    }\n                ]\n            }\n            break\n        case \"NOT_IN\":\n            // For NOT_IN, we need to check that the value is not any of the specified values\n            return [\n                not: [\n                    anyOf: condition.values.collect { value ->\n                        [\n                            properties: [\n                                (condition.key): [const: value]\n                            ],\n                            required: isRequired ? [condition.key] : []\n                        ]\n                    }\n                ]\n            ]\n        default:\n            condStruct.properties[condition.key][\"const\"] = condition.values[0]\n    }\n    \n    if (isRequired) {\n        condStruct[\"required\"] = [condition.key]\n    }\n    \n    return condStruct\n}\n\n// Build allOf structure for conditional fields\ndef buildAllOf(conditionalFields) {\n    def allOfList = []\n    \n    conditionalFields.each { field ->\n        def fieldProp = getProperty(field)\n        def deps = field.dependencies\n        \n        def ifCondition = [:]\n        \n        if (deps.operator == \"OR\") {\n            // For OR conditions, use anyOf\n            def conditions = deps.conditions.collect { cond ->\n                buildCondition(cond, true)\n            }\n            // ifCondition = conditions.size() == 1 ? conditions[0] : [anyOf: conditions]\n        } else if (deps.operator == \"AND\") {\n            // For AND conditions, use allOf\n            def conditions = deps.conditions.collect { cond ->\n                buildCondition(cond, true)\n            }\n            ifCondition = [allOf: conditions]\n        }\n        \n        // Build the if-then structure\n        def ifThenBlock = [\n            \"if\": ifCondition,\n            \"then\": [\n                properties: [\n                    (field.key): fieldProp\n                ]\n            ]\n        ]\n        \n        allOfList.add(ifThenBlock)\n    }\n    \n    return allOfList\n}\n\n// Main processing\ndef properties = [:]\ndef required = []\ndef layouts = [ \"ui:fieldBodyClassName\": \"!gap-y-2xl\" ]\ndef conditionalFields = []\n\n// Separate conditional and non-conditional fields\nfields.each { field ->\n    if(field.controlVisibility == true && field.dependencies) {\n        conditionalFields.add(field)\n        // Add layout for conditional field\n        layouts[field.key] = getLayout(field, true)\n    } else { \n        properties[field.key] = getProperty(field)\n        layouts[field.key] = getLayout(field, false)\n    }\n}\n\n// Build allOf for conditional fields\ndef allOfList = buildAllOf(conditionalFields)\n\ndef formTitle = title\ndef submitMessage = onSubmitMessage\ndef subTitle = description\n\n// Build the jsonSchema\ndef jsonSchema = [\n    \"type\": \"object\",\n    \"properties\": properties,\n    \"required\": required\n]\n\n// Add allOf if there are conditional fields\nif (allOfList) {\n    jsonSchema[\"allOf\"] = allOfList\n}\n\ndef keys = fields.collect { it.key }\nlayouts.put(\"ui:order\", keys)\n\ndef pageInputs = [\n    \"jsonSchema\": jsonSchema,\n    \"uiSchema\": layouts,\n    \"title\" : formTitle,\n    \"submitMessage\" : submitMessage,\n    \"subTitle\" : subTitle\n]\n\nreturn [\"pageInputs\": pageInputs]",
 				"compile_static":false,
-				"code":"import java.util.UUID\n\nif (!binding.hasVariable('fields')) {\n  return [\"coPilotBlocks\": []]\n}\n\n\n\ndef getProperty(field) {\n    def property = [\n        title: field.title,\n        type : mapType(field.type)\n    ]\n    \n    switch(field.type?.toUpperCase()) {\n        case \"DROPDOWN\":\n        case \"DROP-DOWN\":\n        case \"SELECT\":\n        case \"SINGLE_SELECT\":\n        case \"SINGLE-SELECT\":\n            property.type = \"string\"\n            property.oneOf = getOptions(field.options)\n            property.searchType = \"ICONTAINS\"\n            break\n        case \"MULTI-SELECT\":\n        case \"MULTISELECT\":\n        case \"MULTI_SELECT\":\n            property.type = \"array\"\n            property.searchType = \"ICONTAINS\"\n            property.items = [\n                type: \"string\",\n                oneOf: getOptions(field.options)\n            ]\n            break\n        case \"DATE\":\n            property.type = \"string\"\n            property.format = \"date\"\n            break\n        case \"NUMBER\":\n            property.type = \"number\"\n            break\n        case \"BOOLEAN\":\n            property.type = \"boolean\"\n            break\n        default:\n            property.type = \"string\"\n    }\n    if(field instanceof Map && field.containsKey(\"foreignKey\"))\n    {\n        property.foreignKey=field.foreignKey\n    }\n    return property\n}\n\ndef getOptions(options) {\n    if (options == null || options.isEmpty()) {\n        return []\n    }\n    def first = options[0]\n    if (first instanceof Map && first.containsKey('label') && first.containsKey('value')) {\n        return options.collect { opt ->\n            [const: opt.value, title: opt.label]\n        }\n    } else {\n        return options.collect { opt ->\n            [const: opt, title: opt]\n        }\n    }\n}\n\ndef mapType(type) {\n    switch (type?.toUpperCase()) {\n        case \"TEXT\":\n        case \"SELECT\":\n        case \"SINGLE_SELECT\":\n        case \"SINGLE-SELECT\":\n        case \"MULTI_SELECT\":\n        case \"MULTISELECT\":\n        case \"MULTI-SELECT\":\n        case \"DATE\":\n            return \"string\"\n        case \"NUMBER\":\n            return \"number\"\n        case \"BOOLEAN\":\n            return \"boolean\"\n        default:\n            return \"string\"\n    }\n}\n\n// Layout generator\ndef getLayout(field, isConditional = false) {\n    def layout = [\n        \"ui:placeholder\": field.placeholder ?: \"\",\n        \"ui:title\": field.title\n    ]\n    \n    if (field.type?.toUpperCase() == 'MULTI_SELECT' || field.type?.toUpperCase() == 'MULTISELECT' || field.type?.toUpperCase() == 'MULTI-SELECT') {\n        layout[\"ui:field\"] = \"MultiSelectField\"\n        if (field.foreignKey) {\n            layout[\"ui:widget\"] = \"LookupWidget\"\n            layout[\"ui:options\"] = (layout[\"ui:options\"] ?: [:]) + [\n                \"ua:payload\": [\n                    \"lookupType\": field.foreignKey.reference,\n                    \"options\":field.foreignKey.options,\n                    \"type\": \"ByQuery\"\n                ]\n            ]\n        }\n        return layout\n    }\n    \n    switch(field.type?.toUpperCase()) {\n        case \"TEXT\":\n            layout[\"ua:fieldType\"] = \"TEXT\"\n            layout[\"ua:valueType\"] = \"single\"\n            break\n        case \"DROPDOWN\":\n        case \"DROP-DOWN\":\n        case \"SELECT\":\n        case \"SINGLE_SELECT\":\n        case \"SINGLE-SELECT\":\n            layout[\"ua:disableClearable\"] = true\n            layout[\"ua:fieldType\"] = \"SINGLE_SELECT_DROPDOWN\"\n            layout[\"ua:valueType\"] = \"single\"\n            layout[\"ui:placeholder\"] = \"Select\"\n            layout[\"ui:options\"] = [\n                \"ua:searchType\": \"ICONTAINS\",\n                \"ua:width\": \"100%\",\n                \"ua:hideTagsInDropdown\": true\n            ]\n            break\n        case \"MULTISELECT\":\n        case \"MULTI_SELECT\":\n            layout[\"ua:fieldType\"] = \"SELECT\"\n            layout[\"ua:valueType\"] = \"multiple\"\n            break\n        case \"DATE\":\n            layout[\"ua:fieldType\"] = \"DATE\"\n            layout[\"ua:valueType\"] = \"single\"\n            break\n        case \"BOOLEAN\":\n            layout[\"ua:fieldType\"] = \"BOOLEAN\"\n            layout[\"ua:valueType\"] = \"single\"\n            break\n        case \"NUMBER\":\n            layout[\"ua:fieldType\"] = \"NUMBER\"\n            layout[\"ua:valueType\"] = \"single\"\n            break\n        default:\n            layout[\"ua:fieldType\"] = \"TEXT\"\n            layout[\"ua:valueType\"] = \"single\"\n    }\n    if (field.foreignKey) {\n        layout[\"ui:widget\"] = \"LookupWidget\"\n        layout[\"ui:options\"] = (layout[\"ui:options\"] ?: [:]) + [\n            \"ua:payload\": [\n                \"lookupType\": field.foreignKey.reference,\n                \"options\":field.foreignKey.options,\n                \"type\": \"ByQuery\"\n            ]\n        ]\n    }\n    return layout\n}\n\n// Build condition structure for allOf\ndef buildCondition(condition, isRequired = true) {\n    def condStruct = [\n        properties: [\n            (condition.key): [:]\n        ]\n    ]\n    \n    // Handle different expression types\n    switch(condition.expression) {\n        case \"IN\":\n            if (condition.values?.size() == 1) {\n                condStruct.properties[condition.key][\"const\"] = condition.values[0]\n            } else {\n                // For multiple values, use anyOf with const for each value\n                return [\n                    anyOf: condition.values.collect { value ->\n                        [\n                            properties: [\n                                (condition.key): [const: value]\n                            ],\n                            required: isRequired ? [condition.key] : []\n                        ]\n                    }\n                ]\n            }\n            break\n        case \"NOT_IN\":\n            // For NOT_IN, we need to check that the value is not any of the specified values\n            return [\n                not: [\n                    anyOf: condition.values.collect { value ->\n                        [\n                            properties: [\n                                (condition.key): [const: value]\n                            ],\n                            required: isRequired ? [condition.key] : []\n                        ]\n                    }\n                ]\n            ]\n        default:\n            condStruct.properties[condition.key][\"const\"] = condition.values[0]\n    }\n    \n    if (isRequired) {\n        condStruct[\"required\"] = [condition.key]\n    }\n    \n    return condStruct\n}\n\n// Build allOf structure for conditional fields\ndef buildAllOf(conditionalFields) {\n    def allOfList = []\n    \n    conditionalFields.each { field ->\n        def fieldProp = getProperty(field)\n        def deps = field.dependencies\n        \n        def ifCondition = [:]\n        \n        if (deps.operator == \"OR\") {\n            // For OR conditions, use anyOf\n            def conditions = deps.conditions.collect { cond ->\n                buildCondition(cond, true)\n            }\n            // ifCondition = conditions.size() == 1 ? conditions[0] : [anyOf: conditions]\n        } else if (deps.operator == \"AND\") {\n            // For AND conditions, use allOf\n            def conditions = deps.conditions.collect { cond ->\n                buildCondition(cond, true)\n            }\n            ifCondition = [allOf: conditions]\n        }\n        \n        // Build the if-then structure\n        def ifThenBlock = [\n            \"if\": ifCondition,\n            \"then\": [\n                properties: [\n                    (field.key): fieldProp\n                ]\n            ]\n        ]\n        \n        allOfList.add(ifThenBlock)\n    }\n    \n    return allOfList\n}\n\n// Main processing\ndef properties = [:]\ndef required = []\ndef layouts = [ \"ui:fieldBodyClassName\": \"!gap-y-2xl\" ]\ndef conditionalFields = []\n\n// Separate conditional and non-conditional fields\nfields.each { field ->\n    if(field.controlVisibility == true && field.dependencies) {\n        conditionalFields.add(field)\n        // Add layout for conditional field\n        layouts[field.key] = getLayout(field, true)\n    } else { \n        properties[field.key] = getProperty(field)\n        layouts[field.key] = getLayout(field, false)\n    }\n}\n\n// Build allOf for conditional fields\ndef allOfList = buildAllOf(conditionalFields)\n\ndef formTitle = title\ndef submitMessage = onSubmitMessage\ndef subTitle = description\n\n// Build the jsonSchema\ndef jsonSchema = [\n    \"type\": \"object\",\n    \"properties\": properties,\n    \"required\": required\n]\n\n// Add allOf if there are conditional fields\nif (allOfList) {\n    jsonSchema[\"allOf\"] = allOfList\n}\n\ndef keys = fields.collect { it.key }\nlayouts.put(\"ui:order\", keys)\n\ndef pageInputs = [\n    \"jsonSchema\": jsonSchema,\n    \"uiSchema\": layouts,\n    \"title\" : formTitle,\n    \"submitMessage\" : submitMessage,\n    \"subTitle\" : subTitle\n]\n\nreturn [\"pageInputs\": pageInputs]",
+				"captureStdOutput":false,
 				"parameters":{
+					"onSubmitMessage":"{{ NVLFE.outputs.onSubmitMessage }}",
+					"title":"{{ NVLFE.outputs.title }}",
+					"description":"{{ NVLFE.outputs.description }}",
 					"fields":{
 						"ua:type":"mappedArray",
 						"items":{
@@ -393,10 +429,7 @@
 							"foreignKey":"{{ NVLFE.outputs.field[0].foreignKey }}"
 						},
 						"source":"{{ NVLFE.outputs.field }}"
-					},
-					"onSubmitMessage":"{{ NVLFE.outputs.onSubmitMessage }}",
-					"title":"{{ NVLFE.outputs.title }}",
-					"description":"{{ NVLFE.outputs.description }}"
+					}
 				}
 			},
 			"skip":false,
@@ -510,5 +543,5 @@
 		}
 	},
 	"standard":false,
-	"version":47
+	"version":49
 }
