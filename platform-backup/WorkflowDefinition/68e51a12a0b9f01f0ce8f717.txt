@@ -24,7 +24,7 @@
 	"id":"68e51a12a0b9f01f0ce8f717",
 	"lastModifiedBy":161877,
 	"lcName":"sdf",
-	"modifiedTime":1759915921384,
+	"modifiedTime":1759916007570,
 	"name":"sdf",
 	"nodes":[
 		{
@@ -55,9 +55,9 @@
 		{
 			"context":{
 				"appName":"slack",
-				"resourceVersion":6286,
+				"resourceVersion":6263,
 				"connectionId":"68e625ab4022cb3f538be04a",
-				"resourceName":"slack_conversations_create",
+				"resourceName":"slack_conversation_invite",
 				"type":"APPLICATION"
 			},
 			"debug":false,
@@ -67,13 +67,12 @@
 			"id":"n_Jkj95",
 			"index":2,
 			"inputs":{
-				"is_private":true,
-				"name":"m ",
-				"return_conversation":true
+				"channel":"C0995JKMYDD",
+				"force":true
 			},
 			"skip":false,
 			"subTitle":"Slack",
-			"title":"Create conversation",
+			"title":"Conversation invite",
 			"type":"ACTION"
 		}
 	],
@@ -94,5 +93,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
