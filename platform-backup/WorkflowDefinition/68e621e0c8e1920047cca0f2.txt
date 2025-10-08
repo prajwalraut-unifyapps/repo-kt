@@ -45,7 +45,7 @@
 	"id":"68e621e0c8e1920047cca0f2",
 	"lastModifiedBy":161877,
 	"lcName":"test",
-	"modifiedTime":1759912708083,
+	"modifiedTime":1759912725151,
 	"name":"test",
 	"nodes":[
 		{
@@ -127,6 +127,8 @@
 		{
 			"context":{
 				"appName":"slack",
+				"resourceVersion":3947,
+				"resourceName":"slack_delete_message_in_channel",
 				"type":"APPLICATION"
 			},
 			"debug":false,
@@ -135,9 +137,10 @@
 			"groupId":"n_5aCW5@_FD24L-1@l",
 			"id":"n_UyqsK",
 			"index":5,
+			"inputs":{},
 			"skip":false,
 			"subTitle":"Slack",
-			"title":"Select an action",
+			"title":"Delete message",
 			"type":"ACTION"
 		}
 	],
@@ -158,5 +161,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }
