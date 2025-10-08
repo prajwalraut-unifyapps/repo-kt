@@ -45,7 +45,7 @@
 	"id":"68e621e0c8e1920047cca0f2",
 	"lastModifiedBy":161877,
 	"lcName":"test",
-	"modifiedTime":1759912677192,
+	"modifiedTime":1759912693354,
 	"name":"test",
 	"nodes":[
 		{
@@ -76,6 +76,8 @@
 		{
 			"context":{
 				"appName":"variable_by_unifyapps",
+				"resourceVersion":996,
+				"resourceName":"variable_by_unifyapps_add_item_to_list",
 				"type":"APPLICATION"
 			},
 			"debug":false,
@@ -84,9 +86,10 @@
 			"groupId":"_FD24L-1",
 			"id":"n_Jd6xX",
 			"index":2,
+			"inputs":{},
 			"skip":false,
 			"subTitle":"Variable by UnifyApps",
-			"title":"Select an action",
+			"title":"Add item to list",
 			"type":"ACTION"
 		},
 		{
@@ -150,5 +153,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
