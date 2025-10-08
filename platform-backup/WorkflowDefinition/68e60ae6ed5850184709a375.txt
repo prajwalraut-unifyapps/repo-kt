@@ -1,51 +1,50 @@
 {
 	"appsUsed":[
-		
+		"jira"
 	],
 	"createdTime":1759906534555,
 	"deleted":false,
 	"edges":[
-		{
-			"fromNodeId":"_IIXaY",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_1stAg",
-			"type":"next"
-		}
+		
 	],
 	"id":"68e60ae6ed5850184709a375",
 	"lastModifiedBy":161875,
 	"lcName":"test jql trigger",
-	"modifiedTime":1759906534555,
+	"modifiedTime":1759906565593,
 	"name":"Test JQL Trigger",
 	"nodes":[
 		{
+			"context":{
+				"appName":"jira",
+				"resourceVersion":6393,
+				"connectionId":"68ac153faa495b37c5e81467",
+				"resourceName":"jira_on_new_issue_polling"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_IIXaY-1",
-			"id":"_IIXaY",
-			"index":0,
+			"id":"n_kFGFh",
+			"index":1,
+			"inputs":{
+				"intervalType":"minutes",
+				"jql":"project=\"MD\"",
+				"objectSourceResourceName":"jira_fetch_issue_schema",
+				"interval":1
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Jira",
+			"title":"New issue",
 			"trigger":{
 				"type":"EVENT"
 			},
 			"type":"START"
-		},
-		{
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_IIXaY-1",
-			"id":"_1stAg",
-			"index":0,
-			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
 		}
 	],
 	"ownerUserId":161875,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +58,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
