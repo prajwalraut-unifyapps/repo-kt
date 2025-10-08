@@ -16,7 +16,7 @@
 	"id":"68e6294fd88b9146b7888498",
 	"lastModifiedBy":2621,
 	"lcName":"test",
-	"modifiedTime":1759914566053,
+	"modifiedTime":1759914587430,
 	"name":"test",
 	"nodes":[
 		{
@@ -81,7 +81,7 @@
 					"count":1,
 					"customers":[
 						{
-							"personType":"ADULT",
+							"personType":"GENERAL",
 							"isPrimary":true,
 							"inputFields":{
 								"items":{
@@ -142,5 +142,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
