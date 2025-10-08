@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759908269182,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_KLnYv",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_5FbbU",
+			"type":"next"
+		}
+	],
+	"id":"68e611ade2da50045069fa1f",
+	"lastModifiedBy":45010,
+	"lcName":"dew3",
+	"modifiedTime":1759908269182,
+	"name":"dew3",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_KLnYv-1",
+			"id":"_KLnYv",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_KLnYv-1",
+			"id":"_5FbbU",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":45010,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
