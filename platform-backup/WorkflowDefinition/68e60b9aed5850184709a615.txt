@@ -16,18 +16,18 @@
 	"id":"68e60b9aed5850184709a615",
 	"lastModifiedBy":161875,
 	"lcName":"test jql trigger 2",
-	"modifiedTime":1759906714844,
+	"modifiedTime":1759906739742,
 	"name":"Test JQL Trigger 2",
 	"nodes":[
 		{
 			"context":{
 				"appName":"jira",
-				"resourceVersion":6393,
+				"resourceVersion":3753,
 				"connectionId":"68ac153faa495b37c5e81467",
-				"resourceName":"jira_on_new_issue_polling"
+				"resourceName":"jira_on_updated_issue_batch"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_IIXaY-1",
 			"id":"n_kFGFh",
@@ -36,12 +36,12 @@
 				"intervalType":"minutes",
 				"jql":"project=\"MD\"",
 				"objectSourceResourceName":"jira_fetch_issue_schema",
-				"interval":1,
-				"from":"2025-06-05 12:27"
+				"interval":15,
+				"from":"2025-07-01 12:28"
 			},
 			"skip":false,
 			"subTitle":"Jira",
-			"title":"New issue",
+			"title":"Updated issue",
 			"trigger":{
 				"type":"EVENT"
 			},
@@ -90,5 +90,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
