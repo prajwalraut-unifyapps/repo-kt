@@ -10,13 +10,6 @@
 			"fromNodeId":"n_0ePlH",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_KxeJf",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_KxeJf",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_AdAxU",
 			"type":"next"
 		},
@@ -363,7 +356,7 @@
 	"id":"68bbdd710fc3325af9203e66",
 	"lastModifiedBy":426,
 	"lcName":"normalization | submit ratings",
-	"modifiedTime":1759890708632,
+	"modifiedTime":1759890748882,
 	"name":"Normalization | Submit Ratings",
 	"nodes":[
 		{
@@ -449,56 +442,6 @@
 		},
 		{
 			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":241,
-				"resourceName":"storage_by_unifyapps_fetch_records",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_z1vHD-1",
-			"id":"n_KxeJf",
-			"index":2,
-			"inputs":{
-				"triggerInputCondition":{
-					"filters":[
-						{
-							"property":"properties_empEmail",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"{{ n_0ePlH.outputs.Email_Id }}"
-							}
-						},
-						{
-							"property":"properties_roleId",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"{{ n_0ePlH.outputs.RoleID }}"
-							}
-						}
-					],
-					"operator":"AND"
-				},
-				"object_type":"approval_matrix_Table",
-				"includeRoleMappings":false,
-				"includeCurrentUserPermissions":false,
-				"translationsOption":"DEFAULT",
-				"page":{
-					"paginateBy":"OFFSET",
-					"limit":20
-				},
-				"numberOfRecordsToFetch":"SINGLE",
-				"readThroughSessionVariables":false,
-				"includeTotalCount":false
-			},
-			"skip":false,
-			"subTitle":"Storage by UnifyApps",
-			"title":"Fetch records",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"code_by_unifyapps",
 				"resourceVersion":26,
 				"resourceName":"code_by_unifyapps_groovy",
@@ -509,7 +452,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_AdAxU",
-			"index":3,
+			"index":2,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -566,7 +509,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_lvDUS",
-			"index":4,
+			"index":3,
 			"inputs":{
 				"triggerInputCondition":{
 					"filters":[
@@ -637,7 +580,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_kETVC",
-			"index":5,
+			"index":4,
 			"inputs":{
 				"triggerInputCondition":{
 					"filters":[
@@ -680,7 +623,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_IbGxo",
-			"index":6,
+			"index":5,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -1069,7 +1012,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_5fHcz",
-			"index":7,
+			"index":6,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -2098,7 +2041,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_9xcB5",
-			"index":8,
+			"index":7,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -2153,7 +2096,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_cXpfJ",
-			"index":9,
+			"index":8,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -2411,7 +2354,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_Nwdw7",
-			"index":10,
+			"index":9,
 			"inputs":{
 				"captureIterations":true
 			},
@@ -2432,7 +2375,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_Nwdw7@_z1vHD-1@l",
 			"id":"n_EoV2h",
-			"index":11,
+			"index":10,
 			"inputs":{
 				"automationId":"68c7ab3ba643bc3223c2c5d4",
 				"runtimeConnections":{},
@@ -2464,7 +2407,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_Nwdw7@_z1vHD-1@l",
 			"id":"n_qrCD8",
-			"index":12,
+			"index":11,
 			"inputs":{
 				"variables":[
 					{
@@ -2490,7 +2433,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_Nwdw7@_z1vHD-1@l",
 			"id":"n_wP5pi",
-			"index":13,
+			"index":12,
 			"inputs":{
 				"filters":[
 					{
@@ -2520,7 +2463,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_wP5pi@n_Nwdw7@_z1vHD-1@l@y",
 			"id":"n_bVY53",
-			"index":14,
+			"index":13,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -2584,7 +2527,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_wP5pi@n_Nwdw7@_z1vHD-1@l@y",
 			"id":"n_3TWLD",
-			"index":15,
+			"index":14,
 			"inputs":{
 				"insertLocation":"END",
 				"itemsToAdd":{
@@ -2611,7 +2554,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_wP5pi@n_Nwdw7@_z1vHD-1@l@n",
 			"id":"n_hg2NB",
-			"index":16,
+			"index":15,
 			"inputs":{
 				"loop":"n_Nwdw7"
 			},
@@ -2632,7 +2575,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_OQSsg",
-			"index":17,
+			"index":16,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -2890,7 +2833,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_p5jRR",
-			"index":18,
+			"index":17,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -3173,7 +3116,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_YCTfO",
-			"index":19,
+			"index":18,
 			"inputs":{
 				"repeatMode":"SINGLE",
 				"listSource":"{{ n_OQSsg.outputs.items }}",
@@ -3196,7 +3139,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_YCTfO@_z1vHD-1@l",
 			"id":"n_pGInD",
-			"index":20,
+			"index":19,
 			"inputs":{
 				"triggerInputCondition":{
 					"filters":[
@@ -3247,7 +3190,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_YCTfO@_z1vHD-1@l",
 			"id":"n_JtWeQ",
-			"index":21,
+			"index":20,
 			"inputs":{
 				"triggerInputCondition":{
 					"filters":[
@@ -3319,7 +3262,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_YCTfO@_z1vHD-1@l",
 			"id":"n_c0gBQ",
-			"index":22,
+			"index":21,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -3618,7 +3561,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_YCTfO@_z1vHD-1@l",
 			"id":"_Xwul6",
-			"index":23,
+			"index":22,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -3901,7 +3844,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_YCTfO@_z1vHD-1@l",
 			"id":"n_JfHtS",
-			"index":24,
+			"index":23,
 			"inputs":{
 				"filters":[
 					{
@@ -3931,7 +3874,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_ojQkx",
-			"index":25,
+			"index":24,
 			"inputs":{
 				"object_type":"access_control_for_roleplayers",
 				"includeRoleMappings":false,
@@ -3971,7 +3914,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"n_NxK6O",
-			"index":26,
+			"index":25,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -4053,7 +3996,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"n_OVijX",
-			"index":27,
+			"index":26,
 			"inputs":{
 				"object_type":"normalization_master_table",
 				"skipIfBlank":false,
@@ -4115,7 +4058,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"n_lXTSC",
-			"index":28,
+			"index":27,
 			"inputs":{
 				"itemToAdd":{
 					"CatID":"{{ n_YCTfO.outputs.item }}",
@@ -4141,7 +4084,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_u4tjC",
-			"index":29,
+			"index":28,
 			"inputs":{
 				"triggerInputCondition":{
 					"filters":[
@@ -4205,7 +4148,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_ZYcAh",
-			"index":30,
+			"index":29,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -4262,7 +4205,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_HlgiC",
-			"index":31,
+			"index":30,
 			"inputs":{
 				"outputSchema":{
 					"type":"object",
@@ -4309,7 +4252,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_O3VuW",
-			"index":32,
+			"index":31,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -4365,7 +4308,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_Od1Jm",
-			"index":33,
+			"index":32,
 			"inputs":{
 				"outputSchema":{
 					"type":"object",
@@ -4409,7 +4352,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"n_Gv8zr",
-			"index":34,
+			"index":33,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -4459,7 +4402,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_gilte",
-			"index":35,
+			"index":34,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -4717,7 +4660,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_kDm0j",
-			"index":36,
+			"index":35,
 			"inputs":{
 				"projections":[
 					{
@@ -4774,7 +4717,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_TphIf",
-			"index":37,
+			"index":36,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -4829,7 +4772,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_O0UUX",
-			"index":38,
+			"index":37,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -4890,7 +4833,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"n_EKmVb",
-			"index":39,
+			"index":38,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -4962,7 +4905,7 @@
 			"fallbackMode":"CONTINUE",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_kAS4W",
-			"index":40,
+			"index":39,
 			"inputs":{
 				"sendPartial":false,
 				"subject":"Submition Notification In Normalisation Application",
@@ -5056,7 +4999,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@n",
 			"id":"n_oArI7",
-			"index":41,
+			"index":40,
 			"inputs":{
 				"insertLocation":"END",
 				"itemsToAdd":{
@@ -5109,7 +5052,7 @@
 			"fallbackMode":"CONTINUE",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@n",
 			"id":"_Wkx76",
-			"index":42,
+			"index":41,
 			"inputs":{
 				"subject":"Ratings submission is failed - Rating Normalization Application",
 				"body":"Dear Team,\n\n[This is system generated email. Do not reply.]\nThis is to notify you that the submitting is {{ n_lvDUS.outputs.properties.Level_Group }}: {{ n_YCTfO.outputs.item }} failed.\nPosssible reasons\n* The ratings for the selected span is partially received.\n* You already have submitted the ratings belongs to selected span.\nThank you,\nRating Normalization Application\n",
@@ -5192,7 +5135,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_00PKA",
-			"index":43,
+			"index":42,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -5259,7 +5202,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_hVZQy",
-			"index":44,
+			"index":43,
 			"inputs":{
 				"filters":[
 					{
@@ -5289,7 +5232,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@y",
 			"id":"n_S8Az4",
-			"index":45,
+			"index":44,
 			"inputs":{
 				"result":{
 					"a":"Submission Successful!"
@@ -5312,7 +5255,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@n",
 			"id":"_rRHSk",
-			"index":46,
+			"index":45,
 			"inputs":{
 				"result":{
 					"a":" Submission for {{ n_00PKA.outputs.result.result }} failed!"
@@ -5343,5 +5286,5 @@
 	"tags":[
 		
 	],
-	"version":149
+	"version":150
 }
