@@ -1354,6 +1354,28 @@
 			"type":"next"
 		},
 		{
+			"fromNodeId":"n_k6i4X",
+			"name":"31",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_k6i4X@31",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"n_k6i4X@31",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_7Spyf",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_7Spyf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_kRpAg",
+			"type":"next"
+		},
+		{
 			"fromNodeId":"n_1n8g1",
 			"priority":0,
 			"skip":false,
@@ -1558,6 +1580,13 @@
 		},
 		{
 			"fromNodeId":"_Wo9hJ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_69Y8N",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_kRpAg",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"_69Y8N",
@@ -1902,7 +1931,7 @@
 	"id":"687947f31d11809b87f096d9",
 	"lastModifiedBy":44108,
 	"lcName":"ua infra | k8s | combined",
-	"modifiedTime":1759914687244,
+	"modifiedTime":1759915050272,
 	"name":"UA Infra | K8s | Combined",
 	"nodes":[
 		{
@@ -2737,6 +2766,24 @@
 										"filter":{
 											"operator":"EQUAL",
 											"value":"DOWNLOAD_POD_LOGS"
+										}
+									}
+								],
+								"operator":"AND"
+							}
+						}
+					},
+					{
+						"id":"31",
+						"inputs":{
+							"name":"Branch 31",
+							"conditions":{
+								"filters":[
+									{
+										"property":"{{ n_mNHwZ.outputs.type }}",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"DOWNLOAD_POD_THREAD_DUMPS"
 										}
 									}
 								],
@@ -8293,6 +8340,113 @@
 		},
 		{
 			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":0,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_k6i4X@_tycXM-1@31",
+			"id":"n_k6i4X@31",
+			"index":166,
+			"inputs":{
+				"name":"Branch 31",
+				"conditions":{
+					"filters":[
+						{
+							"property":"{{ n_mNHwZ.outputs.type }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"DOWNLOAD_POD_THREAD_DUMPS"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"custom_http_endpoint",
+				"resourceVersion":369,
+				"resourceName":"custom_http_endpoint_execute",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_k6i4X@_tycXM-1@31",
+			"id":"_7Spyf",
+			"index":167,
+			"inputs":{
+				"isAsync":false,
+				"enableProxy":false,
+				"requestTimeoutInSecs":-1,
+				"httpMethod":"POST",
+				"connectionType":"DIRECT",
+				"sslVerify":false,
+				"path":"/internal/infra-tools/pod-thread-dumps",
+				"baseUrl":"{{ n_t5eD3.outputs.result.baseUrl }}",
+				"httpVersion":"HTTP_2",
+				"queryParamsList":[
+					{
+						"key":"namespace",
+						"value":"{{ n_mNHwZ.outputs.namespace }}"
+					},
+					{
+						"key":"podName",
+						"value":"{{ n_mNHwZ.outputs.podName }}"
+					},
+					{
+						"key":"container",
+						"value":"{{ n_mNHwZ.outputs.container }}"
+					}
+				],
+				"responseContentType":"application/json",
+				"followRedirects":"NORMAL",
+				"authType":"CUSTOM",
+				"requestContentType":"application/json",
+				"ignoreTrailingSlashes":false,
+				"certificateType":"CERT_STRING"
+			},
+			"skip":false,
+			"subTitle":"Custom HTTP Endpoint",
+			"title":"Execute REST request",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":118,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_k6i4X@_tycXM-1@31",
+			"id":"_kRpAg",
+			"index":168,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ n_S8iA6.outputs.result }}",
+						"value":"{{ _7Spyf.outputs.result }}"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"branch",
 				"type":"APPLICATION"
 			},
@@ -8301,7 +8455,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_tycXM-1",
 			"id":"_69Y8N",
-			"index":166,
+			"index":169,
 			"inputs":{
 				"branches":[
 					{
@@ -8524,7 +8678,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@1",
 			"id":"_69Y8N@1",
-			"index":167,
+			"index":170,
 			"inputs":{
 				"name":"[EDIT] Restart Deployment ",
 				"conditions":{
@@ -8556,7 +8710,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@1",
 			"id":"_po8GC",
-			"index":168,
+			"index":171,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -8599,7 +8753,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@1",
 			"id":"_w4Ill",
-			"index":169,
+			"index":172,
 			"inputs":{
 				"variables":[
 					{
@@ -8625,7 +8779,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@2",
 			"id":"_69Y8N@2",
-			"index":170,
+			"index":173,
 			"inputs":{
 				"name":"[EDIT] Scale Deployment",
 				"conditions":{
@@ -8657,7 +8811,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@2",
 			"id":"_HijIx",
-			"index":171,
+			"index":174,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -8703,7 +8857,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@2",
 			"id":"_z5qQk",
-			"index":172,
+			"index":175,
 			"inputs":{
 				"variables":[
 					{
@@ -8729,7 +8883,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@3",
 			"id":"_69Y8N@3",
-			"index":173,
+			"index":176,
 			"inputs":{
 				"name":"[EDIT] Edit HPA",
 				"conditions":{
@@ -8766,7 +8920,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@3",
 			"id":"_tprlE",
-			"index":174,
+			"index":177,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -8830,7 +8984,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@3",
 			"id":"_9OUSU",
-			"index":175,
+			"index":178,
 			"inputs":{
 				"variables":[
 					{
@@ -8856,7 +9010,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@4",
 			"id":"_69Y8N@4",
-			"index":176,
+			"index":179,
 			"inputs":{
 				"name":"[Edit] Scaled Objects",
 				"conditions":{
@@ -8893,7 +9047,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@4",
 			"id":"_Vq4F0",
-			"index":177,
+			"index":180,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -8991,7 +9145,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@4",
 			"id":"_YUce9",
-			"index":178,
+			"index":181,
 			"inputs":{
 				"variables":[
 					{
@@ -9017,7 +9171,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@5",
 			"id":"_69Y8N@5",
-			"index":179,
+			"index":182,
 			"inputs":{
 				"name":"[EDIT] Update  Deployment",
 				"conditions":{
@@ -9054,7 +9208,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@5",
 			"id":"_lGfBG",
-			"index":180,
+			"index":183,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -9139,7 +9293,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@5",
 			"id":"_KaVUl",
-			"index":181,
+			"index":184,
 			"inputs":{
 				"variables":[
 					{
@@ -9165,7 +9319,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@6",
 			"id":"_69Y8N@6",
-			"index":182,
+			"index":185,
 			"inputs":{
 				"name":"[EDIT] Update  Stateful",
 				"conditions":{
@@ -9202,7 +9356,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@6",
 			"id":"_6klli",
-			"index":183,
+			"index":186,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -9287,7 +9441,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@6",
 			"id":"_A0CCV",
-			"index":184,
+			"index":187,
 			"inputs":{
 				"variables":[
 					{
@@ -9313,7 +9467,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@7",
 			"id":"_69Y8N@7",
-			"index":185,
+			"index":188,
 			"inputs":{
 				"name":"Enable/Disable Debug Log",
 				"conditions":{
@@ -9350,7 +9504,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@7",
 			"id":"_fIk7M",
-			"index":186,
+			"index":189,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -9410,7 +9564,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@7",
 			"id":"_vsvn4",
-			"index":187,
+			"index":190,
 			"inputs":{
 				"variables":[
 					{
@@ -9436,7 +9590,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@8",
 			"id":"_69Y8N@8",
-			"index":188,
+			"index":191,
 			"inputs":{
 				"name":"RollOut Restart Statefulset",
 				"conditions":{
@@ -9468,7 +9622,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@8",
 			"id":"_VyOW7",
-			"index":189,
+			"index":192,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -9510,7 +9664,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@8",
 			"id":"_sPMxN",
-			"index":190,
+			"index":193,
 			"inputs":{
 				"variables":[
 					{
@@ -9536,7 +9690,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@9",
 			"id":"_69Y8N@9",
-			"index":191,
+			"index":194,
 			"inputs":{
 				"name":"DELETE POD",
 				"conditions":{
@@ -9568,7 +9722,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@9",
 			"id":"_A4etX",
-			"index":192,
+			"index":195,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -9610,7 +9764,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@9",
 			"id":"_axHnn",
-			"index":193,
+			"index":196,
 			"inputs":{
 				"variables":[
 					{
@@ -9636,7 +9790,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@10",
 			"id":"_69Y8N@10",
-			"index":194,
+			"index":197,
 			"inputs":{
 				"name":"Scale StatefulSet",
 				"conditions":{
@@ -9668,7 +9822,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@10",
 			"id":"_b2trF",
-			"index":195,
+			"index":198,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -9714,7 +9868,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@10",
 			"id":"_4HGkR",
-			"index":196,
+			"index":199,
 			"inputs":{
 				"variables":[
 					{
@@ -9740,7 +9894,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@11",
 			"id":"_69Y8N@11",
-			"index":197,
+			"index":200,
 			"inputs":{
 				"name":"Exec Command",
 				"conditions":{
@@ -9772,7 +9926,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@11",
 			"id":"_yl9gz",
-			"index":198,
+			"index":201,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -9835,7 +9989,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_69Y8N@_tycXM-1@11",
 			"id":"_rAI3D",
-			"index":199,
+			"index":202,
 			"inputs":{
 				"variables":[
 					{
@@ -9861,7 +10015,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_tycXM-1",
 			"id":"n_h9tOZ",
-			"index":200,
+			"index":203,
 			"inputs":{
 				"result":"{{ n_S8iA6.outputs.result }}"
 			},
@@ -9888,5 +10042,5 @@
 	"tags":[
 		"ua-infra"
 	],
-	"version":194
+	"version":195
 }
