@@ -30,7 +30,7 @@
 	"id":"68e5fb2521cff57223218647",
 	"lastModifiedBy":411,
 	"lcName":"gygg",
-	"modifiedTime":1759925010927,
+	"modifiedTime":1759925041805,
 	"name":"gygg",
 	"nodes":[
 		{
@@ -77,7 +77,7 @@
 				"sourceBucketName":"copy-source-bucket-xyz",
 				"destinationRegion":"ap-south-1",
 				"sourceObjectName":"assets/copy-1.txt",
-				"destinationBucketName":"copy-dest-bucket-xyz"
+				"destinationBucketName":"copy-source-bucket-xyz"
 			},
 			"skip":false,
 			"subTitle":"Amazon S3",
@@ -213,5 +213,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
