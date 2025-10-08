@@ -16,7 +16,7 @@
 	"id":"68e6294fd88b9146b7888498",
 	"lastModifiedBy":2621,
 	"lcName":"test",
-	"modifiedTime":1759914411269,
+	"modifiedTime":1759914546275,
 	"name":"test",
 	"nodes":[
 		{
@@ -79,10 +79,9 @@
 				"variantId":"15785",
 				"customersDetails":{
 					"count":1,
-					"customers":{
-						"items":{
-							"personType":"GENERAL",
-							"isPrimary":true,
+					"customers":[
+						{
+							"personType":"ADULT",
 							"inputFields":{
 								"items":{
 									"id":"NAME",
@@ -92,8 +91,31 @@
 								"ua:type":"mappedArray"
 							}
 						},
-						"ua:type":"mappedArray"
-					}
+						{
+							"personType":"GENERAL",
+							"isPrimary":true,
+							"inputFields":{
+								"items":{
+									"id":"EMAIL",
+									"name":"Email",
+									"value":"john.smithcomment@example.com"
+								},
+								"ua:type":"mappedArray"
+							}
+						},
+						{
+							"personType":"GENERAL",
+							"isPrimary":true,
+							"inputFields":{
+								"items":{
+									"id":"PHONE",
+									"name":"Phone",
+									"value":"+61412345678"
+								},
+								"ua:type":"mappedArray"
+							}
+						}
+					]
 				}
 			},
 			"skip":false,
@@ -119,5 +141,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
