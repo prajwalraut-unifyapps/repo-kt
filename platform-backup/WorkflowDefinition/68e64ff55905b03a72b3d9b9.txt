@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759924213877,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_2Ql8J",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_PdAbY",
+			"type":"next"
+		}
+	],
+	"id":"68e64ff55905b03a72b3d9b9",
+	"lastModifiedBy":21056,
+	"lcName":"new dnd",
+	"modifiedTime":1759924213877,
+	"name":"new DND",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_2Ql8J-1",
+			"id":"_2Ql8J",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_2Ql8J-1",
+			"id":"_PdAbY",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":21056,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
