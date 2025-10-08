@@ -1,51 +1,77 @@
 {
 	"appsUsed":[
-		
+		"headout"
 	],
 	"createdTime":1759906268742,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_7wOkc",
+			"fromNodeId":"n_SZiIk",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_Riwe8",
+			"toNodeId":"n_0NvdZ",
 			"type":"next"
 		}
 	],
 	"id":"68e609dced58501847099e40",
 	"lastModifiedBy":2621,
 	"lcName":"test headout",
-	"modifiedTime":1759906268742,
+	"modifiedTime":1759906411855,
 	"name":"test headout",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7wOkc-1",
-			"id":"_7wOkc",
-			"index":0,
+			"id":"n_SZiIk",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"headout",
+				"resourceVersion":68,
+				"connectionId":"68e540c7a1a6c34163702566",
+				"resourceName":"headout_list_available_inventory",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7wOkc-1",
-			"id":"_Riwe8",
-			"index":0,
+			"id":"n_0NvdZ",
+			"index":2,
+			"inputs":{
+				"variantId":"53044",
+				"currencyCode":"USD,AED"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Headout",
+			"title":"List available inventory for a variant",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":2621,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +85,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
