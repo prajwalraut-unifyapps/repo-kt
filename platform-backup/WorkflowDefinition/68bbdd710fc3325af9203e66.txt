@@ -9,13 +9,6 @@
 			"fromNodeId":"n_0ePlH",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_AdAxU",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_AdAxU",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_IbGxo",
 			"type":"next"
 		},
@@ -235,7 +228,7 @@
 	"id":"68bbdd710fc3325af9203e66",
 	"lastModifiedBy":426,
 	"lcName":"normalization | submit ratings",
-	"modifiedTime":1759890908005,
+	"modifiedTime":1759890926408,
 	"name":"Normalization | Submit Ratings",
 	"nodes":[
 		{
@@ -321,63 +314,6 @@
 		},
 		{
 			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":26,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_z1vHD-1",
-			"id":"n_AdAxU",
-			"index":2,
-			"inputs":{
-				"output":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"output1",
-						"output2"
-					],
-					"properties":{
-						"output1":{
-							"type":"string",
-							"title":"Output 1"
-						},
-						"output2":{
-							"type":"string",
-							"title":"Output 2"
-						}
-					}
-				},
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"input"
-					],
-					"properties":{
-						"input":{
-							"type":"string",
-							"title":"Input"
-						}
-					}
-				},
-				"code":"def parseStageLevel(input) {\n    // Split by comma, trim extra spaces\n    def parts = input.split(\",\").collect { it.trim() }\n    \n    if (parts.size() == 2) {\n        return [stage: parts[0], level: parts[1]]\n    } else {\n        throw new IllegalArgumentException(\"Invalid input format. Expected 'Stage X, Level Y'\")\n    }\n}\n\n// Example usage:\n\ndef result = parseStageLevel(input)\n\nreturn [\"output1\" : result.stage, \"output2\" : result.level]\n",
-				"compile_static":false,
-				"captureStdOutput":false,
-				"parameters":{
-					"input":"{{ n_0ePlH.outputs.stageLevel }}"
-				}
-			},
-			"skip":false,
-			"subTitle":"Code by UnifyApps",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"variable_by_unifyapps",
 				"resourceVersion":26,
 				"resourceName":"variable_by_unifyapps_create_list",
@@ -388,7 +324,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_IbGxo",
-			"index":3,
+			"index":2,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -777,7 +713,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_5fHcz",
-			"index":4,
+			"index":3,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -1806,7 +1742,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_9xcB5",
-			"index":5,
+			"index":4,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -1861,7 +1797,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_cXpfJ",
-			"index":6,
+			"index":5,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -2119,7 +2055,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_Nwdw7",
-			"index":7,
+			"index":6,
 			"inputs":{
 				"captureIterations":true
 			},
@@ -2140,7 +2076,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_Nwdw7@_z1vHD-1@l",
 			"id":"n_EoV2h",
-			"index":8,
+			"index":7,
 			"inputs":{
 				"automationId":"68c7ab3ba643bc3223c2c5d4",
 				"runtimeConnections":{},
@@ -2172,7 +2108,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_Nwdw7@_z1vHD-1@l",
 			"id":"n_qrCD8",
-			"index":9,
+			"index":8,
 			"inputs":{
 				"variables":[
 					{
@@ -2198,7 +2134,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_Nwdw7@_z1vHD-1@l",
 			"id":"n_wP5pi",
-			"index":10,
+			"index":9,
 			"inputs":{
 				"filters":[
 					{
@@ -2228,7 +2164,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_wP5pi@n_Nwdw7@_z1vHD-1@l@y",
 			"id":"n_bVY53",
-			"index":11,
+			"index":10,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -2292,7 +2228,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_wP5pi@n_Nwdw7@_z1vHD-1@l@y",
 			"id":"n_3TWLD",
-			"index":12,
+			"index":11,
 			"inputs":{
 				"insertLocation":"END",
 				"itemsToAdd":{
@@ -2319,7 +2255,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_wP5pi@n_Nwdw7@_z1vHD-1@l@n",
 			"id":"n_hg2NB",
-			"index":13,
+			"index":12,
 			"inputs":{
 				"loop":"n_Nwdw7"
 			},
@@ -2340,7 +2276,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_OQSsg",
-			"index":14,
+			"index":13,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -2598,7 +2534,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_p5jRR",
-			"index":15,
+			"index":14,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -2881,7 +2817,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_YCTfO",
-			"index":16,
+			"index":15,
 			"inputs":{
 				"repeatMode":"SINGLE",
 				"listSource":"{{ n_OQSsg.outputs.items }}",
@@ -2904,7 +2840,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_YCTfO@_z1vHD-1@l",
 			"id":"n_JtWeQ",
-			"index":17,
+			"index":16,
 			"inputs":{
 				"triggerInputCondition":{
 					"filters":[
@@ -2954,7 +2890,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_YCTfO@_z1vHD-1@l",
 			"id":"n_JfHtS",
-			"index":18,
+			"index":17,
 			"inputs":{
 				"filters":[
 					{
@@ -2984,7 +2920,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_ojQkx",
-			"index":19,
+			"index":18,
 			"inputs":{
 				"object_type":"access_control_for_roleplayers",
 				"includeRoleMappings":false,
@@ -3024,7 +2960,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"n_NxK6O",
-			"index":20,
+			"index":19,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -3106,7 +3042,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"n_lXTSC",
-			"index":21,
+			"index":20,
 			"inputs":{
 				"itemToAdd":{
 					"CatID":"{{ n_YCTfO.outputs.item }}",
@@ -3132,7 +3068,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_u4tjC",
-			"index":22,
+			"index":21,
 			"inputs":{
 				"triggerInputCondition":{
 					"filters":[
@@ -3196,7 +3132,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_ZYcAh",
-			"index":23,
+			"index":22,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -3253,7 +3189,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_HlgiC",
-			"index":24,
+			"index":23,
 			"inputs":{
 				"outputSchema":{
 					"type":"object",
@@ -3300,7 +3236,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_O3VuW",
-			"index":25,
+			"index":24,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -3356,7 +3292,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_hVZQy",
-			"index":26,
+			"index":25,
 			"inputs":{
 				"filters":[
 					{
@@ -3386,7 +3322,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@y",
 			"id":"n_S8Az4",
-			"index":27,
+			"index":26,
 			"inputs":{
 				"result":{
 					"a":"Submission Successful!"
@@ -3409,7 +3345,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@n",
 			"id":"_rRHSk",
-			"index":28,
+			"index":27,
 			"inputs":{
 				"result":{
 					"a":" Submission for {{ n_00PKA.outputs.result.result }} failed!"
@@ -3440,5 +3376,5 @@
 	"tags":[
 		
 	],
-	"version":158
+	"version":159
 }
