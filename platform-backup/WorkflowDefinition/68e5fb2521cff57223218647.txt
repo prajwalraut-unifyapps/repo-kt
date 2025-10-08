@@ -9,35 +9,28 @@
 			"fromNodeId":"n_QvZtR",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_VECWt",
+			"toNodeId":"n_V1Oik",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_VECWt",
+			"fromNodeId":"n_V1Oik",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_WOVOJ",
+			"toNodeId":"n_KmXM0",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_WOVOJ",
+			"fromNodeId":"n_KmXM0",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_gPNS3",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_gPNS3",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_RE40i",
+			"toNodeId":"n_bF46h",
 			"type":"next"
 		}
 	],
 	"id":"68e5fb2521cff57223218647",
 	"lastModifiedBy":411,
 	"lcName":"gygg",
-	"modifiedTime":1759922617915,
+	"modifiedTime":1759922756477,
 	"name":"gygg",
 	"nodes":[
 		{
@@ -68,99 +61,139 @@
 		{
 			"context":{
 				"appName":"amazon_s3",
-				"resourceVersion":6634,
+				"resourceVersion":4,
 				"connectionId":"68e5fb50a7f3606f8bea92e3",
-				"resourceName":"amazon_s3_create_bucket",
+				"resourceName":"amazon_s3_copy_file",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_PtDfL-1",
-			"id":"n_VECWt",
+			"id":"n_V1Oik",
 			"index":2,
 			"inputs":{
-				"bucketName":"copy-dest-bucket-xyz",
-				"region":"ap-south-1"
+				"destinationObjectName":"assets/copy-7.txt",
+				"sourceBucketName":"copy-source-bucket-xyz",
+				"destinationRegion":"ap-south-1",
+				"sourceObjectName":"assets/copy-1.txt",
+				"destinationBucketName":"copy-dest-bucket-xyz"
 			},
 			"skip":false,
 			"subTitle":"Amazon S3",
-			"title":"Create bucket",
+			"title":"Copy file",
 			"type":"ACTION"
 		},
 		{
 			"context":{
-				"appName":"amazon_s3",
-				"resourceVersion":6680,
-				"connectionId":"68e5fb50a7f3606f8bea92e3",
-				"resourceName":"amazon_s3_upload_file",
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":1041,
+				"resourceName":"variable_by_unifyapps_create_variables",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_PtDfL-1",
-			"id":"n_WOVOJ",
+			"id":"n_KmXM0",
 			"index":3,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"ua:__linkedVariable__":"n_V1Oik.outputs.CopyObjectResult",
+					"type":"object",
+					"properties":{
+						"ETag":{
+							"type":"string"
+						},
+						"LastModified":{
+							"type":"string"
+						},
+						"ChecksumType":{
+							"type":"string"
+						},
+						"ChecksumCRC32":{
+							"type":"string"
+						},
+						"ChecksumCRC32C":{
+							"type":"string"
+						},
+						"ChecksumCRC64NVME":{
+							"type":"string"
+						},
+						"ChecksumSHA1":{
+							"type":"string"
+						},
+						"ChecksumSHA256":{
+							"type":"string"
+						}
+					}
+				}
+			},
 			"inputs":{
-				"bucketName":"copy-source-bucket-xyz",
-				"select":"TEXT",
-				"acceleratedEndpoint":false,
-				"objectName":"assets/copy-3.txt",
-				"region":"ap-south-1",
-				"content":"SGVsbG8sIHRoaXMgaXMgYSBzYW1wbGUgY29udGVudCBmb3IgQmFzZTY0IGVuY29kaW5nIQ=="
+				"LastModified":"{{ n_V1Oik.outputs.CopyObjectResult.LastModified }}",
+				"ChecksumCRC64NVME":"{{ n_V1Oik.outputs.CopyObjectResult.ChecksumCRC64NVME }}",
+				"ETag":"{{ n_V1Oik.outputs.CopyObjectResult.ETag }}",
+				"ChecksumCRC32C":"{{ n_V1Oik.outputs.CopyObjectResult.ChecksumCRC32 }}",
+				"ChecksumSHA1":"{{ n_V1Oik.outputs.CopyObjectResult.ChecksumSHA1 }}",
+				"ChecksumCRC32":"{{ n_V1Oik.outputs.CopyObjectResult.ChecksumCRC32 }}",
+				"ChecksumType":"{{ n_V1Oik.outputs.CopyObjectResult.ChecksumType }}",
+				"ChecksumSHA256":"{{ n_V1Oik.outputs.CopyObjectResult.ChecksumSHA256 }}"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"ua:__linkedVariable__":"n_V1Oik.outputs.CopyObjectResult",
+					"type":"object",
+					"properties":{
+						"ETag":{
+							"type":"string"
+						},
+						"LastModified":{
+							"type":"string"
+						},
+						"ChecksumType":{
+							"type":"string"
+						},
+						"ChecksumCRC32":{
+							"type":"string"
+						},
+						"ChecksumCRC32C":{
+							"type":"string"
+						},
+						"ChecksumCRC64NVME":{
+							"type":"string"
+						},
+						"ChecksumSHA1":{
+							"type":"string"
+						},
+						"ChecksumSHA256":{
+							"type":"string"
+						}
+					}
+				}
 			},
 			"skip":false,
-			"subTitle":"Amazon S3",
-			"title":"Upload file",
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
 			"type":"ACTION"
 		},
 		{
 			"context":{
-				"appName":"amazon_s3",
-				"resourceVersion":3792,
-				"connectionId":"68e5fb50a7f3606f8bea92e3",
-				"resourceName":"amazon_s3_get_bucket_region",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_PtDfL-1",
-			"id":"n_gPNS3",
-			"index":4,
-			"inputs":{
-				"bucketName":"copy-dest-bucket-xyz"
-			},
-			"skip":false,
-			"subTitle":"Amazon S3",
-			"title":"Get bucket region",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"amazon_s3",
-				"resourceVersion":6742,
-				"connectionId":"68e5fb50a7f3606f8bea92e3",
-				"resourceName":"amazon_s3_list_files_in_bucket_batch",
-				"type":"APPLICATION"
+				"appName":"stop"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_PtDfL-1",
-			"id":"n_RE40i",
-			"index":5,
-			"inputs":{
-				"bucketName":"copy-dest-bucket-xyz",
-				"maxKeys":1000,
-				"isSubFolderInc":false,
-				"region":"ap-south-1"
-			},
+			"id":"n_bF46h",
+			"index":4,
 			"skip":false,
-			"subTitle":"Amazon S3",
-			"title":"List files in bucket",
-			"type":"ACTION"
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":411,
@@ -180,5 +213,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
