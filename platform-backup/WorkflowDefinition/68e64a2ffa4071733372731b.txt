@@ -30,7 +30,7 @@
 	"id":"68e64a2ffa4071733372731b",
 	"lastModifiedBy":165764,
 	"lcName":"das",
-	"modifiedTime":1759923397081,
+	"modifiedTime":1759923467428,
 	"name":"das",
 	"nodes":[
 		{
@@ -40,7 +40,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_kSDd5-1",
 			"id":"n_XoMVK",
@@ -66,7 +66,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_kSDd5-1",
 			"id":"n_7xlx7",
@@ -120,11 +120,7 @@
 					"source":"{{ n_7xlx7.outputs.result.list }}",
 					"ua:type":"mappedArray",
 					"items":{
-						"list":{
-							"source":"{{ n_7xlx7.outputs.result.list }}",
-							"ua:type":"mappedArray",
-							"items":"{{ n_7xlx7.outputs.result.list[0] }}"
-						}
+						"number":"{{ n_7xlx7.outputs.result.list[0] }}"
 					}
 				},
 				"version":"-1"
@@ -167,5 +163,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
