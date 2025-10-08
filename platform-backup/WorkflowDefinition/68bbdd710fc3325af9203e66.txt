@@ -342,7 +342,7 @@
 	"id":"68bbdd710fc3325af9203e66",
 	"lastModifiedBy":426,
 	"lcName":"normalization | submit ratings",
-	"modifiedTime":1759890760323,
+	"modifiedTime":1759890775087,
 	"name":"Normalization | Submit Ratings",
 	"nodes":[
 		{
@@ -3007,7 +3007,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_YCTfO@_z1vHD-1@l",
 			"id":"n_pGInD",
@@ -3019,7 +3019,7 @@
 							"property":"properties_{{ n_kETVC.outputs.properties.value }}",
 							"filter":{
 								"operator":"EQUAL",
-								"value":"{{ n_YCTfO.outputs.item }}"
+								"value":"1"
 							}
 						},
 						{
@@ -5158,5 +5158,5 @@
 	"tags":[
 		
 	],
-	"version":152
+	"version":153
 }
