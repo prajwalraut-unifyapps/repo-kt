@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		"slack"
+		
 	],
 	"createdTime":1759912416135,
 	"deleted":false,
@@ -16,36 +16,36 @@
 			"fromNodeId":"n_Jd6xX",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_5aCW5",
+			"toNodeId":"n_nl78g",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_5aCW5",
+			"fromNodeId":"n_nl78g",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_dbl4S",
+			"toNodeId":"n_rRLZE",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_rRLZE",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_OH7Ow",
 			"type":"loop"
 		},
 		{
-			"fromNodeId":"n_dbl4S",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_UyqsK",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_UyqsK",
+			"fromNodeId":"n_OH7Ow",
 			"name":"loopback",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_5aCW5",
+			"toNodeId":"n_rRLZE",
 			"type":"next"
 		}
 	],
 	"id":"68e621e0c8e1920047cca0f2",
 	"lastModifiedBy":161877,
 	"lcName":"test",
-	"modifiedTime":1759912810925,
+	"modifiedTime":1759912841564,
 	"name":"test",
 	"nodes":[
 		{
@@ -94,54 +94,290 @@
 		},
 		{
 			"context":{
-				"appName":"loop",
-				"resourceVersion":877,
-				"resourceName":"loop_while",
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":1029,
+				"resourceName":"variable_by_unifyapps_create_list",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_FD24L-1",
-			"id":"n_5aCW5",
+			"id":"n_nl78g",
 			"index":3,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{
+					"createList":{
+						"ui:title":"",
+						"ua:type":{
+							"ui:widget":"hidden"
+						},
+						"items":{
+							"ui:title":"Initial list items",
+							"ui:description":"Set the initial values of the list (defaults to empty)"
+						},
+						"ui:order":[
+							"*",
+							"items"
+						]
+					},
+					"ua:title":{
+						"ui:widget":"hidden"
+					},
+					"ua:list_type":{
+						"ui:widget":"hidden"
+					}
+				},
+				"schema":{
+					"allOf":[
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"OBJECT"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"items":{
+												"type":"object",
+												"properties":{}
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"STRING"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of String"
+											},
+											"items":{
+												"type":"string"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"INTEGER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Integers"
+											},
+											"items":{
+												"type":"integer"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"NUMBER"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Numbers"
+											},
+											"items":{
+												"type":"number"
+											}
+										}
+									}
+								}
+							}
+						},
+						{
+							"if":{
+								"properties":{
+									"ua:list_type":{
+										"const":"BOOLEAN"
+									}
+								}
+							},
+							"then":{
+								"properties":{
+									"createList":{
+										"type":"object",
+										"properties":{
+											"source":{
+												"type":"string",
+												"format":"ua:source",
+												"title":"List of Booleans"
+											},
+											"items":{
+												"type":"boolean"
+											}
+										}
+									}
+								}
+							}
+						}
+					],
+					"format":"ua:list",
+					"type":"object",
+					"properties":{
+						"ua:title":{
+							"type":"string"
+						},
+						"ua:list_type":{
+							"type":"string",
+							"title":"List Type",
+							"oneOf":[
+								{
+									"const":"OBJECT",
+									"title":"Object"
+								},
+								{
+									"const":"STRING",
+									"title":"String"
+								},
+								{
+									"const":"NUMBER",
+									"title":"Number"
+								},
+								{
+									"const":"INTEGER",
+									"title":"Integer"
+								},
+								{
+									"const":"BOOLEAN",
+									"title":"Boolean"
+								}
+							],
+							"default":"OBJECT"
+						},
+						"createList":{
+							"type":"object",
+							"properties":{
+								"ua:type":{
+									"type":"string",
+									"default":"mappedArray"
+								},
+								"source":{
+									"type":"string",
+									"format":"ua:source",
+									"title":"List Item Source"
+								},
+								"items":{
+									"additionalProperties":false,
+									"type":[
+										"object",
+										"string",
+										"number",
+										"boolean",
+										"integer"
+									],
+									"properties":{}
+								}
+							}
+						}
+					}
+				}
+			},
 			"inputs":{
+				"createList":{
+					"ua:type":"mappedArray"
+				},
+				"ua:list_type":"STRING"
+			},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"type":"object",
+					"properties":{
+						"items":{
+							"type":"array",
+							"title":"List",
+							"disableActions":true,
+							"items":{
+								"type":"string"
+							}
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":865,
+				"resourceName":"loop_for_each",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_FD24L-1",
+			"id":"n_rRLZE",
+			"index":4,
+			"inputs":{
+				"listSource":"{{ n_nl78g.outputs.items }}",
 				"captureIterations":false
 			},
 			"skip":false,
 			"subTitle":"Loop",
-			"title":"While loop",
+			"title":"For each loop",
 			"type":"LOOP"
 		},
 		{
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
-			"groupId":"n_5aCW5@_FD24L-1@l",
-			"id":"n_dbl4S",
-			"index":4,
+			"groupId":"n_rRLZE@_FD24L-1@l",
+			"id":"n_OH7Ow",
+			"index":5,
 			"skip":false,
 			"title":"Select an app and action",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"slack",
-				"resourceVersion":3947,
-				"connectionId":"68e5ad4c3449e117c956f304",
-				"resourceName":"slack_delete_message_in_channel",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"n_5aCW5@_FD24L-1@l",
-			"id":"n_UyqsK",
-			"index":5,
-			"inputs":{},
-			"skip":false,
-			"subTitle":"Slack",
-			"title":"Delete message",
 			"type":"ACTION"
 		}
 	],
@@ -162,5 +398,5 @@
 	"tags":[
 		
 	],
-	"version":10
+	"version":11
 }
