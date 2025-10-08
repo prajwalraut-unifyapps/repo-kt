@@ -38,7 +38,7 @@
 	"id":"68e6036ced58501847098d0a",
 	"lastModifiedBy":49915,
 	"lcName":"hello test",
-	"modifiedTime":1759904653235,
+	"modifiedTime":1759904656814,
 	"name":"hello test",
 	"nodes":[
 		{
@@ -105,7 +105,8 @@
 			"index":3,
 			"inputs":{
 				"fetchBy":"id",
-				"applicationId":""
+				"applicationId":"",
+				"user":"75748"
 			},
 			"skip":false,
 			"subTitle":"Standard entities by UnifyApps",
@@ -145,5 +146,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
