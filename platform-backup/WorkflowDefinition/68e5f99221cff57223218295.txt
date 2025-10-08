@@ -4,48 +4,198 @@
 	],
 	"createdTime":1759902098274,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759903342038,
+		"deployedBy":155543,
+		"deployedDefinitionId":"68e5fe6ded58501847097c35",
+		"status":"DEPLOYED",
+		"version":2,
+		"workflowVersion":2
+	},
 	"edges":[
 		{
-			"fromNodeId":"_mlo2k",
+			"fromNodeId":"n_COz9v",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_ccly5",
+			"toNodeId":"n_Yr3pa",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Yr3pa",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_dqJw1",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_dqJw1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_TZycS",
 			"type":"next"
 		}
 	],
 	"id":"68e5f99221cff57223218295",
 	"lastModifiedBy":155543,
 	"lcName":"infra | tool | get workflow dependency",
-	"modifiedTime":1759902098274,
+	"modifiedTime":1759904187505,
 	"name":"INFRA | TOOL | Get workflow dependency",
 	"nodes":[
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1023,
+				"resourceName":"callables_from_automation"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_mlo2k-1",
-			"id":"_mlo2k",
-			"index":0,
+			"id":"n_COz9v",
+			"index":1,
+			"inputs":{
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"workflowId"
+					],
+					"properties":{
+						"workflowId":{
+							"type":"string",
+							"title":"Workflow Id"
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"EVENT"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1079,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_mlo2k-1",
-			"id":"_ccly5",
-			"index":0,
+			"id":"n_Yr3pa",
+			"index":2,
+			"inputs":{
+				"automationId":"68b932d26607f33c4d7f0988",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"custom_http_endpoint",
+				"resourceVersion":1067,
+				"resourceName":"custom_http_endpoint_execute",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_mlo2k-1",
+			"id":"n_dqJw1",
+			"index":3,
+			"inputs":{
+				"isAsync":false,
+				"enableProxy":false,
+				"requestTimeoutInSecs":-1,
+				"httpMethod":"POST",
+				"body":{
+					"assetClass":"WORKFLOW_DEFINITION",
+					"assetId":"{{ n_COz9v.outputs.workflowId }}",
+					"assetVersion":"LAST_DEPLOYED"
+				},
+				"connectionType":"DIRECT",
+				"sslVerify":false,
+				"path":"/internal/asset-dependency/dependencies/{{ __RUN__.outputs.customerId }}",
+				"baseUrl":"{{ n_Yr3pa.outputs.baseInternalUrl }}",
+				"httpVersion":"HTTP_2",
+				"bodySchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"assetClass",
+						"assetId",
+						"assetVersion"
+					],
+					"properties":{
+						"assetClass":{
+							"type":"string",
+							"title":"Asset Class"
+						},
+						"assetId":{
+							"type":"string",
+							"title":"Asset Id"
+						},
+						"assetVersion":{
+							"type":"string",
+							"title":"Asset Version"
+						}
+					}
+				},
+				"queryParamsList":[
+					{
+						"key":"isLatest",
+						"value":"true"
+					}
+				],
+				"responseContentType":"application/json",
+				"followRedirects":"NORMAL",
+				"authType":"CUSTOM",
+				"requestContentType":"application/json",
+				"ignoreTrailingSlashes":false,
+				"certificateType":"CERT_STRING"
+			},
+			"skip":false,
+			"subTitle":"Point de terminaison HTTP personnalisé",
+			"title":"Execute REST request",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1059,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_mlo2k-1",
+			"id":"n_TZycS",
+			"index":4,
+			"inputs":{
+				"result":"test"
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":155543,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +209,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":3
 }
