@@ -4,13 +4,27 @@
 	],
 	"createdTime":1759906534555,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759906567675,
+		"deployedBy":161875,
+		"deployedDefinitionId":"68e60b07ed5850184709a3b5",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
-		
+		{
+			"fromNodeId":"n_kFGFh",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_ibE6y",
+			"type":"next"
+		}
 	],
 	"id":"68e60ae6ed5850184709a375",
 	"lastModifiedBy":161875,
 	"lcName":"test jql trigger",
-	"modifiedTime":1759906565593,
+	"modifiedTime":1759906678058,
 	"name":"Test JQL Trigger",
 	"nodes":[
 		{
@@ -30,7 +44,8 @@
 				"intervalType":"minutes",
 				"jql":"project=\"MD\"",
 				"objectSourceResourceName":"jira_fetch_issue_schema",
-				"interval":1
+				"interval":1,
+				"from":"2025-06-05 12:27"
 			},
 			"skip":false,
 			"subTitle":"Jira",
@@ -39,6 +54,31 @@
 				"type":"EVENT"
 			},
 			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"jira",
+				"resourceVersion":3702,
+				"connectionId":"68ac153faa495b37c5e81467",
+				"resourceName":"jira_search_issues_using_jql",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_IIXaY-1",
+			"id":"n_ibE6y",
+			"index":2,
+			"inputs":{
+				"jql":"project=\"MD\"",
+				"maxResults":100,
+				"objectSourceResourceName":"jira_fetch_issue_schema",
+				"fields":"*all"
+			},
+			"skip":false,
+			"subTitle":"Jira",
+			"title":"Search issues by JQL",
+			"type":"ACTION"
 		}
 	],
 	"ownerUserId":161875,
@@ -58,5 +98,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
