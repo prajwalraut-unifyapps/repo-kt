@@ -133,32 +133,11 @@
 			"fromNodeId":"n_YCTfO",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_pGInD",
+			"toNodeId":"n_JtWeQ",
 			"type":"loop"
 		},
 		{
-			"fromNodeId":"n_pGInD",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_JtWeQ",
-			"type":"next"
-		},
-		{
 			"fromNodeId":"n_JtWeQ",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_c0gBQ",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_c0gBQ",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_Xwul6",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_Xwul6",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_JfHtS",
@@ -225,13 +204,6 @@
 			"fromNodeId":"_O3VuW",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_Od1Jm",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_Od1Jm",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_Gv8zr",
 			"type":"next"
 		},
@@ -260,20 +232,6 @@
 			"fromNodeId":"_TphIf",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_O0UUX",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_O0UUX",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_EKmVb",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_EKmVb",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"_kAS4W",
 			"type":"next"
 		},
@@ -286,13 +244,6 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_oArI7",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_Wkx76",
-			"type":"next"
-		},
-		{
 			"fromNodeId":"_kAS4W",
 			"name":"loopback",
 			"priority":0,
@@ -301,7 +252,7 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"_Wkx76",
+			"fromNodeId":"n_oArI7",
 			"name":"loopback",
 			"priority":0,
 			"skip":false,
@@ -342,7 +293,7 @@
 	"id":"68bbdd710fc3325af9203e66",
 	"lastModifiedBy":426,
 	"lcName":"normalization | submit ratings",
-	"modifiedTime":1759890775087,
+	"modifiedTime":1759890863592,
 	"name":"Normalization | Submit Ratings",
 	"nodes":[
 		{
@@ -3007,62 +2958,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"n_YCTfO@_z1vHD-1@l",
-			"id":"n_pGInD",
-			"index":17,
-			"inputs":{
-				"triggerInputCondition":{
-					"filters":[
-						{
-							"property":"properties_{{ n_kETVC.outputs.properties.value }}",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"1"
-							}
-						},
-						{
-							"property":"properties_xxxern_employeenumber",
-							"filter":{
-								"operator":"IN",
-								"value":"{{ n_cXpfJ.outputs.items }}"
-							}
-						}
-					],
-					"operator":"AND"
-				},
-				"object_type":"normalization_master_table",
-				"includeRoleMappings":false,
-				"includeCurrentUserPermissions":false,
-				"translationsOption":"DEFAULT",
-				"page":{
-					"paginateBy":"OFFSET",
-					"limit":200000,
-					"offset":0
-				},
-				"numberOfRecordsToFetch":"MULTIPLE",
-				"readThroughSessionVariables":false,
-				"includeTotalCount":true
-			},
-			"skip":false,
-			"subTitle":"Storage by UnifyApps",
-			"title":"Fetch records",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":241,
-				"resourceName":"storage_by_unifyapps_fetch_records",
-				"type":"APPLICATION"
-			},
-			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_YCTfO@_z1vHD-1@l",
 			"id":"n_JtWeQ",
-			"index":18,
+			"index":17,
 			"inputs":{
 				"triggerInputCondition":{
 					"filters":[
@@ -3101,610 +3001,6 @@
 			"type":"ACTION"
 		},
 		{
-			"additional":{
-				"visibleOptionalFields":[
-					"root.parameters.list1.items.empId",
-					"root.parameters.list1.items.geo",
-					"root.parameters.list1.items.tier",
-					"root.parameters.list1.items.rating",
-					"root.parameters.list2.items.geo",
-					"root.parameters.list2.items.tier",
-					"root.parameters.list2.items.minEmpCount",
-					"root.parameters.list2.items.distribution.1",
-					"root.parameters.list2.items.distribution.2",
-					"root.parameters.list2.items.distribution.3",
-					"root.parameters.list2.items.distribution.4",
-					"root.parameters.list2.items.distribution.5",
-					"root.parameters.list3.allowed",
-					"root.parameters.list3.deviation.1",
-					"root.parameters.list3.deviation.2",
-					"root.parameters.list3.deviation.3",
-					"root.parameters.list3.deviation.4",
-					"root.parameters.list3.deviation.5"
-				]
-			},
-			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":0,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_YCTfO@_z1vHD-1@l",
-			"id":"n_c0gBQ",
-			"index":19,
-			"inputs":{
-				"output":{
-					"type":"object",
-					"additionalProperties":false,
-					"properties":{
-						"status":{
-							"type":"boolean",
-							"title":"status"
-						},
-						"failures":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"geo":{
-										"type":"string",
-										"title":"geo"
-									},
-									"tier":{
-										"type":"string",
-										"title":"tier"
-									},
-									"actual":{
-										"type":"object",
-										"properties":{
-											"1":{
-												"type":"number",
-												"title":"1"
-											},
-											"2":{
-												"type":"number",
-												"title":"2"
-											},
-											"3":{
-												"type":"number",
-												"title":"3"
-											},
-											"4":{
-												"type":"integer",
-												"title":"4"
-											},
-											"5":{
-												"type":"number",
-												"title":"5"
-											}
-										},
-										"title":"actual",
-										"additionalProperties":false
-									},
-									"expected":{
-										"type":"object",
-										"properties":{
-											"1":{
-												"type":"integer",
-												"title":"1"
-											},
-											"2":{
-												"type":"integer",
-												"title":"2"
-											},
-											"3":{
-												"type":"integer",
-												"title":"3"
-											},
-											"4":{
-												"type":"integer",
-												"title":"4"
-											},
-											"5":{
-												"type":"integer",
-												"title":"5"
-											}
-										},
-										"title":"expected",
-										"additionalProperties":false
-									}
-								},
-								"additionalProperties":false
-							},
-							"title":"failures"
-						}
-					}
-				},
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"properties":{
-						"list1":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"empId":{
-										"type":"string",
-										"title":"empId"
-									},
-									"geo":{
-										"type":"string",
-										"title":"geo"
-									},
-									"tier":{
-										"type":"string",
-										"title":"tier"
-									},
-									"rating":{
-										"type":"integer",
-										"title":"rating"
-									}
-								},
-								"additionalProperties":false
-							},
-							"title":"list1"
-						},
-						"list2":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"geo":{
-										"type":"string",
-										"title":"geo"
-									},
-									"tier":{
-										"type":"string",
-										"title":"tier"
-									},
-									"minEmpCount":{
-										"type":"integer",
-										"title":"minEmpCount"
-									},
-									"distribution":{
-										"type":"object",
-										"properties":{
-											"1":{
-												"type":"integer",
-												"title":"1"
-											},
-											"2":{
-												"type":"integer",
-												"title":"2"
-											},
-											"3":{
-												"type":"integer",
-												"title":"3"
-											},
-											"4":{
-												"type":"integer",
-												"title":"4"
-											},
-											"5":{
-												"type":"integer",
-												"title":"5"
-											}
-										},
-										"title":"distribution",
-										"additionalProperties":false
-									},
-									"Tier_Group":{
-										"type":"array",
-										"items":{
-											"type":"string"
-										},
-										"title":"Tier Group"
-									}
-								},
-								"additionalProperties":false,
-								"required":[
-									"Tier_Group"
-								]
-							},
-							"title":"list2"
-						},
-						"list3":{
-							"type":"object",
-							"properties":{
-								"allowed":{
-									"type":"boolean",
-									"title":"allowed"
-								},
-								"deviation":{
-									"type":"object",
-									"properties":{
-										"1":{
-											"type":"integer",
-											"title":"1"
-										},
-										"2":{
-											"type":"integer",
-											"title":"2"
-										},
-										"3":{
-											"type":"integer",
-											"title":"3"
-										},
-										"4":{
-											"type":"integer",
-											"title":"4"
-										},
-										"5":{
-											"type":"integer",
-											"title":"5"
-										}
-									},
-									"title":"deviation",
-									"additionalProperties":false
-								}
-							},
-							"title":"list3",
-							"additionalProperties":false
-						}
-					}
-				},
-				"code":"// Fetch safely\ndef list1 = binding.hasVariable(\"list1\") ? binding.getVariable(\"list1\") : []\ndef list2 = binding.hasVariable(\"list2\") ? binding.getVariable(\"list2\") : []\ndef list3 = binding.hasVariable(\"list3\") ? binding.getVariable(\"list3\") : [:]\n\n// Deviation rules\ndef deviationAllowed = list3?.allowed ?: false\ndef deviations = list3?.deviation ?: [:]   // e.g. [1:5, 2:5, 3:10, 4:10, 5:5]\n\n// Group employees by (geo,tier)\ndef grouped = list1.groupBy { [it.geo, it.tier] }\n\ndef failures = []\n\ngrouped.each { key, emps ->\n    def (geo, tier) = key\n    def empCount = emps.size()\n\n    // Find guardrail for this geo/tier\n    def guardrail = list2.find { it.geo == geo && it.tier == tier }\n    if (!guardrail) return // skip if no guardrail found\n\n    // Skip check if emp count <= minEmpCount\n    if (empCount <= guardrail.minEmpCount) {\n        return\n    }\n\n    // Actual distribution\n    def actualDist = (1..5).collectEntries { r ->\n        [(r): (emps.count { it.rating == r } * 100.0 / empCount)]\n    }\n\n    // Expected distribution from guardrail\n    def expectedDist = guardrail.distribution  // e.g. [1:20, 2:20, 3:10, 4:30, 5:20]\n\n    // Compare actual vs expected with deviation\n    def failed = false\n    (1..5).each { r ->\n        def expected = expectedDist[r]\n        def minVal = expected\n        def maxVal = expected\n        if (deviationAllowed) {\n            def dev = deviations[r] ?: 0\n            minVal = expected - dev\n            maxVal = expected + dev\n        }\n        def actual = actualDist[r]\n        if (actual < minVal || actual > maxVal) {\n            failed = true\n        }\n    }\n\n    if (failed) {\n        failures << [geo: geo, tier: tier, actual: actualDist, expected: expectedDist]\n    }\n}\n\ndef result = failures.isEmpty() ? [status: true] : [status: false, failures: failures]\n\nreturn result\n",
-				"compile_static":false,
-				"captureStdOutput":false,
-				"parameters":{
-					"list1":{
-						"source":"{{ n_pGInD.outputs.objects }}",
-						"ua:type":"mappedArray",
-						"items":{
-							"empId":"{{ n_pGInD.outputs.objects[0].properties.xxxern_employeenumber }}",
-							"geo":"{{ n_pGInD.outputs.objects[0].properties.xxxern_geo }}",
-							"tier":"{{ n_pGInD.outputs.objects[0].properties.xxxern_tier }}",
-							"rating":"{{ n_pGInD.outputs.objects[0].properties.xxxern_finalrating }}"
-						}
-					},
-					"list2":{
-						"source":"{{ n_JtWeQ.outputs.objects }}",
-						"ua:type":"mappedArray",
-						"items":{
-							"geo":"{{ n_JtWeQ.outputs.objects[0].properties.Geo }}",
-							"tier":"{{ n_JtWeQ.outputs.objects[0].properties.Geo_Tier }}",
-							"minEmpCount":"{{ n_JtWeQ.outputs.objects[0].properties.Min_empCount }}",
-							"distribution":{
-								"1":"{{ n_JtWeQ.outputs.objects[0].properties.Rating_1 }}",
-								"2":"{{ n_JtWeQ.outputs.objects[0].properties.Rating_2 }}",
-								"3":"{{ n_JtWeQ.outputs.objects[0].properties.Rating_3 }}",
-								"4":"{{ n_JtWeQ.outputs.objects[0].properties.Rating_4 }}",
-								"5":"{{ n_JtWeQ.outputs.objects[0].properties.Rating_5 }}"
-							},
-							"Tier_Group":{
-								"source":"{{ n_JtWeQ.outputs.objects[0].properties.Tier_Group }}",
-								"ua:type":"mappedArray",
-								"items":"{{ n_JtWeQ.outputs.objects[0].properties.Tier_Group[0] }}"
-							}
-						}
-					},
-					"list3":{
-						"allowed":"{{ n_lvDUS.outputs.properties.Deviation_Allowed_notallowed }}",
-						"deviation":{
-							"1":"{{ n_lvDUS.outputs.properties.Dev_1U }}",
-							"2":"{{ n_lvDUS.outputs.properties.Dev_2NI }}",
-							"3":"{{ n_lvDUS.outputs.properties.Dev3MAES }}",
-							"4":"{{ n_lvDUS.outputs.properties.Dev_4EEC }}",
-							"5":"{{ n_lvDUS.outputs.properties.Dev_5O }}"
-						}
-					}
-				}
-			},
-			"skip":false,
-			"subTitle":"Code by UnifyApps",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
-			"additional":{
-				"visibleOptionalFields":[
-					"root.parameters.list1.items.empId",
-					"root.parameters.list1.items.geo",
-					"root.parameters.list1.items.tier",
-					"root.parameters.list1.items.rating",
-					"root.parameters.list2.items.geo",
-					"root.parameters.list2.items.tier",
-					"root.parameters.list2.items.minEmpCount",
-					"root.parameters.list2.items.distribution.1",
-					"root.parameters.list2.items.distribution.2",
-					"root.parameters.list2.items.distribution.3",
-					"root.parameters.list2.items.distribution.4",
-					"root.parameters.list2.items.distribution.5",
-					"root.parameters.list3.allowed",
-					"root.parameters.list3.deviation.1",
-					"root.parameters.list3.deviation.2",
-					"root.parameters.list3.deviation.3",
-					"root.parameters.list3.deviation.4",
-					"root.parameters.list3.deviation.5"
-				]
-			},
-			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":0,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_YCTfO@_z1vHD-1@l",
-			"id":"_Xwul6",
-			"index":20,
-			"inputs":{
-				"output":{
-					"type":"object",
-					"additionalProperties":false,
-					"properties":{
-						"status":{
-							"type":"boolean",
-							"title":"status"
-						},
-						"failures":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"geo":{
-										"type":"string",
-										"title":"geo"
-									},
-									"actual":{
-										"type":"object",
-										"properties":{
-											"1":{
-												"type":"number",
-												"title":"1"
-											},
-											"2":{
-												"type":"number",
-												"title":"2"
-											},
-											"3":{
-												"type":"number",
-												"title":"3"
-											},
-											"4":{
-												"type":"integer",
-												"title":"4"
-											},
-											"5":{
-												"type":"number",
-												"title":"5"
-											}
-										},
-										"title":"actual",
-										"additionalProperties":false
-									},
-									"expected":{
-										"type":"object",
-										"properties":{
-											"1":{
-												"type":"integer",
-												"title":"1"
-											},
-											"2":{
-												"type":"integer",
-												"title":"2"
-											},
-											"3":{
-												"type":"integer",
-												"title":"3"
-											},
-											"4":{
-												"type":"integer",
-												"title":"4"
-											},
-											"5":{
-												"type":"integer",
-												"title":"5"
-											}
-										},
-										"title":"expected",
-										"additionalProperties":false
-									},
-									"tier_group":{
-										"type":"array",
-										"items":{
-											"type":"string"
-										},
-										"title":"tier"
-									}
-								},
-								"additionalProperties":false,
-								"required":[]
-							},
-							"title":"failures"
-						}
-					}
-				},
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"properties":{
-						"list1":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"empId":{
-										"type":"string",
-										"title":"empId"
-									},
-									"geo":{
-										"type":"string",
-										"title":"geo"
-									},
-									"tier":{
-										"type":"string",
-										"title":"tier"
-									},
-									"rating":{
-										"type":"integer",
-										"title":"rating"
-									}
-								},
-								"additionalProperties":false
-							},
-							"title":"list1"
-						},
-						"list2":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"geo":{
-										"type":"string",
-										"title":"geo"
-									},
-									"tier":{
-										"type":"string",
-										"title":"tier"
-									},
-									"minEmpCount":{
-										"type":"integer",
-										"title":"minEmpCount"
-									},
-									"distribution":{
-										"type":"object",
-										"properties":{
-											"1":{
-												"type":"integer",
-												"title":"1"
-											},
-											"2":{
-												"type":"integer",
-												"title":"2"
-											},
-											"3":{
-												"type":"integer",
-												"title":"3"
-											},
-											"4":{
-												"type":"integer",
-												"title":"4"
-											},
-											"5":{
-												"type":"integer",
-												"title":"5"
-											}
-										},
-										"title":"distribution",
-										"additionalProperties":false
-									},
-									"Tier_Group":{
-										"type":"array",
-										"items":{
-											"type":"object",
-											"properties":{},
-											"additionalProperties":false
-										},
-										"title":"Tier Group"
-									}
-								},
-								"additionalProperties":false,
-								"required":[
-									"Tier_Group"
-								]
-							},
-							"title":"list2"
-						},
-						"list3":{
-							"type":"object",
-							"properties":{
-								"allowed":{
-									"type":"boolean",
-									"title":"allowed"
-								},
-								"deviation":{
-									"type":"object",
-									"properties":{
-										"1":{
-											"type":"integer",
-											"title":"1"
-										},
-										"2":{
-											"type":"integer",
-											"title":"2"
-										},
-										"3":{
-											"type":"integer",
-											"title":"3"
-										},
-										"4":{
-											"type":"integer",
-											"title":"4"
-										},
-										"5":{
-											"type":"integer",
-											"title":"5"
-										}
-									},
-									"title":"deviation",
-									"additionalProperties":false
-								}
-							},
-							"title":"list3",
-							"additionalProperties":false
-						}
-					}
-				},
-				"code":"// Fetch safely\ndef list1 = binding.hasVariable(\"list1\") ? binding.getVariable(\"list1\") : []\ndef list2 = binding.hasVariable(\"list2\") ? binding.getVariable(\"list2\") : []\ndef list3 = binding.hasVariable(\"list3\") ? binding.getVariable(\"list3\") : [:]\n\n// Deviation rules\ndef deviationAllowed = list3?.allowed ?: false\ndef deviations = list3?.deviation ?: [:]   // e.g. [1:2, 2:null, 3:2, 4:null, 5:2]\n\n// Handle grouped deviations (1+2, 4+5)\ndef groupedDeviation = [:]\ndef groupings = [[1,2],[4,5],[3]]  // 3 stays alone\ngroupings.each { group ->\n    def groupDev = group.collect { r -> deviations[r] }.find { it != null } ?: 0\n    group.each { r -> groupedDeviation[r] = groupDev }\n}\n\n// Normalize Tier to \"Tier X\"\ndef normalizeTier = { tierVal ->\n    if (!tierVal) return \"\"\n    def t = tierVal.toString().trim()\n    def num = (t ==~ /\\d+/) ? t : (t.replaceAll(/(?i)tier\\s*/, \"\"))\n    return \"Tier ${num}\"\n}\n\n// Group employees by (geo, tier_group)\ndef grouped = list1.groupBy { [it.geo, it.Tier_Group] }\n\ndef failures = []\n\ngrouped.each { key, emps ->\n    def (geo, tierGroup) = key\n    def empCount = emps.size()\n\n    // Find guardrail for this geo/tier_group\n    def guardrail = list2.find { it.geo == geo && it.Tier_Group == tierGroup }\n    if (!guardrail) return // skip if no guardrail found\n\n    // Skip check if emp count <= minEmpCount\n    if (empCount <= guardrail.minEmpCount) {\n        return\n    }\n\n    // Actual distribution\n    def actualDist = (1..5).collectEntries { r ->\n        [(r): (emps.count { it.rating == r } * 100.0 / empCount)]\n    }\n\n    // Expected distribution from guardrail\n    def expectedDist = guardrail.distribution  // e.g. [1:50, 2:50, 3:10, 4:30, 5:30]\n\n    // Compare actual vs expected with deviation\n    def failed = false\n    if (deviationAllowed) {\n        (1..5).each { r ->\n            def expected = expectedDist[r] ?: 0\n            def dev = groupedDeviation[r] ?: 0\n\n            // Asymmetric deviation\n            def minVal = (dev < 0) ? expected + dev : expected       // negative deviation affects lower bound\n            def maxVal = (dev > 0) ? expected + dev : expected       // positive deviation affects upper bound\n\n            def actual = actualDist[r] ?: 0\n            if (actual < minVal || actual > maxVal) {\n                failed = true\n            }\n        }\n    }\n\n    if (failed) {\n        failures << [geo: geo, tier_group: tierGroup, actual: actualDist, expected: expectedDist]\n    }\n}\n\ndef result = failures.isEmpty() ? [status: true] : [status: false, failures: failures]\n\nreturn result\n",
-				"compile_static":false,
-				"captureStdOutput":false,
-				"parameters":{
-					"list1":{
-						"source":"{{ n_pGInD.outputs.objects }}",
-						"ua:type":"mappedArray",
-						"items":{
-							"empId":"{{ n_pGInD.outputs.objects[0].properties.xxxern_employeenumber }}",
-							"geo":"{{ n_pGInD.outputs.objects[0].properties.xxxern_geo }}",
-							"tier":"{{ n_pGInD.outputs.objects[0].properties.xxxern_tier }}",
-							"rating":"{{ n_pGInD.outputs.objects[0].properties.xxxern_finalrating }}"
-						}
-					},
-					"list2":{
-						"source":"{{ n_JtWeQ.outputs.objects }}",
-						"ua:type":"mappedArray",
-						"items":{
-							"geo":"{{ n_JtWeQ.outputs.objects[0].properties.Geo }}",
-							"tier":"{{ n_JtWeQ.outputs.objects[0].properties.Geo_Tier }}",
-							"minEmpCount":"{{ n_JtWeQ.outputs.objects[0].properties.Min_empCount }}",
-							"distribution":{
-								"1":"{{ n_JtWeQ.outputs.objects[0].properties.Rating_1 }}",
-								"2":"{{ n_JtWeQ.outputs.objects[0].properties.Rating_2 }}",
-								"3":"{{ n_JtWeQ.outputs.objects[0].properties.Rating_3 }}",
-								"4":"{{ n_JtWeQ.outputs.objects[0].properties.Rating_4 }}",
-								"5":"{{ n_JtWeQ.outputs.objects[0].properties.Rating_5 }}"
-							},
-							"Tier_Group":{
-								"source":"{{ n_JtWeQ.outputs.objects[0].properties.Tier_Group }}",
-								"ua:type":"mappedArray",
-								"items":"{{ n_JtWeQ.outputs.objects[0].properties.Tier_Group[0] }}"
-							}
-						}
-					},
-					"list3":{
-						"allowed":"{{ n_lvDUS.outputs.properties.Deviation_Allowed_notallowed }}",
-						"deviation":{
-							"1":"{{ n_lvDUS.outputs.properties.Dev_1U }}",
-							"2":"{{ n_lvDUS.outputs.properties.Dev_2NI }}",
-							"3":"{{ n_lvDUS.outputs.properties.Dev3MAES }}",
-							"4":"{{ n_lvDUS.outputs.properties.Dev_4EEC }}",
-							"5":"{{ n_lvDUS.outputs.properties.Dev_5O }}"
-						}
-					}
-				}
-			},
-			"skip":false,
-			"subTitle":"Code by UnifyApps",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
 			"context":{
 				"appName":"if_else",
 				"resourceVersion":23,
@@ -3716,7 +3012,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_YCTfO@_z1vHD-1@l",
 			"id":"n_JfHtS",
-			"index":21,
+			"index":18,
 			"inputs":{
 				"filters":[
 					{
@@ -3746,7 +3042,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_ojQkx",
-			"index":22,
+			"index":19,
 			"inputs":{
 				"object_type":"access_control_for_roleplayers",
 				"includeRoleMappings":false,
@@ -3786,7 +3082,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"n_NxK6O",
-			"index":23,
+			"index":20,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -3868,7 +3164,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"n_OVijX",
-			"index":24,
+			"index":21,
 			"inputs":{
 				"object_type":"normalization_master_table",
 				"skipIfBlank":false,
@@ -3930,7 +3226,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"n_lXTSC",
-			"index":25,
+			"index":22,
 			"inputs":{
 				"itemToAdd":{
 					"CatID":"{{ n_YCTfO.outputs.item }}",
@@ -3956,7 +3252,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_u4tjC",
-			"index":26,
+			"index":23,
 			"inputs":{
 				"triggerInputCondition":{
 					"filters":[
@@ -4020,7 +3316,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_ZYcAh",
-			"index":27,
+			"index":24,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -4077,7 +3373,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_HlgiC",
-			"index":28,
+			"index":25,
 			"inputs":{
 				"outputSchema":{
 					"type":"object",
@@ -4124,7 +3420,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_O3VuW",
-			"index":29,
+			"index":26,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -4169,45 +3465,6 @@
 			"type":"ACTION"
 		},
 		{
-			"context":{
-				"appName":"analytics_by_unifyapps",
-				"resourceVersion":62,
-				"resourceName":"analytics_by_unifyapps_execute_query",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
-			"id":"_Od1Jm",
-			"index":30,
-			"inputs":{
-				"outputSchema":{
-					"type":"object",
-					"additionalProperties":false,
-					"properties":{
-						"columns":{
-							"type":"object",
-							"properties":{
-								"filter_value":{
-									"type":"string",
-									"title":"filter_value"
-								}
-							},
-							"title":"columns",
-							"additionalProperties":false
-						}
-					}
-				},
-				"query":"SELECT \r\n   CONCAT_WS(', ', {{ _O3VuW.outputs.result.filter }}) AS filter_value\r\nFROM ENTITY_normalization_master_table nm\r\nWHERE nm._pr_xxxern_employeenumber = '{{ n_pGInD.outputs.objects[0].properties.xxxern_employeenumber }}'\r\n   OR nm._pr_xxxern_personnumber = '{{ n_pGInD.outputs.objects[0].properties.xxxern_personnumber }}';\r\n",
-				"group":"ENTITY_REPORTING"
-			},
-			"skip":false,
-			"subTitle":"Analytics by UnifyApps",
-			"title":"Execute Analytics SQL Query",
-			"type":"ACTION"
-		},
-		{
 			"additional":{
 				"xsdSchemaConfig":{
 					"root":{}
@@ -4224,7 +3481,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"n_Gv8zr",
-			"index":31,
+			"index":27,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -4274,7 +3531,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_gilte",
-			"index":32,
+			"index":28,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -4532,7 +3789,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_kDm0j",
-			"index":33,
+			"index":29,
 			"inputs":{
 				"projections":[
 					{
@@ -4589,7 +3846,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_TphIf",
-			"index":34,
+			"index":30,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -4634,138 +3891,6 @@
 		},
 		{
 			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":69,
-				"resourceName":"variable_by_unifyapps_create_variables",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
-			"id":"_O0UUX",
-			"index":35,
-			"inputSchema":{
-				"type":"SCHEMA_AND_LAYOUT",
-				"dynamic":false,
-				"layout":{},
-				"schema":{
-					"additionalProperties":false,
-					"type":"object",
-					"properties":{
-						"Email":{
-							"type":"string",
-							"title":"Email"
-						}
-					},
-					"required":[
-						"Email"
-					]
-				}
-			},
-			"inputs":{
-				"Email":"=CONCATENATE ({{ n_lvDUS.outputs.properties.Level_Group }}, {{ n_YCTfO.outputs.item }},\" has submitted to \",{{ n_AdAxU.outputs.result.output1 }},{{ n_AdAxU.outputs.result.output2 }})"
-			},
-			"outputSchema":{
-				"dynamic":false,
-				"schema":{
-					"additionalProperties":false,
-					"type":"object",
-					"properties":{
-						"Email":{
-							"type":"string",
-							"title":"Email"
-						}
-					},
-					"required":[
-						"Email"
-					]
-				}
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Create variables",
-			"type":"ACTION"
-		},
-		{
-			"additional":{
-				"visibleOptionalFields":[
-					"root.parameters.employees.items.empid",
-					"root.parameters.employees.items.technotype"
-				]
-			},
-			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":0,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
-			"id":"n_EKmVb",
-			"index":36,
-			"inputs":{
-				"output":{
-					"type":"object",
-					"additionalProperties":false,
-					"properties":{
-						"Senior_Count":{
-							"type":"integer",
-							"title":"Senior_Count"
-						},
-						"Junior_Count":{
-							"type":"integer",
-							"title":"Junior_Count"
-						}
-					}
-				},
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"properties":{
-						"employees":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{
-									"empid":{
-										"type":"integer",
-										"title":"empid"
-									},
-									"technotype":{
-										"type":"string",
-										"title":"technotype"
-									}
-								},
-								"additionalProperties":false
-							},
-							"title":"employees"
-						}
-					}
-				},
-				"code":"// --- Input bindings\r\ndef employees = binding.hasVariable(\"employees\") ? binding.getVariable(\"employees\") : []\r\n\r\n// Initialize counters\r\ndef seniorCount = 0\r\ndef juniorCount = 0\r\n\r\n// Iterate through list\r\nemployees.each { emp ->\r\n    def techType = emp?.technotype?.toString()?.toLowerCase() ?: \"\"\r\n    if (techType.contains(\"senior\")) {\r\n        seniorCount++\r\n    } else if (techType.contains(\"junior\")) {\r\n        juniorCount++\r\n    }\r\n}\r\n\r\n// Output as map\r\nreturn [\r\n    \"Senior_Count\": seniorCount,\r\n    \"Junior_Count\": juniorCount\r\n]\r\n",
-				"compile_static":false,
-				"captureStdOutput":false,
-				"parameters":{
-					"employees":{
-						"source":"{{ n_pGInD.outputs.objects }}",
-						"ua:type":"mappedArray",
-						"items":{
-							"empid":"{{ n_pGInD.outputs.objects[0].properties.xxxern_employeenumber }}",
-							"technotype":"{{ n_pGInD.outputs.objects[0].properties.cr3ba_technologylevel }}"
-						}
-					}
-				}
-			},
-			"skip":false,
-			"subTitle":"Code by UnifyApps",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"smtp",
 				"resourceVersion":156,
 				"connectionId":"686cb830d6807d57e55f6fe8",
@@ -4777,12 +3902,12 @@
 			"fallbackMode":"CONTINUE",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_kAS4W",
-			"index":37,
+			"index":31,
 			"inputs":{
 				"sendPartial":false,
 				"subject":"Submition Notification In Normalisation Application",
 				"body":"Dear Team,\n\n[This is system generated email. Do not reply.]\nThis is to notify you that the {{ n_lvDUS.outputs.properties.Level_Group }} level submission is successful.\nDetails:\n* Submission successful {{ n_lvDUS.outputs.properties.Level_Group }} = {{ n_YCTfO.outputs.item }}\n* Submitted records count = {{ n_pGInD.outputs.total }}\n* Senior Technologist Count of Total records is = “{{ n_EKmVb.outputs.result.Senior_Count }}” & Junior Technologist Count of Total records is = “{{ n_EKmVb.outputs.result.Junior_Count }}”\n* Records are currently in Stage = “{{ n_NxK6O.outputs.result.Stage }}” and Level = \"{{ n_NxK6O.outputs.result.Level }}”\nThank you,\nRating Normalization Application\n",
-				"toEmail":"{{ _TphIf.outputs.result.emails }}",
+				"toEmail":"1",
 				"fromEmail":"hppatel531@gmail.com"
 			},
 			"options":{
@@ -4871,7 +3996,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@n",
 			"id":"n_oArI7",
-			"index":38,
+			"index":32,
 			"inputs":{
 				"insertLocation":"END",
 				"itemsToAdd":{
@@ -4912,84 +4037,6 @@
 			"type":"ACTION"
 		},
 		{
-			"context":{
-				"appName":"smtp",
-				"resourceVersion":156,
-				"connectionId":"68bc05f02207e44db12109d5",
-				"resourceName":"smtp_send_email",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"CONTINUE",
-			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@n",
-			"id":"_Wkx76",
-			"index":39,
-			"inputs":{
-				"subject":"Ratings submission is failed - Rating Normalization Application",
-				"body":"Dear Team,\n\n[This is system generated email. Do not reply.]\nThis is to notify you that the submitting is {{ n_lvDUS.outputs.properties.Level_Group }}: {{ n_YCTfO.outputs.item }} failed.\nPosssible reasons\n* The ratings for the selected span is partially received.\n* You already have submitted the ratings belongs to selected span.\nThank you,\nRating Normalization Application\n",
-				"toEmail":"{{ n_0ePlH.outputs.Email_Id }}",
-				"fromEmail":"notificationadmintest@virtusa.com"
-			},
-			"options":{
-				"bulkheadConfig":{
-					"enabled":false,
-					"global":false
-				},
-				"businessHoursConfig":{
-					"enabled":false,
-					"waitForNextWindow":false
-				},
-				"cacheConfig":{
-					"enabled":false,
-					"usagePolicy":"ALWAYS"
-				},
-				"circuitBreakerConfig":{
-					"enabled":false
-				},
-				"disableLogging":false,
-				"enabledForReExecution":false,
-				"hookConfig":{
-					"enabled":false,
-					"postHooks":[
-						
-					],
-					"preHooks":[
-						
-					]
-				},
-				"logConfig":{
-					"enabled":false,
-					"logPolicies":[
-						
-					]
-				},
-				"rateLimitConfig":{
-					"enabled":false,
-					"waitForNextWindow":false
-				},
-				"retryConfig":{
-					"backOffFactor":null,
-					"captureRetries":false,
-					"enabled":false
-				},
-				"stepError":"CONTINUE",
-				"telemetryConfig":{
-					"enableTelemetry":false,
-					"metricConfigs":[
-						
-					]
-				},
-				"timeoutConfig":{
-					"enabled":false
-				}
-			},
-			"skip":false,
-			"subTitle":"SMTP",
-			"title":"Send email",
-			"type":"ACTION"
-		},
-		{
 			"additional":{
 				"visibleOptionalFields":[
 					"root.parameters.geoTiers.items.geo",
@@ -5007,7 +4054,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_00PKA",
-			"index":40,
+			"index":33,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -5074,7 +4121,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_hVZQy",
-			"index":41,
+			"index":34,
 			"inputs":{
 				"filters":[
 					{
@@ -5104,7 +4151,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@y",
 			"id":"n_S8Az4",
-			"index":42,
+			"index":35,
 			"inputs":{
 				"result":{
 					"a":"Submission Successful!"
@@ -5127,7 +4174,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@n",
 			"id":"_rRHSk",
-			"index":43,
+			"index":36,
 			"inputs":{
 				"result":{
 					"a":" Submission for {{ n_00PKA.outputs.result.result }} failed!"
@@ -5158,5 +4205,5 @@
 	"tags":[
 		
 	],
-	"version":153
+	"version":154
 }
