@@ -41,12 +41,19 @@
 			"skip":false,
 			"toNodeId":"n_3PLSg",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_3PLSg",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_I1MeS",
+			"type":"next"
 		}
 	],
 	"id":"68e4eac6fb3db27863845e15",
 	"lastModifiedBy":161877,
 	"lcName":"test",
-	"modifiedTime":1759909198958,
+	"modifiedTime":1759909209822,
 	"name":"test",
 	"nodes":[
 		{
@@ -467,6 +474,21 @@
 			"subTitle":"Variable by UnifyApps",
 			"title":"Create variables",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_7HRNq-1",
+			"id":"n_I1MeS",
+			"index":5,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":161877,
@@ -486,5 +508,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
