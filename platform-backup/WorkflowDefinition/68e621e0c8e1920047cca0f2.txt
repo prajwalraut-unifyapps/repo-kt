@@ -45,7 +45,7 @@
 	"id":"68e621e0c8e1920047cca0f2",
 	"lastModifiedBy":161877,
 	"lcName":"test",
-	"modifiedTime":1759912725151,
+	"modifiedTime":1759912732550,
 	"name":"test",
 	"nodes":[
 		{
@@ -128,6 +128,7 @@
 			"context":{
 				"appName":"slack",
 				"resourceVersion":3947,
+				"connectionId":"68e5ad4c3449e117c956f304",
 				"resourceName":"slack_delete_message_in_channel",
 				"type":"APPLICATION"
 			},
@@ -161,5 +162,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
