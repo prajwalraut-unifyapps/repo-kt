@@ -1,51 +1,118 @@
 {
 	"appsUsed":[
-		
+		"headout"
 	],
 	"createdTime":1759915139550,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_ta8JP",
+			"fromNodeId":"n_66MFZ",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_n9UwZ",
+			"toNodeId":"n_ENGNn",
 			"type":"next"
 		}
 	],
 	"id":"68e62c83129e046ad9676577",
 	"lastModifiedBy":2621,
 	"lcName":"test",
-	"modifiedTime":1759915139550,
+	"modifiedTime":1759915262237,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ta8JP-1",
-			"id":"_ta8JP",
-			"index":0,
+			"id":"n_66MFZ",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.customersDetails.customers.items.personType",
+					"root.customersDetails.customers.items.isPrimary",
+					"root.customersDetails.customers.items.inputFields.items.id",
+					"root.customersDetails.customers.items.inputFields.items.name",
+					"root.customersDetails.customers.items.inputFields.items.value"
+				]
+			},
+			"context":{
+				"appName":"headout",
+				"resourceVersion":105,
+				"connectionId":"68e620f164e04263363dfa9d",
+				"resourceName":"headout_create_booking",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_ta8JP-1",
-			"id":"_n9UwZ",
-			"index":0,
+			"id":"n_ENGNn",
+			"index":2,
+			"inputs":{
+				"productId":"8839",
+				"price":{
+					"amount":30.57,
+					"currencyCode":"AED"
+				},
+				"inventoryId":"436127185",
+				"variantId":"15785",
+				"customersDetails":{
+					"customers":{
+						"source":"1",
+						"ua:type":"mappedArray",
+						"items":{
+							"personType":"GENERAL",
+							"isPrimary":true,
+							"inputFields":[
+								{
+									"id":"NAME",
+									"name":"Full Name",
+									"value":"John Michael Doe"
+								},
+								{
+									"id":"EMAIL",
+									"name":"Email",
+									"value":"john.smithcomment@example.com"
+								},
+								{
+									"id":"PHONE",
+									"name":"Phone",
+									"value":"+61412345678"
+								}
+							]
+						}
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Headout",
+			"title":"Create a booking",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":2621,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +126,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
