@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		
+		"slack"
 	],
 	"createdTime":1759912416135,
 	"deleted":false,
@@ -28,6 +28,13 @@
 		},
 		{
 			"fromNodeId":"n_dbl4S",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_UyqsK",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_UyqsK",
 			"name":"loopback",
 			"priority":0,
 			"skip":false,
@@ -38,7 +45,7 @@
 	"id":"68e621e0c8e1920047cca0f2",
 	"lastModifiedBy":161877,
 	"lcName":"test",
-	"modifiedTime":1759912531745,
+	"modifiedTime":1759912569944,
 	"name":"test",
 	"nodes":[
 		{
@@ -145,6 +152,22 @@
 			"skip":false,
 			"title":"Select an app and action",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"slack",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_5aCW5@_FD24L-1@l",
+			"id":"n_UyqsK",
+			"index":5,
+			"skip":false,
+			"subTitle":"Slack",
+			"title":"Select an action",
+			"type":"ACTION"
 		}
 	],
 	"ownerUserId":161877,
@@ -164,5 +187,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
