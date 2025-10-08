@@ -30,7 +30,7 @@
 	"id":"68e64a2ffa4071733372731b",
 	"lastModifiedBy":165764,
 	"lcName":"das",
-	"modifiedTime":1759922962259,
+	"modifiedTime":1759922967961,
 	"name":"das",
 	"nodes":[
 		{
@@ -116,6 +116,10 @@
 				"synchronous":false,
 				"triggerWorkflowWithRuntimeType":"DEFAULT",
 				"distributeWorkflowLoad":true,
+				"parametersList":{
+					"source":"{{ n_7xlx7.outputs.result.list }}",
+					"ua:type":"mappedArray"
+				},
 				"version":"-1"
 			},
 			"skip":false,
@@ -156,5 +160,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
