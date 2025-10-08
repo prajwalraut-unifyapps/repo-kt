@@ -30,7 +30,7 @@
 	"id":"68e64a2ffa4071733372731b",
 	"lastModifiedBy":165764,
 	"lcName":"das",
-	"modifiedTime":1759923467428,
+	"modifiedTime":1759923590002,
 	"name":"das",
 	"nodes":[
 		{
@@ -125,6 +125,60 @@
 				},
 				"version":"-1"
 			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":true,
+					"global":false,
+					"maxConcurrency":"10"
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS"
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"STOP",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				},
+				"timeoutConfig":{
+					"enabled":false
+				}
+			},
 			"skip":false,
 			"subTitle":"Callable",
 			"title":"Call automation",
@@ -163,5 +217,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
