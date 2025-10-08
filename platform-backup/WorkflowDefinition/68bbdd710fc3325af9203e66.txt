@@ -363,7 +363,7 @@
 	"id":"68bbdd710fc3325af9203e66",
 	"lastModifiedBy":426,
 	"lcName":"normalization | submit ratings",
-	"modifiedTime":1759890697694,
+	"modifiedTime":1759890708632,
 	"name":"Normalization | Submit Ratings",
 	"nodes":[
 		{
@@ -4953,12 +4953,12 @@
 			"context":{
 				"appName":"smtp",
 				"resourceVersion":156,
-				"connectionId":"68d57ed924344c7baec317d8",
+				"connectionId":"686cb830d6807d57e55f6fe8",
 				"resourceName":"smtp_send_email",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"CONTINUE",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_kAS4W",
@@ -4968,7 +4968,7 @@
 				"subject":"Submition Notification In Normalisation Application",
 				"body":"Dear Team,\n\n[This is system generated email. Do not reply.]\nThis is to notify you that the {{ n_lvDUS.outputs.properties.Level_Group }} level submission is successful.\nDetails:\n* Submission successful {{ n_lvDUS.outputs.properties.Level_Group }} = {{ n_YCTfO.outputs.item }}\n* Submitted records count = {{ n_pGInD.outputs.total }}\n* Senior Technologist Count of Total records is = “{{ n_EKmVb.outputs.result.Senior_Count }}” & Junior Technologist Count of Total records is = “{{ n_EKmVb.outputs.result.Junior_Count }}”\n* Records are currently in Stage = “{{ n_NxK6O.outputs.result.Stage }}” and Level = \"{{ n_NxK6O.outputs.result.Level }}”\nThank you,\nRating Normalization Application\n",
 				"toEmail":"{{ _TphIf.outputs.result.emails }}",
-				"fromEmail":"notificationadmintest@virtusa.com"
+				"fromEmail":"hppatel531@gmail.com"
 			},
 			"options":{
 				"bulkheadConfig":{
@@ -5343,5 +5343,5 @@
 	"tags":[
 		
 	],
-	"version":148
+	"version":149
 }
