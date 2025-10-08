@@ -30,7 +30,7 @@
 	"id":"68e5fb2521cff57223218647",
 	"lastModifiedBy":411,
 	"lcName":"gygg",
-	"modifiedTime":1759923132767,
+	"modifiedTime":1759923140597,
 	"name":"gygg",
 	"nodes":[
 		{
@@ -73,7 +73,7 @@
 			"id":"n_V1Oik",
 			"index":2,
 			"inputs":{
-				"destinationObjectName":"assets/copy-7.txt",
+				"destinationObjectName":"assets/copy-8.txt",
 				"sourceBucketName":"copy-source-bucket-xyz",
 				"destinationRegion":"ap-south-1",
 				"sourceObjectName":"assets/copy-1.txt",
@@ -213,5 +213,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
