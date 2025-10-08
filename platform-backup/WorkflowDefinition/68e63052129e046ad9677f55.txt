@@ -1,51 +1,70 @@
 {
 	"appsUsed":[
-		
+		"gmail"
 	],
 	"createdTime":1759916114118,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_Ji0fF",
+			"fromNodeId":"n_5hWKH",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_0efdc",
+			"toNodeId":"n_DcanT",
 			"type":"next"
 		}
 	],
 	"id":"68e63052129e046ad9677f55",
 	"lastModifiedBy":161877,
 	"lcName":"test",
-	"modifiedTime":1759916114118,
+	"modifiedTime":1759916146371,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Ji0fF-1",
-			"id":"_Ji0fF",
-			"index":0,
+			"id":"n_5hWKH",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"gmail",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Ji0fF-1",
-			"id":"_0efdc",
-			"index":0,
+			"id":"n_DcanT",
+			"index":2,
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Gmail",
+			"title":"Select an action",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":161877,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +78,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
