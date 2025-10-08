@@ -30,7 +30,7 @@
 	"id":"68e5fb2521cff57223218647",
 	"lastModifiedBy":411,
 	"lcName":"gygg",
-	"modifiedTime":1759922756477,
+	"modifiedTime":1759923132767,
 	"name":"gygg",
 	"nodes":[
 		{
@@ -40,7 +40,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_PtDfL-1",
 			"id":"n_QvZtR",
@@ -102,7 +102,7 @@
 				"dynamic":false,
 				"layout":{},
 				"schema":{
-					"ua:__linkedVariable__":"n_V1Oik.outputs.CopyObjectResult",
+					"ua:__linkedVariable__":"n_V1Oik.outputs",
 					"type":"object",
 					"properties":{
 						"ETag":{
@@ -133,19 +133,19 @@
 				}
 			},
 			"inputs":{
-				"LastModified":"{{ n_V1Oik.outputs.CopyObjectResult.LastModified }}",
-				"ChecksumCRC64NVME":"{{ n_V1Oik.outputs.CopyObjectResult.ChecksumCRC64NVME }}",
-				"ETag":"{{ n_V1Oik.outputs.CopyObjectResult.ETag }}",
-				"ChecksumCRC32C":"{{ n_V1Oik.outputs.CopyObjectResult.ChecksumCRC32 }}",
-				"ChecksumSHA1":"{{ n_V1Oik.outputs.CopyObjectResult.ChecksumSHA1 }}",
-				"ChecksumCRC32":"{{ n_V1Oik.outputs.CopyObjectResult.ChecksumCRC32 }}",
-				"ChecksumType":"{{ n_V1Oik.outputs.CopyObjectResult.ChecksumType }}",
-				"ChecksumSHA256":"{{ n_V1Oik.outputs.CopyObjectResult.ChecksumSHA256 }}"
+				"LastModified":"{{ n_V1Oik.outputs.LastModified }}",
+				"ChecksumCRC64NVME":"{{ n_V1Oik.outputs.ChecksumCRC64NVME }}",
+				"ETag":"{{ n_V1Oik.outputs.ETag }}",
+				"ChecksumCRC32C":"{{ n_V1Oik.outputs.ChecksumCRC32C }}",
+				"ChecksumSHA1":"{{ n_V1Oik.outputs.ChecksumSHA1 }}",
+				"ChecksumCRC32":"{{ n_V1Oik.outputs.ChecksumCRC32 }}",
+				"ChecksumType":"{{ n_V1Oik.outputs.ChecksumType }}",
+				"ChecksumSHA256":"{{ n_V1Oik.outputs.ChecksumSHA256 }}"
 			},
 			"outputSchema":{
 				"dynamic":false,
 				"schema":{
-					"ua:__linkedVariable__":"n_V1Oik.outputs.CopyObjectResult",
+					"ua:__linkedVariable__":"n_V1Oik.outputs",
 					"type":"object",
 					"properties":{
 						"ETag":{
@@ -185,7 +185,7 @@
 				"appName":"stop"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_PtDfL-1",
 			"id":"n_bF46h",
@@ -213,5 +213,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
