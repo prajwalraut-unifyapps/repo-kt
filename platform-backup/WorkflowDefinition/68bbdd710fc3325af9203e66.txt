@@ -96,6 +96,13 @@
 			"fromNodeId":"n_p5jRR",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_YwFjj",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_YwFjj",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_YCTfO",
 			"type":"next"
 		},
@@ -141,7 +148,7 @@
 	"id":"68bbdd710fc3325af9203e66",
 	"lastModifiedBy":426,
 	"lcName":"normalization | submit ratings",
-	"modifiedTime":1759891579210,
+	"modifiedTime":1759891674709,
 	"name":"Normalization | Submit Ratings",
 	"nodes":[
 		{
@@ -2289,7 +2296,7 @@
 					"source":"{{ n_0ePlH.outputs.categoryID }}",
 					"items":"{{ n_0ePlH.outputs.categoryID[0] }}"
 				},
-				"ua:title":"List",
+				"ua:title":"List12",
 				"ua:list_type":"STRING"
 			},
 			"outputSchema":{
@@ -2299,7 +2306,7 @@
 					"properties":{
 						"items":{
 							"type":"array",
-							"title":"List",
+							"title":"List12",
 							"disableActions":true,
 							"items":{
 								"type":"string"
@@ -2598,6 +2605,32 @@
 		},
 		{
 			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":947,
+				"resourceName":"variable_by_unifyapps_add_items_to_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_z1vHD-1",
+			"id":"n_YwFjj",
+			"index":12,
+			"inputs":{
+				"insertLocation":"START",
+				"itemsToAdd":{
+					"ua:type":"mappedArray",
+					"items":"123"
+				},
+				"listName":"{{ n_OQSsg.outputs.items[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Add items to list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"loop",
 				"resourceVersion":26,
 				"resourceName":"loop_for_each",
@@ -2608,7 +2641,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_YCTfO",
-			"index":12,
+			"index":13,
 			"inputs":{
 				"repeatMode":"SINGLE",
 				"listSource":"{{ n_OQSsg.outputs.items }}",
@@ -2631,7 +2664,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_YCTfO@_z1vHD-1@l",
 			"id":"n_TdHbb",
-			"index":13,
+			"index":14,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -2684,7 +2717,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_hVZQy",
-			"index":14,
+			"index":15,
 			"inputs":{
 				"filters":[
 					{
@@ -2714,7 +2747,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@y",
 			"id":"n_S8Az4",
-			"index":15,
+			"index":16,
 			"inputs":{
 				"result":{
 					"a":"Submission Successful!"
@@ -2737,7 +2770,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@n",
 			"id":"_rRHSk",
-			"index":16,
+			"index":17,
 			"inputs":{
 				"result":{
 					"a":" Submission for {{ n_00PKA.outputs.result.result }} failed!"
@@ -2768,5 +2801,5 @@
 	"tags":[
 		
 	],
-	"version":169
+	"version":170
 }
