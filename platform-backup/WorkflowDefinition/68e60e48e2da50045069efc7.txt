@@ -16,7 +16,7 @@
 	"id":"68e60e48e2da50045069efc7",
 	"lastModifiedBy":678,
 	"lcName":"dcdsv",
-	"modifiedTime":1759907720258,
+	"modifiedTime":1759907725257,
 	"name":"dcdsv",
 	"nodes":[
 		{
@@ -48,6 +48,7 @@
 			"context":{
 				"appName":"custom_http_application",
 				"resourceVersion":2028,
+				"connectionId":"68dd18eb12547e4cdcf1b7a9",
 				"resourceName":"custom_http_application_execute",
 				"type":"APPLICATION"
 			},
@@ -62,8 +63,12 @@
 				"httpVersion":"HTTP_2",
 				"responseContentType":"application/json",
 				"isAsync":false,
+				"headersList":[],
+				"requestTimeoutInSecs":-1,
 				"httpMethod":"POST",
-				"requestContentType":"application/json"
+				"authType":"CUSTOM",
+				"requestContentType":"application/json",
+				"sslVerify":true
 			},
 			"skip":false,
 			"subTitle":"Custom HTTP Application",
@@ -88,5 +93,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
