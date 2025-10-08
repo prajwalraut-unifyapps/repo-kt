@@ -67,7 +67,7 @@
 	"id":"68c054b9ecdc557672b81d0f",
 	"lastModifiedBy":39715,
 	"lcName":"sumitbansaltesting",
-	"modifiedTime":1759910466864,
+	"modifiedTime":1759910472517,
 	"name":"sumitBansalTesting",
 	"nodes":[
 		{
@@ -217,7 +217,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_hIm1D-1",
 			"id":"n_po0sB",
@@ -229,7 +229,7 @@
 				"python_version":"3.12",
 				"captureStdOutput":false
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Code by WurkNow",
 			"title":"Execute Python script",
 			"type":"ACTION"
@@ -273,5 +273,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
