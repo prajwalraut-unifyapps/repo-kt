@@ -4,6 +4,14 @@
 	],
 	"createdTime":1759465505996,
 	"deleted":false,
+	"deploymentState":{
+		"deployedAt":1759915874690,
+		"deployedBy":132116,
+		"deployedDefinitionId":"68e62f60129e046ad9677b26",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":13
+	},
 	"description":"this is a test automation",
 	"edges":[
 		{
@@ -201,7 +209,7 @@
 	"id":"68df50227cb1ae420e99cbcd",
 	"lastModifiedBy":132116,
 	"lcName":"hatim-test-automation (copy)",
-	"modifiedTime":1759915872554,
+	"modifiedTime":1759915980922,
 	"name":"hatim-test-automation (copy)",
 	"nodes":[
 		{
@@ -2230,5 +2238,5 @@
 		}
 	},
 	"standard":false,
-	"version":13
+	"version":14
 }
