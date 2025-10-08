@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		"slack"
+		"gmail"
 	],
 	"createdTime":1759844882833,
 	"deleted":false,
@@ -17,14 +17,14 @@
 			"fromNodeId":"n_OXIsC",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_WnUXC",
+			"toNodeId":"n_VZVcF",
 			"type":"next"
 		}
 	],
 	"id":"68e51a12a0b9f01f0ce8f717",
 	"lastModifiedBy":161877,
 	"lcName":"sdf",
-	"modifiedTime":1759915197913,
+	"modifiedTime":1759915242161,
 	"name":"sdf",
 	"nodes":[
 		{
@@ -54,47 +54,25 @@
 		},
 		{
 			"context":{
-				"appName":"slack",
-				"resourceVersion":6299,
-				"connectionId":"68e625ab4022cb3f538be04a",
-				"resourceName":"slack_post_message_in_channel",
+				"appName":"gmail",
+				"resourceVersion":3377,
+				"connectionId":"68d56109054fa401ca60a85b",
+				"resourceName":"gmail_find_email",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_lpeKi-1",
-			"id":"n_WnUXC",
+			"id":"n_VZVcF",
 			"index":2,
 			"inputs":{
-				"link_names":true,
-				"messageType":"text",
-				"thread_ts":"ert",
-				"unfurl_media":true,
-				"Attach":[
-					{
-						"attachmentsType":"attachmentBlock",
-						"attachmentsBlock":{
-							"mrkdwn_in":[
-								"text",
-								"pretext",
-								"fields",
-								"footer"
-							],
-							"fields":{
-								"source":"sdfsdf",
-								"ua:type":"mappedArray"
-							}
-						}
-					}
-				],
-				"channel":"C085RVBECP6",
-				"text":"dtre",
-				"mrkdwn":true
+				"toCreate":false,
+				"count":1
 			},
 			"skip":false,
-			"subTitle":"Slack",
-			"title":"Post message",
+			"subTitle":"Gmail",
+			"title":"Find Email",
 			"type":"ACTION"
 		}
 	],
@@ -115,5 +93,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
