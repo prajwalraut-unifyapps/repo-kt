@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759922321603,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_sSI3q",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_DYlmd",
+			"type":"next"
+		}
+	],
+	"id":"68e64891da5185509e648974",
+	"lastModifiedBy":165764,
+	"lcName":"bulkheadtest",
+	"modifiedTime":1759922321603,
+	"name":"bulkHeadTest",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_sSI3q-1",
+			"id":"_sSI3q",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_sSI3q-1",
+			"id":"_DYlmd",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":165764,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
