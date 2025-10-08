@@ -56,14 +56,6 @@
 		},
 		{
 			"fromNodeId":"n_wP5pi",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_3TWLD",
-			"type":"if"
-		},
-		{
-			"fromNodeId":"n_wP5pi",
 			"name":"no",
 			"priority":0,
 			"skip":false,
@@ -71,12 +63,12 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_3TWLD",
-			"name":"loopback",
+			"fromNodeId":"n_wP5pi",
+			"name":"yes",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_Nwdw7",
-			"type":"next"
+			"type":"if"
 		},
 		{
 			"fromNodeId":"n_hg2NB",
@@ -172,7 +164,7 @@
 	"id":"68bbdd710fc3325af9203e66",
 	"lastModifiedBy":426,
 	"lcName":"normalization | submit ratings",
-	"modifiedTime":1759890994747,
+	"modifiedTime":1759891000867,
 	"name":"Normalization | Submit Ratings",
 	"nodes":[
 		{
@@ -2066,33 +2058,6 @@
 		},
 		{
 			"context":{
-				"appName":"variable_by_unifyapps",
-				"resourceVersion":26,
-				"resourceName":"variable_by_unifyapps_add_items_to_list",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_wP5pi@n_Nwdw7@_z1vHD-1@l@y",
-			"id":"n_3TWLD",
-			"index":9,
-			"inputs":{
-				"insertLocation":"END",
-				"itemsToAdd":{
-					"ua:type":"mappedArray",
-					"source":"{{ n_bVY53.outputs.result.output }}",
-					"items":"{{ n_bVY53.outputs.result.output[0] }}"
-				},
-				"listName":"{{ n_cXpfJ.outputs.items[0] }}"
-			},
-			"skip":false,
-			"subTitle":"Variable by UnifyApps",
-			"title":"Add items to list",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"break",
 				"resourceVersion":28,
 				"resourceName":"break",
@@ -2103,7 +2068,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_wP5pi@n_Nwdw7@_z1vHD-1@l@n",
 			"id":"n_hg2NB",
-			"index":10,
+			"index":9,
 			"inputs":{
 				"loop":"n_Nwdw7"
 			},
@@ -2124,7 +2089,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_OQSsg",
-			"index":11,
+			"index":10,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -2382,7 +2347,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_p5jRR",
-			"index":12,
+			"index":11,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -2665,7 +2630,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_YCTfO",
-			"index":13,
+			"index":12,
 			"inputs":{
 				"repeatMode":"SINGLE",
 				"listSource":"{{ n_OQSsg.outputs.items }}",
@@ -2688,7 +2653,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_YCTfO@_z1vHD-1@l",
 			"id":"n_JtWeQ",
-			"index":14,
+			"index":13,
 			"inputs":{
 				"triggerInputCondition":{
 					"filters":[
@@ -2738,7 +2703,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_YCTfO@_z1vHD-1@l",
 			"id":"n_JfHtS",
-			"index":15,
+			"index":14,
 			"inputs":{
 				"filters":[
 					{
@@ -2768,7 +2733,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_ojQkx",
-			"index":16,
+			"index":15,
 			"inputs":{
 				"object_type":"access_control_for_roleplayers",
 				"includeRoleMappings":false,
@@ -2799,7 +2764,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_hVZQy",
-			"index":17,
+			"index":16,
 			"inputs":{
 				"filters":[
 					{
@@ -2829,7 +2794,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@y",
 			"id":"n_S8Az4",
-			"index":18,
+			"index":17,
 			"inputs":{
 				"result":{
 					"a":"Submission Successful!"
@@ -2852,7 +2817,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@n",
 			"id":"_rRHSk",
-			"index":19,
+			"index":18,
 			"inputs":{
 				"result":{
 					"a":" Submission for {{ n_00PKA.outputs.result.result }} failed!"
@@ -2883,5 +2848,5 @@
 	"tags":[
 		
 	],
-	"version":165
+	"version":166
 }
