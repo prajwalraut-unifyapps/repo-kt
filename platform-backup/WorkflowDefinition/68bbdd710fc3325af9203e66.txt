@@ -44,15 +44,8 @@
 			"fromNodeId":"n_Nwdw7",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_EoV2h",
-			"type":"loop"
-		},
-		{
-			"fromNodeId":"n_EoV2h",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_qrCD8",
-			"type":"next"
+			"type":"loop"
 		},
 		{
 			"fromNodeId":"n_qrCD8",
@@ -186,7 +179,7 @@
 	"id":"68bbdd710fc3325af9203e66",
 	"lastModifiedBy":426,
 	"lcName":"normalization | submit ratings",
-	"modifiedTime":1759890953545,
+	"modifiedTime":1759890988817,
 	"name":"Normalization | Submit Ratings",
 	"nodes":[
 		{
@@ -2024,38 +2017,6 @@
 		},
 		{
 			"context":{
-				"appName":"callables",
-				"resourceVersion":26,
-				"resourceName":"callables_call_automation",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_Nwdw7@_z1vHD-1@l",
-			"id":"n_EoV2h",
-			"index":7,
-			"inputs":{
-				"automationId":"68c7ab3ba643bc3223c2c5d4",
-				"runtimeConnections":{},
-				"synchronous":true,
-				"version":"-1",
-				"parameters":{
-					"Email_Id":"{{ n_0ePlH.outputs.Email_Id }}",
-					"RoleID":"{{ n_0ePlH.outputs.RoleID }}",
-					"cycle":"{{ n_0ePlH.outputs.cycle_name }}",
-					"department":"{{ n_0ePlH.outputs.department }}",
-					"pageSize":500,
-					"offset":"{{ n_9xcB5.outputs.Offset }}"
-				}
-			},
-			"skip":false,
-			"subTitle":"Callable",
-			"title":"Call automation",
-			"type":"CALL_WORKFLOW"
-		},
-		{
-			"context":{
 				"appName":"variable_by_unifyapps",
 				"resourceVersion":26,
 				"resourceName":"variable_by_unifyapps_update_variables",
@@ -2066,7 +2027,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_Nwdw7@_z1vHD-1@l",
 			"id":"n_qrCD8",
-			"index":8,
+			"index":7,
 			"inputs":{
 				"variables":[
 					{
@@ -2092,7 +2053,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_Nwdw7@_z1vHD-1@l",
 			"id":"n_wP5pi",
-			"index":9,
+			"index":8,
 			"inputs":{
 				"filters":[
 					{
@@ -2122,7 +2083,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_wP5pi@n_Nwdw7@_z1vHD-1@l@y",
 			"id":"n_bVY53",
-			"index":10,
+			"index":9,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -2186,7 +2147,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_wP5pi@n_Nwdw7@_z1vHD-1@l@y",
 			"id":"n_3TWLD",
-			"index":11,
+			"index":10,
 			"inputs":{
 				"insertLocation":"END",
 				"itemsToAdd":{
@@ -2213,7 +2174,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_wP5pi@n_Nwdw7@_z1vHD-1@l@n",
 			"id":"n_hg2NB",
-			"index":12,
+			"index":11,
 			"inputs":{
 				"loop":"n_Nwdw7"
 			},
@@ -2234,7 +2195,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_OQSsg",
-			"index":13,
+			"index":12,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -2492,7 +2453,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_p5jRR",
-			"index":14,
+			"index":13,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -2775,7 +2736,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_YCTfO",
-			"index":15,
+			"index":14,
 			"inputs":{
 				"repeatMode":"SINGLE",
 				"listSource":"{{ n_OQSsg.outputs.items }}",
@@ -2798,7 +2759,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_YCTfO@_z1vHD-1@l",
 			"id":"n_JtWeQ",
-			"index":16,
+			"index":15,
 			"inputs":{
 				"triggerInputCondition":{
 					"filters":[
@@ -2848,7 +2809,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_YCTfO@_z1vHD-1@l",
 			"id":"n_JfHtS",
-			"index":17,
+			"index":16,
 			"inputs":{
 				"filters":[
 					{
@@ -2878,7 +2839,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_ojQkx",
-			"index":18,
+			"index":17,
 			"inputs":{
 				"object_type":"access_control_for_roleplayers",
 				"includeRoleMappings":false,
@@ -2909,7 +2870,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_hVZQy",
-			"index":19,
+			"index":18,
 			"inputs":{
 				"filters":[
 					{
@@ -2939,7 +2900,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@y",
 			"id":"n_S8Az4",
-			"index":20,
+			"index":19,
 			"inputs":{
 				"result":{
 					"a":"Submission Successful!"
@@ -2962,7 +2923,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@n",
 			"id":"_rRHSk",
-			"index":21,
+			"index":20,
 			"inputs":{
 				"result":{
 					"a":" Submission for {{ n_00PKA.outputs.result.result }} failed!"
@@ -2993,5 +2954,5 @@
 	"tags":[
 		
 	],
-	"version":163
+	"version":164
 }
