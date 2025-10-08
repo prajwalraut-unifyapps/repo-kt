@@ -9,11 +9,11 @@
 			"fromNodeId":"n_QvZtR",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_V1Oik",
+			"toNodeId":"n_2Zl58",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_V1Oik",
+			"fromNodeId":"n_2Zl58",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_KmXM0",
@@ -30,7 +30,7 @@
 	"id":"68e5fb2521cff57223218647",
 	"lastModifiedBy":411,
 	"lcName":"gygg",
-	"modifiedTime":1759925041805,
+	"modifiedTime":1759926854600,
 	"name":"gygg",
 	"nodes":[
 		{
@@ -61,7 +61,7 @@
 		{
 			"context":{
 				"appName":"amazon_s3",
-				"resourceVersion":4,
+				"resourceVersion":8,
 				"connectionId":"68e5fb50a7f3606f8bea92e3",
 				"resourceName":"amazon_s3_copy_file",
 				"type":"APPLICATION"
@@ -70,10 +70,10 @@
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_PtDfL-1",
-			"id":"n_V1Oik",
+			"id":"n_2Zl58",
 			"index":2,
 			"inputs":{
-				"destinationObjectName":"test/copy-8.txt",
+				"destinationObjectName":"test/copy-9.txt",
 				"sourceBucketName":"copy-source-bucket-xyz",
 				"destinationRegion":"ap-south-1",
 				"sourceObjectName":"assets/copy-1.txt",
@@ -213,5 +213,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
