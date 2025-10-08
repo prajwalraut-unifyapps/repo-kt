@@ -17,13 +17,6 @@
 			"fromNodeId":"n_AdAxU",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_kETVC",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_kETVC",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_IbGxo",
 			"type":"next"
 		},
@@ -349,7 +342,7 @@
 	"id":"68bbdd710fc3325af9203e66",
 	"lastModifiedBy":426,
 	"lcName":"normalization | submit ratings",
-	"modifiedTime":1759890756252,
+	"modifiedTime":1759890760323,
 	"name":"Normalization | Submit Ratings",
 	"nodes":[
 		{
@@ -492,49 +485,6 @@
 		},
 		{
 			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":241,
-				"resourceName":"storage_by_unifyapps_fetch_records",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_z1vHD-1",
-			"id":"n_kETVC",
-			"index":3,
-			"inputs":{
-				"triggerInputCondition":{
-					"filters":[
-						{
-							"property":"properties_key",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"{{ n_lvDUS.outputs.properties.Level_Group }}"
-							}
-						}
-					],
-					"operator":"AND"
-				},
-				"object_type":"mapping_category_type",
-				"includeRoleMappings":false,
-				"includeCurrentUserPermissions":false,
-				"translationsOption":"DEFAULT",
-				"page":{
-					"paginateBy":"OFFSET",
-					"limit":20
-				},
-				"numberOfRecordsToFetch":"SINGLE",
-				"readThroughSessionVariables":false,
-				"includeTotalCount":false
-			},
-			"skip":false,
-			"subTitle":"Storage by UnifyApps",
-			"title":"Fetch records",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"variable_by_unifyapps",
 				"resourceVersion":26,
 				"resourceName":"variable_by_unifyapps_create_list",
@@ -545,7 +495,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_IbGxo",
-			"index":4,
+			"index":3,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -934,7 +884,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_5fHcz",
-			"index":5,
+			"index":4,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -1963,7 +1913,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_9xcB5",
-			"index":6,
+			"index":5,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -2018,7 +1968,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_cXpfJ",
-			"index":7,
+			"index":6,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -2276,7 +2226,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_Nwdw7",
-			"index":8,
+			"index":7,
 			"inputs":{
 				"captureIterations":true
 			},
@@ -2297,7 +2247,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_Nwdw7@_z1vHD-1@l",
 			"id":"n_EoV2h",
-			"index":9,
+			"index":8,
 			"inputs":{
 				"automationId":"68c7ab3ba643bc3223c2c5d4",
 				"runtimeConnections":{},
@@ -2329,7 +2279,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_Nwdw7@_z1vHD-1@l",
 			"id":"n_qrCD8",
-			"index":10,
+			"index":9,
 			"inputs":{
 				"variables":[
 					{
@@ -2355,7 +2305,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_Nwdw7@_z1vHD-1@l",
 			"id":"n_wP5pi",
-			"index":11,
+			"index":10,
 			"inputs":{
 				"filters":[
 					{
@@ -2385,7 +2335,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_wP5pi@n_Nwdw7@_z1vHD-1@l@y",
 			"id":"n_bVY53",
-			"index":12,
+			"index":11,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -2449,7 +2399,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_wP5pi@n_Nwdw7@_z1vHD-1@l@y",
 			"id":"n_3TWLD",
-			"index":13,
+			"index":12,
 			"inputs":{
 				"insertLocation":"END",
 				"itemsToAdd":{
@@ -2476,7 +2426,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_wP5pi@n_Nwdw7@_z1vHD-1@l@n",
 			"id":"n_hg2NB",
-			"index":14,
+			"index":13,
 			"inputs":{
 				"loop":"n_Nwdw7"
 			},
@@ -2497,7 +2447,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_OQSsg",
-			"index":15,
+			"index":14,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -2755,7 +2705,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_p5jRR",
-			"index":16,
+			"index":15,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -3038,7 +2988,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_YCTfO",
-			"index":17,
+			"index":16,
 			"inputs":{
 				"repeatMode":"SINGLE",
 				"listSource":"{{ n_OQSsg.outputs.items }}",
@@ -3061,7 +3011,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_YCTfO@_z1vHD-1@l",
 			"id":"n_pGInD",
-			"index":18,
+			"index":17,
 			"inputs":{
 				"triggerInputCondition":{
 					"filters":[
@@ -3112,7 +3062,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_YCTfO@_z1vHD-1@l",
 			"id":"n_JtWeQ",
-			"index":19,
+			"index":18,
 			"inputs":{
 				"triggerInputCondition":{
 					"filters":[
@@ -3184,7 +3134,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_YCTfO@_z1vHD-1@l",
 			"id":"n_c0gBQ",
-			"index":20,
+			"index":19,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -3483,7 +3433,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_YCTfO@_z1vHD-1@l",
 			"id":"_Xwul6",
-			"index":21,
+			"index":20,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -3766,7 +3716,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_YCTfO@_z1vHD-1@l",
 			"id":"n_JfHtS",
-			"index":22,
+			"index":21,
 			"inputs":{
 				"filters":[
 					{
@@ -3796,7 +3746,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_ojQkx",
-			"index":23,
+			"index":22,
 			"inputs":{
 				"object_type":"access_control_for_roleplayers",
 				"includeRoleMappings":false,
@@ -3836,7 +3786,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"n_NxK6O",
-			"index":24,
+			"index":23,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -3918,7 +3868,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"n_OVijX",
-			"index":25,
+			"index":24,
 			"inputs":{
 				"object_type":"normalization_master_table",
 				"skipIfBlank":false,
@@ -3980,7 +3930,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"n_lXTSC",
-			"index":26,
+			"index":25,
 			"inputs":{
 				"itemToAdd":{
 					"CatID":"{{ n_YCTfO.outputs.item }}",
@@ -4006,7 +3956,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_u4tjC",
-			"index":27,
+			"index":26,
 			"inputs":{
 				"triggerInputCondition":{
 					"filters":[
@@ -4070,7 +4020,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_ZYcAh",
-			"index":28,
+			"index":27,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -4127,7 +4077,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_HlgiC",
-			"index":29,
+			"index":28,
 			"inputs":{
 				"outputSchema":{
 					"type":"object",
@@ -4174,7 +4124,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_O3VuW",
-			"index":30,
+			"index":29,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -4230,7 +4180,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_Od1Jm",
-			"index":31,
+			"index":30,
 			"inputs":{
 				"outputSchema":{
 					"type":"object",
@@ -4274,7 +4224,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"n_Gv8zr",
-			"index":32,
+			"index":31,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -4324,7 +4274,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_gilte",
-			"index":33,
+			"index":32,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -4582,7 +4532,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_kDm0j",
-			"index":34,
+			"index":33,
 			"inputs":{
 				"projections":[
 					{
@@ -4639,7 +4589,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_TphIf",
-			"index":35,
+			"index":34,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -4694,7 +4644,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_O0UUX",
-			"index":36,
+			"index":35,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -4755,7 +4705,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"n_EKmVb",
-			"index":37,
+			"index":36,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -4827,7 +4777,7 @@
 			"fallbackMode":"CONTINUE",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_kAS4W",
-			"index":38,
+			"index":37,
 			"inputs":{
 				"sendPartial":false,
 				"subject":"Submition Notification In Normalisation Application",
@@ -4921,7 +4871,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@n",
 			"id":"n_oArI7",
-			"index":39,
+			"index":38,
 			"inputs":{
 				"insertLocation":"END",
 				"itemsToAdd":{
@@ -4974,7 +4924,7 @@
 			"fallbackMode":"CONTINUE",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@n",
 			"id":"_Wkx76",
-			"index":40,
+			"index":39,
 			"inputs":{
 				"subject":"Ratings submission is failed - Rating Normalization Application",
 				"body":"Dear Team,\n\n[This is system generated email. Do not reply.]\nThis is to notify you that the submitting is {{ n_lvDUS.outputs.properties.Level_Group }}: {{ n_YCTfO.outputs.item }} failed.\nPosssible reasons\n* The ratings for the selected span is partially received.\n* You already have submitted the ratings belongs to selected span.\nThank you,\nRating Normalization Application\n",
@@ -5057,7 +5007,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_00PKA",
-			"index":41,
+			"index":40,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -5124,7 +5074,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_hVZQy",
-			"index":42,
+			"index":41,
 			"inputs":{
 				"filters":[
 					{
@@ -5154,7 +5104,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@y",
 			"id":"n_S8Az4",
-			"index":43,
+			"index":42,
 			"inputs":{
 				"result":{
 					"a":"Submission Successful!"
@@ -5177,7 +5127,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@n",
 			"id":"_rRHSk",
-			"index":44,
+			"index":43,
 			"inputs":{
 				"result":{
 					"a":" Submission for {{ n_00PKA.outputs.result.result }} failed!"
@@ -5208,5 +5158,5 @@
 	"tags":[
 		
 	],
-	"version":151
+	"version":152
 }
