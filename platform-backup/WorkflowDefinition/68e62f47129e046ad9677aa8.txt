@@ -11,12 +11,19 @@
 			"skip":false,
 			"toNodeId":"n_43ao0",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_43ao0",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_ehscO",
+			"type":"next"
 		}
 	],
 	"id":"68e62f47129e046ad9677aa8",
 	"lastModifiedBy":2621,
 	"lcName":"test",
-	"modifiedTime":1759915956756,
+	"modifiedTime":1759916180382,
 	"name":"test",
 	"nodes":[
 		{
@@ -107,6 +114,29 @@
 			"subTitle":"Headout",
 			"title":"Create a booking",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"headout",
+				"resourceVersion":94,
+				"connectionId":"68e620f164e04263363dfa9d",
+				"resourceName":"headout_list_available_inventory",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_eZXYy-1",
+			"id":"n_ehscO",
+			"index":3,
+			"inputs":{
+				"variantId":"15785",
+				"currencyCode":"USD"
+			},
+			"skip":false,
+			"subTitle":"Headout",
+			"title":"List available inventory for a variant",
+			"type":"ACTION"
 		}
 	],
 	"ownerUserId":2621,
@@ -126,5 +156,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
