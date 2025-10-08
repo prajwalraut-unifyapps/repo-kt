@@ -147,13 +147,6 @@
 			"fromNodeId":"_ojQkx",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_HlgiC",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_HlgiC",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"_O3VuW",
 			"type":"next"
 		},
@@ -200,7 +193,7 @@
 	"id":"68bbdd710fc3325af9203e66",
 	"lastModifiedBy":426,
 	"lcName":"normalization | submit ratings",
-	"modifiedTime":1759890946289,
+	"modifiedTime":1759890949984,
 	"name":"Normalization | Submit Ratings",
 	"nodes":[
 		{
@@ -2912,45 +2905,6 @@
 			"type":"ACTION"
 		},
 		{
-			"context":{
-				"appName":"analytics_by_unifyapps",
-				"resourceVersion":63,
-				"resourceName":"analytics_by_unifyapps_execute_query",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
-			"id":"_HlgiC",
-			"index":19,
-			"inputs":{
-				"outputSchema":{
-					"type":"object",
-					"additionalProperties":false,
-					"properties":{
-						"columns":{
-							"type":"object",
-							"properties":{
-								"_pr_value":{
-									"type":"string",
-									"title":"_pr_value"
-								}
-							},
-							"title":"columns",
-							"additionalProperties":false
-						}
-					}
-				},
-				"query":"SELECT DISTINCT \r\n    mct._pr_value\r\nFROM ENTITY_approval_matrix_Table am\r\nJOIN ENTITY_mapping_category_type mct\r\n    ON am._pr_categoryType = mct._pr_key\r\nWHERE am._pr_roleName IN {{ _ZYcAh.outputs.result.phoneListSQL }};\r\n",
-				"group":"ENTITY_REPORTING"
-			},
-			"skip":false,
-			"subTitle":"Analytics by UnifyApps",
-			"title":"Execute Analytics SQL Query",
-			"type":"ACTION"
-		},
-		{
 			"additional":{
 				"xsdSchemaConfig":{
 					"root":{}
@@ -2970,7 +2924,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_O3VuW",
-			"index":20,
+			"index":19,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -3026,7 +2980,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_hVZQy",
-			"index":21,
+			"index":20,
 			"inputs":{
 				"filters":[
 					{
@@ -3056,7 +3010,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@y",
 			"id":"n_S8Az4",
-			"index":22,
+			"index":21,
 			"inputs":{
 				"result":{
 					"a":"Submission Successful!"
@@ -3079,7 +3033,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@n",
 			"id":"_rRHSk",
-			"index":23,
+			"index":22,
 			"inputs":{
 				"result":{
 					"a":" Submission for {{ n_00PKA.outputs.result.result }} failed!"
@@ -3110,5 +3064,5 @@
 	"tags":[
 		
 	],
-	"version":161
+	"version":162
 }
