@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1759923163424,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_OrrOA",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Rfg0V",
+			"type":"next"
+		}
+	],
+	"id":"68e64bdbda5185509e648e9b",
+	"lastModifiedBy":178541,
+	"lcName":"push not test liva",
+	"modifiedTime":1759923163424,
+	"name":"Push Not test Liva",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_OrrOA-1",
+			"id":"_OrrOA",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_OrrOA-1",
+			"id":"_Rfg0V",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":178541,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
