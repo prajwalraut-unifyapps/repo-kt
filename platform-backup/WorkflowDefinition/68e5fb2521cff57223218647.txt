@@ -9,13 +9,6 @@
 			"fromNodeId":"n_QvZtR",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_oS3sI",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_oS3sI",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_VECWt",
 			"type":"next"
 		},
@@ -32,12 +25,19 @@
 			"skip":false,
 			"toNodeId":"n_gPNS3",
 			"type":"next"
+		},
+		{
+			"fromNodeId":"n_gPNS3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_RE40i",
+			"type":"next"
 		}
 	],
 	"id":"68e5fb2521cff57223218647",
 	"lastModifiedBy":411,
 	"lcName":"gygg",
-	"modifiedTime":1759903969686,
+	"modifiedTime":1759922617915,
 	"name":"gygg",
 	"nodes":[
 		{
@@ -47,7 +47,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_PtDfL-1",
 			"id":"n_QvZtR",
@@ -68,43 +68,17 @@
 		{
 			"context":{
 				"appName":"amazon_s3",
-				"resourceVersion":2,
-				"connectionId":"68e5fb50a7f3606f8bea92e3",
-				"resourceName":"amazon_s3_copy_file",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_PtDfL-1",
-			"id":"n_oS3sI",
-			"index":2,
-			"inputs":{
-				"destinationObjectName":"assests/dest/copy-2.txt",
-				"sourceBucketName":"copy-source-bucket-xyz",
-				"destinationRegion":"ap-south-1",
-				"sourceObjectName":"assets/copy-1.txt",
-				"destinationBucketName":"copy-dest-bucket-xyz"
-			},
-			"skip":false,
-			"subTitle":"Amazon S3",
-			"title":"Copy file",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"amazon_s3",
 				"resourceVersion":6634,
 				"connectionId":"68e5fb50a7f3606f8bea92e3",
 				"resourceName":"amazon_s3_create_bucket",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_PtDfL-1",
 			"id":"n_VECWt",
-			"index":3,
+			"index":2,
 			"inputs":{
 				"bucketName":"copy-dest-bucket-xyz",
 				"region":"ap-south-1"
@@ -127,12 +101,12 @@
 			"fallbackMode":"STOP",
 			"groupId":"_PtDfL-1",
 			"id":"n_WOVOJ",
-			"index":4,
+			"index":3,
 			"inputs":{
 				"bucketName":"copy-source-bucket-xyz",
 				"select":"TEXT",
 				"acceleratedEndpoint":false,
-				"objectName":"assets/copy-1.txt",
+				"objectName":"assets/copy-3.txt",
 				"region":"ap-south-1",
 				"content":"SGVsbG8sIHRoaXMgaXMgYSBzYW1wbGUgY29udGVudCBmb3IgQmFzZTY0IGVuY29kaW5nIQ=="
 			},
@@ -150,17 +124,42 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_PtDfL-1",
 			"id":"n_gPNS3",
-			"index":5,
+			"index":4,
 			"inputs":{
 				"bucketName":"copy-dest-bucket-xyz"
 			},
 			"skip":false,
 			"subTitle":"Amazon S3",
 			"title":"Get bucket region",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"amazon_s3",
+				"resourceVersion":6742,
+				"connectionId":"68e5fb50a7f3606f8bea92e3",
+				"resourceName":"amazon_s3_list_files_in_bucket_batch",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_PtDfL-1",
+			"id":"n_RE40i",
+			"index":5,
+			"inputs":{
+				"bucketName":"copy-dest-bucket-xyz",
+				"maxKeys":1000,
+				"isSubFolderInc":false,
+				"region":"ap-south-1"
+			},
+			"skip":false,
+			"subTitle":"Amazon S3",
+			"title":"List files in bucket",
 			"type":"ACTION"
 		}
 	],
@@ -181,5 +180,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
