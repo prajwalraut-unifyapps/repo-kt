@@ -194,13 +194,6 @@
 		},
 		{
 			"fromNodeId":"_O3VuW",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_TphIf",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_TphIf",
 			"name":"loopback",
 			"priority":0,
 			"skip":false,
@@ -242,7 +235,7 @@
 	"id":"68bbdd710fc3325af9203e66",
 	"lastModifiedBy":426,
 	"lcName":"normalization | submit ratings",
-	"modifiedTime":1759890903330,
+	"modifiedTime":1759890908005,
 	"name":"Normalization | Submit Ratings",
 	"nodes":[
 		{
@@ -3352,70 +3345,6 @@
 			"type":"ACTION"
 		},
 		{
-			"additional":{
-				"xsdSchemaConfig":{
-					"root":{}
-				},
-				"visibleOptionalFields":[
-					"root.parameters.emails.items",
-					"root.parameters.levelIds.items"
-				]
-			},
-			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":27,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
-			"id":"_TphIf",
-			"index":26,
-			"inputs":{
-				"output":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[],
-					"properties":{
-						"emails":{
-							"type":"string",
-							"title":"emails"
-						}
-					}
-				},
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[],
-					"properties":{
-						"emails":{
-							"type":"array",
-							"items":{
-								"type":"string"
-							},
-							"title":"emails"
-						}
-					}
-				},
-				"code":"// Get the lists from binding, defaulting to empty lists if not present\r\ndef emails = binding.getVariable(\"emails\") ?: []\r\n\r\n\r\n// Join each list into a comma-separated string\r\ndef emailResult = emails.join(\",\")\r\n\r\n\r\n// Return both results\r\nreturn [\r\n    emails: emailResult\r\n]\r\n",
-				"compile_static":false,
-				"captureStdOutput":false,
-				"parameters":{
-					"emails":{
-						"ua:type":"mappedArray",
-						"source":"{{ _kDm0j.outputs.objects }}",
-						"items":"{{ _kDm0j.outputs.objects[0].columns.email }}"
-					}
-				}
-			},
-			"skip":false,
-			"subTitle":"Code by UnifyApps",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
 			"context":{
 				"appName":"if_else",
 				"resourceVersion":27,
@@ -3427,7 +3356,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_hVZQy",
-			"index":27,
+			"index":26,
 			"inputs":{
 				"filters":[
 					{
@@ -3457,7 +3386,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@y",
 			"id":"n_S8Az4",
-			"index":28,
+			"index":27,
 			"inputs":{
 				"result":{
 					"a":"Submission Successful!"
@@ -3480,7 +3409,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@n",
 			"id":"_rRHSk",
-			"index":29,
+			"index":28,
 			"inputs":{
 				"result":{
 					"a":" Submission for {{ n_00PKA.outputs.result.result }} failed!"
@@ -3511,5 +3440,5 @@
 	"tags":[
 		
 	],
-	"version":157
+	"version":158
 }
