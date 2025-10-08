@@ -37,6 +37,13 @@
 			"fromNodeId":"_B4pG8",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"_MKmIq",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_MKmIq",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_Iyzj1",
 			"type":"next"
 		}
@@ -44,7 +51,7 @@
 	"id":"68de53092cc9f04fd0a34cc8",
 	"lastModifiedBy":44567,
 	"lcName":"tst",
-	"modifiedTime":1759860380333,
+	"modifiedTime":1759917506569,
 	"name":"tst",
 	"nodes":[
 		{
@@ -132,7 +139,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_dYuxR-1",
 			"id":"n_uMej7",
@@ -192,7 +199,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_dYuxR-1",
 			"id":"_B4pG8",
@@ -240,6 +247,66 @@
 			"type":"ACTION"
 		},
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":1029,
+				"resourceName":"utility_by_unifyapps_to_json_object",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_dYuxR-1",
+			"id":"_MKmIq",
+			"index":6,
+			"inputs":{
+				"jsonSchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"fileDetails":{
+							"type":"object",
+							"properties":{
+								"name":{
+									"type":"string",
+									"title":"name"
+								},
+								"source":{
+									"type":"string",
+									"title":"source"
+								},
+								"sourceType":{
+									"type":"string",
+									"title":"sourceType"
+								},
+								"fileType":{
+									"type":"string",
+									"title":"fileType"
+								},
+								"size":{
+									"type":"number",
+									"title":"size"
+								}
+							},
+							"title":"fileDetails",
+							"additionalProperties":false,
+							"required":[]
+						}
+					}
+				},
+				"jsonString":"{\n  \"fileDetails\": {\n\"name\": \"Schedular.sh.zip\",\n\"source\": \"user-uploads/1/1759917394479/Schedular.sh.zip\",\n\"size\": 1223,\n\"sourceType\": \"CLOUD_STORAGE\",\n\"fileType\": \"zip\"\n  }\n}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Deserialise string to JSON object",
+			"type":"ACTION"
+		},
+		{
 			"context":{
 				"appName":"tcc_by_unifyapps",
 				"resourceVersion":2,
@@ -247,14 +314,14 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_dYuxR-1",
 			"id":"n_Iyzj1",
-			"index":6,
+			"index":7,
 			"inputs":{
-				"webJobFile":"{{ _B4pG8.outputs.result.fileDetails }}",
-				"setupFile":"{{ n_uMej7.outputs.result.fileDetails }}"
+				"webJobFile":"{{ _MKmIq.outputs.result.fileDetails }}",
+				"setupFile":"{{ _MKmIq.outputs.result.fileDetails }}"
 			},
 			"options":{
 				"bulkheadConfig":{
@@ -329,5 +396,5 @@
 	"tags":[
 		
 	],
-	"version":15
+	"version":18
 }
