@@ -196,13 +196,6 @@
 			"fromNodeId":"_O3VuW",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_kDm0j",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_kDm0j",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"_TphIf",
 			"type":"next"
 		},
@@ -249,7 +242,7 @@
 	"id":"68bbdd710fc3325af9203e66",
 	"lastModifiedBy":426,
 	"lcName":"normalization | submit ratings",
-	"modifiedTime":1759890898994,
+	"modifiedTime":1759890903330,
 	"name":"Normalization | Submit Ratings",
 	"nodes":[
 		{
@@ -3359,54 +3352,6 @@
 			"type":"ACTION"
 		},
 		{
-			"context":{
-				"appName":"analytics_by_unifyapps",
-				"resourceVersion":63,
-				"resourceName":"analytics_by_unifyapps_query_reports",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
-			"id":"_kDm0j",
-			"index":26,
-			"inputs":{
-				"projections":[
-					{
-						"name":"ENTITY_approval_matrix_Table=::=empEmail",
-						"aggregationFunction":"GROUP",
-						"alias":"email",
-						"includePercentageChange":false
-					},
-					{
-						"name":"ENTITY_approval_matrix_Table=::=empEmail",
-						"aggregationFunction":"DISTINCT_COUNT",
-						"alias":"empcoun",
-						"includePercentageChange":false
-					}
-				],
-				"filter":{
-					"filters":[
-						{
-							"property":"ENTITY_approval_matrix_Table=::=categoryID",
-							"filter":{
-								"operator":"IN",
-								"value":"{{ _gilte.outputs.items }}"
-							}
-						}
-					],
-					"operator":"AND"
-				},
-				"entityType":"ENTITY_approval_matrix_Table",
-				"group":"ENTITY_REPORTING"
-			},
-			"skip":false,
-			"subTitle":"Analytics by UnifyApps",
-			"title":"Analytics Query",
-			"type":"ACTION"
-		},
-		{
 			"additional":{
 				"xsdSchemaConfig":{
 					"root":{}
@@ -3427,7 +3372,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_TphIf",
-			"index":27,
+			"index":26,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -3482,7 +3427,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_hVZQy",
-			"index":28,
+			"index":27,
 			"inputs":{
 				"filters":[
 					{
@@ -3512,7 +3457,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@y",
 			"id":"n_S8Az4",
-			"index":29,
+			"index":28,
 			"inputs":{
 				"result":{
 					"a":"Submission Successful!"
@@ -3535,7 +3480,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@n",
 			"id":"_rRHSk",
-			"index":30,
+			"index":29,
 			"inputs":{
 				"result":{
 					"a":" Submission for {{ n_00PKA.outputs.result.result }} failed!"
@@ -3566,5 +3511,5 @@
 	"tags":[
 		
 	],
-	"version":156
+	"version":157
 }
