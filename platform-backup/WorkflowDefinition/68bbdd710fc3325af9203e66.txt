@@ -59,15 +59,8 @@
 			"name":"yes",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_bVY53",
-			"type":"if"
-		},
-		{
-			"fromNodeId":"n_bVY53",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"n_3TWLD",
-			"type":"next"
+			"type":"if"
 		},
 		{
 			"fromNodeId":"n_wP5pi",
@@ -179,7 +172,7 @@
 	"id":"68bbdd710fc3325af9203e66",
 	"lastModifiedBy":426,
 	"lcName":"normalization | submit ratings",
-	"modifiedTime":1759890988817,
+	"modifiedTime":1759890994747,
 	"name":"Normalization | Submit Ratings",
 	"nodes":[
 		{
@@ -2073,70 +2066,6 @@
 		},
 		{
 			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":26,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_wP5pi@n_Nwdw7@_z1vHD-1@l@y",
-			"id":"n_bVY53",
-			"index":9,
-			"inputs":{
-				"output":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"output"
-					],
-					"properties":{
-						"output":{
-							"type":"array",
-							"items":{
-								"type":"string"
-							},
-							"title":"Output"
-						}
-					}
-				},
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"input"
-					],
-					"properties":{
-						"input":{
-							"type":"array",
-							"items":{
-								"type":"object",
-								"properties":{},
-								"additionalProperties":false
-							},
-							"title":"Input"
-						}
-					}
-				},
-				"code":"\n\n// extract employee numbers into an array of strings\ndef employeeNumbers = input.collect { it[\"_pr_xxxern_employeenumber\"].toString() }\n\nreturn [\"output\" :  employeeNumbers]\n",
-				"compile_static":false,
-				"captureStdOutput":false,
-				"parameters":{
-					"input":{
-						"source":"{{ n_EoV2h.outputs.output }}",
-						"ua:type":"mappedArray",
-						"items":"{{ n_EoV2h.outputs.output[0] }}"
-					}
-				}
-			},
-			"skip":false,
-			"subTitle":"Code by UnifyApps",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"variable_by_unifyapps",
 				"resourceVersion":26,
 				"resourceName":"variable_by_unifyapps_add_items_to_list",
@@ -2147,7 +2076,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_wP5pi@n_Nwdw7@_z1vHD-1@l@y",
 			"id":"n_3TWLD",
-			"index":10,
+			"index":9,
 			"inputs":{
 				"insertLocation":"END",
 				"itemsToAdd":{
@@ -2174,7 +2103,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_wP5pi@n_Nwdw7@_z1vHD-1@l@n",
 			"id":"n_hg2NB",
-			"index":11,
+			"index":10,
 			"inputs":{
 				"loop":"n_Nwdw7"
 			},
@@ -2195,7 +2124,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_OQSsg",
-			"index":12,
+			"index":11,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -2453,7 +2382,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_p5jRR",
-			"index":13,
+			"index":12,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -2736,7 +2665,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_YCTfO",
-			"index":14,
+			"index":13,
 			"inputs":{
 				"repeatMode":"SINGLE",
 				"listSource":"{{ n_OQSsg.outputs.items }}",
@@ -2759,7 +2688,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_YCTfO@_z1vHD-1@l",
 			"id":"n_JtWeQ",
-			"index":15,
+			"index":14,
 			"inputs":{
 				"triggerInputCondition":{
 					"filters":[
@@ -2809,7 +2738,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_YCTfO@_z1vHD-1@l",
 			"id":"n_JfHtS",
-			"index":16,
+			"index":15,
 			"inputs":{
 				"filters":[
 					{
@@ -2839,7 +2768,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_ojQkx",
-			"index":17,
+			"index":16,
 			"inputs":{
 				"object_type":"access_control_for_roleplayers",
 				"includeRoleMappings":false,
@@ -2870,7 +2799,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_hVZQy",
-			"index":18,
+			"index":17,
 			"inputs":{
 				"filters":[
 					{
@@ -2900,7 +2829,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@y",
 			"id":"n_S8Az4",
-			"index":19,
+			"index":18,
 			"inputs":{
 				"result":{
 					"a":"Submission Successful!"
@@ -2923,7 +2852,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@n",
 			"id":"_rRHSk",
-			"index":20,
+			"index":19,
 			"inputs":{
 				"result":{
 					"a":" Submission for {{ n_00PKA.outputs.result.result }} failed!"
@@ -2954,5 +2883,5 @@
 	"tags":[
 		
 	],
-	"version":164
+	"version":165
 }
