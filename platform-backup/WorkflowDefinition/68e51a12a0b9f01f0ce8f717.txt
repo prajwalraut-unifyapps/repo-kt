@@ -24,7 +24,7 @@
 	"id":"68e51a12a0b9f01f0ce8f717",
 	"lastModifiedBy":161877,
 	"lcName":"sdf",
-	"modifiedTime":1759916016636,
+	"modifiedTime":1759916055774,
 	"name":"sdf",
 	"nodes":[
 		{
@@ -55,9 +55,9 @@
 		{
 			"context":{
 				"appName":"slack",
-				"resourceVersion":6263,
+				"resourceVersion":4847,
 				"connectionId":"68e625ab4022cb3f538be04a",
-				"resourceName":"slack_conversation_invite",
+				"resourceName":"slack_get_file_details",
 				"type":"APPLICATION"
 			},
 			"debug":false,
@@ -66,13 +66,10 @@
 			"groupId":"_lpeKi-1",
 			"id":"n_Jkj95",
 			"index":2,
-			"inputs":{
-				"channel":"C0995JKMYDD",
-				"force":true
-			},
+			"inputs":{},
 			"skip":false,
 			"subTitle":"Slack",
-			"title":"Conversation invite",
+			"title":"Get file details",
 			"type":"ACTION"
 		}
 	],
@@ -93,5 +90,5 @@
 	"tags":[
 		
 	],
-	"version":10
+	"version":11
 }
