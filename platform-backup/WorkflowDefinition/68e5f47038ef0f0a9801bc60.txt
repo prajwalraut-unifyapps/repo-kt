@@ -1,51 +1,77 @@
 {
 	"appsUsed":[
-		
+		"sap_rfc"
 	],
 	"createdTime":1759900784182,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_y23SW",
+			"fromNodeId":"n_EFDQg",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_atDU3",
+			"toNodeId":"n_ofjhu",
 			"type":"next"
 		}
 	],
 	"id":"68e5f47038ef0f0a9801bc60",
-	"lastModifiedBy":161877,
+	"lastModifiedBy":687,
 	"lcName":"test",
-	"modifiedTime":1759900784182,
+	"modifiedTime":1759902040585,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":836,
+				"resourceName":"schedule_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_y23SW-1",
-			"id":"_y23SW",
-			"index":0,
+			"id":"n_EFDQg",
+			"index":1,
+			"inputs":{
+				"cron":"INTERVAL",
+				"sequential":false,
+				"interval":15,
+				"frequency":"MINUTES"
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Schedule",
+			"title":"New recurring event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"SCHEDULED"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"sap_rfc",
+				"resourceVersion":5888,
+				"connectionId":"687a64a4facc271e5be3a0a9",
+				"resourceName":"sap_rfc_call_rfm",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_y23SW-1",
-			"id":"_atDU3",
-			"index":0,
+			"id":"n_ofjhu",
+			"index":2,
+			"inputs":{
+				"objectSourceResourceName":"sap_rfc_fetch_rfm_output_schema"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"SAP RFC",
+			"title":"Call RFM",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":161877,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +85,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
