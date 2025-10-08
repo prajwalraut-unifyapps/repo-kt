@@ -65,7 +65,7 @@
 	"id":"6881a7345e924edbad8c4819",
 	"lastModifiedBy":39713,
 	"lcName":"csvtesting",
-	"modifiedTime":1759819684270,
+	"modifiedTime":1759900726629,
 	"name":"csvTesting",
 	"nodes":[
 		{
@@ -268,7 +268,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_UInFA-1",
 			"id":"_4tnfM",
@@ -306,9 +306,9 @@
 			"id":"_dV8l1",
 			"index":8,
 			"inputs":{
-				"fileDetails":"{{ _4tnfM.outputs.fileDetails }}",
+				"fileDetails":"{{ n_oNoYM.outputs.fileDetails }}",
 				"reader":{
-					"delimiter":"\\t",
+					"delimiter":",",
 					"encoding":"UTF-8"
 				},
 				"sourceHasHeader":false,
@@ -338,9 +338,9 @@
 			"id":"_jBSML",
 			"index":9,
 			"inputs":{
-				"fileDetails":"{{ _dV8l1.outputs.fileDetails }}",
+				"fileDetails":"{{ n_oNoYM.outputs.fileDetails }}",
 				"reader":{
-					"delimiter":"|",
+					"delimiter":",",
 					"encoding":"UTF-8"
 				},
 				"sourceHasHeader":false,
@@ -374,5 +374,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
