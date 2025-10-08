@@ -30,7 +30,7 @@
 	"id":"68e5fb2521cff57223218647",
 	"lastModifiedBy":411,
 	"lcName":"gygg",
-	"modifiedTime":1759926854600,
+	"modifiedTime":1759926885319,
 	"name":"gygg",
 	"nodes":[
 		{
@@ -40,7 +40,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_PtDfL-1",
 			"id":"n_QvZtR",
@@ -92,7 +92,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_PtDfL-1",
 			"id":"n_KmXM0",
@@ -102,7 +102,7 @@
 				"dynamic":false,
 				"layout":{},
 				"schema":{
-					"ua:__linkedVariable__":"n_V1Oik.outputs",
+					"ua:__linkedVariable__":"n_2Zl58.outputs",
 					"type":"object",
 					"properties":{
 						"ETag":{
@@ -133,19 +133,19 @@
 				}
 			},
 			"inputs":{
-				"LastModified":"{{ n_V1Oik.outputs.LastModified }}",
-				"ChecksumCRC64NVME":"{{ n_V1Oik.outputs.ChecksumCRC64NVME }}",
-				"ETag":"{{ n_V1Oik.outputs.ETag }}",
-				"ChecksumCRC32C":"{{ n_V1Oik.outputs.ChecksumCRC32C }}",
-				"ChecksumSHA1":"{{ n_V1Oik.outputs.ChecksumSHA1 }}",
-				"ChecksumCRC32":"{{ n_V1Oik.outputs.ChecksumCRC32 }}",
-				"ChecksumType":"{{ n_V1Oik.outputs.ChecksumType }}",
-				"ChecksumSHA256":"{{ n_V1Oik.outputs.ChecksumSHA256 }}"
+				"LastModified":"{{ n_2Zl58.outputs.LastModified }}",
+				"ChecksumCRC64NVME":"{{ n_2Zl58.outputs.ChecksumCRC64NVME }}",
+				"ETag":"{{ n_2Zl58.outputs.ETag }}",
+				"ChecksumCRC32C":"{{ n_2Zl58.outputs.ChecksumCRC32 }}",
+				"ChecksumSHA1":"{{ n_2Zl58.outputs.ChecksumSHA1 }}",
+				"ChecksumCRC32":"{{ n_2Zl58.outputs.ChecksumCRC32 }}",
+				"ChecksumType":"{{ n_2Zl58.outputs.ChecksumType }}",
+				"ChecksumSHA256":"{{ n_2Zl58.outputs.ChecksumSHA256 }}"
 			},
 			"outputSchema":{
 				"dynamic":false,
 				"schema":{
-					"ua:__linkedVariable__":"n_V1Oik.outputs",
+					"ua:__linkedVariable__":"n_2Zl58.outputs",
 					"type":"object",
 					"properties":{
 						"ETag":{
@@ -213,5 +213,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }
