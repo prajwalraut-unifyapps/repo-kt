@@ -16,7 +16,7 @@
 	"id":"68e609dced58501847099e40",
 	"lastModifiedBy":2621,
 	"lcName":"test headout",
-	"modifiedTime":1759906426369,
+	"modifiedTime":1759912287109,
 	"name":"test headout",
 	"nodes":[
 		{
@@ -26,7 +26,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_7wOkc-1",
 			"id":"n_SZiIk",
@@ -47,9 +47,9 @@
 		{
 			"context":{
 				"appName":"headout",
-				"resourceVersion":68,
-				"connectionId":"68e540c7a1a6c34163702566",
-				"resourceName":"headout_list_available_inventory",
+				"resourceVersion":77,
+				"connectionId":"68e620f164e04263363dfa9d",
+				"resourceName":"headout_fetch_product_id",
 				"type":"APPLICATION"
 			},
 			"debug":false,
@@ -59,12 +59,14 @@
 			"id":"n_0NvdZ",
 			"index":2,
 			"inputs":{
-				"variantId":"53044",
-				"currencyCode":"USD"
+				"productId":"8839",
+				"offset":"0",
+				"limit":20,
+				"languageCode":"EN"
 			},
 			"skip":false,
 			"subTitle":"Headout",
-			"title":"List available inventory for a variant",
+			"title":"Fetche product by ID",
 			"type":"ACTION"
 		}
 	],
@@ -85,5 +87,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
