@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		"storage_by_unifyapps"
+		
 	],
 	"createdTime":1759890380565,
 	"deleted":false,
@@ -103,35 +103,12 @@
 			"fromNodeId":"n_YCTfO",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_JtWeQ",
+			"toNodeId":"n_TdHbb",
 			"type":"loop"
 		},
 		{
-			"fromNodeId":"n_JtWeQ",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_JfHtS",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_JfHtS",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"_ojQkx",
-			"type":"if"
-		},
-		{
-			"fromNodeId":"_ojQkx",
+			"fromNodeId":"n_TdHbb",
 			"name":"loopback",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_YCTfO",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_JfHtS",
-			"name":"no",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_YCTfO",
@@ -164,7 +141,7 @@
 	"id":"68bbdd710fc3325af9203e66",
 	"lastModifiedBy":426,
 	"lcName":"normalization | submit ratings",
-	"modifiedTime":1759891000867,
+	"modifiedTime":1759891475411,
 	"name":"Normalization | Submit Ratings",
 	"nodes":[
 		{
@@ -2643,113 +2620,55 @@
 		},
 		{
 			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":241,
-				"resourceName":"storage_by_unifyapps_fetch_records",
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":1041,
+				"resourceName":"variable_by_unifyapps_create_variables",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_YCTfO@_z1vHD-1@l",
-			"id":"n_JtWeQ",
+			"id":"n_TdHbb",
 			"index":13,
-			"inputs":{
-				"triggerInputCondition":{
-					"filters":[
-						{
-							"property":"properties_Cycle",
-							"filter":{
-								"operator":"EQUAL",
-								"value":"{{ n_0ePlH.outputs.cycle_name }}"
-							}
-						},
-						{
-							"property":"cTm",
-							"filter":{
-								"operator":"GT",
-								"value":"1758280662289"
-							}
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"a":{
+							"type":"string",
+							"title":"A"
 						}
-					],
-					"operator":"AND"
-				},
-				"object_type":"gaurd_rails",
-				"includeRoleMappings":false,
-				"includeCurrentUserPermissions":false,
-				"translationsOption":"DEFAULT",
-				"page":{
-					"paginateBy":"OFFSET",
-					"limit":2000
-				},
-				"numberOfRecordsToFetch":"MULTIPLE",
-				"readThroughSessionVariables":false,
-				"includeTotalCount":false
+					},
+					"required":[
+						"a"
+					]
+				}
 			},
-			"skip":false,
-			"subTitle":"Storage by UnifyApps",
-			"title":"Fetch records",
-			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"if_else",
-				"resourceVersion":23,
-				"resourceName":"if_else_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_YCTfO@_z1vHD-1@l",
-			"id":"n_JfHtS",
-			"index":14,
-			"inputs":{
-				"filters":[
-					{
-						"property":"{{ _Xwul6.outputs.result.status }}",
-						"filter":{
-							"operator":"EQUAL",
-							"value":"true"
+			"inputs":{},
+			"outputSchema":{
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"a":{
+							"type":"string",
+							"title":"A"
 						}
-					}
-				],
-				"operator":"AND"
+					},
+					"required":[
+						"a"
+					]
+				}
 			},
 			"skip":false,
-			"subTitle":"Condition",
-			"title":"Condition",
-			"type":"IF_ELSE"
-		},
-		{
-			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":0,
-				"resourceName":"storage_by_unifyapps_fetch_records",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
-			"id":"_ojQkx",
-			"index":15,
-			"inputs":{
-				"object_type":"access_control_for_roleplayers",
-				"includeRoleMappings":false,
-				"includeCurrentUserPermissions":false,
-				"translationsOption":"DEFAULT",
-				"page":{
-					"paginateBy":"OFFSET",
-					"limit":2000
-				},
-				"numberOfRecordsToFetch":"MULTIPLE",
-				"readThroughSessionVariables":false,
-				"includeTotalCount":false
-			},
-			"skip":false,
-			"subTitle":"Storage by UnifyApps",
-			"title":"Fetch records",
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
 			"type":"ACTION"
 		},
 		{
@@ -2764,7 +2683,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_hVZQy",
-			"index":16,
+			"index":14,
 			"inputs":{
 				"filters":[
 					{
@@ -2794,7 +2713,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@y",
 			"id":"n_S8Az4",
-			"index":17,
+			"index":15,
 			"inputs":{
 				"result":{
 					"a":"Submission Successful!"
@@ -2817,7 +2736,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@n",
 			"id":"_rRHSk",
-			"index":18,
+			"index":16,
 			"inputs":{
 				"result":{
 					"a":" Submission for {{ n_00PKA.outputs.result.result }} failed!"
@@ -2848,5 +2767,5 @@
 	"tags":[
 		
 	],
-	"version":166
+	"version":167
 }
