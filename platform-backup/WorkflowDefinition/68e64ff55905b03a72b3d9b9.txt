@@ -23,7 +23,7 @@
 	"id":"68e64ff55905b03a72b3d9b9",
 	"lastModifiedBy":21056,
 	"lcName":"new dnd",
-	"modifiedTime":1759924931934,
+	"modifiedTime":1759925178889,
 	"name":"new DND",
 	"nodes":[
 		{
@@ -60,15 +60,15 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_2Ql8J-1",
 			"id":"n_htfMp",
 			"index":2,
 			"inputs":{
-				"bucketName":"ai.qa.unifyapps.com",
+				"bucketName":"copy-source-bucket-xyz",
 				"maxKeys":1000,
-				"isSubFolderInc":true,
+				"isSubFolderInc":false,
 				"region":"ap-south-1"
 			},
 			"skip":false,
@@ -85,17 +85,17 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_2Ql8J-1",
 			"id":"n_crSu3",
 			"index":3,
 			"inputs":{
-				"destinationObjectName":"keys_to_delete.csv",
-				"sourceBucketName":"ai.qa.unifyapps.com",
+				"destinationObjectName":"assets1/copy-3.csv",
+				"sourceBucketName":"copy-source-bucket-xyz",
 				"destinationRegion":"ap-south-1",
-				"sourceObjectName":"keys_to_delete.txt",
-				"destinationBucketName":"ai.qa.unifyapps.com"
+				"sourceObjectName":"assets/copy-3.txt",
+				"destinationBucketName":"copy-source-bucket-xyz"
 			},
 			"skip":false,
 			"subTitle":"Amazon S3",
@@ -120,5 +120,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
