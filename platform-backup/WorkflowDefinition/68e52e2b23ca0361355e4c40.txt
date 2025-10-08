@@ -113,7 +113,7 @@
 	"id":"68e52e2b23ca0361355e4c40",
 	"lastModifiedBy":182775,
 	"lcName":"testnullhandling",
-	"modifiedTime":1759915198989,
+	"modifiedTime":1759915245870,
 	"name":"testNullHandling",
 	"nodes":[
 		{
@@ -174,7 +174,7 @@
 				}
 			},
 			"inputs":{
-				"stringxml":"<ID/>"
+				"stringxml":"<Emp><ID/></Emp>"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -448,5 +448,5 @@
 	"tags":[
 		
 	],
-	"version":19
+	"version":20
 }
