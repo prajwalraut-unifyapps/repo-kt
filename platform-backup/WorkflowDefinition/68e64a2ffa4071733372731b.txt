@@ -9,6 +9,13 @@
 			"fromNodeId":"n_XoMVK",
 			"priority":0,
 			"skip":false,
+			"toNodeId":"n_7xlx7",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_7xlx7",
+			"priority":0,
+			"skip":false,
 			"toNodeId":"n_cB9S9",
 			"type":"next"
 		},
@@ -23,7 +30,7 @@
 	"id":"68e64a2ffa4071733372731b",
 	"lastModifiedBy":165764,
 	"lcName":"das",
-	"modifiedTime":1759922899781,
+	"modifiedTime":1759922962259,
 	"name":"das",
 	"nodes":[
 		{
@@ -53,6 +60,45 @@
 		},
 		{
 			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":983,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_kSDd5-1",
+			"id":"n_7xlx7",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"list"
+					],
+					"properties":{
+						"list":{
+							"type":"array",
+							"items":{
+								"type":"number"
+							},
+							"title":"List"
+						}
+					}
+				},
+				"code":"return [\"list\": [1,2]]",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"callables",
 				"resourceVersion":885,
 				"resourceName":"callables_call_automation_batch",
@@ -63,17 +109,13 @@
 			"fallbackMode":"STOP",
 			"groupId":"_kSDd5-1",
 			"id":"n_cB9S9",
-			"index":2,
+			"index":3,
 			"inputs":{
 				"automationId":"68e64891da5185509e648974",
 				"runtimeConnections":{},
 				"synchronous":false,
 				"triggerWorkflowWithRuntimeType":"DEFAULT",
 				"distributeWorkflowLoad":true,
-				"parametersList":{
-					"source":"1",
-					"ua:type":"mappedArray"
-				},
 				"version":"-1"
 			},
 			"skip":false,
@@ -90,7 +132,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_kSDd5-1",
 			"id":"n_5dPxU",
-			"index":3,
+			"index":4,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -114,5 +156,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
