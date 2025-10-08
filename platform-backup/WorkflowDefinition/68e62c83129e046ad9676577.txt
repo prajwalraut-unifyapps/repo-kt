@@ -16,7 +16,7 @@
 	"id":"68e62c83129e046ad9676577",
 	"lastModifiedBy":2621,
 	"lcName":"test",
-	"modifiedTime":1759915262237,
+	"modifiedTime":1759915390431,
 	"name":"test",
 	"nodes":[
 		{
@@ -76,8 +76,8 @@
 				"inventoryId":"436127185",
 				"variantId":"15785",
 				"customersDetails":{
+					"count":1,
 					"customers":{
-						"source":"1",
 						"ua:type":"mappedArray",
 						"items":{
 							"personType":"GENERAL",
@@ -126,5 +126,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
