@@ -15,7 +15,7 @@
 	},
 	"edges":[
 		{
-			"fromNodeId":"n_1qDVQ",
+			"fromNodeId":"n_iWkvR",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_nrzmN",
@@ -113,34 +113,48 @@
 	"id":"68e52e2b23ca0361355e4c40",
 	"lastModifiedBy":182775,
 	"lcName":"testnullhandling",
-	"modifiedTime":1759915245870,
+	"modifiedTime":1759915606207,
 	"name":"testNullHandling",
 	"nodes":[
 		{
 			"context":{
-				"appName":"schedule",
-				"resourceVersion":836,
-				"resourceName":"schedule_default"
+				"appName":"callables",
+				"resourceVersion":1112,
+				"resourceName":"callables_from_api"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_2ea1A-1",
-			"id":"n_1qDVQ",
+			"id":"n_iWkvR",
 			"index":1,
 			"inputs":{
-				"cron":"INTERVAL",
-				"sequential":true,
-				"interval":15,
-				"sequentialRunTimeUnit":"MINUTES",
-				"sequentialRunTimeDuration":30,
-				"frequency":"MINUTES"
+				"request":{
+					"contentType":"application/json",
+					"body":{
+						"type":"object",
+						"properties":{
+							"id":{
+								"type":"integer",
+								"title":"Id"
+							},
+							"name":{
+								"type":"string",
+								"title":"Name"
+							}
+						},
+						"additionalProperties":false,
+						"required":[]
+					}
+				},
+				"endpointType":"REST",
+				"streamingResponse":false
 			},
 			"skip":false,
-			"subTitle":"Schedule",
-			"title":"New recurring event",
+			"subTitle":"Callable",
+			"title":"Trigger via API",
 			"trigger":{
-				"type":"SCHEDULED"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
@@ -203,7 +217,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_2ea1A-1",
 			"id":"n_MWX6x",
@@ -237,7 +251,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_2ea1A-1",
 			"id":"n_JbiVg",
@@ -280,7 +294,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_JbiVg@_2ea1A-1@1",
 			"id":"n_JbiVg@1",
@@ -300,7 +314,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_JbiVg@_2ea1A-1@1",
 			"id":"n_gpNhe",
@@ -327,7 +341,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_JbiVg@_2ea1A-1@2",
 			"id":"n_JbiVg@2",
@@ -347,7 +361,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_JbiVg@_2ea1A-1@2",
 			"id":"n_ejmTM",
@@ -448,5 +462,5 @@
 	"tags":[
 		
 	],
-	"version":20
+	"version":21
 }
