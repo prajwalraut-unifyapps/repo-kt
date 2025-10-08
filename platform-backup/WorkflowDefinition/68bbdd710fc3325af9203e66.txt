@@ -141,7 +141,7 @@
 	"id":"68bbdd710fc3325af9203e66",
 	"lastModifiedBy":426,
 	"lcName":"normalization | submit ratings",
-	"modifiedTime":1759891499790,
+	"modifiedTime":1759891579210,
 	"name":"Normalization | Submit Ratings",
 	"nodes":[
 		{
@@ -156,7 +156,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_0ePlH",
@@ -164,19 +164,28 @@
 			"inputs":{
 				"result":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"a"
+					],
 					"properties":{
 						"a":{
 							"type":"string",
 							"title":"A"
 						}
-					},
-					"additionalProperties":false,
-					"required":[
-						"a"
-					]
+					}
 				},
 				"setup":{
 					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"Email_Id",
+						"RoleID",
+						"categoryID",
+						"cycle_name",
+						"department",
+						"stageLevel"
+					],
 					"properties":{
 						"Email_Id":{
 							"type":"string",
@@ -191,7 +200,8 @@
 							"items":{
 								"type":"string"
 							},
-							"title":"Category ID"
+							"title":"Category ID",
+							"default":"1"
 						},
 						"cycle_name":{
 							"type":"string",
@@ -205,16 +215,7 @@
 							"type":"string",
 							"title":"Stage Level"
 						}
-					},
-					"additionalProperties":false,
-					"required":[
-						"Email_Id",
-						"RoleID",
-						"categoryID",
-						"cycle_name",
-						"department",
-						"stageLevel"
-					]
+					}
 				}
 			},
 			"skip":false,
@@ -233,7 +234,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_IbGxo",
@@ -622,7 +623,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_5fHcz",
@@ -1651,7 +1652,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_9xcB5",
@@ -1706,7 +1707,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_cXpfJ",
@@ -1964,7 +1965,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_Nwdw7",
@@ -1985,7 +1986,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_Nwdw7@_z1vHD-1@l",
 			"id":"n_qrCD8",
@@ -2011,7 +2012,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_Nwdw7@_z1vHD-1@l",
 			"id":"n_wP5pi",
@@ -2041,7 +2042,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_wP5pi@n_Nwdw7@_z1vHD-1@l@n",
 			"id":"n_hg2NB",
@@ -2320,7 +2321,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_p5jRR",
@@ -2603,7 +2604,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_YCTfO",
@@ -2679,7 +2680,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_hVZQy",
@@ -2709,7 +2710,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@y",
 			"id":"n_S8Az4",
@@ -2732,7 +2733,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@n",
 			"id":"_rRHSk",
@@ -2767,5 +2768,5 @@
 	"tags":[
 		
 	],
-	"version":168
+	"version":169
 }
