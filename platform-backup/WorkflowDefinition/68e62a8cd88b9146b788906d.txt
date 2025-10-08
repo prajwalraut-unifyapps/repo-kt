@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		
+		"freshdesk"
 	],
 	"createdTime":1759914636757,
 	"deleted":false,
@@ -9,14 +9,14 @@
 			"fromNodeId":"n_jQbGW",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_FDHgj",
+			"toNodeId":"n_Yt28o",
 			"type":"next"
 		}
 	],
 	"id":"68e62a8cd88b9146b788906d",
 	"lastModifiedBy":643,
 	"lcName":"test1",
-	"modifiedTime":1759914640867,
+	"modifiedTime":1759914979603,
 	"name":"test1",
 	"nodes":[
 		{
@@ -45,14 +45,25 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"freshdesk",
+				"resourceVersion":6533,
+				"connectionId":"68106f9cb5fb8f78d2e289a7",
+				"resourceName":"freshdesk_create_ticket",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_YWqvQ-1",
-			"id":"_FDHgj",
+			"id":"n_Yt28o",
 			"index":2,
+			"inputs":{
+				"due_by":"2025-10-08T16:00:58Z"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Freshdesk",
+			"title":"Create ticket",
 			"type":"ACTION"
 		}
 	],
@@ -73,5 +84,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
