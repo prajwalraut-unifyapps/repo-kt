@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		
+		"amazon_s3"
 	],
 	"createdTime":1759924213877,
 	"deleted":false,
@@ -9,14 +9,21 @@
 			"fromNodeId":"_2Ql8J",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_PdAbY",
+			"toNodeId":"n_htfMp",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_htfMp",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_crSu3",
 			"type":"next"
 		}
 	],
 	"id":"68e64ff55905b03a72b3d9b9",
 	"lastModifiedBy":21056,
 	"lcName":"new dnd",
-	"modifiedTime":1759924213877,
+	"modifiedTime":1759924824706,
 	"name":"new DND",
 	"nodes":[
 		{
@@ -25,7 +32,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_2Ql8J-1",
 			"id":"_2Ql8J",
-			"index":0,
+			"index":1,
 			"skip":false,
 			"title":"Select a trigger event",
 			"trigger":{
@@ -34,18 +41,61 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"amazon_s3",
+				"resourceVersion":6744,
+				"connectionId":"68e5fb50a7f3606f8bea92e3",
+				"resourceName":"amazon_s3_list_files_in_bucket_batch",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_2Ql8J-1",
-			"id":"_PdAbY",
-			"index":0,
+			"id":"n_htfMp",
+			"index":2,
+			"inputs":{
+				"bucketName":"ai.qa.unifyapps.com",
+				"maxKeys":1000,
+				"isSubFolderInc":true,
+				"region":"ap-south-1"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Amazon S3",
+			"title":"List files in bucket",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"amazon_s3",
+				"resourceVersion":6,
+				"connectionId":"68e5fb50a7f3606f8bea92e3",
+				"resourceName":"amazon_s3_copy_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_2Ql8J-1",
+			"id":"n_crSu3",
+			"index":3,
+			"inputs":{
+				"destinationObjectName":"keys_to_delete.csv",
+				"sourceBucketName":"ai.qa.unifyapps.com",
+				"destinationRegion":"ap-south-1",
+				"sourceObjectName":"keys_to_delete.txt",
+				"destinationBucketName":"ai.qa.unifyapps.com"
+			},
+			"skip":false,
+			"subTitle":"Amazon S3",
+			"title":"Copy file",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":21056,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +109,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
