@@ -45,7 +45,7 @@
 	"id":"68e621e0c8e1920047cca0f2",
 	"lastModifiedBy":161877,
 	"lcName":"test",
-	"modifiedTime":1759912739032,
+	"modifiedTime":1759912786896,
 	"name":"test",
 	"nodes":[
 		{
@@ -95,8 +95,8 @@
 		{
 			"context":{
 				"appName":"loop",
-				"resourceVersion":865,
-				"resourceName":"loop_for_each",
+				"resourceVersion":36,
+				"resourceName":"loop_for",
 				"type":"APPLICATION"
 			},
 			"debug":false,
@@ -106,11 +106,14 @@
 			"id":"n_5aCW5",
 			"index":3,
 			"inputs":{
+				"start":0,
+				"limit":6,
+				"step":1,
 				"captureIterations":false
 			},
 			"skip":false,
 			"subTitle":"Loop",
-			"title":"For each loop",
+			"title":"For loop",
 			"type":"LOOP"
 		},
 		{
@@ -162,5 +165,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }
