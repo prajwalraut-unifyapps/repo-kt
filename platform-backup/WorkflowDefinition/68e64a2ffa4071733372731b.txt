@@ -23,7 +23,7 @@
 	"id":"68e64a2ffa4071733372731b",
 	"lastModifiedBy":165764,
 	"lcName":"das",
-	"modifiedTime":1759922882211,
+	"modifiedTime":1759922899781,
 	"name":"das",
 	"nodes":[
 		{
@@ -70,6 +70,10 @@
 				"synchronous":false,
 				"triggerWorkflowWithRuntimeType":"DEFAULT",
 				"distributeWorkflowLoad":true,
+				"parametersList":{
+					"source":"1",
+					"ua:type":"mappedArray"
+				},
 				"version":"-1"
 			},
 			"skip":false,
@@ -110,5 +114,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }
