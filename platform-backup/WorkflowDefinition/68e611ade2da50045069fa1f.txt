@@ -16,7 +16,7 @@
 	"id":"68e611ade2da50045069fa1f",
 	"lastModifiedBy":45010,
 	"lcName":"dew3",
-	"modifiedTime":1759908616309,
+	"modifiedTime":1759908623233,
 	"name":"dew3",
 	"nodes":[
 		{
@@ -34,7 +34,7 @@
 			"inputs":{
 				"cron":"INTERVAL",
 				"sequential":false,
-				"interval":15,
+				"interval":1,
 				"frequency":"MINUTES"
 			},
 			"skip":false,
@@ -121,5 +121,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
