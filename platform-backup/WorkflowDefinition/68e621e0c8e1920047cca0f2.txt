@@ -45,7 +45,7 @@
 	"id":"68e621e0c8e1920047cca0f2",
 	"lastModifiedBy":161877,
 	"lcName":"test",
-	"modifiedTime":1759912693354,
+	"modifiedTime":1759912708083,
 	"name":"test",
 	"nodes":[
 		{
@@ -95,6 +95,8 @@
 		{
 			"context":{
 				"appName":"loop",
+				"resourceVersion":865,
+				"resourceName":"loop_for_each",
 				"type":"APPLICATION"
 			},
 			"debug":false,
@@ -103,9 +105,12 @@
 			"groupId":"_FD24L-1",
 			"id":"n_5aCW5",
 			"index":3,
+			"inputs":{
+				"captureIterations":false
+			},
 			"skip":false,
 			"subTitle":"Loop",
-			"title":"Select an action",
+			"title":"For each loop",
 			"type":"LOOP"
 		},
 		{
@@ -153,5 +158,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
