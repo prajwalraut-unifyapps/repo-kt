@@ -6,46 +6,132 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_kGq3u",
+			"fromNodeId":"n_0jzns",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_0hCTP",
+			"toNodeId":"n_FMhEi",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_FMhEi",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_LP9gQ",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_LP9gQ",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_FMhEi",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_FMhEi",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_0auzv",
 			"type":"next"
 		}
 	],
 	"id":"68e6036ced58501847098d0a",
 	"lastModifiedBy":49915,
 	"lcName":"hello test",
-	"modifiedTime":1759904620459,
+	"modifiedTime":1759904653235,
 	"name":"hello test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_kGq3u-1",
-			"id":"_kGq3u",
-			"index":0,
+			"id":"n_0jzns",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":36,
+				"resourceName":"loop_for",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_kGq3u-1",
-			"id":"_0hCTP",
-			"index":0,
+			"id":"n_FMhEi",
+			"index":2,
+			"inputs":{
+				"start":0,
+				"limit":10,
+				"step":1,
+				"captureIterations":false
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Loop",
+			"title":"For loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":1281,
+				"resourceName":"standard_entities_fetch_user",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_FMhEi@_kGq3u-1@l",
+			"id":"n_LP9gQ",
+			"index":3,
+			"inputs":{
+				"fetchBy":"id",
+				"applicationId":""
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Fetch User",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_kGq3u-1",
+			"id":"n_0auzv",
+			"index":4,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":49915,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +145,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
