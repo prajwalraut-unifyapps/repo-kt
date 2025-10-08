@@ -16,7 +16,7 @@
 	"id":"68e609dced58501847099e40",
 	"lastModifiedBy":2621,
 	"lcName":"test headout",
-	"modifiedTime":1759906411855,
+	"modifiedTime":1759906426369,
 	"name":"test headout",
 	"nodes":[
 		{
@@ -60,7 +60,7 @@
 			"index":2,
 			"inputs":{
 				"variantId":"53044",
-				"currencyCode":"USD,AED"
+				"currencyCode":"USD"
 			},
 			"skip":false,
 			"subTitle":"Headout",
@@ -85,5 +85,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
