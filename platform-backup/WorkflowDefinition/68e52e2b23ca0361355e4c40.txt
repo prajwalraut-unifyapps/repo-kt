@@ -1,5 +1,6 @@
 {
 	"appsUsed":[
+		"custom_http_application",
 		"storage_by_unifyapps"
 	],
 	"createdTime":1759850027967,
@@ -65,6 +66,21 @@
 			"type":"next"
 		},
 		{
+			"fromNodeId":"n_JbiVg",
+			"name":"3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_JbiVg@3",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"n_JbiVg@3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_26U1P",
+			"type":"next"
+		},
+		{
 			"fromNodeId":"n_gpNhe",
 			"priority":0,
 			"skip":false,
@@ -73,6 +89,13 @@
 		},
 		{
 			"fromNodeId":"n_ejmTM",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_0olWY",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_26U1P",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_0olWY",
@@ -90,7 +113,7 @@
 	"id":"68e52e2b23ca0361355e4c40",
 	"lastModifiedBy":182775,
 	"lcName":"testnullhandling",
-	"modifiedTime":1759867091938,
+	"modifiedTime":1759915198989,
 	"name":"testNullHandling",
 	"nodes":[
 		{
@@ -151,7 +174,7 @@
 				}
 			},
 			"inputs":{
-				"stringxml":"<Emp><ID>123</ID><name/></Emp>"
+				"stringxml":"<ID/>"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -214,7 +237,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_2ea1A-1",
 			"id":"n_JbiVg",
@@ -231,6 +254,12 @@
 						"id":"2",
 						"inputs":{
 							"name":"Branch 2"
+						}
+					},
+					{
+						"id":"3",
+						"inputs":{
+							"name":"Branch 3"
 						}
 					},
 					{
@@ -251,7 +280,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_JbiVg@_2ea1A-1@1",
 			"id":"n_JbiVg@1",
@@ -271,7 +300,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_JbiVg@_2ea1A-1@1",
 			"id":"n_gpNhe",
@@ -298,7 +327,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_JbiVg@_2ea1A-1@2",
 			"id":"n_JbiVg@2",
@@ -318,7 +347,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_JbiVg@_2ea1A-1@2",
 			"id":"n_ejmTM",
@@ -338,14 +367,64 @@
 		},
 		{
 			"context":{
-				"appName":"stop"
+				"appName":"branch_condition",
+				"resourceVersion":0,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
+			"groupId":"n_JbiVg@_2ea1A-1@3",
+			"id":"n_JbiVg@3",
+			"index":9,
+			"inputs":{
+				"name":"Branch 3"
+			},
+			"skip":false,
+			"title":"",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"custom_http_application",
+				"resourceVersion":2028,
+				"connectionId":"68dd18eb12547e4cdcf1b7a9",
+				"resourceName":"custom_http_application_execute",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_JbiVg@_2ea1A-1@3",
+			"id":"n_26U1P",
+			"index":10,
+			"inputs":{
+				"httpVersion":"HTTP_2",
+				"responseContentType":"application/json",
+				"isAsync":false,
+				"headersList":[],
+				"requestTimeoutInSecs":-1,
+				"authType":"CUSTOM",
+				"httpMethod":"POST",
+				"requestContentType":"application/json",
+				"sslVerify":true
+			},
+			"skip":false,
+			"subTitle":"Custom HTTP Application",
+			"title":"Execute REST Request",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
 			"groupId":"_2ea1A-1",
 			"id":"n_0olWY",
-			"index":9,
+			"index":11,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -369,5 +448,5 @@
 	"tags":[
 		
 	],
-	"version":18
+	"version":19
 }
