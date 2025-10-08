@@ -1,6 +1,6 @@
 {
 	"appsUsed":[
-		"gmail"
+		"slack"
 	],
 	"createdTime":1759844882833,
 	"deleted":false,
@@ -17,14 +17,14 @@
 			"fromNodeId":"n_OXIsC",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_VZVcF",
+			"toNodeId":"n_Jkj95",
 			"type":"next"
 		}
 	],
 	"id":"68e51a12a0b9f01f0ce8f717",
 	"lastModifiedBy":161877,
 	"lcName":"sdf",
-	"modifiedTime":1759915242161,
+	"modifiedTime":1759915921384,
 	"name":"sdf",
 	"nodes":[
 		{
@@ -54,25 +54,26 @@
 		},
 		{
 			"context":{
-				"appName":"gmail",
-				"resourceVersion":3377,
-				"connectionId":"68d56109054fa401ca60a85b",
-				"resourceName":"gmail_find_email",
+				"appName":"slack",
+				"resourceVersion":6286,
+				"connectionId":"68e625ab4022cb3f538be04a",
+				"resourceName":"slack_conversations_create",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_lpeKi-1",
-			"id":"n_VZVcF",
+			"id":"n_Jkj95",
 			"index":2,
 			"inputs":{
-				"toCreate":false,
-				"count":1
+				"is_private":true,
+				"name":"m ",
+				"return_conversation":true
 			},
 			"skip":false,
-			"subTitle":"Gmail",
-			"title":"Find Email",
+			"subTitle":"Slack",
+			"title":"Create conversation",
 			"type":"ACTION"
 		}
 	],
@@ -93,5 +94,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }
