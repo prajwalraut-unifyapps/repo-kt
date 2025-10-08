@@ -5,12 +5,12 @@
 	"createdTime":1759922321603,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759923462287,
+		"deployedAt":1759926322036,
 		"deployedBy":165764,
-		"deployedDefinitionId":"68e64d06da5185509e64904f",
+		"deployedDefinitionId":"68e65831dadfb161b15c9eb5",
 		"status":"DEPLOYED",
-		"version":4,
-		"workflowVersion":5
+		"version":5,
+		"workflowVersion":6
 	},
 	"edges":[
 		{
@@ -36,9 +36,9 @@
 		}
 	],
 	"id":"68e64891da5185509e648974",
-	"lastModifiedBy":165764,
+	"lastModifiedBy":49915,
 	"lcName":"bulkheadtest",
-	"modifiedTime":1759926318859,
+	"modifiedTime":1759926480763,
 	"name":"bulkHeadTest",
 	"nodes":[
 		{
@@ -103,7 +103,7 @@
 			"id":"n_68jYI",
 			"index":2,
 			"inputs":{
-				"duration":5,
+				"duration":20,
 				"unit":"SECONDS"
 			},
 			"skip":false,
@@ -237,5 +237,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }
