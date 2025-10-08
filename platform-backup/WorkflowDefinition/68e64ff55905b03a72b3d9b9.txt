@@ -6,7 +6,7 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_2Ql8J",
+			"fromNodeId":"n_ikIGA",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_htfMp",
@@ -23,20 +23,31 @@
 	"id":"68e64ff55905b03a72b3d9b9",
 	"lastModifiedBy":21056,
 	"lcName":"new dnd",
-	"modifiedTime":1759924824706,
+	"modifiedTime":1759924829357,
 	"name":"new DND",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_2Ql8J-1",
-			"id":"_2Ql8J",
+			"id":"n_ikIGA",
 			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
@@ -109,5 +120,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
