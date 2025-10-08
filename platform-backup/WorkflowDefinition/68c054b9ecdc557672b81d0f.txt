@@ -5,16 +5,16 @@
 	"createdTime":1757435065929,
 	"deleted":false,
 	"deploymentState":{
-		"deployedAt":1759820009284,
+		"deployedAt":1759910474366,
 		"deployedBy":39715,
-		"deployedDefinitionId":"68e4b8e93e6a2b287fa597cb",
+		"deployedDefinitionId":"68e61a4a8a587f3385ab1e18",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":8
+		"version":2,
+		"workflowVersion":10
 	},
 	"edges":[
 		{
-			"fromNodeId":"n_6I4lD",
+			"fromNodeId":"n_njEPi",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_JA84e",
@@ -55,39 +55,36 @@
 			"skip":false,
 			"toNodeId":"n_po0sB",
 			"type":"next"
-		},
-		{
-			"fromNodeId":"n_po0sB",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_f6MLe",
-			"type":"next"
 		}
 	],
 	"id":"68c054b9ecdc557672b81d0f",
 	"lastModifiedBy":39715,
 	"lcName":"sumitbansaltesting",
-	"modifiedTime":1759910472517,
+	"modifiedTime":1759910495811,
 	"name":"sumitBansalTesting",
 	"nodes":[
 		{
 			"context":{
-				"appName":"callables",
-				"resourceVersion":1019,
-				"resourceName":"callables_from_automation"
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_hIm1D-1",
-			"id":"n_6I4lD",
+			"id":"n_njEPi",
 			"index":1,
-			"inputs":{},
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"subTitle":"Callable",
-			"title":"Trigger via automation",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"CALLABLE"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
@@ -99,7 +96,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_hIm1D-1",
 			"id":"n_JA84e",
@@ -123,7 +120,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_JA84e@_hIm1D-1@l",
 			"id":"n_ShBgy",
@@ -217,7 +214,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_hIm1D-1",
 			"id":"n_po0sB",
@@ -233,27 +230,6 @@
 			"subTitle":"Code by WurkNow",
 			"title":"Execute Python script",
 			"type":"ACTION"
-		},
-		{
-			"context":{
-				"appName":"callables",
-				"resourceVersion":1055,
-				"resourceName":"callables_return_to_automation",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_hIm1D-1",
-			"id":"n_f6MLe",
-			"index":7,
-			"inputs":{
-				"result":"true"
-			},
-			"skip":false,
-			"subTitle":"Callable",
-			"title":"Respond to automation",
-			"type":"STOP"
 		}
 	],
 	"ownerUserId":39715,
@@ -273,5 +249,5 @@
 	"tags":[
 		
 	],
-	"version":10
+	"version":11
 }
