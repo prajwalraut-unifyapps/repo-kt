@@ -1,51 +1,169 @@
 {
 	"appsUsed":[
-		
+		"firebase"
 	],
 	"createdTime":1759923163424,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_OrrOA",
+			"fromNodeId":"n_sgqmP",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_Rfg0V",
+			"toNodeId":"n_XqGET",
 			"type":"next"
 		}
 	],
 	"id":"68e64bdbda5185509e648e9b",
 	"lastModifiedBy":178541,
 	"lcName":"push not test liva",
-	"modifiedTime":1759923163424,
+	"modifiedTime":1759923296635,
 	"name":"Push Not test Liva",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":833,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_OrrOA-1",
-			"id":"_OrrOA",
-			"index":0,
+			"id":"n_sgqmP",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.message.data.items.key",
+					"root.message.data.items.value",
+					"root.message.notification.title",
+					"root.message.notification.body",
+					"root.message.notification.image",
+					"root.message.android.collapse_key",
+					"root.message.android.priority",
+					"root.message.android.ttl",
+					"root.message.android.restricted_package_name",
+					"root.message.android.data.items.key",
+					"root.message.android.data.items.value",
+					"root.message.android.notification.title",
+					"root.message.android.notification.body",
+					"root.message.android.notification.icon",
+					"root.message.android.notification.color",
+					"root.message.android.notification.sound",
+					"root.message.android.notification.tag",
+					"root.message.android.notification.click_action",
+					"root.message.android.notification.body_loc_key",
+					"root.message.android.notification.body_loc_args.items",
+					"root.message.android.notification.title_loc_key",
+					"root.message.android.notification.title_loc_args.items",
+					"root.message.android.notification.channel_id",
+					"root.message.android.notification.ticker",
+					"root.message.android.notification.sticky",
+					"root.message.android.notification.event_time",
+					"root.message.android.notification.local_only",
+					"root.message.android.notification.notification_priority",
+					"root.message.android.notification.default_sound",
+					"root.message.android.notification.default_vibrate_timings",
+					"root.message.android.notification.default_light_settings",
+					"root.message.android.notification.vibrate_timings.items",
+					"root.message.android.notification.visibility",
+					"root.message.android.notification.notification_count",
+					"root.message.android.notification.light_settings.color.alpha",
+					"root.message.android.notification.image",
+					"root.message.android.fcm_options.analytics_label",
+					"root.message.android.direct_boot_ok",
+					"root.message.webpush.headers.items.key",
+					"root.message.webpush.headers.items.value",
+					"root.message.webpush.data.items.key",
+					"root.message.webpush.data.items.value",
+					"root.message.webpush.notification.fields.items.key",
+					"root.message.webpush.notification.fields.items.value",
+					"root.message.webpush.fcm_options.link",
+					"root.message.webpush.fcm_options.analytics_label",
+					"root.message.apns.headers.items.key",
+					"root.message.apns.headers.items.value",
+					"root.message.apns.payload.aps.alert.title",
+					"root.message.apns.payload.aps.alert.subtitle",
+					"root.message.apns.payload.aps.alert.body",
+					"root.message.apns.payload.aps.alert.loc-key",
+					"root.message.apns.payload.aps.alert.loc-args.items",
+					"root.message.apns.payload.aps.badge",
+					"root.message.apns.payload.aps.sound",
+					"root.message.apns.payload.aps.mutable-content",
+					"root.message.apns.payload.aps.content-available",
+					"root.message.apns.payload.aps.category",
+					"root.message.apns.payload.aps.thread-id",
+					"root.message.apns.payload.customData.items.key",
+					"root.message.apns.payload.customData.items.value",
+					"root.message.apns.fcm_options.analytics_label",
+					"root.message.apns.fcm_options.image",
+					"root.message.fcm_options.analytics_label"
+				]
+			},
+			"context":{
+				"appName":"firebase",
+				"resourceVersion":5496,
+				"connectionId":"68e50b79d9e6dc1983c54814",
+				"resourceName":"firebase_send",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_OrrOA-1",
-			"id":"_Rfg0V",
-			"index":0,
+			"id":"n_XqGET",
+			"index":2,
+			"inputs":{
+				"validate_only":false,
+				"message":{
+					"target":"Token",
+					"data":[
+						{
+							"key":"Notification for Liva",
+							"value":"Medical was submitted successfully"
+						}
+					],
+					"notification":{
+						"title":"Liva",
+						"body":"Medical was submitted successfully"
+					},
+					"android":{
+						"notification":{
+							"notification_priority":"PRIORITY_DEFAULT",
+							"visibility":"PRIVATE",
+							"light_settings":{
+								"color":{
+									"alpha":1
+								}
+							}
+						}
+					},
+					"token":"c1MVOKUJQ0ecYKCuJF-Idy:APA91bHxRsEWr6lq11TFNw8UTwbdslwV17PhnTE0ZCONvmhQZQTIUk89QHNHoi-f52H4H53stF0T-faac44vYxfMtnT5t5eTN9hgBMvMac4oK5EPRhZ2vGk"
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Firebase",
+			"title":"Send a message to a device",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":178541,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +177,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }
