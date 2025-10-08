@@ -24,7 +24,7 @@
 	"id":"68e611ade2da50045069fa1f",
 	"lastModifiedBy":45010,
 	"lcName":"dew3",
-	"modifiedTime":1759908869835,
+	"modifiedTime":1759908875873,
 	"name":"dew3",
 	"nodes":[
 		{
@@ -34,14 +34,16 @@
 				"resourceName":"schedule_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_KLnYv-1",
 			"id":"n_ngCQS",
 			"index":1,
 			"inputs":{
 				"cron":"INTERVAL",
+				"expression":"0 0 * * *",
 				"sequential":false,
+				"timezone":"Asia/Calcutta",
 				"interval":1,
 				"frequency":"MINUTES"
 			},
@@ -129,5 +131,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }
