@@ -147,13 +147,6 @@
 			"fromNodeId":"_ojQkx",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_ZYcAh",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"_ZYcAh",
-			"priority":0,
-			"skip":false,
 			"toNodeId":"_HlgiC",
 			"type":"next"
 		},
@@ -207,7 +200,7 @@
 	"id":"68bbdd710fc3325af9203e66",
 	"lastModifiedBy":426,
 	"lcName":"normalization | submit ratings",
-	"modifiedTime":1759890942014,
+	"modifiedTime":1759890946289,
 	"name":"Normalization | Submit Ratings",
 	"nodes":[
 		{
@@ -2920,63 +2913,6 @@
 		},
 		{
 			"context":{
-				"appName":"code_by_unifyapps",
-				"resourceVersion":21,
-				"resourceName":"code_by_unifyapps_groovy",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
-			"id":"_ZYcAh",
-			"index":19,
-			"inputs":{
-				"output":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[],
-					"properties":{
-						"phoneListSQL":{
-							"type":"string",
-							"title":"Phone List SQL"
-						}
-					}
-				},
-				"input":{
-					"type":"object",
-					"additionalProperties":false,
-					"required":[
-						"phoneList"
-					],
-					"properties":{
-						"phoneList":{
-							"type":"array",
-							"items":{
-								"type":"string"
-							},
-							"title":"Phone List"
-						}
-					}
-				},
-				"code":"if (!binding.hasVariable('phoneList')) {\n    return [\"phoneListSQL\": '(NULL)']\n}\n\ndef output = []\n\nfor (var item : phoneList) {\n    // def cleanedPhone = \"'\" + item.replaceAll(' ', '') + \"'\"\n\n    // leave spaces in for now\n    def cleanedPhone = \"'\" + item + \"'\"\n\n    output.add(cleanedPhone)\n}\n\ndef phoneListSQL = output ? '(' + output.join(', ') + ')' : '(0)'\nreturn [\"phoneListSQL\": phoneListSQL]",
-				"compile_static":false,
-				"captureStdOutput":false,
-				"parameters":{
-					"phoneList":{
-						"ua:type":"mappedArray",
-						"source":"{{ _u4tjC.outputs.objects }}",
-						"items":"{{ _u4tjC.outputs.objects[0].properties.RolePlayer }}"
-					}
-				}
-			},
-			"skip":false,
-			"subTitle":" SQL format",
-			"title":"Execute Groovy code",
-			"type":"ACTION"
-		},
-		{
-			"context":{
 				"appName":"analytics_by_unifyapps",
 				"resourceVersion":63,
 				"resourceName":"analytics_by_unifyapps_execute_query",
@@ -2987,7 +2923,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_HlgiC",
-			"index":20,
+			"index":19,
 			"inputs":{
 				"outputSchema":{
 					"type":"object",
@@ -3034,7 +2970,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_JfHtS@n_YCTfO@_z1vHD-1@l@y",
 			"id":"_O3VuW",
-			"index":21,
+			"index":20,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -3090,7 +3026,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_z1vHD-1",
 			"id":"n_hVZQy",
-			"index":22,
+			"index":21,
 			"inputs":{
 				"filters":[
 					{
@@ -3120,7 +3056,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@y",
 			"id":"n_S8Az4",
-			"index":23,
+			"index":22,
 			"inputs":{
 				"result":{
 					"a":"Submission Successful!"
@@ -3143,7 +3079,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hVZQy@_z1vHD-1@n",
 			"id":"_rRHSk",
-			"index":24,
+			"index":23,
 			"inputs":{
 				"result":{
 					"a":" Submission for {{ n_00PKA.outputs.result.result }} failed!"
@@ -3174,5 +3110,5 @@
 	"tags":[
 		
 	],
-	"version":160
+	"version":161
 }
