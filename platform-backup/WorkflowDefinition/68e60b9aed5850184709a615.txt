@@ -16,7 +16,7 @@
 	"id":"68e60b9aed5850184709a615",
 	"lastModifiedBy":161875,
 	"lcName":"test jql trigger 2",
-	"modifiedTime":1759906739742,
+	"modifiedTime":1759906743762,
 	"name":"Test JQL Trigger 2",
 	"nodes":[
 		{
@@ -36,7 +36,7 @@
 				"intervalType":"minutes",
 				"jql":"project=\"MD\"",
 				"objectSourceResourceName":"jira_fetch_issue_schema",
-				"interval":15,
+				"interval":1,
 				"from":"2025-07-01 12:28"
 			},
 			"skip":false,
@@ -90,5 +90,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }
